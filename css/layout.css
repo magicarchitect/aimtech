@@ -127,14 +127,14 @@ main { position: relative; z-index: 2; }
   transform: translate(-50%, -50%);
   width: 64px; height: 64px;
   background:
-    radial-gradient(circle at 30% 30%, rgba(125, 249, 255, 0.4), transparent 60%),
+    radial-gradient(circle at 30% 30%, rgba(37, 128, 227, 0.45), transparent 60%),
     var(--bg-card);
   border: 1px solid var(--accent);
   border-radius: 14px;
   display: grid; place-items: center;
   box-shadow:
-    0 0 32px rgba(125, 249, 255, 0.35),
-    inset 0 0 18px rgba(125, 249, 255, 0.15);
+    0 0 32px rgba(37, 128, 227, 0.45),
+    inset 0 0 18px rgba(37, 128, 227, 0.2);
   animation: float 4s ease-in-out infinite;
 }
 .orchestrator-core::after {
@@ -363,7 +363,7 @@ section { padding: 140px 0; position: relative; }
   padding: 80px 64px;
   position: relative;
   background:
-    radial-gradient(ellipse at top right, rgba(125, 249, 255, 0.05), transparent 50%),
+    radial-gradient(ellipse at top right, rgba(37, 128, 227, 0.07), transparent 50%),
     var(--bg-card);
 }
 .manifesto::before {
