@@ -1,0 +1,17 @@
+:root {
+  --bg: #0a0e14;
+  --bg-elev: #0f141c;
+  --bg-card: #0d1219;
+  --line: #1c2230;
+  --line-strong: #2a3344;
+  --ink: #e6ebf2;
+  --ink-dim: #8893a5;
+  --ink-mute: #5a6478;
+  --accent: #7df9ff;
+  --accent-warm: #ffb86b;
+  --accent-purple: #b794f6;
+  --accent-glow: rgba(125, 249, 255, 0.18);
+  --serif: 'Instrument Serif', 'Times New Roman', serif;
+  --sans: 'Geist', -apple-system, system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
