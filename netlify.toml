@@ -1,0 +1,75 @@
+# Configuración as-code de Netlify para aimtech.es
+# Sitio estático puro, sin build step. Publish root.
+
+[build]
+  publish = "."
+
+# ── Security headers ─────────────────────────────────
+# Aplican a todas las respuestas. Mejora score en
+# securityheaders.com y es señal SEO menor pero real.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+# ── Cache: HTML siempre revalida ─────────────────────
+# Los HTML cambian con cada push. Cliente revalida con
+# ETag/Last-Modified en cada request, transferencia mínima
+# si no hay cambios (304 Not Modified).
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Caso especial: el index de la raíz (sin .html en URL).
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ── Cache: CSS y XML medio (1 hora) ──────────────────
+# CSS aún se itera; sitemap.xml puede actualizarse.
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# ── Cache: assets binarios largo (7 días) ────────────
+# Logos y OG images cambian raramente. 7 días es un
+# compromiso entre rendimiento y poder sustituir el
+# archivo sin que la caché del cliente se quede vieja.
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# ── Redirect: aimtech.es → www.aimtech.es ────────────
+# Canónico = www.aimtech.es. Todas las URLs absolutas
+# (canonical, sitemap, JSON-LD, OG) apuntan al www.
+# force=true asegura que el redirect aplica incluso si
+# el archivo existe en la raíz sin www.
+
+[[redirects]]
+  from = "https://aimtech.es/*"
+  to = "https://www.aimtech.es/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://aimtech.es/*"
+  to = "https://www.aimtech.es/:splat"
+  status = 301
+  force = true
