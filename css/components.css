@@ -87,6 +87,7 @@
   transition: border-color 0.3s ease, transform 0.3s ease;
   display: flex; flex-direction: column;
 }
+a.card { text-decoration: none; color: inherit; }
 .card:hover { border-color: var(--line-strong); transform: translateY(-2px); }
 .card::before {
   content: ''; position: absolute; inset: 0;
@@ -146,6 +147,37 @@
   background: linear-gradient(180deg, var(--accent), rgba(37, 128, 227, 0.25));
   border-radius: 2px 2px 0 0;
   opacity: 0.85;
+}
+
+/* ── Module list (uso en cards de itinerarios) ──── */
+.modules {
+  display: flex; flex-direction: column; gap: 10px;
+  font-family: var(--mono); font-size: 12px;
+  color: var(--ink-dim);
+  margin: 20px 0 24px;
+}
+.modules .module-num {
+  color: var(--ink-mute);
+  margin-right: 14px;
+}
+
+/* ── Pricing ────────────────────────────────────── */
+.price {
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 4px;
+}
+.price-num {
+  font-family: var(--serif); font-size: 44px;
+  line-height: 1; letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.price-num em { font-style: italic; color: var(--accent); }
+.price-label {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--ink-mute);
+  text-transform: uppercase; letter-spacing: 0.1em;
 }
 
 /* ── Cursor blink ───────────────────────────────── */

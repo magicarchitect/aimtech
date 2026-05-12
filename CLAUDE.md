@@ -14,7 +14,7 @@ rendimiento, diseño y posicionamiento.
 - Despliegue previsto: Cloudflare Pages o Netlify (decisión pendiente)
 
 ## Líneas de negocio a vender
-1. Formación en Power BI e inteligencia de negocio (palanca caliente, bonificable FUNDAE)
+1. Formación en Power BI e inteligencia de negocio (palanca caliente, B2B: empresas, entidades y AAPP, online o presencial)
 2. Formación en IA Aplicada
 3. Implantación de IA Agéntica (diferenciador clave: Claude API, n8n, RAG, Qdrant)
 4. Desarrollo de software, apps y APIs
