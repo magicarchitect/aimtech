@@ -21,7 +21,7 @@ rendimiento, diseño y posicionamiento.
 
 ## Dirección de diseño
 - Dark mode profundo (#0a0e14), NO negro puro
-- Un único color acento: cyan eléctrico (#7df9ff)
+- Un único color acento: azul corporativo (#2580e3) — heredado del logo de Aimtech
 - Cero gradientes morados, cero estética "AI slop"
 - Tipografía editorial (serif itálica en headlines) + mono técnico
 - Bento grid asimétrico para servicios — tamaños desiguales a propósito
