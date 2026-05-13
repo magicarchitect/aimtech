@@ -14,9 +14,9 @@
 <link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/sobre-mike/" />
 
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="../../assets/logo.ico" />
-<link rel="icon" type="image/png" href="../../assets/logo.png" />
-<link rel="apple-touch-icon" href="../../assets/logo.png" />
+<link rel="icon" type="image/x-icon" href="../../assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="../../assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="../../assets/logo.png?v=2" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="profile" />
@@ -96,12 +96,7 @@
 
 <nav>
   <a href="../" class="logo" style="text-decoration:none;color:inherit;">
-    <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
-      <circle class="ring" cx="50" cy="50" r="50"/>
-      <text class="mono" x="50" y="50" text-anchor="middle" dominant-baseline="central"
-            font-family="Geist, system-ui, sans-serif" font-weight="700"
-            font-size="48" letter-spacing="-2">ac</text>
-    </svg>
+    <img src="/assets/logo.png?v=2" alt="Aimtech" />
     <span>aimtech<span style="color: var(--accent);">/</span>es</span>
   </a>
   <div class="nav-links">
@@ -123,7 +118,14 @@
 
 <main>
 
-  <section class="hero">
+  <section class="hero" id="sobre-mike-hero">
+
+    <!-- Video de fons full-bleed: logo animat d'Aimtech (neo) -->
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+      <source src="../../assets/videos/neo.mp4" type="video/mp4">
+    </video>
+    <div class="hero-bg-overlay" aria-hidden="true"></div>
+
     <div class="container">
       <div class="hero-grid">
 
@@ -157,142 +159,6 @@
             </a>
             <a href="#bio" class="btn-ghost">Qui sóc</a>
           </div>
-        </div>
-
-        <div class="hum-stage" aria-hidden="true">
-
-          <div class="hum-halo"></div>
-
-          <!-- Cel de fons: estrelles -->
-          <svg class="hum-scene-bg" viewBox="0 0 560 560" preserveAspectRatio="none">
-            <circle cx="80"  cy="60"  r="1.4" class="hum-star"/>
-            <circle cx="500" cy="80"  r="1.4" class="hum-star" style="animation-delay: 0.8s"/>
-            <circle cx="40"  cy="320" r="1"   class="hum-star" style="animation-delay: 1.6s"/>
-            <circle cx="520" cy="500" r="1"   class="hum-star" style="animation-delay: 2.2s"/>
-            <circle cx="280" cy="40"  r="1"   class="hum-star" style="animation-delay: 0.4s"/>
-            <circle cx="50"  cy="510" r="1"   class="hum-star" style="animation-delay: 2.0s"/>
-            <circle cx="510" cy="270" r="1"   class="hum-star" style="animation-delay: 2.8s"/>
-          </svg>
-
-          <!-- Escena principal: humà + agents -->
-          <svg class="hum-scene" viewBox="0 0 560 560" preserveAspectRatio="xMidYMid meet">
-
-            <!-- ── Vincles del cap a cada bot ── -->
-            <path id="hum-path-nw" class="hum-link hum-link--nw" d="M 250 248 L 168 168"/>
-            <path id="hum-path-ne" class="hum-link hum-link--ne" d="M 310 248 L 392 168"/>
-            <path id="hum-path-sw" class="hum-link hum-link--sw" d="M 250 318 L 168 392"/>
-            <path id="hum-path-se" class="hum-link hum-link--se" d="M 310 318 L 392 392"/>
-
-            <circle r="2.2" fill="#5eead4" class="hum-link-particle">
-              <animateMotion dur="3s" repeatCount="indefinite" begin="0s">
-                <mpath href="#hum-path-nw"/>
-              </animateMotion>
-            </circle>
-            <circle r="2.2" fill="#5eead4" class="hum-link-particle">
-              <animateMotion dur="3s" repeatCount="indefinite" begin="0.7s">
-                <mpath href="#hum-path-ne"/>
-              </animateMotion>
-            </circle>
-            <circle r="2.2" fill="#5eead4" class="hum-link-particle">
-              <animateMotion dur="3s" repeatCount="indefinite" begin="1.4s">
-                <mpath href="#hum-path-sw"/>
-              </animateMotion>
-            </circle>
-            <circle r="2.2" fill="#5eead4" class="hum-link-particle">
-              <animateMotion dur="3s" repeatCount="indefinite" begin="2.1s">
-                <mpath href="#hum-path-se"/>
-              </animateMotion>
-            </circle>
-
-            <!-- ── Mini bots a les cantonades ── -->
-            <g transform="translate(140, 140)"><g class="hum-bot hum-bot--nw">
-              <ellipse cx="0" cy="30" rx="20" ry="2.6" class="hum-bot-shadow"/>
-              <line x1="0" y1="-22" x2="0" y2="-30" class="hum-bot-antenna"/>
-              <circle cx="0" cy="-32" r="2.4" class="hum-bot-antenna-dot"/>
-              <rect x="-20" y="-20" width="40" height="42" rx="4" class="hum-bot-body"/>
-              <line x1="-20" y1="-4" x2="20" y2="-4" class="hum-bot-detail" stroke-width="0.9" opacity="0.45"/>
-              <rect class="hum-bot-eye hum-bot-eye-glow" x="-11" y="-13" width="6" height="6" rx="1.2"/>
-              <rect class="hum-bot-eye hum-bot-eye-glow" x="5"   y="-13" width="6" height="6" rx="1.2"/>
-              <rect x="-20" y="18" width="40" height="6" rx="2" class="hum-bot-tread"/>
-            </g></g>
-
-            <g transform="translate(420, 140)"><g class="hum-bot hum-bot--ne">
-              <ellipse cx="0" cy="30" rx="20" ry="2.6" class="hum-bot-shadow"/>
-              <line x1="0" y1="-22" x2="0" y2="-30" class="hum-bot-antenna"/>
-              <circle cx="0" cy="-32" r="2.4" class="hum-bot-antenna-dot"/>
-              <rect x="-20" y="-20" width="40" height="42" rx="4" class="hum-bot-body"/>
-              <line x1="-20" y1="-4" x2="20" y2="-4" class="hum-bot-detail" stroke-width="0.9" opacity="0.45"/>
-              <circle class="hum-bot-eye hum-bot-eye-glow" cx="-8" cy="-10" r="3.2"/>
-              <circle class="hum-bot-eye hum-bot-eye-glow" cx="8"  cy="-10" r="3.2"/>
-              <rect x="-20" y="18" width="40" height="6" rx="2" class="hum-bot-tread"/>
-            </g></g>
-
-            <g transform="translate(140, 420)"><g class="hum-bot hum-bot--sw">
-              <ellipse cx="0" cy="30" rx="20" ry="2.6" class="hum-bot-shadow"/>
-              <line x1="0" y1="-22" x2="0" y2="-28" class="hum-bot-antenna"/>
-              <circle cx="0" cy="-30" r="2.4" class="hum-bot-antenna-dot"/>
-              <rect x="-20" y="-20" width="40" height="42" rx="11" class="hum-bot-body"/>
-              <circle class="hum-bot-eye hum-bot-eye-glow" cx="-8" cy="-9" r="3.2"/>
-              <circle class="hum-bot-eye hum-bot-eye-glow" cx="8"  cy="-9" r="3.2"/>
-              <path d="M -7 6 Q 0 12 7 6" stroke="currentColor" stroke-width="1.2" fill="none" class="hum-bot-detail" opacity="0.7"/>
-              <rect x="-20" y="18" width="40" height="6" rx="2" class="hum-bot-tread"/>
-            </g></g>
-
-            <g transform="translate(420, 420)"><g class="hum-bot hum-bot--se">
-              <ellipse cx="0" cy="30" rx="20" ry="2.6" class="hum-bot-shadow"/>
-              <line x1="0" y1="-22" x2="0" y2="-30" class="hum-bot-antenna"/>
-              <circle cx="0" cy="-32" r="2.4" class="hum-bot-antenna-dot"/>
-              <rect x="-22" y="-20" width="44" height="42" rx="4" class="hum-bot-body"/>
-              <rect x="-15" y="-16" width="30" height="14" rx="2" fill="rgba(94,234,212,0.10)" stroke="#5eead4" stroke-width="0.7"/>
-              <g transform="translate(-12, -3)">
-                <rect class="hum-bot-detail" x="0"  y="6" width="2.5" height="6" fill="currentColor" opacity="0.65"/>
-                <rect class="hum-bot-detail" x="6"  y="3" width="2.5" height="9" fill="currentColor" opacity="0.65"/>
-                <rect class="hum-bot-detail" x="12" y="0" width="2.5" height="12" fill="currentColor" opacity="0.65"/>
-                <rect class="hum-bot-detail" x="18" y="4" width="2.5" height="8" fill="currentColor" opacity="0.65"/>
-              </g>
-              <rect class="hum-bot-eye hum-bot-eye-glow" x="-11" y="-13" width="4" height="4" rx="1"/>
-              <rect class="hum-bot-eye hum-bot-eye-glow" x="7"   y="-13" width="4" height="4" rx="1"/>
-              <rect x="-22" y="18" width="44" height="6" rx="2" class="hum-bot-tread"/>
-            </g></g>
-
-            <!-- ── Avatar: cap estilitzat amb cabell i auriculars ── -->
-            <g class="hum-figure">
-
-              <path class="hum-hair" d="
-                M 234 270
-                Q 232 220 282 218
-                Q 326 220 326 268
-                Q 322 252 296 248
-                Q 280 254 264 248
-                Q 240 252 234 270 Z"/>
-
-              <ellipse class="hum-head" cx="280" cy="282" rx="42" ry="50"/>
-
-              <ellipse class="hum-headphone-cup" cx="234" cy="284" rx="5" ry="10"/>
-              <ellipse class="hum-headphone-cup" cx="326" cy="284" rx="5" ry="10"/>
-
-              <ellipse class="hum-eye" cx="266" cy="278" rx="2.4" ry="3"/>
-              <ellipse class="hum-eye" cx="294" cy="278" rx="2.4" ry="3"/>
-
-              <path class="hum-mouth" d="M 270 306 Q 280 311 290 306"/>
-
-              <circle class="hum-voice hum-voice-1" cx="346" cy="308" r="5"/>
-              <circle class="hum-voice hum-voice-2" cx="346" cy="308" r="5"/>
-              <circle class="hum-voice hum-voice-3" cx="346" cy="308" r="5"/>
-
-            </g>
-
-          </svg>
-
-          <span class="hum-tag hum-tag--mike">// mike@aimtech</span>
-          <span class="hum-tag hum-tag--nw">// inbox.bot</span>
-          <span class="hum-tag hum-tag--ne">// social.bot</span>
-          <span class="hum-tag hum-tag--sw">// chat.bot</span>
-          <span class="hum-tag hum-tag--se">// data.bot</span>
-
-          <div class="hum-telemetry htm-top"><span class="tag">human-in-the-loop · <em>on</em></span></div>
-          <div class="hum-telemetry htm-bot"><span class="tag">orquestro · <em>4 agents</em></span></div>
-
         </div>
 
       </div>
@@ -527,12 +393,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
-          <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
-            <circle class="ring" cx="50" cy="50" r="50"/>
-            <text class="mono" x="50" y="50" text-anchor="middle" dominant-baseline="central"
-                  font-family="Geist, system-ui, sans-serif" font-weight="700"
-                  font-size="48" letter-spacing="-2">ac</text>
-          </svg>
+          <img src="/assets/logo.png?v=2" alt="Aimtech" />
           <span>aimtech<span style="color: var(--accent);">/</span>es</span>
         </a>
         <p>Formació i implantació d'IA aplicada, Power BI i desenvolupament a mida. Operada per una SL catalana amb focus en pimes i administració pública.</p>

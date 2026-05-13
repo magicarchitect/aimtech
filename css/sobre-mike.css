@@ -1,3 +1,43 @@
+/* ── Hero con video de fondo full-bleed (neo.mp4) ── */
+/* Sobrescribe el .hero global para esta página */
+#sobre-mike-hero {
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(115deg,
+      rgba(10, 14, 20, 0.92) 0%,
+      rgba(10, 14, 20, 0.78) 45%,
+      rgba(10, 14, 20, 0.45) 100%),
+    linear-gradient(0deg,
+      rgba(10, 14, 20, 0.55) 0%,
+      transparent 30%,
+      transparent 70%,
+      rgba(10, 14, 20, 0.4) 100%);
+  pointer-events: none;
+}
+/* En esta página el hero-grid es single-column sobre el video */
+#sobre-mike-hero .hero-grid {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+#sobre-mike-hero .hero-content {
+  max-width: 680px;
+}
+
 /* ── /sobre-mike/ — escena humano susurrando a agentes ── */
 .hum-stage {
   --c-skin:    #e6ebf2;

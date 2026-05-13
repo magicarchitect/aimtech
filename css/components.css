@@ -2,7 +2,12 @@
 .logo {
   font-family: var(--mono); font-size: 14px; font-weight: 500;
   letter-spacing: -0.02em;
-  display: flex; align-items: center; gap: 8px;
+  display: flex; align-items: center; gap: 10px;
+}
+.logo img {
+  height: 36px; width: auto;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(37, 128, 227, 0.35));
 }
 .logo-mark {
   width: 24px; height: 24px;
