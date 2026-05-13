@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Implantació d'IA agèntica — agents orquestrats amb ROI mesurable | Aimtech</title>
+<meta name="description" content="Implantació d'IA agèntica per a empreses, entitats i AAPP. Anàlisi de processos, precondicions, disseny del workflow agèntic i ROI mesurable. Claude API, n8n, RAG i bases vectorials." />
+
+<link rel="canonical" href="https://www.aimtech.es/ca/ia-agentica/" />
+
+<!-- hreflang: variants d'idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/ia-agentica/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/ia-agentica/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/ia-agentica/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="../../assets/logo.ico" />
+<link rel="icon" type="image/png" href="../../assets/logo.png" />
+<link rel="apple-touch-icon" href="../../assets/logo.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ca_ES" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Implantació d'IA agèntica — agents orquestrats amb ROI mesurable | Aimtech" />
+<meta property="og:description" content="Dissenyem i implantem sistemes d'agents IA que s'integren amb els teus correus, CRM, XXSS i eines internes. Anàlisi, precondicions, workflow i ROI mesurable." />
+<meta property="og:url" content="https://www.aimtech.es/ca/ia-agentica/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Implantació d'IA agèntica — agents orquestrats amb ROI mesurable — Aimtech" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Implantació d'IA agèntica — agents orquestrats amb ROI mesurable | Aimtech" />
+<meta name="twitter:description" content="Anàlisi de processos, precondicions, workflow agèntic i ROI mesurable. Claude API, n8n, RAG, bases vectorials." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: Service + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Implantació d'IA agèntica",
+    "description": "Disseny i implantació de sistemes d'agents IA orquestrats per a processos empresarials: anàlisi de processos, precondicions, definició del workflow agèntic i mesura del ROI. Stack basat en Claude API, n8n, RAG i bases vectorials.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es"
+    },
+    "url": "https://www.aimtech.es/ca/ia-agentica/",
+    "areaServed": { "@type": "Country", "name": "Espanya" },
+    "serviceType": "Consultoria i implantació d'IA",
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Empreses, entitats i administracions públiques"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
+      { "@type": "ListItem", "position": 2, "name": "IA Agèntica", "item": "https://www.aimtech.es/ca/ia-agentica/" }
+    ]
+  }
+]
+</script>
+
+<link rel="stylesheet" href="../../css/tokens.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+<link rel="stylesheet" href="../../css/base.css">
+<link rel="stylesheet" href="../../css/components.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/ia-agentica.css">
+<link rel="stylesheet" href="../../css/cookie-consent.css">
+<script src="../../js/cookie-consent.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<nav>
+  <a href="../" class="logo" style="text-decoration:none;color:inherit;">
+    <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+      <circle class="ring" cx="50" cy="50" r="50"/>
+      <text class="mono" x="50" y="50" text-anchor="middle" dominant-baseline="central"
+            font-family="Geist, system-ui, sans-serif" font-weight="700"
+            font-size="48" letter-spacing="-2">ac</text>
+    </svg>
+    <span>aimtech<span style="color: var(--accent);">/</span>es</span>
+  </a>
+  <div class="nav-links">
+    <a href="../#serveis">Serveis</a>
+    <a href="#analisi">Anàlisi</a>
+    <a href="#workflow">Workflow</a>
+    <a href="#roi">ROI</a>
+    <a href="/ca/contacte/">Contacte</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="/ia-agentica/">ES</a>
+      <span class="sep">/</span>
+      <a href="/ca/ia-agentica/" class="active">CA</a>
+    </div>
+    <a href="/ca/contacte/" class="nav-cta">Parlem-ne →</a>
+  </div>
+</nav>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="dot dot--multi"></span>
+            <span>Consultoria · Implantació</span>
+            <span class="sep">/</span>
+            <span>Claude · n8n · RAG</span>
+            <span class="sep">/</span>
+            <span id="clock">--:--:--</span>
+          </div>
+
+          <h1>
+            <span class="reveal r1">Agents IA</span>
+            <span class="reveal r2"><em class="italic">orquestrats</em></span><br>
+            <span class="reveal r3">que entreguen</span>
+            <span class="reveal r4">ROI.</span>
+          </h1>
+
+          <p class="hero-sub">
+            Implantació de <strong>sistemes multi-agent</strong> per a empreses, entitats i AAPP. Diagnostiquem el procés, validem les precondicions, dissenyem el workflow agèntic i mesurem el retorn abans i després. <strong>Un orquestrador, diversos agents especialitzats</strong> connectats als teus correus, CRM, xarxes socials i eines internes. Sense demos boniques que es queden al calaix.
+          </p>
+
+          <div class="hero-cta">
+            <a href="/ca/contacte/" class="btn-primary">
+              Demanar diagnòstic
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="#workflow" class="btn-ghost">Veure mètode</a>
+          </div>
+        </div>
+
+        <div class="ag-stage" aria-hidden="true">
+
+          <!-- Halos de color per agent -->
+          <div class="ag-halo ag-halo--center"></div>
+          <div class="ag-halo ag-halo--nw"></div>
+          <div class="ag-halo ag-halo--ne"></div>
+          <div class="ag-halo ag-halo--sw"></div>
+          <div class="ag-halo ag-halo--se"></div>
+
+          <!-- Cel de fons: estrelles -->
+          <svg class="ag-scene-bg" viewBox="0 0 560 560" preserveAspectRatio="none">
+            <circle cx="80"  cy="60"  r="1.4" class="star"/>
+            <circle cx="500" cy="80"  r="1.4" class="star" style="animation-delay: 0.8s"/>
+            <circle cx="40"  cy="320" r="1"   class="star" style="animation-delay: 1.6s"/>
+            <circle cx="520" cy="500" r="1"   class="star" style="animation-delay: 2.2s"/>
+            <circle cx="280" cy="40"  r="1"   class="star" style="animation-delay: 0.4s"/>
+            <circle cx="280" cy="520" r="1"   class="star" style="animation-delay: 1.2s"/>
+            <circle cx="50"  cy="510" r="1"   class="star" style="animation-delay: 2.0s"/>
+            <circle cx="510" cy="270" r="1"   class="star" style="animation-delay: 2.8s"/>
+          </svg>
+
+          <!-- Escena principal: orquestrador + agents -->
+          <svg class="ag-scene" viewBox="0 0 560 560" preserveAspectRatio="xMidYMid meet">
+
+            <!-- Vincles de l'orquestrador a cada agent -->
+            <path id="path-nw" class="link link--nw" d="M 245 245 L 188 188"/>
+            <path id="path-ne" class="link link--ne" d="M 315 245 L 372 188"/>
+            <path id="path-sw" class="link link--sw" d="M 245 315 L 188 372"/>
+            <path id="path-se" class="link link--se" d="M 315 315 L 372 372"/>
+
+            <!-- Partícules: de l'orquestrador (blanc) cap a cada agent -->
+            <circle r="2.6" fill="#e6ebf2" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite">
+                <mpath href="#path-nw"/>
+              </animateMotion>
+            </circle>
+            <circle r="2.6" fill="#e6ebf2" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="0.6s">
+                <mpath href="#path-ne"/>
+              </animateMotion>
+            </circle>
+            <circle r="2.6" fill="#e6ebf2" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.2s">
+                <mpath href="#path-sw"/>
+              </animateMotion>
+            </circle>
+            <circle r="2.6" fill="#e6ebf2" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.8s">
+                <mpath href="#path-se"/>
+              </animateMotion>
+            </circle>
+
+            <!-- Partícules: resposta de cada agent cap a l'orquestrador (color de l'agent) -->
+            <circle r="2.2" fill="#2580e3" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.3s" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+                <mpath href="#path-nw"/>
+              </animateMotion>
+            </circle>
+            <circle r="2.2" fill="#b794f6" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.9s" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+                <mpath href="#path-ne"/>
+              </animateMotion>
+            </circle>
+            <circle r="2.2" fill="#ffb86b" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="2.5s" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+                <mpath href="#path-sw"/>
+              </animateMotion>
+            </circle>
+            <circle r="2.2" fill="#5eead4" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="0.4s" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+                <mpath href="#path-se"/>
+              </animateMotion>
+            </circle>
+
+            <!-- ── Orquestrador central (coords absolutes, sense risc de transform-conflict) ── -->
+            <circle cx="280" cy="280" r="46" class="orch-ring-outer"/>
+            <circle cx="280" cy="280" r="30" class="orch-ring-inner"/>
+            <g class="orch-asterisk" transform="translate(280, 280)">
+              <animateTransform attributeName="transform" type="scale"
+                values="1; 1.08; 1" dur="3.2s" repeatCount="indefinite" additive="sum"/>
+              <line x1="0"     y1="-20" x2="0"    y2="20"/>
+              <line x1="-17.3" y1="-10" x2="17.3" y2="10"/>
+              <line x1="-17.3" y1="10"  x2="17.3" y2="-10"/>
+            </g>
+            <circle cx="280" cy="280" r="4.5" class="orch-core"/>
+
+            <!-- ── Agent Inbox (NW, blau) ── -->
+            <g transform="translate(160, 160)"><g class="bot bot--inbox">
+              <ellipse cx="0" cy="38" rx="22" ry="3" class="bot-shadow"/>
+              <line x1="0" y1="-26" x2="0" y2="-36" class="bot-antenna"/>
+              <circle cx="0" cy="-38" r="2.6" class="bot-antenna-dot"/>
+              <g class="envelope" transform="translate(0, -50)">
+                <rect x="-11" y="-7" width="22" height="14" rx="1.5"/>
+                <path class="envelope-flap" d="M -11 -7 L 0 1 L 11 -7"/>
+              </g>
+              <rect x="-22" y="-22" width="44" height="48" rx="4" class="bot-body"/>
+              <line x1="-22" y1="-4" x2="22" y2="-4" class="bot-line"/>
+              <line x1="-22" y1="16" x2="22" y2="16" class="bot-line"/>
+              <rect class="bot-eye bot-eye-glow" x="-12" y="-15" width="7" height="7" rx="1.5"/>
+              <rect class="bot-eye bot-eye-glow" x="5"   y="-15" width="7" height="7" rx="1.5"/>
+              <rect x="-22" y="22" width="44" height="8" rx="2" class="bot-tread"/>
+            </g></g>
+
+            <!-- ── Agent Social (NE, lila) ── -->
+            <g transform="translate(400, 160)"><g class="bot bot--social">
+              <ellipse cx="0" cy="38" rx="22" ry="3" class="bot-shadow"/>
+              <g class="claw-grab" transform="translate(0, -50)">
+                <rect class="post-card" x="-13" y="-2" width="26" height="16" rx="2"/>
+                <line class="post-line" x1="-9" y1="3" x2="3"  y2="3"/>
+                <line class="post-line" x1="-9" y1="7" x2="6"  y2="7"/>
+                <path class="post-heart" d="M 7 4 c -1.5 -2 -4.5 0 -2.5 2.5 l 2.5 2.5 l 2.5 -2.5 c 2 -2.5 -1 -4.5 -2.5 -2.5 z"/>
+                <path class="claw-arm" d="M -10 -2 Q -16 -10 -10 -14"/>
+                <path class="claw-arm" d="M  10 -2 Q  16 -10  10 -14"/>
+                <circle class="claw-tip" cx="-10" cy="-14" r="2.2"/>
+                <circle class="claw-tip" cx="10"  cy="-14" r="2.2"/>
+              </g>
+              <rect x="-22" y="-22" width="44" height="48" rx="4" class="bot-body"/>
+              <line x1="-22" y1="-4" x2="22" y2="-4" class="bot-line"/>
+              <line x1="-22" y1="16" x2="22" y2="16" class="bot-line"/>
+              <circle class="bot-eye bot-eye-glow" cx="-9" cy="-12" r="3.6"/>
+              <circle class="bot-eye bot-eye-glow" cx="9"  cy="-12" r="3.6"/>
+              <rect x="-22" y="22" width="44" height="8" rx="2" fill="#b794f6" opacity="0.7"/>
+            </g></g>
+
+            <!-- ── Agent Chat (SW, warm) ── -->
+            <g transform="translate(160, 400)"><g class="bot bot--chat">
+              <ellipse cx="0" cy="38" rx="22" ry="3" class="bot-shadow"/>
+              <line x1="0" y1="-26" x2="0" y2="-34" class="bot-antenna"/>
+              <circle cx="0" cy="-36" r="2.6" class="bot-antenna-dot"/>
+              <rect x="-22" y="-22" width="44" height="48" rx="14" class="bot-body"/>
+              <circle class="bot-eye bot-eye-glow" cx="-9" cy="-10" r="3.8"/>
+              <circle class="bot-eye bot-eye-glow" cx="9"  cy="-10" r="3.8"/>
+              <path class="bot-mouth" d="M -8 6 Q 0 13 8 6"/>
+              <g transform="translate(28, -28)">
+                <rect class="bubble-mini" x="-2" y="-8" width="26" height="16" rx="6"/>
+                <circle class="bubble-dot" cx="4"  cy="0" r="1.8"/>
+                <circle class="bubble-dot" cx="11" cy="0" r="1.8"/>
+                <circle class="bubble-dot" cx="18" cy="0" r="1.8"/>
+              </g>
+            </g></g>
+
+            <!-- ── Agent Data (SE, teal) ── -->
+            <g transform="translate(400, 400)"><g class="bot bot--data">
+              <ellipse cx="0" cy="38" rx="22" ry="3" class="bot-shadow"/>
+              <rect x="-24" y="-22" width="48" height="48" rx="4" class="bot-body"/>
+              <rect x="-18" y="-18" width="36" height="18" rx="2" fill="rgba(94,234,212,0.08)" stroke="#5eead4" stroke-width="0.8"/>
+              <g transform="translate(0, -9)">
+                <g class="data-aster">
+                  <line x1="0" y1="-6"   x2="0"   y2="6"/>
+                  <line x1="-5.2" y1="-3" x2="5.2" y2="3"/>
+                  <line x1="-5.2" y1="3"  x2="5.2" y2="-3"/>
+                </g>
+              </g>
+              <g class="data-plot" transform="translate(-14, 18)">
+                <line x1="0" y1="0" x2="28" y2="0"/>
+              </g>
+              <g transform="translate(-14, 4)">
+                <rect class="data-bar" x="0"  y="6" width="3" height="8"/>
+                <rect class="data-bar" x="7"  y="3" width="3" height="11" style="animation-delay: 0.4s"/>
+                <rect class="data-bar" x="14" y="0" width="3" height="14" style="animation-delay: 0.8s"/>
+                <rect class="data-bar" x="21" y="4" width="3" height="10" style="animation-delay: 1.2s"/>
+              </g>
+            </g></g>
+
+          </svg>
+
+          <!-- Tags HTML flotants -->
+          <span class="ag-tag ag-tag--orch">// orchestrator</span>
+          <span class="ag-tag ag-tag--inbox">// inbox.bot</span>
+          <span class="ag-tag ag-tag--social">// social.bot</span>
+          <span class="ag-tag ag-tag--chat">// chat.bot</span>
+          <span class="ag-tag ag-tag--data">// data.bot</span>
+
+          <!-- Telemetria -->
+          <div class="ag-telemetry tm-top"><span class="tag">4 agents · 1 orquestrador</span></div>
+          <div class="ag-telemetry tm-bot"><span class="tag">human-in-the-loop · on</span></div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="tag">AGENTS</span>
+      <span>Claude API</span> <span>·</span>
+      <span>n8n</span> <span>·</span>
+      <span>RAG</span> <span>·</span>
+      <span>Qdrant</span> <span>·</span>
+      <span>Orquestració</span> <span>·</span>
+      <span>Tool use</span> <span>·</span>
+      <span>WhatsApp Business</span> <span>·</span>
+      <span>Gmail / Outlook</span> <span>·</span>
+      <span>CRM</span> <span>·</span>
+      <span>Human-in-the-loop</span> <span>·</span>
+      <span>Observabilitat</span> <span>·</span>
+      <span>ROI mesurable</span> <span>·</span>
+      <span class="tag">AGENTS</span>
+      <span>Claude API</span> <span>·</span>
+      <span>n8n</span> <span>·</span>
+      <span>RAG</span> <span>·</span>
+      <span>Qdrant</span> <span>·</span>
+      <span>Orquestració</span> <span>·</span>
+      <span>Tool use</span> <span>·</span>
+    </div>
+  </div>
+
+  <section id="analisi">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">01 — Anàlisi de processos</div>
+        <h2 class="section-title">No tot procés <em>mereix</em> / un agent. / Comencem pel diagnòstic.</h2>
+        <p class="section-intro">Abans de tocar una línia de codi mirem quins processos consumeixen hores al teu equip, quin patró tenen i on un agent IA aporta més que una simple automatització. L'important no és <em style="color:var(--accent);font-style:italic">què es pot automatitzar</em>, sinó <em style="color:var(--accent);font-style:italic">què val la pena automatitzar</em> ara mateix.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// senyal_01</span>
+            <span class="badge">Repetitiu</span>
+          </div>
+          <h3>Hi ha un <em>patró clar</em>.</h3>
+          <p>El procés es repeteix N vegades al dia/setmana amb un input estructurat o semi-estructurat i un output esperat. Exemples: triatge de correus, primera resposta a leads, extracció de dades de PDFs.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// senyal_02</span>
+            <span class="badge">Decisió acotada</span>
+          </div>
+          <h3>El <em>judici</em> és delimitable.</h3>
+          <p>Les decisions es poden descriure en llenguatge natural i caben en un grapat de regles i excepcions. Si la decisió exigeix experiència tàcita irreductible, l'agent ajuda però no decideix.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// senyal_03</span>
+            <span class="badge">Cost mesurable</span>
+          </div>
+          <h3>Saps quant <em>costa avui</em>.</h3>
+          <p>Hores-persona, lead time, errors. Si no podem posar un número al cost actual del procés, tampoc podrem demostrar ROI després. El diagnòstic sempre inclou la línia base.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="precondicions">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">02 — Precondicions</div>
+        <h2 class="section-title">El que ha d'estar <em>abans</em> / de posar-hi un agent.</h2>
+        <p class="section-intro">Un agent no arregla un procés trencat: l'amplifica. Abans d'implantar revisem aquests sis fronts amb tu. Si algun falla, ho deixem per escrit i decidim junts si es resol abans o si s'acota l'abast de l'agent.</p>
+      </div>
+
+      <div class="pre-list" data-stagger>
+
+        <div class="pre-item">
+          <span class="pre-check">// pre_01</span>
+          <h4>Procés <em>documentat</em>.</h4>
+          <p>Sabem quins passos es fan avui, en quin ordre, amb quins inputs i quins outputs. Si el procés viu només al cap d'una persona, el primer és treure'l d'allà.</p>
+        </div>
+
+        <div class="pre-item">
+          <span class="pre-check">// pre_02</span>
+          <h4>Dades <em>accessibles</em>.</h4>
+          <p>L'agent necessita llegir i escriure on calgui: correu, CRM, base de dades, drive, sistema intern. Permisos, API o accés de servei resolts abans del go-live, no el dia 1.</p>
+        </div>
+
+        <div class="pre-item">
+          <span class="pre-check">// pre_03</span>
+          <h4>Regles <em>de negoci</em> clares.</h4>
+          <p>Què pot fer l'agent sol, què ha d'escalar a una persona i què mai ha de tocar. Llista curta, en llenguatge natural, validada amb el responsable del procés.</p>
+        </div>
+
+        <div class="pre-item">
+          <span class="pre-check">// pre_04</span>
+          <h4>Persona <em>al llaç</em>.</h4>
+          <p>Algú dins l'organització és responsable de revisar el que fa l'agent les primeres setmanes i d'aprovar els casos sensibles. Sense owner humà no hi ha implantació seriosa.</p>
+        </div>
+
+        <div class="pre-item">
+          <span class="pre-check">// pre_05</span>
+          <h4>Marc legal <em>verificat</em>.</h4>
+          <p>RGPD, tractament de dades personals, retenció i traçabilitat. Si el procés toca dades sensibles, el DPO o assessor legal entra des del principi, no després d'un ensurt.</p>
+        </div>
+
+        <div class="pre-item">
+          <span class="pre-check">// pre_06</span>
+          <h4>Línia base <em>mesurada</em>.</h4>
+          <p>Sabem quantes hores, quin temps de resposta, quants errors té el procés avui. Sense línia base no hi ha ROI. Si no existeix, la primera fase del projecte és mesurar-la.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="workflow">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">03 — Workflow agèntic</div>
+        <h2 class="section-title">Un orquestrador, <em>diversos agents</em> / especialitzats.</h2>
+        <p class="section-intro">El patró que defensem: un agent <em style="color:var(--accent);font-style:italic">orquestrador</em> que entén el procés i delega a agents especialitzats connectats a cada eina. Cada agent fa una cosa i la fa bé. L'humà supervisa els punts crítics i aprova el que cal.</p>
+      </div>
+
+      <div class="wf" data-stagger>
+
+        <div class="wf-row">
+          <div class="wf-num"><em>01</em>Trigger</div>
+          <div class="wf-content">
+            <h4>Arriba <em>un esdeveniment</em>.</h4>
+            <p>Un correu nou, un missatge de WhatsApp, una fila en un full, un webhook, un cron. El sistema detecta que ha de passar alguna cosa.</p>
+            <div class="wf-chips">
+              <span class="chip">Gmail / Outlook</span>
+              <span class="chip">WhatsApp Business</span>
+              <span class="chip">Webhooks</span>
+              <span class="chip">Cron</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wf-row">
+          <div class="wf-num"><em>02</em>Routing</div>
+          <div class="wf-content">
+            <h4>L'<em>orquestrador</em> decideix.</h4>
+            <p>Llegeix el context, classifica la intenció, busca el que li cal a la teva base de coneixement (RAG) i decideix quin agent ha d'actuar. Si la decisió és ambigua, escala a un humà.</p>
+            <div class="wf-chips">
+              <span class="chip">Claude API</span>
+              <span class="chip">RAG</span>
+              <span class="chip">Qdrant</span>
+              <span class="chip">Routing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wf-row">
+          <div class="wf-num"><em>03</em>Acció</div>
+          <div class="wf-content">
+            <h4>L'agent especialitzat <em>executa</em>.</h4>
+            <p>Redacta una resposta, actualitza un registre al CRM, publica un esborrany, genera un document, crida una API interna. Cada acció queda registrada i és reversible quan té sentit.</p>
+            <div class="wf-chips">
+              <span class="chip">Tool use</span>
+              <span class="chip">CRM</span>
+              <span class="chip">n8n</span>
+              <span class="chip">APIs internes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wf-row">
+          <div class="wf-num"><em>04</em>Revisió</div>
+          <div class="wf-content">
+            <h4>L'humà <em>aprova</em> el que és crític.</h4>
+            <p>Les accions sensibles (enviaments externs, decisions de cobrament, publicacions públiques) passen per una safata de revisió humana abans d'executar-se. Les rutinàries s'executen soles i s'auditen després.</p>
+            <div class="wf-chips">
+              <span class="chip">Approval queue</span>
+              <span class="chip">Human-in-the-loop</span>
+              <span class="chip">Auditoria</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wf-row">
+          <div class="wf-num"><em>05</em>Telemetria</div>
+          <div class="wf-content">
+            <h4>Es <em>mesura</em> el que passa.</h4>
+            <p>Cada pas del flux genera traces: temps, costos, decisions, errors. Amb això comparem contra la línia base i sabem si l'agent està aportant o si cal ajustar.</p>
+            <div class="wf-chips">
+              <span class="chip">Logs</span>
+              <span class="chip">Mètriques</span>
+              <span class="chip">Cost per execució</span>
+              <span class="chip">Dashboard</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">04 — Stack</div>
+        <h2 class="section-title">El que <em>fem servir</em> / i per què.</h2>
+        <p class="section-intro">Stack pragmàtic. Res de nou per moda, res de tancat a un proveïdor que demà canvia els preus. Si la teva organització ja té infraestructura pròpia, la respectem.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// stack_01</span>
+            <span class="badge">Models</span>
+          </div>
+          <h3>Claude API <em>com a motor</em>.</h3>
+          <p>Per a raonament i tool use fem servir principalment Claude. Si el cas ho demana combinem amb models open source (Llama, Mistral) per a tasques locals o de baix cost.</p>
+          <div class="card-meta">
+            <span class="chip">Claude Sonnet</span>
+            <span class="chip">Claude Opus</span>
+            <span class="chip">Tool use</span>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// stack_02</span>
+            <span class="badge">Orquestració</span>
+          </div>
+          <h3>n8n + <em>Agent SDK</em>.</h3>
+          <p>n8n per als workflows visuals i connectar amb les APIs que la teva organització ja fa servir. Agent SDK per a la lògica de l'orquestrador i els agents que requereixen raonament més fi.</p>
+          <div class="card-meta">
+            <span class="chip">n8n</span>
+            <span class="chip">Agent SDK</span>
+            <span class="chip">Webhooks</span>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// stack_03</span>
+            <span class="badge">Memòria</span>
+          </div>
+          <h3>RAG amb <em>Qdrant</em>.</h3>
+          <p>Base vectorial perquè els agents consultin la teva documentació interna, normativa, manuals o històric. Desplegament al teu núvol o a infraestructura que controles.</p>
+          <div class="card-meta">
+            <span class="chip">Qdrant</span>
+            <span class="chip">Embeddings</span>
+            <span class="chip">RAG</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="roi">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">05 — Resultats &amp; ROI</div>
+        <h2 class="section-title">El que <em>esperar</em> / i com ho mesurem.</h2>
+        <p class="section-intro">El ROI no és un PDF al final del projecte: és un full viu amb la línia base, la corba d'adopció i els costos operatius del propi agent. Si els números no surten, ajustem l'abast — no maquillem l'informe.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// resultat_01</span>
+            <span class="badge">Temps</span>
+          </div>
+          <h3>Hores <em>alliberades</em>.</h3>
+          <p>L'equip recupera temps de tasques amb patró repetitiu. Ho mesurem per procés i per persona, no en agregats de màrqueting.</p>
+          <div class="card-meta">
+            <span class="chip">Hores/setmana</span>
+            <span class="chip">Lead time</span>
+            <span class="chip">Per procés</span>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// resultat_02</span>
+            <span class="badge">Qualitat</span>
+          </div>
+          <h3>Menys <em>errors</em>.</h3>
+          <p>Dades extretes de manera consistent, plantilles sempre completes, sense oblits. Comparem la taxa d'error abans i després contra una mostra revisada per humà.</p>
+          <div class="card-meta">
+            <span class="chip">Taxa d'error</span>
+            <span class="chip">Temps de resposta</span>
+            <span class="chip">SLA</span>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// resultat_03</span>
+            <span class="badge">Capacitat</span>
+          </div>
+          <h3>Escala sense <em>contractar</em>.</h3>
+          <p>El mateix equip gestiona més volum sense rebentar-se en pics. Mètrica clau: throughput per persona-mes vs. cost mensual del sistema agèntic.</p>
+          <div class="card-meta">
+            <span class="chip">Throughput</span>
+            <span class="chip">Cost operatiu</span>
+            <span class="chip">Pics</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="roi-card" data-reveal>
+        <div>
+          <h4>El ROI es signa <em>abans</em>, no després.</h4>
+          <p>A la proposta acordem quin procés ataquem, quina línia base mesurem i quin llindar de millora justifica el projecte. Si a la revisió als 90 dies no hi arribem, ajustem l'abast o aturem. Sense lletra petita.</p>
+        </div>
+        <div class="roi-figure">
+          90<span>dies de revisió</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacte" class="cta-final">
+    <div class="container">
+      <div data-reveal>
+        <h2>Comencem pel <em>diagnòstic</em><span class="cursor-blink"></span></h2>
+        <p>Explica'm quin procés et treu més hores avui i responem en menys de 24h amb una proposta de diagnòstic acotat: una o dues setmanes, sense compromís d'implantació. Si després del diagnòstic no hi ha cas, ho diem.</p>
+        <a href="/ca/contacte/" class="btn-primary" style="font-size: 15px; padding: 18px 32px;">
+          Demanar diagnòstic
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../" class="logo" style="text-decoration:none;color:inherit;">
+          <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+            <circle class="ring" cx="50" cy="50" r="50"/>
+            <text class="mono" x="50" y="50" text-anchor="middle" dominant-baseline="central"
+                  font-family="Geist, system-ui, sans-serif" font-weight="700"
+                  font-size="48" letter-spacing="-2">ac</text>
+          </svg>
+          <span>aimtech<span style="color: var(--accent);">/</span>es</span>
+        </a>
+        <p>Formació i implantació d'IA aplicada, Power BI i desenvolupament a mida. Operada per una SL catalana amb focus en pimes i administració pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Serveis</h4>
+        <a href="../power-bi/">Power BI</a>
+        <a href="../ia-aplicada/">IA Aplicada</a>
+        <a href="./">IA Agèntica</a>
+        <a href="../#serveis">Desenvolupament</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <a href="../#">Casos</a>
+        <a href="../#">Blog</a>
+        <a href="../#">Sobre Mike</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="../avis-legal/">Avís legal</a>
+        <a href="../politica-privacitat/">Privacitat</a>
+        <a href="../politica-galetes/">Galetes</a>
+        <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech SL · Catalunya</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function tick() {
+    const now = new Date();
+    const hh = String(now.getHours()).padStart(2, '0');
+    const mm = String(now.getMinutes()).padStart(2, '0');
+    const ss = String(now.getSeconds()).padStart(2, '0');
+    const el = document.getElementById('clock');
+    if (el) el.textContent = `${hh}:${mm}:${ss} CET`;
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  document.querySelectorAll('[data-mouse]').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mx', x + '%');
+      card.style.setProperty('--my', y + '%');
+    });
+  });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -60px 0px'
+  });
+
+  document.querySelectorAll('[data-reveal], [data-stagger]').forEach(el => {
+    revealObserver.observe(el);
+  });
+</script>
+
+</body>
+</html>

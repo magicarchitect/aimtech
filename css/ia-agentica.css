@@ -1,0 +1,453 @@
+/* ── IA Agéntica hero: orquestador + 4 agentes ───── */
+.ag-stage {
+  --c-orch:  #e6ebf2;
+  --c-inbox: #2580e3;
+  --c-social:#b794f6;
+  --c-chat:  #ffb86b;
+  --c-data:  #5eead4;
+
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 560px;
+  margin-left: auto;
+  opacity: 0;
+  animation: fadeIn 1s ease 0.5s forwards;
+}
+
+/* ── Halos cromáticos ─────────────────────────────── */
+.ag-halo {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(36px);
+}
+.ag-halo--center {
+  top: 50%; left: 50%;
+  width: 50%; aspect-ratio: 1;
+  margin-top: -25%; margin-left: -25%;
+  background: radial-gradient(circle, rgba(230, 235, 242, 0.30), transparent 65%);
+  animation: haloScale 6s ease-in-out infinite;
+}
+/* Halos centrados detrás de cada bot: bot en 28.6%/71.4% del stage, halo width 36% (half 18%), origin 10.6% */
+.ag-halo--nw { top: 10%; left: 10%; width: 36%; aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(37, 128, 227, 0.32), transparent 65%);
+  animation: haloScale 7s ease-in-out infinite; animation-delay: 0.6s; }
+.ag-halo--ne { top: 10%; right: 10%; width: 36%; aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(183, 148, 246, 0.30), transparent 65%);
+  animation: haloScale 7s ease-in-out infinite; animation-delay: 1.2s; }
+.ag-halo--sw { bottom: 10%; left: 10%; width: 36%; aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(255, 184, 107, 0.30), transparent 65%);
+  animation: haloScale 7s ease-in-out infinite; animation-delay: 1.8s; }
+.ag-halo--se { bottom: 10%; right: 10%; width: 36%; aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(94, 234, 212, 0.30), transparent 65%);
+  animation: haloScale 7s ease-in-out infinite; animation-delay: 2.4s; }
+
+/* ── SVG scene principal ──────────────────────────── */
+.ag-scene {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 2;
+}
+.ag-scene-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.star {
+  fill: var(--ink-dim);
+  animation: starTwinkle 3s ease-in-out infinite;
+}
+
+/* ── Vínculos orquestador ↔ agentes ───────────────── */
+.link {
+  fill: none;
+  stroke-width: 1.2;
+  stroke-dasharray: 3 6;
+  opacity: 0.38;
+  animation: dashFlow 1.8s linear infinite;
+}
+.link--nw { stroke: var(--c-inbox); }
+.link--ne { stroke: var(--c-social); }
+.link--sw { stroke: var(--c-chat); }
+.link--se { stroke: var(--c-data); }
+
+.link-particle {
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+/* ── Orquestador central (asterisco con glow + scale SVG) ── */
+.orch-ring-outer,
+.orch-ring-inner {
+  fill: none;
+  stroke: var(--c-orch);
+  stroke-width: 1.4;
+}
+.orch-ring-outer { opacity: 0.55; stroke-dasharray: 4 6; }
+.orch-ring-inner { opacity: 0.8;  stroke-dasharray: 2 4; }
+
+.orch-asterisk {
+  stroke: var(--c-orch);
+  stroke-width: 3;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 12px rgba(230, 235, 242, 0.55));
+}
+.orch-core {
+  fill: var(--c-orch);
+  filter: drop-shadow(0 0 10px var(--c-orch));
+}
+
+/* ── Mini-bots: bloques comunes ───────────────────── */
+.bot { transform-box: fill-box; transform-origin: center bottom; }
+.bot-shadow { fill: rgba(0,0,0,0.4); }
+.bot-eye-glow { filter: drop-shadow(0 0 3px currentColor); }
+
+/* Agente Inbox (NW, azul) — mini-robot con sobre */
+.bot--inbox { animation: botBob 4.6s ease-in-out infinite; }
+.bot--inbox .bot-body { fill: #0d1622; stroke: var(--c-inbox); stroke-width: 1.6; }
+.bot--inbox .bot-line { stroke: var(--c-inbox); stroke-width: 1; opacity: 0.45; }
+.bot--inbox .bot-eye  { fill: var(--c-inbox); color: var(--c-inbox); }
+.bot--inbox .bot-antenna { stroke: var(--c-inbox); stroke-width: 1.6; stroke-linecap: round; }
+.bot--inbox .bot-antenna-dot { fill: var(--c-inbox); }
+.bot--inbox .bot-tread { fill: var(--c-inbox); opacity: 0.7; }
+.envelope {
+  stroke: var(--c-inbox); stroke-width: 1.2; fill: rgba(37,128,227,0.10);
+  animation: envFloat 3.4s ease-in-out infinite;
+  transform-box: fill-box; transform-origin: center;
+}
+.envelope-flap { stroke: var(--c-inbox); stroke-width: 1; fill: none; opacity: 0.7; }
+
+/* Agente Social (NE, púrpura) — claw con caja "post" */
+.bot--social { animation: botBob 5s ease-in-out infinite; animation-delay: 0.5s; }
+.bot--social .bot-body { fill: #160d24; stroke: var(--c-social); stroke-width: 1.6; }
+.bot--social .bot-line { stroke: var(--c-social); stroke-width: 1; opacity: 0.45; }
+.bot--social .bot-eye  { fill: var(--c-social); color: var(--c-social); }
+.bot--social .claw-arm { stroke: var(--c-social); stroke-width: 2; stroke-linecap: round; fill: none; }
+.bot--social .claw-tip { fill: var(--c-social); }
+.claw-grab {
+  transform-box: fill-box; transform-origin: center top;
+  animation: clawGrab 4s ease-in-out infinite;
+}
+.post-card {
+  fill: rgba(183,148,246,0.10);
+  stroke: var(--c-social); stroke-width: 1.2;
+}
+.post-line { stroke: var(--c-social); stroke-width: 1; opacity: 0.6; }
+.post-heart {
+  fill: var(--c-social);
+  filter: drop-shadow(0 0 4px var(--c-social));
+  transform-box: fill-box; transform-origin: center;
+  animation: heartPop 3.6s ease-in-out infinite;
+}
+
+/* Agente Chat (SW, warm) — robot redondo con burbuja */
+.bot--chat { animation: botBob 4.4s ease-in-out infinite; animation-delay: 1s; }
+.bot--chat .bot-body { fill: #2a1c10; stroke: var(--c-chat); stroke-width: 1.6; }
+.bot--chat .bot-line { stroke: var(--c-chat); stroke-width: 1; opacity: 0.45; }
+.bot--chat .bot-eye  { fill: var(--c-chat); color: var(--c-chat); }
+.bot--chat .bot-antenna { stroke: var(--c-chat); stroke-width: 1.6; stroke-linecap: round; }
+.bot--chat .bot-antenna-dot { fill: var(--c-chat); }
+.bot--chat .bot-mouth { stroke: var(--c-chat); stroke-width: 1.4; stroke-linecap: round; fill: none; opacity: 0.7; }
+.bubble-mini {
+  fill: rgba(255,184,107,0.10);
+  stroke: var(--c-chat); stroke-width: 1.2;
+}
+.bubble-dot {
+  fill: var(--c-chat);
+  animation: bubbleDot 1.4s ease-in-out infinite;
+}
+.bubble-dot:nth-of-type(2) { animation-delay: 0.2s; }
+.bubble-dot:nth-of-type(3) { animation-delay: 0.4s; }
+
+/* Agente Data (SE, teal) — asterisco/estrella + plot */
+.bot--data { animation: botBob 4.8s ease-in-out infinite; animation-delay: 1.5s; }
+.bot--data .bot-body { fill: #0d201d; stroke: var(--c-data); stroke-width: 1.6; }
+.bot--data .bot-line { stroke: var(--c-data); stroke-width: 1; opacity: 0.45; }
+.bot--data .bot-eye  { fill: var(--c-data); color: var(--c-data); }
+.bot--data .data-aster {
+  stroke: var(--c-data); stroke-width: 2.2; stroke-linecap: round;
+  filter: drop-shadow(0 0 5px var(--c-data));
+  transform-box: fill-box; transform-origin: center;
+  animation: dataSpin 8s linear infinite;
+}
+.bot--data .data-plot line {
+  stroke: var(--c-data); stroke-width: 1.2;
+  opacity: 0.7;
+}
+.data-bar {
+  fill: var(--c-data); opacity: 0.7;
+  transform-box: fill-box; transform-origin: bottom;
+  animation: dataBar 2.4s ease-in-out infinite;
+}
+
+/* Ojos genéricos (parpadeo coordinado por agente) */
+.bot-eye {
+  transform-box: fill-box; transform-origin: center;
+  animation: eyeBlink 5.5s ease-in-out infinite;
+}
+.bot--inbox  .bot-eye { animation-delay: 0.2s; }
+.bot--social .bot-eye { animation-delay: 1.6s; }
+.bot--chat   .bot-eye { animation-delay: 2.9s; }
+.bot--data   .bot-eye { animation-delay: 4.0s; }
+
+/* ── Tags bajo los bots y el orquestador ─────────── */
+.ag-tag {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 5;
+}
+.ag-tag--orch   { top: 50%; left: 50%; transform: translate(-50%, 56px); color: var(--ink-dim); }
+.ag-tag--inbox  { top: 24%; left: 4%;  color: #2580e3; }
+.ag-tag--social { top: 24%; right: 4%; color: #b794f6; }
+.ag-tag--chat   { bottom: 22%; left: 4%; color: #ffb86b; }
+.ag-tag--data   { bottom: 22%; right: 4%; color: #5eead4; }
+
+/* ── Telemetría flotante en bordes ────────────────── */
+.ag-telemetry {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: 10px;
+  pointer-events: none;
+  z-index: 6;
+  animation: floatGentle 8s ease-in-out infinite;
+}
+.ag-telemetry .tag {
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: rgba(10, 14, 20, 0.85);
+  backdrop-filter: blur(4px);
+  color: var(--ink-dim);
+}
+.ag-telemetry.tm-top { top: 2%; left: 50%; transform: translateX(-50%); animation-delay: 1s; }
+.ag-telemetry.tm-bot { bottom: 2%; left: 50%; transform: translateX(-50%); animation-delay: 3s; }
+
+/* ── Hero meta dots multi-color en /ia-agentica/ ──── */
+.hero-meta .dot--multi {
+  background: linear-gradient(135deg, #2580e3 0%, #b794f6 50%, #5eead4 100%);
+  box-shadow: 0 0 8px rgba(183, 148, 246, 0.6);
+}
+
+/* ── Workflow vertical diagram (sección 03) ───────── */
+.wf {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 32px;
+}
+.wf-row {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 18px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+.wf-row:hover { border-color: var(--line-strong); }
+.wf-row::before {
+  content: '';
+  position: absolute;
+  left: 53px; top: 100%;
+  width: 1px; height: 12px;
+  background: var(--line-strong);
+  opacity: 0.6;
+}
+.wf-row:last-child::before { display: none; }
+.wf-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-mute);
+  padding-top: 2px;
+}
+.wf-num em {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 28px;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.wf-content h4 {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+.wf-content h4 em { font-style: italic; color: var(--accent); }
+.wf-content p {
+  font-size: 14px;
+  color: var(--ink-dim);
+  line-height: 1.55;
+  margin: 0;
+}
+.wf-content .wf-chips {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  margin-top: 10px;
+}
+.wf-content .wf-chips .chip { font-size: 10px; padding: 3px 8px; }
+
+/* ── Precondition list ───────────────────────────── */
+.pre-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+.pre-item {
+  padding: 18px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+.pre-item:hover { border-color: var(--line-strong); }
+.pre-check {
+  position: absolute;
+  top: 18px; right: 18px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+.pre-item h4 {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 400;
+  margin: 0 0 6px;
+  padding-right: 80px;
+}
+.pre-item h4 em { font-style: italic; color: var(--accent); }
+.pre-item p {
+  font-size: 13px;
+  color: var(--ink-dim);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── ROI card highlight ──────────────────────────── */
+.roi-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding: 28px 32px;
+  background: linear-gradient(135deg, rgba(37,128,227,0.08), rgba(94,234,212,0.04));
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  margin-top: 24px;
+}
+.roi-card h4 {
+  font-family: var(--serif); font-style: italic;
+  font-size: 22px; font-weight: 400; margin: 0 0 6px;
+}
+.roi-card p {
+  font-size: 14px; color: var(--ink-dim); line-height: 1.55; margin: 0;
+}
+.roi-figure {
+  font-family: var(--serif);
+  font-size: 56px;
+  line-height: 1;
+  color: var(--accent);
+  font-style: italic;
+}
+.roi-figure span {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 12px;
+  color: var(--ink-dim);
+  display: block;
+  margin-top: 6px;
+  letter-spacing: 0.06em;
+}
+
+/* ── Keyframes ────────────────────────────────────── */
+@keyframes haloScale {
+  0%, 100% { transform: scale(1);    opacity: 0.7; }
+  50%      { transform: scale(1.15); opacity: 1;   }
+}
+
+@keyframes orchSpin       { to { transform: rotate(360deg); } }
+@keyframes orchSpinReverse{ to { transform: rotate(-360deg); } }
+@keyframes orchPulse {
+  0%, 100% { transform: scale(1);   filter: drop-shadow(0 0 10px rgba(230,235,242,0.4)); }
+  50%      { transform: scale(1.08); filter: drop-shadow(0 0 18px rgba(230,235,242,0.65)); }
+}
+@keyframes botBob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+@keyframes eyeBlink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  94%, 98%      { transform: scaleY(0.1); }
+}
+@keyframes envFloat {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50%      { transform: translateY(-3px) rotate(4deg); }
+}
+@keyframes clawGrab {
+  0%, 100% { transform: rotate(0deg); }
+  40%      { transform: rotate(-6deg); }
+  60%      { transform: rotate(6deg); }
+}
+@keyframes heartPop {
+  0%, 40%, 100% { transform: scale(1); opacity: 0.6; }
+  50%, 70%      { transform: scale(1.4); opacity: 1; }
+}
+@keyframes bubbleDot {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50%      { transform: translateY(-2px); opacity: 1; }
+}
+@keyframes dataSpin { to { transform: rotate(360deg); } }
+@keyframes dataBar {
+  0%, 100% { transform: scaleY(0.5); }
+  50%      { transform: scaleY(1); }
+}
+@keyframes dashFlow {
+  to { stroke-dashoffset: -18; }
+}
+@keyframes starTwinkle {
+  0%, 100% { opacity: 0.25; }
+  50%      { opacity: 1;    }
+}
+@keyframes floatGentle {
+  0%, 100% { transform: translate(-50%, 0); }
+  50%      { transform: translate(-50%, -6px); }
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 960px) {
+  .ag-stage { max-width: 400px; margin: 0 auto; }
+  .ag-tag { font-size: 9px; }
+  .ag-telemetry { font-size: 9px; }
+  .pre-list { grid-template-columns: 1fr; }
+  .roi-card { grid-template-columns: 1fr; text-align: left; gap: 20px; padding: 24px; }
+  .roi-figure { font-size: 44px; }
+  .wf-row { grid-template-columns: 56px 1fr; gap: 14px; padding: 16px; }
+  .wf-row::before { left: 43px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ag-stage,
+  .ag-halo,
+  .orch-asterisk, .orch-ring-outer, .orch-ring-inner,
+  .bot, .bot-eye, .envelope, .claw-grab, .post-heart,
+  .bubble-dot, .data-aster, .data-bar,
+  .link, .link-particle, .star,
+  .ag-telemetry {
+    animation: none !important;
+  }
+}

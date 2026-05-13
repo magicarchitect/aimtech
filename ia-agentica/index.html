@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Implantación de IA agéntica — agentes orquestados con ROI medible | Aimtech</title>
+<meta name="description" content="Implantación de IA agéntica para empresas, entidades y AAPP. Análisis de procesos, precondiciones, diseño del workflow agéntico y ROI medible. Claude API, n8n, RAG y bases vectoriales." />
+
+<link rel="canonical" href="https://www.aimtech.es/ia-agentica/" />
+
+<!-- hreflang: variantes de idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/ia-agentica/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/ia-agentica/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/ia-agentica/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="../assets/logo.ico" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<link rel="apple-touch-icon" href="../assets/logo.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="ca_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Implantación de IA agéntica — agentes orquestados con ROI medible | Aimtech" />
+<meta property="og:description" content="Diseñamos e implantamos sistemas de agentes IA que se integran con tus correos, CRM, RRSS y herramientas internas. Análisis, precondiciones, workflow y ROI medible." />
+<meta property="og:url" content="https://www.aimtech.es/ia-agentica/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Implantación de IA agéntica — agentes orquestados con ROI medible — Aimtech" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Implantación de IA agéntica — agentes orquestados con ROI medible | Aimtech" />
+<meta name="twitter:description" content="Análisis de procesos, precondiciones, workflow agéntico y ROI medible. Claude API, n8n, RAG, bases vectoriales." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: Service + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Implantación de IA agéntica",
+    "description": "Diseño e implantación de sistemas de agentes IA orquestados para procesos empresariales: análisis de procesos, precondiciones, definición del workflow agéntico y medición de ROI. Stack basado en Claude API, n8n, RAG y bases vectoriales.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es"
+    },
+    "url": "https://www.aimtech.es/ia-agentica/",
+    "areaServed": { "@type": "Country", "name": "España" },
+    "serviceType": "Consultoría e implantación de IA",
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Empresas, entidades y administraciones públicas"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
+      { "@type": "ListItem", "position": 2, "name": "IA Agéntica", "item": "https://www.aimtech.es/ia-agentica/" }
+    ]
+  }
+]
+</script>
+
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/ia-agentica.css">
+<link rel="stylesheet" href="../css/cookie-consent.css">
+<script src="../js/cookie-consent.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<nav>
+  <a href="../" class="logo" style="text-decoration:none;color:inherit;">
+    <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+      <circle class="ring" cx="50" cy="50" r="50"/>
+      <text class="mono" x="50" y="50" text-anchor="middle" dominant-baseline="central"
+            font-family="Geist, system-ui, sans-serif" font-weight="700"
+            font-size="48" letter-spacing="-2">ac</text>
+    </svg>
+    <span>aimtech<span style="color: var(--accent);">/</span>es</span>
+  </a>
+  <div class="nav-links">
+    <a href="../#servicios">Servicios</a>
+    <a href="#analisis">Análisis</a>
+    <a href="#workflow">Workflow</a>
+    <a href="#roi">ROI</a>
+    <a href="/contacto/">Contacto</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="/ia-agentica/" class="active">ES</a>
+      <span class="sep">/</span>
+      <a href="/ca/ia-agentica/">CA</a>
+    </div>
+    <a href="/contacto/" class="nav-cta">Hablemos →</a>
+  </div>
+</nav>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="dot dot--multi"></span>
+            <span>Consultoría · Implantación</span>
+            <span class="sep">/</span>
+            <span>Claude · n8n · RAG</span>
+            <span class="sep">/</span>
+            <span id="clock">--:--:--</span>
+          </div>
+
+          <h1>
+            <span class="reveal r1">Agentes IA</span>
+            <span class="reveal r2"><em class="italic">orquestados</em></span><br>
+            <span class="reveal r3">que entregan</span>
+            <span class="reveal r4">ROI.</span>
+          </h1>
+
+          <p class="hero-sub">
+            Implantación de <strong>sistemas multi-agente</strong> para empresas, entidades y AAPP. Diagnosticamos el proceso, validamos las precondiciones, diseñamos el workflow agéntico y medimos el retorno antes y después. <strong>Un orquestador, varios agentes especializados</strong> conectados a tus correos, CRM, RRSS y herramientas internas. Sin demos bonitas que se quedan en el cajón.
+          </p>
+
+          <div class="hero-cta">
+            <a href="/contacto/" class="btn-primary">
+              Pedir diagnóstico
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="#workflow" class="btn-ghost">Ver método</a>
+          </div>
+        </div>
+
+        <div class="ag-stage" aria-hidden="true">
+
+          <!-- Halos de color por agente -->
+          <div class="ag-halo ag-halo--center"></div>
+          <div class="ag-halo ag-halo--nw"></div>
+          <div class="ag-halo ag-halo--ne"></div>
+          <div class="ag-halo ag-halo--sw"></div>
+          <div class="ag-halo ag-halo--se"></div>
+
+          <!-- Cielo de fondo: estrellas -->
+          <svg class="ag-scene-bg" viewBox="0 0 560 560" preserveAspectRatio="none">
+            <circle cx="80"  cy="60"  r="1.4" class="star"/>
+            <circle cx="500" cy="80"  r="1.4" class="star" style="animation-delay: 0.8s"/>
+            <circle cx="40"  cy="320" r="1"   class="star" style="animation-delay: 1.6s"/>
+            <circle cx="520" cy="500" r="1"   class="star" style="animation-delay: 2.2s"/>
+            <circle cx="280" cy="40"  r="1"   class="star" style="animation-delay: 0.4s"/>
+            <circle cx="280" cy="520" r="1"   class="star" style="animation-delay: 1.2s"/>
+            <circle cx="50"  cy="510" r="1"   class="star" style="animation-delay: 2.0s"/>
+            <circle cx="510" cy="270" r="1"   class="star" style="animation-delay: 2.8s"/>
+          </svg>
+
+          <!-- Escena principal: orquestador + agentes -->
+          <svg class="ag-scene" viewBox="0 0 560 560" preserveAspectRatio="xMidYMid meet">
+
+            <!-- Vínculos del orquestador a cada agente -->
+            <path id="path-nw" class="link link--nw" d="M 245 245 L 188 188"/>
+            <path id="path-ne" class="link link--ne" d="M 315 245 L 372 188"/>
+            <path id="path-sw" class="link link--sw" d="M 245 315 L 188 372"/>
+            <path id="path-se" class="link link--se" d="M 315 315 L 372 372"/>
+
+            <!-- Partículas: del orquestador (blanco) hacia cada agente -->
+            <circle r="2.6" fill="#e6ebf2" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite">
+                <mpath href="#path-nw"/>
+              </animateMotion>
+            </circle>
+            <circle r="2.6" fill="#e6ebf2" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="0.6s">
+                <mpath href="#path-ne"/>
+              </animateMotion>
+            </circle>
+            <circle r="2.6" fill="#e6ebf2" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.2s">
+                <mpath href="#path-sw"/>
+              </animateMotion>
+            </circle>
+            <circle r="2.6" fill="#e6ebf2" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.8s">
+                <mpath href="#path-se"/>
+              </animateMotion>
+            </circle>
+
+            <!-- Partículas: respuesta de cada agente hacia el orquestador (color del agente) -->
+            <circle r="2.2" fill="#2580e3" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.3s" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+                <mpath href="#path-nw"/>
+              </animateMotion>
+            </circle>
+            <circle r="2.2" fill="#b794f6" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.9s" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+                <mpath href="#path-ne"/>
+              </animateMotion>
+            </circle>
+            <circle r="2.2" fill="#ffb86b" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="2.5s" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+                <mpath href="#path-sw"/>
+              </animateMotion>
+            </circle>
+            <circle r="2.2" fill="#5eead4" class="link-particle">
+              <animateMotion dur="2.6s" repeatCount="indefinite" begin="0.4s" keyPoints="1;0" keyTimes="0;1" calcMode="linear">
+                <mpath href="#path-se"/>
+              </animateMotion>
+            </circle>
+
+            <!-- ── Orquestador central (coords absolutas, sin riesgo de transform-conflict) ── -->
+            <circle cx="280" cy="280" r="46" class="orch-ring-outer"/>
+            <circle cx="280" cy="280" r="30" class="orch-ring-inner"/>
+            <g class="orch-asterisk" transform="translate(280, 280)">
+              <animateTransform attributeName="transform" type="scale"
+                values="1; 1.08; 1" dur="3.2s" repeatCount="indefinite" additive="sum"/>
+              <line x1="0"     y1="-20" x2="0"    y2="20"/>
+              <line x1="-17.3" y1="-10" x2="17.3" y2="10"/>
+              <line x1="-17.3" y1="10"  x2="17.3" y2="-10"/>
+            </g>
+            <circle cx="280" cy="280" r="4.5" class="orch-core"/>
+
+            <!-- ── Agente Inbox (NW, azul) ── -->
+            <g transform="translate(160, 160)"><g class="bot bot--inbox">
+              <ellipse cx="0" cy="38" rx="22" ry="3" class="bot-shadow"/>
+              <!-- antena -->
+              <line x1="0" y1="-26" x2="0" y2="-36" class="bot-antenna"/>
+              <circle cx="0" cy="-38" r="2.6" class="bot-antenna-dot"/>
+              <!-- envelope arriba del cuerpo, flotando -->
+              <g class="envelope" transform="translate(0, -50)">
+                <rect x="-11" y="-7" width="22" height="14" rx="1.5"/>
+                <path class="envelope-flap" d="M -11 -7 L 0 1 L 11 -7"/>
+              </g>
+              <!-- cuerpo -->
+              <rect x="-22" y="-22" width="44" height="48" rx="4" class="bot-body"/>
+              <line x1="-22" y1="-4" x2="22" y2="-4" class="bot-line"/>
+              <line x1="-22" y1="16" x2="22" y2="16" class="bot-line"/>
+              <!-- ojos cuadrados -->
+              <rect class="bot-eye bot-eye-glow" x="-12" y="-15" width="7" height="7" rx="1.5"/>
+              <rect class="bot-eye bot-eye-glow" x="5"   y="-15" width="7" height="7" rx="1.5"/>
+              <!-- tread -->
+              <rect x="-22" y="22" width="44" height="8" rx="2" class="bot-tread"/>
+            </g></g>
+
+            <!-- ── Agente Social (NE, púrpura) ── -->
+            <g transform="translate(400, 160)"><g class="bot bot--social">
+              <ellipse cx="0" cy="38" rx="22" ry="3" class="bot-shadow"/>
+              <!-- claw sosteniendo post-card flotante -->
+              <g class="claw-grab" transform="translate(0, -50)">
+                <!-- post-card -->
+                <rect class="post-card" x="-13" y="-2" width="26" height="16" rx="2"/>
+                <line class="post-line" x1="-9" y1="3" x2="3"  y2="3"/>
+                <line class="post-line" x1="-9" y1="7" x2="6"  y2="7"/>
+                <path class="post-heart" d="M 7 4 c -1.5 -2 -4.5 0 -2.5 2.5 l 2.5 2.5 l 2.5 -2.5 c 2 -2.5 -1 -4.5 -2.5 -2.5 z"/>
+                <!-- claw arms encima -->
+                <path class="claw-arm" d="M -10 -2 Q -16 -10 -10 -14"/>
+                <path class="claw-arm" d="M  10 -2 Q  16 -10  10 -14"/>
+                <circle class="claw-tip" cx="-10" cy="-14" r="2.2"/>
+                <circle class="claw-tip" cx="10"  cy="-14" r="2.2"/>
+              </g>
+              <!-- cuerpo -->
+              <rect x="-22" y="-22" width="44" height="48" rx="4" class="bot-body"/>
+              <line x1="-22" y1="-4" x2="22" y2="-4" class="bot-line"/>
+              <line x1="-22" y1="16" x2="22" y2="16" class="bot-line"/>
+              <circle class="bot-eye bot-eye-glow" cx="-9" cy="-12" r="3.6"/>
+              <circle class="bot-eye bot-eye-glow" cx="9"  cy="-12" r="3.6"/>
+              <!-- tread -->
+              <rect x="-22" y="22" width="44" height="8" rx="2" fill="#b794f6" opacity="0.7"/>
+            </g></g>
+
+            <!-- ── Agente Chat (SW, warm) ── -->
+            <g transform="translate(160, 400)"><g class="bot bot--chat">
+              <ellipse cx="0" cy="38" rx="22" ry="3" class="bot-shadow"/>
+              <line x1="0" y1="-26" x2="0" y2="-34" class="bot-antenna"/>
+              <circle cx="0" cy="-36" r="2.6" class="bot-antenna-dot"/>
+              <!-- cuerpo redondeado -->
+              <rect x="-22" y="-22" width="44" height="48" rx="14" class="bot-body"/>
+              <circle class="bot-eye bot-eye-glow" cx="-9" cy="-10" r="3.8"/>
+              <circle class="bot-eye bot-eye-glow" cx="9"  cy="-10" r="3.8"/>
+              <path class="bot-mouth" d="M -8 6 Q 0 13 8 6"/>
+              <!-- burbuja a la derecha con dots -->
+              <g transform="translate(28, -28)">
+                <rect class="bubble-mini" x="-2" y="-8" width="26" height="16" rx="6"/>
+                <circle class="bubble-dot" cx="4"  cy="0" r="1.8"/>
+                <circle class="bubble-dot" cx="11" cy="0" r="1.8"/>
+                <circle class="bubble-dot" cx="18" cy="0" r="1.8"/>
+              </g>
+            </g></g>
+
+            <!-- ── Agente Data (SE, teal) ── -->
+            <g transform="translate(400, 400)"><g class="bot bot--data">
+              <ellipse cx="0" cy="38" rx="22" ry="3" class="bot-shadow"/>
+              <!-- cuerpo -->
+              <rect x="-24" y="-22" width="48" height="48" rx="4" class="bot-body"/>
+              <!-- pantalla superior con asterisco data -->
+              <rect x="-18" y="-18" width="36" height="18" rx="2" fill="rgba(94,234,212,0.08)" stroke="#5eead4" stroke-width="0.8"/>
+              <g transform="translate(0, -9)">
+                <g class="data-aster">
+                  <line x1="0" y1="-6"   x2="0"   y2="6"/>
+                  <line x1="-5.2" y1="-3" x2="5.2" y2="3"/>
+                  <line x1="-5.2" y1="3"  x2="5.2" y2="-3"/>
+                </g>
+              </g>
+              <!-- mini gráfico de barras -->
+              <g class="data-plot" transform="translate(-14, 18)">
+                <line x1="0" y1="0" x2="28" y2="0"/>
+              </g>
+              <g transform="translate(-14, 4)">
+                <rect class="data-bar" x="0"  y="6" width="3" height="8"/>
+                <rect class="data-bar" x="7"  y="3" width="3" height="11" style="animation-delay: 0.4s"/>
+                <rect class="data-bar" x="14" y="0" width="3" height="14" style="animation-delay: 0.8s"/>
+                <rect class="data-bar" x="21" y="4" width="3" height="10" style="animation-delay: 1.2s"/>
+              </g>
+            </g></g>
+
+          </svg>
+
+          <!-- Tags HTML flotantes -->
+          <span class="ag-tag ag-tag--orch">// orchestrator</span>
+          <span class="ag-tag ag-tag--inbox">// inbox.bot</span>
+          <span class="ag-tag ag-tag--social">// social.bot</span>
+          <span class="ag-tag ag-tag--chat">// chat.bot</span>
+          <span class="ag-tag ag-tag--data">// data.bot</span>
+
+          <!-- Telemetría -->
+          <div class="ag-telemetry tm-top"><span class="tag">4 agentes · 1 orquestador</span></div>
+          <div class="ag-telemetry tm-bot"><span class="tag">human-in-the-loop · on</span></div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="tag">AGENTES</span>
+      <span>Claude API</span> <span>·</span>
+      <span>n8n</span> <span>·</span>
+      <span>RAG</span> <span>·</span>
+      <span>Qdrant</span> <span>·</span>
+      <span>Orquestación</span> <span>·</span>
+      <span>Tool use</span> <span>·</span>
+      <span>WhatsApp Business</span> <span>·</span>
+      <span>Gmail / Outlook</span> <span>·</span>
+      <span>CRM</span> <span>·</span>
+      <span>Human-in-the-loop</span> <span>·</span>
+      <span>Observabilidad</span> <span>·</span>
+      <span>ROI medible</span> <span>·</span>
+      <span class="tag">AGENTES</span>
+      <span>Claude API</span> <span>·</span>
+      <span>n8n</span> <span>·</span>
+      <span>RAG</span> <span>·</span>
+      <span>Qdrant</span> <span>·</span>
+      <span>Orquestación</span> <span>·</span>
+      <span>Tool use</span> <span>·</span>
+    </div>
+  </div>
+
+  <section id="analisis">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">01 — Análisis de procesos</div>
+        <h2 class="section-title">No todo proceso <em>merece</em> / un agente. / Empezamos por el diagnóstico.</h2>
+        <p class="section-intro">Antes de tocar una línea de código miramos qué procesos consumen horas a tu equipo, qué patrón tienen y dónde un agente IA aporta más que una simple automatización. Lo importante no es <em style="color:var(--accent);font-style:italic">qué se puede automatizar</em>, sino <em style="color:var(--accent);font-style:italic">qué merece la pena automatizar</em> ahora mismo.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// señal_01</span>
+            <span class="badge">Repetitivo</span>
+          </div>
+          <h3>Hay un <em>patrón claro</em>.</h3>
+          <p>El proceso se repite N veces al día/semana con un input estructurado o semi-estructurado y un output esperado. Ejemplos: triaje de correos, primera respuesta a leads, extracción de datos de PDFs.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// señal_02</span>
+            <span class="badge">Decisión acotada</span>
+          </div>
+          <h3>El <em>juicio</em> es delimitable.</h3>
+          <p>Las decisiones se pueden describir en lenguaje natural y caben en un puñado de reglas y excepciones. Si la decisión exige experiencia tácita irreductible, el agente apoya pero no decide.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// señal_03</span>
+            <span class="badge">Coste medible</span>
+          </div>
+          <h3>Sabes cuánto <em>cuesta hoy</em>.</h3>
+          <p>Horas-persona, lead time, errores. Si no podemos poner un número al coste actual del proceso, tampoco podremos demostrar ROI después. El diagnóstico siempre incluye la línea base.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="precondiciones">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">02 — Precondiciones</div>
+        <h2 class="section-title">Lo que tiene que estar <em>antes</em> / de meter un agente.</h2>
+        <p class="section-intro">Un agente no arregla un proceso roto: lo amplifica. Antes de implantar revisamos estos cinco frentes contigo. Si alguno falla, lo dejamos por escrito y decidimos juntos si se resuelve antes o si se acota el alcance del agente.</p>
+      </div>
+
+      <div class="pre-list" data-stagger>
+
+        <div class="pre-item">
+          <span class="pre-check">// pre_01</span>
+          <h4>Proceso <em>documentado</em>.</h4>
+          <p>Sabemos qué pasos se hacen hoy, en qué orden, con qué inputs y qué outputs. Si el proceso vive sólo en la cabeza de una persona, lo primero es sacarlo de ahí.</p>
+        </div>
+
+        <div class="pre-item">
+          <span class="pre-check">// pre_02</span>
+          <h4>Datos <em>accesibles</em>.</h4>
+          <p>El agente necesita leer y escribir donde haga falta: correo, CRM, base de datos, drive, sistema interno. Permisos, API o acceso de servicio resueltos antes del go-live, no en el día 1.</p>
+        </div>
+
+        <div class="pre-item">
+          <span class="pre-check">// pre_03</span>
+          <h4>Reglas <em>de negocio</em> claras.</h4>
+          <p>Qué puede hacer el agente solo, qué tiene que escalar a una persona y qué jamás debe tocar. Lista corta, en lenguaje natural, validada con el responsable del proceso.</p>
+        </div>
+
+        <div class="pre-item">
+          <span class="pre-check">// pre_04</span>
+          <h4>Persona <em>en el lazo</em>.</h4>
+          <p>Alguien dentro de la organización es responsable de revisar lo que hace el agente las primeras semanas y de aprobar los casos sensibles. Sin owner humano no hay implantación seria.</p>
+        </div>
+
+        <div class="pre-item">
+          <span class="pre-check">// pre_05</span>
+          <h4>Marco legal <em>verificado</em>.</h4>
+          <p>RGPD, tratamiento de datos personales, retención y trazabilidad. Si el proceso toca datos sensibles, el DPO o asesor legal entra desde el principio, no después de un susto.</p>
+        </div>
+
+        <div class="pre-item">
+          <span class="pre-check">// pre_06</span>
+          <h4>Línea base <em>medida</em>.</h4>
+          <p>Sabemos cuántas horas, cuánto tiempo de respuesta, cuántos errores tiene el proceso hoy. Sin línea base no hay ROI. Si no existe, la primera fase del proyecto es medirla.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="workflow">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">03 — Workflow agéntico</div>
+        <h2 class="section-title">Un orquestador, <em>varios agentes</em> / especializados.</h2>
+        <p class="section-intro">El patrón que defendemos: un agente <em style="color:var(--accent);font-style:italic">orquestador</em> que entiende el proceso y delega a agentes especializados conectados a cada herramienta. Cada agente hace una cosa y la hace bien. El humano supervisa los puntos críticos y aprueba lo que toque.</p>
+      </div>
+
+      <div class="wf" data-stagger>
+
+        <div class="wf-row">
+          <div class="wf-num"><em>01</em>Trigger</div>
+          <div class="wf-content">
+            <h4>Llega <em>un evento</em>.</h4>
+            <p>Un correo nuevo, un mensaje de WhatsApp, una fila en una hoja, un webhook, un cron. El sistema detecta que algo tiene que pasar.</p>
+            <div class="wf-chips">
+              <span class="chip">Gmail / Outlook</span>
+              <span class="chip">WhatsApp Business</span>
+              <span class="chip">Webhooks</span>
+              <span class="chip">Cron</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wf-row">
+          <div class="wf-num"><em>02</em>Routing</div>
+          <div class="wf-content">
+            <h4>El <em>orquestador</em> decide.</h4>
+            <p>Lee el contexto, clasifica la intención, busca lo que necesite en tu base de conocimiento (RAG) y decide qué agente tiene que actuar. Si la decisión es ambigua, escala a un humano.</p>
+            <div class="wf-chips">
+              <span class="chip">Claude API</span>
+              <span class="chip">RAG</span>
+              <span class="chip">Qdrant</span>
+              <span class="chip">Routing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wf-row">
+          <div class="wf-num"><em>03</em>Acción</div>
+          <div class="wf-content">
+            <h4>El agente especializado <em>ejecuta</em>.</h4>
+            <p>Redacta una respuesta, actualiza un registro en el CRM, publica un borrador, genera un documento, llama a una API interna. Cada acción queda registrada y es reversible cuando tiene sentido.</p>
+            <div class="wf-chips">
+              <span class="chip">Tool use</span>
+              <span class="chip">CRM</span>
+              <span class="chip">n8n</span>
+              <span class="chip">APIs internas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wf-row">
+          <div class="wf-num"><em>04</em>Revisión</div>
+          <div class="wf-content">
+            <h4>El humano <em>aprueba</em> lo crítico.</h4>
+            <p>Las acciones sensibles (envíos externos, decisiones de cobro, publicaciones públicas) pasan por una bandeja de revisión humana antes de ejecutarse. Las rutinarias se ejecutan solas y se auditan después.</p>
+            <div class="wf-chips">
+              <span class="chip">Approval queue</span>
+              <span class="chip">Human-in-the-loop</span>
+              <span class="chip">Auditoría</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wf-row">
+          <div class="wf-num"><em>05</em>Telemetría</div>
+          <div class="wf-content">
+            <h4>Se <em>mide</em> lo que pasa.</h4>
+            <p>Cada paso del flujo genera trazas: tiempos, costes, decisiones, errores. Con eso comparamos contra la línea base y sabemos si el agente está aportando o si hay que ajustar.</p>
+            <div class="wf-chips">
+              <span class="chip">Logs</span>
+              <span class="chip">Métricas</span>
+              <span class="chip">Coste por ejecución</span>
+              <span class="chip">Dashboard</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">04 — Stack</div>
+        <h2 class="section-title">Lo que <em>usamos</em> / y por qué.</h2>
+        <p class="section-intro">Stack pragmático. Nada nuevo por moda, nada cerrado a un proveedor que mañana cambia los precios. Si tu organización ya tiene infraestructura propia, la respetamos.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// stack_01</span>
+            <span class="badge">Modelos</span>
+          </div>
+          <h3>Claude API <em>como motor</em>.</h3>
+          <p>Para razonamiento y tool use usamos principalmente Claude. Si el caso lo pide combinamos con modelos open source (Llama, Mistral) para tareas locales o de bajo coste.</p>
+          <div class="card-meta">
+            <span class="chip">Claude Sonnet</span>
+            <span class="chip">Claude Opus</span>
+            <span class="chip">Tool use</span>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// stack_02</span>
+            <span class="badge">Orquestación</span>
+          </div>
+          <h3>n8n + <em>Agent SDK</em>.</h3>
+          <p>n8n para los workflows visuales y conectar con las APIs que tu organización ya usa. Agent SDK para la lógica del orquestador y los agentes que requieren razonamiento más fino.</p>
+          <div class="card-meta">
+            <span class="chip">n8n</span>
+            <span class="chip">Agent SDK</span>
+            <span class="chip">Webhooks</span>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// stack_03</span>
+            <span class="badge">Memoria</span>
+          </div>
+          <h3>RAG con <em>Qdrant</em>.</h3>
+          <p>Base vectorial para que los agentes consulten tu documentación interna, normativa, manuales o histórico. Despliegue en tu nube o en infraestructura que controlas.</p>
+          <div class="card-meta">
+            <span class="chip">Qdrant</span>
+            <span class="chip">Embeddings</span>
+            <span class="chip">RAG</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="roi">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">05 — Resultados &amp; ROI</div>
+        <h2 class="section-title">Lo que <em>esperar</em> / y cómo lo medimos.</h2>
+        <p class="section-intro">El ROI no es un PDF al final del proyecto: es una hoja viva con la línea base, la curva de adopción y los costes operativos del propio agente. Si los números no salen, ajustamos el alcance — no maquillamos el informe.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// resultado_01</span>
+            <span class="badge">Tiempo</span>
+          </div>
+          <h3>Horas <em>liberadas</em>.</h3>
+          <p>El equipo recupera tiempo de tareas con patrón repetitivo. Lo medimos por proceso y por persona, no en agregados de marketing.</p>
+          <div class="card-meta">
+            <span class="chip">Horas/semana</span>
+            <span class="chip">Lead time</span>
+            <span class="chip">Por proceso</span>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// resultado_02</span>
+            <span class="badge">Calidad</span>
+          </div>
+          <h3>Menos <em>errores</em>.</h3>
+          <p>Datos extraídos de forma consistente, plantillas siempre completas, sin olvidos. Comparamos la tasa de error antes y después contra una muestra revisada por humano.</p>
+          <div class="card-meta">
+            <span class="chip">Tasa de error</span>
+            <span class="chip">Tiempo de respuesta</span>
+            <span class="chip">SLA</span>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// resultado_03</span>
+            <span class="badge">Capacidad</span>
+          </div>
+          <h3>Escala sin <em>contratar</em>.</h3>
+          <p>El mismo equipo gestiona más volumen sin reventarse en picos. Métrica clave: throughput por persona-mes vs. coste mensual del sistema agéntico.</p>
+          <div class="card-meta">
+            <span class="chip">Throughput</span>
+            <span class="chip">Coste operativo</span>
+            <span class="chip">Picos</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="roi-card" data-reveal>
+        <div>
+          <h4>El ROI se firma <em>antes</em>, no después.</h4>
+          <p>En la propuesta acordamos qué proceso atacamos, qué línea base medimos y qué umbral de mejora justifica el proyecto. Si en la revisión a los 90 días no llegamos, ajustamos el alcance o paramos. Sin letra pequeña.</p>
+        </div>
+        <div class="roi-figure">
+          90<span>días de revisión</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="cta-final">
+    <div class="container">
+      <div data-reveal>
+        <h2>¿Empezamos por el <em>diagnóstico</em><span class="cursor-blink"></span></h2>
+        <p>Cuéntame qué proceso te quita más horas hoy y respondemos en menos de 24h con una propuesta de diagnóstico acotado: una o dos semanas, sin compromiso de implantación. Si tras el diagnóstico no hay caso, lo decimos.</p>
+        <a href="/contacto/" class="btn-primary" style="font-size: 15px; padding: 18px 32px;">
+          Pedir diagnóstico
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../" class="logo" style="text-decoration:none;color:inherit;">
+          <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+            <circle class="ring" cx="50" cy="50" r="50"/>
+            <text class="mono" x="50" y="50" text-anchor="middle" dominant-baseline="central"
+                  font-family="Geist, system-ui, sans-serif" font-weight="700"
+                  font-size="48" letter-spacing="-2">ac</text>
+          </svg>
+          <span>aimtech<span style="color: var(--accent);">/</span>es</span>
+        </a>
+        <p>Formación e implantación de IA aplicada, Power BI y desarrollo a medida. Operado por una SL catalana con foco en pymes y administración pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="../power-bi/">Power BI</a>
+        <a href="../ia-aplicada/">IA Aplicada</a>
+        <a href="./">IA Agéntica</a>
+        <a href="../#servicios">Desarrollo</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <a href="../#">Casos</a>
+        <a href="../#">Blog</a>
+        <a href="../#">Sobre Mike</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="../aviso-legal/">Aviso legal</a>
+        <a href="../politica-privacidad/">Privacidad</a>
+        <a href="../politica-cookies/">Cookies</a>
+        <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech SL · Cataluña</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function tick() {
+    const now = new Date();
+    const hh = String(now.getHours()).padStart(2, '0');
+    const mm = String(now.getMinutes()).padStart(2, '0');
+    const ss = String(now.getSeconds()).padStart(2, '0');
+    const el = document.getElementById('clock');
+    if (el) el.textContent = `${hh}:${mm}:${ss} CET`;
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  document.querySelectorAll('[data-mouse]').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mx', x + '%');
+      card.style.setProperty('--my', y + '%');
+    });
+  });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -60px 0px'
+  });
+
+  document.querySelectorAll('[data-reveal], [data-stagger]').forEach(el => {
+    revealObserver.observe(el);
+  });
+</script>
+
+</body>
+</html>
