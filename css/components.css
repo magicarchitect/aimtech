@@ -202,6 +202,87 @@ a.card { text-decoration: none; color: inherit; }
   margin: 0 2px;
 }
 
+/* ── Prose (texto legal y artículos largos) ──────── */
+.prose {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--ink-dim);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.prose h2 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 64px 0 20px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  line-height: 1.15;
+}
+.prose h2:first-child { border-top: 0; padding-top: 0; margin-top: 0; }
+.prose h2 em { font-style: italic; color: var(--accent); }
+.prose h3 {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 36px 0 14px;
+}
+.prose p { margin-bottom: 18px; }
+.prose strong { color: var(--ink); font-weight: 500; }
+.prose a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-strong);
+  transition: border-color 0.2s ease;
+}
+.prose a:hover { border-color: var(--accent); }
+.prose ul, .prose ol {
+  margin: 0 0 18px 24px;
+  padding: 0;
+}
+.prose li { margin-bottom: 8px; }
+.prose ul li::marker { color: var(--accent); }
+.prose code {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.prose .legal-meta {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-mute);
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: 16px;
+}
+.prose .legal-meta .label { color: var(--accent); }
+.prose .legal-data {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 20px 0;
+  font-family: var(--mono); font-size: 13px;
+  color: var(--ink);
+  line-height: 1.8;
+}
+.prose .legal-data strong {
+  color: var(--accent);
+  font-weight: 500;
+  display: inline-block;
+  min-width: 140px;
+}
+
 /* ── Cursor blink ───────────────────────────────── */
 .cursor-blink {
   display: inline-block;
