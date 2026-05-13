@@ -5,9 +5,30 @@
   display: flex; align-items: center; gap: 10px;
 }
 .logo img {
-  height: 36px; width: auto;
+  height: 50px; width: auto;
   display: block;
   filter: drop-shadow(0 0 8px rgba(37, 128, 227, 0.35));
+}
+.brand-svg {
+  height: 50px; width: auto;
+  display: block;
+  overflow: visible;
+}
+.brand-svg .brand-name {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 84px;
+  fill: #e6ebf2;
+}
+.brand-svg .brand-highlight { fill: var(--accent); }
+.brand-svg .brand-dot      { fill: var(--accent); }
+.brand-svg .brand-sub {
+  font-family: 'Geist', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.55em;
+  fill: #70a1ff;
+  opacity: 0.9;
 }
 .logo-mark {
   width: 24px; height: 24px;
@@ -117,7 +138,7 @@ a.card { text-decoration: none; color: inherit; }
 }
 .card h3 {
   font-family: var(--serif); font-weight: 400;
-  font-size: 34px; line-height: 1.1;
+  font-size: 48px; line-height: 1.1;
   margin: 24px 0 16px; letter-spacing: -0.01em;
 }
 .card h3 em { font-style: italic; color: var(--accent); }
@@ -137,7 +158,6 @@ a.card { text-decoration: none; color: inherit; }
 .card.s-2 { grid-column: span 2; grid-row: span 2; }
 .card.s-3 { grid-column: span 3; grid-row: span 2; }
 .card.s-4 { grid-column: span 3; grid-row: span 2; }
-.card.feature h3 { font-size: 48px; }
 .card.feature .visual {
   flex: 1; margin: 24px 0; min-height: 140px;
   position: relative;
