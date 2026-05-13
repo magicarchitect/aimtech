@@ -1,8 +1,9 @@
 /* ── Nav ────────────────────────────────────────── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  padding: 20px 48px;
+  padding: 20px clamp(20px, 4vw, 48px);
   display: flex; align-items: center; justify-content: space-between;
+  gap: 12px;
   backdrop-filter: blur(12px);
   background: rgba(10, 14, 20, 0.65);
   border-bottom: 1px solid var(--line);
@@ -29,7 +30,11 @@ nav {
 
 /* ── Main / Container ───────────────────────────── */
 main { position: relative; z-index: 2; }
-.container { max-width: 1320px; margin: 0 auto; padding: 0 48px; }
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(18px, 4vw, 48px);
+}
 
 /* ─────────────────────────────────────────────────── */
 /* ── HERO con animación de agentes ──────────────── */
@@ -437,18 +442,132 @@ footer {
 }
 
 /* ── Responsive ─────────────────────────────────── */
+/* Tablet grande / portátil pequeño */
+@media (max-width: 1200px) {
+  .hero { padding: 140px 0 80px; }
+  .hero-grid { gap: 40px; }
+  .stat { padding: 44px 24px; }
+  .stat-num { font-size: 60px; }
+  .method { gap: 60px; }
+}
+
+/* Tablet / móvil grande — punto en que la nav se vuelve hamburguesa */
 @media (max-width: 960px) {
-  nav { padding: 16px 20px; }
-  .nav-links { display: none; }
-  .container { padding: 0 20px; }
-  .hero { padding: 120px 0 60px; min-height: auto; }
-  .hero-grid { grid-template-columns: 1fr; gap: 60px; }
-  .agents-stage { max-width: 380px; margin: 0 auto; }
+  nav { padding: 14px 18px; }
+  .hero {
+    padding: 110px 0 64px;
+    min-height: auto;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .hero-meta { font-size: 11px; gap: 10px; margin-bottom: 28px; }
+  .hero-sub { font-size: 16px; margin-bottom: 32px; max-width: 100%; }
+  .hero-cta { gap: 10px; }
+
+  /* Stage de los heroes: se centra y se reduce de forma fluida */
+  .agents-stage {
+    max-width: min(420px, 88vw);
+    margin: 0 auto;
+  }
+  .agent { width: 140px; padding: 10px; font-size: 9px; }
+  .agent-chart { width: 170px; }
+  .telemetry { font-size: 9px; }
+
+  /* Stats: 2 columnas */
   .stats { grid-template-columns: repeat(2, 1fr); }
-  .stat { border-right: none; border-bottom: 1px solid var(--line); }
+  .stat { padding: 40px 22px; border-right: none; border-bottom: 1px solid var(--line); }
   .stat:nth-child(odd) { border-right: 1px solid var(--line); }
-  .method { grid-template-columns: 1fr; gap: 40px; }
-  .manifesto { padding: 48px 28px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .stat:nth-last-child(-n+2) { border-bottom: none; }
+  .stat-num { font-size: 52px; }
+
+  /* Método */
+  .method { grid-template-columns: 1fr; gap: 32px; }
+  .step {
+    grid-template-columns: 44px 1fr auto;
+    gap: 16px;
+    padding: 22px 0;
+  }
+  .step-title { font-size: 20px; }
+
+  /* Manifiesto */
+  .manifesto { padding: 48px 24px; border-radius: 12px; }
+  .manifesto::before { font-size: 140px; top: 16px; left: 20px; }
+  .manifesto-attr { margin-top: 24px; }
+
+  /* CTA final */
+  .cta-final { padding: 96px 0; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; margin-bottom: 48px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+
+  section { padding: 64px 0; }
+  .section-intro { margin-bottom: 48px; }
+}
+
+/* Móvil estándar */
+@media (max-width: 640px) {
+  nav { padding: 12px 14px; }
+  .hero { padding: 96px 0 48px; }
+  .hero-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 10.5px;
+  }
+  .hero-meta .sep { display: none; }
+  .hero h1 { margin-bottom: 24px; }
+  .hero-sub { font-size: 15px; }
+  .hero-cta { flex-direction: column; align-items: stretch; }
+  .agents-stage { max-width: min(360px, 90vw); }
+  .agent { width: 130px; }
+  .agent-chart { width: 150px; }
+  .orchestrator { width: 84px; height: 84px; }
+  .orchestrator-core { width: 50px; height: 50px; }
+
+  /* Stats compactas */
+  .stat { padding: 28px 16px; }
+  .stat-num { font-size: 42px; }
+  .stat-label { font-size: 10.5px; }
+
+  /* Step */
+  .step {
+    grid-template-columns: 1fr auto;
+    gap: 10px 14px;
+  }
+  .step .step-num { grid-column: 1; grid-row: 1; }
+  .step .step-arrow { grid-column: 2; grid-row: 1; }
+  .step .step-title { grid-column: 1 / -1; grid-row: 2; font-size: 18px; }
+
+  /* Manifiesto */
+  .manifesto { padding: 36px 20px; }
+  .manifesto::before { font-size: 110px; }
+
+  /* CTA final */
+  .cta-final { padding: 72px 0; }
+  .cta-final p { font-size: 16px; margin-bottom: 32px; }
+
+  /* Footer 1 col en móvil pequeño */
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; margin-bottom: 36px; }
+  .footer-brand p { max-width: 100%; }
+  footer { padding: 48px 0 28px; }
+
   section { padding: 56px 0; }
+  .section-label { font-size: 11px; margin-bottom: 18px; }
+}
+
+/* Móvil pequeño / iPhone SE */
+@media (max-width: 420px) {
+  .hero { padding: 88px 0 40px; }
+  .agents-stage { max-width: 280px; }
+  .agent { width: 118px; font-size: 8.5px; }
+  .agent-chart { width: 140px; }
+  .telemetry .tag { font-size: 9px; padding: 2px 5px; }
+  .t-1, .t-2, .t-3 { display: none; }
+  .stat { padding: 22px 12px; }
+  .stat-num { font-size: 36px; }
+  .manifesto { padding: 28px 16px; }
+  .step-title { font-size: 17px; }
 }

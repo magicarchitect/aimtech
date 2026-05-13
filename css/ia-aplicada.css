@@ -377,13 +377,22 @@
 
 /* ── Responsive ─────────────────────────────────── */
 @media (max-width: 960px) {
-  .ia-stage { max-width: 400px; margin: 0 auto; }
+  .ia-stage { max-width: min(400px, 88vw); margin: 0 auto; }
   .chat-stack { width: 60%; }
   .chat-bubble { padding: 6px 9px; }
   .bubble-text { font-size: 10px; }
   .bubble-tag  { font-size: 7px; }
   .bot-tag     { font-size: 9px; }
   .ia-telemetry { font-size: 9px; }
+}
+@media (max-width: 640px) {
+  .ia-stage { max-width: min(320px, 90vw); }
+  .chat-stack { width: 66%; }
+  .bubble-text { font-size: 9px; }
+}
+@media (max-width: 420px) {
+  .ia-stage { max-width: 280px; }
+  .ia-telemetry.t-a, .ia-telemetry.t-b { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

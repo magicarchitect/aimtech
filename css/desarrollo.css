@@ -453,10 +453,26 @@
 
 /* ── Responsive ───────────────────────────────────── */
 @media (max-width: 960px) {
-  .dev-stage { max-width: 400px; margin: 0 auto; }
+  .dev-stage { max-width: min(400px, 88vw); margin: 0 auto; }
   .dev-chip { font-size: 9px; padding: 3px 8px; }
   .dev-telemetry { font-size: 9px; }
   .build-grid, .steps-dev, .fitcheck { grid-template-columns: 1fr; }
+  .build-card { padding: 22px 20px; }
+  .step-dev { padding: 20px; }
+  .step-dev-num { font-size: 30px; }
+}
+@media (max-width: 640px) {
+  .dev-stage { max-width: min(320px, 90vw); }
+  .dev-chip { font-size: 8.5px; padding: 2px 6px; }
+  .build-card h3, .step-dev h4, .fit-col h4 { font-size: 20px; }
+  .build-card p, .step-dev p { font-size: 13.5px; }
+  .fit-col { padding: 20px; }
+  .fit-col li { font-size: 13px; }
+}
+@media (max-width: 420px) {
+  .dev-stage { max-width: 280px; }
+  .dev-telemetry.dtm-top, .dev-telemetry.dtm-bot { display: none; }
+  .dev-chip--mobile, .dev-chip--api { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

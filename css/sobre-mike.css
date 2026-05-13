@@ -604,7 +604,7 @@
 
 /* ── Responsive ───────────────────────────────────── */
 @media (max-width: 960px) {
-  .hum-stage { max-width: 400px; margin: 0 auto; }
+  .hum-stage { max-width: min(400px, 88vw); margin: 0 auto; }
   .hum-tag, .hum-telemetry { font-size: 9px; }
   .bio-block { grid-template-columns: 1fr; gap: 36px; }
   .bio-side { position: static; }
@@ -617,6 +617,29 @@
   .side-card { grid-template-columns: 1fr; gap: 18px; padding: 24px 26px; }
   .side-figure { text-align: left; font-size: 48px; }
   .side-card h4 { font-size: 26px; }
+}
+@media (max-width: 640px) {
+  #sobre-mike-hero .hero-content { max-width: 100%; }
+  .hum-stage { max-width: min(320px, 90vw); }
+  .bio-side .bio-figure { font-size: 40px; }
+  .bio-content p { font-size: 15px; }
+  .bio-content p:first-child::first-letter { font-size: 52px; margin: 4px 10px 0 0; }
+  .value-card { padding: 22px 20px; }
+  .value-card h3 { font-size: 21px; }
+  .teach-headline { padding: 22px 20px; }
+  .teach-figure { font-size: 52px; }
+  .teach-list li { grid-template-columns: 60px 1fr; padding: 12px 14px; gap: 12px; }
+  .teach-list .teach-name { font-size: 16px; }
+  .side-card { padding: 22px 18px; }
+  .side-card h4 { font-size: 23px; }
+  .side-figure { font-size: 40px; }
+}
+@media (max-width: 420px) {
+  .hum-stage { max-width: 280px; }
+  .hum-telemetry.htm-top, .hum-telemetry.htm-bot { display: none; }
+  .bio-content p:first-child::first-letter { font-size: 44px; }
+  .teach-list li { grid-template-columns: 1fr; gap: 4px; }
+  .teach-list .teach-tag { padding-top: 2px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
