@@ -1,0 +1,114 @@
+/* ── Cookie consent banner ──────────────────────── */
+.cookie-banner {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  left: 24px;
+  max-width: 520px;
+  margin-left: auto;
+  background: rgba(13, 18, 25, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  padding: 24px 28px;
+  z-index: 9999;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  transform: translateY(140%);
+  opacity: 0;
+  transition:
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.4s ease;
+}
+.cookie-banner.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cookie-banner-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cookie-banner-label::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.cookie-banner-text {
+  font-size: 14px;
+  color: var(--ink-dim);
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+.cookie-banner-text strong { color: var(--ink); font-weight: 500; }
+.cookie-banner-text a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-strong);
+  transition: border-color 0.2s ease;
+}
+.cookie-banner-text a:hover { border-color: var(--accent); }
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.cookie-banner-btn {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  letter-spacing: 0.02em;
+}
+.cookie-banner-btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+.cookie-banner-btn-ghost:hover { border-color: var(--ink-dim); }
+.cookie-banner-btn-primary {
+  background: var(--accent);
+  color: #051018;
+  border-color: var(--accent);
+}
+.cookie-banner-btn-primary:hover {
+  box-shadow: 0 0 24px var(--accent-glow);
+  transform: translateY(-1px);
+}
+
+/* Footer link "Gestionar cookies" comparte estilo .footer-col a */
+
+@media (max-width: 600px) {
+  .cookie-banner {
+    bottom: 12px;
+    right: 12px;
+    left: 12px;
+    padding: 20px;
+  }
+  .cookie-banner-actions {
+    justify-content: stretch;
+  }
+  .cookie-banner-btn { flex: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cookie-banner {
+    transition: opacity 0.2s ease;
+    transform: translateY(0);
+  }
+}
