@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Desarrollo a medida — apps web, móvil, CMS y APIs | Aimtech</title>
+<meta name="description" content="Desarrollo de software a medida con stack moderno adaptado al problema: aplicaciones web, apps móviles, gestores de contenido personalizados y backends/APIs. Sin frameworks de moda por moda." />
+
+<link rel="canonical" href="https://www.aimtech.es/desarrollo/" />
+
+<!-- hreflang: variantes de idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/desarrollo/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/desenvolupament/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/desarrollo/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="../assets/logo.ico" />
+<link rel="icon" type="image/png" href="../assets/logo.png" />
+<link rel="apple-touch-icon" href="../assets/logo.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="ca_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Desarrollo a medida — apps web, móvil, CMS y APIs | Aimtech" />
+<meta property="og:description" content="Aplicaciones web, móviles, gestores de contenido personalizados y backends/APIs con stack moderno adaptado a la solución. De prototipo a producción con CI/CD y observabilidad." />
+<meta property="og:url" content="https://www.aimtech.es/desarrollo/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Desarrollo a medida — apps, CMS y APIs — Aimtech" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Desarrollo a medida — apps web, móvil, CMS y APIs | Aimtech" />
+<meta name="twitter:description" content="Stack moderno adaptado al problema. Aplicaciones web, móviles, CMS personalizados y APIs en producción." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: Service + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Desarrollo de software a medida",
+    "description": "Desarrollo de aplicaciones web, aplicaciones móviles, gestores de contenido personalizados y backends/APIs. Stack moderno adaptado a las necesidades de la solución: React, Node.js, Python, PostgreSQL, React Native y servicios cloud.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es"
+    },
+    "url": "https://www.aimtech.es/desarrollo/",
+    "areaServed": { "@type": "Country", "name": "España" },
+    "serviceType": "Desarrollo de software",
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Empresas, entidades y administraciones públicas"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Desarrollo", "item": "https://www.aimtech.es/desarrollo/" }
+    ]
+  }
+]
+</script>
+
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/desarrollo.css">
+<link rel="stylesheet" href="../css/cookie-consent.css">
+<script src="../js/cookie-consent.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<nav>
+  <a href="../" class="logo" style="text-decoration:none;color:inherit;">
+    <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+      <circle class="ring" cx="50" cy="50" r="50"/>
+      <text class="mono" x="50" y="50" text-anchor="middle" dominant-baseline="central"
+            font-family="Geist, system-ui, sans-serif" font-weight="700"
+            font-size="48" letter-spacing="-2">ac</text>
+    </svg>
+    <span>aimtech<span style="color: var(--accent);">/</span>es</span>
+  </a>
+  <div class="nav-links">
+    <a href="../#servicios">Servicios</a>
+    <a href="#construimos">Qué construimos</a>
+    <a href="#metodo">Método</a>
+    <a href="#stack">Stack</a>
+    <a href="/contacto/">Contacto</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="/desarrollo/" class="active">ES</a>
+      <span class="sep">/</span>
+      <a href="/ca/desenvolupament/">CA</a>
+    </div>
+    <a href="/contacto/" class="nav-cta">Hablemos →</a>
+  </div>
+</nav>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="dot dot--dev"></span>
+            <span>Desarrollo · A medida</span>
+            <span class="sep">/</span>
+            <span>Web · Móvil · API · CMS</span>
+            <span class="sep">/</span>
+            <span id="clock">--:--:--</span>
+          </div>
+
+          <h1>
+            <span class="reveal r1">Software</span>
+            <span class="reveal r2"><em class="italic">a medida</em>.</span><br>
+            <span class="reveal r3">Stack moderno.</span><br>
+            <span class="reveal r4">Producción de verdad.</span>
+          </h1>
+
+          <p class="hero-sub">
+            Desarrollamos <strong>aplicaciones web, apps móviles, gestores de contenido personalizados</strong> y <strong>backends/APIs</strong> a medida. El stack se elige por la necesidad de la solución — no al revés. Del prototipo de un MVP a un sistema en producción con CI/CD, observabilidad y un repo que tu equipo puede mantener cuando nos vayamos.
+          </p>
+
+          <div class="hero-cta">
+            <a href="/contacto/" class="btn-primary">
+              Cuéntame tu idea
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="#construimos" class="btn-ghost">Ver qué construimos</a>
+          </div>
+        </div>
+
+        <div class="dev-stage" aria-hidden="true">
+
+          <div class="dev-halo"></div>
+
+          <!-- Monitor con terminal animado -->
+          <svg class="dev-monitor" viewBox="0 0 560 560" preserveAspectRatio="xMidYMid meet">
+
+            <!-- ── Frame del monitor ── -->
+            <rect class="dev-frame" x="40" y="70" width="480" height="420" rx="12"/>
+
+            <!-- Title bar y status bar separadores -->
+            <line x1="40"  y1="102" x2="520" y2="102" stroke="#1c2230" stroke-width="1"/>
+            <line x1="40"  y1="468" x2="520" y2="468" stroke="#1c2230" stroke-width="1"/>
+
+            <!-- Traffic lights -->
+            <circle cx="60" cy="86" r="4.5" class="dev-dot-r"/>
+            <circle cx="76" cy="86" r="4.5" class="dev-dot-y"/>
+            <circle cx="92" cy="86" r="4.5" class="dev-dot-g"/>
+
+            <!-- Pestañas -->
+            <rect class="dev-tab-bg" x="130" y="74" width="92" height="24" rx="3"/>
+            <text class="dev-tab dev-tab-active" x="138" y="90">› app.ts</text>
+            <text class="dev-tab" x="234" y="90">api.py</text>
+            <text class="dev-tab" x="282" y="90">schema.sql</text>
+
+            <!-- ── Líneas de código ── -->
+            <g>
+              <text class="dev-line dev-line-1" x="68" y="138" text-anchor="end" fill="currentColor">
+                <tspan class="dev-lineno">01</tspan>
+              </text>
+              <text class="dev-line dev-line-1" x="92" y="138">
+                <tspan class="dev-code-kw">import</tspan>
+                <tspan class="dev-code-id" dx="4">{ Agent }</tspan>
+                <tspan class="dev-code-kw" dx="4">from</tspan>
+                <tspan class="dev-code-str" dx="4">'@aim/sdk'</tspan>
+                <tspan class="dev-code-id">;</tspan>
+              </text>
+
+              <text class="dev-line dev-line-2" x="68" y="157" text-anchor="end">
+                <tspan class="dev-lineno">02</tspan>
+              </text>
+              <text class="dev-line dev-line-2" x="92" y="157">
+                <tspan class="dev-code-kw">import</tspan>
+                <tspan class="dev-code-id" dx="4">{ useState }</tspan>
+                <tspan class="dev-code-kw" dx="4">from</tspan>
+                <tspan class="dev-code-str" dx="4">'react'</tspan>
+                <tspan class="dev-code-id">;</tspan>
+              </text>
+
+              <text class="dev-line dev-line-3" x="68" y="176" text-anchor="end">
+                <tspan class="dev-lineno">03</tspan>
+              </text>
+
+              <text class="dev-line dev-line-4" x="68" y="195" text-anchor="end">
+                <tspan class="dev-lineno">04</tspan>
+              </text>
+              <text class="dev-line dev-line-4" x="92" y="195">
+                <tspan class="dev-code-kw">export const</tspan>
+                <tspan class="dev-code-fn" dx="4">App</tspan>
+                <tspan class="dev-code-id" dx="4">= ({ data }) =&gt; {</tspan>
+              </text>
+
+              <text class="dev-line dev-line-5" x="68" y="214" text-anchor="end">
+                <tspan class="dev-lineno">05</tspan>
+              </text>
+              <text class="dev-line dev-line-5" x="92" y="214">
+                <tspan class="dev-code-id">  </tspan>
+                <tspan class="dev-code-kw">const</tspan>
+                <tspan class="dev-code-id" dx="4">[view, setView] =</tspan>
+                <tspan class="dev-code-fn" dx="4">useState</tspan>
+                <tspan class="dev-code-id">(</tspan>
+                <tspan class="dev-code-str">'mobile'</tspan>
+                <tspan class="dev-code-id">);</tspan>
+              </text>
+
+              <text class="dev-line dev-line-6" x="68" y="233" text-anchor="end">
+                <tspan class="dev-lineno">06</tspan>
+              </text>
+              <text class="dev-line dev-line-6" x="92" y="233">
+                <tspan class="dev-code-id">  </tspan>
+                <tspan class="dev-code-kw">return</tspan>
+                <tspan class="dev-code-id" dx="4">&lt;</tspan>
+                <tspan class="dev-code-fn">Layout</tspan>
+                <tspan class="dev-code-id" dx="4">data={data}</tspan>
+                <tspan class="dev-code-id" dx="4">view={view} /&gt;;</tspan>
+              </text>
+
+              <text class="dev-line dev-line-7" x="68" y="252" text-anchor="end">
+                <tspan class="dev-lineno">07</tspan>
+              </text>
+              <text class="dev-line dev-line-7" x="92" y="252">
+                <tspan class="dev-code-id">};</tspan>
+              </text>
+
+              <text class="dev-line dev-line-8" x="68" y="271" text-anchor="end">
+                <tspan class="dev-lineno">08</tspan>
+              </text>
+
+              <text class="dev-line dev-line-9" x="68" y="290" text-anchor="end">
+                <tspan class="dev-lineno">09</tspan>
+              </text>
+              <text class="dev-line dev-line-9" x="92" y="290">
+                <tspan class="dev-code-fn">Server</tspan>
+                <tspan class="dev-code-id">.</tspan>
+                <tspan class="dev-code-fn">listen</tspan>
+                <tspan class="dev-code-id">(3000, () =&gt;</tspan>
+                <tspan class="dev-code-fn" dx="4">log</tspan>
+                <tspan class="dev-code-id">(</tspan>
+                <tspan class="dev-code-str">'ready'</tspan>
+                <tspan class="dev-code-id">));</tspan>
+              </text>
+            </g>
+
+            <!-- ── Prompt + progress + output ── -->
+            <text class="dev-prompt" x="68" y="324">
+              <tspan class="dev-prompt-sigil">$</tspan>
+              <tspan dx="6">npm run build</tspan>
+            </text>
+
+            <rect class="dev-progress-track" x="68" y="338" width="320" height="8" rx="2"/>
+            <rect class="dev-progress-bar"   x="68" y="338" width="320" height="8" rx="2"/>
+            <text class="dev-progress-pct" x="396" y="345">100%</text>
+
+            <text class="dev-out dev-out-1" x="68" y="368">
+              <tspan class="dev-out-tick">✓</tspan>
+              <tspan class="dev-out-text" dx="6">bundle 142 kb</tspan>
+              <tspan class="dev-out-dim" dx="4">·</tspan>
+              <tspan class="dev-out-dim" dx="4">0 warnings</tspan>
+            </text>
+            <text class="dev-out dev-out-2" x="68" y="388">
+              <tspan class="dev-out-tick">✓</tspan>
+              <tspan class="dev-out-text" dx="6">tests 24/24 passed</tspan>
+            </text>
+            <text class="dev-out dev-out-3" x="68" y="408">
+              <tspan class="dev-out-tick">✓</tspan>
+              <tspan class="dev-out-text" dx="6">listening on</tspan>
+              <tspan class="dev-out-dim" dx="4">:3000</tspan>
+            </text>
+
+            <!-- Cursor blink al final del output -->
+            <g class="dev-cursor-wrap">
+              <rect class="dev-cursor" x="200" y="399" width="7" height="11"/>
+            </g>
+
+            <!-- ── Status bar inferior ── -->
+            <text class="dev-status-text" x="56" y="482">
+              <tspan class="dev-status-branch">⎇ main</tspan>
+              <tspan dx="10">·</tspan>
+              <tspan class="dev-status-ok" dx="6">CI green</tspan>
+            </text>
+            <text class="dev-status-text" x="504" y="482" text-anchor="end">
+              <tspan>node 20.x</tspan>
+              <tspan dx="10">·</tspan>
+              <tspan dx="6">142 kb</tspan>
+            </text>
+
+          </svg>
+
+          <!-- Chips tecnológicos flotantes -->
+          <span class="dev-chip dev-chip--web">// web</span>
+          <span class="dev-chip dev-chip--node">// node</span>
+          <span class="dev-chip dev-chip--mobile">// mobile</span>
+          <span class="dev-chip dev-chip--api">// api</span>
+          <span class="dev-chip dev-chip--cms">// cms</span>
+
+          <!-- Telemetría -->
+          <div class="dev-telemetry dtm-top"><span class="tag">build · <em>OK</em></span></div>
+          <div class="dev-telemetry dtm-bot"><span class="tag">deploy · <em>green</em></span></div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="tag">DESARROLLO</span>
+      <span>React</span> <span>·</span>
+      <span>Next.js</span> <span>·</span>
+      <span>Node.js</span> <span>·</span>
+      <span>Python</span> <span>·</span>
+      <span>FastAPI</span> <span>·</span>
+      <span>React Native</span> <span>·</span>
+      <span>Flutter</span> <span>·</span>
+      <span>PostgreSQL</span> <span>·</span>
+      <span>Redis</span> <span>·</span>
+      <span>REST</span> <span>·</span>
+      <span>GraphQL</span> <span>·</span>
+      <span>Docker</span> <span>·</span>
+      <span>CI/CD</span> <span>·</span>
+      <span class="tag">DESARROLLO</span>
+      <span>React</span> <span>·</span>
+      <span>Next.js</span> <span>·</span>
+      <span>Node.js</span> <span>·</span>
+      <span>Python</span> <span>·</span>
+      <span>FastAPI</span> <span>·</span>
+      <span>React Native</span> <span>·</span>
+    </div>
+  </div>
+
+  <section id="construimos">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">01 — Qué construimos</div>
+        <h2 class="section-title">Cuatro <em>formatos</em> / de software a medida.</h2>
+        <p class="section-intro">No vendemos plantillas ni paquetes cerrados. Construimos lo que el problema pide, con el stack que mejor lo resuelve. Si el problema cabe en una hoja de cálculo bien hecha, te lo decimos y nos ahorramos un proyecto.</p>
+      </div>
+
+      <div class="build-grid" data-stagger>
+
+        <article class="build-card" data-mouse>
+          <div class="build-head">
+            <span>// formato_01</span>
+            <span class="badge">Web</span>
+          </div>
+          <div class="build-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/>
+              <line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="6" cy="6.5" r="0.8" fill="currentColor"/>
+              <circle cx="9" cy="6.5" r="0.8" fill="currentColor"/>
+              <line x1="8" y1="20" x2="16" y2="20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Aplicaciones <em>web</em>.</h3>
+          <p>SaaS, dashboards internos, portales para clientes, intranets. SSR cuando importa el SEO o el time-to-first-paint, SPA cuando el flujo es de aplicación pura. Diseño cuidado, performance medible.</p>
+          <div class="build-meta">
+            <span class="chip">React</span>
+            <span class="chip">Next.js</span>
+            <span class="chip">SSR / SPA</span>
+            <span class="chip">Vanilla JS</span>
+          </div>
+        </article>
+
+        <article class="build-card" data-mouse>
+          <div class="build-head">
+            <span>// formato_02</span>
+            <span class="badge">Móvil</span>
+          </div>
+          <div class="build-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <rect x="7" y="2.5" width="10" height="19" rx="2.5" stroke="currentColor" stroke-width="1.6"/>
+              <line x1="11" y1="18.5" x2="13" y2="18.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="10" y1="4.5" x2="14" y2="4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3>Apps <em>móviles</em>.</h3>
+          <p>iOS y Android desde el mismo código base con React Native o Flutter cuando el caso lo permite. Nativo (Swift/Kotlin) si el rendimiento o la integración con el sistema operativo lo justifican.</p>
+          <div class="build-meta">
+            <span class="chip">React Native</span>
+            <span class="chip">Flutter</span>
+            <span class="chip">Swift / Kotlin</span>
+            <span class="chip">PWA</span>
+          </div>
+        </article>
+
+        <article class="build-card" data-mouse>
+          <div class="build-head">
+            <span>// formato_03</span>
+            <span class="badge">CMS</span>
+          </div>
+          <div class="build-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/>
+              <line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.6"/>
+              <line x1="8" y1="9" x2="8" y2="20" stroke="currentColor" stroke-width="1.6"/>
+              <line x1="11" y1="12.5" x2="18" y2="12.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+              <line x1="11" y1="15.5" x2="16" y2="15.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+            </svg>
+          </div>
+          <h3>Gestores <em>de contenido</em>.</h3>
+          <p>Cuando WordPress se queda corto o sobra para tu caso. Un CMS hecho a medida con sólo los campos, roles y flujos que tu equipo necesita — sin plugins ajenos que se rompen al actualizar y sin formularios que nadie entiende.</p>
+          <div class="build-meta">
+            <span class="chip">Headless</span>
+            <span class="chip">Roles &amp; permisos</span>
+            <span class="chip">Editor a medida</span>
+            <span class="chip">Workflows</span>
+          </div>
+        </article>
+
+        <article class="build-card" data-mouse>
+          <div class="build-head">
+            <span>// formato_04</span>
+            <span class="badge">Backend</span>
+          </div>
+          <div class="build-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <ellipse cx="12" cy="5.5" rx="7" ry="2.5" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M5 5.5V11C5 12.38 8.13 13.5 12 13.5C15.87 13.5 19 12.38 19 11V5.5" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M5 11V16.5C5 17.88 8.13 19 12 19C15.87 19 19 17.88 19 16.5V11" stroke="currentColor" stroke-width="1.6"/>
+            </svg>
+          </div>
+          <h3>Backend <em>y APIs</em>.</h3>
+          <p>REST o GraphQL, integraciones con sistemas que ya tienes (CRM, ERP, contabilidad), pasarelas con servicios externos, jobs en cola, webhooks. Con tests, logs estructurados y un panel de monitoring real, no un grep en producción.</p>
+          <div class="build-meta">
+            <span class="chip">Node.js / Python</span>
+            <span class="chip">REST / GraphQL</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Integraciones</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="metodo">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">02 — Método</div>
+        <h2 class="section-title">De la idea <em>a producción</em> / en pasos cortos.</h2>
+        <p class="section-intro">Nada de specs de 80 páginas que cuando se firman ya están obsoletas. Trabajamos por iteraciones cortas con entregas que se pueden tocar — y decisiones que se toman con algo funcionando delante, no con un PowerPoint.</p>
+      </div>
+
+      <div class="steps-dev" data-stagger>
+
+        <div class="step-dev">
+          <div class="step-dev-head">
+            <span class="step-dev-num">01</span>
+            <span class="step-dev-tag">Discovery</span>
+          </div>
+          <h4>Entender el <em>problema real</em>.</h4>
+          <p>Una o dos sesiones con quien sufre el problema. Salimos con el alcance del MVP, las decisiones técnicas grandes (qué stack, qué se integra con qué) y una propuesta cerrada de la primera iteración. Si después del discovery no hay caso, lo decimos.</p>
+        </div>
+
+        <div class="step-dev">
+          <div class="step-dev-head">
+            <span class="step-dev-num">02</span>
+            <span class="step-dev-tag">MVP</span>
+          </div>
+          <h4>Algo que se <em>pueda usar</em>.</h4>
+          <p>Sprint de 2–4 semanas que termina con un sistema funcional desplegado en un entorno real, no en un Figma. El alcance se acota a lo que demuestra valor; lo bonito y lo periférico van en sprints posteriores.</p>
+        </div>
+
+        <div class="step-dev">
+          <div class="step-dev-head">
+            <span class="step-dev-num">03</span>
+            <span class="step-dev-tag">Iteración</span>
+          </div>
+          <h4>Mejorar con <em>uso real</em>.</h4>
+          <p>El feedback de los primeros usuarios reordena el backlog. Cada iteración añade lo que duele, no lo que sonaba bonito al principio. Revisión semanal con demo, métricas de uso y decisión sobre qué entra en el siguiente sprint.</p>
+        </div>
+
+        <div class="step-dev">
+          <div class="step-dev-head">
+            <span class="step-dev-num">04</span>
+            <span class="step-dev-tag">Producción</span>
+          </div>
+          <h4>Entregar <em>de verdad</em>.</h4>
+          <p>CI/CD, backups, logs estructurados, observabilidad, plan de incidentes. El código queda en tu repositorio con documentación de despliegue para que tu equipo (o el siguiente proveedor) pueda mantenerlo sin llamarnos a las 3am.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">03 — Stack adaptado</div>
+        <h2 class="section-title">El stack se elige <em>por la necesidad</em>, / no por moda.</h2>
+        <p class="section-intro">No hay una respuesta única buena. Hay decisiones razonables según el caso. Estas son las herramientas con las que trabajamos a diario; si tu organización ya tiene una preferencia razonable, la respetamos.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// stack_01</span>
+            <span class="badge">Frontend</span>
+          </div>
+          <h3>Frontend <em>y UX</em>.</h3>
+          <p>React + Next.js para aplicaciones grandes con SEO. JS vanilla cuando el sitio es estático y no merece la pena el framework. CSS sin frameworks pesados: control real sobre el diseño y rendimiento que no necesita explicación.</p>
+          <div class="card-meta">
+            <span class="chip">React</span>
+            <span class="chip">Next.js</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">CSS vanilla</span>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// stack_02</span>
+            <span class="badge">Backend &amp; datos</span>
+          </div>
+          <h3>Backend <em>y datos</em>.</h3>
+          <p>Node.js o Python según el ecosistema del problema. PostgreSQL como base por defecto — abierto, robusto y sin sorpresas en facturación. Redis para caché y colas. Tests, migraciones versionadas y observabilidad desde el día uno.</p>
+          <div class="card-meta">
+            <span class="chip">Node.js</span>
+            <span class="chip">Python</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Redis</span>
+            <span class="chip">FastAPI</span>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// stack_03</span>
+            <span class="badge">Móvil &amp; cloud</span>
+          </div>
+          <h3>Móvil <em>y cloud</em>.</h3>
+          <p>React Native o Flutter cuando un solo código para iOS y Android es razonable. Despliegue en AWS, GCP, Azure o en infraestructura propia: el código no se casa con un proveedor que mañana cambia los precios. Contenedores, CI/CD y backups verificados.</p>
+          <div class="card-meta">
+            <span class="chip">React Native</span>
+            <span class="chip">Flutter</span>
+            <span class="chip">Docker</span>
+            <span class="chip">AWS / GCP</span>
+            <span class="chip">CI/CD</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="cuando">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">04 — Cuándo tiene sentido</div>
+        <h2 class="section-title">Cuándo <em>sí</em> / y cuándo <em>no</em>.</h2>
+        <p class="section-intro">Un desarrollo a medida no siempre es la respuesta. A veces lo correcto es comprar una herramienta hecha y configurarla bien. Te ayudamos a verlo claro <strong>antes</strong> de firmar nada.</p>
+      </div>
+
+      <div class="fitcheck" data-stagger>
+
+        <div class="fit-col fit-yes">
+          <h4>Tiene sentido <em>cuando</em>:</h4>
+          <ul>
+            <li><strong>Las herramientas estándar se quedan cortas</strong> — el flujo es lo suficientemente específico como para que ningún SaaS encaje sin doblarlo hasta romperlo.</li>
+            <li><strong>El proceso es nuclear para el negocio</strong> — y depender de un proveedor que mañana sube precios o cierra el servicio es un riesgo real.</li>
+            <li><strong>El coste mensual de licencias supera</strong> con margen el coste del desarrollo en un horizonte razonable (24–36 meses).</li>
+            <li><strong>Necesitas integrar varios sistemas internos</strong> que ningún SaaS de mercado conoce.</li>
+            <li><strong>El equipo va a usar la herramienta a diario</strong> — invertir en una UX hecha a su medida tiene retorno.</li>
+          </ul>
+        </div>
+
+        <div class="fit-col fit-no">
+          <h4>No <em>compensa</em> si:</h4>
+          <ul>
+            <li><strong>Existe un SaaS razonable</strong> que resuelve el 90% por menos de lo que costaría desarrollarlo y mantenerlo durante dos años.</li>
+            <li><strong>El uso será esporádico</strong> o lo van a tocar 3 personas una vez al mes — una hoja bien hecha aguanta más de lo que parece.</li>
+            <li><strong>La organización no tiene quién mantenga</strong> el sistema una vez entregado, y tampoco hay presupuesto para soporte continuado.</li>
+            <li><strong>El problema todavía no está claro</strong> — primero conviene mapearlo bien con quien lo sufre antes de poner a alguien a programar.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="cta-final">
+    <div class="container">
+      <div data-reveal>
+        <h2>¿Lo construimos <em>juntos</em><span class="cursor-blink"></span></h2>
+        <p>Cuéntame qué necesitas y respondemos en menos de 24h. Si tras una primera conversación vemos que no es para nosotros — o que no necesitas un desarrollo a medida — te lo decimos sin rodeos.</p>
+        <a href="/contacto/" class="btn-primary" style="font-size: 15px; padding: 18px 32px;">
+          Hablemos
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- @region partials/footer-es.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+          <svg class="logo-mark" viewBox="0 0 100 100" aria-hidden="true">
+            <circle class="ring" cx="50" cy="50" r="50"/>
+            <text class="mono" x="50" y="50" text-anchor="middle" dominant-baseline="central"
+                  font-family="Geist, system-ui, sans-serif" font-weight="700"
+                  font-size="48" letter-spacing="-2">ac</text>
+          </svg>
+          <span>aimtech<span style="color: var(--accent);">/</span>es</span>
+        </a>
+        <p>Formación e implantación de IA aplicada, Power BI y desarrollo a medida. Operado por una SL catalana con foco en pymes y administración pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <a href="#">Casos</a>
+        <a href="#">Blog</a>
+        <a href="#">Sobre Mike</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/politica-privacidad/">Privacidad</a>
+        <a href="/politica-cookies/">Cookies</a>
+        <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech SL · Cataluña</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+<script>
+  function tick() {
+    const now = new Date();
+    const hh = String(now.getHours()).padStart(2, '0');
+    const mm = String(now.getMinutes()).padStart(2, '0');
+    const ss = String(now.getSeconds()).padStart(2, '0');
+    const el = document.getElementById('clock');
+    if (el) el.textContent = `${hh}:${mm}:${ss} CET`;
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  document.querySelectorAll('[data-mouse]').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mx', x + '%');
+      card.style.setProperty('--my', y + '%');
+    });
+  });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.25,
+    rootMargin: '0px 0px -180px 0px'
+  });
+
+  document.querySelectorAll('[data-reveal], [data-stagger]').forEach(el => {
+    revealObserver.observe(el);
+  });
+</script>
+
+</body>
+</html>

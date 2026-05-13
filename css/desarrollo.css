@@ -1,0 +1,472 @@
+/* ── Desarrollo hero: monitor con terminal animado ── */
+.dev-stage {
+  --c-frame:  #1c2230;
+  --c-frame-strong: #2a3344;
+  --c-ink-code: #c0c8d6;
+  --c-ink-dim:  #6b7588;
+  --c-kw:     #b794f6;
+  --c-str:    #ffb86b;
+  --c-fn:     #5eead4;
+  --c-ok:     #5eead4;
+  --c-accent: #2580e3;
+
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 560px;
+  margin-left: auto;
+  opacity: 0;
+  animation: fadeIn 1s ease 0.5s forwards;
+}
+
+.dev-halo {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 30% 35%, rgba(37, 128, 227, 0.22), transparent 55%),
+    radial-gradient(ellipse at 75% 70%, rgba(94, 234, 212, 0.16), transparent 55%);
+  filter: blur(32px);
+  animation: haloPulse 7s ease-in-out infinite;
+}
+
+.dev-monitor {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 2;
+}
+
+/* ── Chrome del terminal ──────────────────────────── */
+.dev-frame {
+  fill: #0d1219;
+  stroke: var(--c-frame-strong);
+  stroke-width: 1;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.55));
+}
+.dev-titlebar {
+  fill: #0f141c;
+  stroke: var(--c-frame);
+  stroke-width: 1;
+}
+.dev-dot-r { fill: #ff5f57; }
+.dev-dot-y { fill: #febc2e; }
+.dev-dot-g { fill: #28c840; }
+
+.dev-tab {
+  font-family: var(--mono);
+  font-size: 10px;
+  fill: var(--c-ink-dim);
+  letter-spacing: 0.04em;
+}
+.dev-tab-active {
+  fill: #e6ebf2;
+}
+.dev-tab-bg {
+  fill: #0d1219;
+  stroke: var(--c-frame);
+  stroke-width: 1;
+}
+
+.dev-statusbar {
+  fill: #0a0e14;
+  stroke: var(--c-frame);
+  stroke-width: 1;
+}
+.dev-status-text {
+  font-family: var(--mono);
+  font-size: 9px;
+  fill: var(--c-ink-dim);
+  letter-spacing: 0.04em;
+}
+.dev-status-branch {
+  fill: var(--c-accent);
+}
+.dev-status-ok {
+  fill: var(--c-ok);
+}
+
+/* ── Líneas de código ─────────────────────────────── */
+.dev-line {
+  font-family: var(--mono);
+  font-size: 12px;
+  opacity: 0;
+  animation: codeLine 14s ease-in-out infinite;
+}
+.dev-lineno {
+  fill: var(--c-ink-dim);
+  opacity: 0.5;
+}
+.dev-code-kw   { fill: var(--c-kw); }
+.dev-code-str  { fill: var(--c-str); }
+.dev-code-fn   { fill: var(--c-fn); }
+.dev-code-id   { fill: var(--c-ink-code); }
+.dev-code-dim  { fill: var(--c-ink-dim); }
+
+.dev-line-1 { animation-delay: 0s;   }
+.dev-line-2 { animation-delay: 0.4s; }
+.dev-line-3 { animation-delay: 0.8s; }
+.dev-line-4 { animation-delay: 1.2s; }
+.dev-line-5 { animation-delay: 1.6s; }
+.dev-line-6 { animation-delay: 2.0s; }
+.dev-line-7 { animation-delay: 2.4s; }
+.dev-line-8 { animation-delay: 2.8s; }
+.dev-line-9 { animation-delay: 3.2s; }
+
+/* ── Bloque de output (compile + run) ─────────────── */
+.dev-prompt {
+  font-family: var(--mono);
+  font-size: 12px;
+  fill: var(--c-ink-code);
+  opacity: 0;
+  animation: outputLine 14s ease-in-out infinite;
+  animation-delay: 0s;
+}
+.dev-prompt-sigil { fill: var(--c-accent); }
+
+.dev-progress-track {
+  fill: rgba(37, 128, 227, 0.10);
+  stroke: var(--c-frame-strong);
+  stroke-width: 0.8;
+  opacity: 0;
+  animation: trackLine 14s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+.dev-progress-bar {
+  fill: var(--c-accent);
+  filter: drop-shadow(0 0 6px rgba(37, 128, 227, 0.6));
+  transform-box: fill-box;
+  transform-origin: left center;
+  opacity: 0;
+  animation: progressBar 14s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+.dev-progress-pct {
+  font-family: var(--mono);
+  font-size: 10px;
+  fill: var(--c-ink-dim);
+  opacity: 0;
+  animation: outputLine 14s ease-in-out infinite;
+  animation-delay: 1.0s;
+}
+
+.dev-out {
+  font-family: var(--mono);
+  font-size: 11px;
+  opacity: 0;
+  animation: outputLine 14s ease-in-out infinite;
+}
+.dev-out-tick { fill: var(--c-ok); }
+.dev-out-text { fill: var(--c-ink-code); }
+.dev-out-dim  { fill: var(--c-ink-dim); }
+
+.dev-out-1 { animation-delay: 1.2s; }
+.dev-out-2 { animation-delay: 1.7s; }
+.dev-out-3 { animation-delay: 2.2s; }
+
+.dev-cursor-wrap {
+  opacity: 0;
+  animation: cursorAppear 14s ease-in-out infinite;
+  animation-delay: 2.6s;
+}
+.dev-cursor {
+  fill: var(--c-ok);
+  animation: cursorBlink 0.7s steps(2, end) infinite;
+}
+
+/* ── Chips flotantes alrededor del monitor ────────── */
+.dev-chip {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--ink-dim);
+  background: rgba(13, 18, 25, 0.82);
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  z-index: 5;
+  white-space: nowrap;
+  animation: chipFloat 7s ease-in-out infinite;
+}
+.dev-chip::before {
+  content: '';
+  display: inline-block;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+  margin-right: 6px;
+  vertical-align: middle;
+  transform: translateY(-1px);
+}
+.dev-chip--web    { top: 6%;  left: 2%;  animation-delay: 0s;   }
+.dev-chip--node   { top: 12%; right: 2%; animation-delay: 1.2s; }
+.dev-chip--mobile { top: 48%; left: -2%; animation-delay: 2.4s; }
+.dev-chip--api    { top: 52%; right: -2%; animation-delay: 3.6s; }
+.dev-chip--cms    { bottom: 6%; right: 5%; animation-delay: 4.8s; }
+
+.dev-chip--mobile::before { background: #b794f6; box-shadow: 0 0 6px #b794f6; }
+.dev-chip--api::before    { background: #5eead4; box-shadow: 0 0 6px #5eead4; }
+.dev-chip--cms::before    { background: #ffb86b; box-shadow: 0 0 6px #ffb86b; }
+
+/* ── Telemetría arriba/abajo ──────────────────────── */
+.dev-telemetry {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: 10px;
+  pointer-events: none;
+  z-index: 6;
+  animation: floatGentle 8s ease-in-out infinite;
+}
+.dev-telemetry .tag {
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: rgba(10, 14, 20, 0.85);
+  backdrop-filter: blur(4px);
+  color: var(--ink-dim);
+}
+.dev-telemetry .tag em {
+  font-style: normal;
+  color: var(--c-ok);
+}
+.dev-telemetry.dtm-top { top: 1.5%; left: 50%; transform: translateX(-50%); animation-delay: 1s; }
+.dev-telemetry.dtm-bot { bottom: 1.5%; left: 50%; transform: translateX(-50%); animation-delay: 3s; }
+
+/* ── Hero meta dots para /desarrollo/ ─────────────── */
+.hero-meta .dot--dev {
+  background: linear-gradient(135deg, #2580e3 0%, #5eead4 100%);
+  box-shadow: 0 0 8px rgba(94, 234, 212, 0.55);
+}
+
+/* ── "Qué construimos" — sección 01 ───────────────── */
+.build-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+.build-card {
+  padding: 24px 24px 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  position: relative;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+.build-card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-2px);
+}
+.build-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 12px;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(37,128,227,0.10), transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.build-card:hover::before { opacity: 1; }
+.build-head {
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--mono); font-size: 11px;
+  color: var(--ink-mute);
+  margin-bottom: 14px;
+}
+.build-head .badge {
+  border: 1px solid var(--line-strong);
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: var(--ink-dim);
+}
+.build-icon {
+  width: 52px; height: 52px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(37, 128, 227, 0.05);
+  margin-bottom: 16px;
+  color: var(--accent);
+}
+.build-card h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.build-card h3 em { font-style: italic; color: var(--accent); }
+.build-card p {
+  font-size: 14px;
+  color: var(--ink-dim);
+  line-height: 1.55;
+  margin: 0 0 14px;
+}
+.build-meta { display: flex; gap: 6px; flex-wrap: wrap; }
+.build-meta .chip { font-size: 10px; padding: 3px 8px; }
+
+/* ── "Cómo trabajamos" — sección 02 (pasos) ───────── */
+.steps-dev {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+.step-dev {
+  padding: 22px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+.step-dev:hover { border-color: var(--line-strong); }
+.step-dev-head {
+  display: flex; align-items: baseline; gap: 12px;
+  margin-bottom: 10px;
+}
+.step-dev-num {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--accent);
+  font-size: 36px;
+  line-height: 1;
+}
+.step-dev-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.step-dev h4 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.step-dev h4 em { font-style: italic; color: var(--accent); }
+.step-dev p {
+  font-size: 14px;
+  color: var(--ink-dim);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── "Cuándo sí, cuándo no" — sección 04 ──────────── */
+.fitcheck {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 28px;
+}
+.fit-col {
+  padding: 24px 26px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.fit-col h4 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+.fit-col h4 em { font-style: italic; }
+.fit-col.fit-yes h4 em { color: var(--c-ok, #5eead4); }
+.fit-col.fit-no  h4 em { color: #ff6b6b; }
+.fit-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; flex-direction: column;
+  gap: 12px;
+}
+.fit-col li {
+  font-size: 14px;
+  color: var(--ink-dim);
+  line-height: 1.55;
+  padding-left: 22px;
+  position: relative;
+}
+.fit-col li::before {
+  position: absolute;
+  left: 0; top: 0;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+}
+.fit-col.fit-yes li::before { content: '+'; color: #5eead4; }
+.fit-col.fit-no  li::before { content: '−'; color: #ff6b6b; }
+.fit-col li strong { color: var(--ink); font-weight: 500; }
+
+/* ── Keyframes ────────────────────────────────────── */
+@keyframes codeLine {
+  0%, 3%           { opacity: 0; transform: translateX(-3px); }
+  7%, 72%          { opacity: 1; transform: translateX(0); }
+  80%, 100%        { opacity: 0; }
+}
+@keyframes outputLine {
+  0%, 32%          { opacity: 0; transform: translateX(-3px); }
+  36%, 72%         { opacity: 1; transform: translateX(0); }
+  80%, 100%        { opacity: 0; }
+}
+@keyframes trackLine {
+  0%, 32%          { opacity: 0; }
+  36%, 72%         { opacity: 1; }
+  80%, 100%        { opacity: 0; }
+}
+@keyframes progressBar {
+  0%, 33%          { opacity: 0; transform: scaleX(0); }
+  36%              { opacity: 1; transform: scaleX(0); }
+  50%              { opacity: 1; transform: scaleX(1); }
+  72%              { opacity: 1; transform: scaleX(1); }
+  80%, 100%        { opacity: 0; transform: scaleX(1); }
+}
+@keyframes cursorAppear {
+  0%, 32%          { opacity: 0; }
+  36%, 72%         { opacity: 1; }
+  80%, 100%        { opacity: 0; }
+}
+@keyframes cursorBlink {
+  50%              { opacity: 0; }
+}
+@keyframes haloPulse {
+  0%, 100%         { opacity: 0.7; }
+  50%              { opacity: 1; }
+}
+@keyframes chipFloat {
+  0%, 100%         { transform: translateY(0); opacity: 0.85; }
+  50%              { transform: translateY(-6px); opacity: 1; }
+}
+@keyframes floatGentle {
+  0%, 100%         { transform: translate(-50%, 0); }
+  50%              { transform: translate(-50%, -6px); }
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 960px) {
+  .dev-stage { max-width: 400px; margin: 0 auto; }
+  .dev-chip { font-size: 9px; padding: 3px 8px; }
+  .dev-telemetry { font-size: 9px; }
+  .build-grid, .steps-dev, .fitcheck { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dev-stage,
+  .dev-halo,
+  .dev-line, .dev-prompt, .dev-out,
+  .dev-progress-track, .dev-progress-bar, .dev-progress-pct,
+  .dev-cursor,
+  .dev-chip, .dev-telemetry {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
