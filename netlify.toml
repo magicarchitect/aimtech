@@ -3,6 +3,9 @@
 
 [build]
   publish = "."
+  # Resuelve los partials (footer-es/ca) en cada deploy.
+  # Idempotente: si el HTML ya está al día, no toca nada.
+  command = "node build.js"
 
 [functions]
   directory = "netlify/functions"
