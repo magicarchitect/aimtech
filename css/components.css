@@ -578,16 +578,195 @@ a.card { text-decoration: none; color: inherit; }
 .contact-form.is-submitted .form-actions,
 .contact-form.is-submitted .form-status { display: none; }
 
+/* ── Nav móvil (hamburguesa + drawer) ───────────── */
+/* El botón solo aparece <960px (inyectado por js/site.js).         */
+.nav-toggle {
+  display: none;
+  width: 40px; height: 40px;
+  padding: 0;
+  margin-left: 8px;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: border-color 0.2s ease;
+  z-index: 110;
+}
+.nav-toggle:hover { border-color: var(--accent); }
+.nav-toggle-bar {
+  display: block;
+  width: 18px; height: 1.5px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+body.nav-open .nav-toggle-bar:nth-child(1) {
+  transform: translateY(5.5px) rotate(45deg);
+}
+body.nav-open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+body.nav-open .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-5.5px) rotate(-45deg);
+}
+
+/* Drawer fullscreen */
+.nav-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  background: rgba(10, 14, 20, 0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+  padding: 84px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+body.nav-open .nav-drawer {
+  opacity: 1;
+  visibility: visible;
+}
+body.nav-open {
+  overflow: hidden;
+}
+.nav-drawer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 24px;
+}
+.nav-drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: var(--serif);
+}
+.nav-drawer-links a {
+  font-size: 32px;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease, padding 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-drawer-links a::after {
+  content: '→';
+  font-family: var(--mono);
+  font-size: 20px;
+  color: var(--ink-mute);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.nav-drawer-links a:hover,
+.nav-drawer-links a:focus-visible {
+  color: var(--accent);
+  padding-left: 8px;
+}
+.nav-drawer-links a:hover::after { color: var(--accent); transform: translateX(4px); }
+
+.nav-drawer-tail {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.nav-drawer-tail .lang-switch { font-size: 14px; }
+.nav-drawer-tail .lang-switch a { padding: 6px 8px; }
+.nav-drawer-cta {
+  align-self: stretch;
+  text-align: center;
+  padding: 14px 22px;
+  background: var(--accent);
+  color: #051018;
+  border: 1px solid var(--accent);
+  font-size: 15px;
+}
+.nav-drawer-cta:hover { box-shadow: 0 0 32px var(--accent-glow); }
+
 /* ── Responsive ─────────────────────────────────── */
+@media (max-width: 1200px) {
+  .bento { grid-template-columns: repeat(4, 1fr); }
+  .card.s-1 { grid-column: span 4; grid-row: span 1; }
+  .card.s-2 { grid-column: span 2; grid-row: span 1; }
+  .card.s-3 { grid-column: span 2; grid-row: span 1; }
+  .card.s-4 { grid-column: span 2; grid-row: span 1; }
+  .card h3 { font-size: 38px; }
+}
+
 @media (max-width: 960px) {
-  .bento { grid-template-columns: 1fr; }
+  /* Nav: oculta links horizontales y muestra hamburguesa */
+  .nav-toggle { display: inline-flex; }
+  nav .nav-links { display: none; }
+  nav .nav-right .lang-switch,
+  nav .nav-right .nav-cta { display: none; }
+  nav .nav-right { gap: 0; }
+
+  /* Logo: SVG con marca compacta en móvil */
+  .logo img { height: 38px; }
+  .brand-svg { height: 38px; }
+
+  /* Bento: 1 columna apilada */
+  .bento { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 14px; }
   .card.s-1, .card.s-2, .card.s-3, .card.s-4 {
     grid-column: span 1; grid-row: auto;
   }
-  .contact-shell { grid-template-columns: 1fr; gap: 48px; }
-  .contact-form { padding: 28px 22px; }
-  .contact-form .form-grid { grid-template-columns: 1fr; }
-  .form-actions { flex-direction: column-reverse; align-items: stretch; }
+  .card { padding: 26px 22px; }
+  .card h3 { font-size: clamp(28px, 7vw, 36px); margin: 18px 0 14px; }
+  .card p { font-size: 14px; }
+  .card.feature .visual { min-height: 110px; }
+
+  /* Marquee: menos padding */
+  .marquee { padding: 18px 0; }
+  .marquee-track { gap: 40px; font-size: 12px; }
+
+  /* Contacto */
+  .contact-shell { grid-template-columns: 1fr; gap: 40px; }
+  .contact-form { padding: 24px 18px; border-radius: 12px; }
+  .contact-form .form-grid { grid-template-columns: 1fr; gap: 16px; }
+  .form-actions { flex-direction: column-reverse; align-items: stretch; gap: 14px; }
   .form-actions .meta { text-align: center; }
-  .contact-form button[type="submit"] { justify-content: center; }
+  .contact-form button[type="submit"] { justify-content: center; width: 100%; }
+}
+
+@media (max-width: 640px) {
+  /* Nav todavía más compacto en móvil pequeño */
+  .logo img { height: 32px; }
+  .brand-svg { height: 32px; }
+  .nav-drawer { padding: 76px 18px 24px; }
+  .nav-drawer-links a { font-size: 26px; padding: 12px 0; }
+
+  /* Cards de bento */
+  .card { padding: 22px 18px; border-radius: 10px; }
+  .card h3 { font-size: clamp(26px, 7.5vw, 32px); }
+  .card-num { font-size: 11px; }
+  .card-num .badge { font-size: 9px; }
+
+  /* Marquee mini */
+  .marquee::before, .marquee::after { width: 60px; }
+
+  /* Botones */
+  .btn-primary, .btn-ghost { padding: 13px 20px; font-size: 13px; }
+  .btn-primary, .btn-ghost, .nav-drawer-cta { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 420px) {
+  .logo img { height: 28px; }
+  .brand-svg { height: 28px; }
+  .nav-drawer-inner { gap: 24px; }
+  .nav-drawer-links a { font-size: 23px; }
 }

@@ -65,6 +65,7 @@
 <link rel="stylesheet" href="../../css/layout.css">
 <link rel="stylesheet" href="../../css/cookie-consent.css">
 <script src="../../js/cookie-consent.js" defer></script>
+<script src="../../js/site.js" defer></script>
 <script src="../../js/contact-form.js" defer></script>
 </head>
 <body>
@@ -273,19 +274,7 @@
 </footer>
 <!-- @endregion -->
 
-<script>
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.25, rootMargin: '0px 0px -180px 0px' });
-  document.querySelectorAll('[data-reveal], [data-stagger]').forEach(el => {
-    revealObserver.observe(el);
-  });
-</script>
+
 
 </body>
 </html>
