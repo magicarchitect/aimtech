@@ -11,7 +11,7 @@ rendimiento, diseño y posicionamiento.
 - CSS3 vanilla con variables CSS — sin Tailwind, sin preprocesadores
 - JS vanilla mínimo
 - Fuentes: Instrument Serif (display), JetBrains Mono (técnico), Geist (cuerpo)
-- Despliegue previsto: Cloudflare Pages o Netlify (decisión pendiente)
+- Despliegue: Netlify (sitio estático + Netlify Functions para el formulario de contacto)
 
 ## Líneas de negocio a vender
 1. Formación en Power BI e inteligencia de negocio (palanca caliente, B2B: empresas, entidades y AAPP, online o presencial)
@@ -53,6 +53,4 @@ rendimiento, diseño y posicionamiento.
 - Sustituir stats placeholder por números reales
 - Páginas internas de los 4 servicios
 - Logos de clientes/AAPP (cuando haya autorización)
-- Formulario de contacto (Formspree, Resend, o mailto: simple — pendiente)
-- Política de cookies + aviso legal (SL española, RGPD)
 - Refactor del CSS inline de index.html a /css/{tokens,layout,components}.css

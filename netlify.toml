@@ -1,8 +1,12 @@
 # Configuración as-code de Netlify para aimtech.es
-# Sitio estático puro, sin build step. Publish root.
+# Sitio estático + functions. Publish root, functions en /netlify/functions.
 
 [build]
   publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
 
 # ── Security headers ─────────────────────────────────
 # Aplican a todas las respuestas. Mejora score en
@@ -32,6 +36,12 @@
   for = "/"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# Endpoint del formulario: nunca cachear.
+[[headers]]
+  for = "/.netlify/functions/contact"
+  [headers.values]
+    Cache-Control = "no-store"
 
 # ── Cache: CSS y XML medio (1 hora) ──────────────────
 # CSS aún se itera; sitemap.xml puede actualizarse.
