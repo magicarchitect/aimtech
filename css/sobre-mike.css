@@ -1,0 +1,593 @@
+/* ── /sobre-mike/ — escena humano susurrando a agentes ── */
+.hum-stage {
+  --c-skin:    #e6ebf2;
+  --c-skin-dim:#9aa3b6;
+  --c-shirt:   #2580e3;
+  --c-voice:   #5eead4;
+  --c-bot-nw:  #2580e3;
+  --c-bot-ne:  #b794f6;
+  --c-bot-sw:  #ffb86b;
+  --c-bot-se:  #5eead4;
+
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 560px;
+  margin-left: auto;
+  opacity: 0;
+  animation: fadeIn 1s ease 0.5s forwards;
+}
+
+/* ── Halos de fondo ───────────────────────────────── */
+.hum-halo {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(94, 234, 212, 0.18), transparent 55%),
+    radial-gradient(ellipse at 28% 30%, rgba(37, 128, 227, 0.20), transparent 55%),
+    radial-gradient(ellipse at 72% 70%, rgba(183, 148, 246, 0.16), transparent 55%);
+  filter: blur(34px);
+  animation: humHaloPulse 8s ease-in-out infinite;
+}
+
+/* ── Cielo de fondo: estrellas ──────────────────── */
+.hum-scene-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.hum-star {
+  fill: var(--ink-dim);
+  animation: humStarTwinkle 3.4s ease-in-out infinite;
+}
+
+/* ── Escena principal ───────────────────────────── */
+.hum-scene {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 2;
+}
+
+/* ── Cabeza estilizada (avatar) ──────────────────── */
+.hum-head {
+  fill: #0d1219;
+  stroke: var(--c-skin);
+  stroke-width: 1.6;
+  filter: drop-shadow(0 0 12px rgba(230, 235, 242, 0.18));
+}
+.hum-hair {
+  fill: #0d1219;
+  stroke: var(--c-skin);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  opacity: 0.95;
+}
+.hum-headphone-cup {
+  fill: var(--c-skin);
+  opacity: 0.85;
+}
+.hum-eye {
+  fill: var(--c-skin);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: humBlink 5.4s ease-in-out infinite;
+}
+.hum-mouth {
+  fill: none;
+  stroke: var(--c-skin);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  opacity: 0.7;
+}
+.hum-figure {
+  animation: humBreathe 6s ease-in-out infinite;
+}
+
+/* ── Ondas de voz emanando del lado de la boca ──── */
+.hum-voice {
+  fill: none;
+  stroke: var(--c-voice);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center center;
+  filter: drop-shadow(0 0 3px var(--c-voice));
+}
+.hum-voice-1 { animation: humWave 3.6s ease-out infinite; animation-delay: 0s;   }
+.hum-voice-2 { animation: humWave 3.6s ease-out infinite; animation-delay: 1.2s; }
+.hum-voice-3 { animation: humWave 3.6s ease-out infinite; animation-delay: 2.4s; }
+
+/* ── Vínculos hacia cada bot (línea punteada sutil) ── */
+.hum-link {
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 2 6;
+  opacity: 0.28;
+  animation: humDashFlow 2s linear infinite;
+}
+.hum-link--nw { stroke: var(--c-bot-nw); }
+.hum-link--ne { stroke: var(--c-bot-ne); }
+.hum-link--sw { stroke: var(--c-bot-sw); }
+.hum-link--se { stroke: var(--c-bot-se); }
+
+.hum-link-particle {
+  filter: drop-shadow(0 0 4px currentColor);
+}
+
+/* ── Mini bots (versión compacta) ────────────────── */
+.hum-bot {
+  animation: humBotBob 5s ease-in-out infinite;
+}
+.hum-bot-shadow { fill: rgba(0,0,0,0.4); }
+.hum-bot-body {
+  fill: #0d1219;
+  stroke-width: 1.4;
+}
+.hum-bot-eye {
+  transform-box: fill-box; transform-origin: center;
+  animation: humEyeReact 3.2s ease-in-out infinite;
+}
+.hum-bot-eye-glow {
+  filter: drop-shadow(0 0 3px currentColor);
+}
+.hum-bot-antenna {
+  stroke-width: 1.3;
+  stroke-linecap: round;
+}
+.hum-bot-tread { opacity: 0.65; }
+
+/* Bot NW (azul) — receive */
+.hum-bot--nw { animation-delay: 0s; }
+.hum-bot--nw .hum-bot-body    { stroke: var(--c-bot-nw); }
+.hum-bot--nw .hum-bot-eye     { fill: var(--c-bot-nw); color: var(--c-bot-nw); animation-delay: 0.3s; }
+.hum-bot--nw .hum-bot-antenna { stroke: var(--c-bot-nw); }
+.hum-bot--nw .hum-bot-antenna-dot { fill: var(--c-bot-nw); }
+.hum-bot--nw .hum-bot-tread   { fill: var(--c-bot-nw); }
+.hum-bot--nw .hum-bot-detail  { stroke: var(--c-bot-nw); }
+
+/* Bot NE (púrpura) — process */
+.hum-bot--ne { animation-delay: 0.5s; }
+.hum-bot--ne .hum-bot-body    { stroke: var(--c-bot-ne); }
+.hum-bot--ne .hum-bot-eye     { fill: var(--c-bot-ne); color: var(--c-bot-ne); animation-delay: 1.0s; }
+.hum-bot--ne .hum-bot-antenna { stroke: var(--c-bot-ne); }
+.hum-bot--ne .hum-bot-antenna-dot { fill: var(--c-bot-ne); }
+.hum-bot--ne .hum-bot-tread   { fill: var(--c-bot-ne); }
+.hum-bot--ne .hum-bot-detail  { stroke: var(--c-bot-ne); }
+
+/* Bot SW (warm) — chat */
+.hum-bot--sw { animation-delay: 1s; }
+.hum-bot--sw .hum-bot-body    { stroke: var(--c-bot-sw); }
+.hum-bot--sw .hum-bot-eye     { fill: var(--c-bot-sw); color: var(--c-bot-sw); animation-delay: 1.7s; }
+.hum-bot--sw .hum-bot-antenna { stroke: var(--c-bot-sw); }
+.hum-bot--sw .hum-bot-antenna-dot { fill: var(--c-bot-sw); }
+.hum-bot--sw .hum-bot-tread   { fill: var(--c-bot-sw); }
+.hum-bot--sw .hum-bot-detail  { stroke: var(--c-bot-sw); }
+
+/* Bot SE (teal) — data */
+.hum-bot--se { animation-delay: 1.5s; }
+.hum-bot--se .hum-bot-body    { stroke: var(--c-bot-se); }
+.hum-bot--se .hum-bot-eye     { fill: var(--c-bot-se); color: var(--c-bot-se); animation-delay: 2.4s; }
+.hum-bot--se .hum-bot-antenna { stroke: var(--c-bot-se); }
+.hum-bot--se .hum-bot-antenna-dot { fill: var(--c-bot-se); }
+.hum-bot--se .hum-bot-tread   { fill: var(--c-bot-se); }
+.hum-bot--se .hum-bot-detail  { stroke: var(--c-bot-se); }
+
+/* ── Tags HTML flotantes ─────────────────────────── */
+.hum-tag {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 5;
+}
+.hum-tag--mike  { bottom: 14%; left: 50%; transform: translateX(-50%); color: var(--ink-dim); }
+.hum-tag--nw    { top: 30%; left: 4%;  color: var(--c-bot-nw); }
+.hum-tag--ne    { top: 30%; right: 4%; color: var(--c-bot-ne); }
+.hum-tag--sw    { bottom: 30%; left: 4%; color: var(--c-bot-sw); }
+.hum-tag--se    { bottom: 30%; right: 4%; color: var(--c-bot-se); }
+
+/* ── Telemetría flotante ─────────────────────────── */
+.hum-telemetry {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: 10px;
+  pointer-events: none;
+  z-index: 6;
+  animation: floatGentle 8s ease-in-out infinite;
+}
+.hum-telemetry .tag {
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: rgba(10, 14, 20, 0.85);
+  backdrop-filter: blur(4px);
+  color: var(--ink-dim);
+}
+.hum-telemetry .tag em {
+  font-style: normal;
+  color: var(--c-voice);
+}
+.hum-telemetry.htm-top { top: 1.5%; left: 50%; transform: translateX(-50%); animation-delay: 1s; }
+.hum-telemetry.htm-bot { bottom: 1.5%; left: 50%; transform: translateX(-50%); animation-delay: 3s; }
+
+/* ── Hero meta dot multi-color ───────────────────── */
+.hero-meta .dot--mike {
+  background: linear-gradient(135deg, #2580e3 0%, #5eead4 50%, #b794f6 100%);
+  box-shadow: 0 0 8px rgba(94, 234, 212, 0.55);
+}
+
+/* ─────────────────────────────────────────────────── */
+/* ── Sección "Quién soy" — bio editorial ─────────── */
+/* ─────────────────────────────────────────────────── */
+.bio-block {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 60px;
+  margin-top: 36px;
+  align-items: start;
+}
+.bio-side {
+  position: sticky;
+  top: 110px;
+}
+.bio-side .bio-figure {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.bio-side .bio-figure-sub {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.bio-side ul {
+  list-style: none; padding: 0;
+  margin: 28px 0 0;
+  display: flex; flex-direction: column;
+  gap: 14px;
+}
+.bio-side li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-dim);
+  align-items: baseline;
+}
+.bio-side li strong {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+  min-width: 56px;
+}
+.bio-content p {
+  font-size: 16px;
+  color: var(--ink-dim);
+  line-height: 1.65;
+  margin: 0 0 18px;
+}
+.bio-content p:first-child::first-letter {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 64px;
+  line-height: 0.85;
+  float: left;
+  margin: 4px 12px 0 0;
+  color: var(--accent);
+}
+.bio-content p strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+.bio-content em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+/* ─────────────────────────────────────────────────── */
+/* ── Sección "Cómo trabajo" — values ─────────────── */
+/* ─────────────────────────────────────────────────── */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+.value-card {
+  padding: 24px 26px 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  position: relative;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+.value-card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-2px);
+}
+.value-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 12px;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(37,128,227,0.10), transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.value-card:hover::before { opacity: 1; }
+.value-head {
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--mono); font-size: 11px;
+  color: var(--ink-mute);
+  margin-bottom: 14px;
+}
+.value-head .badge {
+  border: 1px solid var(--line-strong);
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: var(--ink-dim);
+}
+.value-icon {
+  width: 46px; height: 46px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(37, 128, 227, 0.05);
+  margin-bottom: 16px;
+  color: var(--accent);
+}
+.value-card h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.value-card h3 em { font-style: italic; color: var(--accent); }
+.value-card p {
+  font-size: 14px;
+  color: var(--ink-dim);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─────────────────────────────────────────────────── */
+/* ── Sección "Docencia" — bloque destacado ───────── */
+/* ─────────────────────────────────────────────────── */
+.teach-block {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 32px;
+  align-items: stretch;
+  margin-top: 28px;
+}
+.teach-headline {
+  padding: 36px 40px;
+  background: linear-gradient(135deg, rgba(37,128,227,0.10), rgba(94,234,212,0.05));
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+}
+.teach-figure {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 88px;
+  line-height: 0.9;
+  color: var(--accent);
+  margin: 0;
+}
+.teach-figure span {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 13px;
+  color: var(--ink-dim);
+  display: block;
+  margin-top: 10px;
+  letter-spacing: 0.06em;
+}
+.teach-headline p {
+  font-size: 14px;
+  color: var(--ink-dim);
+  line-height: 1.6;
+  margin: 24px 0 0;
+}
+
+.teach-list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column;
+  gap: 10px;
+}
+.teach-list li {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  transition: border-color 0.25s ease;
+}
+.teach-list li:hover { border-color: var(--line-strong); }
+.teach-list .teach-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.teach-list .teach-name {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--ink);
+}
+.teach-list .teach-name em { font-style: italic; color: var(--ink-dim); font-size: 13px; font-family: var(--mono); display: block; margin-top: 4px; letter-spacing: 0.04em; }
+
+/* ─────────────────────────────────────────────────── */
+/* ── Sección "Side project" — AdventuriQ ─────────── */
+/* ─────────────────────────────────────────────────── */
+.side-card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: center;
+  padding: 32px 36px;
+  background: linear-gradient(135deg, rgba(255,184,107,0.06), rgba(183,148,246,0.04));
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  margin-top: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.side-card::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(circle at 90% 10%, rgba(255,184,107,0.18), transparent 45%);
+  pointer-events: none;
+  z-index: 0;
+}
+.side-content { position: relative; z-index: 1; }
+.side-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-mute);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.side-meta .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #ffb86b;
+  box-shadow: 0 0 8px rgba(255,184,107,0.6);
+}
+.side-card h4 {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+.side-card h4 em { font-style: italic; color: #ffb86b; }
+.side-card p {
+  font-size: 15px;
+  color: var(--ink-dim);
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+.side-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 12px;
+  color: #ffb86b;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(255,184,107,0.4);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+}
+.side-link:hover { border-bottom-color: #ffb86b; }
+.side-figure {
+  position: relative; z-index: 1;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 64px;
+  line-height: 1;
+  color: #ffb86b;
+  text-align: right;
+}
+.side-figure span {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 11px;
+  color: var(--ink-dim);
+  display: block;
+  margin-top: 10px;
+  letter-spacing: 0.06em;
+}
+
+/* ── Keyframes ────────────────────────────────────── */
+@keyframes humHaloPulse {
+  0%, 100% { opacity: 0.7; }
+  50%      { opacity: 1; }
+}
+@keyframes humStarTwinkle {
+  0%, 100% { opacity: 0.25; }
+  50%      { opacity: 1;    }
+}
+@keyframes humBreathe {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-1px); }
+}
+@keyframes humBlink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  94%, 98%      { transform: scaleY(0.1); }
+}
+@keyframes humWave {
+  0%   { opacity: 0; transform: scale(0.5); }
+  18%  { opacity: 0.7; }
+  100% { opacity: 0;  transform: scale(2.6); }
+}
+@keyframes humBotBob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-3px); }
+}
+@keyframes humEyeReact {
+  0%, 60%, 100% { transform: scale(1); opacity: 1; }
+  30%           { transform: scale(1.25); opacity: 1; filter: brightness(1.4); }
+}
+@keyframes humDashFlow {
+  to { stroke-dashoffset: -16; }
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 960px) {
+  .hum-stage { max-width: 400px; margin: 0 auto; }
+  .hum-tag, .hum-telemetry { font-size: 9px; }
+  .bio-block { grid-template-columns: 1fr; gap: 36px; }
+  .bio-side { position: static; }
+  .bio-side .bio-figure { font-size: 48px; }
+  .values-grid { grid-template-columns: 1fr; }
+  .teach-block { grid-template-columns: 1fr; gap: 20px; }
+  .teach-headline { padding: 28px; }
+  .teach-figure { font-size: 64px; }
+  .teach-list li { grid-template-columns: 70px 1fr; padding: 14px 16px; }
+  .side-card { grid-template-columns: 1fr; gap: 18px; padding: 24px 26px; }
+  .side-figure { text-align: left; font-size: 48px; }
+  .side-card h4 { font-size: 26px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hum-stage,
+  .hum-halo,
+  .hum-star,
+  .hum-figure, .hum-eye,
+  .hum-voice, .hum-link, .hum-link-particle,
+  .hum-bot, .hum-bot-eye,
+  .hum-telemetry {
+    animation: none !important;
+  }
+  .hum-voice { opacity: 0.4; }
+}

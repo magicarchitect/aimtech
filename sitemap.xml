@@ -163,6 +163,26 @@
   </url>
 
   <url>
+    <loc>https://www.aimtech.es/sobre-mike/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/sobre-mike/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/sobre-mike/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/sobre-mike/"/>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/sobre-mike/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/sobre-mike/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/sobre-mike/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/sobre-mike/"/>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.aimtech.es/contacto/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/contacto/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/contacte/"/>
