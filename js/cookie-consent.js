@@ -17,7 +17,7 @@
 
   var COOKIE_NAME = 'aimtech_consent';
   var COOKIE_DAYS = 180; // 6 meses
-  var GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // TODO: sustituir por el real
+  var GA_MEASUREMENT_ID = 'G-WJF3NZ7MP2';
 
   var TEXTS = {
     es: {
@@ -49,10 +49,7 @@
 
   // ── Google Analytics 4 (carga condicional) ────────
   function loadGA() {
-    if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID === 'G-XXXXXXXXXX') {
-      // Placeholder activo: no se inyecta hasta tener Measurement ID real.
-      return;
-    }
+    if (!GA_MEASUREMENT_ID) return;
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
