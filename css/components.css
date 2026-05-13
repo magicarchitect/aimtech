@@ -180,6 +180,28 @@ a.card { text-decoration: none; color: inherit; }
   text-transform: uppercase; letter-spacing: 0.1em;
 }
 
+/* ── Language switcher (nav) ────────────────────── */
+.nav-right {
+  display: flex; align-items: center; gap: 20px;
+}
+.lang-switch {
+  display: flex; align-items: center;
+  font-family: var(--mono); font-size: 12px;
+  letter-spacing: 0.05em;
+}
+.lang-switch a {
+  color: var(--ink-mute);
+  text-decoration: none;
+  padding: 4px 4px;
+  transition: color 0.2s ease;
+}
+.lang-switch a:hover { color: var(--ink); }
+.lang-switch a.active { color: var(--accent); }
+.lang-switch .sep {
+  color: var(--line-strong);
+  margin: 0 2px;
+}
+
 /* ── Cursor blink ───────────────────────────────── */
 .cursor-blink {
   display: inline-block;
