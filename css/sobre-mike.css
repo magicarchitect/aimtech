@@ -1,41 +1,48 @@
-/* ── Hero con video de fondo full-bleed (neo.mp4) ── */
-/* Sobrescribe el .hero global para esta página */
+/* ── Hero: vídeo protagonista arriba, bloque de texto debajo ── */
+/* Sobrescribe el .hero global (que es flex centrado y 100vh) */
 #sobre-mike-hero {
   position: relative;
   overflow: hidden;
+  display: block;
+  min-height: 0;
+  padding: 0 0 80px;
 }
 .hero-bg-video {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  display: block;
   width: 100%;
-  height: 100%;
+  height: clamp(420px, 72vh, 760px);
   object-fit: cover;
   z-index: 0;
 }
+/* Overlay sutil: oscurece bajo la nav y funde el final con el bg de página */
 .hero-bg-overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: clamp(420px, 72vh, 760px);
   z-index: 1;
-  background:
-    linear-gradient(115deg,
-      rgba(10, 14, 20, 0.92) 0%,
-      rgba(10, 14, 20, 0.78) 45%,
-      rgba(10, 14, 20, 0.45) 100%),
-    linear-gradient(0deg,
-      rgba(10, 14, 20, 0.55) 0%,
-      transparent 30%,
-      transparent 70%,
-      rgba(10, 14, 20, 0.4) 100%);
   pointer-events: none;
+  background:
+    linear-gradient(180deg,
+      rgba(10, 14, 20, 0.55) 0%,
+      rgba(10, 14, 20, 0.10) 18%,
+      rgba(10, 14, 20, 0.05) 60%,
+      rgba(10, 14, 20, 0.98) 100%);
 }
-/* En esta página el hero-grid es single-column sobre el video */
+/* El bloque de contenido sale justo debajo del vídeo, no superpuesto */
 #sobre-mike-hero .hero-grid {
   display: block;
   position: relative;
   z-index: 2;
+  margin-top: 56px;
 }
-#sobre-mike-hero .hero-content {
-  max-width: 680px;
+/* Titular protagonista: escala para llenar el ancho disponible */
+#sobre-mike-hero h1 {
+  font-size: clamp(56px, 9vw, 168px);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
 }
 
 /* ── /sobre-mike/ — escena humano susurrando a agentes ── */
@@ -267,25 +274,34 @@
 /* ── Sección "Quién soy" — bio editorial ─────────── */
 /* ─────────────────────────────────────────────────── */
 .bio-block {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
   margin-top: 36px;
-  align-items: start;
 }
 .bio-side {
-  position: sticky;
-  top: 110px;
+  position: static;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 56px;
+  align-items: center;
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 .bio-side .bio-figure {
+  grid-column: 1;
+  grid-row: 1;
   font-family: var(--serif);
   font-style: italic;
   font-size: 64px;
   line-height: 1;
   color: var(--accent);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .bio-side .bio-figure-sub {
+  grid-column: 1;
+  grid-row: 2;
   font-family: var(--mono);
   font-size: 11px;
   color: var(--ink-dim);
@@ -293,28 +309,30 @@
   text-transform: uppercase;
 }
 .bio-side ul {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
   list-style: none; padding: 0;
-  margin: 28px 0 0;
-  display: flex; flex-direction: column;
-  gap: 14px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 32px;
 }
 .bio-side li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   font-family: var(--mono);
   font-size: 12px;
   color: var(--ink-dim);
-  align-items: baseline;
 }
 .bio-side li strong {
   color: var(--ink);
   font-family: var(--serif);
   font-style: italic;
-  font-size: 22px;
+  font-size: 32px;
   font-weight: 400;
   line-height: 1;
-  min-width: 56px;
 }
 .bio-content p {
   font-size: 16px;
@@ -488,11 +506,10 @@
 /* ── Sección "Side project" — AdventuriQ ─────────── */
 /* ─────────────────────────────────────────────────── */
 .side-card {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 32px;
-  align-items: center;
-  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 36px 40px;
   background: linear-gradient(135deg, rgba(255,184,107,0.06), rgba(183,148,246,0.04));
   border: 1px solid var(--line-strong);
   border-radius: 14px;
@@ -500,6 +517,7 @@
   position: relative;
   overflow: hidden;
 }
+.side-content { width: 100%; }
 .side-card::after {
   content: '';
   position: absolute;
@@ -553,10 +571,12 @@
   position: relative; z-index: 1;
   font-family: var(--serif);
   font-style: italic;
-  font-size: 64px;
+  font-size: 56px;
   line-height: 1;
   color: #ffb86b;
   text-align: right;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,184,107,0.2);
 }
 .side-figure span {
   font-family: var(--mono);
@@ -564,7 +584,7 @@
   font-size: 11px;
   color: var(--ink-dim);
   display: block;
-  margin-top: 10px;
+  margin-top: 8px;
   letter-spacing: 0.06em;
 }
 
@@ -604,24 +624,46 @@
 
 /* ── Responsive ───────────────────────────────────── */
 @media (max-width: 960px) {
+  /* Hero: vídeo + bloque más compactos en tablet */
+  #sobre-mike-hero { padding: 0 0 60px; }
+  #sobre-mike-hero .hero-bg-video,
+  #sobre-mike-hero .hero-bg-overlay { height: clamp(320px, 56vh, 520px); }
+  #sobre-mike-hero .hero-grid { margin-top: 40px; }
   .hum-stage { max-width: min(400px, 88vw); margin: 0 auto; }
   .hum-tag, .hum-telemetry { font-size: 9px; }
-  .bio-block { grid-template-columns: 1fr; gap: 36px; }
-  .bio-side { position: static; }
+  .bio-block { gap: 36px; }
+  .bio-side {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+    padding: 24px 0;
+  }
   .bio-side .bio-figure { font-size: 48px; }
+  .bio-side ul {
+    grid-column: 1;
+    grid-row: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 24px;
+  }
+  .bio-side li strong { font-size: 26px; }
   .values-grid { grid-template-columns: 1fr; }
   .teach-block { grid-template-columns: 1fr; gap: 20px; }
   .teach-headline { padding: 28px; }
   .teach-figure { font-size: 64px; }
   .teach-list li { grid-template-columns: 70px 1fr; padding: 14px 16px; }
-  .side-card { grid-template-columns: 1fr; gap: 18px; padding: 24px 26px; }
-  .side-figure { text-align: left; font-size: 48px; }
+  .side-card { gap: 22px; padding: 24px 26px; }
+  .side-figure { text-align: left; font-size: 44px; padding-top: 18px; }
   .side-card h4 { font-size: 26px; }
 }
 @media (max-width: 640px) {
+  #sobre-mike-hero { padding: 0 0 48px; }
+  #sobre-mike-hero .hero-bg-video,
+  #sobre-mike-hero .hero-bg-overlay { height: clamp(260px, 48vh, 400px); }
+  #sobre-mike-hero .hero-grid { margin-top: 28px; }
   #sobre-mike-hero .hero-content { max-width: 100%; }
   .hum-stage { max-width: min(320px, 90vw); }
   .bio-side .bio-figure { font-size: 40px; }
+  .bio-side li strong { font-size: 22px; }
+  .bio-side ul { gap: 14px 20px; }
   .bio-content p { font-size: 15px; }
   .bio-content p:first-child::first-letter { font-size: 52px; margin: 4px 10px 0 0; }
   .value-card { padding: 22px 20px; }
@@ -637,6 +679,7 @@
 @media (max-width: 420px) {
   .hum-stage { max-width: 280px; }
   .hum-telemetry.htm-top, .hum-telemetry.htm-bot { display: none; }
+  .bio-side ul { grid-template-columns: 1fr; }
   .bio-content p:first-child::first-letter { font-size: 44px; }
   .teach-list li { grid-template-columns: 1fr; gap: 4px; }
   .teach-list .teach-tag { padding-top: 2px; }

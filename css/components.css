@@ -196,6 +196,20 @@ a.card { text-decoration: none; color: inherit; }
   padding: 3px 8px; border-radius: 4px;
   font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
 }
+/* Badge por categoría de servicio en el bento de la home */
+.card.s-1 .card-num .badge,
+.card.s-2 .card-num .badge {
+  color: var(--accent);
+  border-color: rgba(37, 128, 227, 0.4);
+}
+.card.s-3 .card-num .badge {
+  color: #5eead4;
+  border-color: rgba(94, 234, 212, 0.4);
+}
+.card.s-4 .card-num .badge {
+  color: #ffb86b;
+  border-color: rgba(255, 184, 107, 0.4);
+}
 .card h3 {
   font-family: var(--serif); font-weight: 400;
   font-size: 48px; line-height: 1.1;
