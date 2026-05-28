@@ -4,6 +4,7 @@ description: "¿Es gratis Power BI? Sí y no. Te explicamos qué es gratis, qué
 date: 2026-05-28
 author: "Mike Pérez"
 tags: ["power-bi", "licencias"]
+icon: "price"
 draft: false
 slug: "es-gratis-power-bi"
 translationKey: "es-gratis-power-bi"
@@ -26,6 +27,52 @@ Dicho de otro modo: **se paga por colaborar y distribuir, no por crear.**
 ## Los niveles de licencia, sin marearte
 
 Microsoft revisa nombres y precios cada cierto tiempo, así que aquí va la *lógica* —que es lo que no caduca—. Para el importe exacto y vigente, consulta siempre la página oficial de precios de Power BI de Microsoft.
+
+<figure class="svg-figure">
+<svg viewBox="0 0 760 300" role="img" aria-labelledby="fig-lic-t fig-lic-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-lic-t">Niveles de licencia de Power BI</title>
+<desc id="fig-lic-d">Cuatro escalones de menor a mayor coste: Desktop gratis, Pro por usuario, Premium Per User por usuario y Capacidad o Fabric por capacidad.</desc>
+
+<polyline points="30,178 216,136 402,94 588,52" class="d-dash"/>
+<path d="M588 52 L582 62 L596 60 Z" class="d-mute"/>
+<line x1="14" y1="256" x2="746" y2="256" class="d-line"/>
+
+<!-- Desktop -->
+<g>
+<rect x="24" y="186" width="158" height="70" rx="8" class="d-card-sub"/>
+<rect x="24" y="186" width="158" height="5" rx="2.5" class="d-accent"/>
+<text x="40" y="214" font-size="14" class="d-title">Desktop</text>
+<text x="40" y="234" font-size="12" class="d-num">gratis</text>
+<text x="40" y="276" font-size="9" class="d-label">crear informes</text>
+</g>
+<!-- Pro -->
+<g>
+<rect x="210" y="144" width="158" height="112" rx="8" class="d-card-sub"/>
+<rect x="210" y="144" width="158" height="5" rx="2.5" class="d-accent"/>
+<text x="226" y="172" font-size="14" class="d-title">Pro</text>
+<text x="226" y="192" font-size="12" class="d-dim">€ / usuario·mes</text>
+<text x="226" y="276" font-size="9" class="d-label">compartir y refrescar</text>
+</g>
+<!-- PPU -->
+<g>
+<rect x="396" y="102" width="158" height="154" rx="8" class="d-card-sub"/>
+<rect x="396" y="102" width="158" height="5" rx="2.5" class="d-accent"/>
+<text x="412" y="130" font-size="14" class="d-title">Premium PU</text>
+<text x="412" y="150" font-size="12" class="d-dim">€€ / usuario·mes</text>
+<text x="412" y="276" font-size="9" class="d-label">capacidades avanzadas</text>
+</g>
+<!-- Capacidad -->
+<g>
+<rect x="582" y="60" width="158" height="196" rx="8" class="d-card-sub"/>
+<rect x="582" y="60" width="158" height="5" rx="2.5" class="d-accent"/>
+<text x="598" y="88" font-size="14" class="d-title">Capacidad</text>
+<text x="598" y="108" font-size="12" class="d-dim">€€ / capacidad</text>
+<text x="598" y="128" font-size="10" class="d-txt-i">Fabric · Premium</text>
+<text x="598" y="276" font-size="9" class="d-label">organización grande</text>
+</g>
+</svg>
+<figcaption>De menor a mayor coste: <b>Desktop</b> es gratis, <b>Pro</b> y <b>Premium PU</b> se pagan por usuario, y <b>Capacidad/Fabric</b> por capacidad. La mayoría de pymes se mueven entre gratis y Pro.</figcaption>
+</figure>
 
 - **Power BI Desktop — gratis.** Crear informes en tu equipo. Sin coste.
 - **Power BI Pro — de pago, por usuario y mes.** El escalón habitual en una empresa: publicar en el Service, compartir con compañeros, colaborar en áreas de trabajo y programar la actualización automática. Suele ser lo que necesita un equipo que empieza a trabajar con cuadros de mando en serio.

@@ -853,3 +853,59 @@ body.nav-open {
   .nav-drawer-inner { gap: 24px; }
   .nav-drawer-links a { font-size: 23px; }
 }
+
+/* ─────────────────────────────────────────────────────
+   Diagram kit — figuras SVG conceptuales
+   Lenguaje del mock del hero: dark + acento azul, mono labels.
+   Reutilizable en blog y landings. Las SVG usan clases .d-*;
+   el font-size va como atributo en unidades de viewBox.
+   ───────────────────────────────────────────────────── */
+.svg-figure {
+  margin: 2.4em 0;
+}
+.svg-figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background:
+    linear-gradient(0deg, var(--bg-card), var(--bg-card)) padding-box;
+}
+.svg-figure figcaption {
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  color: var(--ink-mute);
+  text-align: center;
+}
+.svg-figure figcaption b { color: var(--ink-dim); font-weight: 500; }
+
+/* Primitivas de dibujo (fill/stroke; el tamaño va en el SVG) */
+.d-surface  { fill: var(--bg-elev); }
+.d-card     { fill: var(--bg-card); stroke: var(--line-strong); stroke-width: 1; }
+.d-card-sub { fill: var(--bg-elev); stroke: var(--line); stroke-width: 1; }
+.d-line     { fill: none; stroke: var(--line-strong); stroke-width: 1; }
+.d-grid     { fill: none; stroke: var(--line); stroke-width: 1; }
+.d-accent   { fill: var(--accent); }
+.d-accent-s { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.d-accent-soft { fill: var(--accent); opacity: 0.16; }
+.d-ink      { fill: var(--ink); }
+.d-dim      { fill: var(--ink-dim); }
+.d-mute     { fill: var(--ink-mute); }
+.d-stroke-mute { fill: none; stroke: var(--ink-mute); stroke-width: 1.5; stroke-linecap: round; }
+.d-dash     { fill: none; stroke: var(--line-strong); stroke-width: 1.5; stroke-dasharray: 4 4; }
+
+/* Texto dentro de la SVG */
+.d-label { font-family: var(--mono); fill: var(--ink-mute); letter-spacing: 0.12em; text-transform: uppercase; }
+.d-title { font-family: var(--mono); fill: var(--ink); font-weight: 500; letter-spacing: 0.02em; }
+.d-txt   { font-family: var(--sans); fill: var(--ink-dim); }
+.d-txt-i { font-family: var(--serif); font-style: italic; fill: var(--ink-dim); }
+.d-kpi   { font-family: var(--serif); fill: var(--accent); }
+.d-num   { font-family: var(--mono); fill: var(--accent); font-weight: 600; }
+
+@media (max-width: 540px) {
+  .svg-figure { margin: 1.8em 0; }
+}
