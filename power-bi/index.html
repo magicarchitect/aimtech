@@ -37,25 +37,67 @@
 <meta name="twitter:description" content="Dos itinerarios de 20h: Cero a Intermedio y Avanzado. Online o presencial. Para empresas, entidades y AAPP." />
 <meta name="twitter:image" content="https://www.aimtech.es/assets/og/power-bi.png" />
 
-<!-- JSON-LD: Course (×2) + BreadcrumbList -->
+<!-- JSON-LD: EducationalOrganization + Course (×2) + BreadcrumbList -->
 <script type="application/ld+json">
 [
   {
     "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://www.aimtech.es/#aimtech",
+    "name": "Aimtech",
+    "legalName": "Aimtech Consulting SL",
+    "url": "https://www.aimtech.es",
+    "logo": "https://www.aimtech.es/assets/logo.png?v=2",
+    "founder": {
+      "@type": "Person",
+      "name": "Miguel Pérez",
+      "alternateName": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "España" },
+      { "@type": "AdministrativeArea", "name": "Cataluña" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Cataluña",
+      "addressCountry": "ES"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hola@aimtech.es",
+      "contactType": "customer service",
+      "areaServed": "ES",
+      "availableLanguage": ["es", "ca"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "Course",
     "name": "Power BI de cero a intermedio",
-    "description": "Power Query, modelado dimensional, DAX core y publicación en Power BI Service. 20h, online o presencial, en grupos cerrados para empresas, entidades y administraciones públicas.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Aimtech",
-      "url": "https://www.aimtech.es"
-    },
+    "description": "Itinerario para usuarios de Excel sin Power BI previo: instalación e interfaz de Power BI Desktop, carga y limpieza de datos con Power Query, informes e interactividad, mapas y visualización geográfica, modelado de datos (relaciones, jerarquías y esquema en estrella) y visuales avanzados con narrativa del informe. Aprendizaje learn-by-doing con 5 proyectos guiados de principio a fin. 20h, online o presencial, en grupos cerrados de hasta 20 personas para empresas, entidades y administraciones públicas.",
+    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
     "url": "https://www.aimtech.es/power-bi/#itinerarios",
     "inLanguage": "es",
+    "timeRequired": "PT20H",
     "courseMode": ["Online", "Onsite"],
     "hasCourseInstance": [
       { "@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT20H" },
-      { "@type": "CourseInstance", "courseMode": "Onsite", "courseWorkload": "PT20H" }
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Onsite",
+        "courseWorkload": "PT20H",
+        "location": {
+          "@type": "Place",
+          "name": "Barcelona",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Barcelona",
+            "addressRegion": "Cataluña",
+            "addressCountry": "ES"
+          }
+        }
+      }
     ]
   },
   {
@@ -63,17 +105,28 @@
     "@type": "Course",
     "name": "Power BI Avanzado",
     "description": "DAX avanzado, time intelligence, modelado complejo (many-to-many, role-playing), performance con DAX Studio y gobierno del servicio (RLS, deployment pipelines). 20h, online o presencial.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Aimtech",
-      "url": "https://www.aimtech.es"
-    },
+    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
     "url": "https://www.aimtech.es/power-bi/#itinerarios",
     "inLanguage": "es",
+    "timeRequired": "PT20H",
     "courseMode": ["Online", "Onsite"],
     "hasCourseInstance": [
       { "@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT20H" },
-      { "@type": "CourseInstance", "courseMode": "Onsite", "courseWorkload": "PT20H" }
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Onsite",
+        "courseWorkload": "PT20H",
+        "location": {
+          "@type": "Place",
+          "name": "Barcelona",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Barcelona",
+            "addressRegion": "Cataluña",
+            "addressCountry": "ES"
+          }
+        }
+      }
     ]
   },
   {
@@ -153,7 +206,7 @@
           </h1>
 
           <p class="hero-sub">
-            Cursos para <strong>empresas, entidades y administraciones públicas</strong>. Dos itinerarios de 20h cada uno: <strong>Power BI de cero a intermedio</strong> y <strong>Power BI Avanzado</strong>. Grupos de hasta 20 personas, <strong>online o presencial</strong>. Aprendes haciendo: cada bloque va seguido de un reto que resuelves tú, no slides cinco horas seguidas.
+            Formación en Power BI para <strong>empresas, entidades y administraciones públicas</strong> en Barcelona y toda Cataluña, y en remoto en directo para toda España. Dos itinerarios de 20h cada uno: <strong>Power BI de cero a intermedio</strong> y <strong>Power BI Avanzado</strong>. Grupos de hasta 20 personas, <strong>presencial, online en directo o in-company</strong>. Aprendes haciendo: cada bloque va seguido de un reto que resuelves tú, no slides cinco horas seguidas.
           </p>
 
           <div class="hero-cta">
@@ -316,7 +369,7 @@
         <div data-reveal="left">
           <div class="section-label">02 — Metodología</div>
           <h2 class="section-title">Concepto, <em>reto</em>, solución.</h2>
-          <p class="section-intro">No vas a ver slides cinco horas seguidas. Cada bloque empieza con un concepto, va seguido de un reto que resuelves tú con un dataset, y termina con la solución comentada y dudas resueltas en directo. Es la única forma de que algo se quede.</p>
+          <p class="section-intro">No vas a ver slides cinco horas seguidas. Cada bloque empieza con un concepto, va seguido de un reto que resuelves tú con un dataset, y termina con la solución comentada y dudas resueltas en directo. En el itinerario de cero a intermedio encadenas <strong>cinco proyectos guiados</strong> —empezando por una tienda online de principio a fin— porque construir un informe real es la única forma de que algo se quede.</p>
         </div>
 
         <div class="method-list" data-stagger>
@@ -365,19 +418,21 @@
             <span class="badge">20h</span>
           </div>
           <h3>Power BI <em>de cero a intermedio</em>.</h3>
-          <p>Partes desde usuario de Excel sin Power BI previo. Sales haciendo informes propios end-to-end: importar datos, modelarlos, escribir medidas básicas y publicar en el Service.</p>
+          <p>Partes desde usuario de Excel sin Power BI previo. Sales haciendo informes propios end-to-end y con cinco proyectos guiados a tus espaldas: instalar y conectar datos, limpiarlos con Power Query, modelarlos y contarlos en un informe que se entiende.</p>
           <div class="modules">
-            <div><span class="module-num">01</span>Power Query: importar y limpiar datos</div>
-            <div><span class="module-num">02</span>Modelado básico: hechos y dimensiones</div>
-            <div><span class="module-num">03</span>DAX core: medidas y CALCULATE</div>
-            <div><span class="module-num">04</span>Visualización: cuándo gráfico, cuándo tabla</div>
-            <div><span class="module-num">05</span>Publicación en Power BI Service</div>
+            <div><span class="module-num">01</span>Instalación e interfaz de Power BI Desktop</div>
+            <div><span class="module-num">02</span>Carga y limpieza de datos con Power Query</div>
+            <div><span class="module-num">03</span>Informes e interactividad: gráficos, filtros y segmentaciones</div>
+            <div><span class="module-num">04</span>Mapas y visualización geográfica</div>
+            <div><span class="module-num">05</span>Modelado: relaciones, jerarquías y esquema en estrella</div>
+            <div><span class="module-num">06</span>Visuales avanzados y narrativa del informe</div>
           </div>
           <div class="card-meta">
             <span class="chip">Power Query</span>
             <span class="chip">Modelado</span>
-            <span class="chip">DAX core</span>
-            <span class="chip">Service básico</span>
+            <span class="chip">Mapas</span>
+            <span class="chip">Visualización</span>
+            <span class="chip">Proyectos guiados</span>
           </div>
         </article>
 
@@ -423,7 +478,7 @@
           <div class="stat-label">Itinerarios</div>
         </div>
         <div class="stat">
-          <div class="stat-num">15<em>+</em></div>
+          <div class="stat-num">20<em>+</em></div>
           <div class="stat-label">Años formando</div>
         </div>
       </div>
@@ -435,7 +490,7 @@
       <div data-reveal>
         <div class="section-label">04 — Contratación</div>
         <h2 class="section-title">Para empresas, <em>entidades</em> y AAPP.</h2>
-        <p class="section-intro">Los cursos se imparten durante todo el año, online o presencial, en grupos cerrados de hasta 20 personas. Escríbeme indicando perfil, número de personas y formato preferido, y te paso disponibilidad y propuesta económica. <strong>Descuento al contratar dos o más cursos</strong> (pack itinerario).</p>
+        <p class="section-intro">Los cursos se imparten durante todo el año en tres modalidades: <strong>presencial en Barcelona y área</strong>, <strong>remoto en directo</strong> para toda España o <strong>in-company</strong> en tus oficinas, en grupos cerrados de hasta 20 personas. Escríbeme indicando perfil, número de personas y formato preferido, y te paso disponibilidad y propuesta económica. <strong>Descuento al contratar dos o más cursos</strong> (pack itinerario).</p>
       </div>
 
       <div class="bento" data-stagger>
@@ -479,6 +534,17 @@
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <section id="formador">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">05 — Formador</div>
+        <h2 class="section-title">Lo imparte <em>Mike</em>, / no una marca anónima.</h2>
+        <p class="section-intro">Miguel «Mike» Pérez, Ingeniero de Soluciones de IA y fundador de Aimtech. Más de 20 años desarrollando software y docente universitario en la UOC, la UPC, la UIC y el Cibernàrium (Barcelona Activa). La misma persona que diseña el temario es la que da la clase: formación a empresas, entidades y administraciones públicas, sin PowerPoints interminables.</p>
+        <a href="/sobre-mike/" class="btn-ghost">Conoce a Mike →</a>
       </div>
     </div>
   </section>

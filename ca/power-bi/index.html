@@ -37,25 +37,67 @@
 <meta name="twitter:description" content="Dos itineraris de 20h: De zero a intermedi i Avançat. Online o presencial. Per a empreses, entitats i AAPP." />
 <meta name="twitter:image" content="https://www.aimtech.es/assets/og/power-bi.png" />
 
-<!-- JSON-LD: Course (×2) + BreadcrumbList -->
+<!-- JSON-LD: EducationalOrganization + Course (×2) + BreadcrumbList -->
 <script type="application/ld+json">
 [
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://www.aimtech.es/#aimtech",
+    "name": "Aimtech",
+    "legalName": "Aimtech Consulting SL",
+    "url": "https://www.aimtech.es",
+    "logo": "https://www.aimtech.es/assets/logo.png?v=2",
+    "founder": {
+      "@type": "Person",
+      "name": "Miguel Pérez",
+      "alternateName": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "Espanya" },
+      { "@type": "AdministrativeArea", "name": "Catalunya" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Catalunya",
+      "addressCountry": "ES"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hola@aimtech.es",
+      "contactType": "customer service",
+      "areaServed": "ES",
+      "availableLanguage": ["ca", "es"]
+    }
+  },
   {
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "Power BI de zero a intermedi",
     "description": "Power Query, modelatge dimensional, DAX core i publicació a Power BI Service. 20h, online o presencial, en grups tancats per a empreses, entitats i administracions públiques.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Aimtech",
-      "url": "https://www.aimtech.es"
-    },
+    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
     "url": "https://www.aimtech.es/ca/power-bi/#itineraris",
     "inLanguage": "ca",
+    "timeRequired": "PT20H",
     "courseMode": ["Online", "Onsite"],
     "hasCourseInstance": [
       { "@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT20H" },
-      { "@type": "CourseInstance", "courseMode": "Onsite", "courseWorkload": "PT20H" }
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Onsite",
+        "courseWorkload": "PT20H",
+        "location": {
+          "@type": "Place",
+          "name": "Barcelona",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Barcelona",
+            "addressRegion": "Catalunya",
+            "addressCountry": "ES"
+          }
+        }
+      }
     ]
   },
   {
@@ -63,17 +105,28 @@
     "@type": "Course",
     "name": "Power BI Avançat",
     "description": "DAX avançat, time intelligence, modelatge complex (many-to-many, role-playing), performance amb DAX Studio i govern del servei (RLS, deployment pipelines). 20h, online o presencial.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Aimtech",
-      "url": "https://www.aimtech.es"
-    },
+    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
     "url": "https://www.aimtech.es/ca/power-bi/#itineraris",
     "inLanguage": "ca",
+    "timeRequired": "PT20H",
     "courseMode": ["Online", "Onsite"],
     "hasCourseInstance": [
       { "@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT20H" },
-      { "@type": "CourseInstance", "courseMode": "Onsite", "courseWorkload": "PT20H" }
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Onsite",
+        "courseWorkload": "PT20H",
+        "location": {
+          "@type": "Place",
+          "name": "Barcelona",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Barcelona",
+            "addressRegion": "Catalunya",
+            "addressCountry": "ES"
+          }
+        }
+      }
     ]
   },
   {
@@ -423,7 +476,7 @@
           <div class="stat-label">Itineraris</div>
         </div>
         <div class="stat">
-          <div class="stat-num">15<em>+</em></div>
+          <div class="stat-num">20<em>+</em></div>
           <div class="stat-label">Anys formant</div>
         </div>
       </div>

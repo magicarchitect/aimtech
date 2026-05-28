@@ -1,0 +1,6 @@
+# Normalización de saltos de línea.
+# build.js escribe LF; el repo en Windows usa autocrlf=true (CRLF en working
+# tree), lo que provocaba churn CRLF↔LF en cada build. Forzamos LF en los
+# ficheros que el build reescribe para que el diff quede limpio.
+*.html text eol=lf
+*.xml  text eol=lf
