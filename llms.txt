@@ -1,0 +1,43 @@
+# Aimtech
+
+> Aimtech (Aimtech Consulting SL) es una consultora catalana de formación e
+> implantación de IA aplicada. Forma equipos y construye sistemas en producción
+> para empresas, entidades (asociaciones, fundaciones, colegios, cooperativas) y
+> administraciones públicas. Sede en Cataluña (Barcelona y área); clientes de
+> toda España en remoto. Web bilingüe español (/) y catalán (/ca/).
+
+Fundada y dirigida por Miguel "Mike" Pérez, Arquitecto de Soluciones de IA, con
+más de 20 años de experiencia y docencia universitaria (UOC, UPC, UIC,
+Cibernàrium). Postura anti-humo: ROI medible, resultados reales, sin promesas
+vacías.
+
+Datos reales de actividad: +20 años de experiencia, 3.360 alumnos formados,
+24.000 horas de formación impartidas, valoración media 4,85/5.
+
+## Servicios
+
+- [Formación en Power BI](https://www.aimtech.es/power-bi/): cursos in-company para empresas, entidades y AAPP. Dos itinerarios de 20h (Cero a Intermedio y Avanzado), online o presencial, grupos de hasta 20 personas. Power Query, modelado dimensional, DAX, RLS y gobierno del servicio.
+- [Formación en IA Aplicada](https://www.aimtech.es/ia-aplicada/): formación práctica para equipos en IA generativa, prompting y agentes IA aplicados a procesos empresariales.
+- [Implantación de IA Agéntica](https://www.aimtech.es/ia-agentica/): diseño e implantación de sistemas de agentes IA orquestados con ROI medible. Stack: Claude API, n8n, RAG y bases vectoriales. Incluye análisis de procesos, precondiciones y diseño del workflow agéntico.
+- [Desarrollo a medida](https://www.aimtech.es/desarrollo/): apps web y móvil, CMS, APIs e integraciones de software para empresas.
+
+## Sobre el fundador
+
+- [Sobre Mike Pérez](https://www.aimtech.es/sobre-mike/): Miguel "Mike" Pérez, Arquitecto de Soluciones de IA. Ingeniero con +20 años de experiencia, docente universitario y fundador de Aimtech.
+
+## Recursos
+
+- [Blog](https://www.aimtech.es/blog/): artículos sobre IA agéntica, Power BI y desarrollo, con enfoque práctico y accionable.
+- [Contacto](https://www.aimtech.es/contacto/): hola@aimtech.es
+
+## Para quién
+
+Empresas (pymes), entidades sin ánimo de lucro y administraciones públicas que
+quieren formar a sus equipos en datos e IA, o implantar automatización e IA
+agéntica con criterio y resultados medibles.
+
+## Idiomas y alcance
+
+- Español: https://www.aimtech.es/
+- Català: https://www.aimtech.es/ca/
+- Geo: Cataluña (Barcelona y área), clientes en remoto en toda España.
