@@ -100,6 +100,14 @@
       const linksClone = links.cloneNode(true);
       linksClone.classList.add('nav-drawer-links');
       linksClone.classList.remove('nav-links');
+      // El clon duplicaría el id del panel del dropdown y dejaría un
+      // aria-controls colgando: en el drawer «Servicios» va siempre desplegado
+      // (sin toggle), así que limpiamos ids y atributos de disclosure del clon.
+      linksClone.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+      const clonedToggle = linksClone.querySelector('.nav-dropdown-toggle');
+      if (clonedToggle) {
+        ['aria-controls', 'aria-haspopup', 'aria-expanded'].forEach(a => clonedToggle.removeAttribute(a));
+      }
       inner.appendChild(linksClone);
     }
 
@@ -142,11 +150,62 @@
                        : mq.addListener(e => { if (e.matches) setOpen(false); });
   }
 
+  // ─── Dropdown «Servicios» del nav (desktop) ─────────────────────
+  // Hover y foco ya los cubre el CSS. Esto añade el toggle por click
+  // (táctil/teclado), cierre con Escape y click fuera. Acotado a `nav`
+  // para no tocar el clon del drawer (que va siempre desplegado).
+  function startDropdown() {
+    document.querySelectorAll('nav .nav-dropdown').forEach(dd => {
+      const toggle = dd.querySelector('.nav-dropdown-toggle');
+      const menu = dd.querySelector('.nav-dropdown-menu');
+      if (!toggle || !menu) return;
+
+      function setOpen(open) {
+        dd.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      toggle.addEventListener('click', e => {
+        e.preventDefault();
+        setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+      });
+      dd.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && dd.classList.contains('is-open')) {
+          setOpen(false);
+          toggle.focus();
+        }
+      });
+      document.addEventListener('click', e => {
+        if (!dd.contains(e.target)) setOpen(false);
+      });
+    });
+  }
+
+  // ─── Resaltado del ítem activo del nav ──────────────────────────
+  // Marca con .active el enlace cuya ruta coincide con la página actual
+  // y resalta «Servicios» si estamos en una de las 4 rutas de servicio.
+  function startActiveNav() {
+    const path = location.pathname.replace(/index\.html$/, '');
+    const SERVICE_PATHS = [
+      '/power-bi/', '/ia-aplicada/', '/ia-agentica/', '/desarrollo/',
+      '/ca/power-bi/', '/ca/ia-aplicada/', '/ca/ia-agentica/', '/ca/desenvolupament/'
+    ];
+    document.querySelectorAll('nav .nav-links a, .nav-drawer-links a').forEach(a => {
+      const href = a.getAttribute('href');
+      if (href && href === path) a.classList.add('active');
+    });
+    if (SERVICE_PATHS.includes(path)) {
+      document.querySelectorAll('nav .nav-dropdown-toggle, .nav-drawer-links .nav-dropdown-toggle')
+        .forEach(b => b.classList.add('active'));
+    }
+  }
+
   function init() {
     startClock();
     startMouseGlow();
     startReveal();
+    startDropdown();
     startMobileNav();
+    startActiveNav();
   }
 
   if (document.readyState === 'loading') {

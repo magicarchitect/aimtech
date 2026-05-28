@@ -781,6 +781,48 @@ body.nav-open {
 }
 .nav-drawer-cta:hover { box-shadow: 0 0 32px var(--accent-glow); }
 
+/* En el drawer móvil, «Servicios» se muestra como cabecera con sus 4 enlaces
+   ya desplegados (sin acordeón → menos JS, más robusto). */
+.nav-drawer-links .nav-dropdown { display: flex; flex-direction: column; }
+.nav-drawer-links .nav-dropdown-toggle {
+  font-family: var(--serif);
+  font-size: 32px;
+  color: var(--ink);
+  background: none; border: none;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  letter-spacing: -0.01em;
+  text-align: left;
+  cursor: default;
+}
+.nav-drawer-links .nav-chevron { display: none; }
+.nav-drawer .nav-dropdown::after { display: none; }
+.nav-drawer .nav-dropdown-menu {
+  position: static;
+  transform: none;
+  opacity: 1; visibility: visible; pointer-events: auto;
+  display: flex; flex-direction: column;
+  min-width: 0; padding: 0;
+  background: none; border: none; border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+}
+.nav-drawer .nav-dropdown-menu a {
+  font-family: var(--serif);
+  font-size: 24px;
+  color: var(--ink-dim);
+  padding: 12px 0 12px 20px;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  white-space: normal;
+}
+.nav-drawer .nav-dropdown-menu a:hover,
+.nav-drawer .nav-dropdown-menu a:focus-visible {
+  color: var(--accent);
+  background: none; box-shadow: none;
+  padding-left: 28px;
+}
+
 /* ── Responsive ─────────────────────────────────── */
 @media (max-width: 1200px) {
   .bento { grid-template-columns: repeat(4, 1fr); }

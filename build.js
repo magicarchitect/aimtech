@@ -353,7 +353,18 @@ function processFile(filePath) {
       missing = true;
       return match;
     }
-    const body = fs.readFileSync(absPartial, 'utf8').replace(/\s+$/, '');
+    let body = fs.readFileSync(absPartial, 'utf8').replace(/\s+$/, '');
+    // Conmutador ES/CA: el partial del nav trae placeholders {{LANG_*_URL}}
+    // que se rellenan con el hreflang real del propio archivo (head). Así el
+    // partial es único y cada página apunta a su traducción. Fallback a las
+    // raíces si la página no declara hreflang (p. ej. 404.html).
+    if (body.includes('{{LANG_ES_URL}}') || body.includes('{{LANG_CA_URL}}')) {
+      const esMatch = original.match(/hreflang="es"\s+href="([^"]+)"/i);
+      const caMatch = original.match(/hreflang="ca"\s+href="([^"]+)"/i);
+      const esUrl = esMatch ? esMatch[1] : '/';
+      const caUrl = caMatch ? caMatch[1] : '/ca/';
+      body = body.split('{{LANG_ES_URL}}').join(esUrl).split('{{LANG_CA_URL}}').join(caUrl);
+    }
     return `${openTag}\n${body}\n${closeTag}`;
   });
 

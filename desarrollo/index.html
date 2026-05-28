@@ -84,8 +84,9 @@
 <div class="grid-bg"></div>
 <div class="noise"></div>
 
+<!-- @region partials/nav-es.html -->
 <nav>
-  <a href="../" class="logo" style="text-decoration:none;color:inherit;">
+  <a href="/" class="logo" style="text-decoration:none;color:inherit;">
     <img src="/assets/logo.png?v=2" alt="Aimtech" />
     <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
       <g transform="translate(300, 110)" text-anchor="middle">
@@ -96,21 +97,28 @@
     </svg>
   </a>
   <div class="nav-links">
-    <a href="../#servicios">Servicios</a>
-    <a href="#construimos">Qué construimos</a>
-    <a href="#metodo">Método</a>
-    <a href="#stack">Stack</a>
-    <a href="/contacto/">Contacto</a>
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-servicios-menu">Servicios <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-servicios-menu">
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+    </div>
+    <a href="/blog/">Blog</a>
+    <a href="/sobre-mike/">Sobre Mike</a>
   </div>
   <div class="nav-right">
     <div class="lang-switch">
-      <a href="/desarrollo/" class="active">ES</a>
+      <a href="https://www.aimtech.es/desarrollo/" class="active">ES</a>
       <span class="sep">/</span>
-      <a href="/ca/desenvolupament/">CA</a>
+      <a href="https://www.aimtech.es/ca/desenvolupament/">CA</a>
     </div>
     <a href="/contacto/" class="nav-cta">Hablemos →</a>
   </div>
 </nav>
+<!-- @endregion -->
 
 <main>
 
@@ -650,6 +658,7 @@
         <h3>Recursos</h3>
         <a href="/blog/">Blog</a>
         <a href="/sobre-mike/">Sobre Mike</a>
+        <a href="/contacto/">Contacto</a>
       </div>
 
       <div class="footer-col">
