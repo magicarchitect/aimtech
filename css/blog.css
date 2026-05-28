@@ -352,6 +352,14 @@
 .post-cta:hover { border-bottom-color: var(--accent); }
 
 /* ── Responsive ───────────────────────────────────── */
+/* En móvil/tablet el viewport es menor que el max-width del post, así que
+   el padding horizontal 0 dejaba el texto pegado al borde. Restauramos gutter. */
+@media (max-width: 960px) {
+  .post-header, .post-body, .post-footer {
+    padding-left: clamp(20px, 5vw, 40px);
+    padding-right: clamp(20px, 5vw, 40px);
+  }
+}
 @media (max-width: 720px) {
   .post-footer-grid { grid-template-columns: 1fr; gap: 24px; }
 }
