@@ -146,7 +146,7 @@ universitaria acreditada + Power BI como puerta de entrada.
 - Secundarias: "desarrollo apps a medida pymes", "integraciones software empresa"
 
 **/sobre-mike**
-- Primaria: "Mike Pérez IA", "Miguel Pérez arquitecto soluciones IA",
+- Primaria: "Mike Pérez IA", "Miguel Pérez ingeniero soluciones IA",
   "consultor IA Cataluña"
 - Refuerzo de marca personal y E-E-A-T, no de conversión directa.
 
@@ -203,7 +203,7 @@ contenido y el tono ya existentes (sin FUNDAE, sin Kit Digital):
 - "n8n vs Make vs Zapier: cuál elegir para automatizar tu empresa"
 - "De Excel a Power BI: las 5 señales de que tu equipo ya tocó techo"
 - "Human-in-the-loop: por qué un agente IA no debe decidirlo todo solo"
-- "Qué es un arquitecto de soluciones de IA y cuándo lo necesitas"
+- "Qué es un ingeniero de soluciones de IA y cuándo lo necesitas"
 (Companion: skill `claude-blog`, escribe según findings del auditor.)
 
 ### Comandos claude-seo recomendados (orden de arranque)
