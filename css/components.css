@@ -101,46 +101,40 @@
 .solutions-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  margin: 12px 0 56px;
-  padding-bottom: 48px;
+  gap: 40px;
+  margin: 20px 0 64px;
+  padding-bottom: 56px;
   border-bottom: 1px solid var(--line);
 }
 .solution-item {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
 }
 .solution-icon {
-  width: 44px; height: 44px;
+  width: 56px; height: 56px;
   display: flex; align-items: center; justify-content: center;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: rgba(37, 128, 227, 0.05);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: rgba(37, 128, 227, 0.08);
   color: var(--accent);
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 }
-.solution-num {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--accent);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
+.solution-icon svg { width: 28px; height: 28px; }
 .solution-title {
   font-family: var(--serif);
-  font-size: 22px;
+  font-size: clamp(25px, 2vw, 31px);
   font-weight: 400;
-  line-height: 1.22;
+  line-height: 1.18;
   letter-spacing: -0.01em;
   color: var(--ink);
   margin: 0;
-  max-width: 280px;
+  max-width: 340px;
 }
 .solution-title em { font-style: italic; color: var(--accent); }
 .solution-sub {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--ink-mute);
   letter-spacing: 0.04em;
   line-height: 1.55;
@@ -150,11 +144,11 @@
 @media (max-width: 960px) {
   .solutions-strip {
     grid-template-columns: 1fr;
-    gap: 28px;
-    margin: 8px 0 44px;
-    padding-bottom: 36px;
+    gap: 32px;
+    margin: 12px 0 48px;
+    padding-bottom: 40px;
   }
-  .solution-title { max-width: 100%; font-size: 20px; }
+  .solution-title { max-width: 100%; font-size: 24px; }
 }
 
 /* ── Bento ──────────────────────────────────────── */
@@ -165,6 +159,7 @@
   gap: 16px;
 }
 .card {
+  --card-accent: 37, 128, 227;   /* azul corporativo por defecto */
   background: var(--bg-card);
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -175,9 +170,10 @@
 }
 a.card { text-decoration: none; color: inherit; }
 .card:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+/* mouse-glow teñido con el color de la categoría de la card */
 .card::before {
   content: ''; position: absolute; inset: 0;
-  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), var(--accent-glow), transparent 40%);
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(var(--card-accent), 0.18), transparent 40%);
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -232,6 +228,19 @@ a.card { text-decoration: none; color: inherit; }
 .card.s-2 { grid-column: span 2; grid-row: span 2; }
 .card.s-3 { grid-column: span 3; grid-row: span 2; }
 .card.s-4 { grid-column: span 3; grid-row: span 2; }
+
+/* Identidad de color por categoría: glow de fondo en una esquina distinta de
+   cada card + borde de hover a juego con su badge. Da la diversidad visual que
+   pide la skill reaprovechando los colores ya definidos (azul / teal / cálido). */
+.card.s-3 { --card-accent: 94, 234, 212; }   /* teal — IA agéntica */
+.card.s-4 { --card-accent: 255, 184, 107; }  /* cálido — desarrollo */
+.card.s-1 { background: radial-gradient(circle at 96% 6%,  rgba(var(--card-accent), 0.08), transparent 42%), var(--bg-card); }
+.card.s-2 { background: radial-gradient(circle at 88% 14%, rgba(var(--card-accent), 0.11), transparent 46%), var(--bg-card); }
+.card.s-3 { background: radial-gradient(circle at 90% 88%, rgba(var(--card-accent), 0.12), transparent 48%), var(--bg-card); }
+.card.s-4 { background: radial-gradient(circle at 10% 90%, rgba(var(--card-accent), 0.12), transparent 48%), var(--bg-card); }
+.card.s-1:hover, .card.s-2:hover { border-color: rgba(37, 128, 227, 0.45); }
+.card.s-3:hover { border-color: rgba(94, 234, 212, 0.45); }
+.card.s-4:hover { border-color: rgba(255, 184, 107, 0.45); }
 .card.feature .visual {
   flex: 1; margin: 24px 0; min-height: 140px;
   position: relative;
