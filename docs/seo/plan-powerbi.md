@@ -208,7 +208,7 @@ Cada módulo cierra con un proyecto práctico.
 | Fase | Descripción | Estado | Fecha | Notas |
 |------|-------------|--------|-------|-------|
 | 1 | Pillar /power-bi + JSON-LD Course | ☑ Hecho | 2026-05-28 | EducationalOrganization + Course enriquecido (ES+CA); card "0 a intermedio" reescrita al temario PPTX; hero/modalidades/metodología reforzados + bloque Formador (ES). |
-| 2 | Clusters Tanda 1 (C1 qué es, C2 vs Excel, C3 precio) | ☐ Pendiente | — | — |
+| 2 | Clusters Tanda 1 (C1 qué es, C2 vs Excel, C3 precio) | ☑ Hecho | 2026-05-28 | 3 posts ES (que-es-power-bi, power-bi-vs-excel, es-gratis-power-bi), cada uno enlaza al pillar con anchor transaccional. Versiones CA → FASE 5. |
 | 3 | Clusters Tanda 2 técnicos (C4 DAX, C5 modelado, C6 Power Query, C7 mapas) | ☐ Pendiente | — | — |
 | 4 | Comparativa/comercial/sectorial (C8 n8n, C9 cursos BCN, C10 AAPP) | ☐ Pendiente | — | — |
 | 5 | Catalán: pillar CA + clusters CA + hreflang | ☐ Pendiente | — | — |
