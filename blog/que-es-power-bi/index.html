@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>¿Qué es Power BI y para qué sirve? Guía 2026 para empresas | Blog Aimtech</title>
+<meta name="description" content="Qué es Power BI, cómo funciona por dentro y qué problemas resuelve en una empresa: del dato disperso al informe que se actualiza solo. Sin tecnicismos." />
+
+<link rel="canonical" href="https://www.aimtech.es/blog/que-es-power-bi/" />
+
+<!-- hreflang: variantes de idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/que-es-power-bi/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/que-es-power-bi/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="/assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="ca_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="¿Qué es Power BI y para qué sirve? Guía 2026 para empresas" />
+<meta property="og:description" content="Qué es Power BI, cómo funciona por dentro y qué problemas resuelve en una empresa: del dato disperso al informe que se actualiza solo. Sin tecnicismos." />
+<meta property="og:url" content="https://www.aimtech.es/blog/que-es-power-bi/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="¿Qué es Power BI y para qué sirve? Guía 2026 para empresas" />
+<meta property="article:published_time" content="2026-05-22" />
+<meta property="article:author" content="Mike Pérez" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="¿Qué es Power BI y para qué sirve? Guía 2026 para empresas" />
+<meta name="twitter:description" content="Qué es Power BI, cómo funciona por dentro y qué problemas resuelve en una empresa: del dato disperso al informe que se actualiza solo. Sin tecnicismos." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: BlogPosting + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "¿Qué es Power BI y para qué sirve? Guía 2026 para empresas",
+    "description": "Qué es Power BI, cómo funciona por dentro y qué problemas resuelve en una empresa: del dato disperso al informe que se actualiza solo. Sin tecnicismos.",
+    "datePublished": "2026-05-22",
+    "dateModified": "2026-05-22",
+    "inLanguage": "es-ES",
+    "keywords": ["power-bi","guia"],
+    "image": "https://www.aimtech.es/assets/og/default.png",
+    "url": "https://www.aimtech.es/blog/que-es-power-bi/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.aimtech.es/blog/que-es-power-bi/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.aimtech.es/assets/logo.png?v=2"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aimtech.es/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "¿Qué es Power BI y para qué sirve? Guía 2026 para empresas", "item": "https://www.aimtech.es/blog/que-es-power-bi/" }
+    ]
+  }
+]
+</script>
+
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/blog.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<script src="/js/cookie-consent.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<nav>
+  <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <a href="/#servicios">Servicios</a>
+    <a href="/blog/">Blog</a>
+    <a href="/sobre-mike/">Sobre Mike</a>
+    <a href="/contacto/">Contacto</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/blog/que-es-power-bi/" class="active">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/blog/">CA</a>
+    </div>
+    <a href="/contacto/" class="nav-cta">Hablemos →</a>
+  </div>
+</nav>
+
+<main>
+
+  <article class="post">
+    <header class="post-header container">
+      <a href="/blog/" class="post-back">← Blog</a>
+      <div class="post-meta">
+        <time datetime="2026-05-22">22 de mayo de 2026</time>
+        <span class="sep">·</span>
+        <span>4 min de lectura</span>
+        <span class="sep">·</span>
+        <span>Mike Pérez</span>
+      </div>
+      <h1>¿Qué es Power BI y para qué sirve? Guía 2026 para empresas</h1>
+      <p class="post-lead">Qué es Power BI, cómo funciona por dentro y qué problemas resuelve en una empresa: del dato disperso al informe que se actualiza solo. Sin tecnicismos.</p>
+      <div class="post-tags"><span>power-bi</span><span>guia</span></div>
+    </header>
+
+    <div class="post-body container">
+      <p>Casi todo el mundo ha visto un cuadro de mando de Power BI en una reunión: gráficos que se filtran al hacer clic, un mapa que se colorea solo, un par de números grandes que cambian según el mes que elijas. Lo que mucha gente no tiene claro es <strong>qué es Power BI exactamente</strong>, qué hace por dentro y, sobre todo, qué problema resuelve que una hoja de Excel no resuelva ya. Vamos a contestarlo sin humo.</p>
+<h2>Qué es Power BI, en una frase</h2>
+<p>Power BI es la herramienta de Microsoft para <strong>conectar datos de distintos sitios, organizarlos y convertirlos en informes interactivos</strong> que se actualizan cuando cambian los datos de origen. No es “un Excel más bonito”: es una capa que se coloca encima de tus datos —vengan de un Excel, una base de datos, un ERP o una API— y te deja explotarlos sin volver a copiar y pegar cada mes.</p>
+<p>La versión de escritorio, <strong>Power BI Desktop, es gratuita</strong>. Ahí construyes el informe. Luego, si quieres compartirlo con tu equipo y que se refresque automáticamente, lo publicas en la nube (Power BI Service), que ya requiere licencia. Más abajo lo aclaramos.</p>
+<h2>Cómo funciona Power BI por dentro</h2>
+<p>Entender Power BI es entender que un informe pasa por tres fases. Saltarse cualquiera de ellas es la razón habitual por la que un cuadro de mando “no cuadra”.</p>
+<h3>1. Power Query: la cocina</h3>
+<p>Antes de pintar un solo gráfico, los datos se cargan y se limpian en <strong>Power Query</strong>. Aquí es donde se corrigen los códigos mal escritos, se eliminan las filas vacías, se separan columnas y se les da el tipo correcto (fecha, número, texto). Es el equivalente a la mise en place de una cocina: si entra basura, sale basura, por muy bonito que sea el gráfico final. En los datos reales de una empresa, esta fase suele ser el 70 % del trabajo.</p>
+<h3>2. El modelo: cómo se relacionan tus tablas</h3>
+<p>Una vez limpios, los datos no viven en una única tabla gigante. Viven en <strong>varias tablas relacionadas</strong> —clientes, pedidos, productos, fechas— conectadas entre sí. Ese conjunto de relaciones es <em>el modelo</em>, y es lo que permite que al filtrar por “cliente” se filtren a la vez las ventas, los productos y el periodo. Un buen modelo es invisible para quien usa el informe y decisivo para que los números salgan bien.</p>
+<h3>3. El informe: lo que ve quien decide</h3>
+<p>Encima del modelo se construye lo visible: gráficos, tablas, mapas, tarjetas con KPIs y segmentaciones para filtrar. Es la única parte que ve la dirección, y la que hace que Power BI parezca “fácil”. Lo es —si las dos fases anteriores están bien hechas.</p>
+<h2>¿Para qué sirve Power BI en una empresa?</h2>
+<p>En la práctica, Power BI sirve para dejar de fabricar informes a mano. Algunos usos típicos:</p>
+<ul>
+<li><strong>Cuadros de mando de dirección</strong>: ventas, márgenes, tesorería y objetivos en una sola pantalla, actualizados solos.</li>
+<li><strong>Control de gestión</strong>: cierres mensuales que antes se montaban a base de copiar y pegar en PowerPoint y ahora se refrescan con un botón.</li>
+<li><strong>Indicadores de operaciones</strong>: producción, logística, incidencias, SLA.</li>
+<li><strong>Sector público</strong>: indicadores de gestión, transparencia y cuadros de mando para administraciones.</li>
+</ul>
+<p>El patrón común es siempre el mismo: <strong>un proceso repetitivo de “extraer, cruzar, formatear” que pasa a hacerse una vez y a repetirse solo</strong>.</p>
+<h2>Power BI Desktop vs Power BI Service</h2>
+<p>Es la confusión más frecuente, así que conviene fijarlo:</p>
+<ul>
+<li><strong>Power BI Desktop</strong> (gratis) → donde <em>construyes</em> el informe.</li>
+<li><strong>Power BI Service</strong> (de pago, en la nube) → donde <em>publicas, compartes y programas la actualización</em> para el resto del equipo.</li>
+</ul>
+<p>Para aprender, practicar y montar tus primeros informes no necesitas pagar nada. La licencia entra cuando quieres que el informe sea un activo compartido de la empresa.</p>
+<h2>¿Cuándo le conviene a tu empresa… y cuándo no?</h2>
+<p>Sería deshonesto decir que toda empresa necesita Power BI mañana. Si tu reporting cabe en una hoja, lo miran dos personas y no cambia casi nunca, <strong>Excel sigue siendo la respuesta correcta</strong>. Power BI empieza a compensar cuando:</p>
+<ul>
+<li>Repites el mismo informe cada semana o cada mes a mano.</li>
+<li>Cruzas datos de varias fuentes (ventas + contabilidad + un CRM, por ejemplo).</li>
+<li>Varias personas necesitan la misma información, siempre actualizada.</li>
+<li>Tus Excel ya tienen 12 pestañas, BUSCARV anidados y tardan en abrir.</li>
+</ul>
+<p>Si te suena lo último, probablemente tu equipo ya tocó techo con Excel —y ese es exactamente el momento de dar el salto.</p>
+<hr>
+<h2>Por dónde empezar</h2>
+<p>Power BI no se aprende viendo vídeos sueltos: se aprende construyendo un informe real de principio a fin, equivocándose con datos sucios y entendiendo por qué un número no cuadra. Si quieres que tu equipo lo aprenda así, en Aimtech damos <a href="/power-bi/">formación en Power BI a medida para empresas, entidades y AAPP</a> —presencial en Barcelona, en remoto en directo o in-company—, partiendo de cero o subiendo de nivel a quien ya se defiende. Y si prefieres delegarlo, también montamos el cuadro de mando por ti.</p>
+
+    </div>
+
+    <footer class="post-footer container">
+      <div class="post-footer-grid">
+        <div>
+          <span class="post-footer-label">Escrito por</span>
+          <a href="/sobre-mike/" class="post-author">Mike Pérez</a>
+        </div>
+        <div>
+          <span class="post-footer-label">¿Te resuena?</span>
+          <a href="/contacto/" class="post-cta">Hablemos sobre tu caso →</a>
+        </div>
+      </div>
+    </footer>
+  </article>
+
+</main>
+
+<!-- @region partials/footer-es.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formación e implantación de IA aplicada, Power BI y desarrollo a medida. Operado por una SL catalana con foco en pymes y administración pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/blog/">Blog</a>
+        <a href="/sobre-mike/">Sobre Mike</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/politica-privacidad/">Privacidad</a>
+        <a href="/politica-cookies/">Cookies</a>
+        <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Cataluña</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

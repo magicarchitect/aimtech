@@ -222,6 +222,33 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.aimtech.es/blog/es-gratis-power-bi/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/es-gratis-power-bi/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/es-gratis-power-bi/"/>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.aimtech.es/blog/power-bi-vs-excel/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/power-bi-vs-excel/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/power-bi-vs-excel/"/>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.aimtech.es/blog/que-es-power-bi/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/que-es-power-bi/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/que-es-power-bi/"/>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.aimtech.es/blog/tres-preguntas-implantar-ia-agentica/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/tres-preguntas-implantar-ia-agentica/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/tres-preguntes-abans-implantar-ia-agentica/"/>
