@@ -54,3 +54,163 @@ rendimiento, diseño y posicionamiento.
 - Páginas internas de los 4 servicios
 - Logos de clientes/AAPP (cuando haya autorización)
 - Refactor del CSS inline de index.html a /css/{tokens,layout,components}.css
+
+## SEO / GEO — Contexto para el skill claude-seo
+
+> Da contexto al plugin `claude-seo` y a cualquier sesión que trabaje SEO, para
+> que genere schema, meta y contenido a medida de Aimtech. Escrito tras auditar
+> el contenido REAL ya publicado en aimtech.es (no es un plan sobre web vacía).
+>
+> EXCLUSIONES FIRMES (no negociar, no "colar por ayudar"):
+> - NO FUNDAE: nada de formación bonificada, crédito de formación, bonificación.
+> - NO Kit Digital ni ninguna otra financiación/subvención pública.
+> No generar contenido, keywords, meta ni schema que mencionen ninguno de estos.
+> Son decisiones de negocio firmes (saturación + carga administrativa que no se
+> ofrece).
+
+### Identidad y alcance
+- **Marca**: Aimtech Consulting SL (Cataluña).
+- **Fundador**: Miguel Pérez, conocido profesionalmente como "Mike Pérez".
+  - Nombre legal / credenciales / schema `name`: **Miguel Pérez**
+  - Nombre de uso / cara visible / `alternateName`: **Mike Pérez**
+  - Rol: **Arquitecto de Soluciones de IA** (Solutions Architect)
+  - Unificar en toda la web: la home dice solo "Mike". Usar "Mike Pérez" como
+    cara visible y "Miguel Pérez" en el schema Person para casar con sus
+    credenciales docentes públicas (UOC, UPC, UIC, Cibernàrium).
+- **Geo-targeting**: Cataluña (Barcelona y área); clientes de toda España en remoto.
+- **Web bilingüe**: ES (raíz `/`) + CA (`/ca/`). Hreflang ya implementado vía
+  og:locale — verificar que existan también etiquetas <link rel="alternate"
+  hreflang> reales en <head>, no solo en OG.
+- **Audiencia**: pymes, entidades (asociaciones, fundaciones, colegios,
+  cooperativas) y administraciones públicas (AAPP).
+
+### Estado actual del sitio (auditoría de partida)
+YA RESUELTO (no rehacer):
+- Meta title/description por página, diferenciados y con keywords correctas.
+- OG completo (image, locale, type 'profile' en sobre-mike).
+- Contenido único y profundo por landing. La de /ia-agentica es excepcional
+  (análisis, precondiciones, workflow, ROI) — gran activo E-E-A-T.
+- Blog arrancado: 1 post ("Tres preguntas antes de implantar IA agéntica").
+- Stats reales en home: +20 años, 3.360 alumnos, 24.000 horas, 4,85/5.
+
+GAPS REALES A ATACAR (orden de prioridad):
+1. **Sin JSON-LD en ninguna página** — el hueco de mayor retorno. Tenemos el
+   contenido perfecto para schema pero Google no lo lee estructurado.
+2. **"Casos" enlaza a `#`** (footer global, enlace muerto). Los casos de éxito
+   son el activo E-E-A-T pendiente más importante.
+3. **Blog con 1 solo post** — necesita volumen para traer tráfico orgánico.
+4. **Nombre del fundador inconsistente** (Mike vs Miguel/Mike Pérez).
+
+### Posicionamiento diferencial (núcleo del SEO)
+Mercado nacional de formación TI genérica: saturado. La ventaja defendible de
+Aimtech es la intersección de señales que casi nadie combina:
+1. **Localización catalana** + catalán nativo (`/ca/`).
+2. **Sector público real**: experiencia AAPP demostrable (E-E-A-T fuerte).
+3. **Autoría con nombre**: Miguel "Mike" Pérez, docente universitario verificable
+   (UOC, UPC, UIC, Cibernàrium), no marca anónima.
+4. **Doble capa formación + implantación**: enseña Y construye y pone en
+   producción. Competencia suele hacer solo una.
+5. **Postura anti-humo / ROI medible**: diferenciador de tono y de método,
+   especialmente potente en IA agéntica.
+
+Competidor de referencia para benchmarking: Javadex (Claude Code, n8n, formación
+"aprender construyendo"). Aimtech se diferencia por eje catalán + AAPP + docencia
+universitaria acreditada + Power BI como puerta de entrada.
+
+### Keywords objetivo por página (sin FUNDAE, sin Kit Digital)
+
+**/ (home)**
+- Primaria: "consultoría IA Cataluña", "formación IA y Power BI empresas"
+- Secundarias: "agentes IA para empresas", "implantación IA pymes"
+
+**/power-bi**
+- Primaria: "curso Power BI empresas", "formación Power BI in-company",
+  "curso Power BI presencial Barcelona"
+- Secundarias: "curso Power BI administración pública", "formación Power BI
+  entidades", "curso Power BI avanzado empresas", "curso DAX modelado empresas"
+- Long-tail baja competencia: "curso Power BI catalán", "formación Power BI
+  a medida sector público", "itinerario Power BI cero a avanzado empresas"
+
+**/ia-aplicada**
+- Primaria: "formación IA aplicada empresas", "curso IA para equipos in-company"
+- Secundarias: "formación prompting empresas", "curso IA generativa trabajadores",
+  "formación IA práctica para empresas"
+
+**/ia-agentica** (mayor margen, menor competencia — apostar fuerte)
+- Primaria: "implantación agentes IA empresas", "consultoría agentes IA Cataluña"
+- Secundarias: "automatización n8n empresas", "agencia n8n España", "agente IA
+  WhatsApp Business", "sistemas multi-agente empresas", "implantación IA RAG"
+
+**/desarrollo**
+- Primaria: "desarrollo software a medida Cataluña", "desarrollo APIs empresas"
+- Secundarias: "desarrollo apps a medida pymes", "integraciones software empresa"
+
+**/sobre-mike**
+- Primaria: "Mike Pérez IA", "Miguel Pérez arquitecto soluciones IA",
+  "consultor IA Cataluña"
+- Refuerzo de marca personal y E-E-A-T, no de conversión directa.
+
+### Schema.org / JSON-LD prioritario (EL gap técnico nº1)
+- **Todas las páginas**: `Organization` (Aimtech Consulting SL) con `founder`
+  (Miguel Pérez), `areaServed` (ES + Cataluña), `contactPoint`, `sameAs`
+  (LinkedIn, GitHub, adventuriq.com si procede).
+- **/ (home)**: `Organization` + `WebSite`.
+- **/power-bi**: `Course` (x2 itinerarios: "Power BI de cero a intermedio" y
+  "Power BI Avanzado", 20h cada uno) + `EducationalOrganization`. Incluir
+  `hasCourseInstance` (modalidad online/presencial), `provider`, `inLanguage`
+  (es/ca), `timeRequired` PT20H. PUEDE DAR RICH RESULTS formativos.
+- **/ia-aplicada**: `Course` + `EducationalOrganization`.
+- **/ia-agentica, /desarrollo**: `Service` con `serviceType`, `provider`,
+  `areaServed`.
+- **/sobre-mike**: `Person` con:
+  - `name`: "Miguel Pérez"
+  - `alternateName`: "Mike Pérez"
+  - `jobTitle`: "Arquitecto de Soluciones de IA"
+  - `knowsAbout`: Power BI, IA aplicada, IA agéntica, n8n, Claude, gamificación
+  - `affiliation`: UOC, UPC, UIC, Cibernàrium (como docente)
+  - `worksFor`: Aimtech Consulting SL
+  Refuerzo E-E-A-T fuerte: el alternateName une "Miguel" (credenciales) con
+  "Mike" (marca) en una sola entidad, en vez de dividirla.
+- **/blog/<post>**: `BlogPosting`/`Article` con `author` → Person (Miguel Pérez),
+  `datePublished`, `inLanguage`.
+- **EVITAR**: `FAQ` (restringido a gov/health desde 2023) y `HowTo` (deprecado
+  sept 2023). No generarlos aunque parezcan útiles.
+
+### E-E-A-T — señales a reforzar
+- **Experience**: publicar la sección "Casos" (hoy enlaza a `#`). Proyectos
+  reales, capturas de entregables, resultados. Es la prioridad E-E-A-T.
+- **Expertise**: bio de Mike Pérez con +20 años, +600/3.360 formados, docencia
+  universitaria (ya está, muy bien).
+- **Authoritativeness**: nombrar 2-3 referencias AAPP/cliente cuando haya
+  autorización; logos; menciones en universidades.
+- **Trustworthiness**: datos de la SL, aviso legal, privacidad, cookies (ya
+  presentes). Email visible (ya está).
+
+### GEO — optimización para búsqueda con IA (ChatGPT, Perplexity, AI Overviews)
+Objetivo: ser citado por asistentes IA en consultas de formación Power BI /
+consultoría IA en Cataluña-España. El contenido actual ya es muy "citable"
+(definiciones claras, listas, datos). Acciones:
+- Crear `llms.txt` en raíz: qué es Aimtech, servicios, para quién, geo.
+- Mantener el estilo de respuestas directas y datos concretos (la investigación
+  GEO de Princeton: citas + estadísticas + tono experto suben la citabilidad).
+- El post de blog ya sigue buen patrón (pregunta → respuesta accionable).
+
+### Backlog de contenido de blog (lo que traerá tráfico)
+El blog tiene 1 post. Necesita volumen y constancia. Temas alineados con el
+contenido y el tono ya existentes (sin FUNDAE, sin Kit Digital):
+- "Qué es un agente de IA y cuándo le conviene a una pyme"
+- "Power BI para administraciones públicas: por dónde empezar"
+- "n8n vs Make vs Zapier: cuál elegir para automatizar tu empresa"
+- "De Excel a Power BI: las 5 señales de que tu equipo ya tocó techo"
+- "Human-in-the-loop: por qué un agente IA no debe decidirlo todo solo"
+- "Qué es un arquitecto de soluciones de IA y cuándo lo necesitas"
+(Companion: skill `claude-blog`, escribe según findings del auditor.)
+
+### Comandos claude-seo recomendados (orden de arranque)
+1. `/seo audit https://www.aimtech.es` — foto de partida, score 0-100
+2. `/seo schema https://www.aimtech.es/power-bi/` — generar Course + Org (gap nº1)
+3. `/seo schema https://www.aimtech.es/sobre-mike/` — Person (E-E-A-T)
+4. `/seo hreflang https://www.aimtech.es` — confirmar hreflang real en <head>
+5. `/seo geo https://www.aimtech.es` — optimizar para IA search + llms.txt
+6. `/seo page https://www.aimtech.es/ia-agentica/` — pulir la joya de la corona
+7. `/seo cluster "formación Power BI empresas"` — arquitectura de blog
