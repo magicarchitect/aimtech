@@ -4,6 +4,7 @@ description: "Abans d'invertir en agents IA, convé respondre tres preguntes que
 date: 2026-05-13
 author: "Mike Pérez"
 tags: ["ia-agentica", "implantacio"]
+icon: "agent"
 draft: false
 slug: "tres-preguntes-abans-implantar-ia-agentica"
 translationKey: "2026-05-13-bienvenida"

@@ -4,6 +4,7 @@ description: "Antes de invertir en agentes IA, conviene responder a tres pregunt
 date: 2026-05-13
 author: "Mike Pérez"
 tags: ["ia-agentica", "implantacion"]
+icon: "agent"
 draft: false
 slug: "tres-preguntas-implantar-ia-agentica"
 translationKey: "2026-05-13-bienvenida"

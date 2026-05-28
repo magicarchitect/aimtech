@@ -86,6 +86,7 @@ function readPostsForLang(lang) {
       description: data.description || '',
       author: data.author || 'Mike Pérez',
       tags: Array.isArray(data.tags) ? data.tags : [],
+      icon: data.icon || 'doc',
       ogImage: data.ogImage || `${SITE_URL}/assets/og/default.png`,
       translationKey: data.translationKey || slug,
       dateObj,
@@ -151,19 +152,34 @@ function renderPost(post, hreflangPair, config) {
   return html;
 }
 
+// iconos temáticos para las cards del listado (lenguaje del hero: trazo azul)
+const CARD_ICONS = {
+  chart: `<svg viewBox="0 0 48 48" aria-hidden="true"><path class="ico" d="M9 9 V39 H39"/><rect class="ico-fill" x="15" y="26" width="6" height="13" rx="1.5" opacity="0.55"/><rect class="ico-fill" x="24" y="19" width="6" height="20" rx="1.5" opacity="0.8"/><rect class="ico-fill" x="33" y="23" width="6" height="16" rx="1.5"/><path class="ico" d="M14 22 L23 16 L32 19 L40 11"/></svg>`,
+  compare: `<svg viewBox="0 0 48 48" aria-hidden="true"><rect class="ico" x="7" y="14" width="15" height="20" rx="2"/><path class="ico" d="M7 21 H22 M7 27.5 H22 M14.5 14 V34"/><path class="ico" d="M36 20 L31 30 M36 20 L41 30"/><circle class="ico-fill" cx="36" cy="18" r="2.4"/><circle class="ico-fill" cx="31" cy="32" r="2.4"/><circle class="ico-fill" cx="41" cy="32" r="2.4"/></svg>`,
+  price: `<svg viewBox="0 0 48 48" aria-hidden="true"><path class="ico" d="M26 9 H39 V22 L22 39 L9 26 Z"/><circle class="ico-fill" cx="32.5" cy="15.5" r="2.6"/></svg>`,
+  agent: `<svg viewBox="0 0 48 48" aria-hidden="true"><circle class="ico" cx="24" cy="24" r="6"/><path class="ico" d="M24 18 V12 M20 29 L13 34 M28 29 L35 34"/><circle class="ico-fill" cx="24" cy="9" r="3"/><circle class="ico-fill" cx="10" cy="37" r="3"/><circle class="ico-fill" cx="38" cy="37" r="3"/></svg>`,
+  doc: `<svg viewBox="0 0 48 48" aria-hidden="true"><path class="ico" d="M14 8 H28 L36 16 V40 H14 Z"/><path class="ico" d="M28 8 V16 H36"/><path class="ico" d="M19 25 H31 M19 31 H31 M19 19 H24"/></svg>`,
+};
+function cardIcon(name) {
+  return CARD_ICONS[name] || CARD_ICONS.doc;
+}
+
 function renderPostCard(post, lang) {
   const tagsHtml = post.tags.map(t => `<span>${escapeHtml(t)}</span>`).join('');
-  const metaLabel = lang === 'ca' ? 'min de lectura' : 'min de lectura';
+  const metaLabel = 'min de lectura';
   return `
         <a href="${post.url}" class="post-card">
-          <div class="post-card-meta">
-            <time datetime="${post.dateISO}">${post.dateDisplay}</time>
-            <span class="sep">·</span>
-            <span>${post.readingTime} ${metaLabel}</span>
+          <div class="post-card-thumb">${cardIcon(post.icon)}</div>
+          <div class="post-card-body">
+            <div class="post-card-meta">
+              <time datetime="${post.dateISO}">${post.dateDisplay}</time>
+              <span class="sep">·</span>
+              <span>${post.readingTime} ${metaLabel}</span>
+            </div>
+            <h2>${escapeHtml(post.title)}</h2>
+            <p class="post-card-excerpt">${escapeHtml(post.description)}</p>
+            <div class="post-card-tags">${tagsHtml}</div>
           </div>
-          <h2>${escapeHtml(post.title)}</h2>
-          <p class="post-card-excerpt">${escapeHtml(post.description)}</p>
-          <div class="post-card-tags">${tagsHtml}</div>
         </a>`;
 }
 
