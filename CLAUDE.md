@@ -73,7 +73,7 @@ rendimiento, diseño y posicionamiento.
 - **Fundador**: Miguel Pérez, conocido profesionalmente como "Mike Pérez".
   - Nombre legal / credenciales / schema `name`: **Miguel Pérez**
   - Nombre de uso / cara visible / `alternateName`: **Mike Pérez**
-  - Rol: **Arquitecto de Soluciones de IA** (Solutions Architect)
+  - Rol: **Ingeniero de Soluciones de IA** (Solutions Engineer)
   - Unificar en toda la web: la home dice solo "Mike". Usar "Mike Pérez" como
     cara visible y "Miguel Pérez" en el schema Person para casar con sus
     credenciales docentes públicas (UOC, UPC, UIC, Cibernàrium).
@@ -165,7 +165,7 @@ universitaria acreditada + Power BI como puerta de entrada.
 - **/sobre-mike**: `Person` con:
   - `name`: "Miguel Pérez"
   - `alternateName`: "Mike Pérez"
-  - `jobTitle`: "Arquitecto de Soluciones de IA"
+  - `jobTitle`: "Ingeniero de Soluciones de IA"
   - `knowsAbout`: Power BI, IA aplicada, IA agéntica, n8n, Claude, gamificación
   - `affiliation`: UOC, UPC, UIC, Cibernàrium (como docente)
   - `worksFor`: Aimtech Consulting SL
@@ -214,3 +214,9 @@ contenido y el tono ya existentes (sin FUNDAE, sin Kit Digital):
 5. `/seo geo https://www.aimtech.es` — optimizar para IA search + llms.txt
 6. `/seo page https://www.aimtech.es/ia-agentica/` — pulir la joya de la corona
 7. `/seo cluster "formación Power BI empresas"` — arquitectura de blog
+
+### Hoja de ruta de contenidos
+El plan completo de contenidos Power BI (pillar + 11 clusters, 6 fases,
+versiones ES/CA) vive en `docs/seo/plan-powerbi.md`. Consultar ese archivo
+antes de generar cualquier contenido de Power BI. Estado de avance al final
+del propio plan.
