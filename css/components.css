@@ -797,7 +797,11 @@ body.nav-open {
 }
 .nav-drawer-links .nav-chevron { display: none; }
 .nav-drawer .nav-dropdown::after { display: none; }
-.nav-drawer .nav-dropdown-menu {
+/* El panel solo se muestra/activa con el drawer ABIERTO. Sin el guard
+   `body.nav-open`, el visibility:visible + pointer-events:auto anularían el
+   visibility:hidden del drawer cerrado y dejarían enlaces invisibles pero
+   clicables flotando sobre el contenido (el drawer es position:fixed). */
+body.nav-open .nav-drawer .nav-dropdown-menu {
   position: static;
   transform: none;
   opacity: 1; visibility: visible; pointer-events: auto;
