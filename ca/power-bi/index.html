@@ -75,6 +75,19 @@
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "Power BI de zero a intermedi",
+    "offers": {
+      "@type": "Offer",
+      "category": "In-company · per grup",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 4400,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/ca/power-bi/#preus"
+    },
     "description": "Power Query, modelatge dimensional, DAX core i publicació a Power BI Service. 20h, online o presencial, en grups tancats per a empreses, entitats i administracions públiques.",
     "provider": { "@id": "https://www.aimtech.es/#aimtech" },
     "url": "https://www.aimtech.es/ca/power-bi/#itineraris",
@@ -104,6 +117,19 @@
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "Power BI Avançat",
+    "offers": {
+      "@type": "Offer",
+      "category": "In-company · per grup",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 4400,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/ca/power-bi/#preus"
+    },
     "description": "DAX avançat, time intelligence, modelatge complex (many-to-many, role-playing), performance amb DAX Studio i govern del servei (RLS, deployment pipelines). 20h, online o presencial.",
     "provider": { "@id": "https://www.aimtech.es/#aimtech" },
     "url": "https://www.aimtech.es/ca/power-bi/#itineraris",
@@ -140,6 +166,9 @@
 ]
 </script>
 
+<!-- Preload: fuente serif del hero (LCP) -->
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../css/tokens.css">
 <link rel="stylesheet" href="../../css/fonts.css">
 <link rel="stylesheet" href="../../css/base.css">
@@ -156,6 +185,7 @@
 <div class="noise"></div>
 
 <!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
 <nav>
   <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
     <img src="/assets/logo.png?v=2" alt="Aimtech" />
@@ -497,7 +527,7 @@
       <div data-reveal>
         <div class="section-label">04 — Contractació</div>
         <h2 class="section-title">Per a empreses, <em>entitats</em> i AAPP.</h2>
-        <p class="section-intro">Els cursos s'imparteixen durant tot l'any, online o presencial, en grups tancats de fins a 20 persones. Escriu-me indicant perfil, nombre de persones i format preferit, i et passo disponibilitat i proposta econòmica. <strong>Descompte si contractes dos o més cursos</strong> (pack itinerari).</p>
+        <p class="section-intro">Els cursos s'imparteixen durant tot l'any, online o presencial, en grups tancats de fins a 20 persones. Escriu-me indicant perfil, nombre de persones i format preferit, i et passo disponibilitat i proposta econòmica. La formació in-company parteix de <strong>4.400€ per grup de fins a 10 persones</strong> (22€/h per alumne), amb 440€ per persona addicional, IVA a part. <strong>Descompte si contractes dos o més cursos</strong> (pack itinerari).</p>
       </div>
 
       <div class="bento" data-stagger>
@@ -510,8 +540,10 @@
           <h3>Per al teu <em>equip</em>.</h3>
           <p>Formació adaptada al teu sector i a les dades que ja gestioneu. Online o presencial, horaris i agenda segons disponibilitat del grup.</p>
           <div class="price">
-            <div class="price-num">Consultar</div>
-            <div class="price-label">per grup · IVA a part</div>
+            <div class="price-label">des de</div>
+            <div class="price-num">4.400€</div>
+            <div class="price-label">per grup · fins a 10 pers. · IVA a part</div>
+            <div class="price-label">+440€ / persona addicional · 22€/h</div>
           </div>
         </article>
 
@@ -523,8 +555,10 @@
           <h3>Per a <em>entitats</em>.</h3>
           <p>Associacions, fundacions, col·legis professionals, cooperatives o altres entitats. Online o presencial, formació adaptable al perfil del col·lectiu.</p>
           <div class="price">
-            <div class="price-num">Consultar</div>
-            <div class="price-label">per grup · IVA a part</div>
+            <div class="price-label">des de</div>
+            <div class="price-num">4.400€</div>
+            <div class="price-label">per grup · fins a 10 pers. · IVA a part</div>
+            <div class="price-label">+440€ / persona addicional · 22€/h</div>
           </div>
         </article>
 

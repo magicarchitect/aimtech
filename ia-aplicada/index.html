@@ -44,6 +44,20 @@
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "IA Aplicada: agentes IA para procesos empresariales",
+    "timeRequired": "PT20H",
+    "offers": {
+      "@type": "Offer",
+      "category": "In-company · por grupo",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 3500,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/ia-aplicada/#precios"
+    },
     "description": "Curso de 20h para aprender a diseñar, orquestar y operar agentes de IA en procesos empresariales y de negocio. Online o presencial, en grupos cerrados para empresas, entidades y administraciones públicas.",
     "provider": {
       "@type": "Organization",
@@ -69,6 +83,9 @@
 ]
 </script>
 
+<!-- Preload: fuente serif del hero (LCP) -->
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../css/tokens.css">
 <link rel="stylesheet" href="../css/fonts.css">
 <link rel="stylesheet" href="../css/base.css">
@@ -85,6 +102,7 @@
 <div class="noise"></div>
 
 <!-- @region partials/nav-es.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
 <nav>
   <a href="/" class="logo" style="text-decoration:none;color:inherit;">
     <img src="/assets/logo.png?v=2" alt="Aimtech" />
@@ -383,7 +401,7 @@
         <div data-reveal="left">
           <div class="section-label">02 — Metodología</div>
           <h2 class="section-title">Concepto, <em>reto</em>, agente que funciona.</h2>
-          <p class="section-intro">No vas a ver slides cinco horas seguidas. Cada bloque empieza con un concepto, va seguido de un reto real que resuelves tú configurando un agente, y termina con la solución comentada y dudas resueltas en directo. Es la única forma de que algo se quede.</p>
+          <p class="section-intro">No vas a ver slides cinco horas seguidas. Cada bloque empieza con un concepto, va seguido de un reto real que resuelves tú configurando un agente, y termina con la solución comentada y dudas resueltas en directo. Es la única forma de que algo se quede. Si aún estás situando el concepto, empieza por <a href="/blog/que-es-ia-aplicada/">qué es la IA aplicada y en qué se diferencia de la generativa</a>; y para el método del día a día, <a href="/blog/prompt-engineering-empresas/">prompt engineering para empresas</a>.</p>
         </div>
 
         <div class="method-list" data-stagger>
@@ -486,7 +504,7 @@
       <div data-reveal>
         <div class="section-label">04 — Contratación</div>
         <h2 class="section-title">Para empresas, <em>entidades</em> y AAPP.</h2>
-        <p class="section-intro">El curso se imparte durante todo el año, online o presencial, en grupos cerrados de hasta 20 personas. Escríbeme indicando perfil del grupo, procesos que queréis automatizar y formato preferido, y te paso disponibilidad y propuesta económica.</p>
+        <p class="section-intro">El curso se imparte durante todo el año, online o presencial, en grupos cerrados de hasta 20 personas. Escríbeme indicando perfil del grupo, procesos que queréis automatizar y formato preferido, y te paso disponibilidad y propuesta económica. La formación in-company parte de <strong>3.500€ por grupo de hasta 5 personas</strong> (35€/h por alumno), con 700€ por persona adicional, IVA aparte. Desglosamos cómo se cobra la formación en IA y qué debe incluir en <a href="/blog/cuanto-cuesta-formacion-ia-empresas/">cuánto cuesta formar a tu equipo en IA</a>. Si lo que buscáis es poner agentes en producción —no solo formar al equipo—, ese trabajo vive en <a href="/ia-agentica/">implantación de IA agéntica</a>.</p>
       </div>
 
       <div class="bento" data-stagger>
@@ -499,8 +517,10 @@
           <h3>Para tu <em>equipo</em>.</h3>
           <p>Formación adaptada a tu sector y a los procesos que ya manejáis. Online o presencial, horarios y agenda según disponibilidad del grupo.</p>
           <div class="price">
-            <div class="price-num">Consultar</div>
-            <div class="price-label">por grupo · IVA aparte</div>
+            <div class="price-label">desde</div>
+            <div class="price-num">3.500€</div>
+            <div class="price-label">por grupo · hasta 5 pers. · IVA aparte</div>
+            <div class="price-label">+700€ / persona adicional · 35€/h</div>
           </div>
         </article>
 
@@ -512,8 +532,10 @@
           <h3>Para <em>entidades</em>.</h3>
           <p>Asociaciones, fundaciones, colegios profesionales, cooperativas u otras entidades. Online o presencial, formación adaptable al perfil del colectivo.</p>
           <div class="price">
-            <div class="price-num">Consultar</div>
-            <div class="price-label">por grupo · IVA aparte</div>
+            <div class="price-label">desde</div>
+            <div class="price-num">3.500€</div>
+            <div class="price-label">por grupo · hasta 5 pers. · IVA aparte</div>
+            <div class="price-label">+700€ / persona adicional · 35€/h</div>
           </div>
         </article>
 

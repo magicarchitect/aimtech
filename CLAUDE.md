@@ -90,15 +90,28 @@ YA RESUELTO (no rehacer):
 - OG completo (image, locale, type 'profile' en sobre-mike).
 - Contenido único y profundo por landing. La de /ia-agentica es excepcional
   (análisis, precondiciones, workflow, ROI) — gran activo E-E-A-T.
-- Blog arrancado: 1 post ("Tres preguntas antes de implantar IA agéntica").
 - Stats reales en home: +20 años, 3.360 alumnos, 24.000 horas, 4,85/5.
+- **JSON-LD YA IMPLEMENTADO** (corrige el estado antiguo "sin JSON-LD"):
+  Organization en home; EducationalOrganization + Course×2 + BreadcrumbList en
+  /power-bi/ (ES+CA); Course + BreadcrumbList en /ia-aplicada/ (ES+CA);
+  BlogPosting en posts. Los Course de las 4 money pages incluyen `offers`
+  (priceSpecification minPrice, IVA aparte) desde 2026-06-01.
+- Hreflang real en <head> + sitemap + OG (ES/CA). robots.txt y llms.txt presentes.
+- **Precios visibles** en las money pages desde 2026-06-01 (decisión de Mike):
+  Power BI `desde 4.400€` / grupo hasta 10 / +440€ persona (22€/h);
+  IA aplicada `desde 3.500€` / grupo hasta 5 / +700€ persona (35€/h). AAPP
+  mantiene "por licitación".
+- Blog: 4 posts ES ("Tres preguntas…" + cluster Power BI: que-es-power-bi,
+  power-bi-vs-excel, es-gratis-power-bi). Plan PB Fases 1-2 hechas.
 
 GAPS REALES A ATACAR (orden de prioridad):
-1. **Sin JSON-LD en ninguna página** — el hueco de mayor retorno. Tenemos el
-   contenido perfecto para schema pero Google no lo lee estructurado.
+1. **IA aplicada sin cluster de contenidos** y temario "pendiente" en su página
+   — mayor hueco de los dos servicios prioritarios. Plan en
+   `docs/seo/plan-ia-aplicada.md` (Fase B del plan SEO unificado).
 2. **"Casos" enlaza a `#`** (footer global, enlace muerto). Los casos de éxito
    son el activo E-E-A-T pendiente más importante.
-3. **Blog con 1 solo post** — necesita volumen para traer tráfico orgánico.
+3. **Blog necesita volumen** — faltan clusters PB técnicos (C4-C7) y comercial
+   (C8-C10), y todo el cluster IA. Versiones CA pendientes (Fase D).
 4. **Nombre del fundador inconsistente** (Mike vs Miguel/Mike Pérez).
 
 ### Posicionamiento diferencial (núcleo del SEO)
@@ -150,18 +163,20 @@ universitaria acreditada + Power BI como puerta de entrada.
   "consultor IA Cataluña"
 - Refuerzo de marca personal y E-E-A-T, no de conversión directa.
 
-### Schema.org / JSON-LD prioritario (EL gap técnico nº1)
+### Schema.org / JSON-LD (estado: base implementada, mantener y ampliar)
+Referencia de lo que debe haber por página. ☑ = ya implementado.
 - **Todas las páginas**: `Organization` (Aimtech Consulting SL) con `founder`
   (Miguel Pérez), `areaServed` (ES + Cataluña), `contactPoint`, `sameAs`
   (LinkedIn, GitHub, adventuriq.com si procede).
-- **/ (home)**: `Organization` + `WebSite`.
-- **/power-bi**: `Course` (x2 itinerarios: "Power BI de cero a intermedio" y
-  "Power BI Avanzado", 20h cada uno) + `EducationalOrganization`. Incluir
-  `hasCourseInstance` (modalidad online/presencial), `provider`, `inLanguage`
-  (es/ca), `timeRequired` PT20H. PUEDE DAR RICH RESULTS formativos.
-- **/ia-aplicada**: `Course` + `EducationalOrganization`.
+- **/ (home)**: ☑ `Organization`. Pendiente añadir `WebSite`.
+- **/power-bi**: ☑ `Course` (x2 itinerarios, 20h, hasCourseInstance,
+  provider, inLanguage es/ca, timeRequired PT20H) + `EducationalOrganization`
+  + `BreadcrumbList` + ☑ `offers` (minPrice 4400 EUR, IVA aparte). ES+CA.
+- **/ia-aplicada**: ☑ `Course` + `BreadcrumbList` + ☑ `offers` (minPrice 3500
+  EUR). Pendiente: subir a `EducationalOrganization` con provider @id como
+  Power BI (hoy provider inline) al cerrar el temario (Fase B).
 - **/ia-agentica, /desarrollo**: `Service` con `serviceType`, `provider`,
-  `areaServed`.
+  `areaServed`. Pendiente.
 - **/sobre-mike**: `Person` con:
   - `name`: "Miguel Pérez"
   - `alternateName`: "Mike Pérez"

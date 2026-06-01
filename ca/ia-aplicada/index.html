@@ -44,6 +44,20 @@
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "IA Aplicada: agents IA per a processos empresarials",
+    "timeRequired": "PT20H",
+    "offers": {
+      "@type": "Offer",
+      "category": "In-company · per grup",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 3500,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/ca/ia-aplicada/#preus"
+    },
     "description": "Curs de 20h per aprendre a dissenyar, orquestrar i operar agents d'IA en processos empresarials i de negoci. Online o presencial, en grups tancats per a empreses, entitats i administracions públiques.",
     "provider": {
       "@type": "Organization",
@@ -69,6 +83,9 @@
 ]
 </script>
 
+<!-- Preload: fuente serif del hero (LCP) -->
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../css/tokens.css">
 <link rel="stylesheet" href="../../css/fonts.css">
 <link rel="stylesheet" href="../../css/base.css">
@@ -85,6 +102,7 @@
 <div class="noise"></div>
 
 <!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
 <nav>
   <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
     <img src="/assets/logo.png?v=2" alt="Aimtech" />
@@ -469,7 +487,7 @@
       <div data-reveal>
         <div class="section-label">04 — Contractació</div>
         <h2 class="section-title">Per a empreses, <em>entitats</em> i AAPP.</h2>
-        <p class="section-intro">El curs s'imparteix durant tot l'any, online o presencial, en grups tancats de fins a 20 persones. Escriu-me indicant perfil del grup, processos que voleu automatitzar i format preferit, i et passo disponibilitat i proposta econòmica.</p>
+        <p class="section-intro">El curs s'imparteix durant tot l'any, online o presencial, en grups tancats de fins a 20 persones. Escriu-me indicant perfil del grup, processos que voleu automatitzar i format preferit, i et passo disponibilitat i proposta econòmica. La formació in-company parteix de <strong>3.500€ per grup de fins a 5 persones</strong> (35€/h per alumne), amb 700€ per persona addicional, IVA a part. Si el que busqueu és posar agents en producció —no només formar l'equip—, aquesta feina viu a <a href="/ca/ia-agentica/">implantació d'IA agèntica</a>.</p>
       </div>
 
       <div class="bento" data-stagger>
@@ -482,8 +500,10 @@
           <h3>Per al teu <em>equip</em>.</h3>
           <p>Formació adaptada al teu sector i als processos que ja gestioneu. Online o presencial, horaris i agenda segons disponibilitat del grup.</p>
           <div class="price">
-            <div class="price-num">Consultar</div>
-            <div class="price-label">per grup · IVA a part</div>
+            <div class="price-label">des de</div>
+            <div class="price-num">3.500€</div>
+            <div class="price-label">per grup · fins a 5 pers. · IVA a part</div>
+            <div class="price-label">+700€ / persona addicional · 35€/h</div>
           </div>
         </article>
 
@@ -495,8 +515,10 @@
           <h3>Per a <em>entitats</em>.</h3>
           <p>Associacions, fundacions, col·legis professionals, cooperatives o altres entitats. Online o presencial, formació adaptable al perfil del col·lectiu.</p>
           <div class="price">
-            <div class="price-num">Consultar</div>
-            <div class="price-label">per grup · IVA a part</div>
+            <div class="price-label">des de</div>
+            <div class="price-num">3.500€</div>
+            <div class="price-label">per grup · fins a 5 pers. · IVA a part</div>
+            <div class="price-label">+700€ / persona addicional · 35€/h</div>
           </div>
         </article>
 
