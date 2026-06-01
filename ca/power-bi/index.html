@@ -75,7 +75,20 @@
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "Power BI de zero a intermedi",
-    "description": "Power Query, modelatge dimensional, DAX core i publicació a Power BI Service. 20h, online o presencial, en grups tancats per a empreses, entitats i administracions públiques.",
+    "description": "Itinerari per a usuaris d'Excel sense Power BI previ: instal·lació i interfície de Power BI Desktop, càrrega i neteja de dades amb Power Query, informes i interactivitat, mapes i visualització geogràfica, modelatge de dades (relacions, jerarquies i esquema en estrella) i visuals avançats amb narrativa de l'informe. Aprenentatge learn-by-doing amb 5 projectes guiats de principi a fi. 20h, online o presencial, en grups tancats de fins a 20 persones per a empreses, entitats i administracions públiques.",
+    "offers": {
+      "@type": "Offer",
+      "category": "In-company · per grup",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 4400,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/ca/power-bi/#preus"
+    },
     "provider": { "@id": "https://www.aimtech.es/#aimtech" },
     "url": "https://www.aimtech.es/ca/power-bi/#itineraris",
     "inLanguage": "ca",
@@ -104,6 +117,19 @@
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "Power BI Avançat",
+    "offers": {
+      "@type": "Offer",
+      "category": "In-company · per grup",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 4400,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/ca/power-bi/#preus"
+    },
     "description": "DAX avançat, time intelligence, modelatge complex (many-to-many, role-playing), performance amb DAX Studio i govern del servei (RLS, deployment pipelines). 20h, online o presencial.",
     "provider": { "@id": "https://www.aimtech.es/#aimtech" },
     "url": "https://www.aimtech.es/ca/power-bi/#itineraris",
@@ -140,6 +166,9 @@
 ]
 </script>
 
+<!-- Preload: fuente serif del hero (LCP) -->
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../css/tokens.css">
 <link rel="stylesheet" href="../../css/fonts.css">
 <link rel="stylesheet" href="../../css/base.css">
@@ -156,6 +185,7 @@
 <div class="noise"></div>
 
 <!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
 <nav>
   <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
     <img src="/assets/logo.png?v=2" alt="Aimtech" />
@@ -178,7 +208,7 @@
       </div>
     </div>
     <a href="/ca/blog/">Blog</a>
-    <a href="/ca/sobre-mike/">Sobre el Mike</a>
+    <a href="/ca/sobre-mike/">Sobre Mike</a>
   </div>
   <div class="nav-right">
     <div class="lang-switch">
@@ -378,7 +408,7 @@
         <div data-reveal="left">
           <div class="section-label">02 — Metodologia</div>
           <h2 class="section-title">Concepte, <em>repte</em>, solució.</h2>
-          <p class="section-intro">No veuràs slides cinc hores seguides. Cada bloc comença amb un concepte, va seguit d'un repte que resols tu amb un dataset, i acaba amb la solució comentada i dubtes resolts en directe. És l'única manera que alguna cosa quedi.</p>
+          <p class="section-intro">No veuràs slides cinc hores seguides. Cada bloc comença amb un concepte, va seguit d'un repte que resols tu amb un dataset, i acaba amb la solució comentada i dubtes resolts en directe. És l'única manera que alguna cosa quedi. Si encara estàs valorant el salt des d'Excel, comença per <a href="/ca/blog/que-es-power-bi/">què és Power BI i per a què serveix</a> i per <a href="/ca/blog/power-bi-vs-excel/">Power BI vs Excel: quan fer el salt</a>.</p>
         </div>
 
         <div class="method-list" data-stagger>
@@ -427,19 +457,21 @@
             <span class="badge">20h</span>
           </div>
           <h3>Power BI <em>de zero a intermedi</em>.</h3>
-          <p>Parteixes des d'usuari d'Excel sense Power BI previ. Surts fent informes propis end-to-end: importar dades, modelar-les, escriure mesures bàsiques i publicar al Service.</p>
+          <p>Parteixes des d'usuari d'Excel sense Power BI previ. Surts fent informes propis end-to-end i amb cinc projectes guiats a l'esquena: instal·lar i connectar dades, <a href="/ca/blog/power-query-netejar-dades/">netejar-les amb Power Query</a>, <a href="/ca/blog/modelatge-dades-power-bi-esquema-estrella/">modelar-les en esquema en estrella</a> i explicar-les en un informe que s'entén.</p>
           <div class="modules">
-            <div><span class="module-num">01</span>Power Query: importar i netejar dades</div>
-            <div><span class="module-num">02</span>Modelatge bàsic: fets i dimensions</div>
-            <div><span class="module-num">03</span>DAX core: mesures i CALCULATE</div>
-            <div><span class="module-num">04</span>Visualització: quan gràfic, quan taula</div>
-            <div><span class="module-num">05</span>Publicació a Power BI Service</div>
+            <div><span class="module-num">01</span>Instal·lació i interfície de Power BI Desktop</div>
+            <div><span class="module-num">02</span>Càrrega i neteja de dades amb Power Query</div>
+            <div><span class="module-num">03</span>Informes i interactivitat: gràfics, filtres i segmentacions</div>
+            <div><span class="module-num">04</span>Mapes i visualització geogràfica</div>
+            <div><span class="module-num">05</span>Modelatge: relacions, jerarquies i esquema en estrella</div>
+            <div><span class="module-num">06</span>Visuals avançats i narrativa de l'informe</div>
           </div>
           <div class="card-meta">
             <span class="chip">Power Query</span>
             <span class="chip">Modelatge</span>
-            <span class="chip">DAX core</span>
-            <span class="chip">Service bàsic</span>
+            <span class="chip">Mapes</span>
+            <span class="chip">Visualització</span>
+            <span class="chip">Projectes guiats</span>
           </div>
         </article>
 
@@ -449,7 +481,7 @@
             <span class="badge">20h</span>
           </div>
           <h3>Power BI <em>Avançat</em>.</h3>
-          <p>Continuació natural del primer o entrada per a qui ja es defensa amb Power BI. Modelatge complex, DAX seriós, performance i govern: el que separa un informe que es publica d'un que es manté.</p>
+          <p>Continuació natural del primer o entrada per a qui ja es defensa amb Power BI. Modelatge complex, <a href="/ca/blog/dax-mesures-vs-columnes-calculades/">DAX seriós</a>, performance i govern: el que separa un informe que es publica d'un que es manté.</p>
           <div class="modules">
             <div><span class="module-num">01</span>DAX avançat: variables i contextos</div>
             <div><span class="module-num">02</span>Time intelligence: YTD, MTD, comparatives</div>
@@ -497,7 +529,7 @@
       <div data-reveal>
         <div class="section-label">04 — Contractació</div>
         <h2 class="section-title">Per a empreses, <em>entitats</em> i AAPP.</h2>
-        <p class="section-intro">Els cursos s'imparteixen durant tot l'any, online o presencial, en grups tancats de fins a 20 persones. Escriu-me indicant perfil, nombre de persones i format preferit, i et passo disponibilitat i proposta econòmica. <strong>Descompte si contractes dos o més cursos</strong> (pack itinerari).</p>
+        <p class="section-intro">Els cursos s'imparteixen durant tot l'any, online o presencial, en grups tancats de fins a 20 persones. Escriu-me indicant perfil, nombre de persones i format preferit, i et passo disponibilitat i proposta econòmica. La formació in-company parteix de <strong>4.400€ per grup de fins a 10 persones</strong> (22€/h per alumne), amb 440€ per persona addicional, IVA a part. <strong>Descompte si contractes dos o més cursos</strong> (pack itinerari). Sobre llicències i costos de l'eina, t'interessa <a href="/ca/blog/power-bi-es-gratuit/">si Power BI és gratuït i el que costa de debò</a>.</p>
       </div>
 
       <div class="bento" data-stagger>
@@ -510,8 +542,10 @@
           <h3>Per al teu <em>equip</em>.</h3>
           <p>Formació adaptada al teu sector i a les dades que ja gestioneu. Online o presencial, horaris i agenda segons disponibilitat del grup.</p>
           <div class="price">
-            <div class="price-num">Consultar</div>
-            <div class="price-label">per grup · IVA a part</div>
+            <div class="price-label">des de</div>
+            <div class="price-num">4.400€</div>
+            <div class="price-label">per grup · fins a 10 pers. · IVA a part</div>
+            <div class="price-label">+440€ / persona addicional · 22€/h</div>
           </div>
         </article>
 
@@ -523,8 +557,10 @@
           <h3>Per a <em>entitats</em>.</h3>
           <p>Associacions, fundacions, col·legis professionals, cooperatives o altres entitats. Online o presencial, formació adaptable al perfil del col·lectiu.</p>
           <div class="price">
-            <div class="price-num">Consultar</div>
-            <div class="price-label">per grup · IVA a part</div>
+            <div class="price-label">des de</div>
+            <div class="price-num">4.400€</div>
+            <div class="price-label">per grup · fins a 10 pers. · IVA a part</div>
+            <div class="price-label">+440€ / persona addicional · 22€/h</div>
           </div>
         </article>
 
@@ -591,7 +627,7 @@
       <div class="footer-col">
         <h3>Recursos</h3>
         <a href="/ca/blog/">Blog</a>
-        <a href="/ca/sobre-mike/">Sobre el Mike</a>
+        <a href="/ca/sobre-mike/">Sobre Mike</a>
         <a href="/ca/contacte/">Contacte</a>
       </div>
 

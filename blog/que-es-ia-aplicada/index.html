@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Qué es la IA aplicada (y en qué se diferencia de la IA generativa) | Blog Aimtech</title>
+<meta name="description" content="IA generativa, IA aplicada e IA agéntica no son lo mismo. Te explicamos la diferencia con ejemplos de empresa, sin humo, para que sepas qué necesitas de verdad." />
+
+<link rel="canonical" href="https://www.aimtech.es/blog/que-es-ia-aplicada/" />
+
+<!-- hreflang: variantes de idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/que-es-ia-aplicada/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/que-es-la-ia-aplicada/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/que-es-ia-aplicada/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="/assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="ca_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Qué es la IA aplicada (y en qué se diferencia de la IA generativa)" />
+<meta property="og:description" content="IA generativa, IA aplicada e IA agéntica no son lo mismo. Te explicamos la diferencia con ejemplos de empresa, sin humo, para que sepas qué necesitas de verdad." />
+<meta property="og:url" content="https://www.aimtech.es/blog/que-es-ia-aplicada/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Qué es la IA aplicada (y en qué se diferencia de la IA generativa)" />
+<meta property="article:published_time" content="2026-06-01" />
+<meta property="article:author" content="Mike Pérez" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Qué es la IA aplicada (y en qué se diferencia de la IA generativa)" />
+<meta name="twitter:description" content="IA generativa, IA aplicada e IA agéntica no son lo mismo. Te explicamos la diferencia con ejemplos de empresa, sin humo, para que sepas qué necesitas de verdad." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: BlogPosting + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Qué es la IA aplicada (y en qué se diferencia de la IA generativa)",
+    "description": "IA generativa, IA aplicada e IA agéntica no son lo mismo. Te explicamos la diferencia con ejemplos de empresa, sin humo, para que sepas qué necesitas de verdad.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "inLanguage": "es-ES",
+    "keywords": ["ia-aplicada","conceptos"],
+    "image": "https://www.aimtech.es/assets/og/default.png",
+    "url": "https://www.aimtech.es/blog/que-es-ia-aplicada/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.aimtech.es/blog/que-es-ia-aplicada/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.aimtech.es/assets/logo.png?v=2"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aimtech.es/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Qué es la IA aplicada (y en qué se diferencia de la IA generativa)", "item": "https://www.aimtech.es/blog/que-es-ia-aplicada/" }
+    ]
+  }
+]
+</script>
+
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/blog.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<script src="/js/cookie-consent.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body class="is-post">
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-es.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-servicios-menu">Servicios <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-servicios-menu">
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+    </div>
+    <a href="/blog/">Blog</a>
+    <a href="/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/blog/que-es-ia-aplicada/" class="active">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/blog/que-es-la-ia-aplicada/">CA</a>
+    </div>
+    <a href="/contacto/" class="nav-cta">Hablemos →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <article class="post">
+    <header class="post-header container">
+      <a href="/blog/" class="post-back">← Blog</a>
+      <div class="post-meta">
+        <time datetime="2026-06-01">1 de junio de 2026</time>
+        <span class="sep">·</span>
+        <span>3 min de lectura</span>
+        <span class="sep">·</span>
+        <span>Mike Pérez</span>
+      </div>
+      <h1>Qué es la IA aplicada (y en qué se diferencia de la IA generativa)</h1>
+      <p class="post-lead">IA generativa, IA aplicada e IA agéntica no son lo mismo. Te explicamos la diferencia con ejemplos de empresa, sin humo, para que sepas qué necesitas de verdad.</p>
+      <div class="post-tags"><span>ia-aplicada</span><span>conceptos</span></div>
+    </header>
+
+    <div class="post-body container">
+      <p>“IA generativa”, “IA aplicada”, “IA agéntica”… los términos se usan como sinónimos y no lo son. La distinción importa porque determina qué necesita tu empresa: no es lo mismo que tu equipo sepa usar ChatGPT que tener un proceso automatizado funcionando solo. Vamos a separarlo sin humo.</p>
+<h2>IA generativa: la materia prima</h2>
+<p>La <strong>IA generativa</strong> es la tecnología que genera texto, imágenes o código a partir de una instrucción. ChatGPT, Claude, Gemini o Copilot son IA generativa. Es la herramienta en bruto: potentísima, pero por sí sola no hace nada hasta que alguien la usa con un propósito.</p>
+<p>Pensar que “tenemos IA” porque la plantilla usa ChatGPT es como decir que tienes contabilidad porque tienes Excel. Tienes la herramienta. Falta el método.</p>
+<h2>IA aplicada: la generativa puesta a trabajar</h2>
+<p>La <strong>IA aplicada</strong> es esa misma tecnología, pero orientada a resolver un problema real de tu negocio: redactar respuestas a clientes con tu tono, resumir reuniones y extraer tareas, clasificar correos, preparar borradores de informes, traducir documentación técnica, analizar opiniones. No es la herramienta: es la herramienta <strong>conectada a tu caso de uso y a tu forma de trabajar.</strong></p>
+<p>La diferencia entre una empresa que “usa IA” y una que la <strong>aplica</strong> es el método: prompts que funcionan siempre, criterios de cuándo fiarte y cuándo revisar, y la integración en el flujo de trabajo que ya tenéis.</p>
+<h2>IA agéntica: cuando deja de pedirte permiso</h2>
+<p>Un escalón más allá está la <strong>IA agéntica</strong>: agentes que no solo responden, sino que ejecutan tareas de varios pasos —consultar un sistema, decidir, actuar— con supervisión humana en los puntos críticos. Aquí ya no hablamos de formación, sino de <a href="/ia-agentica/">implantación de sistemas en producción</a>.</p>
+<figure class="svg-figure">
+<svg viewBox="0 0 760 200" role="img" aria-labelledby="fig-ia-t fig-ia-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-ia-t">De IA generativa a IA agéntica</title>
+<desc id="fig-ia-d">Tres niveles: IA generativa es la herramienta, IA aplicada la pone a trabajar en un proceso, IA agéntica ejecuta tareas con supervisión.</desc>
+<line x1="30" y1="100" x2="730" y2="100" class="d-dash"/>
+<g>
+<rect x="24" y="64" width="200" height="72" rx="8" class="d-card-sub"/>
+<rect x="24" y="64" width="200" height="5" rx="2.5" class="d-accent"/>
+<text x="44" y="96" font-size="15" class="d-title">Generativa</text>
+<text x="44" y="118" font-size="10" class="d-label">la herramienta</text>
+</g>
+<g>
+<rect x="280" y="64" width="200" height="72" rx="8" class="d-card-sub"/>
+<rect x="280" y="64" width="200" height="5" rx="2.5" class="d-accent"/>
+<text x="300" y="96" font-size="15" class="d-title">Aplicada</text>
+<text x="300" y="118" font-size="10" class="d-label">puesta a trabajar en tu proceso</text>
+</g>
+<g>
+<rect x="536" y="64" width="200" height="72" rx="8" class="d-card-sub"/>
+<rect x="536" y="64" width="200" height="5" rx="2.5" class="d-accent"/>
+<text x="556" y="96" font-size="15" class="d-title">Agéntica</text>
+<text x="556" y="118" font-size="10" class="d-label">ejecuta con supervisión</text>
+</g>
+</svg>
+<figcaption>De la herramienta al proceso autónomo: <b>generativa</b> es el motor, <b>aplicada</b> lo conecta a tu trabajo y <b>agéntica</b> lo deja actuar con control humano.</figcaption>
+</figure>
+<h2>La diferencia en una frase</h2>
+<ul>
+<li><strong>Generativa</strong> = tienes la herramienta.</li>
+<li><strong>Aplicada</strong> = tu equipo la usa con método para resolver tareas concretas.</li>
+<li><strong>Agéntica</strong> = un sistema ejecuta procesos por ti, con control humano en lo importante.</li>
+</ul>
+<h2>Por qué importa para tu empresa</h2>
+<p>Porque marca por dónde empezar. La mayoría de organizaciones no necesitan agentes en producción el primer día: necesitan que su gente <strong>aplique bien</strong> la IA generativa que ya tiene delante y deje de perder horas en tareas que un buen prompt resuelve en segundos. Ese es el retorno más rápido y más barato, y es la base sobre la que luego se construye lo agéntico.</p>
+<p>Si quieres que tu equipo dé ese salto —de “usar ChatGPT a ratos” a aplicarlo con criterio en vuestros procesos—, en Aimtech damos <a href="/ia-aplicada/">formación en IA aplicada para empresas, entidades y AAPP</a>: online en directo, presencial en Barcelona o in-company, en grupos cerrados. La imparte quien también pone estos sistemas en producción, no una marca anónima.</p>
+
+    </div>
+
+    <footer class="post-footer container">
+      <div class="post-footer-grid">
+        <div>
+          <span class="post-footer-label">Escrito por</span>
+          <a href="/sobre-mike/" class="post-author">Mike Pérez</a>
+        </div>
+        <div>
+          <span class="post-footer-label">¿Te resuena?</span>
+          <a href="/contacto/" class="post-cta">Hablemos sobre tu caso →</a>
+        </div>
+      </div>
+    </footer>
+  </article>
+
+</main>
+
+<!-- @region partials/footer-es.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formación e implantación de IA aplicada, Power BI y desarrollo a medida. Operado por una SL catalana con foco en pymes y administración pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/blog/">Blog</a>
+        <a href="/sobre-mike/">Sobre Mike</a>
+        <a href="/contacto/">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/politica-privacidad/">Privacidad</a>
+        <a href="/politica-cookies/">Cookies</a>
+        <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Cataluña</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

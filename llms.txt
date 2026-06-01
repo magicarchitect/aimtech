@@ -6,7 +6,7 @@
 > administraciones públicas. Sede en Cataluña (Barcelona y área); clientes de
 > toda España en remoto. Web bilingüe español (/) y catalán (/ca/).
 
-Fundada y dirigida por Miguel "Mike" Pérez, Arquitecto de Soluciones de IA, con
+Fundada y dirigida por Miguel "Mike" Pérez, Ingeniero de Soluciones de IA, con
 más de 20 años de experiencia y docencia universitaria (UOC, UPC, UIC,
 Cibernàrium). Postura anti-humo: ROI medible, resultados reales, sin promesas
 vacías.
@@ -16,18 +16,18 @@ Datos reales de actividad: +20 años de experiencia, 3.360 alumnos formados,
 
 ## Servicios
 
-- [Formación en Power BI](https://www.aimtech.es/power-bi/): cursos in-company para empresas, entidades y AAPP. Dos itinerarios de 20h (Cero a Intermedio y Avanzado), online o presencial, grupos de hasta 20 personas. Power Query, modelado dimensional, DAX, RLS y gobierno del servicio.
-- [Formación en IA Aplicada](https://www.aimtech.es/ia-aplicada/): formación práctica para equipos en IA generativa, prompting y agentes IA aplicados a procesos empresariales.
+- [Formación en Power BI](https://www.aimtech.es/power-bi/): cursos in-company para empresas, entidades y AAPP. Dos itinerarios de 20h (Cero a Intermedio y Avanzado), online o presencial, grupos de hasta 20 personas. Power Query, modelado dimensional, DAX, RLS y gobierno del servicio. Precio: desde 4.400€ por grupo de hasta 10 personas (+440€ por persona adicional, 22€/h por alumno), IVA aparte.
+- [Formación en IA Aplicada](https://www.aimtech.es/ia-aplicada/): formación práctica para equipos en IA generativa, prompting y agentes IA aplicados a procesos empresariales. Precio: desde 3.500€ por grupo de hasta 5 personas (+700€ por persona adicional, 35€/h por alumno), IVA aparte.
 - [Implantación de IA Agéntica](https://www.aimtech.es/ia-agentica/): diseño e implantación de sistemas de agentes IA orquestados con ROI medible. Stack: Claude API, n8n, RAG y bases vectoriales. Incluye análisis de procesos, precondiciones y diseño del workflow agéntico.
 - [Desarrollo a medida](https://www.aimtech.es/desarrollo/): apps web y móvil, CMS, APIs e integraciones de software para empresas.
 
 ## Sobre el fundador
 
-- [Sobre Mike Pérez](https://www.aimtech.es/sobre-mike/): Miguel "Mike" Pérez, Arquitecto de Soluciones de IA. Ingeniero con +20 años de experiencia, docente universitario y fundador de Aimtech.
+- [Sobre Mike Pérez](https://www.aimtech.es/sobre-mike/): Miguel "Mike" Pérez, Ingeniero de Soluciones de IA con +20 años de experiencia, docente universitario y fundador de Aimtech.
 
 ## Recursos
 
-- [Blog](https://www.aimtech.es/blog/): artículos sobre IA agéntica, Power BI y desarrollo, con enfoque práctico y accionable.
+- [Blog](https://www.aimtech.es/blog/): artículos prácticos sobre Power BI (qué es, vs Excel, licencias, DAX, modelado, Power Query, mapas, cursos en Barcelona, Power BI para AAPP), IA aplicada (qué es, formación de equipos, prompting, precios, IA para AAPP) e IA agéntica (n8n vs Make vs Zapier). Disponible en español (/blog/) y catalán (/ca/blog/).
 - [Contacto](https://www.aimtech.es/contacto/): hola@aimtech.es
 
 ## Para quién

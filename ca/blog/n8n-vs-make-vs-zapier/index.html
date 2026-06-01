@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>n8n vs Make vs Zapier: quin triar per automatitzar la teva empresa | Blog Aimtech</title>
+<meta name="description" content="Zapier, Make i n8n automatitzen tasques, però no són per al mateix. Comparem facilitat, preu, control de dades i encaix amb IA perquè triïs bé." />
+
+<link rel="canonical" href="https://www.aimtech.es/ca/blog/n8n-vs-make-vs-zapier/" />
+
+<!-- hreflang: variants d'idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/n8n-vs-make-vs-zapier/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/n8n-vs-make-vs-zapier/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/n8n-vs-make-vs-zapier/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="/assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="ca_ES" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="n8n vs Make vs Zapier: quin triar per automatitzar la teva empresa" />
+<meta property="og:description" content="Zapier, Make i n8n automatitzen tasques, però no són per al mateix. Comparem facilitat, preu, control de dades i encaix amb IA perquè triïs bé." />
+<meta property="og:url" content="https://www.aimtech.es/ca/blog/n8n-vs-make-vs-zapier/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="n8n vs Make vs Zapier: quin triar per automatitzar la teva empresa" />
+<meta property="article:published_time" content="2026-06-01" />
+<meta property="article:author" content="Mike Pérez" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="n8n vs Make vs Zapier: quin triar per automatitzar la teva empresa" />
+<meta name="twitter:description" content="Zapier, Make i n8n automatitzen tasques, però no són per al mateix. Comparem facilitat, preu, control de dades i encaix amb IA perquè triïs bé." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: BlogPosting + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "n8n vs Make vs Zapier: quin triar per automatitzar la teva empresa",
+    "description": "Zapier, Make i n8n automatitzen tasques, però no són per al mateix. Comparem facilitat, preu, control de dades i encaix amb IA perquè triïs bé.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "inLanguage": "ca-ES",
+    "keywords": ["ia-agentica","automatitzacio"],
+    "image": "https://www.aimtech.es/assets/og/default.png",
+    "url": "https://www.aimtech.es/ca/blog/n8n-vs-make-vs-zapier/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.aimtech.es/ca/blog/n8n-vs-make-vs-zapier/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike Pérez",
+      "url": "https://www.aimtech.es/ca/sobre-mike/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.aimtech.es/assets/logo.png?v=2"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aimtech.es/ca/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "n8n vs Make vs Zapier: quin triar per automatitzar la teva empresa", "item": "https://www.aimtech.es/ca/blog/n8n-vs-make-vs-zapier/" }
+    ]
+  }
+]
+</script>
+
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/blog.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<script src="/js/cookie-consent.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body class="is-post">
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-serveis-menu">
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+    </div>
+    <a href="/ca/blog/">Blog</a>
+    <a href="/ca/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/blog/n8n-vs-make-vs-zapier/">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/blog/n8n-vs-make-vs-zapier/" class="active">CA</a>
+    </div>
+    <a href="/ca/contacte/" class="nav-cta">Parlem-ne →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <article class="post">
+    <header class="post-header container">
+      <a href="/ca/blog/" class="post-back">← Blog</a>
+      <div class="post-meta">
+        <time datetime="2026-06-01">1 de juny de 2026</time>
+        <span class="sep">·</span>
+        <span>3 min de lectura</span>
+        <span class="sep">·</span>
+        <span>Mike Pérez</span>
+      </div>
+      <h1>n8n vs Make vs Zapier: quin triar per automatitzar la teva empresa</h1>
+      <p class="post-lead">Zapier, Make i n8n automatitzen tasques, però no són per al mateix. Comparem facilitat, preu, control de dades i encaix amb IA perquè triïs bé.</p>
+      <div class="post-tags"><span>ia-agentica</span><span>automatitzacio</span></div>
+    </header>
+
+    <div class="post-body container">
+      <p>Quan una empresa decideix automatitzar tasques —moure dades entre apps, enviar avisos, connectar el CRM amb la facturació— acaba mirant tres noms: <strong>Zapier</strong>, <strong>Make</strong> i <strong>n8n</strong>. Fan coses semblants, però no són per al mateix. Triar bé t’estalvia diners i disgustos. T’ho comparem sense postureig.</p>
+<h2>Zapier: el més fàcil, el més car a escala</h2>
+<p><strong>Zapier</strong> és el rei de la senzillesa. Connectes dues aplicacions en minuts, sense saber res tècnic, amb milers d’integracions a punt. Per a automatitzacions simples (“quan arriba un formulari, crea’m una fila i avisa’m”) és imbatible en rapidesa de posada en marxa.</p>
+<p>El però arriba amb el <strong>volum</strong>: Zapier cobra per <em>tasca</em> (cada pas executat), i quan els fluxos creixen, la factura escala ràpid. I per a lògica complexa es queda curt.</p>
+<h2>Make: més potència visual per menys diners</h2>
+<p><strong>Make</strong> (abans Integromat) és el punt mitjà. Té un editor visual on veus el flux com un diagrama, suporta lògica més complexa (ramificacions, bucles, gestió d’errors) i sol sortir <strong>més barat que Zapier</strong> a igualtat de volum. Continua sent SaaS al núvol, fàcil de començar, però amb més múscul quan l’escenari es complica.</p>
+<h2>n8n: control total, ideal per a IA i dades sensibles</h2>
+<p><strong>n8n</strong> és l’opció de qui vol <strong>control</strong>. És de codi obert i pots <strong>allotjar-lo tu</strong> (al teu servidor o núvol privat), cosa que significa dues coses grans: les teves dades no surten de la teva infraestructura, i no pagues per operació —el cost és el del servidor, no el del nombre de tasques—. A canvi, demana una mica més de mà tècnica per muntar-lo i mantenir-lo.</p>
+<p>És a més el que millor encaixa quan l’automatització porta <strong>IA pel mig</strong>: agents, connexió amb models com Claude, lògica a mida i privacitat. Per això és la nostra eina de referència per <a href="/ca/ia-agentica/">implantar IA agèntica</a>.</p>
+<figure class="svg-figure">
+<svg viewBox="0 0 760 196" role="img" aria-labelledby="fig-n8-t fig-n8-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-n8-t">Zapier, Make i n8n a l'eix facilitat–control</title>
+<desc id="fig-n8-d">Zapier és el més fàcil; Make és potent i més barat; n8n dona control total i encaixa millor amb IA.</desc>
+<g>
+<rect x="40" y="28" width="206" height="92" rx="10" class="d-card"/>
+<text x="60" y="58" font-size="14" class="d-title">Zapier</text>
+<text x="60" y="82" font-size="11" class="d-txt">el més fàcil</text>
+<text x="60" y="100" font-size="11" class="d-txt">car a escala</text>
+</g>
+<g>
+<rect x="277" y="28" width="206" height="92" rx="10" class="d-card"/>
+<text x="297" y="58" font-size="14" class="d-title">Make</text>
+<text x="297" y="82" font-size="11" class="d-txt">potent i visual</text>
+<text x="297" y="100" font-size="11" class="d-txt">més barat</text>
+</g>
+<g>
+<rect x="514" y="28" width="206" height="92" rx="10" class="d-card"/>
+<rect x="514" y="28" width="206" height="92" rx="10" class="d-accent-soft"/>
+<rect x="514" y="28" width="206" height="5" rx="2.5" class="d-accent"/>
+<text x="534" y="60" font-size="14" class="d-ink">n8n</text>
+<text x="534" y="84" font-size="11" class="d-txt">control · self-host</text>
+<text x="534" y="102" font-size="11" class="d-txt">ideal per a IA</text>
+</g>
+<line x1="48" y1="158" x2="712" y2="158" class="d-stroke-mute"/>
+<path d="M44 158 L53 153 L53 163 Z" class="d-mute"/>
+<path d="M716 158 L707 153 L707 163 Z" class="d-mute"/>
+<text x="48" y="180" font-size="10" class="d-label">fàcil de començar</text>
+<text x="712" y="180" text-anchor="end" font-size="10" class="d-label">control de dades · IA</text>
+</svg>
+<figcaption>No hi ha una "millor": <b>Zapier</b> guanya en facilitat, <b>Make</b> en potència per preu, i <b>n8n</b> en control de dades i IA.</figcaption>
+</figure>
+<h2>Com triar, en una frase</h2>
+<ul>
+<li><strong>Vols el més fàcil i són fluxos simples</strong> → Zapier.</li>
+<li><strong>Necessites lògica més potent sense complicar-te ni gastar de més</strong> → Make.</li>
+<li><strong>Prioritzes control de dades, cost a escala i/o IA</strong> → n8n.</li>
+</ul>
+<p>No hi ha una “millor”: hi ha la que encaixa amb el teu cas, el teu volum i el teu nivell d’exigència amb les dades. L’error car és triar per costum i descobrir el problema amb la factura o amb la privacitat sis mesos després.</p>
+<p>A Aimtech treballem amb les tres segons el cas, i formem equips perquè sàpiguen automatitzar amb criteri. Si vols fer el salt de “tasques soltes” a processos que funcionen sols, mira la nostra <a href="/ca/ia-aplicada/">formació en IA aplicada</a> i la <a href="/ca/ia-agentica/">implantació d’IA agèntica</a>.</p>
+
+    </div>
+
+    <footer class="post-footer container">
+      <div class="post-footer-grid">
+        <div>
+          <span class="post-footer-label">Escrit per</span>
+          <a href="/ca/sobre-mike/" class="post-author">Mike Pérez</a>
+        </div>
+        <div>
+          <span class="post-footer-label">Et ressona?</span>
+          <a href="/ca/contacte/" class="post-cta">Parlem del teu cas →</a>
+        </div>
+      </div>
+    </footer>
+  </article>
+
+</main>
+
+<!-- @region partials/footer-ca.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formació i implantació d'IA aplicada, Power BI i desenvolupament a mida. Operada per una SL catalana amb focus en pimes i administració pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Serveis</h3>
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/ca/blog/">Blog</a>
+        <a href="/ca/sobre-mike/">Sobre Mike</a>
+        <a href="/ca/contacte/">Contacte</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/ca/avis-legal/">Avís legal</a>
+        <a href="/ca/politica-privacitat/">Privacitat</a>
+        <a href="/ca/politica-galetes/">Galetes</a>
+        <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

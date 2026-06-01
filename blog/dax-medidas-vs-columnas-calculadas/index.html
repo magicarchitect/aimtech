@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DAX para principiantes: medidas vs columnas calculadas | Blog Aimtech</title>
+<meta name="description" content="La duda que frena a todo el que empieza con DAX: ¿medida o columna calculada? Te explicamos la diferencia, cuándo usar cada una y el error que pagan caro." />
+
+<link rel="canonical" href="https://www.aimtech.es/blog/dax-medidas-vs-columnas-calculadas/" />
+
+<!-- hreflang: variantes de idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/dax-medidas-vs-columnas-calculadas/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/dax-mesures-vs-columnes-calculades/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/dax-medidas-vs-columnas-calculadas/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="/assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="ca_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="DAX para principiantes: medidas vs columnas calculadas" />
+<meta property="og:description" content="La duda que frena a todo el que empieza con DAX: ¿medida o columna calculada? Te explicamos la diferencia, cuándo usar cada una y el error que pagan caro." />
+<meta property="og:url" content="https://www.aimtech.es/blog/dax-medidas-vs-columnas-calculadas/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="DAX para principiantes: medidas vs columnas calculadas" />
+<meta property="article:published_time" content="2026-06-01" />
+<meta property="article:author" content="Mike Pérez" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="DAX para principiantes: medidas vs columnas calculadas" />
+<meta name="twitter:description" content="La duda que frena a todo el que empieza con DAX: ¿medida o columna calculada? Te explicamos la diferencia, cuándo usar cada una y el error que pagan caro." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: BlogPosting + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "DAX para principiantes: medidas vs columnas calculadas",
+    "description": "La duda que frena a todo el que empieza con DAX: ¿medida o columna calculada? Te explicamos la diferencia, cuándo usar cada una y el error que pagan caro.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "inLanguage": "es-ES",
+    "keywords": ["power-bi","dax"],
+    "image": "https://www.aimtech.es/assets/og/default.png",
+    "url": "https://www.aimtech.es/blog/dax-medidas-vs-columnas-calculadas/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.aimtech.es/blog/dax-medidas-vs-columnas-calculadas/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.aimtech.es/assets/logo.png?v=2"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aimtech.es/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "DAX para principiantes: medidas vs columnas calculadas", "item": "https://www.aimtech.es/blog/dax-medidas-vs-columnas-calculadas/" }
+    ]
+  }
+]
+</script>
+
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/blog.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<script src="/js/cookie-consent.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body class="is-post">
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-es.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-servicios-menu">Servicios <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-servicios-menu">
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+    </div>
+    <a href="/blog/">Blog</a>
+    <a href="/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/blog/dax-medidas-vs-columnas-calculadas/" class="active">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/blog/dax-mesures-vs-columnes-calculades/">CA</a>
+    </div>
+    <a href="/contacto/" class="nav-cta">Hablemos →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <article class="post">
+    <header class="post-header container">
+      <a href="/blog/" class="post-back">← Blog</a>
+      <div class="post-meta">
+        <time datetime="2026-06-01">1 de junio de 2026</time>
+        <span class="sep">·</span>
+        <span>4 min de lectura</span>
+        <span class="sep">·</span>
+        <span>Mike Pérez</span>
+      </div>
+      <h1>DAX para principiantes: medidas vs columnas calculadas</h1>
+      <p class="post-lead">La duda que frena a todo el que empieza con DAX: ¿medida o columna calculada? Te explicamos la diferencia, cuándo usar cada una y el error que pagan caro.</p>
+      <div class="post-tags"><span>power-bi</span><span>dax</span></div>
+    </header>
+
+    <div class="post-body container">
+      <p>Casi todo el que empieza con DAX se atasca en la misma bifurcación: para calcular algo, ¿creo una <strong>medida</strong> o una <strong>columna calculada</strong>? Las dos usan la misma fórmula muchas veces, así que parecen intercambiables. No lo son, y elegir mal te penaliza en rendimiento y en resultados raros. Vamos a aclararlo.</p>
+<h2>La diferencia de fondo: cuándo se calcula cada una</h2>
+<ul>
+<li>Una <strong>columna calculada</strong> se calcula <strong>fila a fila, al refrescar los datos</strong>, y el resultado se guarda en el modelo (ocupa memoria). Es como añadir una columna más a la tabla.</li>
+<li>Una <strong>medida</strong> se calcula <strong>en el momento de la consulta</strong>, según lo que haya en el informe en ese instante: los filtros, la fila de la tabla, el segmento seleccionado. No se guarda: se recalcula sobre la marcha.</li>
+</ul>
+<p>Esa palabra —<strong>contexto</strong>— es la clave. Una columna calculada solo “ve” su propia fila. Una medida “ve” el contexto de filtro del informe: el mes seleccionado, la región del gráfico, el segmentador activo.</p>
+<figure class="svg-figure">
+<svg viewBox="0 0 760 244" role="img" aria-labelledby="fig-dax-t fig-dax-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-dax-t">Columna calculada frente a medida</title>
+<desc id="fig-dax-d">La columna calculada se calcula fila a fila al refrescar y se guarda en el modelo; la medida se recalcula al consultar, según el filtro, y no ocupa memoria.</desc>
+<g>
+<rect x="16" y="28" width="352" height="196" rx="12" class="d-card"/>
+<text x="40" y="62" font-size="14" class="d-title">Columna calculada</text>
+<text x="40" y="83" font-size="11" class="d-txt-i">fila a fila · al refrescar · se guarda</text>
+<rect x="40" y="104" width="196" height="20" rx="3" class="d-card-sub"/>
+<rect x="244" y="104" width="84" height="20" rx="3" class="d-accent-soft"/>
+<circle cx="286" cy="114" r="2.6" class="d-accent"/>
+<rect x="40" y="130" width="196" height="20" rx="3" class="d-card-sub"/>
+<rect x="244" y="130" width="84" height="20" rx="3" class="d-accent-soft"/>
+<circle cx="286" cy="140" r="2.6" class="d-accent"/>
+<rect x="40" y="156" width="196" height="20" rx="3" class="d-card-sub"/>
+<rect x="244" y="156" width="84" height="20" rx="3" class="d-accent-soft"/>
+<circle cx="286" cy="166" r="2.6" class="d-accent"/>
+<text x="244" y="198" font-size="9" class="d-label">guardada en el modelo</text>
+</g>
+<g>
+<rect x="392" y="28" width="352" height="196" rx="12" class="d-card"/>
+<text x="416" y="62" font-size="14" class="d-title">Medida</text>
+<text x="416" y="83" font-size="11" class="d-txt-i">al consultar · según el filtro</text>
+<rect x="416" y="102" width="132" height="26" rx="13" class="d-accent-soft"/>
+<circle cx="433" cy="115" r="3" class="d-accent"/>
+<text x="446" y="119" font-size="10" class="d-dim">filtro: junio</text>
+<line x1="430" y1="150" x2="430" y2="172" class="d-stroke-mute"/>
+<path d="M430 174 L425 165 L435 165 Z" class="d-mute"/>
+<text x="470" y="182" font-size="38" class="d-kpi">1.248</text>
+<text x="416" y="206" font-size="9" class="d-label">se recalcula · no ocupa memoria</text>
+</g>
+</svg>
+<figcaption>La <b>columna calculada</b> se calcula fila a fila al refrescar y se guarda en el modelo; la <b>medida</b> se recalcula al consultar, según el filtro, y no ocupa memoria.</figcaption>
+</figure>
+<h2>La regla práctica</h2>
+<ul>
+<li><strong>Usa una medida</strong> para todo lo que sea <strong>agregación</strong>: sumas, promedios, porcentajes, ratios, totales que cambian según el filtro. <em>Ventas totales</em>, <em>margen %</em>, <em>ticket medio</em> → medidas, siempre.</li>
+<li><strong>Usa una columna calculada</strong> cuando necesitas un <strong>atributo por fila</strong> que luego usarás para <strong>filtrar, agrupar o relacionar</strong>: clasificar cada venta en un rango (“alta/media/baja”), extraer el año de una fecha para una jerarquía, marcar si una fila cumple una condición.</li>
+</ul>
+<p>Dicho corto: <strong>si va a un eje, un filtro o una segmentación, suele ser columna. Si va a un valor que se agrega, es medida.</strong></p>
+<blockquote>
+<p>El contexto de filtro es lo que separa “sé escribir DAX” de “sé modelar en Power BI”.</p>
+</blockquote>
+<h2>El error que se paga caro</h2>
+<p>El error típico del principiante es resolverlo todo con columnas calculadas porque “se ven en la tabla y es más intuitivo”. Funciona en una tabla pequeña y revienta en una grande: cada columna calculada hincha el modelo, ralentiza el refresco y, peor aún, da números que no responden a los filtros del usuario. Las sumas que deberían cambiar al seleccionar un mes se quedan congeladas.</p>
+<p>La buena noticia: en cuanto entiendes el contexto de filtro, el 90% de tus cálculos de negocio salen siendo medidas, tu modelo queda ligero y los informes responden solos a lo que el usuario toca.</p>
+<h2>Para que se quede</h2>
+<p>El contexto de filtro es el concepto que separa “sé escribir fórmulas DAX” de “sé modelar en Power BI”. No se aprende leyendo: se aprende construyendo medidas sobre un modelo real y viendo cómo reaccionan a los filtros. Antes de DAX conviene tener el modelo bien montado —de eso va <a href="/blog/modelado-datos-power-bi-esquema-estrella/">el modelado en esquema en estrella</a>—, porque un DAX limpio empieza por un modelo limpio.</p>
+<aside class="post-key">
+<h4>Claves</h4>
+<ul>
+<li><strong>Medida</strong> → para agregar (sumas, %, ratios). Se recalcula según el filtro del informe.</li>
+<li><strong>Columna calculada</strong> → para atributos por fila que vas a filtrar, agrupar o relacionar. Se guarda en el modelo.</li>
+<li>Si va a un eje, filtro o segmentación, suele ser columna; si se agrega, es medida.</li>
+<li>Resolverlo todo con columnas calculadas hincha el modelo y congela los totales.</li>
+</ul>
+</aside>
+<p>Esto es justo lo que trabajamos en la <a href="/power-bi/">formación en Power BI de Aimtech</a>: el itinerario Avanzado entra a fondo en DAX, contextos y medidas serias, con retos que resuelves tú. Presencial en Barcelona, en remoto en directo o in-company, para empresas, entidades y AAPP.</p>
+
+    </div>
+
+    <footer class="post-footer container">
+      <div class="post-footer-grid">
+        <div>
+          <span class="post-footer-label">Escrito por</span>
+          <a href="/sobre-mike/" class="post-author">Mike Pérez</a>
+        </div>
+        <div>
+          <span class="post-footer-label">¿Te resuena?</span>
+          <a href="/contacto/" class="post-cta">Hablemos sobre tu caso →</a>
+        </div>
+      </div>
+    </footer>
+  </article>
+
+</main>
+
+<!-- @region partials/footer-es.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formación e implantación de IA aplicada, Power BI y desarrollo a medida. Operado por una SL catalana con foco en pymes y administración pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/blog/">Blog</a>
+        <a href="/sobre-mike/">Sobre Mike</a>
+        <a href="/contacto/">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/politica-privacidad/">Privacidad</a>
+        <a href="/politica-cookies/">Cookies</a>
+        <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Cataluña</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

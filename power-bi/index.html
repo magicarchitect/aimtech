@@ -75,6 +75,19 @@
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "Power BI de cero a intermedio",
+    "offers": {
+      "@type": "Offer",
+      "category": "In-company · por grupo",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 4400,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/power-bi/#precios"
+    },
     "description": "Itinerario para usuarios de Excel sin Power BI previo: instalación e interfaz de Power BI Desktop, carga y limpieza de datos con Power Query, informes e interactividad, mapas y visualización geográfica, modelado de datos (relaciones, jerarquías y esquema en estrella) y visuales avanzados con narrativa del informe. Aprendizaje learn-by-doing con 5 proyectos guiados de principio a fin. 20h, online o presencial, en grupos cerrados de hasta 20 personas para empresas, entidades y administraciones públicas.",
     "provider": { "@id": "https://www.aimtech.es/#aimtech" },
     "url": "https://www.aimtech.es/power-bi/#itinerarios",
@@ -104,6 +117,19 @@
     "@context": "https://schema.org",
     "@type": "Course",
     "name": "Power BI Avanzado",
+    "offers": {
+      "@type": "Offer",
+      "category": "In-company · por grupo",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 4400,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/power-bi/#precios"
+    },
     "description": "DAX avanzado, time intelligence, modelado complejo (many-to-many, role-playing), performance con DAX Studio y gobierno del servicio (RLS, deployment pipelines). 20h, online o presencial.",
     "provider": { "@id": "https://www.aimtech.es/#aimtech" },
     "url": "https://www.aimtech.es/power-bi/#itinerarios",
@@ -140,6 +166,9 @@
 ]
 </script>
 
+<!-- Preload: fuente serif del hero (LCP) -->
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../css/tokens.css">
 <link rel="stylesheet" href="../css/fonts.css">
 <link rel="stylesheet" href="../css/base.css">
@@ -156,6 +185,7 @@
 <div class="noise"></div>
 
 <!-- @region partials/nav-es.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
 <nav>
   <a href="/" class="logo" style="text-decoration:none;color:inherit;">
     <img src="/assets/logo.png?v=2" alt="Aimtech" />
@@ -378,7 +408,7 @@
         <div data-reveal="left">
           <div class="section-label">02 — Metodología</div>
           <h2 class="section-title">Concepto, <em>reto</em>, solución.</h2>
-          <p class="section-intro">No vas a ver slides cinco horas seguidas. Cada bloque empieza con un concepto, va seguido de un reto que resuelves tú con un dataset, y termina con la solución comentada y dudas resueltas en directo. En el itinerario de cero a intermedio encadenas <strong>cinco proyectos guiados</strong> —empezando por una tienda online de principio a fin— porque construir un informe real es la única forma de que algo se quede.</p>
+          <p class="section-intro">No vas a ver slides cinco horas seguidas. Cada bloque empieza con un concepto, va seguido de un reto que resuelves tú con un dataset, y termina con la solución comentada y dudas resueltas en directo. En el itinerario de cero a intermedio encadenas <strong>cinco proyectos guiados</strong> —empezando por una tienda online de principio a fin— porque construir un informe real es la única forma de que algo se quede. Si aún estás valorando el salto desde Excel, empieza por <a href="/blog/que-es-power-bi/">qué es Power BI y para qué sirve</a> y por <a href="/blog/power-bi-vs-excel/">Power BI vs Excel: cuándo dar el salto</a>.</p>
         </div>
 
         <div class="method-list" data-stagger>
@@ -427,7 +457,7 @@
             <span class="badge">20h</span>
           </div>
           <h3>Power BI <em>de cero a intermedio</em>.</h3>
-          <p>Partes desde usuario de Excel sin Power BI previo. Sales haciendo informes propios end-to-end y con cinco proyectos guiados a tus espaldas: instalar y conectar datos, limpiarlos con Power Query, modelarlos y contarlos en un informe que se entiende.</p>
+          <p>Partes desde usuario de Excel sin Power BI previo. Sales haciendo informes propios end-to-end y con cinco proyectos guiados a tus espaldas: instalar y conectar datos, <a href="/blog/power-query-limpiar-datos/">limpiarlos con Power Query</a>, <a href="/blog/modelado-datos-power-bi-esquema-estrella/">modelarlos en esquema en estrella</a> y contarlos en un informe que se entiende.</p>
           <div class="modules">
             <div><span class="module-num">01</span>Instalación e interfaz de Power BI Desktop</div>
             <div><span class="module-num">02</span>Carga y limpieza de datos con Power Query</div>
@@ -451,7 +481,7 @@
             <span class="badge">20h</span>
           </div>
           <h3>Power BI <em>Avanzado</em>.</h3>
-          <p>Continuación natural del primero o entrada para quien ya se defiende con Power BI. Modelado complejo, DAX serio, performance y gobierno: lo que separa un informe que se publica de uno que se mantiene.</p>
+          <p>Continuación natural del primero o entrada para quien ya se defiende con Power BI. Modelado complejo, <a href="/blog/dax-medidas-vs-columnas-calculadas/">DAX serio</a>, performance y gobierno: lo que separa un informe que se publica de uno que se mantiene.</p>
           <div class="modules">
             <div><span class="module-num">01</span>DAX avanzado: variables y contextos</div>
             <div><span class="module-num">02</span>Time intelligence: YTD, MTD, comparativas</div>
@@ -499,7 +529,7 @@
       <div data-reveal>
         <div class="section-label">04 — Contratación</div>
         <h2 class="section-title">Para empresas, <em>entidades</em> y AAPP.</h2>
-        <p class="section-intro">Los cursos se imparten durante todo el año en tres modalidades: <strong>presencial en Barcelona y área</strong>, <strong>remoto en directo</strong> para toda España o <strong>in-company</strong> en tus oficinas, en grupos cerrados de hasta 20 personas. Escríbeme indicando perfil, número de personas y formato preferido, y te paso disponibilidad y propuesta económica. <strong>Descuento al contratar dos o más cursos</strong> (pack itinerario).</p>
+        <p class="section-intro">Los cursos se imparten durante todo el año en tres modalidades: <strong>presencial en Barcelona y área</strong>, <strong>remoto en directo</strong> para toda España o <strong>in-company</strong> en tus oficinas, en grupos cerrados de hasta 20 personas. Escríbeme indicando perfil, número de personas y formato preferido, y te paso disponibilidad y propuesta económica. La formación in-company parte de <strong>4.400€ por grupo de hasta 10 personas</strong> (22€/h por alumno), con 440€ por persona adicional, IVA aparte. <strong>Descuento al contratar dos o más cursos</strong> (pack itinerario). Sobre licencias y costes de la herramienta, te interesa <a href="/blog/es-gratis-power-bi/">si Power BI es gratis y lo que cuesta de verdad</a>.</p>
       </div>
 
       <div class="bento" data-stagger>
@@ -512,8 +542,10 @@
           <h3>Para tu <em>equipo</em>.</h3>
           <p>Formación adaptada a tu sector y a los datos que ya manejáis. Online o presencial, horarios y agenda según disponibilidad del grupo.</p>
           <div class="price">
-            <div class="price-num">Consultar</div>
-            <div class="price-label">por grupo · IVA aparte</div>
+            <div class="price-label">desde</div>
+            <div class="price-num">4.400€</div>
+            <div class="price-label">por grupo · hasta 10 pers. · IVA aparte</div>
+            <div class="price-label">+440€ / persona adicional · 22€/h</div>
           </div>
         </article>
 
@@ -525,8 +557,10 @@
           <h3>Para <em>entidades</em>.</h3>
           <p>Asociaciones, fundaciones, colegios profesionales, cooperativas u otras entidades. Online o presencial, formación adaptable al perfil del colectivo.</p>
           <div class="price">
-            <div class="price-num">Consultar</div>
-            <div class="price-label">por grupo · IVA aparte</div>
+            <div class="price-label">desde</div>
+            <div class="price-num">4.400€</div>
+            <div class="price-label">por grupo · hasta 10 pers. · IVA aparte</div>
+            <div class="price-label">+440€ / persona adicional · 22€/h</div>
           </div>
         </article>
 

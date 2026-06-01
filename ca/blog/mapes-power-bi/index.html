@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mapes a Power BI: per què no es veuen i com activar-los | Blog Aimtech</title>
+<meta name="description" content="El mapa de Power BI et surt en blanc o desactivat? Gairebé sempre és una de dues coses. T&#39;expliquem per què passa i com arreglar-ho, pas a pas." />
+
+<link rel="canonical" href="https://www.aimtech.es/ca/blog/mapes-power-bi/" />
+
+<!-- hreflang: variants d'idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/mapas-power-bi/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/mapes-power-bi/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/mapas-power-bi/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="/assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="ca_ES" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Mapes a Power BI: per què no es veuen i com activar-los" />
+<meta property="og:description" content="El mapa de Power BI et surt en blanc o desactivat? Gairebé sempre és una de dues coses. T&#39;expliquem per què passa i com arreglar-ho, pas a pas." />
+<meta property="og:url" content="https://www.aimtech.es/ca/blog/mapes-power-bi/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Mapes a Power BI: per què no es veuen i com activar-los" />
+<meta property="article:published_time" content="2026-06-01" />
+<meta property="article:author" content="Mike Pérez" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Mapes a Power BI: per què no es veuen i com activar-los" />
+<meta name="twitter:description" content="El mapa de Power BI et surt en blanc o desactivat? Gairebé sempre és una de dues coses. T&#39;expliquem per què passa i com arreglar-ho, pas a pas." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: BlogPosting + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Mapes a Power BI: per què no es veuen i com activar-los",
+    "description": "El mapa de Power BI et surt en blanc o desactivat? Gairebé sempre és una de dues coses. T'expliquem per què passa i com arreglar-ho, pas a pas.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "inLanguage": "ca-ES",
+    "keywords": ["power-bi","visualitzacio"],
+    "image": "https://www.aimtech.es/assets/og/default.png",
+    "url": "https://www.aimtech.es/ca/blog/mapes-power-bi/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.aimtech.es/ca/blog/mapes-power-bi/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike Pérez",
+      "url": "https://www.aimtech.es/ca/sobre-mike/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.aimtech.es/assets/logo.png?v=2"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aimtech.es/ca/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Mapes a Power BI: per què no es veuen i com activar-los", "item": "https://www.aimtech.es/ca/blog/mapes-power-bi/" }
+    ]
+  }
+]
+</script>
+
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/blog.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<script src="/js/cookie-consent.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body class="is-post">
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-serveis-menu">
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+    </div>
+    <a href="/ca/blog/">Blog</a>
+    <a href="/ca/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/blog/mapas-power-bi/">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/blog/mapes-power-bi/" class="active">CA</a>
+    </div>
+    <a href="/ca/contacte/" class="nav-cta">Parlem-ne →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <article class="post">
+    <header class="post-header container">
+      <a href="/ca/blog/" class="post-back">← Blog</a>
+      <div class="post-meta">
+        <time datetime="2026-06-01">1 de juny de 2026</time>
+        <span class="sep">·</span>
+        <span>3 min de lectura</span>
+        <span class="sep">·</span>
+        <span>Mike Pérez</span>
+      </div>
+      <h1>Mapes a Power BI: per què no es veuen i com activar-los</h1>
+      <p class="post-lead">El mapa de Power BI et surt en blanc o desactivat? Gairebé sempre és una de dues coses. T&#39;expliquem per què passa i com arreglar-ho, pas a pas.</p>
+      <div class="post-tags"><span>power-bi</span><span>visualitzacio</span></div>
+    </header>
+
+    <div class="post-body container">
+      <p>Poques coses frustren més en començar amb Power BI que arrossegar un camp de ciutats a un mapa… i que no surti res. O pitjor: que la icona del mapa aparegui en gris, desactivada. Gairebé sempre és una de dues causes, i totes dues tenen un arranjament ràpid. Som-hi.</p>
+<h2>Causa 1: el mapa està desactivat a l’organització</h2>
+<p>Per defecte, en molts tenants d’empresa els <strong>mapes estan bloquejats per l’administrador</strong>. És una opció de seguretat: els visuals de mapa envien dades a un servei extern de Microsoft (Bing) per geolocalitzar, i algunes organitzacions ho desactiven fins a valorar-ho.</p>
+<p>Si la icona de mapa apareix en gris, l’arranjament no és al teu informe: és al <strong>portal d’administració de Power BI</strong>, a la configuració del tenant, on cal habilitar “Map and filled map visuals”. Això ho fa qui administra Power BI a la teva organització (TI), no es resol des de Desktop.</p>
+<h2>Causa 2: les teves dades no tenen categoria geogràfica</h2>
+<p>L’altra causa, més habitual: Power BI <strong>no sap que la teva columna és geogràfica</strong>. Per a ell, “Barcelona” o “08001” són text qualsevol fins que l’hi dius.</p>
+<p>L’arranjament és al model: selecciones la columna i, a <strong>Categoria de dades</strong>, li assignes el que és —Ciutat, País, Província/Estat, Codi postal, Latitud, Longitud—. Amb això, Power BI ja sap com situar-la al mapa i millora moltíssim l’encert de la geolocalització.</p>
+<p>Un consell que estalvia maldecaps: com més precisa la dada, millor. Una ciutat sola pot ser ambigua; donar-li també província i país, o directament latitud/longitud, evita que et col·loqui punts a l’altre hemisferi.</p>
+<figure class="svg-figure">
+<svg viewBox="0 0 760 190" role="img" aria-labelledby="fig-mp-t fig-mp-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-mp-t">Per què no es veu el mapa</title>
+<desc id="fig-mp-d">Si el mapa surt en gris és un permís del tenant; si surt buit, falta marcar la categoria geogràfica de les dades.</desc>
+<g>
+<rect x="24" y="24" width="344" height="150" rx="12" class="d-card"/>
+<text x="46" y="52" font-size="13" class="d-title">Mapa en gris</text>
+<text x="46" y="70" font-size="10" class="d-txt-i">permís del tenant (TI)</text>
+<rect x="46" y="84" width="300" height="72" rx="8" class="d-card-sub"/>
+<circle cx="196" cy="120" r="9" class="d-stroke-mute"/>
+</g>
+<g>
+<rect x="392" y="24" width="344" height="150" rx="12" class="d-card"/>
+<text x="414" y="52" font-size="13" class="d-title">Amb categoria geogràfica</text>
+<text x="414" y="70" font-size="10" class="d-txt-i">punts al mapa</text>
+<rect x="414" y="84" width="300" height="72" rx="8" class="d-card-sub"/>
+<circle cx="478" cy="124" r="5" class="d-accent"/>
+<circle cx="556" cy="106" r="5" class="d-accent"/>
+<circle cx="640" cy="132" r="5" class="d-accent"/>
+</g>
+</svg>
+<figcaption>Les dues causes: si el visual surt <b>en gris</b> és un permís del tenant; si surt <b>buit</b>, falta marcar la categoria geogràfica de les teves dades.</figcaption>
+</figure>
+<h2>Quin tipus de mapa fer servir</h2>
+<p>Aclarit el “per què no es veu”, queda triar:</p>
+<ul>
+<li><strong>Mapa de bombolles</strong> (el bàsic): punts la mida dels quals representa un valor. Bé per a “vendes per ciutat”.</li>
+<li><strong>Mapa coroplètic</strong> (<em>filled map</em>): acoloreix regions senceres segons un valor. Bé per a “atur per província”.</li>
+<li><strong>Azure Maps / ArcGIS</strong>: visuals més potents per a anàlisi geogràfica seriosa (capes, rutes, mapes de calor) quan el bàsic es queda curt.</li>
+</ul>
+<h2>La lliçó de fons</h2>
+<p>Els mapes són l’exemple perfecte d’una cosa que a Power BI sembla un bug i és <strong>configuració</strong>: o un permís del tenant, o una categoria de dada sense assignar. Saber distingir “això és el meu model” de “això és administració” t’estalvia hores de barallar-te amb el lloc equivocat.</p>
+<p>A la <a href="/ca/power-bi/">formació en Power BI d’Aimtech</a> els mapes són un bloc propi de l’itinerari de zero a intermedi —amb els dos problemes reals que acabem de veure—, dins d’una visualització que va més enllà del gràfic de barres. Presencial a Barcelona, en remot en directe o in-company, per a empreses, entitats i AAPP.</p>
+
+    </div>
+
+    <footer class="post-footer container">
+      <div class="post-footer-grid">
+        <div>
+          <span class="post-footer-label">Escrit per</span>
+          <a href="/ca/sobre-mike/" class="post-author">Mike Pérez</a>
+        </div>
+        <div>
+          <span class="post-footer-label">Et ressona?</span>
+          <a href="/ca/contacte/" class="post-cta">Parlem del teu cas →</a>
+        </div>
+      </div>
+    </footer>
+  </article>
+
+</main>
+
+<!-- @region partials/footer-ca.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formació i implantació d'IA aplicada, Power BI i desenvolupament a mida. Operada per una SL catalana amb focus en pimes i administració pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Serveis</h3>
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/ca/blog/">Blog</a>
+        <a href="/ca/sobre-mike/">Sobre Mike</a>
+        <a href="/ca/contacte/">Contacte</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/ca/avis-legal/">Avís legal</a>
+        <a href="/ca/politica-privacitat/">Privacitat</a>
+        <a href="/ca/politica-galetes/">Galetes</a>
+        <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>
