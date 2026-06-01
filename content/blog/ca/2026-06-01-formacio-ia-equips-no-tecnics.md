@@ -18,6 +18,30 @@ Un perfil tècnic ja se sol espavilar sol amb la IA. En canvi, una persona d'adm
 
 I són **moltes més persones**. Formar deu perfils no tècnics mou l'agulla de l'organització molt més que formar un tècnic que ja anava sobrat. Per això aquesta és, gairebé sempre, la formació de més impacte.
 
+<figure class="svg-figure">
+<svg viewBox="0 0 760 178" role="img" aria-labelledby="fig-pl-t fig-pl-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-pl-t">On és la palanca</title>
+<desc id="fig-pl-d">Formar un tècnic que ja se'n surt sol mou poc; formar deu perfils no tècnics mou l'agulla de tota l'organització.</desc>
+<g>
+<rect x="24" y="22" width="344" height="138" rx="12" class="d-card"/>
+<text x="46" y="50" font-size="13" class="d-title">1 perfil tècnic</text>
+<text x="46" y="68" font-size="10" class="d-txt-i">ja se'n surt sol</text>
+<circle cx="56" cy="100" r="7" class="d-accent"/>
+<rect x="46" y="120" width="60" height="14" rx="3" class="d-accent-soft"/>
+<text x="46" y="150" font-size="9" class="d-label">poc impacte</text>
+</g>
+<g>
+<rect x="392" y="22" width="344" height="138" rx="12" class="d-card"/>
+<text x="414" y="50" font-size="13" class="d-title">10 perfils no tècnics</text>
+<text x="414" y="68" font-size="10" class="d-txt-i">multipliquen la productivitat</text>
+<circle cx="424" cy="100" r="6" class="d-accent"/><circle cx="454" cy="100" r="6" class="d-accent"/><circle cx="484" cy="100" r="6" class="d-accent"/><circle cx="514" cy="100" r="6" class="d-accent"/><circle cx="544" cy="100" r="6" class="d-accent"/><circle cx="574" cy="100" r="6" class="d-accent"/><circle cx="604" cy="100" r="6" class="d-accent"/><circle cx="634" cy="100" r="6" class="d-accent"/><circle cx="664" cy="100" r="6" class="d-accent"/><circle cx="694" cy="100" r="6" class="d-accent"/>
+<rect x="414" y="120" width="288" height="14" rx="3" class="d-accent"/>
+<text x="414" y="150" font-size="9" class="d-label">gran impacte a l'organització</text>
+</g>
+</svg>
+<figcaption>La palanca més gran no és a TI: formar <b>deu perfils no tècnics</b> que fan tasques repetitives mou l'agulla molt més que formar un tècnic que ja anava sobrat.</figcaption>
+</figure>
+
 ## Què NO és aquesta formació
 
 Perquè serveixi, cal aclarir què no és:

@@ -23,6 +23,39 @@ En un model sa, les teves taules són de dos tipus:
 
 L'**esquema en estrella** col·loca una taula de fets al centre i les dimensions al voltant, cadascuna connectada al centre amb una relació **un-a-molts** (una fila de dimensió → moltes files de fets). Dibuixat, sembla una estrella. I és com Power BI vol treballar: el seu motor (VertiPaq) està optimitzat precisament per a aquest patró.
 
+<figure class="svg-figure">
+<svg viewBox="0 0 760 300" role="img" aria-labelledby="fig-est-t fig-est-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-est-t">Esquema en estrella</title>
+<desc id="fig-est-d">Una taula de fets (Vendes) al centre connectada a quatre dimensions al voltant: Dates, Clients, Productes i Botigues.</desc>
+<line x1="380" y1="150" x2="380" y2="92" class="d-line"/>
+<line x1="380" y1="150" x2="224" y2="150" class="d-line"/>
+<line x1="380" y1="150" x2="536" y2="150" class="d-line"/>
+<line x1="380" y1="150" x2="380" y2="208" class="d-line"/>
+<g>
+<rect x="312" y="46" width="136" height="46" rx="8" class="d-card-sub"/><rect x="312" y="46" width="136" height="4" rx="2" class="d-accent"/>
+<text x="380" y="74" text-anchor="middle" font-size="13" class="d-title">Dates</text>
+</g>
+<g>
+<rect x="88" y="127" width="136" height="46" rx="8" class="d-card-sub"/><rect x="88" y="127" width="136" height="4" rx="2" class="d-accent"/>
+<text x="156" y="155" text-anchor="middle" font-size="13" class="d-title">Clients</text>
+</g>
+<g>
+<rect x="536" y="127" width="136" height="46" rx="8" class="d-card-sub"/><rect x="536" y="127" width="136" height="4" rx="2" class="d-accent"/>
+<text x="604" y="155" text-anchor="middle" font-size="13" class="d-title">Productes</text>
+</g>
+<g>
+<rect x="312" y="208" width="136" height="46" rx="8" class="d-card-sub"/><rect x="312" y="208" width="136" height="4" rx="2" class="d-accent"/>
+<text x="380" y="236" text-anchor="middle" font-size="13" class="d-title">Botigues</text>
+</g>
+<rect x="318" y="122" width="124" height="56" rx="8" class="d-surface"/>
+<rect x="318" y="122" width="124" height="56" rx="8" class="d-accent-soft"/>
+<rect x="318" y="122" width="124" height="5" rx="2.5" class="d-accent"/>
+<text x="380" y="148" text-anchor="middle" font-size="14" class="d-ink">Vendes</text>
+<text x="380" y="166" text-anchor="middle" font-size="9" class="d-label">fets</text>
+</svg>
+<figcaption>L'esquema en estrella: una taula de <b>fets</b> (Vendes) al centre i les <b>dimensions</b> al voltant, cadascuna amb una relació un-a-molts. Power BI rendeix millor així.</figcaption>
+</figure>
+
 El contrari —ficar-ho tot en una sola taula plana gegant, o encadenar taules en floc de neu amb relacions en cascada— és el que produeix lentitud i resultats estranys.
 
 ## La taula de calendari: el detall que gairebé tothom oblida

@@ -21,6 +21,31 @@ Cerca "curs de Power BI a Barcelona" i et sortiran desenes: cambres de comerç, 
 
 Si aneu uns quants del mateix equip, gairebé sempre guanya l'in-company.
 
+<figure class="svg-figure">
+<svg viewBox="0 0 760 176" role="img" aria-labelledby="fig-cb-t fig-cb-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-cb-t">Curs obert davant d'in-company</title>
+<desc id="fig-cb-d">El curs obert serveix per a una o dues persones amb contingut genèric; l'in-company forma el teu equip sobre les vostres dades.</desc>
+<g>
+<rect x="24" y="22" width="344" height="132" rx="12" class="d-card"/>
+<text x="46" y="50" font-size="13" class="d-title">Curs obert</text>
+<text x="46" y="68" font-size="10" class="d-txt-i">1–2 persones · genèric</text>
+<circle cx="58" cy="100" r="7" class="d-stroke-mute"/>
+<circle cx="84" cy="100" r="7" class="d-stroke-mute"/>
+<text x="46" y="138" font-size="9" class="d-label">dates fixes · barat per persona</text>
+</g>
+<g>
+<rect x="392" y="22" width="344" height="132" rx="12" class="d-card"/>
+<rect x="392" y="22" width="344" height="132" rx="12" class="d-accent-soft"/>
+<rect x="392" y="22" width="344" height="5" rx="2.5" class="d-accent"/>
+<text x="414" y="52" font-size="13" class="d-ink">In-company</text>
+<text x="414" y="70" font-size="10" class="d-txt">el teu equip · a mida</text>
+<circle cx="426" cy="102" r="6" class="d-accent"/><circle cx="456" cy="102" r="6" class="d-accent"/><circle cx="486" cy="102" r="6" class="d-accent"/><circle cx="516" cy="102" r="6" class="d-accent"/><circle cx="546" cy="102" r="6" class="d-accent"/><circle cx="576" cy="102" r="6" class="d-accent"/>
+<text x="414" y="138" font-size="9" class="d-label">les vostres dades i sector</text>
+</g>
+</svg>
+<figcaption>Per a una o dues persones, el <b>curs obert</b> n'hi ha prou; si formeu un equip, l'<b>in-company</b> —sobre les vostres dades— gairebé sempre rendeix més.</figcaption>
+</figure>
+
 ## Presencial, online en directe o gravat
 
 - **Presencial** (a Barcelona i àrea): màxima concentració i dinàmica de grup. Ideal per arrencar de zero.

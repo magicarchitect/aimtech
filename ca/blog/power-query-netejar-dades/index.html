@@ -94,7 +94,7 @@
 <script src="/js/cookie-consent.js" defer></script>
 <script src="/js/site.js" defer></script>
 </head>
-<body>
+<body class="is-post">
 
 <div class="grid-bg"></div>
 <div class="noise"></div>
@@ -123,7 +123,7 @@
       </div>
     </div>
     <a href="/ca/blog/">Blog</a>
-    <a href="/ca/sobre-mike/">Sobre el Mike</a>
+    <a href="/ca/sobre-mike/">Sobre Mike</a>
   </div>
   <div class="nav-right">
     <div class="lang-switch">
@@ -144,7 +144,7 @@
       <div class="post-meta">
         <time datetime="2026-06-01">1 de juny de 2026</time>
         <span class="sep">·</span>
-        <span>2 min de lectura</span>
+        <span>4 min de lectura</span>
         <span class="sep">·</span>
         <span>Mike Pérez</span>
       </div>
@@ -157,6 +157,43 @@
       <p>El 80% de la feina d’un informe no és el gràfic: és deixar les dades en condicions per poder fer-lo. Dates en tres formats diferents, columnes amb espais, imports que arriben com a text, files buides, dos sistemes que anomenen el mateix client de dues maneres. <strong>Power Query</strong> és l’eina de Power BI per netejar tot això —i la millor part: ho configures un cop i es repeteix sol a cada actualització.</p>
 <h2>Què és Power Query (i per què et canvia la vida)</h2>
 <p>Power Query és l’editor on <strong>transformes les dades abans que entrin al model</strong>. Cada cosa que fas —treure una columna, canviar un tipus, filtrar files— queda registrada com un <strong>pas aplicat</strong>. La pròxima vegada que arribin dades noves amb el mateix format, Power Query repeteix tots els passos automàticament. S’ha acabat netejar l’Excel a mà cada dilluns.</p>
+<figure class="svg-figure">
+<svg viewBox="0 0 760 212" role="img" aria-labelledby="fig-pq-t fig-pq-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-pq-t">El flux de Power Query</title>
+<desc id="fig-pq-d">Les dades brutes passen pels passos aplicats de Power Query i en surten netes; el procés es repeteix sol a cada actualització.</desc>
+<g>
+<rect x="16" y="30" width="212" height="116" rx="12" class="d-card"/>
+<text x="38" y="58" font-size="13" class="d-title">Dades brutes</text>
+<rect x="38" y="74" width="120" height="13" rx="2" class="d-card-sub"/>
+<rect x="38" y="93" width="168" height="13" rx="2" class="d-card-sub"/>
+<rect x="38" y="112" width="92" height="13" rx="2" class="d-card-sub"/>
+<circle cx="196" cy="99" r="4" class="d-accent"/>
+</g>
+<line x1="228" y1="88" x2="270" y2="88" class="d-stroke-mute"/>
+<path d="M272 88 L263 83 L263 93 Z" class="d-mute"/>
+<g>
+<rect x="274" y="30" width="212" height="116" rx="12" class="d-card"/>
+<rect x="274" y="30" width="212" height="116" rx="12" class="d-accent-soft"/>
+<text x="296" y="58" font-size="13" class="d-title">Power Query</text>
+<text x="296" y="78" font-size="10" class="d-num">01</text><text x="316" y="78" font-size="11" class="d-txt">tipus de dada</text>
+<text x="296" y="98" font-size="10" class="d-num">02</text><text x="316" y="98" font-size="11" class="d-txt">treure el que sobra</text>
+<text x="296" y="118" font-size="10" class="d-num">03</text><text x="316" y="118" font-size="11" class="d-txt">netejar text</text>
+<text x="296" y="138" font-size="10" class="d-num">04</text><text x="316" y="138" font-size="11" class="d-txt">combinar / annexar</text>
+</g>
+<line x1="486" y1="88" x2="528" y2="88" class="d-stroke-mute"/>
+<path d="M530 88 L521 83 L521 93 Z" class="d-mute"/>
+<g>
+<rect x="532" y="30" width="212" height="116" rx="12" class="d-card"/>
+<text x="554" y="58" font-size="13" class="d-title">Dades netes</text>
+<rect x="554" y="74" width="168" height="13" rx="2" class="d-card-sub"/><circle cx="568" cy="80" r="2.4" class="d-accent"/>
+<rect x="554" y="93" width="168" height="13" rx="2" class="d-card-sub"/><circle cx="568" cy="99" r="2.4" class="d-accent"/>
+<rect x="554" y="112" width="168" height="13" rx="2" class="d-card-sub"/><circle cx="568" cy="118" r="2.4" class="d-accent"/>
+</g>
+<path d="M380 168 C 300 196, 460 196, 380 168" class="d-dash"/>
+<text x="380" y="190" text-anchor="middle" font-size="10" class="d-label">es repeteix en cada actualització</text>
+</svg>
+<figcaption>Configures la neteja un cop com a <b>passos aplicats</b>; les dades brutes entren i en surten netes, i el procés <b>es repeteix sol</b> a cada actualització.</figcaption>
+</figure>
 <h2>Els arranjaments que faràs el 90% de les vegades</h2>
 <ul>
 <li><strong>Tipus de dada correctes.</strong> El primer i el més important: que les dates siguin dates, els números números i el text text. Un import que entra com a text no se suma.</li>
@@ -221,7 +258,7 @@
       <div class="footer-col">
         <h3>Recursos</h3>
         <a href="/ca/blog/">Blog</a>
-        <a href="/ca/sobre-mike/">Sobre el Mike</a>
+        <a href="/ca/sobre-mike/">Sobre Mike</a>
         <a href="/ca/contacte/">Contacte</a>
       </div>
 

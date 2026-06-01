@@ -26,6 +26,30 @@ L'arranjament és al model: selecciones la columna i, a **Categoria de dades**, 
 
 Un consell que estalvia maldecaps: com més precisa la dada, millor. Una ciutat sola pot ser ambigua; donar-li també província i país, o directament latitud/longitud, evita que et col·loqui punts a l'altre hemisferi.
 
+<figure class="svg-figure">
+<svg viewBox="0 0 760 190" role="img" aria-labelledby="fig-mp-t fig-mp-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-mp-t">Per què no es veu el mapa</title>
+<desc id="fig-mp-d">Si el mapa surt en gris és un permís del tenant; si surt buit, falta marcar la categoria geogràfica de les dades.</desc>
+<g>
+<rect x="24" y="24" width="344" height="150" rx="12" class="d-card"/>
+<text x="46" y="52" font-size="13" class="d-title">Mapa en gris</text>
+<text x="46" y="70" font-size="10" class="d-txt-i">permís del tenant (TI)</text>
+<rect x="46" y="84" width="300" height="72" rx="8" class="d-card-sub"/>
+<circle cx="196" cy="120" r="9" class="d-stroke-mute"/>
+</g>
+<g>
+<rect x="392" y="24" width="344" height="150" rx="12" class="d-card"/>
+<text x="414" y="52" font-size="13" class="d-title">Amb categoria geogràfica</text>
+<text x="414" y="70" font-size="10" class="d-txt-i">punts al mapa</text>
+<rect x="414" y="84" width="300" height="72" rx="8" class="d-card-sub"/>
+<circle cx="478" cy="124" r="5" class="d-accent"/>
+<circle cx="556" cy="106" r="5" class="d-accent"/>
+<circle cx="640" cy="132" r="5" class="d-accent"/>
+</g>
+</svg>
+<figcaption>Les dues causes: si el visual surt <b>en gris</b> és un permís del tenant; si surt <b>buit</b>, falta marcar la categoria geogràfica de les teves dades.</figcaption>
+</figure>
+
 ## Quin tipus de mapa fer servir
 
 Aclarit el "per què no es veu", queda triar:

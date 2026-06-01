@@ -28,6 +28,39 @@ El pero llega con el **volumen**: Zapier cobra por *tarea* (cada paso ejecutado)
 
 Es además el que mejor encaja cuando la automatización lleva **IA de por medio**: agentes, conexión con modelos como Claude, lógica a medida y privacidad. Por eso es nuestra herramienta de referencia para [implantar IA agéntica](/ia-agentica/).
 
+<figure class="svg-figure">
+<svg viewBox="0 0 760 196" role="img" aria-labelledby="fig-n8-t fig-n8-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-n8-t">Zapier, Make y n8n en el eje facilidad–control</title>
+<desc id="fig-n8-d">Zapier es el más fácil; Make es potente y más barato; n8n da control total y encaja mejor con IA.</desc>
+<g>
+<rect x="40" y="28" width="206" height="92" rx="10" class="d-card"/>
+<text x="60" y="58" font-size="14" class="d-title">Zapier</text>
+<text x="60" y="82" font-size="11" class="d-txt">el más fácil</text>
+<text x="60" y="100" font-size="11" class="d-txt">caro a escala</text>
+</g>
+<g>
+<rect x="277" y="28" width="206" height="92" rx="10" class="d-card"/>
+<text x="297" y="58" font-size="14" class="d-title">Make</text>
+<text x="297" y="82" font-size="11" class="d-txt">potente y visual</text>
+<text x="297" y="100" font-size="11" class="d-txt">más barato</text>
+</g>
+<g>
+<rect x="514" y="28" width="206" height="92" rx="10" class="d-card"/>
+<rect x="514" y="28" width="206" height="92" rx="10" class="d-accent-soft"/>
+<rect x="514" y="28" width="206" height="5" rx="2.5" class="d-accent"/>
+<text x="534" y="60" font-size="14" class="d-ink">n8n</text>
+<text x="534" y="84" font-size="11" class="d-txt">control · self-host</text>
+<text x="534" y="102" font-size="11" class="d-txt">ideal para IA</text>
+</g>
+<line x1="48" y1="158" x2="712" y2="158" class="d-stroke-mute"/>
+<path d="M44 158 L53 153 L53 163 Z" class="d-mute"/>
+<path d="M716 158 L707 153 L707 163 Z" class="d-mute"/>
+<text x="48" y="180" font-size="10" class="d-label">fácil de empezar</text>
+<text x="712" y="180" text-anchor="end" font-size="10" class="d-label">control de datos · IA</text>
+</svg>
+<figcaption>No hay una "mejor": <b>Zapier</b> gana en facilidad, <b>Make</b> en potencia por precio, y <b>n8n</b> en control de datos e IA.</figcaption>
+</figure>
+
 ## Cómo elegir, en una frase
 
 - **Quieres lo más fácil y son flujos simples** → Zapier.

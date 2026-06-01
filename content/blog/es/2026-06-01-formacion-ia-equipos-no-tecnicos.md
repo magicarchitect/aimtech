@@ -18,6 +18,30 @@ Un perfil técnico ya suele apañárselas solo con la IA. En cambio, una persona
 
 Y son **muchas más personas**. Formar a diez perfiles no técnicos mueve la aguja de la organización mucho más que formar a un técnico que ya iba sobrado. Por eso esta es, casi siempre, la formación de mayor impacto.
 
+<figure class="svg-figure">
+<svg viewBox="0 0 760 178" role="img" aria-labelledby="fig-pl-t fig-pl-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-pl-t">Dónde está la palanca</title>
+<desc id="fig-pl-d">Formar a un técnico que ya se apaña solo mueve poco; formar a diez perfiles no técnicos mueve la aguja de toda la organización.</desc>
+<g>
+<rect x="24" y="22" width="344" height="138" rx="12" class="d-card"/>
+<text x="46" y="50" font-size="13" class="d-title">1 perfil técnico</text>
+<text x="46" y="68" font-size="10" class="d-txt-i">ya se apaña solo</text>
+<circle cx="56" cy="100" r="7" class="d-accent"/>
+<rect x="46" y="120" width="60" height="14" rx="3" class="d-accent-soft"/>
+<text x="46" y="150" font-size="9" class="d-label">poco impacto</text>
+</g>
+<g>
+<rect x="392" y="22" width="344" height="138" rx="12" class="d-card"/>
+<text x="414" y="50" font-size="13" class="d-title">10 perfiles no técnicos</text>
+<text x="414" y="68" font-size="10" class="d-txt-i">multiplican su productividad</text>
+<circle cx="424" cy="100" r="6" class="d-accent"/><circle cx="454" cy="100" r="6" class="d-accent"/><circle cx="484" cy="100" r="6" class="d-accent"/><circle cx="514" cy="100" r="6" class="d-accent"/><circle cx="544" cy="100" r="6" class="d-accent"/><circle cx="574" cy="100" r="6" class="d-accent"/><circle cx="604" cy="100" r="6" class="d-accent"/><circle cx="634" cy="100" r="6" class="d-accent"/><circle cx="664" cy="100" r="6" class="d-accent"/><circle cx="694" cy="100" r="6" class="d-accent"/>
+<rect x="414" y="120" width="288" height="14" rx="3" class="d-accent"/>
+<text x="414" y="150" font-size="9" class="d-label">gran impacto en la organización</text>
+</g>
+</svg>
+<figcaption>La mayor palanca no está en TI: formar a <b>diez perfiles no técnicos</b> que hacen tareas repetitivas mueve la aguja mucho más que formar a un técnico que ya iba sobrado.</figcaption>
+</figure>
+
 ## Qué NO es esta formación
 
 Para que sirva, hay que aclarar lo que no es:

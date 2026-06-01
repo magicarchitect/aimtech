@@ -94,7 +94,7 @@
 <script src="/js/cookie-consent.js" defer></script>
 <script src="/js/site.js" defer></script>
 </head>
-<body>
+<body class="is-post">
 
 <div class="grid-bg"></div>
 <div class="noise"></div>
@@ -144,7 +144,7 @@
       <div class="post-meta">
         <time datetime="2026-06-01">1 de junio de 2026</time>
         <span class="sep">·</span>
-        <span>2 min de lectura</span>
+        <span>3 min de lectura</span>
         <span class="sep">·</span>
         <span>Mike Pérez</span>
       </div>
@@ -163,6 +163,38 @@
 </ul>
 <h2>El esquema en estrella</h2>
 <p>El <strong>esquema en estrella</strong> coloca una tabla de hechos en el centro y las dimensiones alrededor, cada una conectada al centro con una relación <strong>uno-a-muchos</strong> (una fila de dimensión → muchas filas de hechos). Dibujado, parece una estrella. Y es como Power BI quiere trabajar: su motor (VertiPaq) está optimizado precisamente para este patrón.</p>
+<figure class="svg-figure">
+<svg viewBox="0 0 760 300" role="img" aria-labelledby="fig-est-t fig-est-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-est-t">Esquema en estrella</title>
+<desc id="fig-est-d">Una tabla de hechos (Ventas) en el centro conectada a cuatro dimensiones alrededor: Fechas, Clientes, Productos y Tiendas.</desc>
+<line x1="380" y1="150" x2="380" y2="92" class="d-line"/>
+<line x1="380" y1="150" x2="224" y2="150" class="d-line"/>
+<line x1="380" y1="150" x2="536" y2="150" class="d-line"/>
+<line x1="380" y1="150" x2="380" y2="208" class="d-line"/>
+<g>
+<rect x="312" y="46" width="136" height="46" rx="8" class="d-card-sub"/><rect x="312" y="46" width="136" height="4" rx="2" class="d-accent"/>
+<text x="380" y="74" text-anchor="middle" font-size="13" class="d-title">Fechas</text>
+</g>
+<g>
+<rect x="88" y="127" width="136" height="46" rx="8" class="d-card-sub"/><rect x="88" y="127" width="136" height="4" rx="2" class="d-accent"/>
+<text x="156" y="155" text-anchor="middle" font-size="13" class="d-title">Clientes</text>
+</g>
+<g>
+<rect x="536" y="127" width="136" height="46" rx="8" class="d-card-sub"/><rect x="536" y="127" width="136" height="4" rx="2" class="d-accent"/>
+<text x="604" y="155" text-anchor="middle" font-size="13" class="d-title">Productos</text>
+</g>
+<g>
+<rect x="312" y="208" width="136" height="46" rx="8" class="d-card-sub"/><rect x="312" y="208" width="136" height="4" rx="2" class="d-accent"/>
+<text x="380" y="236" text-anchor="middle" font-size="13" class="d-title">Tiendas</text>
+</g>
+<rect x="318" y="122" width="124" height="56" rx="8" class="d-surface"/>
+<rect x="318" y="122" width="124" height="56" rx="8" class="d-accent-soft"/>
+<rect x="318" y="122" width="124" height="5" rx="2.5" class="d-accent"/>
+<text x="380" y="148" text-anchor="middle" font-size="14" class="d-ink">Ventas</text>
+<text x="380" y="166" text-anchor="middle" font-size="9" class="d-label">hechos</text>
+</svg>
+<figcaption>El esquema en estrella: una tabla de <b>hechos</b> (Ventas) en el centro y las <b>dimensiones</b> alrededor, cada una con una relación uno-a-muchos. Power BI rinde mejor así.</figcaption>
+</figure>
 <p>Lo contrario —meter todo en una sola tabla plana gigante, o encadenar tablas en copo de nieve con relaciones en cascada— es lo que produce lentitud y resultados raros.</p>
 <h2>La tabla de calendario: el detalle que casi todos olvidan</h2>
 <p>Si quieres comparar “este mes vs el anterior”, “acumulado del año” o “mismo periodo del año pasado”, necesitas una <strong>tabla de calendario</strong> propia (una dimensión de fechas) relacionada con tus hechos. Sin ella, la <em>time intelligence</em> de DAX no funciona bien. Es de las primeras cosas que se montan en un modelo serio.</p>

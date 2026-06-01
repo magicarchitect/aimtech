@@ -29,6 +29,38 @@ La mayoría de prompts buenos tienen estas cuatro piezas:
 
 Junta las cuatro y el salto de calidad respecto a "responde a esta queja" es enorme. La IA deja de adivinar.
 
+<figure class="svg-figure">
+<svg viewBox="0 0 760 232" role="img" aria-labelledby="fig-pe-t fig-pe-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-pe-t">La estructura de un buen prompt</title>
+<desc id="fig-pe-d">Rol, contexto, tarea y formato se suman en el prompt y producen una respuesta que funciona a la primera.</desc>
+<g>
+<rect x="24" y="28" width="380" height="40" rx="7" class="d-card-sub"/><rect x="24" y="28" width="4" height="40" rx="2" class="d-accent"/>
+<text x="42" y="46" font-size="12" class="d-title">Rol</text><text x="42" y="61" font-size="10" class="d-txt">responsable de atención al cliente</text>
+</g>
+<g>
+<rect x="24" y="76" width="380" height="40" rx="7" class="d-card-sub"/><rect x="24" y="76" width="4" height="40" rx="2" class="d-accent"/>
+<text x="42" y="94" font-size="12" class="d-title">Contexto</text><text x="42" y="109" font-size="10" class="d-txt">queja por un retraso de 3 días</text>
+</g>
+<g>
+<rect x="24" y="124" width="380" height="40" rx="7" class="d-card-sub"/><rect x="24" y="124" width="4" height="40" rx="2" class="d-accent"/>
+<text x="42" y="142" font-size="12" class="d-title">Tarea</text><text x="42" y="157" font-size="10" class="d-txt">redacta una respuesta</text>
+</g>
+<g>
+<rect x="24" y="172" width="380" height="40" rx="7" class="d-card-sub"/><rect x="24" y="172" width="4" height="40" rx="2" class="d-accent"/>
+<text x="42" y="190" font-size="12" class="d-title">Formato</text><text x="42" y="205" font-size="10" class="d-txt">≤120 palabras, tono cercano</text>
+</g>
+<line x1="412" y1="120" x2="470" y2="120" class="d-stroke-mute"/>
+<path d="M472 120 L463 115 L463 125 Z" class="d-mute"/>
+<rect x="492" y="84" width="244" height="72" rx="10" class="d-surface"/>
+<rect x="492" y="84" width="244" height="72" rx="10" class="d-accent-soft"/>
+<rect x="492" y="84" width="244" height="5" rx="2.5" class="d-accent"/>
+<path d="M512 120 l7 7 l13 -15" class="d-accent-s"/>
+<text x="544" y="118" font-size="14" class="d-ink">Respuesta que funciona</text>
+<text x="544" y="137" font-size="10" class="d-label">a la primera</text>
+</svg>
+<figcaption><b>Rol + contexto + tarea + formato</b>: cuatro piezas que convierten "responde a esto" en una instrucción que la IA acierta a la primera.</figcaption>
+</figure>
+
 ## Iterar: el segundo borrador casi siempre gana
 
 El primer resultado rara vez es el definitivo, y está bien. En lugar de empezar de cero, **corrige sobre lo que ya tienes**: "más corto", "menos formal", "quita la segunda frase", "añade una alternativa". Iterar dos o tres veces es más rápido que escribir el prompt perfecto a la primera, y enseña al equipo a dialogar con la herramienta en vez de tratarla como una máquina de una sola pulsación.

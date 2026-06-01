@@ -19,6 +19,31 @@ Las administraciones públicas manejan datos a espuertas —presupuestos, expedi
 - **Datos abiertos.** Muchos portales de *open data* publican en formatos que Power BI lee directamente, lo que facilita reaprovecharlos.
 - **Sin grandes inversiones.** [Power BI Desktop es gratis](/blog/es-gratis-power-bi/) para crear; el coste aparece al compartir, y suele ser modesto frente al valor que aporta.
 
+<figure class="svg-figure">
+<svg viewBox="0 0 760 196" role="img" aria-labelledby="fig-db-t fig-db-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-db-t">Un cuadro de mando de gestión</title>
+<desc id="fig-db-d">Power BI convierte datos dispersos en KPIs y gráficos que se actualizan solos: ejecución presupuestaria, expedientes y nivel de servicio.</desc>
+<rect x="70" y="20" width="620" height="158" rx="12" class="d-card"/>
+<text x="92" y="48" font-size="12" class="d-title">Cuadro de mando · gestión</text>
+<rect x="92" y="58" width="184" height="48" rx="6" class="d-card-sub"/>
+<text x="106" y="88" font-size="22" class="d-kpi">84<tspan font-size="13">%</tspan></text>
+<text x="106" y="102" font-size="8" class="d-label">ejecución</text>
+<rect x="288" y="58" width="184" height="48" rx="6" class="d-card-sub"/>
+<text x="302" y="88" font-size="22" class="d-kpi">1.248</text>
+<text x="302" y="102" font-size="8" class="d-label">expedientes</text>
+<rect x="484" y="58" width="184" height="48" rx="6" class="d-card-sub"/>
+<text x="498" y="88" font-size="22" class="d-kpi">96<tspan font-size="13">%</tspan></text>
+<text x="498" y="102" font-size="8" class="d-label">nivel de servicio</text>
+<rect x="100" y="146" width="26" height="20" rx="2" class="d-accent" opacity="0.5"/>
+<rect x="140" y="132" width="26" height="34" rx="2" class="d-accent" opacity="0.65"/>
+<rect x="180" y="138" width="26" height="28" rx="2" class="d-accent" opacity="0.8"/>
+<rect x="220" y="124" width="26" height="42" rx="2" class="d-accent"/>
+<rect x="260" y="134" width="26" height="32" rx="2" class="d-accent" opacity="0.7"/>
+<polyline points="380,150 432,140 484,144 540,128 600,134 660,120" class="d-accent-s"/>
+</svg>
+<figcaption>Power BI convierte datos dispersos en un <b>cuadro de mando de gestión</b> que se actualiza solo y cualquier responsable entiende de un vistazo.</figcaption>
+</figure>
+
 ## Por dónde empezar (sin morir en el intento)
 
 1. **Elige un caso pequeño y real.** Un solo cuadro de mando de un área concreta —no "digitalizar toda la casa"—. Un éxito visible abre más puertas que un proyecto faraónico.

@@ -29,6 +29,38 @@ La majoria de prompts bons tenen aquestes quatre peces:
 
 Ajunta les quatre i el salt de qualitat respecte a "respon a aquesta queixa" és enorme. La IA deixa d'endevinar.
 
+<figure class="svg-figure">
+<svg viewBox="0 0 760 232" role="img" aria-labelledby="fig-pe-t fig-pe-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-pe-t">L'estructura d'un bon prompt</title>
+<desc id="fig-pe-d">Rol, context, tasca i format se sumen al prompt i produeixen una resposta que funciona a la primera.</desc>
+<g>
+<rect x="24" y="28" width="380" height="40" rx="7" class="d-card-sub"/><rect x="24" y="28" width="4" height="40" rx="2" class="d-accent"/>
+<text x="42" y="46" font-size="12" class="d-title">Rol</text><text x="42" y="61" font-size="10" class="d-txt">responsable d'atenció al client</text>
+</g>
+<g>
+<rect x="24" y="76" width="380" height="40" rx="7" class="d-card-sub"/><rect x="24" y="76" width="4" height="40" rx="2" class="d-accent"/>
+<text x="42" y="94" font-size="12" class="d-title">Context</text><text x="42" y="109" font-size="10" class="d-txt">queixa per un retard de 3 dies</text>
+</g>
+<g>
+<rect x="24" y="124" width="380" height="40" rx="7" class="d-card-sub"/><rect x="24" y="124" width="4" height="40" rx="2" class="d-accent"/>
+<text x="42" y="142" font-size="12" class="d-title">Tasca</text><text x="42" y="157" font-size="10" class="d-txt">redacta una resposta</text>
+</g>
+<g>
+<rect x="24" y="172" width="380" height="40" rx="7" class="d-card-sub"/><rect x="24" y="172" width="4" height="40" rx="2" class="d-accent"/>
+<text x="42" y="190" font-size="12" class="d-title">Format</text><text x="42" y="205" font-size="10" class="d-txt">≤120 paraules, to proper</text>
+</g>
+<line x1="412" y1="120" x2="470" y2="120" class="d-stroke-mute"/>
+<path d="M472 120 L463 115 L463 125 Z" class="d-mute"/>
+<rect x="492" y="84" width="244" height="72" rx="10" class="d-surface"/>
+<rect x="492" y="84" width="244" height="72" rx="10" class="d-accent-soft"/>
+<rect x="492" y="84" width="244" height="5" rx="2.5" class="d-accent"/>
+<path d="M512 120 l7 7 l13 -15" class="d-accent-s"/>
+<text x="544" y="118" font-size="14" class="d-ink">Resposta que funciona</text>
+<text x="544" y="137" font-size="10" class="d-label">a la primera</text>
+</svg>
+<figcaption><b>Rol + context + tasca + format</b>: quatre peces que converteixen "respon a això" en una instrucció que la IA encerta a la primera.</figcaption>
+</figure>
+
 ## Iterar: el segon esborrany gairebé sempre guanya
 
 El primer resultat poques vegades és el definitiu, i està bé. En lloc de començar de zero, **corregeix sobre el que ja tens**: "més curt", "menys formal", "treu la segona frase", "afegeix una alternativa". Iterar dues o tres vegades és més ràpid que escriure el prompt perfecte a la primera, i ensenya l'equip a dialogar amb l'eina en comptes de tractar-la com una màquina d'una sola pulsació.

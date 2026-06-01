@@ -21,6 +21,31 @@ Es la decisión de fondo, antes que el temario:
 
 Si vais varios del mismo equipo, casi siempre gana el in-company.
 
+<figure class="svg-figure">
+<svg viewBox="0 0 760 176" role="img" aria-labelledby="fig-cb-t fig-cb-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-cb-t">Curso abierto frente a in-company</title>
+<desc id="fig-cb-d">El curso abierto sirve para una o dos personas con contenido genérico; el in-company forma a tu equipo sobre vuestros datos.</desc>
+<g>
+<rect x="24" y="22" width="344" height="132" rx="12" class="d-card"/>
+<text x="46" y="50" font-size="13" class="d-title">Curso abierto</text>
+<text x="46" y="68" font-size="10" class="d-txt-i">1–2 personas · genérico</text>
+<circle cx="58" cy="100" r="7" class="d-stroke-mute"/>
+<circle cx="84" cy="100" r="7" class="d-stroke-mute"/>
+<text x="46" y="138" font-size="9" class="d-label">fechas fijas · barato por persona</text>
+</g>
+<g>
+<rect x="392" y="22" width="344" height="132" rx="12" class="d-card"/>
+<rect x="392" y="22" width="344" height="132" rx="12" class="d-accent-soft"/>
+<rect x="392" y="22" width="344" height="5" rx="2.5" class="d-accent"/>
+<text x="414" y="52" font-size="13" class="d-ink">In-company</text>
+<text x="414" y="70" font-size="10" class="d-txt">tu equipo · a medida</text>
+<circle cx="426" cy="102" r="6" class="d-accent"/><circle cx="456" cy="102" r="6" class="d-accent"/><circle cx="486" cy="102" r="6" class="d-accent"/><circle cx="516" cy="102" r="6" class="d-accent"/><circle cx="546" cy="102" r="6" class="d-accent"/><circle cx="576" cy="102" r="6" class="d-accent"/>
+<text x="414" y="138" font-size="9" class="d-label">vuestros datos y sector</text>
+</g>
+</svg>
+<figcaption>Para una o dos personas, el <b>curso abierto</b> basta; si formáis a un equipo, el <b>in-company</b> —sobre vuestros datos— casi siempre rinde más.</figcaption>
+</figure>
+
 ## Presencial, online en directo o grabado
 
 - **Presencial** (en Barcelona y área): máxima concentración y dinámica de grupo. Ideal para arrancar de cero.

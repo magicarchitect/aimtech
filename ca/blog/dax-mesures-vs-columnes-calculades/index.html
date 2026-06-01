@@ -94,7 +94,7 @@
 <script src="/js/cookie-consent.js" defer></script>
 <script src="/js/site.js" defer></script>
 </head>
-<body>
+<body class="is-post">
 
 <div class="grid-bg"></div>
 <div class="noise"></div>
@@ -123,7 +123,7 @@
       </div>
     </div>
     <a href="/ca/blog/">Blog</a>
-    <a href="/ca/sobre-mike/">Sobre el Mike</a>
+    <a href="/ca/sobre-mike/">Sobre Mike</a>
   </div>
   <div class="nav-right">
     <div class="lang-switch">
@@ -144,7 +144,7 @@
       <div class="post-meta">
         <time datetime="2026-06-01">1 de juny de 2026</time>
         <span class="sep">·</span>
-        <span>2 min de lectura</span>
+        <span>4 min de lectura</span>
         <span class="sep">·</span>
         <span>Mike Pérez</span>
       </div>
@@ -161,17 +161,63 @@
 <li>Una <strong>mesura</strong> es calcula <strong>en el moment de la consulta</strong>, segons el que hi hagi a l’informe en aquell instant: els filtres, la fila de la taula, el segment seleccionat. No es desa: es recalcula sobre la marxa.</li>
 </ul>
 <p>Aquesta paraula —<strong>context</strong>— és la clau. Una columna calculada només “veu” la seva pròpia fila. Una mesura “veu” el context de filtre de l’informe: el mes seleccionat, la regió del gràfic, el segmentador actiu.</p>
+<figure class="svg-figure">
+<svg viewBox="0 0 760 244" role="img" aria-labelledby="fig-dax-t fig-dax-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-dax-t">Columna calculada davant de mesura</title>
+<desc id="fig-dax-d">La columna calculada es calcula fila a fila en refrescar i es desa al model; la mesura es recalcula en consultar, segons el filtre, i no ocupa memòria.</desc>
+<g>
+<rect x="16" y="28" width="352" height="196" rx="12" class="d-card"/>
+<text x="40" y="62" font-size="14" class="d-title">Columna calculada</text>
+<text x="40" y="83" font-size="11" class="d-txt-i">fila a fila · en refrescar · es desa</text>
+<rect x="40" y="104" width="196" height="20" rx="3" class="d-card-sub"/>
+<rect x="244" y="104" width="84" height="20" rx="3" class="d-accent-soft"/>
+<circle cx="286" cy="114" r="2.6" class="d-accent"/>
+<rect x="40" y="130" width="196" height="20" rx="3" class="d-card-sub"/>
+<rect x="244" y="130" width="84" height="20" rx="3" class="d-accent-soft"/>
+<circle cx="286" cy="140" r="2.6" class="d-accent"/>
+<rect x="40" y="156" width="196" height="20" rx="3" class="d-card-sub"/>
+<rect x="244" y="156" width="84" height="20" rx="3" class="d-accent-soft"/>
+<circle cx="286" cy="166" r="2.6" class="d-accent"/>
+<text x="244" y="198" font-size="9" class="d-label">guardada al model</text>
+</g>
+<g>
+<rect x="392" y="28" width="352" height="196" rx="12" class="d-card"/>
+<text x="416" y="62" font-size="14" class="d-title">Mesura</text>
+<text x="416" y="83" font-size="11" class="d-txt-i">en consultar · segons el filtre</text>
+<rect x="416" y="102" width="132" height="26" rx="13" class="d-accent-soft"/>
+<circle cx="433" cy="115" r="3" class="d-accent"/>
+<text x="446" y="119" font-size="10" class="d-dim">filtre: juny</text>
+<line x1="430" y1="150" x2="430" y2="172" class="d-stroke-mute"/>
+<path d="M430 174 L425 165 L435 165 Z" class="d-mute"/>
+<text x="470" y="182" font-size="38" class="d-kpi">1.248</text>
+<text x="416" y="206" font-size="9" class="d-label">es recalcula · no ocupa memòria</text>
+</g>
+</svg>
+<figcaption>La <b>columna calculada</b> es calcula fila a fila en refrescar i es desa al model; la <b>mesura</b> es recalcula en consultar, segons el filtre, i no ocupa memòria.</figcaption>
+</figure>
 <h2>La regla pràctica</h2>
 <ul>
 <li><strong>Fes servir una mesura</strong> per a tot el que sigui <strong>agregació</strong>: sumes, mitjanes, percentatges, ràtios, totals que canvien segons el filtre. <em>Vendes totals</em>, <em>marge %</em>, <em>tiquet mitjà</em> → mesures, sempre.</li>
 <li><strong>Fes servir una columna calculada</strong> quan necessites un <strong>atribut per fila</strong> que després faràs servir per <strong>filtrar, agrupar o relacionar</strong>: classificar cada venda en un rang (“alta/mitjana/baixa”), extreure l’any d’una data per a una jerarquia, marcar si una fila compleix una condició.</li>
 </ul>
 <p>Dit curt: <strong>si va a un eix, un filtre o una segmentació, sol ser columna. Si va a un valor que s’agrega, és mesura.</strong></p>
+<blockquote>
+<p>El context de filtre és el que separa «sé escriure DAX» de «sé modelar a Power BI».</p>
+</blockquote>
 <h2>L’error que es paga car</h2>
 <p>L’error típic del principiant és resoldre-ho tot amb columnes calculades perquè “es veuen a la taula i és més intuïtiu”. Funciona en una taula petita i peta en una de gran: cada columna calculada infla el model, alenteix el refresc i, pitjor encara, dona números que no responen als filtres de l’usuari. Les sumes que haurien de canviar en seleccionar un mes es queden congelades.</p>
 <p>La bona notícia: quan entens el context de filtre, el 90% dels teus càlculs de negoci surten sent mesures, el teu model queda lleuger i els informes responen sols al que l’usuari toca.</p>
 <h2>Perquè es quedi</h2>
 <p>El context de filtre és el concepte que separa “sé escriure fórmules DAX” de “sé modelar a Power BI”. No s’aprèn llegint: s’aprèn construint mesures sobre un model real i veient com reaccionen als filtres. Abans del DAX convé tenir el model ben muntat —d’això va <a href="/ca/blog/modelatge-dades-power-bi-esquema-estrella/">el modelatge en esquema en estrella</a>—, perquè un DAX net comença per un model net.</p>
+<aside class="post-key">
+<h4>Claus</h4>
+<ul>
+<li><strong>Mesura</strong> → per agregar (sumes, %, ràtios). Es recalcula segons el filtre de l'informe.</li>
+<li><strong>Columna calculada</strong> → per a atributs per fila que filtraràs, agruparàs o relacionaràs. Es desa al model.</li>
+<li>Si va a un eix, filtre o segmentació, sol ser columna; si s'agrega, és mesura.</li>
+<li>Resoldre-ho tot amb columnes calculades infla el model i congela els totals.</li>
+</ul>
+</aside>
 <p>Això és just el que treballem a la <a href="/ca/power-bi/">formació en Power BI d’Aimtech</a>: l’itinerari Avançat entra a fons al DAX, contextos i mesures serioses, amb reptes que resols tu. Presencial a Barcelona, en remot en directe o in-company, per a empreses, entitats i AAPP.</p>
 
     </div>
@@ -221,7 +267,7 @@
       <div class="footer-col">
         <h3>Recursos</h3>
         <a href="/ca/blog/">Blog</a>
-        <a href="/ca/sobre-mike/">Sobre el Mike</a>
+        <a href="/ca/sobre-mike/">Sobre Mike</a>
         <a href="/ca/contacte/">Contacte</a>
       </div>
 

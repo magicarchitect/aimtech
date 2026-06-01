@@ -26,6 +26,30 @@ El arreglo está en el modelo: seleccionas la columna y, en **Categoría de dato
 
 Un consejo que ahorra dolores: cuanto más preciso el dato, mejor. Una ciudad sola puede ser ambigua (¿qué "Toledo"?); darle también provincia y país, o directamente latitud/longitud, evita que te coloque puntos en el otro hemisferio.
 
+<figure class="svg-figure">
+<svg viewBox="0 0 760 190" role="img" aria-labelledby="fig-mp-t fig-mp-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-mp-t">Por qué no se ve el mapa</title>
+<desc id="fig-mp-d">Si el mapa sale en gris es un permiso del tenant; si sale vacío, falta marcar la categoría geográfica de los datos.</desc>
+<g>
+<rect x="24" y="24" width="344" height="150" rx="12" class="d-card"/>
+<text x="46" y="52" font-size="13" class="d-title">Mapa en gris</text>
+<text x="46" y="70" font-size="10" class="d-txt-i">permiso del tenant (TI)</text>
+<rect x="46" y="84" width="300" height="72" rx="8" class="d-card-sub"/>
+<circle cx="196" cy="120" r="9" class="d-stroke-mute"/>
+</g>
+<g>
+<rect x="392" y="24" width="344" height="150" rx="12" class="d-card"/>
+<text x="414" y="52" font-size="13" class="d-title">Con categoría geográfica</text>
+<text x="414" y="70" font-size="10" class="d-txt-i">puntos en el mapa</text>
+<rect x="414" y="84" width="300" height="72" rx="8" class="d-card-sub"/>
+<circle cx="478" cy="124" r="5" class="d-accent"/>
+<circle cx="556" cy="106" r="5" class="d-accent"/>
+<circle cx="640" cy="132" r="5" class="d-accent"/>
+</g>
+</svg>
+<figcaption>Las dos causas: si el visual sale <b>en gris</b> es un permiso del tenant; si sale <b>vacío</b>, falta marcar la categoría geográfica de tus datos.</figcaption>
+</figure>
+
 ## Qué tipo de mapa usar
 
 Aclarado el "por qué no se ve", queda elegir:

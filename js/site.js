@@ -5,6 +5,24 @@
 (function () {
   'use strict';
 
+  // ─── Skip link (saltar al contenido) ────────────────────────────
+  // Inyecta un enlace «saltar al contenido» como primer elemento
+  // focusable de la página y garantiza que <main> sea destino de foco.
+  // Idioma según <html lang>. Idempotente.
+  function startSkipLink() {
+    const main = document.querySelector('main');
+    if (!main || document.querySelector('.skip-link')) return;
+    if (!main.id) main.id = 'contenido';
+    main.setAttribute('tabindex', '-1');
+
+    const isCA = (document.documentElement.lang || '').toLowerCase().startsWith('ca');
+    const link = document.createElement('a');
+    link.className = 'skip-link';
+    link.href = '#' + main.id;
+    link.textContent = isCA ? 'Vés al contingut' : 'Saltar al contenido';
+    document.body.insertBefore(link, document.body.firstChild);
+  }
+
   // ─── Reloj en vivo ──────────────────────────────────────────────
   function startClock() {
     const el = document.getElementById('clock');
@@ -199,13 +217,41 @@
     }
   }
 
+  // ─── Barra de progreso de lectura (solo en posts) ──────────────
+  // Inyecta una barra fija arriba que se llena según el avance de
+  // lectura del cuerpo del artículo. rAF-throttled y passive.
+  function startReadingProgress() {
+    const body = document.querySelector('article.post .post-body');
+    if (!body) return;
+    const bar = document.createElement('div');
+    bar.className = 'read-progress';
+    bar.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(bar);
+
+    let ticking = false;
+    function update() {
+      const rect = body.getBoundingClientRect();
+      const total = body.offsetHeight - window.innerHeight;
+      const pct = total > 0 ? Math.min(1, Math.max(0, -rect.top / total)) : (rect.top <= 0 ? 1 : 0);
+      bar.style.transform = 'scaleX(' + pct + ')';
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
+  }
+
   function init() {
+    startSkipLink();
     startClock();
     startMouseGlow();
     startReveal();
     startDropdown();
     startMobileNav();
     startActiveNav();
+    startReadingProgress();
   }
 
   if (document.readyState === 'loading') {

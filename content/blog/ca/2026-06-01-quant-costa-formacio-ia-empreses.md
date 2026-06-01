@@ -32,6 +32,27 @@ Com a referència pública del mercat, la formació en IA in-company se sol mour
 
 El ventall total del mercat és enorme (des de menys de 1.000 € fins a cinc xifres) perquè fica al mateix sac coses molt diferents: no és comparable una xerrada d'un matí amb un programa a mida amb seguiment.
 
+<figure class="svg-figure">
+<svg viewBox="0 0 760 196" role="img" aria-labelledby="fig-pr-t fig-pr-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-pr-t">Preus de formació en IA in-company</title>
+<desc id="fig-pr-d">De l'hora solta a programes a mida; la formació d'IA d'Aimtech parteix de 3.500 euros per grup.</desc>
+<line x1="30" y1="160" x2="724" y2="160" class="d-line"/>
+<rect x="56" y="118" width="96" height="42" rx="3" class="d-card-sub"/>
+<text x="104" y="110" text-anchor="middle" font-size="12" class="d-dim">90–180€/h</text>
+<text x="104" y="178" text-anchor="middle" font-size="9" class="d-label">per hora</text>
+<rect x="216" y="92" width="96" height="68" rx="3" class="d-card-sub"/>
+<text x="264" y="84" text-anchor="middle" font-size="12" class="d-dim">3–4k€</text>
+<text x="264" y="178" text-anchor="middle" font-size="9" class="d-label">24h · 6 pers</text>
+<rect x="376" y="58" width="96" height="102" rx="3" class="d-card-sub"/>
+<text x="424" y="50" text-anchor="middle" font-size="12" class="d-dim">5.500€</text>
+<text x="424" y="178" text-anchor="middle" font-size="9" class="d-label">tècnic 2 dies</text>
+<rect x="560" y="78" width="96" height="82" rx="3" class="d-accent"/>
+<text x="608" y="70" text-anchor="middle" font-size="13" class="d-num">des de 3.500€</text>
+<text x="608" y="178" text-anchor="middle" font-size="9" class="d-label">Aimtech · IA</text>
+</svg>
+<figcaption>El mercat va de l'hora solta a programes a mida. La nostra <b>formació d'IA</b> parteix de <b>3.500€ per grup</b>: a mida, en grup reduït i amb autoria.</figcaption>
+</figure>
+
 ## Què ha d'incloure una formació que valgui la pena
 
 El preu sense context no diu res. Això és el que separa una formació útil d'una despesa:
