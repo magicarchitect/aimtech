@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Power Query: cómo limpiar datos sucios paso a paso | Blog Aimtech</title>
+<meta name="description" content="Antes de un gráfico bonito hay datos sucios que limpiar. Power Query lo hace una vez y se repite solo en cada refresco. Te explicamos cómo, sin código." />
+
+<link rel="canonical" href="https://www.aimtech.es/blog/power-query-limpiar-datos/" />
+
+<!-- hreflang: variantes de idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/power-query-limpiar-datos/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/power-query-limpiar-datos/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="/assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="ca_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Power Query: cómo limpiar datos sucios paso a paso" />
+<meta property="og:description" content="Antes de un gráfico bonito hay datos sucios que limpiar. Power Query lo hace una vez y se repite solo en cada refresco. Te explicamos cómo, sin código." />
+<meta property="og:url" content="https://www.aimtech.es/blog/power-query-limpiar-datos/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Power Query: cómo limpiar datos sucios paso a paso" />
+<meta property="article:published_time" content="2026-06-01" />
+<meta property="article:author" content="Mike Pérez" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Power Query: cómo limpiar datos sucios paso a paso" />
+<meta name="twitter:description" content="Antes de un gráfico bonito hay datos sucios que limpiar. Power Query lo hace una vez y se repite solo en cada refresco. Te explicamos cómo, sin código." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: BlogPosting + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Power Query: cómo limpiar datos sucios paso a paso",
+    "description": "Antes de un gráfico bonito hay datos sucios que limpiar. Power Query lo hace una vez y se repite solo en cada refresco. Te explicamos cómo, sin código.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "inLanguage": "es-ES",
+    "keywords": ["power-bi","power-query"],
+    "image": "https://www.aimtech.es/assets/og/default.png",
+    "url": "https://www.aimtech.es/blog/power-query-limpiar-datos/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.aimtech.es/blog/power-query-limpiar-datos/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.aimtech.es/assets/logo.png?v=2"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aimtech.es/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Power Query: cómo limpiar datos sucios paso a paso", "item": "https://www.aimtech.es/blog/power-query-limpiar-datos/" }
+    ]
+  }
+]
+</script>
+
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/blog.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<script src="/js/cookie-consent.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-es.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-servicios-menu">Servicios <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-servicios-menu">
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+    </div>
+    <a href="/blog/">Blog</a>
+    <a href="/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/blog/power-query-limpiar-datos/" class="active">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/blog/">CA</a>
+    </div>
+    <a href="/contacto/" class="nav-cta">Hablemos →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <article class="post">
+    <header class="post-header container">
+      <a href="/blog/" class="post-back">← Blog</a>
+      <div class="post-meta">
+        <time datetime="2026-06-01">1 de junio de 2026</time>
+        <span class="sep">·</span>
+        <span>2 min de lectura</span>
+        <span class="sep">·</span>
+        <span>Mike Pérez</span>
+      </div>
+      <h1>Power Query: cómo limpiar datos sucios paso a paso</h1>
+      <p class="post-lead">Antes de un gráfico bonito hay datos sucios que limpiar. Power Query lo hace una vez y se repite solo en cada refresco. Te explicamos cómo, sin código.</p>
+      <div class="post-tags"><span>power-bi</span><span>power-query</span></div>
+    </header>
+
+    <div class="post-body container">
+      <p>El 80% del trabajo de un informe no es el gráfico: es dejar los datos en condiciones para poder hacerlo. Fechas en tres formatos distintos, columnas con espacios, importes que llegan como texto, filas vacías, dos sistemas que llaman al mismo cliente de dos maneras. <strong>Power Query</strong> es la herramienta de Power BI para limpiar todo eso —y la mejor parte: lo configuras una vez y se repite solo en cada actualización.</p>
+<h2>Qué es Power Query (y por qué cambia tu vida)</h2>
+<p>Power Query es el editor donde <strong>transformas los datos antes de que entren al modelo</strong>. Cada cosa que haces —quitar una columna, cambiar un tipo, filtrar filas— queda registrada como un <strong>paso aplicado</strong>. La próxima vez que lleguen datos nuevos con el mismo formato, Power Query repite todos los pasos automáticamente. Se acabó limpiar el Excel a mano cada lunes.</p>
+<h2>Los arreglos que harás el 90% de las veces</h2>
+<ul>
+<li><strong>Tipos de dato correctos.</strong> Lo primero y lo más importante: que las fechas sean fechas, los números números y el texto texto. Un importe que entra como texto no se suma.</li>
+<li><strong>Quitar lo que sobra.</strong> Columnas que no usarás, filas en blanco, cabeceras repetidas, totales que venían pegados en el origen.</li>
+<li><strong>Limpiar texto.</strong> Espacios de más, mayúsculas/minúsculas inconsistentes, recortar y normalizar para que &quot;Madrid &quot; y “madrid” sean lo mismo.</li>
+<li><strong>Dividir y combinar columnas.</strong> Separar “Apellido, Nombre” en dos, o juntar código y descripción.</li>
+<li><strong>Reemplazar valores y gestionar nulos.</strong> Decidir qué pasa con los huecos en vez de que rompan los cálculos.</li>
+</ul>
+<h2>Dos operaciones que valen oro</h2>
+<ul>
+<li><strong>Combinar consultas (merge):</strong> cruzar dos tablas por una clave común, como un BUSCARV pero bien hecho y repetible. Traer el nombre del cliente a la tabla de ventas, por ejemplo.</li>
+<li><strong>Anexar consultas (append):</strong> apilar tablas con la misma estructura. Doce hojas mensuales en una sola tabla anual, sin copiar y pegar.</li>
+</ul>
+<h2>El cambio de mentalidad</h2>
+<p>Quien viene de Excel arregla los datos <em>a mano, cada vez</em>. Power Query te obliga a un cambio de chip: arreglas el <strong>proceso una vez</strong> y se ejecuta solo para siempre. Esa es la diferencia entre dedicar el lunes a “preparar el informe” y abrirlo ya hecho.</p>
+<p>Con los datos limpios entras al <a href="/blog/modelado-datos-power-bi-esquema-estrella/">modelado</a> con buen pie, y de ahí a las medidas. En la <a href="/power-bi/">formación en Power BI de Aimtech</a>, Power Query es de los primeros bloques del itinerario de cero a intermedio, con datos sucios de verdad —no de manual— para que practiques el problema real. Presencial en Barcelona, en remoto en directo o in-company, para empresas, entidades y AAPP.</p>
+
+    </div>
+
+    <footer class="post-footer container">
+      <div class="post-footer-grid">
+        <div>
+          <span class="post-footer-label">Escrito por</span>
+          <a href="/sobre-mike/" class="post-author">Mike Pérez</a>
+        </div>
+        <div>
+          <span class="post-footer-label">¿Te resuena?</span>
+          <a href="/contacto/" class="post-cta">Hablemos sobre tu caso →</a>
+        </div>
+      </div>
+    </footer>
+  </article>
+
+</main>
+
+<!-- @region partials/footer-es.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formación e implantación de IA aplicada, Power BI y desarrollo a medida. Operado por una SL catalana con foco en pymes y administración pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/blog/">Blog</a>
+        <a href="/sobre-mike/">Sobre Mike</a>
+        <a href="/contacto/">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/politica-privacidad/">Privacidad</a>
+        <a href="/politica-cookies/">Cookies</a>
+        <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Cataluña</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

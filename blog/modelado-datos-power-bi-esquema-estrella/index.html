@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Modelado de datos en Power BI: relaciones, jerarquías y esquema en estrella | Blog Aimtech</title>
+<meta name="description" content="El esquema en estrella es la diferencia entre un Power BI que vuela y uno que da números raros. Te explicamos hechos, dimensiones y relaciones sin jerga." />
+
+<link rel="canonical" href="https://www.aimtech.es/blog/modelado-datos-power-bi-esquema-estrella/" />
+
+<!-- hreflang: variantes de idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/modelado-datos-power-bi-esquema-estrella/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/modelado-datos-power-bi-esquema-estrella/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="/assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="ca_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Modelado de datos en Power BI: relaciones, jerarquías y esquema en estrella" />
+<meta property="og:description" content="El esquema en estrella es la diferencia entre un Power BI que vuela y uno que da números raros. Te explicamos hechos, dimensiones y relaciones sin jerga." />
+<meta property="og:url" content="https://www.aimtech.es/blog/modelado-datos-power-bi-esquema-estrella/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Modelado de datos en Power BI: relaciones, jerarquías y esquema en estrella" />
+<meta property="article:published_time" content="2026-06-01" />
+<meta property="article:author" content="Mike Pérez" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Modelado de datos en Power BI: relaciones, jerarquías y esquema en estrella" />
+<meta name="twitter:description" content="El esquema en estrella es la diferencia entre un Power BI que vuela y uno que da números raros. Te explicamos hechos, dimensiones y relaciones sin jerga." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: BlogPosting + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Modelado de datos en Power BI: relaciones, jerarquías y esquema en estrella",
+    "description": "El esquema en estrella es la diferencia entre un Power BI que vuela y uno que da números raros. Te explicamos hechos, dimensiones y relaciones sin jerga.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "inLanguage": "es-ES",
+    "keywords": ["power-bi","modelado"],
+    "image": "https://www.aimtech.es/assets/og/default.png",
+    "url": "https://www.aimtech.es/blog/modelado-datos-power-bi-esquema-estrella/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.aimtech.es/blog/modelado-datos-power-bi-esquema-estrella/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.aimtech.es/assets/logo.png?v=2"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aimtech.es/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Modelado de datos en Power BI: relaciones, jerarquías y esquema en estrella", "item": "https://www.aimtech.es/blog/modelado-datos-power-bi-esquema-estrella/" }
+    ]
+  }
+]
+</script>
+
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/blog.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<script src="/js/cookie-consent.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-es.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-servicios-menu">Servicios <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-servicios-menu">
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+    </div>
+    <a href="/blog/">Blog</a>
+    <a href="/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/blog/modelado-datos-power-bi-esquema-estrella/" class="active">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/blog/">CA</a>
+    </div>
+    <a href="/contacto/" class="nav-cta">Hablemos →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <article class="post">
+    <header class="post-header container">
+      <a href="/blog/" class="post-back">← Blog</a>
+      <div class="post-meta">
+        <time datetime="2026-06-01">1 de junio de 2026</time>
+        <span class="sep">·</span>
+        <span>2 min de lectura</span>
+        <span class="sep">·</span>
+        <span>Mike Pérez</span>
+      </div>
+      <h1>Modelado de datos en Power BI: relaciones, jerarquías y esquema en estrella</h1>
+      <p class="post-lead">El esquema en estrella es la diferencia entre un Power BI que vuela y uno que da números raros. Te explicamos hechos, dimensiones y relaciones sin jerga.</p>
+      <div class="post-tags"><span>power-bi</span><span>modelado</span></div>
+    </header>
+
+    <div class="post-body container">
+      <p>La mayoría de los problemas de Power BI que parecen “de DAX” o “de visualización” son en realidad problemas de <strong>modelado</strong>. Un modelo mal montado da totales que no cuadran, filtros que no filtran y refrescos lentos. Un modelo bien montado hace que todo lo demás sea fácil. Y el patrón que lo hace bien tiene nombre: <strong>esquema en estrella</strong>.</p>
+<h2>Hechos y dimensiones: las dos clases de tabla</h2>
+<p>En un modelo sano, tus tablas son de dos tipos:</p>
+<ul>
+<li><strong>Tablas de hechos</strong> (<em>fact</em>): registran lo que pasa, fila a fila. Ventas, pedidos, llamadas, incidencias. Tienen los números que vas a sumar (importe, cantidad) y las claves que enlazan con el resto.</li>
+<li><strong>Tablas de dimensiones</strong> (<em>dim</em>): describen el contexto. Clientes, productos, calendario, regiones, empleados. Son las que usas para <em>filtrar</em> y <em>agrupar</em>: “ventas <strong>por</strong> producto”, “incidencias <strong>por</strong> mes”.</li>
+</ul>
+<h2>El esquema en estrella</h2>
+<p>El <strong>esquema en estrella</strong> coloca una tabla de hechos en el centro y las dimensiones alrededor, cada una conectada al centro con una relación <strong>uno-a-muchos</strong> (una fila de dimensión → muchas filas de hechos). Dibujado, parece una estrella. Y es como Power BI quiere trabajar: su motor (VertiPaq) está optimizado precisamente para este patrón.</p>
+<p>Lo contrario —meter todo en una sola tabla plana gigante, o encadenar tablas en copo de nieve con relaciones en cascada— es lo que produce lentitud y resultados raros.</p>
+<h2>La tabla de calendario: el detalle que casi todos olvidan</h2>
+<p>Si quieres comparar “este mes vs el anterior”, “acumulado del año” o “mismo periodo del año pasado”, necesitas una <strong>tabla de calendario</strong> propia (una dimensión de fechas) relacionada con tus hechos. Sin ella, la <em>time intelligence</em> de DAX no funciona bien. Es de las primeras cosas que se montan en un modelo serio.</p>
+<h2>Jerarquías</h2>
+<p>Las <strong>jerarquías</strong> agrupan niveles que se recorren de arriba abajo: Año → Trimestre → Mes → Día, o País → Región → Ciudad. Permiten al usuario hacer <em>drill-down</em> en un gráfico —de año a mes con un clic— sin que tengas que montar un visual por nivel.</p>
+<h2>Por qué esto importa para el negocio</h2>
+<p>Un modelo en estrella no es purismo técnico: es lo que hace que el informe sea <strong>fiable y rápido</strong>. Cuando el modelo está bien, las medidas DAX salen cortas y correctas, los filtros se propagan como esperas y el refresco no se eterniza. Cuando está mal, acabas parcheando con fórmulas imposibles para tapar un diseño que no aguanta.</p>
+<p>Por eso en la <a href="/power-bi/">formación en Power BI de Aimtech</a> el modelado va <strong>antes</strong> que el DAX: relaciones, esquema en estrella y calendario en el itinerario de cero a intermedio, y modelado complejo en el Avanzado. Con el modelo claro, <a href="/blog/dax-medidas-vs-columnas-calculadas/">la duda de medida vs columna calculada</a> casi se resuelve sola. Presencial en Barcelona, en remoto o in-company, para empresas, entidades y AAPP.</p>
+
+    </div>
+
+    <footer class="post-footer container">
+      <div class="post-footer-grid">
+        <div>
+          <span class="post-footer-label">Escrito por</span>
+          <a href="/sobre-mike/" class="post-author">Mike Pérez</a>
+        </div>
+        <div>
+          <span class="post-footer-label">¿Te resuena?</span>
+          <a href="/contacto/" class="post-cta">Hablemos sobre tu caso →</a>
+        </div>
+      </div>
+    </footer>
+  </article>
+
+</main>
+
+<!-- @region partials/footer-es.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formación e implantación de IA aplicada, Power BI y desarrollo a medida. Operado por una SL catalana con foco en pymes y administración pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/blog/">Blog</a>
+        <a href="/sobre-mike/">Sobre Mike</a>
+        <a href="/contacto/">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/politica-privacidad/">Privacidad</a>
+        <a href="/politica-cookies/">Cookies</a>
+        <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Cataluña</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

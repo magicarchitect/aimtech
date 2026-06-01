@@ -349,6 +349,15 @@ a.card { text-decoration: none; color: inherit; }
   transition: border-color 0.2s ease;
 }
 .prose a:hover { border-color: var(--accent); }
+
+/* Enlaces de contenido en landings (hero, secciones y tarjetas) — azul corporativo */
+.hero-sub a, .section-intro a, .card p a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  transition: border-color 0.2s ease;
+}
+.hero-sub a:hover, .section-intro a:hover, .card p a:hover { border-bottom-color: var(--accent); }
 .prose ul, .prose ol {
   margin: 0 0 18px 24px;
   padding: 0;
