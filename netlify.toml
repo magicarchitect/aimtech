@@ -86,3 +86,79 @@
   to = "https://www.aimtech.es/:splat"
   status = 301
   force = true
+
+# ── Limpieza del WordPress/WooCommerce antiguo ───────
+# URLs heredadas de la web anterior que Google aún tiene
+# indexadas (devuelven 404 hoy). Un 301 a la página real
+# más cercana las des-indexa más rápido que un 404 y da
+# buena UX a quien llegue por un enlace viejo. Ninguna de
+# estas rutas existe en el sitio nuevo, así que no hay
+# colisión con contenido actual.
+
+# Páginas de servicios/about antiguas → home
+[[redirects]]
+  from = "/services"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/services-two"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/architect-design"
+  to = "/"
+  status = 301
+
+# Tienda WooCommerce (ya no existe) → home
+[[redirects]]
+  from = "/product/*"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/shop"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/cart"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/checkout"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/my-account"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/my-account-2"
+  to = "/"
+  status = 301
+
+# Blog y taxonomías WP antiguas → blog nuevo / sobre-mike
+[[redirects]]
+  from = "/influencer-marketing-trends-2023"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/category/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/tag/*"
+  to = "/blog/"
+  status = 301
+[[redirects]]
+  from = "/author/*"
+  to = "/sobre-mike/"
+  status = 301
+
+# Rutas de administración WP (sondeadas por bots) → home
+[[redirects]]
+  from = "/wp-admin/*"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/wp-login.php"
+  to = "/"
+  status = 301
