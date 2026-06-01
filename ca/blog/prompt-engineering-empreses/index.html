@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prompt engineering per a empreses: guia pràctica (sense fum) | Blog Aimtech</title>
+<meta name="description" content="Un bon prompt no és màgia: és rol + context + tasca + format, més iteració. Guia pràctica perquè el teu equip escrigui instruccions que funcionen sempre." />
+
+<link rel="canonical" href="https://www.aimtech.es/ca/blog/prompt-engineering-empreses/" />
+
+<!-- hreflang: variants d'idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/prompt-engineering-empresas/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/prompt-engineering-empreses/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/prompt-engineering-empresas/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="/assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="ca_ES" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Prompt engineering per a empreses: guia pràctica (sense fum)" />
+<meta property="og:description" content="Un bon prompt no és màgia: és rol + context + tasca + format, més iteració. Guia pràctica perquè el teu equip escrigui instruccions que funcionen sempre." />
+<meta property="og:url" content="https://www.aimtech.es/ca/blog/prompt-engineering-empreses/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Prompt engineering per a empreses: guia pràctica (sense fum)" />
+<meta property="article:published_time" content="2026-06-01" />
+<meta property="article:author" content="Mike Pérez" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Prompt engineering per a empreses: guia pràctica (sense fum)" />
+<meta name="twitter:description" content="Un bon prompt no és màgia: és rol + context + tasca + format, més iteració. Guia pràctica perquè el teu equip escrigui instruccions que funcionen sempre." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: BlogPosting + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Prompt engineering per a empreses: guia pràctica (sense fum)",
+    "description": "Un bon prompt no és màgia: és rol + context + tasca + format, més iteració. Guia pràctica perquè el teu equip escrigui instruccions que funcionen sempre.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "inLanguage": "ca-ES",
+    "keywords": ["ia-aplicada","prompting"],
+    "image": "https://www.aimtech.es/assets/og/default.png",
+    "url": "https://www.aimtech.es/ca/blog/prompt-engineering-empreses/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.aimtech.es/ca/blog/prompt-engineering-empreses/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike Pérez",
+      "url": "https://www.aimtech.es/ca/sobre-mike/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.aimtech.es/assets/logo.png?v=2"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aimtech.es/ca/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Prompt engineering per a empreses: guia pràctica (sense fum)", "item": "https://www.aimtech.es/ca/blog/prompt-engineering-empreses/" }
+    ]
+  }
+]
+</script>
+
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/blog.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<script src="/js/cookie-consent.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-serveis-menu">
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+    </div>
+    <a href="/ca/blog/">Blog</a>
+    <a href="/ca/sobre-mike/">Sobre el Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/blog/prompt-engineering-empresas/">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/blog/prompt-engineering-empreses/" class="active">CA</a>
+    </div>
+    <a href="/ca/contacte/" class="nav-cta">Parlem-ne →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <article class="post">
+    <header class="post-header container">
+      <a href="/ca/blog/" class="post-back">← Blog</a>
+      <div class="post-meta">
+        <time datetime="2026-06-01">1 de juny de 2026</time>
+        <span class="sep">·</span>
+        <span>2 min de lectura</span>
+        <span class="sep">·</span>
+        <span>Mike Pérez</span>
+      </div>
+      <h1>Prompt engineering per a empreses: guia pràctica (sense fum)</h1>
+      <p class="post-lead">Un bon prompt no és màgia: és rol + context + tasca + format, més iteració. Guia pràctica perquè el teu equip escrigui instruccions que funcionen sempre.</p>
+      <div class="post-tags"><span>ia-aplicada</span><span>prompting</span></div>
+    </header>
+
+    <div class="post-body container">
+      <p>“Prompt engineering” sona a disciplina arcana i no ho és. És, bàsicament, aprendre a demanar bé les coses. La diferència entre un equip que treu resultats mediocres de la IA i un que la converteix en una eina fiable gairebé sempre és aquí: en com escriuen la instrucció. Anem al pràctic.</p>
+<h2>Què és un prompt (i què no)</h2>
+<p>Un <strong>prompt</strong> és la instrucció que dones a la IA. Molta gent escriu prompts d’una línia —“resumeix això”— i després es queixa que el resultat és genèric. Normal: a una persona nova tampoc li demanaries una feina donant-li una sola frase i zero context.</p>
+<p>Un bon prompt no és més llarg per caprici: és més <strong>complet</strong>. Dona a la IA el que necessita per encertar a la primera.</p>
+<h2>L’estructura que funciona: rol + context + tasca + format</h2>
+<p>La majoria de prompts bons tenen aquestes quatre peces:</p>
+<ul>
+<li><strong>Rol</strong> — qui vols que sigui: <em>“Actua com a responsable d’atenció al client d’una empresa de logística.”</em></li>
+<li><strong>Context</strong> — la informació del cas: <em>“Un client es queixa d’un retard de 3 dies en un enviament urgent. És un client habitual.”</em></li>
+<li><strong>Tasca</strong> — què vols exactament: <em>“Redacta una resposta que reconegui el problema, expliqui la solució i conservi la relació.”</em></li>
+<li><strong>Format</strong> — com ho vols: <em>“To proper però professional, màxim 120 paraules, sense prometre compensacions econòmiques.”</em></li>
+</ul>
+<p>Ajunta les quatre i el salt de qualitat respecte a “respon a aquesta queixa” és enorme. La IA deixa d’endevinar.</p>
+<h2>Iterar: el segon esborrany gairebé sempre guanya</h2>
+<p>El primer resultat poques vegades és el definitiu, i està bé. En lloc de començar de zero, <strong>corregeix sobre el que ja tens</strong>: “més curt”, “menys formal”, “treu la segona frase”, “afegeix una alternativa”. Iterar dues o tres vegades és més ràpid que escriure el prompt perfecte a la primera, i ensenya l’equip a dialogar amb l’eina en comptes de tractar-la com una màquina d’una sola pulsació.</p>
+<h2>Prompting en equip: de truc personal a actiu d’empresa</h2>
+<p>Aquí hi ha la part que gairebé ningú fa i que més rendeix: <strong>convertir els bons prompts en plantilles compartides.</strong> Si una persona troba el prompt perfecte per respondre reclamacions, aquest prompt hauria d’estar disponible per a tot l’equip, no morir al seu historial. Una petita biblioteca de prompts per tasca —respostes a clients, resums de reunió, esborranys d’oferta— és el que separa “alguns fan servir IA” de “l’empresa treballa amb IA”.</p>
+<p>Això és just el que entrenem a la <a href="/ca/ia-aplicada/">formació en IA aplicada d’Aimtech</a>: no receptes que caduquen, sinó el mètode perquè cada persona escrigui els seus propis prompts i l’equip construeixi la seva biblioteca. En grups tancats, presencial a Barcelona, en remot en directe o in-company. I si el que busques és anar més enllà del prompt —que un sistema executi el procés sencer per tu—, això ja és <a href="/ca/ia-agentica/">IA agèntica</a>.</p>
+
+    </div>
+
+    <footer class="post-footer container">
+      <div class="post-footer-grid">
+        <div>
+          <span class="post-footer-label">Escrit per</span>
+          <a href="/ca/sobre-mike/" class="post-author">Mike Pérez</a>
+        </div>
+        <div>
+          <span class="post-footer-label">Et ressona?</span>
+          <a href="/ca/contacte/" class="post-cta">Parlem del teu cas →</a>
+        </div>
+      </div>
+    </footer>
+  </article>
+
+</main>
+
+<!-- @region partials/footer-ca.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formació i implantació d'IA aplicada, Power BI i desenvolupament a mida. Operada per una SL catalana amb focus en pimes i administració pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Serveis</h3>
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/ca/blog/">Blog</a>
+        <a href="/ca/sobre-mike/">Sobre el Mike</a>
+        <a href="/ca/contacte/">Contacte</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/ca/avis-legal/">Avís legal</a>
+        <a href="/ca/politica-privacitat/">Privacitat</a>
+        <a href="/ca/politica-galetes/">Galetes</a>
+        <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Què és Power BI i per a què serveix? Guia 2026 per a empreses | Blog Aimtech</title>
+<meta name="description" content="Què és Power BI, com funciona per dins i quins problemes resol en una empresa: de la dada dispersa a l&#39;informe que s&#39;actualitza sol. Sense tecnicismes." />
+
+<link rel="canonical" href="https://www.aimtech.es/ca/blog/que-es-power-bi/" />
+
+<!-- hreflang: variants d'idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/que-es-power-bi/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/que-es-power-bi/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/que-es-power-bi/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="/assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="ca_ES" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Què és Power BI i per a què serveix? Guia 2026 per a empreses" />
+<meta property="og:description" content="Què és Power BI, com funciona per dins i quins problemes resol en una empresa: de la dada dispersa a l&#39;informe que s&#39;actualitza sol. Sense tecnicismes." />
+<meta property="og:url" content="https://www.aimtech.es/ca/blog/que-es-power-bi/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Què és Power BI i per a què serveix? Guia 2026 per a empreses" />
+<meta property="article:published_time" content="2026-06-01" />
+<meta property="article:author" content="Mike Pérez" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Què és Power BI i per a què serveix? Guia 2026 per a empreses" />
+<meta name="twitter:description" content="Què és Power BI, com funciona per dins i quins problemes resol en una empresa: de la dada dispersa a l&#39;informe que s&#39;actualitza sol. Sense tecnicismes." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: BlogPosting + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Què és Power BI i per a què serveix? Guia 2026 per a empreses",
+    "description": "Què és Power BI, com funciona per dins i quins problemes resol en una empresa: de la dada dispersa a l'informe que s'actualitza sol. Sense tecnicismes.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "inLanguage": "ca-ES",
+    "keywords": ["power-bi","guia"],
+    "image": "https://www.aimtech.es/assets/og/default.png",
+    "url": "https://www.aimtech.es/ca/blog/que-es-power-bi/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.aimtech.es/ca/blog/que-es-power-bi/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike Pérez",
+      "url": "https://www.aimtech.es/ca/sobre-mike/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.aimtech.es/assets/logo.png?v=2"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aimtech.es/ca/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Què és Power BI i per a què serveix? Guia 2026 per a empreses", "item": "https://www.aimtech.es/ca/blog/que-es-power-bi/" }
+    ]
+  }
+]
+</script>
+
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/blog.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<script src="/js/cookie-consent.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-serveis-menu">
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+    </div>
+    <a href="/ca/blog/">Blog</a>
+    <a href="/ca/sobre-mike/">Sobre el Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/blog/que-es-power-bi/">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/blog/que-es-power-bi/" class="active">CA</a>
+    </div>
+    <a href="/ca/contacte/" class="nav-cta">Parlem-ne →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <article class="post">
+    <header class="post-header container">
+      <a href="/ca/blog/" class="post-back">← Blog</a>
+      <div class="post-meta">
+        <time datetime="2026-06-01">1 de juny de 2026</time>
+        <span class="sep">·</span>
+        <span>7 min de lectura</span>
+        <span class="sep">·</span>
+        <span>Mike Pérez</span>
+      </div>
+      <h1>Què és Power BI i per a què serveix? Guia 2026 per a empreses</h1>
+      <p class="post-lead">Què és Power BI, com funciona per dins i quins problemes resol en una empresa: de la dada dispersa a l&#39;informe que s&#39;actualitza sol. Sense tecnicismes.</p>
+      <div class="post-tags"><span>power-bi</span><span>guia</span></div>
+    </header>
+
+    <div class="post-body container">
+      <p>Gairebé tothom ha vist un quadre de comandament de Power BI en una reunió: gràfics que es filtren en fer clic, un mapa que s’acoloreix sol, un parell de números grans que canvien segons el mes que triïs. El que molta gent no té clar és <strong>què és Power BI exactament</strong>, què fa per dins i, sobretot, quin problema resol que un full d’Excel no resolgui ja. Contestem-ho sense fum.</p>
+<h2>Què és Power BI, en una frase</h2>
+<p>Power BI és l’eina de Microsoft per <strong>connectar dades de diferents llocs, organitzar-les i convertir-les en informes interactius</strong> que s’actualitzen quan canvien les dades d’origen. No és “un Excel més bonic”: és una capa que es col·loca a sobre de les teves dades —vinguin d’un Excel, una base de dades, un ERP o una API— i et deixa explotar-les sense tornar a copiar i enganxar cada mes.</p>
+<p>La versió d’escriptori, <strong>Power BI Desktop, és gratuïta</strong>. Allà construeixes l’informe. Després, si vols compartir-lo amb el teu equip i que es refresqui automàticament, el publiques al núvol (Power BI Service), que ja requereix llicència. Més avall ho aclarim.</p>
+<h2>Com funciona Power BI per dins</h2>
+<p>Entendre Power BI és entendre que un informe passa per tres fases. Saltar-se qualsevol d’elles és la raó habitual per la qual un quadre de comandament “no quadra”.</p>
+<figure class="svg-figure">
+<svg viewBox="0 0 760 250" role="img" aria-labelledby="fig-fases-t fig-fases-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-fases-t">Les tres fases d'un informe a Power BI</title>
+<desc id="fig-fases-d">Flux de tres etapes connectades: Power Query neteja les dades, el model les relaciona i l'informe les visualitza.</desc>
+<g>
+<rect x="10" y="64" width="200" height="150" rx="12" class="d-card"/>
+<rect x="26" y="84" width="22" height="18" rx="4" class="d-accent-soft"/>
+<text x="37" y="97" font-size="11" text-anchor="middle" class="d-num">01</text>
+<text x="56" y="98" font-size="13" class="d-title">Power Query</text>
+<rect x="26" y="118" width="168" height="14" rx="3" class="d-card-sub"/>
+<rect x="34" y="123" width="78" height="3" rx="1.5" class="d-mute" opacity="0.55"/>
+<rect x="120" y="123" width="44" height="3" rx="1.5" class="d-mute" opacity="0.32"/>
+<circle cx="186" cy="125" r="2.6" class="d-accent"/>
+<rect x="26" y="140" width="168" height="14" rx="3" class="d-card-sub"/>
+<rect x="34" y="145" width="78" height="3" rx="1.5" class="d-mute" opacity="0.22"/>
+<rect x="120" y="145" width="44" height="3" rx="1.5" class="d-mute" opacity="0.18"/>
+<line x1="30" y1="147" x2="190" y2="147" class="d-stroke-mute" opacity="0.7"/>
+<rect x="26" y="162" width="168" height="14" rx="3" class="d-card-sub"/>
+<rect x="34" y="167" width="78" height="3" rx="1.5" class="d-mute" opacity="0.55"/>
+<rect x="120" y="167" width="44" height="3" rx="1.5" class="d-mute" opacity="0.32"/>
+<circle cx="186" cy="169" r="2.6" class="d-accent"/>
+<rect x="26" y="184" width="168" height="14" rx="3" class="d-card-sub"/>
+<rect x="34" y="189" width="78" height="3" rx="1.5" class="d-mute" opacity="0.55"/>
+<rect x="120" y="189" width="44" height="3" rx="1.5" class="d-mute" opacity="0.32"/>
+<circle cx="186" cy="191" r="2.6" class="d-accent"/>
+</g>
+<g>
+<rect x="280" y="64" width="200" height="150" rx="12" class="d-card"/>
+<rect x="296" y="84" width="22" height="18" rx="4" class="d-accent-soft"/>
+<text x="307" y="97" font-size="11" text-anchor="middle" class="d-num">02</text>
+<text x="326" y="98" font-size="13" class="d-title">Model</text>
+<line x1="380" y1="143" x2="320" y2="119" class="d-line"/>
+<line x1="380" y1="143" x2="440" y2="119" class="d-line"/>
+<line x1="380" y1="158" x2="380" y2="178" class="d-line"/>
+<g>
+<rect x="298" y="108" width="44" height="22" rx="4" class="d-card-sub"/>
+<rect x="298" y="108" width="44" height="4" rx="2" class="d-accent"/>
+<rect x="304" y="119" width="24" height="2.5" rx="1" class="d-mute" opacity="0.5"/>
+<rect x="304" y="124" width="16" height="2.5" rx="1" class="d-mute" opacity="0.3"/>
+</g>
+<g>
+<rect x="418" y="108" width="44" height="22" rx="4" class="d-card-sub"/>
+<rect x="418" y="108" width="44" height="4" rx="2" class="d-accent"/>
+<rect x="424" y="119" width="24" height="2.5" rx="1" class="d-mute" opacity="0.5"/>
+<rect x="424" y="124" width="16" height="2.5" rx="1" class="d-mute" opacity="0.3"/>
+</g>
+<g>
+<rect x="350" y="128" width="60" height="30" rx="4" class="d-card-sub"/>
+<rect x="350" y="128" width="60" height="4" rx="2" class="d-accent"/>
+<rect x="358" y="140" width="34" height="2.6" rx="1" class="d-mute" opacity="0.55"/>
+<rect x="358" y="146" width="22" height="2.6" rx="1" class="d-mute" opacity="0.32"/>
+</g>
+<g>
+<rect x="356" y="178" width="48" height="22" rx="4" class="d-card-sub"/>
+<rect x="356" y="178" width="48" height="4" rx="2" class="d-accent"/>
+<rect x="362" y="189" width="26" height="2.5" rx="1" class="d-mute" opacity="0.5"/>
+<rect x="362" y="194" width="16" height="2.5" rx="1" class="d-mute" opacity="0.3"/>
+</g>
+</g>
+<g>
+<rect x="550" y="64" width="200" height="150" rx="12" class="d-card"/>
+<rect x="566" y="84" width="22" height="18" rx="4" class="d-accent-soft"/>
+<text x="577" y="97" font-size="11" text-anchor="middle" class="d-num">03</text>
+<text x="596" y="98" font-size="13" class="d-title">Informe</text>
+<text x="566" y="132" font-size="26" class="d-kpi">84<tspan font-size="14">%</tspan></text>
+<text x="567" y="146" font-size="9" class="d-label">ràtio</text>
+<polyline points="650,128 666,120 682,124 698,110 714,116 734,104" class="d-accent-s"/>
+<rect x="566" y="172" width="24" height="28" rx="2" class="d-accent" opacity="0.5"/>
+<rect x="599" y="160" width="24" height="40" rx="2" class="d-accent" opacity="0.65"/>
+<rect x="632" y="166" width="24" height="34" rx="2" class="d-accent" opacity="0.8"/>
+<rect x="665" y="150" width="24" height="50" rx="2" class="d-accent"/>
+<rect x="698" y="158" width="24" height="42" rx="2" class="d-accent" opacity="0.7"/>
+</g>
+<line x1="214" y1="139" x2="272" y2="139" class="d-stroke-mute"/>
+<path d="M274 139 L265 134 L265 144 Z" class="d-mute"/>
+<line x1="484" y1="139" x2="542" y2="139" class="d-stroke-mute"/>
+<path d="M544 139 L535 134 L535 144 Z" class="d-mute"/>
+</svg>
+<figcaption>Un informe de Power BI passa sempre per tres fases: <b>Power Query</b> neteja les dades, el <b>model</b> les relaciona i l'<b>informe</b> les explica. Si una falla, els números no quadren.</figcaption>
+</figure>
+<h3>1. Power Query: la cuina</h3>
+<p>Abans de pintar un sol gràfic, les dades es carreguen i es netegen a <strong>Power Query</strong>. Aquí és on es corregeixen els codis mal escrits, s’eliminen les files buides, se separen columnes i se’ls dona el tipus correcte (data, número, text). És l’equivalent al <em>mise en place</em> d’una cuina: si entra brossa, surt brossa, per molt bonic que sigui el gràfic final. En les dades reals d’una empresa, aquesta fase sol ser el 70 % de la feina.</p>
+<h3>2. El model: com es relacionen les teves taules</h3>
+<p>Un cop netes, les dades no viuen en una única taula gegant. Viuen en <strong>diverses taules relacionades</strong> —clients, comandes, productes, dates— connectades entre si. Aquest conjunt de relacions és <em>el model</em>, i és el que permet que en filtrar per “client” es filtrin alhora les vendes, els productes i el període. Un bon model és invisible per a qui fa servir l’informe i decisiu perquè els números surtin bé.</p>
+<h3>3. L’informe: el que veu qui decideix</h3>
+<p>A sobre del model es construeix allò visible: gràfics, taules, mapes, targetes amb KPIs i segmentacions per filtrar. És l’única part que veu la direcció, i la que fa que Power BI sembli “fàcil”. Ho és —si les dues fases anteriors estan ben fetes.</p>
+<h2>Per a què serveix Power BI en una empresa?</h2>
+<p>A la pràctica, Power BI serveix per deixar de fabricar informes a mà. Alguns usos típics:</p>
+<ul>
+<li><strong>Quadres de comandament de direcció</strong>: vendes, marges, tresoreria i objectius en una sola pantalla, actualitzats sols.</li>
+<li><strong>Control de gestió</strong>: tancaments mensuals que abans es muntaven a base de copiar i enganxar a PowerPoint i ara es refresquen amb un botó.</li>
+<li><strong>Indicadors d’operacions</strong>: producció, logística, incidències, SLA.</li>
+<li><strong>Sector públic</strong>: indicadors de gestió, transparència i quadres de comandament per a administracions.</li>
+</ul>
+<p>El patró comú és sempre el mateix: <strong>un procés repetitiu d’“extreure, creuar, formatar” que passa a fer-se un cop i a repetir-se sol</strong>.</p>
+<h2>Power BI Desktop vs Power BI Service</h2>
+<p>És la confusió més freqüent, així que convé fixar-ho:</p>
+<ul>
+<li><strong>Power BI Desktop</strong> (gratuït) → on <em>construeixes</em> l’informe.</li>
+<li><strong>Power BI Service</strong> (de pagament, al núvol) → on <em>publiques, comparteixes i programes l’actualització</em> per a la resta de l’equip.</li>
+</ul>
+<p>Per aprendre, practicar i muntar els teus primers informes no necessites pagar res. La llicència entra quan vols que l’informe sigui un actiu compartit de l’empresa. Ho expliquem a fons a <a href="/ca/blog/power-bi-es-gratuit/">Power BI és gratuït?</a>.</p>
+<h2>Quan li convé a la teva empresa… i quan no?</h2>
+<p>Seria deshonest dir que tota empresa necessita Power BI demà. Si el teu reporting cap en un full, el miren dues persones i no canvia gairebé mai, <strong>Excel continua sent la resposta correcta</strong>. Power BI comença a compensar quan:</p>
+<ul>
+<li>Repeteixes el mateix informe cada setmana o cada mes a mà.</li>
+<li>Creues dades de diverses fonts (vendes + comptabilitat + un CRM, per exemple).</li>
+<li>Diverses persones necessiten la mateixa informació, sempre actualitzada.</li>
+<li>Els teus Excel ja tenen 12 pestanyes, BUSCARV imbricats i triguen a obrir-se.</li>
+</ul>
+<p>Si et sona l’últim, probablement el teu equip ja va tocar sostre amb Excel —i aquest és exactament el moment de fer el salt. Ho desglossem a <a href="/ca/blog/power-bi-vs-excel/">Power BI vs Excel</a>.</p>
+<hr>
+<h2>Per on començar</h2>
+<p>Power BI no s’aprèn veient vídeos solts: s’aprèn construint un informe real de principi a fi, equivocant-se amb dades brutes i entenent per què un número no quadra. Si vols que el teu equip ho aprengui així, a Aimtech fem <a href="/ca/power-bi/">formació en Power BI a mida per a empreses, entitats i AAPP</a> —presencial a Barcelona, en remot en directe o in-company—, partint de zero o pujant de nivell a qui ja se’n surt. I si prefereixes delegar-ho, també muntem el quadre de comandament per tu.</p>
+
+    </div>
+
+    <footer class="post-footer container">
+      <div class="post-footer-grid">
+        <div>
+          <span class="post-footer-label">Escrit per</span>
+          <a href="/ca/sobre-mike/" class="post-author">Mike Pérez</a>
+        </div>
+        <div>
+          <span class="post-footer-label">Et ressona?</span>
+          <a href="/ca/contacte/" class="post-cta">Parlem del teu cas →</a>
+        </div>
+      </div>
+    </footer>
+  </article>
+
+</main>
+
+<!-- @region partials/footer-ca.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formació i implantació d'IA aplicada, Power BI i desenvolupament a mida. Operada per una SL catalana amb focus en pimes i administració pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Serveis</h3>
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/ca/blog/">Blog</a>
+        <a href="/ca/sobre-mike/">Sobre el Mike</a>
+        <a href="/ca/contacte/">Contacte</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/ca/avis-legal/">Avís legal</a>
+        <a href="/ca/politica-privacitat/">Privacitat</a>
+        <a href="/ca/politica-galetes/">Galetes</a>
+        <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

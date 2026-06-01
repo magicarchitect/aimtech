@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Power BI vs Excel: quan fer el salt (amb exemples reals) | Blog Aimtech</title>
+<meta name="description" content="Power BI vs Excel no és una guerra: són complementaris. Et contem la diferència de fons i les 5 senyals que el teu equip ja va tocar sostre amb Excel." />
+
+<link rel="canonical" href="https://www.aimtech.es/ca/blog/power-bi-vs-excel/" />
+
+<!-- hreflang: variants d'idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/power-bi-vs-excel/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/power-bi-vs-excel/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/power-bi-vs-excel/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="/assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="ca_ES" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Power BI vs Excel: quan fer el salt (amb exemples reals)" />
+<meta property="og:description" content="Power BI vs Excel no és una guerra: són complementaris. Et contem la diferència de fons i les 5 senyals que el teu equip ja va tocar sostre amb Excel." />
+<meta property="og:url" content="https://www.aimtech.es/ca/blog/power-bi-vs-excel/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Power BI vs Excel: quan fer el salt (amb exemples reals)" />
+<meta property="article:published_time" content="2026-06-01" />
+<meta property="article:author" content="Mike Pérez" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Power BI vs Excel: quan fer el salt (amb exemples reals)" />
+<meta name="twitter:description" content="Power BI vs Excel no és una guerra: són complementaris. Et contem la diferència de fons i les 5 senyals que el teu equip ja va tocar sostre amb Excel." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: BlogPosting + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Power BI vs Excel: quan fer el salt (amb exemples reals)",
+    "description": "Power BI vs Excel no és una guerra: són complementaris. Et contem la diferència de fons i les 5 senyals que el teu equip ja va tocar sostre amb Excel.",
+    "datePublished": "2026-06-01",
+    "dateModified": "2026-06-01",
+    "inLanguage": "ca-ES",
+    "keywords": ["power-bi","excel"],
+    "image": "https://www.aimtech.es/assets/og/default.png",
+    "url": "https://www.aimtech.es/ca/blog/power-bi-vs-excel/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.aimtech.es/ca/blog/power-bi-vs-excel/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike Pérez",
+      "url": "https://www.aimtech.es/ca/sobre-mike/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.aimtech.es/assets/logo.png?v=2"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aimtech.es/ca/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Power BI vs Excel: quan fer el salt (amb exemples reals)", "item": "https://www.aimtech.es/ca/blog/power-bi-vs-excel/" }
+    ]
+  }
+]
+</script>
+
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/blog.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<script src="/js/cookie-consent.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-serveis-menu">
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+    </div>
+    <a href="/ca/blog/">Blog</a>
+    <a href="/ca/sobre-mike/">Sobre el Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/blog/power-bi-vs-excel/">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/blog/power-bi-vs-excel/" class="active">CA</a>
+    </div>
+    <a href="/ca/contacte/" class="nav-cta">Parlem-ne →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <article class="post">
+    <header class="post-header container">
+      <a href="/ca/blog/" class="post-back">← Blog</a>
+      <div class="post-meta">
+        <time datetime="2026-06-01">1 de juny de 2026</time>
+        <span class="sep">·</span>
+        <span>7 min de lectura</span>
+        <span class="sep">·</span>
+        <span>Mike Pérez</span>
+      </div>
+      <h1>Power BI vs Excel: quan fer el salt (amb exemples reals)</h1>
+      <p class="post-lead">Power BI vs Excel no és una guerra: són complementaris. Et contem la diferència de fons i les 5 senyals que el teu equip ja va tocar sostre amb Excel.</p>
+      <div class="post-tags"><span>power-bi</span><span>excel</span></div>
+    </header>
+
+    <div class="post-body container">
+      <p>“Em canvio a Power BI o em quedo a Excel?” és una pregunta mal plantejada. No és una guerra i no cal triar bàndol: la majoria d’equips que fan servir bé Power BI <strong>continuen fent servir Excel cada dia</strong>. La pregunta útil és una altra: <em>en quin moment Excel deixa de ser l’eina adequada per a segons quina feina?</em> Responem-la amb casos concrets, no amb eslògans.</p>
+<h2>No és Power BI contra Excel</h2>
+<p>El primer que convé desactivar és el marc de “l’un mata l’altre”. Excel i Power BI comparteixen fins i tot motor: <strong>Power Query</strong>, l’eina que neteja i transforma dades, viu als dos. Qui aprèn Power Query a Excel ja té mig camí fet a Power BI.</p>
+<p>Són eines per a fases diferents de la mateixa feina. Excel és imbatible per al càlcul ad-hoc, l’entrada manual de dades i el “deixa’m mirar això ràpid”. Power BI entra quan aquest “això ràpid” es converteix en <em>“això cada mes, per a deu persones, creuant tres fonts”</em>.</p>
+<h2>La diferència de fons: full de càlcul vs model de dades</h2>
+<p>Aquí hi ha el veritable salt conceptual. Excel pensa en <strong>cel·les i fulls</strong>: una dada viu en una posició (B12), i les fórmules apunten a posicions. Funciona de meravella fins que les dades creixen i comences a encadenar BUSCARV entre pestanyes.</p>
+<p>Power BI pensa en <strong>taules relacionades</strong>: tens una taula de vendes, una de clients, una de productes i una de dates, connectades entre si. No referencies cel·les: defineixes relacions un cop, i a partir d’aquí tot es filtra sol. Quan filtres per un client, es filtren alhora les seves vendes, els seus productes i el seu període. Això —el <em>model de dades</em>— és el que Excel no té i el que canvia les regles del joc.</p>
+<figure class="svg-figure">
+<svg viewBox="0 0 760 252" role="img" aria-labelledby="fig-cm-t fig-cm-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-cm-t">Cel·les i BUSCARV davant d'un model de dades relacional</title>
+<desc id="fig-cm-d">A l'esquerra, cel·les enllaçades amb BUSCARV creuats; a la dreta, taules relacionades al voltant d'una taula de fets.</desc>
+<g>
+<rect x="12" y="42" width="348" height="196" rx="12" class="d-card"/>
+<text x="30" y="76" font-size="14" class="d-title">Full de càlcul</text>
+<text x="30" y="95" font-size="10" class="d-txt-i">cel·les + BUSCARV creuats</text>
+<g>
+<rect x="30" y="112" width="70" height="24" rx="2" class="d-card-sub"/><rect x="104" y="112" width="70" height="24" rx="2" class="d-card-sub"/><rect x="178" y="112" width="70" height="24" rx="2" class="d-card-sub"/><rect x="252" y="112" width="70" height="24" rx="2" class="d-card-sub"/>
+<rect x="30" y="144" width="70" height="24" rx="2" class="d-card-sub"/><rect x="104" y="144" width="70" height="24" rx="2" class="d-card-sub"/><rect x="178" y="144" width="70" height="24" rx="2" class="d-card-sub"/><rect x="252" y="144" width="70" height="24" rx="2" class="d-card-sub"/>
+<rect x="30" y="176" width="70" height="24" rx="2" class="d-card-sub"/><rect x="104" y="176" width="70" height="24" rx="2" class="d-card-sub"/><rect x="178" y="176" width="70" height="24" rx="2" class="d-card-sub"/><rect x="252" y="176" width="70" height="24" rx="2" class="d-card-sub"/>
+</g>
+<rect x="30" y="112" width="70" height="24" rx="2" class="d-accent-s"/>
+<rect x="252" y="112" width="70" height="24" rx="2" class="d-accent-s"/>
+<rect x="104" y="176" width="70" height="24" rx="2" class="d-accent-s"/>
+<g opacity="0.6">
+<line x1="65" y1="124" x2="287" y2="188" class="d-stroke-mute"/>
+<line x1="287" y1="124" x2="139" y2="188" class="d-stroke-mute"/>
+<line x1="65" y1="124" x2="213" y2="156" class="d-stroke-mute"/>
+</g>
+</g>
+<g>
+<rect x="400" y="42" width="348" height="196" rx="12" class="d-card"/>
+<text x="418" y="76" font-size="14" class="d-title">Model de dades</text>
+<text x="418" y="95" font-size="10" class="d-txt-i">taules relacionades</text>
+<line x1="574" y1="158" x2="574" y2="120" class="d-line"/>
+<line x1="574" y1="158" x2="470" y2="158" class="d-line"/>
+<line x1="574" y1="158" x2="676" y2="158" class="d-line"/>
+<line x1="574" y1="158" x2="574" y2="196" class="d-line"/>
+<g>
+<rect x="540" y="108" width="68" height="24" rx="4" class="d-card-sub"/><rect x="540" y="108" width="68" height="3.5" rx="1.75" class="d-accent"/><circle cx="552" cy="123" r="2.4" class="d-accent"/><text x="560" y="126" font-size="9" class="d-dim">Dates</text>
+</g>
+<g>
+<rect x="416" y="146" width="62" height="24" rx="4" class="d-card-sub"/><rect x="416" y="146" width="62" height="3.5" rx="1.75" class="d-accent"/><circle cx="428" cy="161" r="2.4" class="d-accent"/><text x="436" y="164" font-size="9" class="d-dim">Clients</text>
+</g>
+<g>
+<rect x="668" y="146" width="74" height="24" rx="4" class="d-card-sub"/><rect x="668" y="146" width="74" height="3.5" rx="1.75" class="d-accent"/><circle cx="680" cy="161" r="2.4" class="d-accent"/><text x="688" y="164" font-size="9" class="d-dim">Productes</text>
+</g>
+<g>
+<rect x="540" y="184" width="68" height="24" rx="4" class="d-card-sub"/><rect x="540" y="184" width="68" height="3.5" rx="1.75" class="d-accent"/><circle cx="552" cy="199" r="2.4" class="d-accent"/><text x="560" y="202" font-size="9" class="d-dim">Botigues</text>
+</g>
+<g>
+<rect x="538" y="140" width="72" height="36" rx="5" class="d-surface"/>
+<rect x="538" y="140" width="72" height="36" rx="5" class="d-accent-s"/>
+<rect x="538" y="140" width="72" height="5" rx="2.5" class="d-accent"/>
+<text x="574" y="165" font-size="11" text-anchor="middle" class="d-ink">Vendes</text>
+</g>
+</g>
+</svg>
+<figcaption>Excel referencia <b>cel·les</b> i acaba en un embolic de BUSCARV. Power BI defineix <b>relacions</b> un cop al voltant d'una taula de fets, i tot es filtra sol.</figcaption>
+</figure>
+<h2>Les 5 senyals que el teu equip ja va tocar sostre amb Excel</h2>
+<p>Si en reconeixes tres o més, no és que estiguis fent servir malament Excel: és que el problema ja va superar l’eina.</p>
+<ol>
+<li><strong>Muntes el mateix informe a mà cada mes.</strong> Extreure, creuar, formatar, enganxar a PowerPoint. Si el ritual es repeteix idèntic, és candidat a automatitzar-se un cop i refrescar-se sol.</li>
+<li><strong>Tens BUSCARV imbricats i l’arxiu triga a obrir-se.</strong> Quan el full pesa, es bloqueja o ningú gosa tocar les fórmules per por de trencar-les, has arribat al límit estructural.</li>
+<li><strong>La pregunta recurrent és “quina és la versió bona?”.</strong> Si l’informe viatja per email en cinc versions i ningú sap quina mana, necessites una única font publicada i sempre actualitzada.</li>
+<li><strong>Creues dades de diverses fonts.</strong> Vendes d’un lloc, comptabilitat d’un altre, un CRM pel seu compte. Consolidar això a mà cada vegada és exactament el que un model de dades fa sol.</li>
+<li><strong>Diverses persones necessiten la mateixa informació, sempre al dia.</strong> Quan el reporting deixa de ser cosa d’una persona i passa a ser un actiu d’equip, Excel es queda curt en distribució i control.</li>
+</ol>
+<h2>Què fa Power BI que Excel no</h2>
+<ul>
+<li><strong>S’actualitza sol</strong>: programes el refresc i l’informe es reconstrueix amb les dades noves sense que ningú copiï i enganxi.</li>
+<li><strong>Relaciona taules de debò</strong>: el model dimensional evita els BUSCARV i manté la coherència.</li>
+<li><strong>Es publica i es comparteix amb control</strong>: una sola versió al núvol, amb permisos sobre qui veu què.</li>
+<li><strong>Escala amb el volum</strong>: maneja milions de files que farien inviable un full.</li>
+</ul>
+<h2>Què fa Excel que Power BI no (i per què no el jubilaràs)</h2>
+<p>Siguem honestos per no vendre fum: Excel continua guanyant en el seu terreny.</p>
+<ul>
+<li><strong>Entrada i edició manual de dades</strong> cel·la a cel·la.</li>
+<li><strong>Càlculs puntuals i simulacions ràpides</strong> sense muntar un model.</li>
+<li><strong>Flexibilitat immediata</strong> per explorar una idea en dos minuts.</li>
+</ul>
+<p>Per això conviuen: molts fluxos reals fan servir Excel com a entrada o com a destí d’exportació, i Power BI com a capa d’explotació i publicació.</p>
+<figure class="svg-figure">
+<svg viewBox="0 0 760 196" role="img" aria-labelledby="fig-cx-t fig-cx-d" xmlns="http://www.w3.org/2000/svg">
+<title id="fig-cx-t">Com conviuen Excel i Power BI</title>
+<desc id="fig-cx-d">Excel aporta les dades i el càlcul ad-hoc; Power BI les modela i les publica; l'equip decideix amb un informe sempre al dia.</desc>
+<g>
+<rect x="20" y="40" width="200" height="118" rx="12" class="d-card"/>
+<text x="38" y="72" font-size="14" class="d-title">Excel</text>
+<rect x="86" y="86" width="22" height="14" rx="2" class="d-card-sub"/><rect x="112" y="86" width="22" height="14" rx="2" class="d-card-sub"/><rect x="138" y="86" width="22" height="14" rx="2" class="d-card-sub"/>
+<rect x="86" y="104" width="22" height="14" rx="2" class="d-card-sub"/><rect x="112" y="104" width="22" height="14" rx="2" class="d-accent" opacity="0.55"/><rect x="138" y="104" width="22" height="14" rx="2" class="d-card-sub"/>
+<text x="38" y="146" font-size="10" class="d-txt-i">entrada · càlcul</text>
+</g>
+<g>
+<rect x="280" y="40" width="200" height="118" rx="12" class="d-card"/>
+<rect x="280" y="40" width="200" height="118" rx="12" class="d-accent-s" opacity="0.55"/>
+<text x="298" y="72" font-size="14" class="d-title">Power BI</text>
+<line x1="380" y1="112" x2="350" y2="92" class="d-line"/><line x1="380" y1="112" x2="410" y2="92" class="d-line"/>
+<rect x="338" y="84" width="24" height="14" rx="3" class="d-card-sub"/><rect x="338" y="84" width="24" height="3" rx="1.5" class="d-accent"/>
+<rect x="398" y="84" width="24" height="14" rx="3" class="d-card-sub"/><rect x="398" y="84" width="24" height="3" rx="1.5" class="d-accent"/>
+<rect x="366" y="106" width="28" height="16" rx="3" class="d-surface"/><rect x="366" y="106" width="28" height="16" rx="3" class="d-accent-s"/><rect x="366" y="106" width="28" height="3" rx="1.5" class="d-accent"/>
+<text x="298" y="146" font-size="10" class="d-txt-i">modela · publica</text>
+</g>
+<g>
+<rect x="540" y="40" width="200" height="118" rx="12" class="d-card"/>
+<text x="558" y="72" font-size="14" class="d-title">Equip</text>
+<g class="d-accent">
+<circle cx="610" cy="100" r="7"/><path d="M597 120 a13 13 0 0 1 26 0 Z"/>
+</g>
+<g class="d-mute">
+<circle cx="648" cy="102" r="6"/><path d="M637 119 a11 11 0 0 1 22 0 Z"/>
+<circle cx="680" cy="102" r="6"/><path d="M669 119 a11 11 0 0 1 22 0 Z"/>
+</g>
+<text x="558" y="146" font-size="10" class="d-txt-i">decideix amb dades</text>
+</g>
+<text x="250" y="92" font-size="9" text-anchor="middle" class="d-label">dades</text>
+<line x1="224" y1="104" x2="274" y2="104" class="d-stroke-mute"/><path d="M276 104 L267 99 L267 109 Z" class="d-mute"/>
+<text x="510" y="92" font-size="9" text-anchor="middle" class="d-label">publica</text>
+<line x1="484" y1="104" x2="534" y2="104" class="d-stroke-mute"/><path d="M536 104 L527 99 L527 109 Z" class="d-mute"/>
+</svg>
+<figcaption>No és l'un contra l'altre: <b>Excel</b> aporta dades i càlcul ràpid, <b>Power BI</b> les modela i publica, i l'<b>equip</b> decideix amb un informe sempre al dia.</figcaption>
+</figure>
+<h2>Com fer el salt sense pegar-te la patacada</h2>
+<p>L’error típic és intentar replicar a Power BI, cel·la a cel·la, el full monstruós que ja tens. No funciona: cal repensar les dades com a model, no com a full. Per això el salt s’aprèn millor <strong>construint un cas real de principi a fi</strong> —importar dades brutes, netejar-les, modelar-les i publicar-les— que veient teoria.</p>
+<p>Si el teu equip està en aquest punt, a Aimtech fem <a href="/ca/power-bi/">formació en Power BI a mida per a empreses, entitats i AAPP</a> que parteix just d’on et vas quedar amb Excel: presencial a Barcelona, en remot en directe o in-company. I si el que necessites és algú que munti el quadre de comandament per tu, també.</p>
+
+    </div>
+
+    <footer class="post-footer container">
+      <div class="post-footer-grid">
+        <div>
+          <span class="post-footer-label">Escrit per</span>
+          <a href="/ca/sobre-mike/" class="post-author">Mike Pérez</a>
+        </div>
+        <div>
+          <span class="post-footer-label">Et ressona?</span>
+          <a href="/ca/contacte/" class="post-cta">Parlem del teu cas →</a>
+        </div>
+      </div>
+    </footer>
+  </article>
+
+</main>
+
+<!-- @region partials/footer-ca.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formació i implantació d'IA aplicada, Power BI i desenvolupament a mida. Operada per una SL catalana amb focus en pimes i administració pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Serveis</h3>
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/ca/blog/">Blog</a>
+        <a href="/ca/sobre-mike/">Sobre el Mike</a>
+        <a href="/ca/contacte/">Contacte</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/ca/avis-legal/">Avís legal</a>
+        <a href="/ca/politica-privacitat/">Privacitat</a>
+        <a href="/ca/politica-galetes/">Galetes</a>
+        <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>
