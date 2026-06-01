@@ -59,7 +59,7 @@ transaccional y, cuando aplica, cross-link a `/ia-agentica/`.
 | B.2 | Cerrar temario real del pillar (requiere input de Mike) | ☐ APARCADO (decisión de Mike) | — |
 | B.3 | Cluster ES IA-C1…IA-C5 (posts Markdown) | ☑ HECHO | 2026-06-01 |
 | B.4 | Subir schema pillar a EducationalOrganization + provider @id | ☐ PENDIENTE (va con B.2) | — |
-| B.5 | Versiones CA del pillar reforzado + clusters (coordinar con Fase D) | ☐ PENDIENTE | — |
+| B.5 | Versiones CA del cluster (5 posts CA) + interlinks del pillar CA | ☑ HECHO | 2026-06-01 |
 
 ## Estado de avance
 **(2026-06-01, B.1)** Plan creado. Money page de IA ya tiene precio visible

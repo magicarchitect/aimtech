@@ -211,8 +211,8 @@ Cada módulo cierra con un proyecto práctico.
 | 2 | Clusters Tanda 1 (C1 qué es, C2 vs Excel, C3 precio) | ☑ Hecho | 2026-05-28 | 3 posts ES (que-es-power-bi, power-bi-vs-excel, es-gratis-power-bi), cada uno enlaza al pillar con anchor transaccional. Versiones CA → FASE 5. |
 | 3 | Clusters Tanda 2 técnicos (C4 DAX, C5 modelado, C6 Power Query, C7 mapas) | ☑ Hecho | 2026-06-01 | 4 posts ES publicados; cross-link entre ellos y al pillar; pillar enlaza a Power Query, modelado y DAX desde las cards de itinerarios. |
 | 4 | Comparativa/comercial/sectorial (C8 n8n, C9 cursos BCN, C10 AAPP) | ☑ Hecho | 2026-06-01 | 3 posts ES (n8n-vs-make-vs-zapier cross-sell IA, curso-power-bi-barcelona-como-elegir geo+comercial, power-bi-administraciones-publicas sectorial). |
-| 5 | Catalán: pillar CA + clusters CA + hreflang | ☐ Pendiente | — | — |
-| 6 | Interlinking global + verificación schema (claude-seo) | ☐ Pendiente | — | — |
+| 5 | Catalán: pillar CA + clusters CA + hreflang | ☑ Hecho | 2026-06-01 | 6 posts CA del cluster PB (que-es, vs-excel, es-gratuit, dax, modelatge, power-query, mapes, n8n, curs-bcn, aapp); cuerpo CA del pillar alineado al temario real (corregida divergencia "0-intermedi"); interlinks CA; hreflang ES↔CA vía translationKey. |
+| 6 | Interlinking global + verificación schema | ◐ Parcial | 2026-06-01 | Interlinking pillar↔cluster hecho ES+CA; JSON-LD validado (parseo + offers) en money pages y posts; 385 enlaces CA sin roturas. Falta repaso final con claude-seo en producción. |
 
 ### Decisiones tomadas durante el desarrollo
 > (Registrar aquí cualquier desviación o decisión relevante para no perder el "porqué".)
