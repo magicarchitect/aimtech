@@ -59,15 +59,17 @@
   [headers.values]
     Cache-Control = "public, max-age=3600, must-revalidate"
 
-# ── Cache: assets binarios largo (7 días) ────────────
-# Logos y OG images cambian raramente. 7 días es un
-# compromiso entre rendimiento y poder sustituir el
-# archivo sin que la caché del cliente se quede vieja.
+# ── Cache: assets binarios (1 año, immutable) ────────
+# Fuentes (.woff2 con nombre único) y logo (?v=2) son
+# inmutables: si cambian, cambia la URL. Cachear 1 año
+# elimina re-descargas en visitas repetidas (mejor LCP/
+# FCP). Las OG images las re-piden los crawlers, no la
+# caché del usuario, así que no es problema.
 
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=31536000, immutable"
 
 # ── Redirect: aimtech.es → www.aimtech.es ────────────
 # Canónico = www.aimtech.es. Todas las URLs absolutas
