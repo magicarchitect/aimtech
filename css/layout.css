@@ -131,6 +131,9 @@ main { position: relative; z-index: 2; }
   animation: pulse 2s ease-in-out infinite;
 }
 .hero-meta .sep { color: var(--line-strong); }
+/* Reserva el ancho final del reloj ("00:00:00 CET") para que el relleno por
+   JS no provoque layout shift (CLS). */
+#clock { display: inline-block; min-width: 12ch; }
 
 .hero h1 {
   font-family: var(--serif); font-weight: 400;
