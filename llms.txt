@@ -21,6 +21,12 @@ Datos reales de actividad: +20 años de experiencia, 3.360 alumnos formados,
 - [Implantación de IA Agéntica](https://www.aimtech.es/ia-agentica/): diseño e implantación de sistemas de agentes IA orquestados con ROI medible. Stack: Claude API, n8n, RAG y bases vectoriales. Incluye análisis de procesos, precondiciones y diseño del workflow agéntico.
 - [Desarrollo a medida](https://www.aimtech.es/desarrollo/): apps web y móvil, CMS, APIs e integraciones de software para empresas.
 
+### Páginas de servicio específicas
+
+- [Curso de Power BI para empresas](https://www.aimtech.es/curso-power-bi-empresas/): formación in-company de Power BI para empresas, entidades y AAPP, con datasets de negocio reales. Online en directo, presencial en Barcelona o in-company. Desde 4.400€ por grupo de hasta 10 personas.
+- [Curso de ChatGPT para empresas](https://www.aimtech.es/curso-chatgpt-empresas/): curso práctico de ChatGPT, Copilot y Gemini (12h): prompting efectivo, casos por departamento y uso seguro alineado con el AI Act. Desde 2.500€ por grupo.
+- [Automatización de procesos con IA](https://www.aimtech.es/automatizacion-procesos-ia/): automatización de tareas repetitivas (correos, documentos, traspaso de datos entre apps, informes) con n8n e IA. Diagnóstico previo y ROI medible. Proyectos desde 2.500€.
+
 ## Sobre el fundador
 
 - [Sobre Mike Pérez](https://www.aimtech.es/sobre-mike/): Miguel "Mike" Pérez, Ingeniero de Soluciones de IA con +20 años de experiencia, docente universitario y fundador de Aimtech.

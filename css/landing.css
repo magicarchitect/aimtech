@@ -1,0 +1,137 @@
+/* ───────────────────────────────────────────────────────────
+   landing.css — Heros propios de las landing pages comerciales
+   No reutiliza pbi-stage / ia-stage / ag-stage de las money pages.
+   Tres visuales distintos:
+     .lbi    → dashboard de tarjetas (curso-power-bi-empresas)
+     .lchat  → interfaz de chat (curso-chatgpt-empresas)
+     .lflow  → workflow de nodos (automatizacion-procesos-ia)
+   Animación contenida y paleta de marca (azul #2580e3 único acento).
+   ─────────────────────────────────────────────────────────── */
+
+.lstage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: 560px;
+  margin-left: auto;
+  opacity: 0;
+  animation: lstage-in 1s ease 0.5s forwards;
+}
+@keyframes lstage-in { to { opacity: 1; } }
+
+.lstage svg { width: 100%; height: 100%; display: block; overflow: visible; }
+
+/* Glow de fondo suave detrás del visual */
+.lstage::before {
+  content: "";
+  position: absolute;
+  top: 12%; right: 6%;
+  width: 60%; height: 60%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 128, 227, 0.20), transparent 70%);
+  filter: blur(26px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Tags mono flotantes (compartido por los tres heros) */
+.lstage .ltag {
+  position: absolute;
+  z-index: 4;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  color: var(--ink-dim);
+  background: rgba(13, 18, 26, 0.72);
+  border: 1px solid var(--line-strong);
+  padding: 5px 9px;
+  border-radius: 7px;
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+  animation: ltag-float 5s ease-in-out infinite;
+}
+.lstage .ltag--accent { color: var(--accent); border-color: rgba(37, 128, 227, 0.45); }
+@keyframes ltag-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+/* Paneles SVG comunes */
+.lstage .l-panel { fill: var(--bg-card); stroke: var(--line-strong); stroke-width: 1.2; }
+.lstage .l-bar-track { fill: rgba(255, 255, 255, 0.04); }
+.lstage .l-dot { fill: var(--line-strong); }
+.lstage .l-pulse { fill: var(--accent); animation: l-pulse 2s ease-in-out infinite; }
+@keyframes l-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+
+/* ── .lbi — Dashboard de tarjetas (Power BI) ─────────────────── */
+.lbi .l-title { fill: var(--ink); font-family: var(--mono); font-size: 13px; }
+.lbi .l-sub { fill: var(--ink-mute); font-family: var(--mono); font-size: 9px; letter-spacing: 0.06em; }
+.lbi .l-kpi { fill: var(--ink); font-family: var(--serif, Georgia, serif); font-style: italic; font-size: 38px; }
+.lbi .l-kpi-up { fill: var(--accent); font-family: var(--mono); font-size: 11px; }
+
+/* Donut: el aro de progreso se "dibuja" una vez */
+.lbi .l-donut-track { fill: none; stroke: rgba(255, 255, 255, 0.06); stroke-width: 14; }
+.lbi .l-donut-arc {
+  fill: none; stroke: var(--accent); stroke-width: 14; stroke-linecap: round;
+  stroke-dasharray: 339.3; stroke-dashoffset: 339.3;
+  animation: l-donut-draw 1.6s ease 0.8s forwards;
+}
+@keyframes l-donut-draw { to { stroke-dashoffset: 78; } } /* ~77% */
+.lbi .l-donut-num { fill: var(--ink); font-family: var(--mono); font-size: 22px; text-anchor: middle; }
+
+/* Barras que crecen escalonadas */
+.lbi .l-bar { fill: var(--accent); transform: scaleY(0); transform-origin: bottom; transform-box: fill-box;
+  animation: l-bar-rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.lbi .l-bar:nth-child(1) { animation-delay: 1.0s; }
+.lbi .l-bar:nth-child(2) { animation-delay: 1.12s; }
+.lbi .l-bar:nth-child(3) { animation-delay: 1.24s; }
+.lbi .l-bar:nth-child(4) { animation-delay: 1.36s; }
+.lbi .l-bar:nth-child(5) { animation-delay: 1.48s; }
+.lbi .l-bar:nth-child(6) { animation-delay: 1.60s; }
+@keyframes l-bar-rise { to { transform: scaleY(1); } }
+
+/* ── .lchat — Interfaz de chat (ChatGPT) ─────────────────────── */
+.lchat .l-title { fill: var(--ink); font-family: var(--mono); font-size: 12px; }
+.lchat .l-bubble { opacity: 0; animation: l-bubble-in 0.5s ease forwards; }
+.lchat .l-bubble--u { animation-delay: 0.9s; }
+.lchat .l-bubble--a { animation-delay: 2.0s; }
+@keyframes l-bubble-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.lchat .l-bub-u { fill: rgba(37, 128, 227, 0.16); stroke: rgba(37, 128, 227, 0.5); stroke-width: 1; }
+.lchat .l-bub-a { fill: rgba(255, 255, 255, 0.04); stroke: var(--line-strong); stroke-width: 1; }
+.lchat .l-bub-txt { fill: var(--ink-dim); font-family: var(--mono); font-size: 11px; }
+.lchat .l-bub-txt--u { fill: var(--ink); }
+/* Líneas de respuesta que aparecen "escribiéndose" */
+.lchat .l-stream { fill: var(--accent); opacity: 0; transform-origin: left; transform-box: fill-box; transform: scaleX(0); }
+.lchat .l-stream:nth-of-type(1) { animation: l-stream-in 0.5s ease 2.3s forwards; }
+.lchat .l-stream:nth-of-type(2) { animation: l-stream-in 0.5s ease 2.7s forwards; }
+.lchat .l-stream:nth-of-type(3) { animation: l-stream-in 0.5s ease 3.1s forwards; }
+@keyframes l-stream-in { to { opacity: 0.55; transform: scaleX(1); } }
+/* Barra de input con caret parpadeante */
+.lchat .l-input { fill: rgba(255, 255, 255, 0.03); stroke: var(--line-strong); stroke-width: 1; }
+.lchat .l-caret { fill: var(--accent); animation: l-caret 1.1s steps(1) infinite; }
+@keyframes l-caret { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+.lchat .l-ph { fill: var(--ink-mute); font-family: var(--mono); font-size: 10px; }
+
+/* ── .lflow — Workflow de nodos (Automatización) ─────────────── */
+.lflow .l-edge { fill: none; stroke: var(--line-strong); stroke-width: 1.6; stroke-dasharray: 4 4; }
+.lflow .l-node { fill: var(--bg-card); stroke: var(--line-strong); stroke-width: 1.4; }
+.lflow .l-node--ai { stroke: rgba(37, 128, 227, 0.6); }
+.lflow .l-node-lbl { fill: var(--ink); font-family: var(--mono); font-size: 11px; text-anchor: middle; }
+.lflow .l-node-sub { fill: var(--ink-mute); font-family: var(--mono); font-size: 8px; text-anchor: middle; letter-spacing: 0.04em; }
+.lflow .l-ai-ast { stroke: var(--accent); stroke-width: 2; stroke-linecap: round; }
+.lflow .l-ai-ring { fill: none; stroke: rgba(37, 128, 227, 0.4); stroke-width: 1; animation: l-ai-ring 3s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+@keyframes l-ai-ring { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.12); opacity: 1; } }
+/* Partícula que recorre la tubería */
+.lflow .l-particle { fill: var(--accent); }
+.lflow .l-particle--warm { fill: var(--accent-warm); }
+
+/* ── Tarjetas del bento ──────────────────────────────────────
+   Por defecto .card-num lleva margin-bottom:auto, que empuja el
+   título y el cuerpo al fondo de la tarjeta → con alturas distintas
+   los títulos quedan en "escalera". Aquí los alineamos arriba y
+   anclamos el precio (si lo hay) abajo para que alinee entre tarjetas.
+   Scoped: landing.css solo lo cargan las landing comerciales. */
+.bento .card .card-num { margin-bottom: 26px; }
+.bento .card .price { margin-top: auto; }
+
+/* ── Responsive: mismo comportamiento que las money pages ────── */
+@media (max-width: 960px) {
+  .lstage { max-width: min(400px, 88vw); margin: 0 auto; }
+}
