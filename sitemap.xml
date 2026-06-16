@@ -263,6 +263,46 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://www.aimtech.es/curso-power-bi-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/curso-power-bi-barcelona/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/curs-power-bi-barcelona/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/curso-power-bi-barcelona/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/curs-power-bi-barcelona/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/curso-power-bi-barcelona/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/curs-power-bi-barcelona/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/curso-power-bi-barcelona/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/formacion-ia-empresas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/formacion-ia-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/formacio-ia-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/formacion-ia-empresas/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/formacio-ia-empreses/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/formacion-ia-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/formacio-ia-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/formacion-ia-empresas/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- BLOG-AUTO-START -->
   <url>
     <loc>https://www.aimtech.es/blog/</loc>

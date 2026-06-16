@@ -131,6 +131,27 @@
 .bento .card .card-num { margin-bottom: 26px; }
 .bento .card .price { margin-top: auto; }
 
+/* ── .lgrid — Heatmap / matriz geográfica (Power BI local · Barcelona) ──
+   Hero distinto del .lbi: una cuadrícula tipo mapa de calor que late suave,
+   con un marcador "hub" (Barcelona) y anillo radar. */
+.lgrid .l-cell { animation: l-cell-pulse 3.2s ease-in-out infinite; }
+@keyframes l-cell-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+.lgrid .l-hub { fill: var(--accent); }
+.lgrid .l-hub-ring { fill: none; stroke: var(--accent); stroke-width: 1.5; transform-origin: center; transform-box: fill-box; animation: l-geo-radar 2.6s ease-out infinite; }
+@keyframes l-geo-radar { 0% { transform: scale(0.5); opacity: 0.9; } 100% { transform: scale(2.8); opacity: 0; } }
+.lgrid .l-pin-lbl { fill: var(--ink); font-family: var(--mono); font-size: 11px; }
+
+/* ── .llevels — Niveles / skills (formación IA por niveles) ────
+   Tres barras (básico/intermedio/avanzado) que se rellenan a su nivel. */
+.llevels .l-lvl-track { fill: rgba(255, 255, 255, 0.05); }
+.llevels .l-bars .l-lvl-bar { fill: var(--accent); transform: scaleX(0); transform-origin: left; transform-box: fill-box; animation: l-lvl-fill 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.llevels .l-bars .l-lvl-bar:nth-of-type(1) { animation-delay: 0.8s; }
+.llevels .l-bars .l-lvl-bar:nth-of-type(2) { animation-delay: 1.05s; }
+.llevels .l-bars .l-lvl-bar:nth-of-type(3) { animation-delay: 1.3s; }
+@keyframes l-lvl-fill { to { transform: scaleX(1); } }
+.llevels .l-lvl-lbl { fill: var(--ink); font-family: var(--mono); font-size: 12px; }
+.llevels .l-lvl-tag { fill: var(--ink-mute); font-family: var(--mono); font-size: 10px; text-anchor: end; }
+
 /* ── Responsive: mismo comportamiento que las money pages ────── */
 @media (max-width: 960px) {
   .lstage { max-width: min(400px, 88vw); margin: 0 auto; }
