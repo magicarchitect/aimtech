@@ -56,6 +56,12 @@ body {
 [data-stagger].is-visible > *:nth-child(4) { transition-delay: 0.35s; opacity: 1; transform: translateY(0); }
 [data-stagger].is-visible > *:nth-child(5) { transition-delay: 0.45s; opacity: 1; transform: translateY(0); }
 [data-stagger].is-visible > *:nth-child(6) { transition-delay: 0.55s; opacity: 1; transform: translateY(0); }
+[data-stagger].is-visible > *:nth-child(7) { transition-delay: 0.65s; opacity: 1; transform: translateY(0); }
+[data-stagger].is-visible > *:nth-child(8) { transition-delay: 0.75s; opacity: 1; transform: translateY(0); }
+/* Salvaguarda: cualquier hijo más allá del 8º se revela sin escalonado
+   (mejor visible sin delay que invisible). Cubre rejillas largas como
+   «servicios relacionados» de IA agéntica. */
+[data-stagger].is-visible > *:nth-child(n+9) { opacity: 1; transform: translateY(0); }
 
 /* ── Keyframes ──────────────────────────────────── */
 @keyframes fadeUp {

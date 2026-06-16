@@ -91,6 +91,42 @@ nav {
   outline: none;
 }
 
+/* ── Mega-menú agrupado (variante ancha de «Servicios») ──────
+   Las 11 landings agrupadas bajo sus 4 categorías (money pages).
+   En desktop, panel multi-columna; en el drawer móvil se colapsa a
+   las cabeceras (ver components.css). */
+.nav-mega {
+  /* Centrado en el viewport (no en el toggle) para que el panel ancho
+     no se desborde a la izquierda en desktops estrechos (~960-1100px).
+     left:50% lo hereda de .nav-dropdown-menu; aquí lo fijamos al viewport. */
+  position: fixed;
+  top: 86px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 14px;
+}
+.nav-mega-col {
+  display: flex; flex-direction: column; gap: 2px;
+  min-width: 168px;
+}
+.nav-mega-col--wide { min-width: 202px; }
+/* Cabecera de categoría → money page */
+.nav-mega .nav-mega-head {
+  color: var(--ink);
+  letter-spacing: 0.02em;
+  margin-bottom: 4px; padding-bottom: 9px;
+  border-bottom: 1px solid var(--line);
+}
+.nav-mega .nav-mega-head:hover,
+.nav-mega .nav-mega-head:focus-visible { color: var(--accent); }
+/* Nota para categorías sin landings (Desarrollo) */
+.nav-mega-note {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--ink-mute); line-height: 1.5;
+  padding: 8px 14px; max-width: 174px;
+}
+
 /* ── Main / Container ───────────────────────────── */
 main { position: relative; z-index: 2; }
 .container {
