@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Automatització de factures i PDFs amb IA — extracció de dades | Aimtech</title>
+<meta name="description" content="Automatització de factures i PDFs amb IA: extreu les dades (número, data, base, total, proveïdor, NIF), les valida i les dona d'alta al teu sistema. Sense teclejar. ROI mesurable." />
+
+<link rel="canonical" href="https://www.aimtech.es/ca/automatitzacio-factures-pdf-ia/" />
+
+<!-- hreflang: variants d'idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/automatizacion-facturas-pdfs-ia/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/automatitzacio-factures-pdf-ia/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/automatizacion-facturas-pdfs-ia/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="../../assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="../../assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="../../assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ca_ES" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Automatització de factures i PDFs amb IA — extracció de dades | Aimtech" />
+<meta property="og:description" content="Un sistema amb IA llegeix les teves factures i PDFs, extreu les dades, les valida contra les teves regles i les dona d'alta al teu sistema. El dubtós, a revisió. Sense teclejar." />
+<meta property="og:url" content="https://www.aimtech.es/ca/automatitzacio-factures-pdf-ia/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Automatització de factures i PDFs amb IA — extracció de dades — Aimtech" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Automatització de factures i PDFs amb IA — extracció de dades | Aimtech" />
+<meta name="twitter:description" content="IA que llegeix les teves factures i PDFs, extreu les dades i les dona d'alta al teu sistema. El dubtós, a revisió. Sense teclejar." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: Service + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://www.aimtech.es/#aimtech",
+    "name": "Aimtech",
+    "legalName": "Aimtech Consulting SL",
+    "url": "https://www.aimtech.es",
+    "logo": "https://www.aimtech.es/assets/logo.png?v=2",
+    "founder": {
+      "@type": "Person",
+      "name": "Miguel Pérez",
+      "alternateName": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "Espanya" },
+      { "@type": "AdministrativeArea", "name": "Catalunya" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Catalunya",
+      "addressCountry": "ES"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hola@aimtech.es",
+      "contactType": "customer service",
+      "areaServed": "ES",
+      "availableLanguage": ["ca", "es"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Automatització de factures i PDFs amb IA",
+    "description": "Automatització de l'entrada de factures, albarans, formularis i altres documents en PDF per a empreses, entitats i administracions públiques amb IA: lectura del document, extracció de les dades (número, data, base, total, proveïdor, NIF), validació contra les regles del client i alta al seu sistema (ERP, comptabilitat o full de càlcul). Els documents dubtosos queden a revisió humana. Stack basat en n8n, Claude API i extracció de documents. ROI mesurable.",
+    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "url": "https://www.aimtech.es/ca/automatitzacio-factures-pdf-ia/",
+    "areaServed": [
+      { "@type": "Country", "name": "Espanya" },
+      { "@type": "AdministrativeArea", "name": "Catalunya" }
+    ],
+    "serviceType": "Extracció de dades de documents amb IA",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 2500,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/ca/automatitzacio-factures-pdf-ia/#preus"
+    },
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Empreses, entitats i administracions públiques"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Automatització de processos amb IA", "item": "https://www.aimtech.es/ca/automatitzacio-processos-ia/" },
+      { "@type": "ListItem", "position": 3, "name": "Automatització de factures i PDFs amb IA", "item": "https://www.aimtech.es/ca/automatitzacio-factures-pdf-ia/" }
+    ]
+  }
+]
+</script>
+
+<!-- Preload: fuente serif del hero (LCP) -->
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/tokens.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+<link rel="stylesheet" href="../../css/base.css">
+<link rel="stylesheet" href="../../css/components.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/ia-agentica.css">
+<link rel="stylesheet" href="../../css/landing.css">
+<link rel="stylesheet" href="../../css/cookie-consent.css">
+<script src="../../js/cookie-consent.js" defer></script>
+<script src="../../js/site.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-serveis-menu">
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+    </div>
+    <a href="/ca/blog/">Blog</a>
+    <a href="/ca/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/automatizacion-facturas-pdfs-ia/">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/automatitzacio-factures-pdf-ia/" class="active">CA</a>
+    </div>
+    <a href="/ca/contacte/" class="nav-cta">Parlem-ne →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="dot dot--multi"></span>
+            <span>Factures · PDFs</span>
+            <span class="sep">/</span>
+            <span>Extreu · Valida · Registra</span>
+            <span class="sep">/</span>
+            <span id="clock">--:--:--</span>
+          </div>
+
+          <h1>
+            <span class="reveal r1">Factures i PDFs</span>
+            <span class="reveal r2"><em class="italic">llegits per IA</em>.</span><br>
+            <span class="reveal r3">Del document al teu sistema,</span>
+            <span class="reveal r4">sense teclejar.</span>
+          </h1>
+
+          <p class="hero-sub">
+            Cada factura, albarà o formulari que arriba en PDF acaba amb algú teclejant els mateixos camps a l'ERP. Un sistema amb IA <strong>llegeix el document</strong>, extreu les dades —número, data, base, total, proveïdor, NIF—, les <strong>valida contra les teves regles</strong> i les dona d'alta. El dubtós es queda a revisió. Tu deixes de copiar i enganxar.
+          </p>
+
+          <div class="hero-cta">
+            <a href="/ca/contacte/" class="btn-primary">
+              Demanar diagnòstic
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="/ca/automatitzacio-processos-ia/" class="btn-ghost">Com ho fem</a>
+          </div>
+        </div>
+
+        <div class="lstage lscan" aria-hidden="true">
+          <svg viewBox="0 0 560 560" role="img" aria-label="Una factura PDF que s'escaneja i les dades de la qual s'extreuen a una taula">
+
+            <!-- Document PDF -->
+            <rect class="l-pdf" x="74" y="128" width="178" height="300" rx="8"/>
+            <text class="l-sub" x="94" y="160">factura.pdf</text>
+            <line class="l-pdf-line l-pdf-line--hd" x1="94" y1="182" x2="208" y2="182"/>
+            <line class="l-pdf-line" x1="94" y1="206" x2="232" y2="206"/>
+            <line class="l-pdf-line" x1="94" y1="224" x2="210" y2="224"/>
+            <line class="l-pdf-line" x1="94" y1="242" x2="226" y2="242"/>
+            <line class="l-pdf-line" x1="94" y1="276" x2="180" y2="276"/>
+            <line class="l-pdf-line" x1="94" y1="294" x2="214" y2="294"/>
+            <line class="l-pdf-line" x1="94" y1="312" x2="196" y2="312"/>
+            <line class="l-pdf-line l-pdf-line--hd" x1="94" y1="392" x2="150" y2="392"/>
+            <line class="l-pdf-line l-pdf-line--hd" x1="186" y1="392" x2="232" y2="392"/>
+
+            <!-- Línia d'escaneig -->
+            <line class="l-scan" x1="80" y1="160" x2="246" y2="160"/>
+
+            <!-- Fletxa d'extracció -->
+            <path class="l-arrow" d="M252 280 C 278 280, 282 252, 306 252"/>
+
+            <!-- Taula de dades extretes -->
+            <rect class="l-field-box" x="304" y="150" width="184" height="256" rx="10"/>
+            <text class="l-sub" x="322" y="178">dades extretes</text>
+            <line x1="322" y1="190" x2="470" y2="190" stroke="#2a3344" stroke-width="1"/>
+
+            <g class="l-field">
+              <text class="l-field-k" x="322" y="214">Núm. factura</text>
+              <text class="l-field-v" x="322" y="232">F-2026/418</text>
+            </g>
+            <g class="l-field">
+              <text class="l-field-k" x="322" y="262">Data</text>
+              <text class="l-field-v" x="322" y="280">16/06/2026</text>
+            </g>
+            <g class="l-field">
+              <text class="l-field-k" x="322" y="310">Base / IVA</text>
+              <text class="l-field-v" x="322" y="328">1.240 € · 21%</text>
+            </g>
+            <g class="l-field">
+              <text class="l-field-k" x="322" y="358">Proveïdor</text>
+              <text class="l-field-v" x="322" y="376">ACME SL · B65…</text>
+            </g>
+
+          </svg>
+
+          <span class="ltag ltag--accent" style="top:11%; left:-1%;">// extracció</span>
+          <span class="ltag" style="bottom:14%; right:-2%;">sense teclejar</span>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="tag">FACTURES I PDFs</span>
+      <span>Extracció de dades</span> <span>·</span>
+      <span>Lectura de PDF</span> <span>·</span>
+      <span>Validació</span> <span>·</span>
+      <span>Alta a l'ERP</span> <span>·</span>
+      <span>Albarans</span> <span>·</span>
+      <span>Formularis</span> <span>·</span>
+      <span>n8n</span> <span>·</span>
+      <span>Claude</span> <span>·</span>
+      <span>ROI mesurable</span> <span>·</span>
+      <span class="tag">FACTURES I PDFs</span>
+      <span>Extracció de dades</span> <span>·</span>
+      <span>Lectura de PDF</span> <span>·</span>
+      <span>Validació</span> <span>·</span>
+      <span>Alta a l'ERP</span> <span>·</span>
+      <span>ROI mesurable</span> <span>·</span>
+    </div>
+  </div>
+
+  <section id="que-fa">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">01 — Què fa</div>
+        <h2 class="section-title">Teclejar el que ja està escrit / en un PDF és <em>la feina</em> / que primer desapareix.</h2>
+        <p class="section-intro">No hi ha criteri a copiar un número de factura a l'ERP: només hi ha temps i errors de dit. És el primer candidat a automatitzar. El recorregut complet, de document a sistema:</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// pdf_01</span>
+            <span class="badge">Llegeix</span>
+          </div>
+          <h3>El <em>document</em>.</h3>
+          <p>Factura, albarà, formulari o tiquet, arribi per correu, carpeta o escaneig. Llegeix el PDF encara que cada proveïdor faci servir un format diferent, no una plantilla fixa.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// pdf_02</span>
+            <span class="badge">Extreu</span>
+          </div>
+          <h3>Els <em>camps</em>.</h3>
+          <p>Número, data, base, IVA, total, proveïdor, NIF, línies de detall. Treu el que necessitis de cada tipus de document, no només quatre caselles fixes.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// pdf_03</span>
+            <span class="badge">Valida</span>
+          </div>
+          <h3>Contra les teves <em>regles</em>.</h3>
+          <p>Comprova que el total quadra, que el proveïdor existeix, que el NIF té forma vàlida. Si alguna cosa no encaixa, ho marca en comptes de donar-ho d'alta a cegues.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// pdf_04</span>
+            <span class="badge">Registra</span>
+          </div>
+          <h3>Al teu <em>sistema</em>.</h3>
+          <p>Dona d'alta les dades al teu ERP, la teva comptabilitat o el teu full de càlcul. El document queda arxivat i enllaçat al seu registre. Sense copiar i enganxar.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="control">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">02 — Sense ficar la pota</div>
+        <h2 class="section-title">Una dada mal posada a comptabilitat / <em>costa més</em> / que teclejar-la bé.</h2>
+        <p class="section-intro">Automatitzar l'entrada de dades només compensa si et pots fiar del resultat. Per això el que quadra es dona d'alta i el dubtós es para perquè una persona ho miri. És el mateix principi de <a href="/ca/blog/tres-preguntes-abans-implantar-ia-agentica/">les tres preguntes abans d'implantar IA agèntica</a>.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// ctrl_01</span>
+            <span class="badge">A revisió</span>
+          </div>
+          <h3>El dubtós, <em>parat</em>.</h3>
+          <p>Si un camp no quadra, falta o el document és rar, no es dona d'alta: queda en una cua de revisió amb el problema assenyalat. Millor parar que embrutar el sistema.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// ctrl_02</span>
+            <span class="badge">Quadra</span>
+          </div>
+          <h3>Els números <em>quadren</em>.</h3>
+          <p>Base més IVA igual a total, imports contra la comanda, duplicats detectats. Les comprovacions que faries a mà, fetes a cada document sense saltar-ne cap.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// ctrl_03</span>
+            <span class="badge">Traçable</span>
+          </div>
+          <h3>Cada dada, <em>al seu origen</em>.</h3>
+          <p>Cada registre enllaça al document del qual va sortir i a què es va extreure. Si cal comprovar alguna cosa, hi ha el PDF original a un clic. Auditable de principi a fi.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0;">
+    <div class="container" style="padding: 0;">
+      <div class="stats" data-stagger>
+        <div class="stat">
+          <div class="stat-num"><em>0</em></div>
+          <div class="stat-label">Camps teclejats a mà</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">PDF</div>
+          <div class="stat-label">Qualsevol format</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">HITL</div>
+          <div class="stat-label">El dubtós, a revisió</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">24<em>h</em></div>
+          <div class="stat-label">Resposta a la teva consulta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preus">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">03 — Contractació</div>
+        <h2 class="section-title">Per a empreses, <em>entitats</em> i AAPP.</h2>
+        <p class="section-intro">Es cotitza per abast després d'un diagnòstic curt: tipus de document, volum i integració amb el teu ERP o comptabilitat. <strong>Projectes des de 2.500€</strong>; <strong>l'abast defineix el pressupost final</strong>. Forma part de l'<a href="/ca/automatitzacio-processos-ia/">automatització de processos amb IA</a>; si el teu és sobretot el correu d'entrada, mira l'<a href="/ca/automatitzacio-correus-ia/">automatització de correus amb IA</a>.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segment_01</span>
+            <span class="badge">Empreses</span>
+          </div>
+          <h3>Entrada de dades <em>resolta</em>.</h3>
+          <p>Connectem la font de documents, definim els camps i les validacions, i integrem amb el teu sistema. Comencem pel tipus de document que més volum té.</p>
+          <div class="price">
+            <div class="price-label">projectes des de</div>
+            <div class="price-num">2.500€</div>
+            <div class="price-label">l'abast defineix el pressupost · IVA a part</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segment_02</span>
+            <span class="badge">Entitats</span>
+          </div>
+          <h3>Per a <em>entitats</em>.</h3>
+          <p>Associacions, fundacions, col·legis professionals o cooperatives. Factures de proveïdors i justificants, extrets i registrats sense ocupar la persona d'administració.</p>
+          <div class="price">
+            <div class="price-label">projectes des de</div>
+            <div class="price-num">2.500€</div>
+            <div class="price-label">l'abast defineix el pressupost · IVA a part</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segment_03</span>
+            <span class="badge">AAPP</span>
+          </div>
+          <h3>Per a <em>administracions</em>.</h3>
+          <p>Contractació menor o negociat. Extracció i registre de documentació amb validació, traçabilitat a l'original, control humà i memòria justificativa.</p>
+          <div class="price">
+            <div class="price-num">Consultar</div>
+            <div class="price-label">per licitació</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contacte" class="cta-final">
+    <div class="container">
+      <div data-reveal>
+        <h2>Quants PDFs tecleja el teu equip a mà cada <em>mes</em><span class="cursor-blink"></span></h2>
+        <p>Explica'm quins documents rebeu i on acaben avui aquestes dades, i responem en menys de 24h amb una proposta de diagnòstic acotat. Sense compromís d'implantació. Si després del diagnòstic no hi ha cas, ho diem.</p>
+        <a href="/ca/contacte/" class="btn-primary" style="font-size: 15px; padding: 18px 32px;">
+          Demanar diagnòstic
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- @region partials/footer-ca.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formació i implantació d'IA aplicada, Power BI i desenvolupament a mida. Operada per una SL catalana amb focus en pimes i administració pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Serveis</h3>
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+        <a href="/ca/curs-power-bi-empreses/">Curs Power BI empreses</a>
+        <a href="/ca/curs-chatgpt-empreses/">Curs ChatGPT empreses</a>
+        <a href="/ca/automatitzacio-processos-ia/">Automatització de processos IA</a>
+        <a href="/ca/curs-power-bi-barcelona/">Curs Power BI Barcelona</a>
+        <a href="/ca/formacio-ia-empreses/">Formació IA empreses</a>
+        <a href="/ca/consultoria-ia-empreses/">Consultoria IA empreses</a>
+        <a href="/ca/agents-ia-empreses/">Agents d'IA empreses</a>
+        <a href="/ca/bot-whatsapp-empreses/">Bot de WhatsApp empreses</a>
+        <a href="/ca/chatbot-documents-empresa/">Chatbot de documents</a>
+        <a href="/ca/automatitzacio-correus-ia/">Automatització de correus IA</a>
+        <a href="/ca/automatitzacio-factures-pdf-ia/">Automatització de factures IA</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/ca/blog/">Blog</a>
+        <a href="/ca/sobre-mike/">Sobre Mike</a>
+        <a href="/ca/contacte/">Contacte</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/ca/avis-legal/">Avís legal</a>
+        <a href="/ca/politica-privacitat/">Privacitat</a>
+        <a href="/ca/politica-galetes/">Galetes</a>
+        <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Automatització de correus amb IA — triatge de safata | Aimtech</title>
+<meta name="description" content="Automatització de correus amb IA: classifica la safata, redacta primeres respostes, extreu dades i deriva a l'àrea correcta. El sensible, a revisió humana. ROI mesurable." />
+
+<link rel="canonical" href="https://www.aimtech.es/ca/automatitzacio-correus-ia/" />
+
+<!-- hreflang: variants d'idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/automatizacion-emails-ia/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/automatitzacio-correus-ia/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/automatizacion-emails-ia/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="../../assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="../../assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="../../assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ca_ES" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Automatització de correus amb IA — triatge de safata | Aimtech" />
+<meta property="og:description" content="Un sistema amb IA fa el triatge de la teva safata: classifica cada correu, redacta una primera resposta al freqüent i deriva. El sensible, a revisió humana. ROI mesurable." />
+<meta property="og:url" content="https://www.aimtech.es/ca/automatitzacio-correus-ia/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Automatització de correus amb IA — triatge de safata — Aimtech" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Automatització de correus amb IA — triatge de safata | Aimtech" />
+<meta name="twitter:description" content="IA que classifica la teva safata, redacta primeres respostes i deriva. El sensible, a revisió humana. ROI mesurable." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: Service + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://www.aimtech.es/#aimtech",
+    "name": "Aimtech",
+    "legalName": "Aimtech Consulting SL",
+    "url": "https://www.aimtech.es",
+    "logo": "https://www.aimtech.es/assets/logo.png?v=2",
+    "founder": {
+      "@type": "Person",
+      "name": "Miguel Pérez",
+      "alternateName": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "Espanya" },
+      { "@type": "AdministrativeArea", "name": "Catalunya" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Catalunya",
+      "addressCountry": "ES"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hola@aimtech.es",
+      "contactType": "customer service",
+      "areaServed": "ES",
+      "availableLanguage": ["ca", "es"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Automatització de correus amb IA",
+    "description": "Automatització del correu entrant d'empreses, entitats i administracions públiques amb IA: classificació de la safata per tipus i prioritat, redacció de primeres respostes a les consultes freqüents, extracció de dades del cos del correu i derivació a l'àrea correcta. Les accions sensibles queden en esborrany per a revisió humana. Stack basat en n8n, Claude API i les APIs del gestor de correu del client. ROI mesurable.",
+    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "url": "https://www.aimtech.es/ca/automatitzacio-correus-ia/",
+    "areaServed": [
+      { "@type": "Country", "name": "Espanya" },
+      { "@type": "AdministrativeArea", "name": "Catalunya" }
+    ],
+    "serviceType": "Automatització de correu amb IA",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 2500,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/ca/automatitzacio-correus-ia/#preus"
+    },
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Empreses, entitats i administracions públiques"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Automatització de processos amb IA", "item": "https://www.aimtech.es/ca/automatitzacio-processos-ia/" },
+      { "@type": "ListItem", "position": 3, "name": "Automatització de correus amb IA", "item": "https://www.aimtech.es/ca/automatitzacio-correus-ia/" }
+    ]
+  }
+]
+</script>
+
+<!-- Preload: fuente serif del hero (LCP) -->
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/tokens.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+<link rel="stylesheet" href="../../css/base.css">
+<link rel="stylesheet" href="../../css/components.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/ia-agentica.css">
+<link rel="stylesheet" href="../../css/landing.css">
+<link rel="stylesheet" href="../../css/cookie-consent.css">
+<script src="../../js/cookie-consent.js" defer></script>
+<script src="../../js/site.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-serveis-menu">
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+    </div>
+    <a href="/ca/blog/">Blog</a>
+    <a href="/ca/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/automatizacion-emails-ia/">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/automatitzacio-correus-ia/" class="active">CA</a>
+    </div>
+    <a href="/ca/contacte/" class="nav-cta">Parlem-ne →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="dot dot--multi"></span>
+            <span>Correus · Triatge</span>
+            <span class="sep">/</span>
+            <span>Classifica · Respon · Deriva</span>
+            <span class="sep">/</span>
+            <span id="clock">--:--:--</span>
+          </div>
+
+          <h1>
+            <span class="reveal r1">Automatització de</span>
+            <span class="reveal r2"><em class="italic">correus amb IA</em>.</span><br>
+            <span class="reveal r3">La teva safata,</span>
+            <span class="reveal r4">ordenada sola.</span>
+          </h1>
+
+          <p class="hero-sub">
+            La safata d'entrada es menja hores: llegir, classificar, respondre el de sempre, reenviar a l'àrea que toca. Un sistema amb IA fa aquest <strong>triatge</strong> per tu —classifica cada correu, redacta una primera resposta al freqüent i el deriva— i deixa en <strong>esborrany per a revisió</strong> el que és sensible. Tu aproves; la resta, fet.
+          </p>
+
+          <div class="hero-cta">
+            <a href="/ca/contacte/" class="btn-primary">
+              Demanar diagnòstic
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="/ca/automatitzacio-processos-ia/" class="btn-ghost">Com ho fem</a>
+          </div>
+        </div>
+
+        <div class="lstage lmail" aria-hidden="true">
+          <svg viewBox="0 0 560 560" role="img" aria-label="Safata de correu classificada automàticament per categories">
+
+            <rect class="l-panel" x="60" y="84" width="440" height="392" rx="18"/>
+
+            <circle class="l-dot" cx="88" cy="116" r="4"/>
+            <circle class="l-dot" cx="102" cy="116" r="4"/>
+            <circle class="l-dot" cx="116" cy="116" r="4"/>
+            <text class="l-sub" x="140" y="120">safata · auto-triatge</text>
+            <circle class="l-pulse" cx="474" cy="116" r="5"/>
+            <line x1="60" y1="140" x2="500" y2="140" stroke="#2a3344" stroke-width="1"/>
+
+            <!-- Correu 1 → Factura -->
+            <g class="l-mrow">
+              <rect class="l-env" x="88" y="172" width="30" height="22" rx="3"/>
+              <path class="l-env" d="M90 175 L103 186 L116 175" fill="none"/>
+              <rect class="l-mbar" x="134" y="176" width="150" height="7" rx="3"/>
+              <rect class="l-mbar" x="134" y="188" width="98" height="7" rx="3"/>
+              <rect class="l-pill l-pill--a" x="356" y="172" width="96" height="26" rx="6"/>
+              <text class="l-pill-txt l-pill-txt--a" x="404" y="189">Factura</text>
+            </g>
+
+            <!-- Correu 2 → Suport -->
+            <g class="l-mrow">
+              <rect class="l-env" x="88" y="236" width="30" height="22" rx="3"/>
+              <path class="l-env" d="M90 239 L103 250 L116 239" fill="none"/>
+              <rect class="l-mbar" x="134" y="240" width="150" height="7" rx="3"/>
+              <rect class="l-mbar" x="134" y="252" width="112" height="7" rx="3"/>
+              <rect class="l-pill l-pill--m" x="356" y="236" width="96" height="26" rx="6"/>
+              <text class="l-pill-txt l-pill-txt--m" x="404" y="253">Suport</text>
+            </g>
+
+            <!-- Correu 3 → Comercial -->
+            <g class="l-mrow">
+              <rect class="l-env" x="88" y="300" width="30" height="22" rx="3"/>
+              <path class="l-env" d="M90 303 L103 314 L116 303" fill="none"/>
+              <rect class="l-mbar" x="134" y="304" width="150" height="7" rx="3"/>
+              <rect class="l-mbar" x="134" y="316" width="90" height="7" rx="3"/>
+              <rect class="l-pill l-pill--a" x="356" y="300" width="96" height="26" rx="6"/>
+              <text class="l-pill-txt l-pill-txt--a" x="404" y="317">Comercial</text>
+            </g>
+
+            <!-- Correu 4 → Descartar -->
+            <g class="l-mrow">
+              <rect class="l-env" x="88" y="364" width="30" height="22" rx="3"/>
+              <path class="l-env" d="M90 367 L103 378 L116 367" fill="none"/>
+              <rect class="l-mbar" x="134" y="368" width="150" height="7" rx="3"/>
+              <rect class="l-mbar" x="134" y="380" width="104" height="7" rx="3"/>
+              <rect class="l-pill l-pill--m" x="356" y="364" width="96" height="26" rx="6"/>
+              <text class="l-pill-txt l-pill-txt--m" x="404" y="381">Descartar</text>
+            </g>
+
+            <line x1="88" y1="416" x2="472" y2="416" stroke="#2a3344" stroke-width="1" stroke-dasharray="3 3"/>
+            <text class="l-sub" x="88" y="440">el que és sensible es queda en esborrany per a la teva revisió</text>
+
+          </svg>
+
+          <span class="ltag ltag--accent" style="top:12%; left:-2%;">// triatge</span>
+          <span class="ltag" style="bottom:13%; right:-2%;">tu aproves</span>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="tag">CORREUS AMB IA</span>
+      <span>Triatge de safata</span> <span>·</span>
+      <span>Classificació</span> <span>·</span>
+      <span>Primera resposta</span> <span>·</span>
+      <span>Extracció de dades</span> <span>·</span>
+      <span>Derivació</span> <span>·</span>
+      <span>n8n</span> <span>·</span>
+      <span>Claude</span> <span>·</span>
+      <span>Revisió humana</span> <span>·</span>
+      <span>ROI mesurable</span> <span>·</span>
+      <span class="tag">CORREUS AMB IA</span>
+      <span>Triatge de safata</span> <span>·</span>
+      <span>Classificació</span> <span>·</span>
+      <span>Primera resposta</span> <span>·</span>
+      <span>Derivació</span> <span>·</span>
+      <span>Revisió humana</span> <span>·</span>
+    </div>
+  </div>
+
+  <section id="que-fa">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">01 — Què fa amb la teva safata</div>
+        <h2 class="section-title">Cada correu passa per les mateixes / <em>quatre decisions</em>. / Les fa la IA, les aproves tu.</h2>
+        <p class="section-intro">Llegir, entendre, respondre o derivar: el mateix recorregut cent vegades al dia. Això és just el que un sistema amb IA pot treure't de sobre, deixant-te només el que requereix criteri.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// mail_01</span>
+            <span class="badge">Classifica</span>
+          </div>
+          <h3>Ordena i <em>prioritza</em>.</h3>
+          <p>Cada correu entra etiquetat per tipus (factura, suport, comercial, proveïdor…) i per urgència. L'important puja; el soroll baixa. La safata deixa de ser un munt indistint.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// mail_02</span>
+            <span class="badge">Respon</span>
+          </div>
+          <h3>El freqüent, <em>en esborrany</em>.</h3>
+          <p>Per a les consultes que es repeteixen, redacta una primera resposta basada en la teva informació. Tu la revises i envies, o l'aproves en bloc. No parteixes de zero cada vegada.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// mail_03</span>
+            <span class="badge">Extreu</span>
+          </div>
+          <h3>Treu les <em>dades</em>.</h3>
+          <p>Del cos del correu o del seu adjunt treu el que importa —comanda, import, referència— i ho deixa al teu sistema o full. Sense copiar i enganxar a mà.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// mail_04</span>
+            <span class="badge">Deriva</span>
+          </div>
+          <h3>A l'àrea <em>correcta</em>.</h3>
+          <p>El que no és per a tu arriba directe a qui li toca, amb un resum de l'assumpte. S'acaben els reenviaments manuals i els "això no és el meu departament".</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="control">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">02 — Sense perdre el control</div>
+        <h2 class="section-title">Automatitzar el correu no és / <em>deixar que s'enviï sol</em> / el que no ha.</h2>
+        <p class="section-intro">El correu toca clients, diners i compromisos. Per això el rutinari s'executa i el sensible es queda esperant el teu vistiplau. Ho expliquem a <a href="/ca/blog/tres-preguntes-abans-implantar-ia-agentica/">les tres preguntes abans d'implantar IA agèntica</a>.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// ctrl_01</span>
+            <span class="badge">Esborrany</span>
+          </div>
+          <h3>El sensible, <em>a revisió</em>.</h3>
+          <p>Respostes que comprometen, reclamacions o qualsevol cosa amb client delicat es queden en esborrany. Res delicat s'envia sense que una persona ho aprovi.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// ctrl_02</span>
+            <span class="badge">Regles</span>
+          </div>
+          <h3>Les teves <em>regles</em>.</h3>
+          <p>Tu decideixes què es respon sol, què es deriva i què passa sempre per una persona. El sistema s'ajusta a com treballeu, no al revés.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// ctrl_03</span>
+            <span class="badge">ROI</span>
+          </div>
+          <h3>Es mesura, <em>o no va</em>.</h3>
+          <p>Abans de començar fixem quantes hores de safata volem recuperar. Si el sistema no les recupera, s'ajusta o es para. Sense lletra petita.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0;">
+    <div class="container" style="padding: 0;">
+      <div class="stats" data-stagger>
+        <div class="stat">
+          <div class="stat-num"><em>4</em></div>
+          <div class="stat-label">Decisions per correu</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">HITL</div>
+          <div class="stat-label">El sensible, a revisió</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><em>0</em></div>
+          <div class="stat-label">Enviaments sense vistiplau</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">24<em>h</em></div>
+          <div class="stat-label">Resposta a la teva consulta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preus">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">03 — Contractació</div>
+        <h2 class="section-title">Per a empreses, <em>entitats</em> i AAPP.</h2>
+        <p class="section-intro">Es cotitza per abast després d'un diagnòstic curt: volum de correus, nombre de categories i integracions amb el teu CRM o ERP. <strong>Projectes des de 2.500€</strong>; <strong>l'abast defineix el pressupost final</strong>. Forma part de l'<a href="/ca/automatitzacio-processos-ia/">automatització de processos amb IA</a>; si el que rebeu són sobretot factures i PDFs, mira l'<a href="/ca/automatitzacio-factures-pdf-ia/">automatització de factures i PDFs</a>.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segment_01</span>
+            <span class="badge">Empreses</span>
+          </div>
+          <h3>Safata <em>en producció</em>.</h3>
+          <p>Connectem el teu correu, definim categories i regles, muntem les primeres respostes i la derivació, i mesurem les hores recuperades. Comencem per la safata que més satura.</p>
+          <div class="price">
+            <div class="price-label">projectes des de</div>
+            <div class="price-num">2.500€</div>
+            <div class="price-label">l'abast defineix el pressupost · IVA a part</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segment_02</span>
+            <span class="badge">Entitats</span>
+          </div>
+          <h3>Per a <em>entitats</em>.</h3>
+          <p>Associacions, fundacions, col·legis professionals o cooperatives. El correu de socis i consultes, classificat i respost en primera línia sense saturar qui ho porta.</p>
+          <div class="price">
+            <div class="price-label">projectes des de</div>
+            <div class="price-num">2.500€</div>
+            <div class="price-label">l'abast defineix el pressupost · IVA a part</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segment_03</span>
+            <span class="badge">AAPP</span>
+          </div>
+          <h3>Per a <em>administracions</em>.</h3>
+          <p>Contractació menor o negociat. Registre d'entrada classificat i derivat, amb traçabilitat, control humà i memòria justificativa incloses.</p>
+          <div class="price">
+            <div class="price-num">Consultar</div>
+            <div class="price-label">per licitació</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contacte" class="cta-final">
+    <div class="container">
+      <div data-reveal>
+        <h2>Quantes hores al dia viu el teu equip a la <em>safata</em><span class="cursor-blink"></span></h2>
+        <p>Explica'm quin tipus de correus rebeu i com els gestioneu avui, i responem en menys de 24h amb una proposta de diagnòstic acotat. Sense compromís d'implantació. Si després del diagnòstic no hi ha cas, ho diem.</p>
+        <a href="/ca/contacte/" class="btn-primary" style="font-size: 15px; padding: 18px 32px;">
+          Demanar diagnòstic
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- @region partials/footer-ca.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formació i implantació d'IA aplicada, Power BI i desenvolupament a mida. Operada per una SL catalana amb focus en pimes i administració pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Serveis</h3>
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+        <a href="/ca/curs-power-bi-empreses/">Curs Power BI empreses</a>
+        <a href="/ca/curs-chatgpt-empreses/">Curs ChatGPT empreses</a>
+        <a href="/ca/automatitzacio-processos-ia/">Automatització de processos IA</a>
+        <a href="/ca/curs-power-bi-barcelona/">Curs Power BI Barcelona</a>
+        <a href="/ca/formacio-ia-empreses/">Formació IA empreses</a>
+        <a href="/ca/consultoria-ia-empreses/">Consultoria IA empreses</a>
+        <a href="/ca/agents-ia-empreses/">Agents d'IA empreses</a>
+        <a href="/ca/bot-whatsapp-empreses/">Bot de WhatsApp empreses</a>
+        <a href="/ca/chatbot-documents-empresa/">Chatbot de documents</a>
+        <a href="/ca/automatitzacio-correus-ia/">Automatització de correus IA</a>
+        <a href="/ca/automatitzacio-factures-pdf-ia/">Automatització de factures IA</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/ca/blog/">Blog</a>
+        <a href="/ca/sobre-mike/">Sobre Mike</a>
+        <a href="/ca/contacte/">Contacte</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/ca/avis-legal/">Avís legal</a>
+        <a href="/ca/politica-privacitat/">Privacitat</a>
+        <a href="/ca/politica-galetes/">Galetes</a>
+        <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>
