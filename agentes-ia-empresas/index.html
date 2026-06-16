@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Agentes de IA para empresas — implantación con ROI | Aimtech</title>
+<meta name="description" content="Agentes de IA para empresas: asistentes que gestionan correos, atención, documentos y tareas repetitivas, con persona en el lazo. Diseño e implantación con ROI medible." />
+
+<link rel="canonical" href="https://www.aimtech.es/agentes-ia-empresas/" />
+
+<!-- hreflang: variantes de idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/agentes-ia-empresas/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/agents-ia-empreses/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/agentes-ia-empresas/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="../assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="../assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="../assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="ca_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Agentes de IA para empresas — implantación con ROI | Aimtech" />
+<meta property="og:description" content="Asistentes de IA que gestionan correos, atención, documentos y tareas repetitivas, con persona en el lazo. Diseño e implantación con ROI medible. Claude, n8n, RAG." />
+<meta property="og:url" content="https://www.aimtech.es/agentes-ia-empresas/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Agentes de IA para empresas — implantación con ROI — Aimtech" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Agentes de IA para empresas — implantación con ROI | Aimtech" />
+<meta name="twitter:description" content="Asistentes de IA que gestionan correos, atención, documentos y tareas repetitivas, con persona en el lazo. ROI medible." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: Service + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://www.aimtech.es/#aimtech",
+    "name": "Aimtech",
+    "legalName": "Aimtech Consulting SL",
+    "url": "https://www.aimtech.es",
+    "logo": "https://www.aimtech.es/assets/logo.png?v=2",
+    "founder": {
+      "@type": "Person",
+      "name": "Miguel Pérez",
+      "alternateName": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "España" },
+      { "@type": "AdministrativeArea", "name": "Cataluña" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Cataluña",
+      "addressCountry": "ES"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hola@aimtech.es",
+      "contactType": "customer service",
+      "areaServed": "ES",
+      "availableLanguage": ["es", "ca"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Agentes de IA para empresas",
+    "description": "Diseño e implantación de agentes de IA para empresas, entidades y administraciones públicas: asistentes que ejecutan tareas (triaje y respuesta de correos, atención, extracción de documentos, seguimiento) y escalan a una persona en los puntos críticos. Stack basado en Claude API, n8n, RAG y bases vectoriales, con human-in-the-loop y ROI medible.",
+    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "url": "https://www.aimtech.es/agentes-ia-empresas/",
+    "areaServed": [
+      { "@type": "Country", "name": "España" },
+      { "@type": "AdministrativeArea", "name": "Cataluña" }
+    ],
+    "serviceType": "Implantación de agentes de IA",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 3500,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/agentes-ia-empresas/#precios"
+    },
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Empresas, entidades y administraciones públicas"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
+      { "@type": "ListItem", "position": 2, "name": "IA Agéntica", "item": "https://www.aimtech.es/ia-agentica/" },
+      { "@type": "ListItem", "position": 3, "name": "Agentes de IA para empresas", "item": "https://www.aimtech.es/agentes-ia-empresas/" }
+    ]
+  }
+]
+</script>
+
+<!-- Preload: fuente serif del hero (LCP) -->
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/ia-agentica.css">
+<link rel="stylesheet" href="../css/landing.css">
+<link rel="stylesheet" href="../css/cookie-consent.css">
+<script src="../js/cookie-consent.js" defer></script>
+<script src="../js/site.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-es.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-servicios-menu">Servicios <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-servicios-menu">
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+    </div>
+    <a href="/blog/">Blog</a>
+    <a href="/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/agentes-ia-empresas/" class="active">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/agents-ia-empreses/">CA</a>
+    </div>
+    <a href="/contacto/" class="nav-cta">Hablemos →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="dot dot--multi"></span>
+            <span>Agentes IA · Implantación</span>
+            <span class="sep">/</span>
+            <span>Claude · n8n · RAG</span>
+            <span class="sep">/</span>
+            <span id="clock">--:--:--</span>
+          </div>
+
+          <h1>
+            <span class="reveal r1">Agentes de IA</span>
+            <span class="reveal r2"><em class="italic">para empresas</em>.</span><br>
+            <span class="reveal r3">Que hacen el trabajo,</span>
+            <span class="reveal r4">con criterio.</span>
+          </h1>
+
+          <p class="hero-sub">
+            Un <strong>agente de IA</strong> es un asistente que ejecuta tareas por ti —triaje de correos, primera atención, extracción de documentos, seguimiento— y escala a una persona cuando toca. Lo diseñamos, lo conectamos a tus herramientas y lo ponemos en producción con <strong>human-in-the-loop</strong> y ROI medible. Sin agentes autónomos que deciden solos lo que no deben.
+          </p>
+
+          <div class="hero-cta">
+            <a href="/contacto/" class="btn-primary">
+              Pedir diagnóstico
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="/ia-agentica/" class="btn-ghost">Cómo lo hacemos</a>
+          </div>
+        </div>
+
+        <div class="lstage ltrace" aria-hidden="true">
+          <svg viewBox="0 0 560 560" role="img" aria-label="Traza de ejecución de un agente de IA con revisión humana">
+
+            <rect class="l-panel" x="58" y="84" width="444" height="392" rx="18"/>
+
+            <circle class="l-dot" cx="86" cy="116" r="4"/>
+            <circle class="l-dot" cx="100" cy="116" r="4"/>
+            <circle class="l-dot" cx="114" cy="116" r="4"/>
+            <text class="l-sub" x="140" y="120">agent.log</text>
+            <circle class="l-pulse" cx="474" cy="116" r="5"/>
+            <line x1="58" y1="140" x2="502" y2="140" stroke="#2a3344" stroke-width="1"/>
+
+            <text class="l-sub" x="92" y="176">agent.run · #1842</text>
+
+            <g class="l-row">
+              <circle class="l-row-dot" cx="104" cy="216" r="5"/>
+              <text class="l-row-txt" x="124" y="220">trigger · correo nuevo</text>
+              <text class="l-row-st" x="468" y="220">ok</text>
+            </g>
+            <g class="l-row">
+              <circle class="l-row-dot" cx="104" cy="262" r="5"/>
+              <text class="l-row-txt" x="124" y="266">clasificar intención</text>
+              <text class="l-row-st" x="468" y="266">ok</text>
+            </g>
+            <g class="l-row">
+              <circle class="l-row-dot" cx="104" cy="308" r="5"/>
+              <text class="l-row-txt" x="124" y="312">buscar en base (RAG)</text>
+              <text class="l-row-st" x="468" y="312">ok</text>
+            </g>
+            <g class="l-row">
+              <circle class="l-row-dot" cx="104" cy="354" r="5"/>
+              <text class="l-row-txt" x="124" y="358">redactar respuesta</text>
+              <text class="l-row-st" x="468" y="358">listo</text>
+            </g>
+            <g class="l-row">
+              <circle class="l-row-dot l-row-dot--wait" cx="104" cy="400" r="5"/>
+              <text class="l-row-txt" x="124" y="404">revisión humana</text>
+              <text class="l-row-st" x="468" y="404">pendiente</text>
+            </g>
+
+            <line x1="92" y1="430" x2="468" y2="430" stroke="#2a3344" stroke-width="1" stroke-dasharray="3 3"/>
+            <text class="l-sub" x="92" y="452">lo sensible siempre pasa por una persona</text>
+
+          </svg>
+
+          <span class="ltag ltag--accent" style="top:12%; left:-2%;">// agente</span>
+          <span class="ltag" style="bottom:13%; right:-3%;">human-in-the-loop</span>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="tag">AGENTES IA</span>
+      <span>Correos</span> <span>·</span>
+      <span>Atención</span> <span>·</span>
+      <span>Documentos</span> <span>·</span>
+      <span>Seguimiento</span> <span>·</span>
+      <span>Claude</span> <span>·</span>
+      <span>n8n</span> <span>·</span>
+      <span>RAG</span> <span>·</span>
+      <span>Human-in-the-loop</span> <span>·</span>
+      <span>ROI medible</span> <span>·</span>
+      <span class="tag">AGENTES IA</span>
+      <span>Correos</span> <span>·</span>
+      <span>Atención</span> <span>·</span>
+      <span>Documentos</span> <span>·</span>
+      <span>Claude</span> <span>·</span>
+      <span>RAG</span> <span>·</span>
+      <span>Human-in-the-loop</span> <span>·</span>
+    </div>
+  </div>
+
+  <section id="que-hace">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">01 — Qué hace un agente</div>
+        <h2 class="section-title">No es un chatbot. <em>Ejecuta</em> tareas / de principio a fin, / no solo responde.</h2>
+        <p class="section-intro">Un agente recibe un disparador, decide qué hacer, usa tus herramientas y deja el trabajo hecho (o preparado para que una persona lo apruebe). Estas son las cuatro familias que más se piden.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// agente_01</span>
+            <span class="badge">Correos</span>
+          </div>
+          <h3>Triaje y <em>primera respuesta</em>.</h3>
+          <p>Lee la bandeja, clasifica por tipo, redacta una primera respuesta a las consultas frecuentes y deriva al área correcta. Lo sensible se queda en borrador para que una persona lo apruebe.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// agente_02</span>
+            <span class="badge">Atención</span>
+          </div>
+          <h3>Atención <em>web y WhatsApp</em>.</h3>
+          <p>Responde preguntas frecuentes sobre tu documentación, capta el lead, agenda o deriva al humano cuando la conversación lo pide. Con tono ajustado al de tu marca, no robótico.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// agente_03</span>
+            <span class="badge">Documentos</span>
+          </div>
+          <h3>Leer y <em>extraer</em>.</h3>
+          <p>Saca datos de facturas, contratos o formularios, los valida contra tus reglas y los da de alta en el sistema. Consulta tu base documental (RAG) para responder con fuentes.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// agente_04</span>
+            <span class="badge">Seguimiento</span>
+          </div>
+          <h3>Vigilar y <em>avisar</em>.</h3>
+          <p>Hace seguimiento de tareas, plazos o indicadores y avisa cuando algo se sale de rango o requiere acción. El equipo deja de vigilar manualmente lo que el agente vigila solo.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="seguro">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">02 — Con persona en el lazo</div>
+        <h2 class="section-title">Un agente no debería <em>decidirlo todo</em> / solo. / Y el nuestro no lo hace.</h2>
+        <p class="section-intro">La diferencia entre una demo y algo que puedes poner en producción es el control. Las acciones sensibles pasan por una persona; las rutinarias se ejecutan solas y se auditan. Profundizamos en el porqué en <a href="/blog/tres-preguntas-implantar-ia-agentica/">las tres preguntas antes de implantar IA agéntica</a>.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// control_01</span>
+            <span class="badge">Aprobación</span>
+          </div>
+          <h3>Lo crítico, <em>a revisión</em>.</h3>
+          <p>Envíos externos, decisiones de cobro o publicaciones pasan por una bandeja de aprobación antes de ejecutarse. Tú decides qué puede hacer solo y qué no.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// control_02</span>
+            <span class="badge">Trazabilidad</span>
+          </div>
+          <h3>Todo queda <em>registrado</em>.</h3>
+          <p>Cada paso del agente deja traza: qué recibió, qué decidió, qué hizo. Auditable y reversible cuando tiene sentido. Sin cajas negras.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// control_03</span>
+            <span class="badge">ROI</span>
+          </div>
+          <h3>Se mide, <em>o no va</em>.</h3>
+          <p>Antes de empezar fijamos la línea base y el umbral de mejora. Si el agente no aporta frente a hacerlo a mano, se ajusta o se para. Sin letra pequeña.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0;">
+    <div class="container" style="padding: 0;">
+      <div class="stats" data-stagger>
+        <div class="stat">
+          <div class="stat-num"><em>4</em></div>
+          <div class="stat-label">Familias de agente</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">HITL</div>
+          <div class="stat-label">Human-in-the-loop</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">90</div>
+          <div class="stat-label">Días de revisión de ROI</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">24<em>h</em></div>
+          <div class="stat-label">Respuesta a tu consulta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">03 — Contratación</div>
+        <h2 class="section-title">Para empresas, <em>entidades</em> y AAPP.</h2>
+        <p class="section-intro">Cada agente se cotiza por alcance tras un diagnóstico corto: no hay dos casos iguales. <strong>Proyectos desde 3.500€</strong>; <strong>el alcance define el presupuesto final</strong>. Si tu caso es más sencillo —automatizar un proceso sin agentes—, mira la <a href="/automatizacion-procesos-ia/">automatización de procesos con IA</a>; y el método completo de orquestación está en <a href="/ia-agentica/">implantación de IA agéntica</a>.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segmento_01</span>
+            <span class="badge">Empresas</span>
+          </div>
+          <h3>Un agente <em>en producción</em>.</h3>
+          <p>Diseño, conexión a tus herramientas, human-in-the-loop y medición de ROI. Empezamos por un agente y un proceso, no por una plataforma enorme.</p>
+          <div class="price">
+            <div class="price-label">proyectos desde</div>
+            <div class="price-num">3.500€</div>
+            <div class="price-label">el alcance define el presupuesto · IVA aparte</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segmento_02</span>
+            <span class="badge">Entidades</span>
+          </div>
+          <h3>Para <em>entidades</em>.</h3>
+          <p>Asociaciones, fundaciones, colegios profesionales o cooperativas. Un agente para la gestión administrativa o la atención que más satura al equipo.</p>
+          <div class="price">
+            <div class="price-label">proyectos desde</div>
+            <div class="price-num">3.500€</div>
+            <div class="price-label">el alcance define el presupuesto · IVA aparte</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segmento_03</span>
+            <span class="badge">AAPP</span>
+          </div>
+          <h3>Para <em>administraciones</em>.</h3>
+          <p>Contratación menor o negociado. Agentes con trazabilidad, control humano, documentación y memoria justificativa incluidas.</p>
+          <div class="price">
+            <div class="price-num">Consultar</div>
+            <div class="price-label">por licitación</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="cta-final">
+    <div class="container">
+      <div data-reveal>
+        <h2>¿Qué tarea le pondrías a un <em>agente</em><span class="cursor-blink"></span></h2>
+        <p>Cuéntame qué proceso te gustaría que un agente llevara —correos, atención, documentos, seguimiento— y respondemos en menos de 24h con una propuesta de diagnóstico acotado. Sin compromiso de implantación. Si tras el diagnóstico no hay caso, lo decimos.</p>
+        <a href="/contacto/" class="btn-primary" style="font-size: 15px; padding: 18px 32px;">
+          Pedir diagnóstico
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- @region partials/footer-es.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formación e implantación de IA aplicada, Power BI y desarrollo a medida. Operado por una SL catalana con foco en pymes y administración pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+        <a href="/curso-power-bi-empresas/">Curso Power BI empresas</a>
+        <a href="/curso-chatgpt-empresas/">Curso ChatGPT empresas</a>
+        <a href="/automatizacion-procesos-ia/">Automatización de procesos IA</a>
+        <a href="/curso-power-bi-barcelona/">Curso Power BI Barcelona</a>
+        <a href="/formacion-ia-empresas/">Formación IA empresas</a>
+        <a href="/consultoria-ia-empresas/">Consultoría IA empresas</a>
+        <a href="/agentes-ia-empresas/">Agentes de IA empresas</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/blog/">Blog</a>
+        <a href="/sobre-mike/">Sobre Mike</a>
+        <a href="/contacto/">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/politica-privacidad/">Privacidad</a>
+        <a href="/politica-cookies/">Cookies</a>
+        <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Cataluña</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

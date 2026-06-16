@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Agents d'IA per a empreses — implantació amb ROI | Aimtech</title>
+<meta name="description" content="Agents d'IA per a empreses: assistents que gestionen correus, atenció, documents i tasques repetitives, amb persona en el bucle. Disseny i implantació amb ROI mesurable." />
+
+<link rel="canonical" href="https://www.aimtech.es/ca/agents-ia-empreses/" />
+
+<!-- hreflang: variants d'idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/agentes-ia-empresas/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/agents-ia-empreses/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/agentes-ia-empresas/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="../../assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="../../assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="../../assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ca_ES" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Agents d'IA per a empreses — implantació amb ROI | Aimtech" />
+<meta property="og:description" content="Assistents d'IA que gestionen correus, atenció, documents i tasques repetitives, amb persona en el bucle. Disseny i implantació amb ROI mesurable. Claude, n8n, RAG." />
+<meta property="og:url" content="https://www.aimtech.es/ca/agents-ia-empreses/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Agents d'IA per a empreses — implantació amb ROI — Aimtech" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Agents d'IA per a empreses — implantació amb ROI | Aimtech" />
+<meta name="twitter:description" content="Assistents d'IA que gestionen correus, atenció, documents i tasques repetitives, amb persona en el bucle. ROI mesurable." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: Service + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://www.aimtech.es/#aimtech",
+    "name": "Aimtech",
+    "legalName": "Aimtech Consulting SL",
+    "url": "https://www.aimtech.es",
+    "logo": "https://www.aimtech.es/assets/logo.png?v=2",
+    "founder": {
+      "@type": "Person",
+      "name": "Miguel Pérez",
+      "alternateName": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "Espanya" },
+      { "@type": "AdministrativeArea", "name": "Catalunya" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Catalunya",
+      "addressCountry": "ES"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hola@aimtech.es",
+      "contactType": "customer service",
+      "areaServed": "ES",
+      "availableLanguage": ["ca", "es"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Agents d'IA per a empreses",
+    "description": "Disseny i implantació d'agents d'IA per a empreses, entitats i administracions públiques: assistents que executen tasques (triatge i resposta de correus, atenció, extracció de documents, seguiment) i escalen a una persona en els punts crítics. Stack basat en Claude API, n8n, RAG i bases vectorials, amb human-in-the-loop i ROI mesurable.",
+    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "url": "https://www.aimtech.es/ca/agents-ia-empreses/",
+    "areaServed": [
+      { "@type": "Country", "name": "Espanya" },
+      { "@type": "AdministrativeArea", "name": "Catalunya" }
+    ],
+    "serviceType": "Implantació d'agents d'IA",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 3500,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/ca/agents-ia-empreses/#preus"
+    },
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Empreses, entitats i administracions públiques"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
+      { "@type": "ListItem", "position": 2, "name": "IA Agèntica", "item": "https://www.aimtech.es/ca/ia-agentica/" },
+      { "@type": "ListItem", "position": 3, "name": "Agents d'IA per a empreses", "item": "https://www.aimtech.es/ca/agents-ia-empreses/" }
+    ]
+  }
+]
+</script>
+
+<!-- Preload: fuente serif del hero (LCP) -->
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/tokens.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+<link rel="stylesheet" href="../../css/base.css">
+<link rel="stylesheet" href="../../css/components.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/ia-agentica.css">
+<link rel="stylesheet" href="../../css/landing.css">
+<link rel="stylesheet" href="../../css/cookie-consent.css">
+<script src="../../js/cookie-consent.js" defer></script>
+<script src="../../js/site.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-serveis-menu">
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+    </div>
+    <a href="/ca/blog/">Blog</a>
+    <a href="/ca/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/agentes-ia-empresas/">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/agents-ia-empreses/" class="active">CA</a>
+    </div>
+    <a href="/ca/contacte/" class="nav-cta">Parlem-ne →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="dot dot--multi"></span>
+            <span>Agents IA · Implantació</span>
+            <span class="sep">/</span>
+            <span>Claude · n8n · RAG</span>
+            <span class="sep">/</span>
+            <span id="clock">--:--:--</span>
+          </div>
+
+          <h1>
+            <span class="reveal r1">Agents d'IA</span>
+            <span class="reveal r2"><em class="italic">per a empreses</em>.</span><br>
+            <span class="reveal r3">Que fan la feina,</span>
+            <span class="reveal r4">amb criteri.</span>
+          </h1>
+
+          <p class="hero-sub">
+            Un <strong>agent d'IA</strong> és un assistent que executa tasques per tu —triatge de correus, primera atenció, extracció de documents, seguiment— i escala a una persona quan toca. El dissenyem, el connectem a les teves eines i el posem en producció amb <strong>human-in-the-loop</strong> i ROI mesurable. Sense agents autònoms que decideixen sols el que no han de decidir.
+          </p>
+
+          <div class="hero-cta">
+            <a href="/ca/contacte/" class="btn-primary">
+              Demanar diagnòstic
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="/ca/ia-agentica/" class="btn-ghost">Com ho fem</a>
+          </div>
+        </div>
+
+        <div class="lstage ltrace" aria-hidden="true">
+          <svg viewBox="0 0 560 560" role="img" aria-label="Traça d'execució d'un agent d'IA amb revisió humana">
+
+            <rect class="l-panel" x="58" y="84" width="444" height="392" rx="18"/>
+
+            <circle class="l-dot" cx="86" cy="116" r="4"/>
+            <circle class="l-dot" cx="100" cy="116" r="4"/>
+            <circle class="l-dot" cx="114" cy="116" r="4"/>
+            <text class="l-sub" x="140" y="120">agent.log</text>
+            <circle class="l-pulse" cx="474" cy="116" r="5"/>
+            <line x1="58" y1="140" x2="502" y2="140" stroke="#2a3344" stroke-width="1"/>
+
+            <text class="l-sub" x="92" y="176">agent.run · #1842</text>
+
+            <g class="l-row">
+              <circle class="l-row-dot" cx="104" cy="216" r="5"/>
+              <text class="l-row-txt" x="124" y="220">trigger · correu nou</text>
+              <text class="l-row-st" x="468" y="220">ok</text>
+            </g>
+            <g class="l-row">
+              <circle class="l-row-dot" cx="104" cy="262" r="5"/>
+              <text class="l-row-txt" x="124" y="266">classificar intenció</text>
+              <text class="l-row-st" x="468" y="266">ok</text>
+            </g>
+            <g class="l-row">
+              <circle class="l-row-dot" cx="104" cy="308" r="5"/>
+              <text class="l-row-txt" x="124" y="312">buscar a la base (RAG)</text>
+              <text class="l-row-st" x="468" y="312">ok</text>
+            </g>
+            <g class="l-row">
+              <circle class="l-row-dot" cx="104" cy="354" r="5"/>
+              <text class="l-row-txt" x="124" y="358">redactar resposta</text>
+              <text class="l-row-st" x="468" y="358">llest</text>
+            </g>
+            <g class="l-row">
+              <circle class="l-row-dot l-row-dot--wait" cx="104" cy="400" r="5"/>
+              <text class="l-row-txt" x="124" y="404">revisió humana</text>
+              <text class="l-row-st" x="468" y="404">pendent</text>
+            </g>
+
+            <line x1="92" y1="430" x2="468" y2="430" stroke="#2a3344" stroke-width="1" stroke-dasharray="3 3"/>
+            <text class="l-sub" x="92" y="452">el que és sensible sempre passa per una persona</text>
+
+          </svg>
+
+          <span class="ltag ltag--accent" style="top:12%; left:-2%;">// agent</span>
+          <span class="ltag" style="bottom:13%; right:-3%;">human-in-the-loop</span>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="tag">AGENTS IA</span>
+      <span>Correus</span> <span>·</span>
+      <span>Atenció</span> <span>·</span>
+      <span>Documents</span> <span>·</span>
+      <span>Seguiment</span> <span>·</span>
+      <span>Claude</span> <span>·</span>
+      <span>n8n</span> <span>·</span>
+      <span>RAG</span> <span>·</span>
+      <span>Human-in-the-loop</span> <span>·</span>
+      <span>ROI mesurable</span> <span>·</span>
+      <span class="tag">AGENTS IA</span>
+      <span>Correus</span> <span>·</span>
+      <span>Atenció</span> <span>·</span>
+      <span>Documents</span> <span>·</span>
+      <span>Claude</span> <span>·</span>
+      <span>RAG</span> <span>·</span>
+      <span>Human-in-the-loop</span> <span>·</span>
+    </div>
+  </div>
+
+  <section id="que-fa">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">01 — Què fa un agent</div>
+        <h2 class="section-title">No és un chatbot. <em>Executa</em> tasques / de principi a fi, / no només respon.</h2>
+        <p class="section-intro">Un agent rep un activador, decideix què fer, fa servir les teves eines i deixa la feina feta (o preparada perquè una persona l'aprovi). Aquestes són les quatre famílies que més es demanen.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// agent_01</span>
+            <span class="badge">Correus</span>
+          </div>
+          <h3>Triatge i <em>primera resposta</em>.</h3>
+          <p>Llegeix la safata, classifica per tipus, redacta una primera resposta a les consultes freqüents i deriva a l'àrea correcta. El que és sensible es queda en esborrany perquè una persona l'aprovi.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// agent_02</span>
+            <span class="badge">Atenció</span>
+          </div>
+          <h3>Atenció <em>web i WhatsApp</em>.</h3>
+          <p>Respon preguntes freqüents sobre la teva documentació, capta el lead, agenda o deriva a l'humà quan la conversa ho demana. Amb to ajustat al de la teva marca, no robòtic.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// agent_03</span>
+            <span class="badge">Documents</span>
+          </div>
+          <h3>Llegir i <em>extreure</em>.</h3>
+          <p>Treu dades de factures, contractes o formularis, les valida contra les teves regles i les dona d'alta al sistema. Consulta la teva base documental (RAG) per respondre amb fonts.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// agent_04</span>
+            <span class="badge">Seguiment</span>
+          </div>
+          <h3>Vigilar i <em>avisar</em>.</h3>
+          <p>Fa seguiment de tasques, terminis o indicadors i avisa quan alguna cosa se surt de rang o requereix acció. L'equip deixa de vigilar manualment el que l'agent vigila sol.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="segur">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">02 — Amb persona en el bucle</div>
+        <h2 class="section-title">Un agent no hauria de <em>decidir-ho tot</em> / sol. / I el nostre no ho fa.</h2>
+        <p class="section-intro">La diferència entre una demo i una cosa que pots posar en producció és el control. Les accions sensibles passen per una persona; les rutinàries s'executen soles i s'auditen. Aprofundim en el perquè a <a href="/ca/blog/tres-preguntes-abans-implantar-ia-agentica/">les tres preguntes abans d'implantar IA agèntica</a>.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// control_01</span>
+            <span class="badge">Aprovació</span>
+          </div>
+          <h3>El que és crític, <em>a revisió</em>.</h3>
+          <p>Enviaments externs, decisions de cobrament o publicacions passen per una safata d'aprovació abans d'executar-se. Tu decideixes què pot fer sol i què no.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// control_02</span>
+            <span class="badge">Traçabilitat</span>
+          </div>
+          <h3>Tot queda <em>registrat</em>.</h3>
+          <p>Cada pas de l'agent deixa traça: què va rebre, què va decidir, què va fer. Auditable i reversible quan té sentit. Sense caixes negres.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// control_03</span>
+            <span class="badge">ROI</span>
+          </div>
+          <h3>Es mesura, <em>o no va</em>.</h3>
+          <p>Abans de començar fixem la línia base i el llindar de millora. Si l'agent no aporta davant de fer-ho a mà, s'ajusta o es para. Sense lletra petita.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0;">
+    <div class="container" style="padding: 0;">
+      <div class="stats" data-stagger>
+        <div class="stat">
+          <div class="stat-num"><em>4</em></div>
+          <div class="stat-label">Famílies d'agent</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">HITL</div>
+          <div class="stat-label">Human-in-the-loop</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">90</div>
+          <div class="stat-label">Dies de revisió de ROI</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">24<em>h</em></div>
+          <div class="stat-label">Resposta a la teva consulta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preus">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">03 — Contractació</div>
+        <h2 class="section-title">Per a empreses, <em>entitats</em> i AAPP.</h2>
+        <p class="section-intro">Cada agent es cotitza per abast després d'un diagnòstic curt: no hi ha dos casos iguals. <strong>Projectes des de 3.500€</strong>; <strong>l'abast defineix el pressupost final</strong>. Si el teu cas és més senzill —automatitzar un procés sense agents—, mira l'<a href="/ca/automatitzacio-processos-ia/">automatització de processos amb IA</a>; i el mètode complet d'orquestració és a <a href="/ca/ia-agentica/">implantació d'IA agèntica</a>.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segment_01</span>
+            <span class="badge">Empreses</span>
+          </div>
+          <h3>Un agent <em>en producció</em>.</h3>
+          <p>Disseny, connexió a les teves eines, human-in-the-loop i mesura de ROI. Comencem per un agent i un procés, no per una plataforma enorme.</p>
+          <div class="price">
+            <div class="price-label">projectes des de</div>
+            <div class="price-num">3.500€</div>
+            <div class="price-label">l'abast defineix el pressupost · IVA a part</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segment_02</span>
+            <span class="badge">Entitats</span>
+          </div>
+          <h3>Per a <em>entitats</em>.</h3>
+          <p>Associacions, fundacions, col·legis professionals o cooperatives. Un agent per a la gestió administrativa o l'atenció que més satura l'equip.</p>
+          <div class="price">
+            <div class="price-label">projectes des de</div>
+            <div class="price-num">3.500€</div>
+            <div class="price-label">l'abast defineix el pressupost · IVA a part</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segment_03</span>
+            <span class="badge">AAPP</span>
+          </div>
+          <h3>Per a <em>administracions</em>.</h3>
+          <p>Contractació menor o negociat. Agents amb traçabilitat, control humà, documentació i memòria justificativa incloses.</p>
+          <div class="price">
+            <div class="price-num">Consultar</div>
+            <div class="price-label">per licitació</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contacte" class="cta-final">
+    <div class="container">
+      <div data-reveal>
+        <h2>Quina tasca li posaries a un <em>agent</em><span class="cursor-blink"></span></h2>
+        <p>Explica'm quin procés t'agradaria que un agent dugués —correus, atenció, documents, seguiment— i responem en menys de 24h amb una proposta de diagnòstic acotat. Sense compromís d'implantació. Si després del diagnòstic no hi ha cas, ho diem.</p>
+        <a href="/ca/contacte/" class="btn-primary" style="font-size: 15px; padding: 18px 32px;">
+          Demanar diagnòstic
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- @region partials/footer-ca.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formació i implantació d'IA aplicada, Power BI i desenvolupament a mida. Operada per una SL catalana amb focus en pimes i administració pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Serveis</h3>
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+        <a href="/ca/curs-power-bi-empreses/">Curs Power BI empreses</a>
+        <a href="/ca/curs-chatgpt-empreses/">Curs ChatGPT empreses</a>
+        <a href="/ca/automatitzacio-processos-ia/">Automatització de processos IA</a>
+        <a href="/ca/curs-power-bi-barcelona/">Curs Power BI Barcelona</a>
+        <a href="/ca/formacio-ia-empreses/">Formació IA empreses</a>
+        <a href="/ca/consultoria-ia-empreses/">Consultoria IA empreses</a>
+        <a href="/ca/agents-ia-empreses/">Agents d'IA empreses</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/ca/blog/">Blog</a>
+        <a href="/ca/sobre-mike/">Sobre Mike</a>
+        <a href="/ca/contacte/">Contacte</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/ca/avis-legal/">Avís legal</a>
+        <a href="/ca/politica-privacitat/">Privacitat</a>
+        <a href="/ca/politica-galetes/">Galetes</a>
+        <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

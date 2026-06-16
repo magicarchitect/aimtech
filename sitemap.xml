@@ -303,6 +303,46 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://www.aimtech.es/consultoria-ia-empresas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/consultoria-ia-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/consultoria-ia-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/consultoria-ia-empresas/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/consultoria-ia-empreses/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/consultoria-ia-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/consultoria-ia-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/consultoria-ia-empresas/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/agentes-ia-empresas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/agentes-ia-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/agents-ia-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/agentes-ia-empresas/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/agents-ia-empreses/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/agentes-ia-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/agents-ia-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/agentes-ia-empresas/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- BLOG-AUTO-START -->
   <url>
     <loc>https://www.aimtech.es/blog/</loc>
