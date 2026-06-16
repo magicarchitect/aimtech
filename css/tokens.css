@@ -6,7 +6,7 @@
   --line-strong: #2a3344;
   --ink: #e6ebf2;
   --ink-dim: #8893a5;
-  --ink-mute: #5a6478;
+  --ink-mute: #767f90;   /* ≥4.5:1 sobre bg/card/elev (WCAG AA) — no oscurecer */
   --accent: #2580e3;
   --accent-warm: #ffb86b;
   --accent-purple: #b794f6;

@@ -69,6 +69,9 @@
 ]
 </script>
 
+<!-- Preload: fuente serif del hero (LCP) -->
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../css/tokens.css">
 <link rel="stylesheet" href="../../css/fonts.css">
 <link rel="stylesheet" href="../../css/base.css">
@@ -85,9 +88,10 @@
 <div class="noise"></div>
 
 <!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
 <nav>
   <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
-    <img src="/assets/logo.png?v=2" alt="Aimtech" />
+    <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
     <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
       <g transform="translate(300, 110)" text-anchor="middle">
         <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
@@ -107,7 +111,7 @@
       </div>
     </div>
     <a href="/ca/blog/">Blog</a>
-    <a href="/ca/sobre-mike/">Sobre el Mike</a>
+    <a href="/ca/sobre-mike/">Sobre Mike</a>
   </div>
   <div class="nav-right">
     <div class="lang-switch">
@@ -689,7 +693,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
-          <img src="/assets/logo.png?v=2" alt="Aimtech" />
+          <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
           <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
       <g transform="translate(300, 110)" text-anchor="middle">
         <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
@@ -712,7 +716,7 @@
       <div class="footer-col">
         <h3>Recursos</h3>
         <a href="/ca/blog/">Blog</a>
-        <a href="/ca/sobre-mike/">Sobre el Mike</a>
+        <a href="/ca/sobre-mike/">Sobre Mike</a>
         <a href="/ca/contacte/">Contacte</a>
       </div>
 
