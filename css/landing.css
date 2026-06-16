@@ -152,6 +152,30 @@
 .llevels .l-lvl-lbl { fill: var(--ink); font-family: var(--mono); font-size: 12px; }
 .llevels .l-lvl-tag { fill: var(--ink-mute); font-family: var(--mono); font-size: 10px; text-anchor: end; }
 
+/* ── .lroad — Roadmap 30/60/90 (consultoría IA) ───────────────
+   Línea vertical con 3 hitos; la línea de progreso se dibuja. */
+.lroad .l-road-line { stroke: var(--line-strong); stroke-width: 2; }
+.lroad .l-road-prog { stroke: var(--accent); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 220; stroke-dashoffset: 220; animation: l-road-draw 2.2s ease 0.6s forwards; }
+@keyframes l-road-draw { to { stroke-dashoffset: 0; } }
+.lroad .l-road-node { fill: var(--bg-card); stroke: var(--line-strong); stroke-width: 1.5; }
+.lroad .l-road-node--on { fill: var(--accent); stroke: var(--accent); }
+.lroad .l-road-lbl { fill: var(--ink); font-family: var(--mono); font-size: 13px; }
+.lroad .l-road-sub { fill: var(--ink-mute); font-family: var(--mono); font-size: 9px; }
+
+/* ── .ltrace — Traza de ejecución de un agente (agentes IA) ────
+   Pasos de un agente; el último (revisión humana) queda en pausa. */
+.ltrace .l-row { opacity: 0; animation: l-row-in 0.45s ease forwards; }
+.ltrace .l-row:nth-of-type(1) { animation-delay: 0.7s; }
+.ltrace .l-row:nth-of-type(2) { animation-delay: 0.95s; }
+.ltrace .l-row:nth-of-type(3) { animation-delay: 1.2s; }
+.ltrace .l-row:nth-of-type(4) { animation-delay: 1.45s; }
+.ltrace .l-row:nth-of-type(5) { animation-delay: 1.7s; }
+@keyframes l-row-in { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: translateX(0); } }
+.ltrace .l-row-dot { fill: var(--accent); }
+.ltrace .l-row-dot--wait { fill: var(--accent-warm); animation: l-pulse 1.6s ease-in-out infinite; }
+.ltrace .l-row-txt { fill: var(--ink-dim); font-family: var(--mono); font-size: 12px; }
+.ltrace .l-row-st { fill: var(--ink-mute); font-family: var(--mono); font-size: 9px; text-anchor: end; }
+
 /* ── Responsive: mismo comportamiento que las money pages ────── */
 @media (max-width: 960px) {
   .lstage { max-width: min(400px, 88vw); margin: 0 auto; }
