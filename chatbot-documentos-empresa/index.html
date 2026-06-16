@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chatbot de documentos para empresa — IA con RAG | Aimtech</title>
+<meta name="description" content="Chatbot que responde preguntas sobre los documentos de tu empresa (manuales, contratos, normativa) con IA y RAG, citando la fuente. Sin respuestas inventadas. ROI medible." />
+
+<link rel="canonical" href="https://www.aimtech.es/chatbot-documentos-empresa/" />
+
+<!-- hreflang: variantes de idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/chatbot-documentos-empresa/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/chatbot-documents-empresa/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/chatbot-documentos-empresa/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="../assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="../assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="../assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="ca_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Chatbot de documentos para empresa — IA con RAG | Aimtech" />
+<meta property="og:description" content="Un chatbot que responde sobre tus manuales, contratos y normativa con IA y RAG, citando la fuente. Nada de respuestas inventadas: si no está en tus documentos, lo dice." />
+<meta property="og:url" content="https://www.aimtech.es/chatbot-documentos-empresa/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Chatbot de documentos para empresa con IA y RAG — Aimtech" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Chatbot de documentos para empresa — IA con RAG | Aimtech" />
+<meta name="twitter:description" content="Chatbot que responde sobre tus documentos (manuales, contratos, normativa) con RAG, citando la fuente. Sin respuestas inventadas." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: Service + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://www.aimtech.es/#aimtech",
+    "name": "Aimtech",
+    "legalName": "Aimtech Consulting SL",
+    "url": "https://www.aimtech.es",
+    "logo": "https://www.aimtech.es/assets/logo.png?v=2",
+    "founder": {
+      "@type": "Person",
+      "name": "Miguel Pérez",
+      "alternateName": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "España" },
+      { "@type": "AdministrativeArea", "name": "Cataluña" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Cataluña",
+      "addressCountry": "ES"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hola@aimtech.es",
+      "contactType": "customer service",
+      "areaServed": "ES",
+      "availableLanguage": ["es", "ca"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Chatbot de documentos para empresa (RAG)",
+    "description": "Diseño e implantación de chatbots que responden preguntas sobre la documentación interna de empresas, entidades y administraciones públicas (manuales, contratos, normativa, procedimientos) usando IA y RAG (recuperación aumentada). El chatbot busca la respuesta en los documentos del cliente y la entrega citando la fuente, sin inventar. Stack basado en Claude API, bases vectoriales (Qdrant) y control de permisos. ROI medible.",
+    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "url": "https://www.aimtech.es/chatbot-documentos-empresa/",
+    "areaServed": [
+      { "@type": "Country", "name": "España" },
+      { "@type": "AdministrativeArea", "name": "Cataluña" }
+    ],
+    "serviceType": "Chatbot de documentos con IA (RAG)",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 2500,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/chatbot-documentos-empresa/#precios"
+    },
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Empresas, entidades y administraciones públicas"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
+      { "@type": "ListItem", "position": 2, "name": "IA Agéntica", "item": "https://www.aimtech.es/ia-agentica/" },
+      { "@type": "ListItem", "position": 3, "name": "Chatbot de documentos para empresa", "item": "https://www.aimtech.es/chatbot-documentos-empresa/" }
+    ]
+  }
+]
+</script>
+
+<!-- Preload: fuente serif del hero (LCP) -->
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/ia-agentica.css">
+<link rel="stylesheet" href="../css/landing.css">
+<link rel="stylesheet" href="../css/cookie-consent.css">
+<script src="../js/cookie-consent.js" defer></script>
+<script src="../js/site.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-es.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-servicios-menu">Servicios <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-servicios-menu">
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+    </div>
+    <a href="/blog/">Blog</a>
+    <a href="/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/chatbot-documentos-empresa/" class="active">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/chatbot-documents-empresa/">CA</a>
+    </div>
+    <a href="/contacto/" class="nav-cta">Hablemos →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="dot dot--multi"></span>
+            <span>Chatbot documentos · RAG</span>
+            <span class="sep">/</span>
+            <span>Claude · Qdrant</span>
+            <span class="sep">/</span>
+            <span id="clock">--:--:--</span>
+          </div>
+
+          <h1>
+            <span class="reveal r1">Chatbot de documentos</span>
+            <span class="reveal r2"><em class="italic">para tu empresa</em>.</span><br>
+            <span class="reveal r3">Tú preguntas,</span>
+            <span class="reveal r4">cita la fuente.</span>
+          </h1>
+
+          <p class="hero-sub">
+            Tus manuales, contratos, normativa o procedimientos pueden sumar cientos de páginas. Un chatbot con <strong>RAG</strong> (recuperación aumentada) busca la respuesta en <strong>tus documentos</strong> y la da citando de dónde la ha sacado, para que puedas comprobarla. Nada de respuestas inventadas: si no está en tus documentos, lo dice.
+          </p>
+
+          <div class="hero-cta">
+            <a href="/contacto/" class="btn-primary">
+              Pedir diagnóstico
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="/ia-agentica/" class="btn-ghost">Cómo lo hacemos</a>
+          </div>
+        </div>
+
+        <div class="lstage ldocs" aria-hidden="true">
+          <svg viewBox="0 0 560 560" role="img" aria-label="Chatbot que responde una pregunta sobre documentos citando la fuente">
+
+            <rect class="l-panel" x="60" y="84" width="440" height="392" rx="18"/>
+
+            <circle class="l-dot" cx="88" cy="116" r="4"/>
+            <circle class="l-dot" cx="102" cy="116" r="4"/>
+            <circle class="l-dot" cx="116" cy="116" r="4"/>
+            <text class="l-sub" x="140" y="120">docs.ai</text>
+            <circle class="l-pulse" cx="474" cy="116" r="5"/>
+            <line x1="60" y1="140" x2="500" y2="140" stroke="#2a3344" stroke-width="1"/>
+
+            <!-- Pregunta -->
+            <rect class="l-ans" x="88" y="158" width="384" height="40" rx="10"/>
+            <text class="l-q" x="104" y="183">¿Cuál es el plazo de garantía?</text>
+
+            <!-- Documentos fuente (izquierda) -->
+            <g class="l-doc-set">
+              <g class="l-doc-wrap">
+                <rect class="l-doc" x="88" y="222" width="104" height="68" rx="6"/>
+                <line class="l-doc-line" x1="100" y1="240" x2="172" y2="240"/>
+                <line class="l-doc-line" x1="100" y1="254" x2="180" y2="254"/>
+                <line class="l-doc-line" x1="100" y1="268" x2="156" y2="268"/>
+              </g>
+              <g class="l-doc-wrap">
+                <rect class="l-doc" x="88" y="300" width="104" height="68" rx="6"/>
+                <line class="l-doc-line" x1="100" y1="318" x2="172" y2="318"/>
+                <line class="l-doc-line" x1="100" y1="332" x2="180" y2="332"/>
+                <line class="l-doc-line" x1="100" y1="346" x2="150" y2="346"/>
+              </g>
+              <g class="l-doc-wrap">
+                <rect class="l-doc" x="88" y="378" width="104" height="68" rx="6"/>
+                <line class="l-doc-line" x1="100" y1="396" x2="172" y2="396"/>
+                <line class="l-doc-line" x1="100" y1="410" x2="180" y2="410"/>
+                <line class="l-doc-line" x1="100" y1="424" x2="160" y2="424"/>
+              </g>
+            </g>
+
+            <!-- Recuperación: línea de los docs a la respuesta -->
+            <path class="l-link" d="M192 334 C 220 334, 224 300, 248 300"/>
+
+            <!-- Respuesta con cita -->
+            <rect class="l-ans" x="232" y="222" width="240" height="224" rx="12"/>
+            <text class="l-sub" x="250" y="248">respuesta</text>
+            <line class="l-ans-line" x1="250" y1="268" x2="450" y2="268" stroke-width="8" stroke-linecap="round"/>
+            <line class="l-ans-line" x1="250" y1="290" x2="420" y2="290" stroke-width="8" stroke-linecap="round"/>
+            <text class="l-q" x="250" y="332">Garantía: 24 meses</text>
+            <text class="l-sub" x="250" y="356">según contrato tipo</text>
+
+            <!-- Citas -->
+            <rect class="l-cite" x="250" y="386" width="58" height="24" rx="6"/>
+            <text class="l-cite-txt" x="279" y="402">doc · 1</text>
+            <rect class="l-cite" x="318" y="386" width="58" height="24" rx="6"/>
+            <text class="l-cite-txt" x="347" y="402">doc · 3</text>
+
+          </svg>
+
+          <span class="ltag ltag--accent" style="top:11%; left:-2%;">// rag</span>
+          <span class="ltag" style="bottom:14%; right:-2%;">cita la fuente</span>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="tag">CHATBOT DOCUMENTOS</span>
+      <span>RAG</span> <span>·</span>
+      <span>Cita la fuente</span> <span>·</span>
+      <span>Manuales</span> <span>·</span>
+      <span>Contratos</span> <span>·</span>
+      <span>Normativa</span> <span>·</span>
+      <span>Claude</span> <span>·</span>
+      <span>Qdrant</span> <span>·</span>
+      <span>Sin alucinaciones</span> <span>·</span>
+      <span>Permisos</span> <span>·</span>
+      <span class="tag">CHATBOT DOCUMENTOS</span>
+      <span>RAG</span> <span>·</span>
+      <span>Cita la fuente</span> <span>·</span>
+      <span>Manuales</span> <span>·</span>
+      <span>Normativa</span> <span>·</span>
+      <span>Sin alucinaciones</span> <span>·</span>
+    </div>
+  </div>
+
+  <section id="que-resuelve">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">01 — Qué resuelve</div>
+        <h2 class="section-title">La respuesta <em>está</em> en algún documento. / El problema es / encontrarla a tiempo.</h2>
+        <p class="section-intro">Cuando la información existe pero está repartida en PDF, intranets y carpetas, la gente pregunta a un compañero o improvisa. Un chatbot de documentos pone esa información a una pregunta de distancia. Casos donde más se nota:</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// doc_01</span>
+            <span class="badge">Soporte interno</span>
+          </div>
+          <h3>El equipo <em>pregunta</em>.</h3>
+          <p>Procedimientos, políticas, manuales de producto. En vez de interrumpir a un compañero, el equipo pregunta al chatbot y recibe la respuesta con el documento exacto.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// doc_02</span>
+            <span class="badge">Normativa</span>
+          </div>
+          <h3>Responder <em>según las reglas</em>.</h3>
+          <p>Atención que debe ajustarse a un reglamento, unas bases o un contrato. El chatbot responde citando el artículo, no de memoria. Útil para entidades y AAPP.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// doc_03</span>
+            <span class="badge">Onboarding</span>
+          </div>
+          <h3>Quien <em>acaba de entrar</em>.</h3>
+          <p>Una persona nueva tiene cien dudas y no sabe a quién preguntar. El chatbot le da contexto sobre procesos y herramientas sin gastar el tiempo del resto del equipo.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// doc_04</span>
+            <span class="badge">Conocimiento</span>
+          </div>
+          <h3>Años de <em>documentos</em>.</h3>
+          <p>Informes, actas, especificaciones acumuladas durante años. El chatbot las hace consultables en lenguaje natural, sin tener que recordar en qué carpeta estaba aquello.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="sin-inventar">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">02 — Por qué con RAG</div>
+        <h2 class="section-title">Un chatbot que <em>inventa</em> / es peor que no tener / chatbot.</h2>
+        <p class="section-intro">La diferencia entre un juguete y una herramienta de trabajo es que se pueda confiar en la respuesta. Por eso usamos RAG sobre tus documentos, con cita y con permisos. No es ChatGPT respondiendo de memoria.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// rag_01</span>
+            <span class="badge">Cita</span>
+          </div>
+          <h3>Siempre <em>con fuente</em>.</h3>
+          <p>Cada respuesta enlaza al documento y al fragmento de donde sale. Puedes comprobarla en dos clics en vez de fiarte a ciegas.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// rag_02</span>
+            <span class="badge">No inventa</span>
+          </div>
+          <h3>Si no está, <em>lo dice</em>.</h3>
+          <p>Cuando la respuesta no está en tus documentos, el chatbot lo reconoce en vez de rellenar el hueco con algo plausible. Mejor un "no lo sé" que un dato falso.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// rag_03</span>
+            <span class="badge">Permisos</span>
+          </div>
+          <h3>Cada uno ve <em>lo suyo</em>.</h3>
+          <p>El chatbot respeta quién puede ver qué. La documentación sensible no se expone a quien no debe acceder a ella, igual que en tus carpetas.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0;">
+    <div class="container" style="padding: 0;">
+      <div class="stats" data-stagger>
+        <div class="stat">
+          <div class="stat-num"><em>RAG</em></div>
+          <div class="stat-label">Responde sobre tus docs</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100<em>%</em></div>
+          <div class="stat-label">Respuestas con fuente</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><em>0</em></div>
+          <div class="stat-label">Respuestas inventadas</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">24<em>h</em></div>
+          <div class="stat-label">Respuesta a tu consulta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">03 — Contratación</div>
+        <h2 class="section-title">Para empresas, <em>entidades</em> y AAPP.</h2>
+        <p class="section-intro">Se cotiza por alcance tras un diagnóstico corto: volumen de documentos, dónde se consulta (web, intranet, WhatsApp) y nivel de permisos. <strong>Proyectos desde 2.500€</strong>; <strong>el alcance define el presupuesto final</strong>. Si lo quieres sobre WhatsApp, mira el <a href="/bot-whatsapp-empresas/">bot de WhatsApp para empresas</a>; y el método completo está en <a href="/ia-agentica/">implantación de IA agéntica</a>.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segmento_01</span>
+            <span class="badge">Empresas</span>
+          </div>
+          <h3>Conocimiento <em>consultable</em>.</h3>
+          <p>Indexamos tus documentos, montamos el chatbot con cita y permisos, y lo conectamos donde lo use tu equipo. Empezamos por el cuerpo documental que más se consulta.</p>
+          <div class="price">
+            <div class="price-label">proyectos desde</div>
+            <div class="price-num">2.500€</div>
+            <div class="price-label">el alcance define el presupuesto · IVA aparte</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segmento_02</span>
+            <span class="badge">Entidades</span>
+          </div>
+          <h3>Para <em>entidades</em>.</h3>
+          <p>Asociaciones, fundaciones, colegios profesionales o cooperativas. Consultas de socios sobre estatutos, bases o normativa, respondidas con el artículo a la vista.</p>
+          <div class="price">
+            <div class="price-label">proyectos desde</div>
+            <div class="price-num">2.500€</div>
+            <div class="price-label">el alcance define el presupuesto · IVA aparte</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segmento_03</span>
+            <span class="badge">AAPP</span>
+          </div>
+          <h3>Para <em>administraciones</em>.</h3>
+          <p>Contratación menor o negociado. Consulta de normativa y procedimientos con cita de fuente, control de permisos, trazabilidad y memoria justificativa.</p>
+          <div class="price">
+            <div class="price-num">Consultar</div>
+            <div class="price-label">por licitación</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="cta-final">
+    <div class="container">
+      <div data-reveal>
+        <h2>¿Cuánto tiempo se pierde <em>buscando</em> en documentos<span class="cursor-blink"></span></h2>
+        <p>Cuéntame qué tipo de documentos consulta tu equipo y dónde te gustaría preguntarles, y respondemos en menos de 24h con una propuesta de diagnóstico acotado. Sin compromiso de implantación. Si tras el diagnóstico no hay caso, lo decimos.</p>
+        <a href="/contacto/" class="btn-primary" style="font-size: 15px; padding: 18px 32px;">
+          Pedir diagnóstico
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- @region partials/footer-es.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formación e implantación de IA aplicada, Power BI y desarrollo a medida. Operado por una SL catalana con foco en pymes y administración pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+        <a href="/curso-power-bi-empresas/">Curso Power BI empresas</a>
+        <a href="/curso-chatgpt-empresas/">Curso ChatGPT empresas</a>
+        <a href="/automatizacion-procesos-ia/">Automatización de procesos IA</a>
+        <a href="/curso-power-bi-barcelona/">Curso Power BI Barcelona</a>
+        <a href="/formacion-ia-empresas/">Formación IA empresas</a>
+        <a href="/consultoria-ia-empresas/">Consultoría IA empresas</a>
+        <a href="/agentes-ia-empresas/">Agentes de IA empresas</a>
+        <a href="/bot-whatsapp-empresas/">Bot de WhatsApp empresas</a>
+        <a href="/chatbot-documentos-empresa/">Chatbot de documentos</a>
+        <a href="/automatizacion-emails-ia/">Automatización de emails IA</a>
+        <a href="/automatizacion-facturas-pdfs-ia/">Automatización de facturas IA</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/blog/">Blog</a>
+        <a href="/sobre-mike/">Sobre Mike</a>
+        <a href="/contacto/">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/politica-privacidad/">Privacidad</a>
+        <a href="/politica-cookies/">Cookies</a>
+        <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Cataluña</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

@@ -343,6 +343,86 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://www.aimtech.es/bot-whatsapp-empresas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/bot-whatsapp-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/bot-whatsapp-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/bot-whatsapp-empresas/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/bot-whatsapp-empreses/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/bot-whatsapp-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/bot-whatsapp-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/bot-whatsapp-empresas/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/chatbot-documentos-empresa/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/chatbot-documentos-empresa/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/chatbot-documents-empresa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/chatbot-documentos-empresa/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/chatbot-documents-empresa/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/chatbot-documentos-empresa/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/chatbot-documents-empresa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/chatbot-documentos-empresa/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/automatizacion-emails-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/automatizacion-emails-ia/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/automatitzacio-correus-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/automatizacion-emails-ia/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/automatitzacio-correus-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/automatizacion-emails-ia/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/automatitzacio-correus-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/automatizacion-emails-ia/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/automatizacion-facturas-pdfs-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/automatizacion-facturas-pdfs-ia/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/automatitzacio-factures-pdf-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/automatizacion-facturas-pdfs-ia/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/automatitzacio-factures-pdf-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/automatizacion-facturas-pdfs-ia/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/automatitzacio-factures-pdf-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/automatizacion-facturas-pdfs-ia/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- BLOG-AUTO-START -->
   <url>
     <loc>https://www.aimtech.es/blog/</loc>

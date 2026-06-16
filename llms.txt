@@ -30,6 +30,10 @@ Datos reales de actividad: +20 años de experiencia, 3.360 alumnos formados,
 - [Formación en IA para empresas](https://www.aimtech.es/formacion-ia-empresas/): programa paraguas de formación en IA para equipos, del uso de ChatGPT y copilotos a la automatización y los agentes, ajustado al nivel del equipo. Online en directo o presencial.
 - [Consultoría de IA para empresas](https://www.aimtech.es/consultoria-ia-empresas/): diagnóstico de oportunidades de IA, roadmap 30/60/90 priorizado por ROI y ejecución (formación, automatización o agentes). Enfoque anti-humo. Diagnóstico desde 950€.
 - [Agentes de IA para empresas](https://www.aimtech.es/agentes-ia-empresas/): diseño e implantación de agentes de IA que gestionan correos, atención, documentos y seguimiento, con human-in-the-loop y ROI medible. Claude, n8n y RAG. Proyectos desde 3.500€.
+- [Bot de WhatsApp para empresas](https://www.aimtech.es/bot-whatsapp-empresas/): bot de WhatsApp Business con IA que responde dudas frecuentes a partir de tu documentación, capta leads y deriva a una persona cuando toca. Tono de marca, 24/7. Proyectos desde 2.500€.
+- [Chatbot de documentos para empresa](https://www.aimtech.es/chatbot-documentos-empresa/): chatbot con RAG que responde preguntas sobre los documentos internos (manuales, contratos, normativa) citando la fuente, sin inventar. Claude y Qdrant. Proyectos desde 2.500€.
+- [Automatización de emails con IA](https://www.aimtech.es/automatizacion-emails-ia/): triaje de la bandeja con IA — clasifica, redacta primeras respuestas, extrae datos y deriva. Lo sensible queda en borrador para revisión humana. n8n y Claude. Proyectos desde 2.500€.
+- [Automatización de facturas y PDFs con IA](https://www.aimtech.es/automatizacion-facturas-pdfs-ia/): lectura de facturas, albaranes y formularios en PDF, extracción de datos (número, fecha, base, total, NIF), validación y alta en el sistema. Sin teclear. Proyectos desde 2.500€.
 
 ## Sobre el fundador
 

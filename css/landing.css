@@ -60,6 +60,12 @@
 .lstage .l-pulse { fill: var(--accent); animation: l-pulse 2s ease-in-out infinite; }
 @keyframes l-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
 
+/* Sub-etiqueta mono gris compartida (chrome de ventana, captions, títulos
+   de panel). Antes solo existía .lbi .l-sub → en los heros .lroad/.ltrace
+   el texto caía a fill negro 16px Geist. Esta regla genérica lo arregla;
+   .lbi mantiene su override de 9px por orden de cascada. */
+.lstage .l-sub { fill: var(--ink-mute); font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; }
+
 /* ── .lbi — Dashboard de tarjetas (Power BI) ─────────────────── */
 .lbi .l-title { fill: var(--ink); font-family: var(--mono); font-size: 13px; }
 .lbi .l-sub { fill: var(--ink-mute); font-family: var(--mono); font-size: 9px; letter-spacing: 0.06em; }
@@ -175,6 +181,80 @@
 .ltrace .l-row-dot--wait { fill: var(--accent-warm); animation: l-pulse 1.6s ease-in-out infinite; }
 .ltrace .l-row-txt { fill: var(--ink-dim); font-family: var(--mono); font-size: 12px; }
 .ltrace .l-row-st { fill: var(--ink-mute); font-family: var(--mono); font-size: 9px; text-anchor: end; }
+
+/* ── .lwa — Hilo de chat WhatsApp (bot-whatsapp-empresas) ──────
+   Pantalla de móvil con burbujas entrante/saliente y typing dots. */
+.lwa .l-hdr { fill: var(--ink); font-family: var(--mono); font-size: 12px; }
+.lwa .l-msg { opacity: 0; animation: l-msg-in 0.5s ease forwards; }
+.lwa .l-msg:nth-of-type(1) { animation-delay: 0.9s; }
+.lwa .l-msg:nth-of-type(2) { animation-delay: 1.5s; }
+.lwa .l-msg:nth-of-type(3) { animation-delay: 2.1s; }
+@keyframes l-msg-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.lwa .l-bub-in  { fill: rgba(255, 255, 255, 0.05); stroke: var(--line-strong); stroke-width: 1; }
+.lwa .l-bub-out { fill: rgba(37, 128, 227, 0.16); stroke: rgba(37, 128, 227, 0.5); stroke-width: 1; }
+.lwa .l-msg-txt { fill: var(--ink-dim); font-family: var(--mono); font-size: 10px; }
+.lwa .l-msg-txt--out { fill: var(--ink); }
+.lwa .l-chip { fill: rgba(37, 128, 227, 0.10); stroke: rgba(37, 128, 227, 0.4); stroke-width: 1; }
+.lwa .l-chip-txt { fill: var(--accent); font-family: var(--mono); font-size: 9px; text-anchor: middle; }
+.lwa .l-typing { fill: var(--ink-mute); animation: l-pulse 1.4s ease-in-out infinite; }
+.lwa .l-typing:nth-of-type(2) { animation-delay: 0.2s; }
+.lwa .l-typing:nth-of-type(3) { animation-delay: 0.4s; }
+
+/* ── .ldocs — Documentos → respuesta con citas (chatbot RAG) ───
+   Pila de documentos que alimenta una respuesta con fuentes [1][2]. */
+.ldocs .l-doc { fill: var(--bg-card); stroke: var(--line-strong); stroke-width: 1.2; opacity: 0; animation: l-doc-in 0.6s ease forwards; }
+.ldocs .l-doc:nth-of-type(1) { animation-delay: 0.7s; }
+.ldocs .l-doc:nth-of-type(2) { animation-delay: 0.85s; }
+.ldocs .l-doc:nth-of-type(3) { animation-delay: 1.0s; }
+@keyframes l-doc-in { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: translateX(0); } }
+.ldocs .l-doc-line { stroke: var(--line-strong); stroke-width: 2; stroke-linecap: round; }
+.ldocs .l-link { fill: none; stroke: rgba(37, 128, 227, 0.5); stroke-width: 1.6; stroke-dasharray: 5 4; stroke-dashoffset: 80; animation: l-link-draw 1.2s ease 1.3s forwards; }
+@keyframes l-link-draw { to { stroke-dashoffset: 0; } }
+.ldocs .l-q { fill: var(--ink); font-family: var(--mono); font-size: 11px; }
+.ldocs .l-ans { fill: rgba(255, 255, 255, 0.03); stroke: var(--line-strong); stroke-width: 1; }
+.ldocs .l-ans-line { fill: var(--accent); opacity: 0; transform-origin: left; transform-box: fill-box; transform: scaleX(0); }
+.ldocs .l-ans-line:nth-of-type(1) { animation: l-stream-in 0.5s ease 1.8s forwards; }
+.ldocs .l-ans-line:nth-of-type(2) { animation: l-stream-in 0.5s ease 2.2s forwards; }
+.ldocs .l-ans-line:nth-of-type(3) { animation: l-stream-in 0.5s ease 2.6s forwards; }
+.ldocs .l-cite { fill: rgba(37, 128, 227, 0.16); stroke: rgba(37, 128, 227, 0.5); stroke-width: 1; opacity: 0; animation: l-msg-in 0.4s ease 3.0s forwards; }
+.ldocs .l-cite-txt { fill: var(--accent); font-family: var(--mono); font-size: 9px; text-anchor: middle; opacity: 0; animation: l-msg-in 0.4s ease 3.0s forwards; }
+
+/* ── .lmail — Triaje de bandeja (automatizacion-emails-ia) ─────
+   Filas de correo que reciben una etiqueta de categoría al clasificarse. */
+.lmail .l-mrow { opacity: 0; animation: l-msg-in 0.5s ease forwards; }
+.lmail .l-mrow:nth-of-type(1) { animation-delay: 0.7s; }
+.lmail .l-mrow:nth-of-type(2) { animation-delay: 0.95s; }
+.lmail .l-mrow:nth-of-type(3) { animation-delay: 1.2s; }
+.lmail .l-mrow:nth-of-type(4) { animation-delay: 1.45s; }
+.lmail .l-env { fill: none; stroke: var(--ink-mute); stroke-width: 1.4; }
+.lmail .l-mbar { fill: rgba(255, 255, 255, 0.07); }
+.lmail .l-pill { rx: 6; opacity: 0; animation: l-msg-in 0.4s ease forwards; }
+.lmail .l-mrow:nth-of-type(1) .l-pill { animation-delay: 1.0s; }
+.lmail .l-mrow:nth-of-type(2) .l-pill { animation-delay: 1.25s; }
+.lmail .l-mrow:nth-of-type(3) .l-pill { animation-delay: 1.5s; }
+.lmail .l-mrow:nth-of-type(4) .l-pill { animation-delay: 1.75s; }
+.lmail .l-pill--a { fill: rgba(37, 128, 227, 0.16); stroke: rgba(37, 128, 227, 0.5); stroke-width: 1; }
+.lmail .l-pill--m { fill: rgba(255, 255, 255, 0.05); stroke: var(--line-strong); stroke-width: 1; }
+.lmail .l-pill-txt { font-family: var(--mono); font-size: 9px; text-anchor: middle; }
+.lmail .l-pill-txt--a { fill: var(--accent); }
+.lmail .l-pill-txt--m { fill: var(--ink-mute); }
+
+/* ── .lscan — Extracción de PDF (automatizacion-facturas-pdfs-ia) ──
+   Documento con línea de escaneo; los campos extraídos pueblan una tabla. */
+.lscan .l-pdf { fill: var(--bg-card); stroke: var(--line-strong); stroke-width: 1.2; }
+.lscan .l-pdf-line { stroke: var(--line-strong); stroke-width: 2; stroke-linecap: round; }
+.lscan .l-pdf-line--hd { stroke: var(--ink-mute); }
+.lscan .l-scan { stroke: var(--accent); stroke-width: 2; opacity: 0.9; animation: l-scan-sweep 2.6s ease-in-out infinite; }
+@keyframes l-scan-sweep { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 0.9; } 85% { opacity: 0.9; } 100% { transform: translateY(150px); opacity: 0; } }
+.lscan .l-arrow { fill: none; stroke: rgba(37, 128, 227, 0.5); stroke-width: 1.6; marker-end: none; stroke-dasharray: 5 4; stroke-dashoffset: 40; animation: l-link-draw 1s ease 1.1s forwards; }
+.lscan .l-field { opacity: 0; animation: l-msg-in 0.45s ease forwards; }
+.lscan .l-field:nth-of-type(1) { animation-delay: 1.3s; }
+.lscan .l-field:nth-of-type(2) { animation-delay: 1.55s; }
+.lscan .l-field:nth-of-type(3) { animation-delay: 1.8s; }
+.lscan .l-field:nth-of-type(4) { animation-delay: 2.05s; }
+.lscan .l-field-k { fill: var(--ink-mute); font-family: var(--mono); font-size: 9px; }
+.lscan .l-field-v { fill: var(--ink); font-family: var(--mono); font-size: 11px; }
+.lscan .l-field-box { fill: rgba(37, 128, 227, 0.07); stroke: var(--line-strong); stroke-width: 1; }
 
 /* ── Responsive: mismo comportamiento que las money pages ────── */
 @media (max-width: 960px) {
