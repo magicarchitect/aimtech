@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Automatización de procesos con IA para empresas — Aimtech</title>
+<meta name="description" content="Automatización de procesos con IA: triaje de correos, extracción de datos de documentos, traspaso entre aplicaciones e informes. Diagnóstico primero, ROI medible. n8n y Claude." />
+
+<link rel="canonical" href="https://www.aimtech.es/automatizacion-procesos-ia/" />
+
+<!-- hreflang: variantes de idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/automatizacion-procesos-ia/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/automatitzacio-processos-ia/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/automatizacion-procesos-ia/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="../assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="../assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="../assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="ca_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Automatización de procesos con IA para empresas — Aimtech" />
+<meta property="og:description" content="Automatizamos las tareas repetitivas que queman horas: correos, documentos, traspaso de datos e informes. Con IA donde aporta y reglas donde basta. Diagnóstico primero." />
+<meta property="og:url" content="https://www.aimtech.es/automatizacion-procesos-ia/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Automatización de procesos con IA para empresas — Aimtech" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Automatización de procesos con IA para empresas — Aimtech" />
+<meta name="twitter:description" content="Automatizamos las tareas repetitivas: correos, documentos, traspaso de datos e informes. Con IA donde aporta. Diagnóstico primero, ROI medible." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: Service + BreadcrumbList -->
+<!-- Precio del estudio (sprint simple): proyectos desde 2.500€; pendiente de confirmación final de Mike. -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://www.aimtech.es/#aimtech",
+    "name": "Aimtech",
+    "legalName": "Aimtech Consulting SL",
+    "url": "https://www.aimtech.es",
+    "logo": "https://www.aimtech.es/assets/logo.png?v=2",
+    "founder": {
+      "@type": "Person",
+      "name": "Miguel Pérez",
+      "alternateName": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "España" },
+      { "@type": "AdministrativeArea", "name": "Cataluña" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Cataluña",
+      "addressCountry": "ES"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hola@aimtech.es",
+      "contactType": "customer service",
+      "areaServed": "ES",
+      "availableLanguage": ["es", "ca"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Automatización de procesos con IA",
+    "description": "Automatización de procesos empresariales con IA y workflows: triaje y respuesta de correos, extracción de datos de documentos y PDFs, traspaso de información entre aplicaciones, generación de informes y alertas. Diagnóstico previo del proceso, medición de línea base y ROI. Stack basado en n8n, Claude API y las APIs de las herramientas que ya usa el cliente. Para empresas, entidades y administraciones públicas.",
+    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "url": "https://www.aimtech.es/automatizacion-procesos-ia/",
+    "areaServed": [
+      { "@type": "Country", "name": "España" },
+      { "@type": "AdministrativeArea", "name": "Cataluña" }
+    ],
+    "serviceType": "Automatización de procesos con IA",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 2500,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/automatizacion-procesos-ia/#precios"
+    },
+    "audience": {
+      "@type": "BusinessAudience",
+      "audienceType": "Empresas, entidades y administraciones públicas"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
+      { "@type": "ListItem", "position": 2, "name": "IA Agéntica", "item": "https://www.aimtech.es/ia-agentica/" },
+      { "@type": "ListItem", "position": 3, "name": "Automatización de procesos con IA", "item": "https://www.aimtech.es/automatizacion-procesos-ia/" }
+    ]
+  }
+]
+</script>
+
+<!-- Preload: fuente serif del hero (LCP) -->
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/tokens.css">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/ia-agentica.css">
+<link rel="stylesheet" href="../css/landing.css">
+<link rel="stylesheet" href="../css/cookie-consent.css">
+<script src="../js/cookie-consent.js" defer></script>
+<script src="../js/site.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-es.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-servicios-menu">Servicios <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-servicios-menu">
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+    </div>
+    <a href="/blog/">Blog</a>
+    <a href="/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/automatizacion-procesos-ia/" class="active">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/automatitzacio-processos-ia/">CA</a>
+    </div>
+    <a href="/contacto/" class="nav-cta">Hablemos →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="dot dot--multi"></span>
+            <span>Automatización · IA</span>
+            <span class="sep">/</span>
+            <span>n8n · Claude · APIs</span>
+            <span class="sep">/</span>
+            <span id="clock">--:--:--</span>
+          </div>
+
+          <h1>
+            <span class="reveal r1">Automatización</span>
+            <span class="reveal r2"><em class="italic">de procesos con IA</em>.</span><br>
+            <span class="reveal r3">Las horas repetitivas,</span>
+            <span class="reveal r4">de vuelta a tu equipo.</span>
+          </h1>
+
+          <p class="hero-sub">
+            Automatizamos las tareas <strong>manuales y repetitivas</strong> que queman horas a tu equipo: triaje de correos, extracción de datos de documentos, traspaso de información entre aplicaciones, generación de informes. Con <strong>IA donde aporta</strong> y reglas donde basta. <strong>Diagnóstico primero</strong>: si un proceso no merece automatizarse, te lo decimos antes de facturarte nada.
+          </p>
+
+          <div class="hero-cta">
+            <a href="/contacto/" class="btn-primary">
+              Pedir diagnóstico
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="#que-automatizamos" class="btn-ghost">Ver qué automatizamos</a>
+          </div>
+        </div>
+
+        <div class="lstage lflow" aria-hidden="true">
+          <svg viewBox="0 0 560 560" role="img" aria-label="Workflow de automatización: entradas, nodo de IA y salidas">
+
+            <!-- Aristas (detrás de los nodos) -->
+            <path id="flow-1" class="l-edge" d="M 186 177 C 214 177 224 230 248 240"/>
+            <path id="flow-2" class="l-edge" d="M 186 327 C 214 327 224 274 248 268"/>
+            <path id="flow-3" class="l-edge" d="M 332 240 C 356 230 366 188 394 180"/>
+            <path id="flow-4" class="l-edge" d="M 332 268 C 356 278 366 320 394 324"/>
+
+            <!-- Partículas fluyendo por la tubería -->
+            <circle class="l-particle--warm" r="3.2"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#flow-1"/></animateMotion></circle>
+            <circle class="l-particle--warm" r="3.2"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0.8s"><mpath href="#flow-2"/></animateMotion></circle>
+            <circle class="l-particle" r="3.2"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0.4s"><mpath href="#flow-3"/></animateMotion></circle>
+            <circle class="l-particle" r="3.2"><animateMotion dur="2.4s" repeatCount="indefinite" begin="1.2s"><mpath href="#flow-4"/></animateMotion></circle>
+
+            <!-- Nodo de IA central con anillo pulsante -->
+            <circle class="l-ai-ring" cx="290" cy="254" r="52"/>
+            <rect class="l-node l-node--ai" x="248" y="212" width="84" height="84" rx="20"/>
+            <g class="l-ai-ast" transform="translate(290, 254)">
+              <line x1="0" y1="-14" x2="0" y2="14"/>
+              <line x1="-12.1" y1="-7" x2="12.1" y2="7"/>
+              <line x1="-12.1" y1="7" x2="12.1" y2="-7"/>
+            </g>
+            <text class="l-node-sub" x="290" y="322">n8n + IA</text>
+
+            <!-- Nodos de entrada -->
+            <rect class="l-node" x="66" y="150" width="120" height="54" rx="12"/>
+            <text class="l-node-lbl" x="126" y="174">correo</text>
+            <text class="l-node-sub" x="126" y="190">entrada</text>
+
+            <rect class="l-node" x="66" y="300" width="120" height="54" rx="12"/>
+            <text class="l-node-lbl" x="126" y="324">documento</text>
+            <text class="l-node-sub" x="126" y="340">PDF · datos</text>
+
+            <!-- Nodos de salida -->
+            <rect class="l-node" x="394" y="150" width="120" height="54" rx="12"/>
+            <text class="l-node-lbl" x="454" y="174">CRM</text>
+            <text class="l-node-sub" x="454" y="190">registro</text>
+
+            <rect class="l-node" x="394" y="300" width="120" height="54" rx="12"/>
+            <text class="l-node-lbl" x="454" y="324">informe</text>
+            <text class="l-node-sub" x="454" y="340">semanal</text>
+
+          </svg>
+
+          <span class="ltag ltag--accent" style="top:12%; left:38%;">// n8n</span>
+          <span class="ltag" style="bottom:14%; left:50%;">human-in-the-loop · on</span>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="tag">AUTOMATIZACIÓN</span>
+      <span>Triaje de correos</span> <span>·</span>
+      <span>Extracción de PDFs</span> <span>·</span>
+      <span>Datos entre apps</span> <span>·</span>
+      <span>Informes</span> <span>·</span>
+      <span>n8n</span> <span>·</span>
+      <span>Claude</span> <span>·</span>
+      <span>CRM</span> <span>·</span>
+      <span>Sin copiar-pegar</span> <span>·</span>
+      <span>ROI medible</span> <span>·</span>
+      <span>Human-in-the-loop</span> <span>·</span>
+      <span class="tag">AUTOMATIZACIÓN</span>
+      <span>Triaje de correos</span> <span>·</span>
+      <span>Extracción de PDFs</span> <span>·</span>
+      <span>Datos entre apps</span> <span>·</span>
+      <span>Informes</span> <span>·</span>
+      <span>n8n</span> <span>·</span>
+      <span>Claude</span> <span>·</span>
+    </div>
+  </div>
+
+  <section id="que-automatizamos">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">01 — Qué automatizamos</div>
+        <h2 class="section-title">Lo repetitivo, <em>lo que tiene patrón</em>, / lo que nadie quiere / hacer a mano.</h2>
+        <p class="section-intro">Si una tarea se repite con un input parecido y un resultado esperable, probablemente se puede automatizar. Estas son las cuatro familias que más horas devuelven. ¿Dudas entre herramientas? En el blog comparo <a href="/blog/n8n-vs-make-vs-zapier/">n8n vs Make vs Zapier</a> para automatizar sin atarte.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// familia_01</span>
+            <span class="badge">Correos</span>
+          </div>
+          <h3>Correos y <em>atención</em>.</h3>
+          <p>Triaje de la bandeja, clasificación por tipo, primera respuesta a consultas frecuentes, derivación al área correcta y alta del caso en tu sistema. Lo sensible siempre pasa por una persona antes de salir.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// familia_02</span>
+            <span class="badge">Documentos</span>
+          </div>
+          <h3>Documentos y <em>PDFs</em>.</h3>
+          <p>Extracción de datos de facturas, albaranes, formularios o contratos, validación contra tus reglas y alta automática en el ERP, CRM u hoja de cálculo. Se acabó teclear lo que ya viene en un PDF.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// familia_03</span>
+            <span class="badge">Datos entre apps</span>
+          </div>
+          <h3>Traspaso <em>entre sistemas</em>.</h3>
+          <p>Mover y sincronizar información entre las herramientas que ya usáis —web, CRM, ERP, hojas, drive— sin copiar y pegar. Con validaciones para que un dato mal puesto no se propague por toda la cadena.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// familia_04</span>
+            <span class="badge">Informes</span>
+          </div>
+          <h3>Informes y <em>alertas</em>.</h3>
+          <p>Generación recurrente de informes, consolidación de fuentes y avisos automáticos cuando un indicador se sale de rango. El lunes el informe ya está hecho; tú decides sobre él, no lo montas.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="como">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">02 — Cómo lo hacemos</div>
+        <h2 class="section-title">Diagnóstico, <em>diseño</em>, / implantación / y medición.</h2>
+        <p class="section-intro">Un proceso por proyecto, sin grandes plataformas que tardan un año. Empezamos por lo que más horas quema, lo dejamos en producción y medimos. Si quieres ir más allá de automatizar y montar <strong>sistemas multi-agente</strong>, eso lo cubre <a href="/ia-agentica/">la implantación de IA agéntica</a>.</p>
+      </div>
+
+      <div class="method-list" data-stagger>
+        <div class="step">
+          <span class="step-num">01</span>
+          <span class="step-title">Diagnóstico. Medimos el proceso de hoy y lo que cuesta en horas.</span>
+          <span class="step-arrow">→</span>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <span class="step-title">Diseño. Qué se automatiza, qué queda con persona y con qué reglas.</span>
+          <span class="step-arrow">→</span>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <span class="step-title">Implantación. n8n e IA donde aporta, integrado con tus herramientas.</span>
+          <span class="step-arrow">→</span>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <span class="step-title">Medición. Línea base vs. después. Si no sale, ajustamos o paramos.</span>
+          <span class="step-arrow">→</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cuando">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">03 — Cuándo te conviene</div>
+        <h2 class="section-title">No todo proceso <em>merece</em> / automatizarse. / Estas son las señales.</h2>
+        <p class="section-intro">Antes de automatizar nada miramos si el proceso lo justifica. Si falla alguna de estas tres, te lo decimos en el diagnóstico y no seguimos.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// señal_01</span>
+            <span class="badge">Repetitivo</span>
+          </div>
+          <h3>Se repite <em>muchas veces</em>.</h3>
+          <p>El proceso ocurre N veces al día o a la semana, con un input estructurado o semi-estructurado y un output esperado. Cuanto más volumen, antes se paga la automatización.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// señal_02</span>
+            <span class="badge">Copiar-pegar</span>
+          </div>
+          <h3>Hay <em>trasiego manual</em>.</h3>
+          <p>Alguien copia datos de un sitio a otro, rellena la misma plantilla o reenvía lo mismo cada día. Es trabajo sin criterio que cansa, falla y no aporta valor.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// señal_03</span>
+            <span class="badge">Coste medible</span>
+          </div>
+          <h3>Sabes qué <em>cuesta hoy</em>.</h3>
+          <p>Horas-persona, tiempo de respuesta, errores. Si podemos poner un número al coste actual, podemos demostrar el ahorro después. Sin línea base no hay ROI.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0;">
+    <div class="container" style="padding: 0;">
+      <div class="stats" data-stagger>
+        <div class="stat">
+          <div class="stat-num"><em>1</em></div>
+          <div class="stat-label">Proceso por proyecto</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">90</div>
+          <div class="stat-label">Días de revisión de ROI</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><em>4</em></div>
+          <div class="stat-label">Familias de procesos</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">24<em>h</em></div>
+          <div class="stat-label">Respuesta a tu consulta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">04 — Contratación</div>
+        <h2 class="section-title">Para empresas, <em>entidades</em> y AAPP.</h2>
+        <!-- Precio confirmado: precio del estudio (sprint simple), proyectos desde 2.500€. AAPP por licitación. -->
+        <p class="section-intro">Cada automatización se cotiza por alcance tras un diagnóstico corto: no hay dos procesos iguales. Escríbeme contándome qué tarea te quita más horas y te paso una propuesta acotada. <strong>Proyectos desde 2.500€</strong>; <strong>el alcance define el presupuesto final</strong>. El diagnóstico previo es corto y sin compromiso de implantación.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segmento_01</span>
+            <span class="badge">Empresas</span>
+          </div>
+          <h3>Para tu <em>operativa</em>.</h3>
+          <p>Automatización de un proceso real de tu día a día, integrada con las herramientas que ya usáis. Diagnóstico, implantación y medición de ROI.</p>
+          <div class="price">
+            <div class="price-label">proyectos desde</div>
+            <div class="price-num">2.500€</div>
+            <div class="price-label">el alcance define el presupuesto · IVA aparte</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segmento_02</span>
+            <span class="badge">Entidades</span>
+          </div>
+          <h3>Para <em>entidades</em>.</h3>
+          <p>Asociaciones, fundaciones, colegios profesionales o cooperativas. Automatizamos la gestión administrativa repetitiva para que el equipo dedique horas a lo que importa.</p>
+          <div class="price">
+            <div class="price-label">proyectos desde</div>
+            <div class="price-num">2.500€</div>
+            <div class="price-label">el alcance define el presupuesto · IVA aparte</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segmento_03</span>
+            <span class="badge">AAPP</span>
+          </div>
+          <h3>Para <em>administraciones</em>.</h3>
+          <p>Contratación menor o negociado. Automatización de procesos administrativos con trazabilidad, documentación y memoria justificativa incluidas.</p>
+          <div class="price">
+            <div class="price-num">Consultar</div>
+            <div class="price-label">por licitación</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="cta-final">
+    <div class="container">
+      <div data-reveal>
+        <h2>¿Qué proceso te quita más <em>horas</em><span class="cursor-blink"></span></h2>
+        <p>Cuéntame qué tarea repetitiva se come el tiempo de tu equipo y respondemos en menos de 24h con una propuesta de diagnóstico acotado: corto, sin compromiso de implantación. Si tras el diagnóstico no hay caso, lo decimos. Si buscas formar a tu equipo en lugar de externalizar, mira la <a href="/ia-aplicada/">formación en IA aplicada</a>.</p>
+        <a href="/contacto/" class="btn-primary" style="font-size: 15px; padding: 18px 32px;">
+          Pedir diagnóstico
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- @region partials/footer-es.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formación e implantación de IA aplicada, Power BI y desarrollo a medida. Operado por una SL catalana con foco en pymes y administración pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+        <a href="/curso-power-bi-empresas/">Curso Power BI empresas</a>
+        <a href="/curso-chatgpt-empresas/">Curso ChatGPT empresas</a>
+        <a href="/automatizacion-procesos-ia/">Automatización de procesos IA</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/blog/">Blog</a>
+        <a href="/sobre-mike/">Sobre Mike</a>
+        <a href="/contacto/">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/politica-privacidad/">Privacidad</a>
+        <a href="/politica-cookies/">Cookies</a>
+        <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Cataluña</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

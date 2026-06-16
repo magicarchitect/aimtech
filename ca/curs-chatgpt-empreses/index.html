@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Curs de ChatGPT per a empreses — IA pràctica per al teu equip | Aimtech</title>
+<meta name="description" content="Curs de ChatGPT per a empreses: prompting pràctic, casos per departament i ús segur (AI Act). Per a equips que ja fan servir ChatGPT o Copilot i en volen treure partit de debò." />
+
+<link rel="canonical" href="https://www.aimtech.es/ca/curs-chatgpt-empreses/" />
+
+<!-- hreflang: variants d'idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/curso-chatgpt-empresas/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/curs-chatgpt-empreses/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/curso-chatgpt-empresas/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="../../assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="../../assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="../../assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ca_ES" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Curs de ChatGPT per a empreses — IA pràctica per al teu equip | Aimtech" />
+<meta property="og:description" content="Prompting pràctic, casos per departament i ús segur (AI Act). Per a equips que ja fan servir ChatGPT o Copilot i en volen treure partit de debò. Online o presencial." />
+<meta property="og:url" content="https://www.aimtech.es/ca/curs-chatgpt-empreses/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/ia-aplicada.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Curs de ChatGPT per a empreses — IA pràctica per al teu equip — Aimtech" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Curs de ChatGPT per a empreses — IA pràctica per al teu equip | Aimtech" />
+<meta name="twitter:description" content="Prompting pràctic, casos per departament i ús segur (AI Act). Per a equips que ja fan servir ChatGPT o Copilot. Online o presencial." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/ia-aplicada.png" />
+
+<!-- JSON-LD: Course + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://www.aimtech.es/#aimtech",
+    "name": "Aimtech",
+    "legalName": "Aimtech Consulting SL",
+    "url": "https://www.aimtech.es",
+    "logo": "https://www.aimtech.es/assets/logo.png?v=2",
+    "founder": {
+      "@type": "Person",
+      "name": "Miguel Pérez",
+      "alternateName": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "Espanya" },
+      { "@type": "AdministrativeArea", "name": "Catalunya" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Catalunya",
+      "addressCountry": "ES"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hola@aimtech.es",
+      "contactType": "customer service",
+      "areaServed": "ES",
+      "availableLanguage": ["ca", "es"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Curs de ChatGPT per a empreses",
+    "timeRequired": "PT12H",
+    "offers": {
+      "@type": "Offer",
+      "category": "In-company · per grup",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "minPrice": 2500,
+        "priceCurrency": "EUR",
+        "valueAddedTaxIncluded": false
+      },
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.aimtech.es/ca/curs-chatgpt-empreses/#preus"
+    },
+    "description": "Curs pràctic de ChatGPT (i Copilot/Gemini) per a empreses, entitats i administracions públiques. Prompting efectiu, casos d'ús per departament, treball amb documents i dades propis, i ús segur alineat amb l'AI Act. Online o presencial, en grups tancats. Per a equips que ja fan servir IA generativa i en volen treure partit amb mètode i criteri.",
+    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "url": "https://www.aimtech.es/ca/curs-chatgpt-empreses/#programa",
+    "inLanguage": "ca",
+    "courseMode": ["Online", "Onsite"],
+    "hasCourseInstance": [
+      { "@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT12H" },
+      { "@type": "CourseInstance", "courseMode": "Onsite", "courseWorkload": "PT12H" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Formació en IA aplicada", "item": "https://www.aimtech.es/ca/ia-aplicada/" },
+      { "@type": "ListItem", "position": 3, "name": "Curs de ChatGPT per a empreses", "item": "https://www.aimtech.es/ca/curs-chatgpt-empreses/" }
+    ]
+  }
+]
+</script>
+
+<!-- Preload: fuente serif del hero (LCP) -->
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/tokens.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+<link rel="stylesheet" href="../../css/base.css">
+<link rel="stylesheet" href="../../css/components.css">
+<link rel="stylesheet" href="../../css/layout.css">
+<link rel="stylesheet" href="../../css/ia-aplicada.css">
+<link rel="stylesheet" href="../../css/landing.css">
+<link rel="stylesheet" href="../../css/cookie-consent.css">
+<script src="../../js/cookie-consent.js" defer></script>
+<script src="../../js/site.js" defer></script>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav>
+  <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu" id="nav-serveis-menu">
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+    </div>
+    <a href="/ca/blog/">Blog</a>
+    <a href="/ca/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/curso-chatgpt-empresas/">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/curs-chatgpt-empreses/" class="active">CA</a>
+    </div>
+    <a href="/ca/contacte/" class="nav-cta">Parlem-ne →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-content">
+          <div class="hero-meta">
+            <span class="dot"></span>
+            <span>Curs pràctic · 12h</span>
+            <span class="sep">/</span>
+            <span>Online o presencial · B2B</span>
+            <span class="sep">/</span>
+            <span id="clock">--:--:--</span>
+          </div>
+
+          <h1>
+            <span class="reveal r1">Curs de ChatGPT</span>
+            <span class="reveal r2"><em class="italic">per a empreses</em>.</span><br>
+            <span class="reveal r3">El teu equip ja el fa servir.</span>
+            <span class="reveal r4">Ensenya'l a fer-lo servir bé.</span>
+          </h1>
+
+          <p class="hero-sub">
+            Formació pràctica en <strong>ChatGPT, Copilot i Gemini</strong> per a <strong>empreses, entitats i AAPP</strong>. Prompting que funciona, <strong>casos per departament</strong> (administració, vendes, RRHH, direcció) i <strong>ús segur alineat amb l'AI Act</strong>. Per a equips que ja toquen IA però la fan servir com un cercador car. Aprens fent, amb exemples de feina reals: correus, propostes, informes.
+          </p>
+
+          <div class="hero-cta">
+            <a href="/ca/contacte/" class="btn-primary">
+              Demanar proposta
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="#programa" class="btn-ghost">Veure programa</a>
+          </div>
+        </div>
+
+        <div class="lstage lchat" aria-hidden="true">
+          <svg viewBox="0 0 560 560" role="img" aria-label="Interfície de xat amb ChatGPT">
+
+            <!-- Finestra de xat -->
+            <rect class="l-panel" x="70" y="70" width="420" height="420" rx="18"/>
+
+            <!-- Barra de títol -->
+            <circle class="l-dot" cx="98" cy="100" r="4"/>
+            <circle class="l-dot" cx="112" cy="100" r="4"/>
+            <circle class="l-dot" cx="126" cy="100" r="4"/>
+            <text class="l-title" x="152" y="104">chat · gpt</text>
+            <circle class="l-pulse" cx="462" cy="100" r="5"/>
+            <line x1="70" y1="124" x2="490" y2="124" stroke="#2a3344" stroke-width="1"/>
+
+            <!-- Bombolla de l'usuari (dreta) -->
+            <g class="l-bubble l-bubble--u">
+              <rect class="l-bub-u" x="238" y="150" width="214" height="46" rx="13"/>
+              <text class="l-bub-txt l-bub-txt--u" x="345" y="178" text-anchor="middle">resumeix aquest informe</text>
+            </g>
+
+            <!-- Bombolla de ChatGPT (esquerra) amb resposta que s'escriu -->
+            <g class="l-bubble l-bubble--a">
+              <rect class="l-bub-a" x="92" y="216" width="266" height="120" rx="13"/>
+              <circle cx="112" cy="240" r="4" fill="#2580e3"/>
+              <text class="l-bub-txt" x="126" y="244">chatgpt</text>
+              <rect class="l-stream" x="112" y="262" width="222" height="8" rx="4"/>
+              <rect class="l-stream" x="112" y="284" width="186" height="8" rx="4"/>
+              <rect class="l-stream" x="112" y="306" width="134" height="8" rx="4"/>
+            </g>
+
+            <text class="l-sub" x="92" y="372">resposta en 0,8 s · amb fonts</text>
+
+            <!-- Barra d'input amb caret -->
+            <rect class="l-input" x="92" y="430" width="338" height="42" rx="12"/>
+            <rect class="l-caret" x="112" y="442" width="2" height="18"/>
+            <text class="l-ph" x="122" y="456">escriu un prompt…</text>
+            <rect x="440" y="439" width="26" height="26" rx="8" fill="#2580e3"/>
+            <path d="M 447 452 H 459 M 455 448 L 459 452 L 455 456" stroke="#0a0e14" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+          </svg>
+
+          <span class="ltag ltag--accent" style="top:11%; left:-2%;">// prompt</span>
+          <span class="ltag" style="bottom:16%; right:-3%;">ús segur · AI Act</span>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="tag">CHATGPT</span>
+      <span>Copilot</span> <span>·</span>
+      <span>Gemini</span> <span>·</span>
+      <span>Prompting</span> <span>·</span>
+      <span>Casos per departament</span> <span>·</span>
+      <span>AI Act</span> <span>·</span>
+      <span>Ús segur</span> <span>·</span>
+      <span>Administració</span> <span>·</span>
+      <span>Vendes</span> <span>·</span>
+      <span>RRHH</span> <span>·</span>
+      <span>Direcció</span> <span>·</span>
+      <span>Online</span> <span>·</span>
+      <span>Presencial</span> <span>·</span>
+      <span class="tag">CHATGPT</span>
+      <span>Copilot</span> <span>·</span>
+      <span>Gemini</span> <span>·</span>
+      <span>Prompting</span> <span>·</span>
+      <span>AI Act</span> <span>·</span>
+      <span>Casos per departament</span> <span>·</span>
+    </div>
+  </div>
+
+  <section id="per-a-qui">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">01 — Per a qui</div>
+        <h2 class="section-title">Si el teu equip ja fa servir ChatGPT <em>a la seva</em> / i vols que el faci servir / amb mètode i sense riscos.</h2>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// perfil_01</span>
+            <span class="badge">Equips no tècnics</span>
+          </div>
+          <h3>El feu servir <em>com un cercador</em>.</h3>
+          <p>Administració, vendes, màrqueting, RRHH, atenció al client. Ja enganxeu coses a ChatGPT, però els resultats són irregulars. Falta mètode: el mateix prompt ben fet canvia el resultat per complet.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// perfil_02</span>
+            <span class="badge">Microsoft 365</span>
+          </div>
+          <h3>Pagueu <em>Copilot</em> i no llueix.</h3>
+          <p>Teniu llicències de Copilot o ChatGPT d'empresa però ningú les exprimeix. Sense casos d'ús per rol, la inversió es queda en novetat. Aquí sortim amb casos reals per departament.</p>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// perfil_03</span>
+            <span class="badge">Direcció</span>
+          </div>
+          <h3>Et preocupa <em>l'AI Act</em>.</h3>
+          <p>La teva gent fa servir IA amb dades de l'empresa i no hi ha regles. L'AI Act ja obliga a alfabetització en IA. Sortim amb una política d'ús interna i un checklist de riscos, no només amb bones intencions.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="metodologia">
+    <div class="container">
+      <div class="method">
+        <div data-reveal="left">
+          <div class="section-label">02 — Metodologia</div>
+          <h2 class="section-title">Concepte, <em>repte</em>, resultat que fas servir demà.</h2>
+          <p class="section-intro">Res de cinc hores de teoria. Cada bloc comença amb un concepte curt, va seguit d'un repte que resols tu amb una tasca real teva (un correu, una proposta, un informe), i acaba amb la solució comentada en directe. T'emportes plantilles de prompts llestes per reutilitzar. Per situar conceptes, ajuda <a href="/ca/blog/que-es-la-ia-aplicada/">què és la IA aplicada</a> i <a href="/ca/blog/prompt-engineering-empreses/">prompt engineering per a empreses</a>.</p>
+        </div>
+
+        <div class="method-list" data-stagger>
+          <div class="step">
+            <span class="step-num">01</span>
+            <span class="step-title">Concepte breu. 15 min, directe al que es fa servir.</span>
+            <span class="step-arrow">→</span>
+          </div>
+          <div class="step">
+            <span class="step-num">02</span>
+            <span class="step-title">Repte pràctic. Un correu, una proposta, un informe d'exemple.</span>
+            <span class="step-arrow">→</span>
+          </div>
+          <div class="step">
+            <span class="step-num">03</span>
+            <span class="step-title">Solució comentada. Per què un prompt funciona i un altre no.</span>
+            <span class="step-arrow">→</span>
+          </div>
+          <div class="step">
+            <span class="step-num">04</span>
+            <span class="step-title">Plantilla reutilitzable. T'emportes el prompt desat.</span>
+            <span class="step-arrow">→</span>
+          </div>
+          <div class="step">
+            <span class="step-num">05</span>
+            <span class="step-title">Q&amp;A en viu. Dubtes amb el professor durant la sessió.</span>
+            <span class="step-arrow">→</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programa">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">03 — Programa</div>
+        <h2 class="section-title">Sis mòduls, <em>12h</em>. / De fer-lo servir a la seva / a fer-lo servir amb criteri.</h2>
+        <p class="section-intro">Un itinerari de 12h, online o presencial, en grups tancats. El mòdul 3 cobreix els departaments més habituals (administració, vendes, RRHH i direcció). Si després voleu anar més enllà de l'eina i <strong>orquestrar agents IA</strong> als vostres processos, aquest itinerari és <a href="/ca/ia-aplicada/">formació en IA aplicada</a>.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-3" data-mouse>
+          <div class="card-num">
+            <span>// programa</span>
+            <span class="badge">12h · 6 mòduls</span>
+          </div>
+          <h3>ChatGPT <em>per a la feina real</em>.</h3>
+          <p>Parteixes de fer servir ChatGPT a estones i sense mètode. Surts amb una biblioteca de prompts de l'equip, casos per departament i unes regles clares d'ús segur. Exemples de negoci reals, no de joguina.</p>
+          <div class="modules">
+            <div><span class="module-num">01</span>Fonaments sense fum: què és (i què no) ChatGPT, Copilot i Gemini; límits i al·lucinacions</div>
+            <div><span class="module-num">02</span>Prompting que funciona: rol, context, objectiu i exemples; iteració i plantilles</div>
+            <div><span class="module-num">03</span>Casos per departament: administració, vendes i màrqueting, RRHH i direcció</div>
+            <div><span class="module-num">04</span>ChatGPT amb els teus documents i dades: fitxers, PDFs i fulls; esborranys sobre material propi</div>
+            <div><span class="module-num">05</span>Ús segur i AI Act: confidencialitat, dades, propietat intel·lectual i política d'ús interna</div>
+            <div><span class="module-num">06</span>De l'eina a l'hàbit: biblioteca de prompts, mesurar hores estalviades i següent pas</div>
+          </div>
+          <div class="card-meta">
+            <span class="chip">Prompting</span>
+            <span class="chip">Casos per rol</span>
+            <span class="chip">Documents i dades</span>
+            <span class="chip">AI Act</span>
+            <span class="chip">Plantilles</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 0;">
+    <div class="container" style="padding: 0;">
+      <div class="stats" data-stagger>
+        <div class="stat">
+          <div class="stat-num"><em>12</em>h</div>
+          <div class="stat-label">Curs pràctic</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">6</div>
+          <div class="stat-label">Mòduls</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><em>4</em></div>
+          <div class="stat-label">Departaments coberts</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">AI<em>Act</em></div>
+          <div class="stat-label">Ús segur inclòs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preus">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">04 — Contractació</div>
+        <h2 class="section-title">Per a empreses, <em>entitats</em> i AAPP.</h2>
+        <p class="section-intro">Curs in-company, online o presencial, en grups tancats. Escriu-me indicant perfil del grup, departaments a cobrir i format preferit, i et passo disponibilitat i proposta econòmica. La formació parteix de <strong>2.500€ per grup</strong>, IVA a part. Per comparar opcions i entendre què ha d'incloure una formació d'IA, mira <a href="/ca/blog/quant-costa-formacio-ia-empreses/">quant costa formar el teu equip en IA</a> i <a href="/ca/blog/formacio-ia-equips-no-tecnics/">com formar en IA equips no tècnics</a>.</p>
+      </div>
+
+      <div class="bento" data-stagger>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segment_01</span>
+            <span class="badge">Empreses</span>
+          </div>
+          <h3>Per al teu <em>equip</em>.</h3>
+          <p>Casos dels departaments més habituals i de les eines més usades (ChatGPT, Copilot o Gemini). Online o presencial, agenda segons el grup.</p>
+          <div class="price">
+            <div class="price-label">des de</div>
+            <div class="price-num">2.500€</div>
+            <div class="price-label">per grup · 12h · IVA a part</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segment_02</span>
+            <span class="badge">Entitats</span>
+          </div>
+          <h3>Per a <em>entitats</em>.</h3>
+          <p>Associacions, fundacions, col·legis professionals o cooperatives. Mateixa formació, adaptada al perfil del col·lectiu i a la seva càrrega administrativa.</p>
+          <div class="price">
+            <div class="price-label">des de</div>
+            <div class="price-num">2.500€</div>
+            <div class="price-label">per grup · 12h · IVA a part</div>
+          </div>
+        </article>
+
+        <article class="card s-2" data-mouse>
+          <div class="card-num">
+            <span>// segment_03</span>
+            <span class="badge">AAPP</span>
+          </div>
+          <h3>Per a <em>administracions</em>.</h3>
+          <p>Contracte menor o negociat. Online o presencial. Documentació, certificació i memòria justificativa incloses.</p>
+          <div class="price">
+            <div class="price-num">Consultar</div>
+            <div class="price-label">per licitació</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contacte" class="cta-final">
+    <div class="container">
+      <div data-reveal>
+        <h2>Formem el teu <em>equip</em><span class="cursor-blink"></span></h2>
+        <p>Escriu-me explicant-me quina organització representes (empresa, entitat o AAPP), quins departaments vols formar, format preferit (online o presencial) i quantes persones seríeu. Responc en menys de 24h amb disponibilitat i proposta econòmica.</p>
+        <a href="/ca/contacte/" class="btn-primary" style="font-size: 15px; padding: 18px 32px;">
+          Sol·licitar proposta
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- @region partials/footer-ca.html -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">aim<tspan class="brand-highlight">tech</tspan></text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">CONSULTING</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formació i implantació d'IA aplicada, Power BI i desenvolupament a mida. Operada per una SL catalana amb focus en pimes i administració pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Serveis</h3>
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/ia-agentica/">IA Agèntica</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+        <a href="/ca/curs-power-bi-empreses/">Curs Power BI empreses</a>
+        <a href="/ca/curs-chatgpt-empreses/">Curs ChatGPT empreses</a>
+        <a href="/ca/automatitzacio-processos-ia/">Automatització de processos IA</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/ca/blog/">Blog</a>
+        <a href="/ca/sobre-mike/">Sobre Mike</a>
+        <a href="/ca/contacte/">Contacte</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/ca/avis-legal/">Avís legal</a>
+        <a href="/ca/politica-privacitat/">Privacitat</a>
+        <a href="/ca/politica-galetes/">Galetes</a>
+        <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>

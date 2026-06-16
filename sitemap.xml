@@ -202,13 +202,74 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Landing pages comerciales -->
+  <url>
+    <loc>https://www.aimtech.es/curso-power-bi-empresas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/curso-power-bi-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/curs-power-bi-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/curso-power-bi-empresas/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/curs-power-bi-empreses/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/curso-power-bi-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/curs-power-bi-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/curso-power-bi-empresas/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/curso-chatgpt-empresas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/curso-chatgpt-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/curs-chatgpt-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/curso-chatgpt-empresas/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/curs-chatgpt-empreses/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/curso-chatgpt-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/curs-chatgpt-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/curso-chatgpt-empresas/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/automatizacion-procesos-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/automatizacion-procesos-ia/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/automatitzacio-processos-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/automatizacion-procesos-ia/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/automatitzacio-processos-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/automatizacion-procesos-ia/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/automatitzacio-processos-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/automatizacion-procesos-ia/"/>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- BLOG-AUTO-START -->
   <url>
     <loc>https://www.aimtech.es/blog/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/"/>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -217,7 +278,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/"/>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
