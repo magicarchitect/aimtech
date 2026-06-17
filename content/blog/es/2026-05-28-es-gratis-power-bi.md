@@ -103,7 +103,7 @@ Aquí está la parte anti-humo: **la licencia suele ser lo más barato de un pro
 
 Por eso la inversión que más rinde no es la licencia, sino aprender a usar la herramienta de forma que el resultado sea fiable. Si quieres que tu equipo arranque bien desde el principio, en Aimtech damos [formación en Power BI a medida para empresas, entidades y AAPP](/power-bi/) —presencial en Barcelona, en remoto en directo o in-company—, desde cero o subiendo de nivel.
 
-Si ya tienes equipo y quieres convertir Power BI en una práctica interna, mira el [curso de Power BI para empresas](/curso-power-bi-empresas/). Si buscas formación presencial local, también tenemos una página específica de [curso Power BI en Barcelona](/curso-power-bi-barcelona/). Empezar a practicar, en todo caso, no te cuesta nada: descarga Desktop y abre tu primer dataset.
+Si ya tienes equipo y quieres convertir Power BI en una práctica interna, mira la [formación Power BI para empresas y pymes](/curso-power-bi-empresas/). Si buscas formación presencial local, también tenemos una página específica de [formación Power BI en Barcelona](/curso-power-bi-barcelona/). Empezar a practicar, en todo caso, no te cuesta nada: descarga Desktop y abre tu primer dataset.
 
 ## Preguntas frecuentes sobre Power BI gratis
 

@@ -59,7 +59,7 @@ Cada módulo cierra con un proyecto práctico.
  informac.  técnico     comparativa   sectorial      conversión
    │           │            │             │               │
  todos enlazan SIEMPRE de vuelta al pillar con anchor
- "formación Power BI" / "curso Power BI a medida"
+ "formación Power BI" / "formación Power BI a medida"
 ```
 
 **Regla de enlazado interno:**
@@ -72,7 +72,7 @@ Cada módulo cierra con un proyecto práctico.
 ## 3. El PILLAR — /power-bi (reescritura/refuerzo)
 
 **Keyword transaccional principal**: "formación Power BI empresas",
-"curso Power BI" + variantes geo (Barcelona / Cataluña / remoto / online).
+"formación Power BI" + variantes geo/B2B (Barcelona / empresas / pymes / in-company / online en directo).
 
 **Intención**: transaccional / comercial. Esta página NO enseña; vende y convierte.
 
@@ -144,7 +144,7 @@ Cada módulo cierra con un proyecto práctico.
 **C8. "n8n vs Make vs Zapier para automatizar tu empresa"**
 - (Ya estaba en backlog; enlaza formación ↔ IA agéntica, cross-sell)
 
-**C9. "Cursos de Power BI en Barcelona: cómo elegir (presencial, online, in-company)"**
+**C9. "Formación Power BI en Barcelona: cómo elegir para tu empresa"**
 - KW: "cursos power bi barcelona", "curso power bi presencial barcelona"
 - Intención: COMERCIAL — capta la búsqueda geo y la dirige al pillar
 - Ángulo: guía honesta de cómo elegir; posiciona a Aimtech como opción a medida
