@@ -63,4 +63,4 @@ Es **práctica aplicada a las tareas reales de cada puesto**: traer los casos qu
 
 Dar la formación y no cambiar nada al día siguiente. Sin tiempo para practicar, sin plantillas compartidas y sin un responsable que mantenga el hábito, la gente vuelve a lo de antes en dos semanas. La formación abre la puerta; el seguimiento es lo que hace que se quede.
 
-Si quieres formar a tu equipo —el no técnico, el que de verdad mueve la aguja—, en Aimtech damos [formación en IA aplicada para empresas, entidades y AAPP](/ia-aplicada/) en grupos cerrados, presencial en Barcelona, en remoto en directo o in-company, adaptada a las tareas reales de cada puesto.
+Si quieres formar a tu equipo —el no técnico, el que de verdad mueve la aguja—, en Aimtech damos [formación en IA para empresas y pymes](/formacion-ia-empresas/) en grupos cerrados, presencial en Barcelona, en remoto en directo o in-company, adaptada a las tareas reales de cada puesto.
