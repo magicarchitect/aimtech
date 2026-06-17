@@ -137,11 +137,11 @@ universitaria acreditada + Power BI como puerta de entrada.
 - Secundarias: "agentes IA para empresas", "implantación IA pymes"
 
 **/power-bi**
-- Primaria: "curso Power BI empresas", "formación Power BI in-company",
-  "curso Power BI presencial Barcelona"
-- Secundarias: "curso Power BI administración pública", "formación Power BI
-  entidades", "curso Power BI avanzado empresas", "curso DAX modelado empresas"
-- Long-tail baja competencia: "curso Power BI catalán", "formación Power BI
+- Primaria: "formación Power BI empresas", "formación Power BI pymes",
+  "formación Power BI Barcelona", "formación Power BI in-company"
+- Secundarias: "curso Power BI empresas" (solo como variante SEO), "formación Power BI
+  entidades", "formación Power BI avanzado empresas", "DAX modelado empresas"
+- Long-tail baja competencia: "formación Power BI catalán", "formación Power BI
   a medida sector público", "itinerario Power BI cero a avanzado empresas"
 
 **/ia-aplicada**
@@ -202,6 +202,8 @@ Referencia de lo que debe haber por página. ☑ = ya implementado.
   presentes). Email visible (ya está).
 
 ### GEO — optimización para búsqueda con IA (ChatGPT, Perplexity, AI Overviews)
+Convención editorial: Preferir “formación” sobre “curso” en Power BI/IA para empresas y pymes. “Curso” queda como variante secundaria SEO; el posicionamiento principal debe comunicar sesiones en directo con profesor, no vídeos grabados.
+
 Objetivo: ser citado por asistentes IA en consultas de formación Power BI /
 consultoría IA en Cataluña-España. El contenido actual ya es muy "citable"
 (definiciones claras, listas, datos). Acciones:

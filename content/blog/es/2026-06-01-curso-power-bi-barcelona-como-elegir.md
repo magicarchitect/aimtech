@@ -1,7 +1,8 @@
 ---
-title: "Cursos de Power BI en Barcelona: cómo elegir (presencial, online o in-company)"
-description: "Hay mucho curso de Power BI en Barcelona y no todos sirven para lo mismo. Te damos los criterios para elegir bien según tu equipo, sin caer en el más barato."
+title: "Formación Power BI en Barcelona: cómo elegir para tu empresa"
+description: "Cómo elegir formación Power BI en Barcelona para empresas y pymes: directo con profesor, in-company, presencial u online, sin caer en vídeos genéricos."
 date: 2026-06-01
+modified: 2026-06-17
 author: "Mike Pérez"
 tags: ["power-bi", "formacion"]
 icon: "doc"
@@ -10,14 +11,14 @@ slug: "curso-power-bi-barcelona-como-elegir"
 translationKey: "curso-power-bi-barcelona-como-elegir"
 ---
 
-Busca "curso de Power BI en Barcelona" y te saldrán decenas: cámaras de comercio, academias, plataformas online, escuelas de negocio. Todos prometen lo mismo y los precios bailan de los 200 € a los 800 € y más. ¿Cómo eliges sin guiarte solo por el precio —que casi nunca es buen consejero en formación—? Estos son los criterios que de verdad importan.
+Busca "formación Power BI Barcelona" o "curso de Power BI en Barcelona" y verás de todo: academias, plataformas online, escuelas de negocio, vídeos a tu ritmo y convocatorias abiertas. Para una empresa o una pyme, la pregunta importante no es solo el precio: es si tu equipo va a salir sabiendo aplicar Power BI a sus datos reales. Estos son los criterios que de verdad importan.
 
-## Primero: ¿curso abierto o in-company?
+## Primero: ¿formación abierta o in-company?
 
 Es la decisión de fondo, antes que el temario:
 
-- **Curso abierto** (te apuntas a una convocatoria con gente de otras empresas): más barato por persona, fechas fijas, contenido genérico. Bien para una o dos personas sueltas que quieren una base.
-- **In-company / a medida** (solo para tu equipo): se construye sobre **vuestros datos y vuestro sector**, fechas a vuestra conveniencia, y todos salen sabiendo aplicarlo a lo que hacéis de verdad. Sale a cuenta a partir de un grupo pequeño y el retorno es muy superior porque no se pierde en ejemplos que no os tocan.
+- **Formación abierta** (te apuntas a una convocatoria con gente de otras empresas): más barata por persona, fechas fijas, contenido genérico. Bien para una o dos personas sueltas que quieren una base.
+- **Formación in-company / a medida** (solo para tu equipo): se construye sobre **vuestros datos y vuestro sector**, fechas a vuestra conveniencia, y todos salen sabiendo aplicarlo a lo que hacéis de verdad. Sale a cuenta a partir de un grupo pequeño y el retorno es muy superior porque no se pierde en ejemplos que no os tocan.
 
 Si vais varios del mismo equipo, casi siempre gana el in-company.
 
@@ -46,22 +47,28 @@ Si vais varios del mismo equipo, casi siempre gana el in-company.
 <figcaption>Para una o dos personas, el <b>curso abierto</b> basta; si formáis a un equipo, el <b>in-company</b> —sobre vuestros datos— casi siempre rinde más.</figcaption>
 </figure>
 
-## Presencial, online en directo o grabado
+## Presencial, online en directo o grabado: no es lo mismo
 
 - **Presencial** (en Barcelona y área): máxima concentración y dinámica de grupo. Ideal para arrancar de cero.
 - **Online en directo**: misma clase en vivo, sin desplazamientos, válido para equipos repartidos por España. La clave es que sea **en directo**, con profesor que responde, no un vídeo.
-- **Grabado / a tu ritmo**: el más barato y el de peor finalización. Sirve de repaso, no para aprender de cero un equipo entero.
+- **Grabado / a tu ritmo**: el más barato y el de peor finalización. Sirve de repaso, pero no para transformar cómo trabaja un equipo entero.
 
-## Los criterios que separan lo bueno de lo caro
+## Los criterios que separan la buena formación de lo barato
 
-- **Temario real y honesto.** Que distinga de verdad un nivel inicial de uno avanzado. Mucho "curso completo" mete DAX avanzado y gobierno del Service en un supuesto nivel básico, y el alumno se ahoga.
+- **Temario real y honesto.** Que distinga de verdad un nivel inicial de uno avanzado. Mucha "formación completa" mete DAX avanzado y gobierno del Service en un supuesto nivel básico, y el alumno se ahoga.
 - **Práctica de verdad.** Que aprendas **haciendo** —resolviendo retos con datasets— y no mirando una pantalla cinco horas.
 - **Grupos reducidos.** Veinte personas es el límite razonable para que el profesor llegue a todos.
 - **Quién imparte.** Que la clase la dé alguien que **usa Power BI en proyectos reales**, no un formador que repite un guion. La diferencia se nota en la primera duda difícil.
 - **Que cubra el orden correcto.** Primero [Power Query y modelado](/blog/modelado-datos-power-bi-esquema-estrella/), luego [DAX](/blog/dax-medidas-vs-columnas-calculadas/). Quien te vende DAX antes que el modelo, no lo ha enseñado nunca bien.
 
-## Y antes de decidir nada
+## Preguntas que una empresa debería hacer antes de decidir
+
+- ¿La formación se adapta al nivel real del equipo o todos siguen el mismo temario?
+- ¿Podemos trabajar con ejemplos parecidos a nuestras ventas, finanzas, operaciones o reporting interno?
+- ¿Hay profesor en directo para resolver dudas o solo vídeos?
+- ¿La formación cubre Power Query, modelado y DAX en el orden correcto?
+- ¿Nos ayudan a entender cómo publicar, compartir y gobernar informes en Power BI Service?
 
 Si todavía estás valorando si Power BI es lo que tu equipo necesita, empieza por [qué es Power BI](/blog/que-es-power-bi/) y por [cuándo dar el salto desde Excel](/blog/power-bi-vs-excel/). Y sobre el coste de licencias, [aquí lo aclaramos](/blog/es-gratis-power-bi/).
 
-En Aimtech damos [formación en Power BI a medida](/power-bi/) —presencial en Barcelona, en remoto en directo para toda España o in-company en vuestras oficinas—, en dos itinerarios de 20h (de cero a intermedio y avanzado), para empresas, entidades y AAPP. La imparte Mike Pérez, ingeniero de soluciones de IA y docente universitario: la misma persona que diseña el temario es la que da la clase.
+En Aimtech damos [formación Power BI para empresas y pymes](/power-bi/) —presencial en Barcelona, en remoto en directo para toda España o in-company en vuestras oficinas—, en dos itinerarios de 20h (de cero a intermedio y avanzado), para empresas, entidades y AAPP. Si tu equipo está en Barcelona o área metropolitana, puedes ver la modalidad local de [formación Power BI en Barcelona](/curso-power-bi-barcelona/). La imparte Mike Pérez, ingeniero de soluciones de IA y docente universitario: la misma persona que diseña el temario es la que da la clase.
