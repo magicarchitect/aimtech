@@ -1,7 +1,8 @@
 ---
-title: "¿Es gratis Power BI? Desktop, Pro y lo que de verdad cuesta"
-description: "¿Es gratis Power BI? Sí y no. Te explicamos qué es gratis, qué se paga y qué licencia necesitas según tu caso, sin marearte con la letra pequeña."
+title: "Power BI gratis: qué incluye Desktop y cuándo pagar Pro"
+description: "Power BI Desktop es gratis, pero compartir informes y automatizar actualizaciones suele requerir Pro. Guía clara de licencias Power BI para empresas."
 date: 2026-05-28
+modified: 2026-06-17
 author: "Mike Pérez"
 tags: ["power-bi", "licencias"]
 icon: "price"
@@ -17,6 +18,12 @@ translationKey: "es-gratis-power-bi"
 **Power BI Desktop**, la aplicación con la que construyes los informes, **es gratuita**. Te la descargas, conectas tus datos, los limpias con Power Query, los modelas, montas tus gráficos y guardas el archivo `.pbix`. Todo eso, sin pagar nada y sin límite de tiempo.
 
 Es decir: para *aprender*, *practicar* y *crear* tus primeros cuadros de mando completos, no necesitas gastar un euro. Esto sorprende a mucha gente que da por hecho que Power BI es una suscripción cara desde el minuto uno.
+
+Lo importante es separar dos preguntas que en Google suelen mezclarse:
+
+- **¿Power BI Desktop es gratis?** Sí: crear informes en local no tiene coste.
+- **¿Power BI para empresas es gratis?** Depende: cuando quieres publicar, compartir con usuarios, controlar permisos y refrescar datos automáticamente, normalmente aparece una licencia de pago.
+- **¿Power BI Pro es obligatorio?** No para aprender ni construir el `.pbix`; sí suele ser necesario cuando el informe tiene que vivir en el servicio online y usarse en equipo.
 
 ## Entonces, ¿dónde está el pago?
 
@@ -94,4 +101,53 @@ La mayoría de las pymes que arrancan se mueven entre "gratis" y "Pro". No te co
 
 Aquí está la parte anti-humo: **la licencia suele ser lo más barato de un proyecto de Power BI.** El coste de verdad es el tiempo de hacerlo bien —limpiar datos sucios, diseñar un modelo que aguante, escribir las medidas correctas— y la curva de aprendizaje del equipo. Un informe mal modelado da números que no cuadran, y eso cuesta mucho más que cualquier suscripción.
 
-Por eso la inversión que más rinde no es la licencia, sino aprender a usar la herramienta de forma que el resultado sea fiable. Si quieres que tu equipo arranque bien desde el principio, en Aimtech damos [formación en Power BI a medida para empresas, entidades y AAPP](/power-bi/) —presencial en Barcelona, en remoto en directo o in-company—, desde cero o subiendo de nivel. Empezar a practicar, en todo caso, no te cuesta nada: descarga Desktop y abre tu primer dataset.
+Por eso la inversión que más rinde no es la licencia, sino aprender a usar la herramienta de forma que el resultado sea fiable. Si quieres que tu equipo arranque bien desde el principio, en Aimtech damos [formación en Power BI a medida para empresas, entidades y AAPP](/power-bi/) —presencial en Barcelona, en remoto en directo o in-company—, desde cero o subiendo de nivel.
+
+Si ya tienes equipo y quieres convertir Power BI en una práctica interna, mira el [curso de Power BI para empresas](/curso-power-bi-empresas/). Si buscas formación presencial local, también tenemos una página específica de [curso Power BI en Barcelona](/curso-power-bi-barcelona/). Empezar a practicar, en todo caso, no te cuesta nada: descarga Desktop y abre tu primer dataset.
+
+## Preguntas frecuentes sobre Power BI gratis
+
+### ¿Power BI Desktop es gratis para empresas?
+
+Sí. Power BI Desktop puede instalarse y usarse gratis para crear informes en local. El coste suele aparecer cuando la empresa quiere publicar esos informes en Power BI Service, compartirlos con otros usuarios y automatizar actualizaciones.
+
+### ¿Puedo compartir un informe de Power BI sin pagar?
+
+Puedes compartir el archivo `.pbix` como archivo, pero no es la forma recomendable para trabajar en equipo: no hay control fino de permisos, gobierno ni actualización automática centralizada. Para compartir informes publicados en el servicio normalmente necesitarás licencias como Power BI Pro o una capacidad adecuada.
+
+### ¿Cuándo merece la pena pagar Power BI Pro?
+
+Cuando el informe deja de ser personal y pasa a ser una herramienta de equipo: varios usuarios lo consultan, hay datos que se refrescan solos, necesitas espacios de trabajo, permisos y trazabilidad. Para una pyme que empieza, Pro suele ser el primer escalón razonable.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Power BI Desktop es gratis para empresas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Power BI Desktop puede instalarse y usarse gratis para crear informes en local. El coste suele aparecer cuando la empresa quiere publicar esos informes en Power BI Service, compartirlos con otros usuarios y automatizar actualizaciones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo compartir un informe de Power BI sin pagar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puedes compartir el archivo .pbix como archivo, pero no es la forma recomendable para trabajar en equipo. Para compartir informes publicados en el servicio normalmente necesitarás licencias como Power BI Pro o una capacidad adecuada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo merece la pena pagar Power BI Pro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Power BI Pro suele merecer la pena cuando el informe deja de ser personal y pasa a ser una herramienta de equipo: varios usuarios lo consultan, hay datos que se refrescan solos y necesitas espacios de trabajo, permisos y trazabilidad."
+      }
+    }
+  ]
+}
+</script>

@@ -69,6 +69,10 @@ function readPostsForLang(lang) {
 
     const dateObj = data.date instanceof Date ? data.date : new Date(data.date);
     const dateISO = dateObj.toISOString().slice(0, 10);
+    const modifiedObj = data.modified
+      ? (data.modified instanceof Date ? data.modified : new Date(data.modified))
+      : dateObj;
+    const modifiedISO = modifiedObj.toISOString().slice(0, 10);
 
     const wordCount = content.trim().split(/\s+/).length;
     const readingTime = Math.max(1, Math.round(wordCount / 200));
@@ -91,6 +95,7 @@ function readPostsForLang(lang) {
       translationKey: data.translationKey || slug,
       dateObj,
       dateISO,
+      modifiedISO,
       dateDisplay: config.formatDate(dateObj, config.monthsLong),
       readingTime,
       htmlContent,
@@ -136,6 +141,7 @@ function renderPost(post, hreflangPair, config) {
     '{{HREFLANG_CA}}': hrefCa,
     '{{OG_IMAGE}}': post.ogImage,
     '{{DATE_ISO}}': post.dateISO,
+    '{{DATE_MODIFIED}}': post.modifiedISO,
     '{{DATE_DISPLAY}}': post.dateDisplay,
     '{{AUTHOR}}': escapeHtml(post.author),
     '{{AUTHOR_JSON}}': jsonStr(post.author),
@@ -304,7 +310,7 @@ function updateSitemap(allPosts) {
         loc: pair.es.canonicalUrl,
         hrefEs: esUrl,
         hrefCa: caUrl,
-        lastmod: pair.es.dateISO,
+        lastmod: pair.es.modifiedISO,
         changefreq: 'monthly',
         priority: '0.7',
       }));
@@ -314,7 +320,7 @@ function updateSitemap(allPosts) {
         loc: pair.ca.canonicalUrl,
         hrefEs: esUrl,
         hrefCa: caUrl,
-        lastmod: pair.ca.dateISO,
+        lastmod: pair.ca.modifiedISO,
         changefreq: 'monthly',
         priority: '0.7',
       }));
