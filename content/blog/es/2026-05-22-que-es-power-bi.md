@@ -2,6 +2,7 @@
 title: "¿Qué es Power BI y para qué sirve? Guía 2026 para empresas"
 description: "Qué es Power BI, cómo funciona por dentro y qué problemas resuelve en una empresa: del dato disperso al informe que se actualiza solo. Sin tecnicismos."
 date: 2026-05-22
+modified: 2026-06-19
 author: "Mike Pérez"
 tags: ["power-bi", "guia"]
 icon: "chart"
@@ -215,4 +216,4 @@ Si te suena lo último, probablemente tu equipo ya tocó techo con Excel —y es
 
 ## Por dónde empezar
 
-Power BI no se aprende viendo vídeos sueltos: se aprende construyendo un informe real de principio a fin, equivocándose con datos sucios y entendiendo por qué un número no cuadra. Si quieres que tu equipo lo aprenda así, en Aimtech damos [formación en Power BI a medida para empresas, entidades y AAPP](/power-bi/) —presencial en Barcelona, en remoto en directo o in-company—, partiendo de cero o subiendo de nivel a quien ya se defiende. Y si prefieres delegarlo, también montamos el cuadro de mando por ti.
+Power BI no se aprende viendo vídeos sueltos: se aprende construyendo un informe real de principio a fin, equivocándose con datos sucios y entendiendo por qué un número no cuadra. Si quieres que tu equipo lo aprenda así, en Aimtech damos [formación Power BI para empresas y pymes](/curso-power-bi-empresas/) —presencial en Barcelona, en remoto en directo o in-company—, partiendo de cero o subiendo de nivel a quien ya se defiende. Si buscas una opción local, tienes la modalidad de [formación Power BI en Barcelona](/curso-power-bi-barcelona/); y si quieres ver módulos y precios, revisa el [programa completo de Power BI](/power-bi/). Y si prefieres delegarlo, también montamos el cuadro de mando por ti.

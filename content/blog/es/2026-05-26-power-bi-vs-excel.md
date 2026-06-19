@@ -2,6 +2,7 @@
 title: "Power BI vs Excel: cuándo dar el salto (con ejemplos reales)"
 description: "Power BI vs Excel no es una guerra: son complementarios. Te contamos la diferencia de fondo y las 5 señales de que tu equipo ya tocó techo con Excel."
 date: 2026-05-26
+modified: 2026-06-19
 author: "Mike Pérez"
 tags: ["power-bi", "excel"]
 icon: "compare"
@@ -160,4 +161,4 @@ Por eso conviven: muchos flujos reales usan Excel como entrada o como destino de
 
 El error típico es intentar replicar en Power BI, celda a celda, la hoja monstruosa que ya tienes. No funciona: hay que repensar los datos como modelo, no como hoja. Por eso el salto se aprende mejor **construyendo un caso real de principio a fin** —importar datos sucios, limpiarlos, modelarlos y publicarlos— que viendo teoría.
 
-Si tu equipo está en ese punto, en Aimtech damos [formación en Power BI a medida para empresas, entidades y AAPP](/power-bi/) que parte justo de donde te quedaste con Excel: presencial en Barcelona, en remoto en directo o in-company. Y si lo que necesitas es alguien que monte el cuadro de mando por ti, también.
+Si tu equipo está en ese punto, en Aimtech damos [formación Power BI para empresas y pymes](/curso-power-bi-empresas/) que parte justo de donde te quedaste con Excel: presencial en Barcelona, en remoto en directo o in-company. Si buscas formar al equipo localmente, mira la opción de [formación Power BI en Barcelona](/curso-power-bi-barcelona/); y si quieres comparar itinerarios, temario y precios, revisa el [programa completo de Power BI](/power-bi/). Y si lo que necesitas es alguien que monte el cuadro de mando por ti, también.

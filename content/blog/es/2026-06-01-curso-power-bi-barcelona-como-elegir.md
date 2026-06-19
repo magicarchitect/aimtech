@@ -2,7 +2,7 @@
 title: "Formación Power BI en Barcelona: cómo elegir para tu empresa"
 description: "Cómo elegir formación Power BI en Barcelona para empresas y pymes: directo con profesor, in-company, presencial u online, sin caer en vídeos genéricos."
 date: 2026-06-01
-modified: 2026-06-17
+modified: 2026-06-19
 author: "Mike Pérez"
 tags: ["power-bi", "formacion"]
 icon: "doc"
@@ -71,4 +71,4 @@ Si vais varios del mismo equipo, casi siempre gana el in-company.
 
 Si todavía estás valorando si Power BI es lo que tu equipo necesita, empieza por [qué es Power BI](/blog/que-es-power-bi/) y por [cuándo dar el salto desde Excel](/blog/power-bi-vs-excel/). Y sobre el coste de licencias, [aquí lo aclaramos](/blog/es-gratis-power-bi/).
 
-En Aimtech damos [formación Power BI para empresas y pymes](/power-bi/) —presencial en Barcelona, en remoto en directo para toda España o in-company en vuestras oficinas—, en dos itinerarios de 20h (de cero a intermedio y avanzado), para empresas, entidades y AAPP. Si tu equipo está en Barcelona o área metropolitana, puedes ver la modalidad local de [formación Power BI en Barcelona](/curso-power-bi-barcelona/). La imparte Mike Pérez, ingeniero de soluciones de IA y docente universitario: la misma persona que diseña el temario es la que da la clase.
+En Aimtech damos [formación Power BI para empresas y pymes](/curso-power-bi-empresas/) —presencial en Barcelona, en remoto en directo para toda España o in-company en vuestras oficinas—, en dos itinerarios de 20h (de cero a intermedio y avanzado), para empresas, entidades y AAPP. Si tu equipo está en Barcelona o área metropolitana, puedes ver la modalidad local de [formación Power BI en Barcelona](/curso-power-bi-barcelona/). Y si quieres revisar temario, módulos y precios, tienes aquí el [programa completo de Power BI](/power-bi/). La imparte Mike Pérez, ingeniero de soluciones de IA y docente universitario: la misma persona que diseña el temario es la que da la clase.

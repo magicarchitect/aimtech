@@ -2,7 +2,7 @@
 title: "Power BI gratis: qué incluye Desktop y cuándo pagar Pro"
 description: "Power BI Desktop es gratis, pero compartir informes y automatizar actualizaciones suele requerir Pro. Guía clara de licencias Power BI para empresas."
 date: 2026-05-28
-modified: 2026-06-17
+modified: 2026-06-19
 author: "Mike Pérez"
 tags: ["power-bi", "licencias"]
 icon: "price"
