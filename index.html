@@ -37,15 +37,19 @@
 <meta name="twitter:description" content="Implantación de IA aplicada, agentes IA, formación en Power BI y desarrollo a medida para empresas, entidades y AAPP." />
 <meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
 
-<!-- JSON-LD: Organization -->
+<!-- JSON-LD: ProfessionalService / Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["ProfessionalService", "Organization"],
+  "@id": "https://www.aimtech.es/#aimtech",
   "name": "Aimtech",
   "legalName": "Aimtech Consulting SL",
+  "alternateName": "Aimtech Consulting S.L.",
   "url": "https://www.aimtech.es",
   "logo": "https://www.aimtech.es/assets/logo.png?v=2",
+  "image": "https://www.aimtech.es/assets/og/default.png",
+  "slogan": "IA aplicada, Power BI y automatización para empresas",
   "founder": {
     "@type": "Person",
     "name": "Miguel Pérez",
@@ -56,13 +60,24 @@
     "https://www.linkedin.com/company/aimtechsl",
     "https://x.com/aimtechsl"
   ],
-  "description": "Formación e implantación de IA aplicada, agentes IA, Power BI y desarrollo a medida para empresas, entidades y administraciones públicas.",
-  "areaServed": {
-    "@type": "Country",
-    "name": "España"
-  },
+  "description": "Empresa tecnológica con base en Barcelona que ayuda a empresas de España a adoptar inteligencia artificial, Power BI, automatización e IA agéntica mediante formación práctica, consultoría e implantación de soluciones reales de negocio.",
+  "knowsAbout": [
+    "formación IA para empresas",
+    "formación Power BI para empresas",
+    "implantación de IA agéntica",
+    "automatización con IA",
+    "business intelligence",
+    "desarrollo de software a medida"
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Barcelona" },
+    { "@type": "AdministrativeArea", "name": "Área metropolitana de Barcelona" },
+    { "@type": "AdministrativeArea", "name": "Cataluña" },
+    { "@type": "Country", "name": "España" }
+  ],
   "address": {
     "@type": "PostalAddress",
+    "addressLocality": "Barcelona",
     "addressRegion": "Cataluña",
     "addressCountry": "ES"
   },
@@ -71,7 +86,18 @@
     "email": "hola@aimtech.es",
     "contactType": "customer service",
     "areaServed": "ES",
-    "availableLanguage": "es"
+    "availableLanguage": ["es", "ca"]
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios tecnológicos para empresas",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Formación IA para empresas", "url": "https://www.aimtech.es/formacion-ia-empresas/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Formación Power BI para empresas", "url": "https://www.aimtech.es/curso-power-bi-empresas/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Formación Power BI en Barcelona", "url": "https://www.aimtech.es/curso-power-bi-barcelona/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Implantación de IA agéntica", "url": "https://www.aimtech.es/ia-agentica/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatización de procesos con IA", "url": "https://www.aimtech.es/automatizacion-procesos-ia/" } }
+    ]
   }
 }
 </script>
@@ -457,11 +483,26 @@
     </div>
   </section>
 
+  <section id="seo-local-barcelona">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">02 — Barcelona / España</div>
+        <h2 class="section-title">Tecnología aplicada desde <em>Barcelona</em> para empresas que quieren resultados, no teatro IA.</h2>
+        <p class="section-intro">Aimtech Consulting S.L. es una empresa tecnológica con base en Barcelona. Ayudamos a empresas y pymes de Cataluña y toda España con <a href="/formacion-ia-empresas/">formación IA para equipos</a>, <a href="/curso-power-bi-barcelona/">formación Power BI en Barcelona</a>, <a href="/ia-agentica/">implantación de IA agéntica</a> y <a href="/automatizacion-procesos-ia/">automatización de procesos con IA</a>.</p>
+      </div>
+      <div class="bento" data-stagger>
+        <article class="card s-2" data-mouse><h3>Formación en directo.</h3><p>Power BI, ChatGPT, Copilot e IA aplicada para equipos reales: presencial en Barcelona, in-company u online en directo.</p></article>
+        <article class="card s-2" data-mouse><h3>Implantación tecnológica.</h3><p>Agentes IA, automatizaciones, RAG, integraciones y desarrollo a medida para llevar la IA a producción.</p></article>
+        <article class="card s-2" data-mouse><h3>Área de servicio.</h3><p>Barcelona, área metropolitana, Cataluña y empresas de toda España. Remoto por defecto; presencial cuando aporta valor.</p></article>
+      </div>
+    </div>
+  </section>
+
   <section id="metodo">
     <div class="container">
       <div class="method">
         <div data-reveal="left">
-          <div class="section-label">02 — Método</div>
+          <div class="section-label">03 — Método</div>
           <h2 class="section-title">Concepto, <em>reto</em>, solución.</h2>
           <p class="section-intro">El mismo ritmo que aplico en las aulas lo aplico en consultoría: cada idea va seguida de un reto pequeño que demuestra que funciona. Sin paja, sin "ya lo verás en producción".</p>
         </div>
