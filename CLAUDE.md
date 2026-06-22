@@ -98,7 +98,7 @@ YA RESUELTO (no rehacer):
   (priceSpecification minPrice, IVA aparte) desde 2026-06-01.
 - Hreflang real en <head> + sitemap + OG (ES/CA). robots.txt y llms.txt presentes.
 - **Precios visibles** en las money pages desde 2026-06-01 (decisión de Mike):
-  Power BI `desde 4.400€` / grupo hasta 10 / +440€ persona (22€/h);
+  Power BI `desde 4.400€` / edición hasta 15 / +290€ persona adicional hasta máx. 20;
   IA aplicada `desde 3.500€` / grupo hasta 5 / +700€ persona (35€/h). AAPP
   mantiene "por licitación".
 - Blog: 4 posts ES ("Tres preguntas…" + cluster Power BI: que-es-power-bi,
