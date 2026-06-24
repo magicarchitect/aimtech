@@ -429,7 +429,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/"/>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -438,9 +438,27 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/"/>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.aimtech.es/blog/implementar-ia-empresa-automatizar-procesos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/implementar-ia-empresa-automatizar-procesos/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/implementar-ia-empresa-automatitzar-processos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/implementar-ia-empresa-automatizar-procesos/"/>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.aimtech.es/ca/blog/implementar-ia-empresa-automatitzar-processos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/implementar-ia-empresa-automatizar-procesos/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/implementar-ia-empresa-automatitzar-processos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/implementar-ia-empresa-automatizar-procesos/"/>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.aimtech.es/blog/cuanto-cuesta-formacion-ia-empresas/</loc>
