@@ -41,7 +41,7 @@ Datos reales de actividad: +20 años de experiencia, 3.360 alumnos formados,
 
 ## Recursos
 
-- [Blog](https://www.aimtech.es/blog/): artículos prácticos sobre Power BI (qué es, vs Excel, licencias, DAX, modelado, Power Query, mapas, cursos en Barcelona, Power BI para AAPP), IA aplicada (qué es, formación de equipos, prompting, precios, IA para AAPP) e IA agéntica (n8n vs Make vs Zapier). Disponible en español (/blog/) y catalán (/ca/blog/).
+- [Blog](https://www.aimtech.es/blog/): artículos prácticos sobre Power BI (qué es, vs Excel, licencias, DAX, modelado, Power Query, mapas, cursos en Barcelona, Power BI para AAPP), IA aplicada (qué es, formación de equipos, prompting, precios, IA para AAPP) e IA agéntica (cómo implementar IA en una empresa, n8n vs Make vs Zapier). Disponible en español (/blog/) y catalán (/ca/blog/).
 - [Contacto](https://www.aimtech.es/contacto/): hola@aimtech.es
 
 ## Para quién
