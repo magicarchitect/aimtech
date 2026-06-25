@@ -48,7 +48,7 @@ Un buen piloto debe decirte cuántas tareas procesa, cuántas horas ahorra, qué
 
 La formación es crítica. No basta con instalar herramientas: el equipo debe saber para qué usar IA, para qué no, cómo revisar resultados, qué datos no introducir y cuándo escalar a una persona.
 
-Sin formación, aparecen dos riesgos: herramientas infrautilizadas o uso caótico. Por eso suele funcionar mejor combinar [formación en IA para empresas](/formacion-ia-empresas/) con implantaciones pequeñas sobre procesos reales.
+Sin formación, aparecen dos riesgos: herramientas infrautilizadas o uso caótico. Por eso suele funcionar mejor combinar [formación en IA para empresas en Barcelona](/formacion-ia-empresas/) con implantaciones pequeñas sobre procesos reales.
 
 La formación sin implantación suele quedarse en inspiración. La implantación sin formación suele generar rechazo o infrautilización. La combinación es donde aparece el retorno.
 

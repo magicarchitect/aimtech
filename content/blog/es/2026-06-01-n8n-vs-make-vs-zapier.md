@@ -69,4 +69,4 @@ Es además el que mejor encaja cuando la automatización lleva **IA de por medio
 
 No hay una "mejor": hay la que encaja con tu caso, tu volumen y tu nivel de exigencia con los datos. El error caro es elegir por costumbre y descubrir el problema con la factura o con la privacidad seis meses después.
 
-En Aimtech trabajamos con las tres según el caso, y formamos a equipos para que sepan automatizar con criterio. Si quieres dar el salto de "tareas sueltas" a procesos que funcionan solos, mira nuestra [formación en IA para empresas](/formacion-ia-empresas/) y la [implantación de IA agéntica](/ia-agentica/).
+En Aimtech trabajamos con las tres según el caso, y formamos a equipos para que sepan automatizar con criterio. Si quieres dar el salto de "tareas sueltas" a procesos que funcionan solos, mira nuestra [formación IA para empresas en Barcelona](/formacion-ia-empresas/) y la [implantación de IA agéntica](/ia-agentica/).
