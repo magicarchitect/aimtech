@@ -23,10 +23,14 @@ Aimtech Consulting S.L. ayuda a empresas y pymes de Barcelona y España a aplica
 
 ## Servicios a crear en la ficha
 
-- Formación IA para empresas
+- Formación IA para empresas en Barcelona
+  - Descripción: formación presencial, in-company u online para equipos de empresa sobre ChatGPT, Copilot, automatizaciones, agentes IA, seguridad y AI Act.
+  - URL: https://www.aimtech.es/formacion-ia-empresas/
+- Formación ChatGPT para empresas en Barcelona
+  - Descripción: prompting práctico, Copilot/Gemini, trabajo con documentos, casos de negocio verosímiles y uso seguro de IA para equipos.
+  - URL: https://www.aimtech.es/curso-chatgpt-empresas/
 - Formación Power BI para empresas
 - Formación Power BI en Barcelona
-- Formación ChatGPT para empresas
 - Implantación de IA agéntica
 - Automatización con IA para empresas
 - Consultoría IA para empresas
@@ -49,11 +53,21 @@ Si no hay atención al público en una oficina física, configurar la ficha como
 
 1. Formación Power BI para empresas en Barcelona
    - Enlace: https://www.aimtech.es/curso-power-bi-barcelona/
-2. Formación IA para equipos de empresa
+2. Formación IA para empresas en Barcelona
+   - Texto sugerido: Formación en directo para equipos que quieren aplicar ChatGPT, Copilot, automatizaciones y agentes IA con seguridad y foco en negocio. Modalidad presencial en Barcelona, in-company u online.
    - Enlace: https://www.aimtech.es/formacion-ia-empresas/
-3. Implantación de IA agéntica para procesos de negocio
+3. Cómo elegir proveedor de formación IA en Barcelona
+   - Texto sugerido: Guía práctica para empresas que comparan formación IA: formato, profesor, seguridad, casos de negocio, AI Act y próximos pasos tras la sesión.
+   - Enlace: https://www.aimtech.es/blog/formacion-ia-empresas-barcelona-como-elegir/
+4. Formación ChatGPT para empresas en Barcelona
+   - Texto sugerido: Taller para que los equipos usen ChatGPT, Copilot o Gemini con método: mejores instrucciones, revisión de respuestas, documentos, privacidad y casos de uso reales.
+   - Enlace: https://www.aimtech.es/curso-chatgpt-empresas/
+5. Qué debe incluir una formación ChatGPT para empresas
+   - Texto sugerido: Checklist para valorar una formación ChatGPT B2B: diagnóstico, prompting, documentos, seguridad, adopción del equipo y criterios para medir utilidad real.
+   - Enlace: https://www.aimtech.es/blog/formacion-chatgpt-empresas-barcelona-que-incluir/
+6. Implantación de IA agéntica para procesos de negocio
    - Enlace: https://www.aimtech.es/ia-agentica/
-4. Automatización con IA para pymes y equipos corporativos
+7. Automatización con IA para pymes y equipos corporativos
    - Enlace: https://www.aimtech.es/automatizacion-procesos-ia/
 
 ## Reseñas: guía para clientes
@@ -71,6 +85,9 @@ Ejemplo del tipo de señal que interesa, sin copiar literalmente:
 - Home: https://www.aimtech.es/
 - Formación Power BI Barcelona: https://www.aimtech.es/curso-power-bi-barcelona/
 - Formación Power BI empresas: https://www.aimtech.es/curso-power-bi-empresas/
-- Formación IA empresas: https://www.aimtech.es/formacion-ia-empresas/
+- Formación IA empresas Barcelona: https://www.aimtech.es/formacion-ia-empresas/
+- Formación ChatGPT empresas Barcelona: https://www.aimtech.es/curso-chatgpt-empresas/
+- Guía elegir proveedor formación IA Barcelona: https://www.aimtech.es/blog/formacion-ia-empresas-barcelona-como-elegir/
+- Guía formación ChatGPT empresas Barcelona: https://www.aimtech.es/blog/formacion-chatgpt-empresas-barcelona-que-incluir/
 - IA agéntica: https://www.aimtech.es/ia-agentica/
 - Automatización con IA: https://www.aimtech.es/automatizacion-procesos-ia/
