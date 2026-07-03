@@ -178,14 +178,48 @@
       const menu = dd.querySelector('.nav-dropdown-menu');
       if (!toggle || !menu) return;
 
+      let closeTimer = null;
+      const canHover = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+      function clearCloseTimer() {
+        if (!closeTimer) return;
+        window.clearTimeout(closeTimer);
+        closeTimer = null;
+      }
+
       function setOpen(open) {
+        clearCloseTimer();
         dd.classList.toggle('is-open', open);
         toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       }
+
+      function scheduleClose(delay = 220) {
+        clearCloseTimer();
+        closeTimer = window.setTimeout(() => setOpen(false), delay);
+      }
+
       toggle.addEventListener('click', e => {
         e.preventDefault();
         setOpen(toggle.getAttribute('aria-expanded') !== 'true');
       });
+
+      if (canHover) {
+        // El mega-menú está posicionado fixed y puede haber un hueco visual entre
+        // el botón y el panel. Mantenemos el menú abierto durante el tránsito del
+        // cursor y lo cerramos al entrar en otro ítem del nav o al alejarnos.
+        dd.addEventListener('pointerenter', () => setOpen(true));
+        dd.addEventListener('pointerleave', () => scheduleClose());
+        menu.addEventListener('pointerenter', () => setOpen(true));
+        menu.addEventListener('pointerleave', () => scheduleClose());
+
+        const navLinks = dd.closest('.nav-links');
+        if (navLinks) {
+          navLinks.addEventListener('pointerover', e => {
+            if (!dd.contains(e.target)) setOpen(false);
+          });
+        }
+      }
+
       dd.addEventListener('keydown', e => {
         if (e.key === 'Escape' && dd.classList.contains('is-open')) {
           setOpen(false);
