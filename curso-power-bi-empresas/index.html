@@ -40,6 +40,7 @@
 <!-- JSON-LD: Course (in-company) + BreadcrumbList -->
 <!-- Precio alineado al de /power-bi/ (4.400€); pendiente de confirmación final de Mike. -->
 <script type="application/ld+json">
+
 [
   {
     "@context": "https://schema.org",
@@ -56,10 +57,22 @@
       "url": "https://www.aimtech.es/sobre-mike/"
     },
     "areaServed": [
-      { "@type": "City", "name": "Barcelona" },
-      { "@type": "AdministrativeArea", "name": "Área metropolitana de Barcelona" },
-      { "@type": "AdministrativeArea", "name": "Cataluña" },
-      { "@type": "Country", "name": "España" }
+      {
+        "@type": "City",
+        "name": "Barcelona"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Área metropolitana de Barcelona"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Cataluña"
+      },
+      {
+        "@type": "Country",
+        "name": "España"
+      }
     ],
     "address": {
       "@type": "PostalAddress",
@@ -71,7 +84,10 @@
       "email": "hola@aimtech.es",
       "contactType": "customer service",
       "areaServed": "ES",
-      "availableLanguage": ["es", "ca"]
+      "availableLanguage": [
+        "es",
+        "ca"
+      ]
     }
   },
   {
@@ -92,13 +108,22 @@
       "url": "https://www.aimtech.es/curso-power-bi-empresas/#precios"
     },
     "description": "Formación in-company de Power BI para empresas, entidades y administraciones públicas, con datasets de negocio reales. Dos itinerarios de 20h (Cero a Intermedio y Avanzado): Power Query, modelado dimensional en esquema en estrella, DAX, visualización y gobierno del servicio. Online en directo para toda España, presencial en Barcelona y Cataluña o in-company en las oficinas del cliente. Grupos cerrados de hasta 20 personas, aprendizaje learn-by-doing con retos y proyectos guiados.",
-    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "provider": {
+      "@id": "https://www.aimtech.es/#aimtech"
+    },
     "url": "https://www.aimtech.es/curso-power-bi-empresas/",
     "inLanguage": "es",
     "timeRequired": "PT20H",
-    "courseMode": ["Online", "Onsite"],
+    "courseMode": [
+      "Online",
+      "Onsite"
+    ],
     "hasCourseInstance": [
-      { "@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT20H" },
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "PT20H"
+      },
       {
         "@type": "CourseInstance",
         "courseMode": "Onsite",
@@ -120,43 +145,82 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
-      { "@type": "ListItem", "position": 2, "name": "Formación Power BI para empresas", "item": "https://www.aimtech.es/power-bi/" },
-      { "@type": "ListItem", "position": 3, "name": "Formación Power BI para empresas y pymes", "item": "https://www.aimtech.es/curso-power-bi-empresas/" }
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.aimtech.es/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Formación Power BI para empresas",
+        "item": "https://www.aimtech.es/power-bi/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Formación Power BI para empresas y pymes",
+        "item": "https://www.aimtech.es/curso-power-bi-empresas/"
+      }
     ]
-  }
-  ,{
+  },
+  {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
         "@type": "Question",
         "name": "¿La formación Power BI se adapta a mi empresa o pyme?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí. El formato in-company permite adaptar ritmo, ejemplos y ejercicios al nivel del equipo y a datos de negocio como ventas, finanzas, operaciones o reporting interno." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. El formato in-company permite adaptar ritmo, ejemplos y ejercicios al nivel del equipo y a datos de negocio como ventas, finanzas, operaciones o reporting interno."
+        }
       },
       {
         "@type": "Question",
         "name": "¿Hay profesor en directo?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí. La formación se imparte en directo, online o presencial, con profesor real para resolver dudas y corregir ejercicios durante la sesión." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. La formación se imparte en directo, online o presencial, con profesor real para resolver dudas y corregir ejercicios durante la sesión."
+        }
       },
       {
         "@type": "Question",
         "name": "¿Sirve para equipos que vienen de Excel?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí. El itinerario de cero a intermedio está pensado para equipos que trabajan con Excel y quieren pasar a modelos, dashboards y reporting más robustos en Power BI." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. El itinerario de cero a intermedio está pensado para equipos que trabajan con Excel y quieren pasar a modelos, dashboards y reporting más robustos en Power BI."
+        }
       },
       {
         "@type": "Question",
         "name": "¿Puede impartirse presencial en Barcelona?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí. La formación puede impartirse online en directo, presencial en Barcelona y área metropolitana o in-company en las oficinas del cliente." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. La formación puede impartirse online en directo, presencial en Barcelona y área metropolitana o in-company en las oficinas del cliente."
+        }
       },
       {
         "@type": "Question",
         "name": "¿Qué diferencia esta formación de un curso genérico?",
-        "acceptedAnswer": { "@type": "Answer", "text": "La formación se diseña para equipos de empresa: profesor en directo, ritmo adaptado, ejercicios con contexto de negocio y foco en informes que el equipo pueda mantener después." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La formación se diseña para equipos de empresa: profesor en directo, ritmo adaptado, ejercicios con contexto de negocio y foco en informes que el equipo pueda mantener después."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es un curso Power BI empresas o formación a medida?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Es un curso Power BI empresas en directo, pero adaptado a cada grupo: puede ser in-company, online o presencial, con datasets ficticios de negocio y ejercicios pensados para pymes, dirección y equipos operativos."
+        }
       }
     ]
   }
 ]
+
 </script>
 
 <!-- Preload: fuente serif del hero (LCP) -->
@@ -648,6 +712,7 @@
         <article class="card s-2" data-mouse><h3>¿Sirve si venimos de Excel?</h3><p>Sí. El itinerario de cero a intermedio está pensado para equipos que ya trabajan con Excel y quieren pasar a informes fiables en Power BI.</p></article>
         <article class="card s-2" data-mouse><h3>¿Puede ser presencial en Barcelona?</h3><p>Sí. Puede hacerse online en directo, presencial en Barcelona y área metropolitana o in-company en vuestras oficinas.</p></article>
         <article class="card s-2" data-mouse><h3>¿En qué se diferencia de un curso genérico?</h3><p>En que está pensada para equipos: profesor en directo, ritmo adaptado, ejercicios con contexto de negocio y foco en informes mantenibles.</p></article>
+        <article class="card s-2" data-mouse><h3>¿Es un curso Power BI empresas o formación a medida?</h3><p>Es un <strong>curso Power BI empresas</strong> en directo, pero adaptado a cada grupo: puede ser in-company, online o presencial, con datasets ficticios de negocio y ejercicios pensados para pymes, dirección y equipos operativos.</p></article>
       </div>
     </div>
   </section>

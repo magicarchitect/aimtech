@@ -39,6 +39,7 @@
 
 <!-- JSON-LD: Course + BreadcrumbList -->
 <script type="application/ld+json">
+
 [
   {
     "@context": "https://schema.org",
@@ -66,51 +67,81 @@
     },
     "url": "https://www.aimtech.es/ia-aplicada/#programa",
     "inLanguage": "es",
-    "courseMode": ["Online", "Onsite"],
+    "courseMode": [
+      "Online",
+      "Onsite"
+    ],
     "hasCourseInstance": [
-      { "@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT20H" },
-      { "@type": "CourseInstance", "courseMode": "Onsite", "courseWorkload": "PT20H" }
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "PT20H"
+      },
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Onsite",
+        "courseWorkload": "PT20H"
+      }
     ]
   },
   {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-          {
-              "@type": "Question",
-              "name": "¿Hace falta saber programar?",
-              "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "No. La formación se orienta a equipos de negocio y perfiles funcionales. Enseñamos criterios, patrones y herramientas para llevar IA a procesos reales."
-              }
-          },
-          {
-              "@type": "Question",
-              "name": "¿Trabajamos con casos de la empresa?",
-              "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Sí. El temario final se ajusta a procesos reales: documentos, correos, datos, tareas repetitivas o flujos internos que ya existen."
-              }
-          },
-          {
-              "@type": "Question",
-              "name": "¿Es formación o implantación?",
-              "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Es formación en directo. Si además queréis poner agentes en producción, lo conectamos con el servicio de implantación de IA agéntica."
-              }
-          }
-      ]
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Hace falta saber programar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. La formación se orienta a equipos de negocio y perfiles funcionales. Enseñamos criterios, patrones y herramientas para llevar IA a procesos reales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Trabajamos con casos de la empresa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. El temario final se ajusta a procesos reales: documentos, correos, datos, tareas repetitivas o flujos internos que ya existen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es formación o implantación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Es formación en directo. Si además queréis poner agentes en producción, lo conectamos con el servicio de implantación de IA agéntica."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es IA aplicada a empresas o un curso de herramientas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Es IA aplicada a empresas: partimos de procesos de administración, ventas, atención al cliente, operaciones o dirección. Si buscáis un curso IA aplicada, lo convertimos en ejercicios sobre tareas reales del equipo."
+        }
+      }
+    ]
   },
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
-      { "@type": "ListItem", "position": 2, "name": "Formación en IA aplicada", "item": "https://www.aimtech.es/ia-aplicada/" }
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.aimtech.es/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Formación en IA aplicada",
+        "item": "https://www.aimtech.es/ia-aplicada/"
+      }
     ]
   }
 ]
+
 </script>
 
 <!-- Preload: fuente serif del hero (LCP) -->
@@ -646,6 +677,7 @@
         <article class="card s-2" data-mouse><h3>¿Hace falta saber programar?</h3><p>No. La formación se orienta a equipos de negocio y perfiles funcionales. Enseñamos criterios, patrones y herramientas para llevar IA a procesos reales.</p></article>
         <article class="card s-2" data-mouse><h3>¿Trabajamos con casos de la empresa?</h3><p>Sí. El temario final se ajusta a procesos reales: documentos, correos, datos, tareas repetitivas o flujos internos que ya existen.</p></article>
         <article class="card s-2" data-mouse><h3>¿Es formación o implantación?</h3><p>Es formación en directo. Si además queréis poner agentes en producción, lo conectamos con el servicio de implantación de IA agéntica.</p></article>
+        <article class="card s-2" data-mouse><h3>¿Es IA aplicada a empresas o un curso de herramientas?</h3><p>Es <strong>IA aplicada a empresas</strong>: partimos de procesos de administración, ventas, atención al cliente, operaciones o dirección. Si buscáis un <strong>curso IA aplicada</strong>, lo convertimos en ejercicios sobre tareas reales del equipo.</p></article>
       </div>
     </div>
   </section>

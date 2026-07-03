@@ -39,6 +39,8 @@
 
 <!-- JSON-LD: EducationalOrganization + Course (×2) + BreadcrumbList -->
 <script type="application/ld+json">
+
+
 [
   {
     "@context": "https://schema.org",
@@ -55,8 +57,14 @@
       "url": "https://www.aimtech.es/sobre-mike/"
     },
     "areaServed": [
-      { "@type": "Country", "name": "España" },
-      { "@type": "AdministrativeArea", "name": "Cataluña" }
+      {
+        "@type": "Country",
+        "name": "España"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Cataluña"
+      }
     ],
     "address": {
       "@type": "PostalAddress",
@@ -68,7 +76,10 @@
       "email": "hola@aimtech.es",
       "contactType": "customer service",
       "areaServed": "ES",
-      "availableLanguage": ["es", "ca"]
+      "availableLanguage": [
+        "es",
+        "ca"
+      ]
     }
   },
   {
@@ -89,13 +100,22 @@
       "url": "https://www.aimtech.es/power-bi/#precios"
     },
     "description": "Itinerario para usuarios de Excel sin Power BI previo: instalación e interfaz de Power BI Desktop, carga y limpieza de datos con Power Query, informes e interactividad, mapas y visualización geográfica, modelado de datos (relaciones, jerarquías y esquema en estrella) y visuales avanzados con narrativa del informe. Aprendizaje learn-by-doing con 5 proyectos guiados de principio a fin. 20h, online o presencial, en grupos cerrados de hasta 20 personas para empresas, entidades y administraciones públicas.",
-    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "provider": {
+      "@id": "https://www.aimtech.es/#aimtech"
+    },
     "url": "https://www.aimtech.es/power-bi/#itinerarios",
     "inLanguage": "es",
     "timeRequired": "PT20H",
-    "courseMode": ["Online", "Onsite"],
+    "courseMode": [
+      "Online",
+      "Onsite"
+    ],
     "hasCourseInstance": [
-      { "@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT20H" },
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "PT20H"
+      },
       {
         "@type": "CourseInstance",
         "courseMode": "Onsite",
@@ -131,13 +151,22 @@
       "url": "https://www.aimtech.es/power-bi/#precios"
     },
     "description": "DAX avanzado, time intelligence, modelado complejo (many-to-many, role-playing), performance con DAX Studio y gobierno del servicio (RLS, deployment pipelines). 20h, online o presencial.",
-    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "provider": {
+      "@id": "https://www.aimtech.es/#aimtech"
+    },
     "url": "https://www.aimtech.es/power-bi/#itinerarios",
     "inLanguage": "es",
     "timeRequired": "PT20H",
-    "courseMode": ["Online", "Onsite"],
+    "courseMode": [
+      "Online",
+      "Onsite"
+    ],
     "hasCourseInstance": [
-      { "@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT20H" },
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "PT20H"
+      },
       {
         "@type": "CourseInstance",
         "courseMode": "Onsite",
@@ -157,13 +186,47 @@
   },
   {
     "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Power BI para pymes requiere una formación diferente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Power BI para pymes suele necesitar menos teoría y más foco en informes de ventas, margen, operaciones y dirección. La formación se adapta al tamaño del equipo y a los datos disponibles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Desde esta página puedo elegir curso Power BI Barcelona?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Esta página actúa como hub de formación Power BI para empresas. Si buscáis curso Power BI Barcelona presencial, la landing local explica modalidad, formato y casos para equipos de empresa."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
-      { "@type": "ListItem", "position": 2, "name": "Formación Power BI para empresas", "item": "https://www.aimtech.es/power-bi/" }
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.aimtech.es/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Formación Power BI para empresas",
+        "item": "https://www.aimtech.es/power-bi/"
+      }
     ]
   }
 ]
+
+
 </script>
 
 <!-- Preload: fuente serif del hero (LCP) -->
@@ -725,6 +788,19 @@
         </figure>
 
         <a href="/sobre-mike/" class="btn-ghost">Conoce a Mike →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div data-reveal>
+        <div class="section-label">07 — Preguntas frecuentes</div>
+        <h2 class="section-title">Dudas habituales sobre <em>Power BI para pymes</em> y empresas.</h2>
+      </div>
+      <div class="bento" data-stagger>
+        <article class="card s-2" data-mouse><h3>¿Power BI para pymes requiere una formación diferente?</h3><p>Sí. <strong>Power BI para pymes</strong> suele necesitar menos teoría y más foco en informes de ventas, margen, operaciones y dirección. Adaptamos la formación al tamaño del equipo y a los datos disponibles.</p></article>
+        <article class="card s-2" data-mouse><h3>¿Dónde encaja el curso Power BI Barcelona?</h3><p>Esta página actúa como hub de <strong>formación Power BI para empresas</strong>. Si buscáis <strong>curso Power BI Barcelona</strong> presencial, la landing local explica modalidad, formato y casos para equipos de empresa.</p></article>
       </div>
     </div>
   </section>

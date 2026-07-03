@@ -39,6 +39,7 @@
 
 <!-- JSON-LD: Course (presencial Barcelona) + BreadcrumbList -->
 <script type="application/ld+json">
+
 [
   {
     "@context": "https://schema.org",
@@ -55,9 +56,18 @@
       "url": "https://www.aimtech.es/sobre-mike/"
     },
     "areaServed": [
-      { "@type": "Country", "name": "España" },
-      { "@type": "AdministrativeArea", "name": "Cataluña" },
-      { "@type": "City", "name": "Barcelona" }
+      {
+        "@type": "Country",
+        "name": "España"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Cataluña"
+      },
+      {
+        "@type": "City",
+        "name": "Barcelona"
+      }
     ],
     "address": {
       "@type": "PostalAddress",
@@ -70,7 +80,10 @@
       "email": "hola@aimtech.es",
       "contactType": "customer service",
       "areaServed": "ES",
-      "availableLanguage": ["es", "ca"]
+      "availableLanguage": [
+        "es",
+        "ca"
+      ]
     }
   },
   {
@@ -91,11 +104,16 @@
       "url": "https://www.aimtech.es/curso-power-bi-barcelona/#precios"
     },
     "description": "Formación Power BI presencial en Barcelona y área metropolitana para empresas, pymes, entidades y administraciones públicas, con profesor en directo y datasets ficticios de negocio. También disponible online en directo. Dos itinerarios de 20h (Cero a Intermedio y Avanzado): Power Query, modelado dimensional, DAX, visualización y gobierno del servicio. Grupos cerrados de hasta 20 personas, aprendizaje learn-by-doing.",
-    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "provider": {
+      "@id": "https://www.aimtech.es/#aimtech"
+    },
     "url": "https://www.aimtech.es/curso-power-bi-barcelona/",
     "inLanguage": "es",
     "timeRequired": "PT20H",
-    "courseMode": ["Onsite", "Online"],
+    "courseMode": [
+      "Onsite",
+      "Online"
+    ],
     "hasCourseInstance": [
       {
         "@type": "CourseInstance",
@@ -112,60 +130,109 @@
           }
         }
       },
-      { "@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT20H" }
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "PT20H"
+      }
     ]
   },
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
-      { "@type": "ListItem", "position": 2, "name": "Formación Power BI para empresas", "item": "https://www.aimtech.es/power-bi/" },
-      { "@type": "ListItem", "position": 3, "name": "Formación Power BI en Barcelona", "item": "https://www.aimtech.es/curso-power-bi-barcelona/" }
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.aimtech.es/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Formación Power BI para empresas",
+        "item": "https://www.aimtech.es/power-bi/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Formación Power BI en Barcelona",
+        "item": "https://www.aimtech.es/curso-power-bi-barcelona/"
+      }
     ]
-  }
-  ,{
+  },
+  {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
         "@type": "Question",
         "name": "¿La formación Power BI en Barcelona es para empresas y pymes?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí. Está pensada para empresas, pymes, entidades y equipos que quieren aprender Power BI con casos reales, no para alumnos individuales que buscan vídeos a su ritmo." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Está pensada para empresas, pymes, entidades y equipos que quieren aprender Power BI con casos reales, no para alumnos individuales que buscan vídeos a su ritmo."
+        }
       },
       {
         "@type": "Question",
         "name": "¿Es presencial o puede ser online en directo?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Puede ser presencial en Barcelona y área metropolitana, in-company en vuestras oficinas u online en directo con profesor." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Puede ser presencial en Barcelona y área metropolitana, in-company en vuestras oficinas u online en directo con profesor."
+        }
       },
       {
         "@type": "Question",
         "name": "¿Es un curso grabado?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No. Es formación en directo con profesor, dudas durante la sesión, ejercicios guiados y datasets ficticios de negocio." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Es formación en directo con profesor, dudas durante la sesión, ejercicios guiados y datasets ficticios de negocio."
+        }
       },
       {
         "@type": "Question",
         "name": "¿Cuánto dura la formación Power BI en Barcelona?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Cada itinerario dura 20 horas. Puede contratarse el nivel de cero a intermedio, el avanzado o ambos como itinerario completo para el equipo." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cada itinerario dura 20 horas. Puede contratarse el nivel de cero a intermedio, el avanzado o ambos como itinerario completo para el equipo."
+        }
       },
       {
         "@type": "Question",
         "name": "¿Se trabaja con datos internos de la empresa o áreas concretas?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No. La formación usa datasets empresariales ficticios y verosímiles, pensados para practicar Power Query, modelado, DAX, visualización y publicación sin exponer datos internos ni prometer cobertura específica de un área concreta." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. La formación usa datasets empresariales ficticios y verosímiles, pensados para practicar Power Query, modelado, DAX, visualización y publicación sin exponer datos internos ni prometer cobertura específica de un área concreta."
+        }
       },
       {
         "@type": "Question",
         "name": "¿Cuándo conviene formar a una persona interna en Power BI en vez de contratar reporting externo?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Conviene formar al equipo interno cuando la empresa genera informes recurrentes, necesita autonomía y quiere reducir dependencia de hojas Excel manuales. Si falta tiempo o criterio técnico, Aimtech puede combinar formación con acompañamiento para dejar cuadros de mando funcionando." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Conviene formar al equipo interno cuando la empresa genera informes recurrentes, necesita autonomía y quiere reducir dependencia de hojas Excel manuales. Si falta tiempo o criterio técnico, Aimtech puede combinar formación con acompañamiento para dejar cuadros de mando funcionando."
+        }
       },
       {
         "@type": "Question",
         "name": "¿Qué diferencia a Aimtech de una formación Power BI genérica?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Aimtech combina formación en directo, experiencia docente de Mike Pérez, datasets ficticios de negocio y contexto local en Barcelona y Cataluña. No es un curso grabado ni una plataforma de vídeos." }
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aimtech combina formación en directo, experiencia docente de Mike Pérez, datasets ficticios de negocio y contexto local en Barcelona y Cataluña. No es un curso grabado ni una plataforma de vídeos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es un curso Power BI Barcelona presencial?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, si el equipo está en Barcelona o área metropolitana puede organizarse como curso Power BI Barcelona presencial. También puede impartirse online en directo o in-company en vuestras oficinas."
+        }
       }
     ]
   }
 ]
+
 </script>
 
 <!-- Preload: fuente serif del hero (LCP) -->
@@ -705,6 +772,7 @@
         <article class="card s-2" data-mouse><h3>¿Es un curso grabado?</h3><p>No. Es formación en directo con profesor, preguntas, ejercicios guiados y resolución de dudas durante la sesión.</p></article>
         <article class="card s-2" data-mouse><h3>¿Cuánto dura?</h3><p>Cada itinerario son 20 horas. Puedes contratar el nivel de cero a intermedio, el avanzado o ambos como recorrido completo para tu equipo.</p></article>
         <article class="card s-2" data-mouse><h3>¿Se trabaja con nuestros datos?</h3><p>No. La formación usa datasets ficticios de negocio. Sirven para aprender el método sin exponer datos internos ni prometer cobertura específica de un área concreta.</p></article>
+        <article class="card s-2" data-mouse><h3>¿Es un curso Power BI Barcelona presencial?</h3><p>Sí, si el equipo está en Barcelona o área metropolitana puede organizarse como <strong>curso Power BI Barcelona</strong> presencial. También puede impartirse online en directo o in-company en vuestras oficinas.</p></article>
       </div>
     </div>
   </section>
