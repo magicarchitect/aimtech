@@ -452,6 +452,15 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.aimtech.es/blog/ia-power-bi-reporting-empresarial/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/ia-power-bi-reporting-empresarial/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/ia-power-bi-reporting-empresarial/"/>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.aimtech.es/blog/checklist-formacion-ia-empresas/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/checklist-formacion-ia-empresas/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/"/>

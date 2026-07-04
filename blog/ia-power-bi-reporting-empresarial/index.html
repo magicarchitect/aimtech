@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IA y Power BI: cómo mejorar el reporting empresarial sin perder control | Blog Aimtech</title>
+<meta name="description" content="Guía práctica para combinar inteligencia artificial y Power BI en empresas: análisis, documentación, automatización, KPIs, riesgos y gobierno del dato." />
+
+<link rel="canonical" href="https://www.aimtech.es/blog/ia-power-bi-reporting-empresarial/" />
+
+<!-- hreflang: variantes de idioma -->
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/ia-power-bi-reporting-empresarial/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/ia-power-bi-reporting-empresarial/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="/assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="ca_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="IA y Power BI: cómo mejorar el reporting empresarial sin perder control" />
+<meta property="og:description" content="Guía práctica para combinar inteligencia artificial y Power BI en empresas: análisis, documentación, automatización, KPIs, riesgos y gobierno del dato." />
+<meta property="og:url" content="https://www.aimtech.es/blog/ia-power-bi-reporting-empresarial/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="IA y Power BI: cómo mejorar el reporting empresarial sin perder control" />
+<meta property="article:published_time" content="2026-07-04" />
+<meta property="article:author" content="Mike Pérez" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="IA y Power BI: cómo mejorar el reporting empresarial sin perder control" />
+<meta name="twitter:description" content="Guía práctica para combinar inteligencia artificial y Power BI en empresas: análisis, documentación, automatización, KPIs, riesgos y gobierno del dato." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+
+<!-- JSON-LD: BlogPosting + BreadcrumbList -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "IA y Power BI: cómo mejorar el reporting empresarial sin perder control",
+    "description": "Guía práctica para combinar inteligencia artificial y Power BI en empresas: análisis, documentación, automatización, KPIs, riesgos y gobierno del dato.",
+    "datePublished": "2026-07-04",
+    "dateModified": "2026-07-04",
+    "inLanguage": "es-ES",
+    "keywords": ["ia-aplicada","power-bi","reporting"],
+    "image": "https://www.aimtech.es/assets/og/default.png",
+    "url": "https://www.aimtech.es/blog/ia-power-bi-reporting-empresarial/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.aimtech.es/blog/ia-power-bi-reporting-empresarial/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aimtech",
+      "url": "https://www.aimtech.es",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.aimtech.es/assets/logo.png?v=2"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aimtech.es/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "IA y Power BI: cómo mejorar el reporting empresarial sin perder control", "item": "https://www.aimtech.es/blog/ia-power-bi-reporting-empresarial/" }
+    ]
+  }
+]
+</script>
+
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/geist-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/jetbrains-mono-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/blog.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<script src="/js/cookie-consent.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body class="is-post">
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<!-- @region partials/nav-es.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav data-nosnippet>
+  <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech Consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">Aimtech</text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">Consulting</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-servicios-menu">Servicios <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu nav-mega" id="nav-servicios-menu">
+        <div class="nav-mega-col">
+          <a class="nav-mega-head" href="/power-bi/">Power BI</a>
+          <a href="/curso-power-bi-empresas/">Formación Power BI empresas</a>
+          <a href="/curso-power-bi-barcelona/">Formación Power BI Barcelona</a>
+        </div>
+        <div class="nav-mega-col">
+          <a class="nav-mega-head" href="/ia-aplicada/">IA Aplicada</a>
+          <a href="/curso-chatgpt-empresas/">Formación ChatGPT Barcelona</a>
+          <a href="/formacion-ia-empresas/">Formación IA empresas Barcelona</a>
+        </div>
+        <div class="nav-mega-col nav-mega-col--wide">
+          <a class="nav-mega-head" href="/ia-agentica/">IA Agéntica</a>
+          <a href="/consultoria-ia-empresas/">Consultoría IA</a>
+          <a href="/automatizacion-procesos-ia/">Automatización de procesos</a>
+          <a href="/agentes-ia-empresas/">Agentes de IA</a>
+          <a href="/bot-whatsapp-empresas/">Bot de WhatsApp</a>
+          <a href="/chatbot-documentos-empresa/">Chatbot de documentos</a>
+          <a href="/automatizacion-emails-ia/">Automatización de emails</a>
+          <a href="/automatizacion-facturas-pdfs-ia/">Automatización de facturas</a>
+        </div>
+        <div class="nav-mega-col">
+          <a class="nav-mega-head" href="/desarrollo/">Desarrollo</a>
+          <span class="nav-mega-note">Apps, APIs e integraciones a medida</span>
+        </div>
+      </div>
+    </div>
+    <a href="/blog/">Blog</a>
+    <a href="/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/blog/ia-power-bi-reporting-empresarial/" class="active">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/blog/">CA</a>
+    </div>
+    <a href="/contacto/" class="nav-cta">Hablemos →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+
+<main>
+
+  <article class="post">
+    <header class="post-header container">
+      <a href="/blog/" class="post-back">← Blog</a>
+      <div class="post-meta">
+        <time datetime="2026-07-04">4 de julio de 2026</time>
+        <span class="sep">·</span>
+        <span>9 min de lectura</span>
+        <span class="sep">·</span>
+        <span>Mike Pérez</span>
+      </div>
+      <h1>IA y Power BI: cómo mejorar el reporting empresarial sin perder control</h1>
+      <p class="post-lead">Guía práctica para combinar inteligencia artificial y Power BI en empresas: análisis, documentación, automatización, KPIs, riesgos y gobierno del dato.</p>
+      <div class="post-tags"><span>ia-aplicada</span><span>power-bi</span><span>reporting</span></div>
+    </header>
+
+    <div class="post-body container">
+      <p>La inteligencia artificial y Power BI no compiten. Bien combinados, resuelven dos partes distintas del mismo problema: <strong>convertir datos dispersos en decisiones de negocio</strong>.</p>
+<p>Power BI ayuda a estructurar, limpiar, modelar, visualizar y compartir indicadores. La IA ayuda a acelerar análisis, resumir información, documentar informes, detectar patrones, generar hipótesis y convertir preguntas de negocio en tareas más claras.</p>
+<p>El error está en pensar que la IA sustituye al reporting. No lo sustituye. Lo puede mejorar, siempre que haya modelo de datos, criterios de calidad y revisión humana. Si no, solo tendremos respuestas rápidas sobre datos dudosos: velocidad de nave espacial con mapas dibujados a mano.</p>
+<p>Esta guía explica cómo combinar <strong>IA y Power BI en empresas</strong> sin caer en humo: qué usos tienen sentido, dónde aporta valor, qué riesgos hay y cuándo conviene formar al equipo antes de automatizar.</p>
+<h2>1. Power BI ordena el dato; la IA acelera el trabajo alrededor</h2>
+<p>Power BI es fuerte cuando necesitas:</p>
+<ul>
+<li>conectar datos de varias fuentes;</li>
+<li>limpiar y transformar información con Power Query;</li>
+<li>construir un modelo de datos;</li>
+<li>definir métricas con DAX;</li>
+<li>visualizar indicadores;</li>
+<li>publicar informes recurrentes;</li>
+<li>compartir cuadros de mando con equipos o dirección.</li>
+</ul>
+<p>La IA es fuerte cuando necesitas:</p>
+<ul>
+<li>resumir textos, reuniones o documentos;</li>
+<li>explicar indicadores en lenguaje natural;</li>
+<li>generar hipótesis de análisis;</li>
+<li>documentar informes;</li>
+<li>crear borradores de conclusiones;</li>
+<li>traducir preguntas de negocio a pasos técnicos;</li>
+<li>automatizar tareas repetitivas alrededor del reporting.</li>
+</ul>
+<p>La combinación natural no es “preguntar a la IA cualquier cosa sobre cualquier Excel”. La combinación útil es tener datos bien preparados y usar IA para acelerar interpretación, comunicación y operación.</p>
+<h2>2. Casos de uso útiles de IA alrededor de Power BI</h2>
+<p>Estos son usos razonables en una empresa, sin prometer magia.</p>
+<h3>Documentar informes</h3>
+<p>Un informe de Power BI suele crecer con el tiempo. Cambian medidas, páginas, filtros y fuentes. La IA puede ayudar a redactar documentación inicial:</p>
+<ul>
+<li>qué mide cada página;</li>
+<li>qué filtros existen;</li>
+<li>qué significa cada KPI;</li>
+<li>qué origen tiene cada dato;</li>
+<li>qué decisiones permite tomar el informe;</li>
+<li>qué limitaciones debe conocer dirección.</li>
+</ul>
+<p>Esto no elimina la revisión humana, pero reduce el bloqueo de “nadie documenta porque nadie tiene tiempo”.</p>
+<h3>Explicar KPIs a perfiles no técnicos</h3>
+<p>No todo el mundo entiende de inmediato qué implica una medida, una segmentación o una desviación.</p>
+<p>La IA puede ayudar a convertir una explicación técnica en una explicación de negocio:</p>
+<ul>
+<li>qué significa el indicador;</li>
+<li>por qué puede subir o bajar;</li>
+<li>qué preguntas debería hacerse el responsable;</li>
+<li>qué decisiones no deberían tomarse solo con ese dato.</li>
+</ul>
+<p>Esto es especialmente útil cuando Power BI llega a dirección, ventas, operaciones o administración.</p>
+<h3>Generar hipótesis de análisis</h3>
+<p>Ante un dashboard, la IA puede ayudar a formular preguntas:</p>
+<ul>
+<li>¿qué segmentos explican la caída?</li>
+<li>¿hay diferencias por zona o canal?</li>
+<li>¿la variación es puntual o tendencia?</li>
+<li>¿qué métrica secundaria conviene revisar?</li>
+<li>¿qué datos faltan para decidir mejor?</li>
+</ul>
+<p>La IA no debe inventar conclusiones. Pero sí puede ayudar a pensar mejor la investigación.</p>
+<h3>Preparar resúmenes ejecutivos</h3>
+<p>Muchas empresas tienen dashboards, pero siguen necesitando una explicación para dirección.</p>
+<p>Con datos revisados, la IA puede ayudar a redactar:</p>
+<ul>
+<li>resumen mensual;</li>
+<li>puntos críticos;</li>
+<li>alertas;</li>
+<li>posibles causas;</li>
+<li>acciones recomendadas;</li>
+<li>preguntas abiertas para la reunión.</li>
+</ul>
+<p>La clave es que el resumen no salga directamente a decisión sin validación. La IA redacta; el responsable verifica.</p>
+<h3>Crear plantillas de análisis recurrente</h3>
+<p>Si cada mes se revisan ventas, margen, tickets, producción o tesorería, se puede crear una estructura repetible:</p>
+<ol>
+<li>revisar variación principal;</li>
+<li>buscar explicación por segmento;</li>
+<li>comprobar si hay outliers;</li>
+<li>comparar con periodo anterior;</li>
+<li>listar riesgos;</li>
+<li>proponer acciones.</li>
+</ol>
+<p>La IA puede ayudar a convertir esa rutina en un prompt, plantilla o checklist operativo.</p>
+<h2>3. Qué no conviene hacer</h2>
+<p>La IA puede acelerar mucho, pero también puede crear problemas si se usa sin criterio.</p>
+<p>Evita estos errores:</p>
+<ul>
+<li>subir datos sensibles a herramientas públicas sin política interna;</li>
+<li>pedir conclusiones a la IA sobre datos que no entiende;</li>
+<li>copiar fórmulas DAX generadas sin probarlas;</li>
+<li>aceptar explicaciones que suenan bien pero no cuadran con el modelo;</li>
+<li>usar IA para ocultar un problema de calidad de datos;</li>
+<li>automatizar informes antes de saber qué decisión deben soportar;</li>
+<li>sustituir revisión humana en indicadores críticos.</li>
+</ul>
+<p>En reporting empresarial, una respuesta convincente no basta. Tiene que ser verificable.</p>
+<h2>4. IA para construir mejor el sistema de reporting</h2>
+<p>Además de resumir o explicar, la IA puede ayudar durante el diseño del sistema.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>convertir una petición vaga de dirección en preguntas de análisis;</li>
+<li>listar posibles KPIs por área;</li>
+<li>proponer estructura de páginas de un informe;</li>
+<li>redactar definiciones de indicadores;</li>
+<li>preparar un diccionario de datos inicial;</li>
+<li>generar casos de prueba para validar medidas;</li>
+<li>revisar si un dashboard tiene demasiados indicadores;</li>
+<li>crear documentación para usuarios internos.</li>
+</ul>
+<p>Aquí la IA actúa como copiloto metodológico. No reemplaza el criterio técnico, pero ayuda a no empezar desde una hoja en blanco.</p>
+<h2>5. Power Query, DAX e IA: dónde ayuda y dónde hay que vigilar</h2>
+<p>La IA puede sugerir pasos de Power Query o fórmulas DAX. Eso puede ahorrar tiempo, pero no elimina la necesidad de entender lo que se está haciendo.</p>
+<h3>En Power Query</h3>
+<p>Puede ayudar a:</p>
+<ul>
+<li>explicar una transformación;</li>
+<li>proponer pasos para limpiar columnas;</li>
+<li>documentar reglas aplicadas;</li>
+<li>convertir una necesidad en una secuencia de acciones.</li>
+</ul>
+<p>Pero hay que validar tipos, resultados, nulos, duplicados y cambios en origen.</p>
+<h3>En DAX</h3>
+<p>Puede ayudar a:</p>
+<ul>
+<li>explicar diferencia entre medida y columna calculada;</li>
+<li>proponer una fórmula inicial;</li>
+<li>comentar medidas existentes;</li>
+<li>simplificar una explicación técnica.</li>
+</ul>
+<p>Pero DAX depende mucho del modelo, relaciones y contexto de filtro. Copiar una medida sin entender el modelo puede producir números incorrectos con una seguridad casi ofensiva.</p>
+<p>Si el equipo está en este punto, conviene reforzar primero la base de <a href="/blog/power-query-limpiar-datos/">Power Query</a>, <a href="/blog/modelado-datos-power-bi-esquema-estrella/">modelado de datos</a> y <a href="/blog/dax-medidas-vs-columnas-calculadas/">DAX práctico</a>.</p>
+<h2>6. De dashboard a proceso: cuándo automatizar</h2>
+<p>El reporting no termina en ver un gráfico. Muchas veces el valor aparece después:</p>
+<ul>
+<li>enviar alertas cuando un indicador cambia;</li>
+<li>resumir incidencias;</li>
+<li>preparar un informe mensual;</li>
+<li>abrir tareas si se supera un umbral;</li>
+<li>recopilar comentarios de responsables;</li>
+<li>generar borradores de comunicación interna;</li>
+<li>conectar datos con CRM, ERP, email o herramientas de soporte.</li>
+</ul>
+<p>Aquí entra la automatización con IA. Pero antes de construir agentes o flujos, hay que responder tres preguntas:</p>
+<ol>
+<li>¿Qué decisión o acción dispara el dato?</li>
+<li>¿Quién valida la salida?</li>
+<li>¿Qué coste tiene equivocarse?</li>
+</ol>
+<p>Si el riesgo es bajo y la tarea es repetitiva, puede automatizarse más. Si afecta a clientes, dinero, cumplimiento o reputación, debe haber revisión humana.</p>
+<h2>7. Formación antes de automatización</h2>
+<p>Muchas empresas quieren “meter IA” en reporting cuando todavía no tienen criterios compartidos sobre datos, indicadores o dashboards.</p>
+<p>Un orden más sano suele ser:</p>
+<ol>
+<li>formar al equipo en Power BI para construir informes fiables;</li>
+<li>formar al equipo en IA para usar herramientas con seguridad y criterio;</li>
+<li>identificar tareas repetitivas alrededor del reporting;</li>
+<li>diseñar plantillas y procesos;</li>
+<li>automatizar solo lo que esté suficientemente claro;</li>
+<li>medir ahorro, errores evitados y adopción.</li>
+</ol>
+<p>Por eso la combinación de <a href="/curso-power-bi-empresas/">formación Power BI para empresas</a> y <a href="/formacion-ia-empresas/">formación IA para empresas</a> tiene sentido: primero capacidad interna, luego automatización con cabeza.</p>
+<h2>8. Ejemplo práctico: informe mensual de ventas</h2>
+<p>Imagina una pyme que prepara cada mes un informe de ventas para dirección.</p>
+<h3>Solo con Excel</h3>
+<ul>
+<li>varias hojas;</li>
+<li>versiones por email;</li>
+<li>cálculos manuales;</li>
+<li>gráficos distintos cada mes;</li>
+<li>mucho tiempo preparando y poco tiempo analizando.</li>
+</ul>
+<h3>Con Power BI</h3>
+<ul>
+<li>datos conectados;</li>
+<li>limpieza recurrente;</li>
+<li>modelo estable;</li>
+<li>KPIs definidos;</li>
+<li>dashboard reutilizable;</li>
+<li>filtros por periodo, producto, zona o canal.</li>
+</ul>
+<h3>Con Power BI + IA</h3>
+<ul>
+<li>resumen ejecutivo del mes;</li>
+<li>explicación inicial de variaciones;</li>
+<li>lista de preguntas para dirección;</li>
+<li>borrador de acciones comerciales;</li>
+<li>documentación de métricas;</li>
+<li>plantilla de revisión mensual.</li>
+</ul>
+<p>La IA no decide por la empresa. Ayuda a que el equipo llegue antes a la conversación importante.</p>
+<h2>9. Gobierno mínimo para usar IA con reporting</h2>
+<p>Antes de usar IA con datos de empresa, conviene definir reglas sencillas:</p>
+<ul>
+<li>qué datos se pueden introducir y cuáles no;</li>
+<li>qué herramientas están permitidas;</li>
+<li>quién revisa conclusiones;</li>
+<li>cómo se citan fuentes o informes;</li>
+<li>qué indicadores no pueden interpretarse automáticamente;</li>
+<li>cómo se documentan prompts o plantillas recurrentes;</li>
+<li>qué salidas requieren validación técnica;</li>
+<li>qué procesos pueden automatizarse y cuáles no.</li>
+</ul>
+<p>No hace falta crear un tratado jurídico de 80 páginas. Pero sí un marco claro para que el equipo no improvise con datos sensibles.</p>
+<h2>10. Qué debería aprender el equipo</h2>
+<p>Para aprovechar IA y Power BI juntos, el equipo no necesita convertirse en científico de datos. Necesita entender lo suficiente para hacer buenas preguntas y revisar respuestas.</p>
+<p>Competencias clave:</p>
+<ul>
+<li>diferenciar dato, indicador, informe y decisión;</li>
+<li>limpiar datos básicos;</li>
+<li>entender modelos simples;</li>
+<li>leer un dashboard con criterio;</li>
+<li>redactar prompts útiles;</li>
+<li>revisar respuestas de IA;</li>
+<li>documentar métricas;</li>
+<li>detectar riesgos de privacidad;</li>
+<li>decidir cuándo automatizar y cuándo no.</li>
+</ul>
+<p>Ese es el punto donde formación, consultoría e implantación se conectan.</p>
+<h2>Resumen rápido</h2>
+<p>IA y Power BI funcionan mejor juntos cuando cada uno hace su trabajo:</p>
+<ul>
+<li><strong>Power BI:</strong> estructura datos, calcula KPIs, visualiza y comparte reporting.</li>
+<li><strong>IA:</strong> ayuda a explicar, resumir, documentar, generar hipótesis y acelerar tareas alrededor del informe.</li>
+<li><strong>Equipo humano:</strong> define criterio, valida resultados y decide.</li>
+</ul>
+<p>La combinación no va de sustituir analistas ni de pedirle a un chatbot que “entienda la empresa”. Va de crear un sistema donde los datos estén mejor preparados y las personas puedan dedicar menos tiempo a montar informes y más tiempo a decidir.</p>
+<h2>Siguiente paso</h2>
+<p>Si tu equipo quiere avanzar por esta línea, puedes empezar por la <a href="/curso-power-bi-empresas/">formación Power BI para empresas</a> para ordenar reporting y cuadros de mando, o por la <a href="/formacion-ia-empresas/">formación IA para empresas</a> para usar IA con seguridad y criterio.</p>
+<p>Cuando ya hay procesos claros, el siguiente paso puede ser una implantación de <a href="/ia-aplicada/">IA aplicada a empresas</a> para automatizar tareas concretas alrededor del dato, siempre con revisión humana donde haga falta.</p>
+
+    </div>
+
+    <footer class="post-footer container">
+      <div class="post-related" aria-label="Recursos relacionados de Aimtech">
+        <span class="post-footer-label">Siguiente paso</span>
+        <div class="post-related-links">
+          <a href="/curso-power-bi-empresas/">Formación Power BI empresas</a>
+          <a href="/formacion-ia-empresas/">Formación IA empresas Barcelona</a>
+          <a href="/consultoria-ia-empresas/">Consultoría IA</a>
+        </div>
+      </div>
+      <div class="post-footer-grid">
+        <div>
+          <span class="post-footer-label">Escrito por</span>
+          <a href="/sobre-mike/" class="post-author">Mike Pérez</a>
+        </div>
+        <div>
+          <span class="post-footer-label">¿Te resuena?</span>
+          <a href="/contacto/" class="post-cta">Hablemos sobre tu caso →</a>
+        </div>
+      </div>
+    </footer>
+  </article>
+
+</main>
+
+<!-- @region partials/footer-es.html -->
+<footer data-nosnippet>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech Consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">Aimtech</text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">Consulting</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formación e implantación de IA aplicada, Power BI y desarrollo a medida. Operado por una SL catalana con foco en pymes y administración pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/blog/">Blog</a>
+        <a href="/sobre-mike/">Sobre Mike</a>
+        <a href="/contacto/">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/politica-privacidad/">Privacidad</a>
+        <a href="/politica-cookies/">Cookies</a>
+        <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Cataluña</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+
+</body>
+</html>
