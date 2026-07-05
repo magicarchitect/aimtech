@@ -147,7 +147,7 @@ Como resumen, una buena propuesta debería incluir:
 
 - diagnóstico del nivel del equipo;
 - formación en directo con profesor;
-- opción presencial en Barcelona, in-company u online;
+- opción in-company/presencial en Barcelona u online en directo;
 - ejemplos de negocio verosímiles;
 - ChatGPT, Copilot y herramientas de IA generativa;
 - seguridad, privacidad y AI Act;
@@ -160,7 +160,7 @@ No se trata de formar “usuarios de una herramienta”. Se trata de que la empr
 
 ## Cómo lo planteamos en Aimtech
 
-En Aimtech planteamos la [formación en IA para empresas](/formacion-ia-empresas/) por niveles: desde uso seguro de ChatGPT y Copilot hasta automatizaciones y agentes IA aplicados a procesos reales. Podemos trabajar online en directo, presencial en Barcelona o in-company para grupos cerrados.
+En Aimtech planteamos la [formación en IA para empresas](/formacion-ia-empresas/) por niveles: desde uso seguro de ChatGPT y Copilot hasta automatizaciones y agentes IA aplicados a procesos reales. Podemos trabajar in-company/presencial en Barcelona u online en directo para grupos cerrados.
 
 La idea es práctica: menos espectáculo, más criterio. Que el equipo sepa qué pedirle a la IA, cómo revisar resultados, qué no debe introducir, qué tareas merecen automatizarse y dónde puede aparecer retorno real.
 

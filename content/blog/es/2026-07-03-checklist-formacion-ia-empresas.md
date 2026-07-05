@@ -12,7 +12,7 @@ translationKey: "checklist-formacion-ia-empresas"
 
 Contratar **formación IA para empresas** no debería consistir en elegir el temario más largo ni la demo más espectacular. Para una empresa, el criterio importante es otro: si después de la formación el equipo trabaja mejor, comete menos errores y usa la IA con criterio.
 
-Esta checklist está pensada para responsables de formación, dirección, operaciones o innovación que quieren comparar proveedores de **curso IA para empresas**, formación in-company, talleres presenciales u online en directo.
+Esta checklist está pensada para responsables de formación, dirección, operaciones o innovación que quieren comparar proveedores de **curso IA para empresas**, formación in-company/presencial en Barcelona u online en directo.
 
 Puedes usarla como guía antes de pedir propuesta o como filtro cuando recibas varias ofertas.
 
@@ -37,9 +37,9 @@ Una empresa no compra una masterclass suelta. Compra adopción, criterio y prác
 
 Comprueba si la formación permite:
 
-- sesiones presenciales en empresa o aula;
-- modalidad in-company para un grupo cerrado;
-- online en directo con interacción real;
+- sesiones presenciales en Barcelona, en empresa o aula;
+- modalidad in-company para un grupo cerrado en Barcelona o área metropolitana;
+- online en directo con interacción real para equipos distribuidos;
 - ejercicios adaptados por rol;
 - grupos con nivel homogéneo;
 - espacio para dudas reales;
@@ -184,7 +184,7 @@ Una propuesta seria debería explicar cómo se evaluará la utilidad de la forma
 
 Puedes copiar y pegar este bloque cuando pidas propuesta:
 
-> Queremos formación IA para un equipo de empresa. Nos interesa modalidad presencial, in-company u online en directo. Necesitamos saber: programa propuesto, duración, perfil del formador, ejemplos por departamento, tratamiento de privacidad y seguridad, entregables, precio por grupo y cómo adaptaríais la sesión a nuestro nivel actual.
+> Queremos formación IA para un equipo de empresa. Nos interesa modalidad in-company/presencial en Barcelona u online en directo. Necesitamos saber: programa propuesto, duración, perfil del formador, ejemplos por departamento, tratamiento de privacidad y seguridad, entregables, precio por grupo y cómo adaptaríais la sesión a nuestro nivel actual.
 
 Y estas preguntas adicionales:
 
@@ -195,6 +195,42 @@ Y estas preguntas adicionales:
 - ¿Podéis orientar ejercicios a administración, ventas, dirección u operaciones?
 - ¿Qué diferencia hay entre vuestro curso y una formación genérica?
 - ¿Qué entregables se lleva el equipo?
+
+## 11. Comparativa rápida de proveedores
+
+No todos los proveedores resuelven el mismo problema. Antes de decidir, conviene identificar qué estás comprando.
+
+### Academia o escuela grande
+
+Suele aportar marca, catálogo y estructura académica. Encaja si buscas un programa largo, convocatoria abierta o credencial reconocible. Puede quedarse corto si necesitas adaptar ejercicios a procesos internos concretos.
+
+### Plataforma de cursos online
+
+Es útil para autoformación, píldoras concretas o acceso amplio a muchos contenidos. El riesgo es que el equipo consuma vídeos sin cambiar hábitos ni resolver dudas reales.
+
+### Formador in-company
+
+Encaja cuando quieres trabajar con un grupo cerrado, nivel homogéneo y casos de negocio cercanos al día a día. Para Aimtech, el formato in-company/presencial tiene sentido en Barcelona; si el equipo está distribuido, lo planteamos online en directo.
+
+### Consultoría + formación
+
+Es la opción adecuada si además de formar queréis detectar procesos automatizables, diseñar normas internas de uso o pasar de prompts a flujos, RAG o agentes IA. Suele ser más cara, pero también más cercana al ROI.
+
+## 12. Plantilla de puntuación
+
+Puedes puntuar cada propuesta de 1 a 5 en estos criterios:
+
+- diagnóstico previo del equipo;
+- adaptación por departamento;
+- experiencia real del formador en procesos de empresa;
+- seguridad, privacidad y AI Act;
+- ejercicios prácticos y feedback;
+- entregables reutilizables;
+- claridad de precio por grupo;
+- continuidad después de la formación;
+- capacidad de conectar formación con automatización o IA aplicada.
+
+Si una propuesta gana por espectáculo pero pierde en diagnóstico, seguridad y transferencia, probablemente no es la mejor para empresa.
 
 ## Resumen rápido: señales buenas y malas
 
@@ -220,6 +256,6 @@ Y estas preguntas adicionales:
 
 ## Siguiente paso
 
-Si quieres una propuesta adaptada a tu equipo, en Aimtech trabajamos la [formación IA para empresas](/formacion-ia-empresas/) en formato presencial, in-company u online en directo, con casos de negocio y foco en uso práctico.
+Si quieres una propuesta adaptada a tu equipo, en Aimtech trabajamos la [formación IA para empresas](/formacion-ia-empresas/) en formato in-company/presencial en Barcelona u online en directo, con casos de negocio y foco en uso práctico.
 
 También podemos orientar el itinerario hacia [curso ChatGPT para empresas](/curso-chatgpt-empresas/) si el objetivo principal es mejorar el uso de IA generativa por departamentos, o hacia [IA aplicada a empresas](/ia-aplicada/) si queréis conectar la formación con procesos, automatización y agentes.

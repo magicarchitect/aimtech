@@ -65,4 +65,4 @@ Un escalón más allá está la **IA agéntica**: agentes que no solo responden,
 
 Porque marca por dónde empezar. La mayoría de organizaciones no necesitan agentes en producción el primer día: necesitan que su gente **aplique bien** la IA generativa que ya tiene delante y deje de perder horas en tareas que un buen prompt resuelve en segundos. Ese es el retorno más rápido y más barato, y es la base sobre la que luego se construye lo agéntico.
 
-Si quieres que tu equipo dé ese salto —de "usar ChatGPT a ratos" a aplicarlo con criterio en vuestros procesos—, en Aimtech damos [formación en IA para empresas y pymes](/formacion-ia-empresas/): online en directo, presencial en Barcelona o in-company, en grupos cerrados. La imparte quien también pone estos sistemas en producción, no una marca anónima.
+Si quieres que tu equipo dé ese salto —de "usar ChatGPT a ratos" a aplicarlo con criterio en vuestros procesos—, en Aimtech damos [formación en IA para empresas y pymes](/formacion-ia-empresas/): in-company/presencial en Barcelona u online en directo, en grupos cerrados. La imparte quien también pone estos sistemas en producción, no una marca anónima.
