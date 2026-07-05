@@ -1,6 +1,6 @@
 ---
-title: "Proveedor de formación IA para empresas: cómo elegir sin caer en humo"
-description: "Criterios para elegir proveedor de formación IA para empresas: diagnóstico, formador, seguridad, casos reales, entregables, precio y continuidad después del curso."
+title: "Proveedor de curso IA para empresas: cómo elegir sin caer en humo"
+description: "Criterios para elegir proveedor de curso IA para empresas: diagnóstico, formador, seguridad, casos reales, entregables, precio y continuidad después del curso."
 date: 2026-07-05
 author: "Mike Pérez"
 tags: ["ia-aplicada", "formacion", "empresas"]
@@ -10,7 +10,7 @@ slug: "proveedor-formacion-ia-empresas-como-elegir"
 translationKey: "proveedor-formacion-ia-empresas-como-elegir"
 ---
 
-Elegir un **proveedor de formación IA para empresas** es más delicado de lo que parece. La oferta se ha llenado de cursos rápidos, demos espectaculares y promesas de productividad inmediata. Algunas propuestas son útiles. Otras son humo con diapositivas bonitas.
+Elegir un **proveedor de curso IA para empresas** es más delicado de lo que parece. La oferta se ha llenado de cursos rápidos, demos espectaculares y promesas de productividad inmediata. Algunas propuestas son útiles. Otras son humo con diapositivas bonitas.
 
 La pregunta no es “¿quién sabe usar ChatGPT?”. La pregunta es: **¿quién puede ayudar a tu equipo a usar IA con seguridad, criterio y resultados medibles en procesos reales?**
 
@@ -151,7 +151,7 @@ Y añade estas preguntas:
 
 ## 10. Cómo lo planteamos en Aimtech
 
-En Aimtech diseñamos [formación en IA para empresas](/formacion-ia-empresas/) por niveles: uso seguro de ChatGPT y Copilot, casos por departamento, automatización, agentes IA y criterios de AI Act.
+En Aimtech diseñamos [cursos IA para empresas](/formacion-ia-empresas/) por niveles: uso seguro de ChatGPT y Copilot, casos por departamento, automatización, agentes IA y criterios de AI Act.
 
 La formación la imparte Mike Pérez y se orienta a equipos reales: administración, ventas, atención al cliente, operaciones, dirección o perfiles técnicos. Menos fuegos artificiales; más método, práctica y transferencia.
 

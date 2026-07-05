@@ -1,6 +1,6 @@
 ---
-title: "Formación IA para empresas en Barcelona: cómo elegir proveedor"
-description: "Criterios prácticos para elegir formación IA para empresas en Barcelona: formato, profesor, seguridad, casos reales, ChatGPT, Copilot, automatizaciones y ROI."
+title: "Curso IA para empresas en Barcelona: cómo elegir proveedor"
+description: "Criterios prácticos para elegir un curso IA para empresas en Barcelona: formato, profesor, seguridad, casos reales, ChatGPT, Copilot, automatizaciones y ROI."
 date: 2026-06-25
 author: "Mike Pérez"
 tags: ["ia-aplicada", "formacion", "barcelona"]
@@ -10,7 +10,7 @@ slug: "formacion-ia-empresas-barcelona-como-elegir"
 translationKey: "formacion-ia-empresas-barcelona-como-elegir"
 ---
 
-Elegir **formación IA para empresas en Barcelona** no debería consistir en comparar temarios bonitos o preguntar “¿cuántas horas dura?”. La pregunta importante es otra: después de la formación, ¿tu equipo usará mejor la IA en su trabajo real o solo habrá visto una demo espectacular?
+Elegir un **curso IA para empresas en Barcelona** no debería consistir en comparar temarios bonitos o preguntar “¿cuántas horas dura?”. La pregunta importante es otra: después de la formación, ¿tu equipo usará mejor la IA en su trabajo real o solo habrá visto una demo espectacular?
 
 La diferencia es enorme. Un curso genérico puede enseñar prompts, herramientas y ejemplos llamativos. Una buena formación para empresa debe cambiar hábitos: cómo redactar mejor una petición, cómo revisar respuestas, qué datos no introducir, cuándo usar ChatGPT o Copilot, cuándo automatizar un proceso y cuándo dejar a una persona en el circuito.
 
@@ -141,7 +141,7 @@ Señales de humo:
 
 La madurez se nota cuando el proveedor sabe frenar.
 
-## 10. Qué debería incluir una buena formación IA para empresas en Barcelona
+## 10. Qué debería incluir un buen curso IA para empresas en Barcelona
 
 Como resumen, una buena propuesta debería incluir:
 
@@ -160,7 +160,7 @@ No se trata de formar “usuarios de una herramienta”. Se trata de que la empr
 
 ## Cómo lo planteamos en Aimtech
 
-En Aimtech planteamos la [formación en IA para empresas](/formacion-ia-empresas/) por niveles: desde uso seguro de ChatGPT y Copilot hasta automatizaciones y agentes IA aplicados a procesos reales. Podemos trabajar in-company/presencial en Barcelona u online en directo para grupos cerrados.
+En Aimtech planteamos el [curso IA para empresas](/formacion-ia-empresas/) por niveles: desde uso seguro de ChatGPT y Copilot hasta automatizaciones y agentes IA aplicados a procesos reales. Podemos trabajar in-company/presencial en Barcelona u online en directo para grupos cerrados.
 
 La idea es práctica: menos espectáculo, más criterio. Que el equipo sepa qué pedirle a la IA, cómo revisar resultados, qué no debe introducir, qué tareas merecen automatizarse y dónde puede aparecer retorno real.
 

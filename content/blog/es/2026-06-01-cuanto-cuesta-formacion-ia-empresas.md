@@ -65,6 +65,6 @@ El precio sin contexto no dice nada. Esto es lo que separa una formación útil 
 
 ## Lo que cobramos nosotros (sin formulario de por medio)
 
-En Aimtech, la [formación IA para empresas en Barcelona](/formacion-ia-empresas/) parte de **3.500 € por grupo de hasta 5 personas** para el itinerario de 20 horas (35 €/h por alumno), con **700 € por persona adicional**, IVA aparte. In-company/presencial en Barcelona u online en directo. La imparte Mike Pérez, ingeniero de soluciones de IA y docente universitario, que es quien también pone estos sistemas en producción.
+En Aimtech, el [curso IA para empresas en Barcelona](/formacion-ia-empresas/) parte de **3.500 € por grupo de hasta 5 personas** para el itinerario de 20 horas (35 €/h por alumno), con **700 € por persona adicional**, IVA aparte. In-company/presencial en Barcelona u online en directo. La imparte Mike Pérez, ingeniero de soluciones de IA y docente universitario, que es quien también pone estos sistemas en producción.
 
 ¿Es la opción más barata del mercado? No, y es deliberado: es formación a medida, en grupo reducido y con autoría, no una convocatoria masiva. La licencia de las herramientas casi siempre es lo de menos en un proyecto de IA; lo caro es el tiempo del equipo aprendiendo mal. Por eso la inversión que más rinde es aprender a aplicarla bien desde el principio. Cuéntanos perfil del grupo y procesos que queréis abordar y te pasamos propuesta.

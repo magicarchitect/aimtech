@@ -1,6 +1,6 @@
 ---
-title: "Curso de inteligencia artificial para empresas: qué debería incluir"
-description: "Temario práctico para elegir un curso de inteligencia artificial para empresas: ChatGPT, Copilot, seguridad, casos por departamento, automatización y resultados medibles."
+title: "Curso IA para empresas: qué debería incluir"
+description: "Temario práctico para elegir un curso IA para empresas: ChatGPT, Copilot, seguridad, casos por departamento, automatización y resultados medibles."
 date: 2026-07-05
 author: "Mike Pérez"
 tags: ["ia-aplicada", "formacion", "empresas"]

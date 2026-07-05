@@ -1,6 +1,6 @@
 ---
-title: "Checklist para elegir formación IA para empresas sin caer en humo"
-description: "Lista práctica para responsables de formación, dirección y operaciones: cómo evaluar una formación IA para empresas antes de contratarla."
+title: "Checklist para elegir curso IA para empresas sin caer en humo"
+description: "Lista práctica para responsables de formación, dirección y operaciones: cómo evaluar un curso IA para empresas antes de contratarlo."
 date: 2026-07-03
 author: "Mike Pérez"
 tags: ["ia-aplicada", "formacion", "empresas"]
@@ -10,9 +10,9 @@ slug: "checklist-formacion-ia-empresas"
 translationKey: "checklist-formacion-ia-empresas"
 ---
 
-Contratar **formación IA para empresas** no debería consistir en elegir el temario más largo ni la demo más espectacular. Para una empresa, el criterio importante es otro: si después de la formación el equipo trabaja mejor, comete menos errores y usa la IA con criterio.
+Contratar un **curso IA para empresas** no debería consistir en elegir el temario más largo ni la demo más espectacular. Para una empresa, el criterio importante es otro: si después del curso el equipo trabaja mejor, comete menos errores y usa la IA con criterio.
 
-Esta checklist está pensada para responsables de formación, dirección, operaciones o innovación que quieren comparar proveedores de **curso IA para empresas**, formación in-company/presencial en Barcelona u online en directo.
+Esta checklist está pensada para responsables de formación, dirección, operaciones o innovación que quieren comparar proveedores de **curso IA para empresas**: formación in-company/presencial en Barcelona u online en directo.
 
 Puedes usarla como guía antes de pedir propuesta o como filtro cuando recibas varias ofertas.
 
@@ -47,7 +47,7 @@ Comprueba si la formación permite:
 
 Para equipos no técnicos, la formación grabada suele quedarse corta. La IA genera dudas de criterio, seguridad y calidad que necesitan conversación.
 
-Si buscas un formato práctico, revisa también la página de [formación IA para empresas](/formacion-ia-empresas/).
+Si buscas un formato práctico, revisa también la página de [curso IA para empresas en Barcelona](/formacion-ia-empresas/).
 
 ## 3. Experiencia del formador
 
@@ -66,7 +66,7 @@ Señal de alerta: respuestas vagas, exceso de palabras de moda o promesas de “
 
 ## 4. Contenido mínimo que debería cubrir
 
-Una buena **formación inteligencia artificial para empresas** debería incluir, como mínimo:
+Un buen **curso de inteligencia artificial para empresas** debería incluir, como mínimo:
 
 - conceptos básicos de IA generativa explicados sin humo;
 - prompting estructurado por rol y tarea;
