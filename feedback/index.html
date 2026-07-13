@@ -64,7 +64,7 @@
       <div class="fb-inner">
         <p class="fb-kicker">// encuesta de calidad · 1 min</p>
         <h1>¿Qué tal ha ido la <em>formación</em>?</h1>
-        <p class="fb-sub">Tu valoración nos ayuda a mejorar la siguiente. Son 6 preguntas rápidas y, si quieres, totalmente anónimas.</p>
+        <p class="fb-sub">Tu valoración nos ayuda a mejorar la siguiente. Son 7 preguntas rápidas y, si quieres, totalmente anónimas.</p>
         <div class="fb-actions">
           <button type="button" class="fb-btn" data-next>Empezar
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -95,15 +95,38 @@
             <span class="fb-key" aria-hidden="true">C</span>
             <span>Formación en IA aplicada</span>
           </label>
+          <label class="fb-option">
+            <input type="radio" name="formacion" value="sql-fundamentos">
+            <span class="fb-key" aria-hidden="true">D</span>
+            <span>Fundamentos de SQL</span>
+          </label>
         </div>
         <p class="fb-error">Selecciona una opción para continuar.</p>
+      </div>
+    </section>
+
+    <!-- 2 · Empresa -->
+    <section class="fb-step" data-step="empresa" data-progress>
+      <div class="fb-inner">
+        <span class="fb-qnum">02 →</span>
+        <h2>¿En qué <em>empresa</em> la has recibido?</h2>
+        <p class="fb-sub">Escribe el nombre de tu empresa o entidad. Nos sirve para agrupar las respuestas de cada grupo.</p>
+        <div class="fb-textarea-wrap fb-field">
+          <label for="empresa">Empresa o entidad</label>
+          <input type="text" id="empresa" name="empresa" autocomplete="organization" placeholder="Acme SL · Ayto. de…" maxlength="120">
+        </div>
+        <p class="fb-error">Escribe el nombre de tu empresa para continuar.</p>
+        <div class="fb-actions">
+          <button type="button" class="fb-btn" data-next>Continuar</button>
+          <span class="fb-enter-hint">pulsa Enter ↵</span>
+        </div>
       </div>
     </section>
 
     <!-- 2 · Calidad percibida -->
     <section class="fb-step" data-step="calidad" data-progress>
       <div class="fb-inner">
-        <span class="fb-qnum">02 →</span>
+        <span class="fb-qnum">03 →</span>
         <h2>¿Cómo valoras la <em>calidad</em> de la formación?</h2>
         <p class="fb-sub">De 1 (muy mejorable) a 5 (excelente).</p>
         <div class="fb-stars" role="radiogroup" aria-label="Calidad de la formación, de 1 a 5">
@@ -120,7 +143,7 @@
     <!-- 3 · Conocimiento del instructor -->
     <section class="fb-step" data-step="instructor" data-progress>
       <div class="fb-inner">
-        <span class="fb-qnum">03 →</span>
+        <span class="fb-qnum">04 →</span>
         <h2>¿Y el <em>conocimiento</em> del instructor?</h2>
         <p class="fb-sub">Dominio de la materia, claridad al explicar y resolución de dudas.</p>
         <div class="fb-stars" role="radiogroup" aria-label="Conocimiento del instructor, de 1 a 5">
@@ -137,7 +160,7 @@
     <!-- 4 · Calidad de los materiales -->
     <section class="fb-step" data-step="materiales" data-progress>
       <div class="fb-inner">
-        <span class="fb-qnum">04 →</span>
+        <span class="fb-qnum">05 →</span>
         <h2>¿Cómo valoras los <em>materiales</em>?</h2>
         <p class="fb-sub">Diapositivas, ejercicios, datasets y documentación de apoyo.</p>
         <div class="fb-stars" role="radiogroup" aria-label="Calidad de los materiales, de 1 a 5">
@@ -154,7 +177,7 @@
     <!-- 5 · Qué mejorarías -->
     <section class="fb-step" data-step="mejoras" data-progress>
       <div class="fb-inner">
-        <span class="fb-qnum">05 →</span>
+        <span class="fb-qnum">06 →</span>
         <h2>¿Qué <em>mejorarías</em> de esta formación?</h2>
         <p class="fb-sub">Respuesta libre y opcional: contenido, ritmo, ejemplos, logística…</p>
         <div class="fb-textarea-wrap fb-field">
@@ -171,7 +194,7 @@
     <!-- 6 · Identidad (opcional → anónimo) -->
     <section class="fb-step" data-step="identidad" data-progress>
       <div class="fb-inner">
-        <span class="fb-qnum">06 →</span>
+        <span class="fb-qnum">07 →</span>
         <h2>¿Quieres decirnos <em>quién eres</em>?</h2>
         <p class="fb-sub">Los dos campos son opcionales. Déjalos en blanco para enviar tu valoración de forma anónima.</p>
         <div class="fb-fields">
@@ -197,7 +220,7 @@
     <!-- 7 · Testimonio (solo si hay nombre) -->
     <section class="fb-step" data-step="testimonio" data-progress>
       <div class="fb-inner">
-        <span class="fb-qnum">07 →</span>
+        <span class="fb-qnum">08 →</span>
         <h2>¿Nos dejas un <em>testimonio</em>?</h2>
         <p class="fb-sub">Unas líneas sobre tu experiencia que podamos publicar en nuestra web o redes sociales, firmadas con tu nombre. Si lo prefieres, envía sin escribir nada.</p>
         <div class="fb-textarea-wrap fb-field">

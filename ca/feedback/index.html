@@ -64,7 +64,7 @@
       <div class="fb-inner">
         <p class="fb-kicker">// enquesta de qualitat · 1 min</p>
         <h1>Què tal ha anat la <em>formació</em>?</h1>
-        <p class="fb-sub">La teva valoració ens ajuda a millorar la següent. Són 6 preguntes ràpides i, si vols, totalment anònimes.</p>
+        <p class="fb-sub">La teva valoració ens ajuda a millorar la següent. Són 7 preguntes ràpides i, si vols, totalment anònimes.</p>
         <div class="fb-actions">
           <button type="button" class="fb-btn" data-next>Començar
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -95,15 +95,38 @@
             <span class="fb-key" aria-hidden="true">C</span>
             <span>Formació en IA aplicada</span>
           </label>
+          <label class="fb-option">
+            <input type="radio" name="formacion" value="sql-fundamentos">
+            <span class="fb-key" aria-hidden="true">D</span>
+            <span>Fonaments de SQL</span>
+          </label>
         </div>
         <p class="fb-error">Selecciona una opció per continuar.</p>
+      </div>
+    </section>
+
+    <!-- 2 · Empresa -->
+    <section class="fb-step" data-step="empresa" data-progress>
+      <div class="fb-inner">
+        <span class="fb-qnum">02 →</span>
+        <h2>A quina <em>empresa</em> l'has rebuda?</h2>
+        <p class="fb-sub">Escriu el nom de la teva empresa o entitat. Ens serveix per agrupar les respostes de cada grup.</p>
+        <div class="fb-textarea-wrap fb-field">
+          <label for="empresa">Empresa o entitat</label>
+          <input type="text" id="empresa" name="empresa" autocomplete="organization" placeholder="Acme SL · Ajuntament de…" maxlength="120">
+        </div>
+        <p class="fb-error">Escriu el nom de la teva empresa per continuar.</p>
+        <div class="fb-actions">
+          <button type="button" class="fb-btn" data-next>Continuar</button>
+          <span class="fb-enter-hint">prem Enter ↵</span>
+        </div>
       </div>
     </section>
 
     <!-- 2 · Qualitat percebuda -->
     <section class="fb-step" data-step="calidad" data-progress>
       <div class="fb-inner">
-        <span class="fb-qnum">02 →</span>
+        <span class="fb-qnum">03 →</span>
         <h2>Com valores la <em>qualitat</em> de la formació?</h2>
         <p class="fb-sub">D'1 (molt millorable) a 5 (excel·lent).</p>
         <div class="fb-stars" role="radiogroup" aria-label="Qualitat de la formació, d'1 a 5">
@@ -120,7 +143,7 @@
     <!-- 3 · Coneixement de l'instructor -->
     <section class="fb-step" data-step="instructor" data-progress>
       <div class="fb-inner">
-        <span class="fb-qnum">03 →</span>
+        <span class="fb-qnum">04 →</span>
         <h2>I el <em>coneixement</em> de l'instructor?</h2>
         <p class="fb-sub">Domini de la matèria, claredat en explicar i resolució de dubtes.</p>
         <div class="fb-stars" role="radiogroup" aria-label="Coneixement de l'instructor, d'1 a 5">
@@ -137,7 +160,7 @@
     <!-- 4 · Qualitat dels materials -->
     <section class="fb-step" data-step="materiales" data-progress>
       <div class="fb-inner">
-        <span class="fb-qnum">04 →</span>
+        <span class="fb-qnum">05 →</span>
         <h2>Com valores els <em>materials</em>?</h2>
         <p class="fb-sub">Diapositives, exercicis, datasets i documentació de suport.</p>
         <div class="fb-stars" role="radiogroup" aria-label="Qualitat dels materials, d'1 a 5">
@@ -154,7 +177,7 @@
     <!-- 5 · Què milloraries -->
     <section class="fb-step" data-step="mejoras" data-progress>
       <div class="fb-inner">
-        <span class="fb-qnum">05 →</span>
+        <span class="fb-qnum">06 →</span>
         <h2>Què <em>milloraries</em> d'aquesta formació?</h2>
         <p class="fb-sub">Resposta lliure i opcional: contingut, ritme, exemples, logística…</p>
         <div class="fb-textarea-wrap fb-field">
@@ -171,7 +194,7 @@
     <!-- 6 · Identitat (opcional → anònim) -->
     <section class="fb-step" data-step="identidad" data-progress>
       <div class="fb-inner">
-        <span class="fb-qnum">06 →</span>
+        <span class="fb-qnum">07 →</span>
         <h2>Vols dir-nos <em>qui ets</em>?</h2>
         <p class="fb-sub">Els dos camps són opcionals. Deixa'ls en blanc per enviar la teva valoració de manera anònima.</p>
         <div class="fb-fields">
@@ -197,7 +220,7 @@
     <!-- 7 · Testimoni (només amb nom) -->
     <section class="fb-step" data-step="testimonio" data-progress>
       <div class="fb-inner">
-        <span class="fb-qnum">07 →</span>
+        <span class="fb-qnum">08 →</span>
         <h2>Ens deixes un <em>testimoni</em>?</h2>
         <p class="fb-sub">Unes línies sobre la teva experiència que puguem publicar al nostre web o xarxes socials, signades amb el teu nom. Si ho prefereixes, envia sense escriure res.</p>
         <div class="fb-textarea-wrap fb-field">

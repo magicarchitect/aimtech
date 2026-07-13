@@ -118,6 +118,8 @@
     switch (step.dataset.step) {
       case 'formacion':
         return form.formacion.value !== '';
+      case 'empresa':
+        return form.empresa.value.trim() !== '';
       case 'calidad':
       case 'instructor':
       case 'materiales':
@@ -181,6 +183,7 @@
 
     const data = {
       formacion: form.formacion.value,
+      empresa: form.empresa.value.trim(),
       calidad: Number(form.calidad.value),
       instructor: Number(form.instructor.value),
       materiales: Number(form.materiales.value),
@@ -251,6 +254,7 @@
     idBtn.textContent = hasName() ? t.next : t.send;
     updateChrome();
   });
+  form.empresa.addEventListener('input', () => clearError(currentStep()));
   form.email.addEventListener('input', () => clearError(currentStep()));
   form.testimonio.addEventListener('input', () => clearError(currentStep()));
   form.consentTestimonio.addEventListener('change', () => clearError(currentStep()));
@@ -270,7 +274,7 @@
     }
 
     if (kind === 'formacion') {
-      const i = ['a', 'b', 'c'].indexOf(e.key.toLowerCase());
+      const i = ['a', 'b', 'c', 'd'].indexOf(e.key.toLowerCase());
       if (i > -1) selectRadio(form.formacion, i);
     } else if (kind === 'calidad' || kind === 'instructor' || kind === 'materiales') {
       const n = parseInt(e.key, 10);
