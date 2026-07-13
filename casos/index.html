@@ -139,23 +139,74 @@
           <div class="hero-cta"><a href="/contacto/" class="btn-primary">Quiero revisar mi caso <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a href="/ia-aplicada/" class="btn-ghost">Ver servicios de IA aplicada</a></div>
         </div>
 
-        <div class="lstage" aria-hidden="true">
-          <svg viewBox="0 0 560 560" role="img" aria-label="Diagrama abstracto de casos de IA aplicada y Power BI">
-            <rect class="l-field-box" x="88" y="116" width="160" height="120" rx="14"/>
-            <rect class="l-field-box" x="312" y="116" width="160" height="120" rx="14"/>
-            <rect class="l-field-box" x="88" y="320" width="160" height="120" rx="14"/>
-            <rect class="l-field-box" x="312" y="320" width="160" height="120" rx="14"/>
-            <path class="l-arrow" d="M248 176 C 275 176, 285 176, 312 176"/>
-            <path class="l-arrow" d="M392 236 C 392 270, 392 286, 392 320"/>
-            <path class="l-arrow" d="M312 380 C 280 380, 266 380, 248 380"/>
-            <path class="l-arrow" d="M168 320 C 168 286, 168 270, 168 236"/>
-            <text class="l-sub" x="116" y="164">proceso</text>
-            <text class="l-sub" x="340" y="164">datos</text>
-            <text class="l-sub" x="116" y="368">equipo</text>
-            <text class="l-sub" x="340" y="368">sistema</text>
+        <div class="cases-hero-stage" aria-hidden="true">
+          <div class="cases-stage-glow"></div>
+          <svg class="cases-flow-svg" viewBox="0 0 640 640" role="img" aria-label="Transformación de procesos manuales en sistemas medibles con Aimtech">
+            <defs>
+              <filter id="casesGlow" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="7" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <linearGradient id="casesBeam" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#2580e3" stop-opacity="0"/>
+                <stop offset="0.48" stop-color="#6db6ff" stop-opacity="0.95"/>
+                <stop offset="1" stop-color="#2580e3" stop-opacity="0"/>
+              </linearGradient>
+              <radialGradient id="casesCore" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#f4fbff"/>
+                <stop offset="0.28" stop-color="#78c0ff"/>
+                <stop offset="0.68" stop-color="#2580e3" stop-opacity="0.74"/>
+                <stop offset="1" stop-color="#2580e3" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <path class="cases-orbit cases-orbit--outer" d="M320 96 C444 96 544 196 544 320 C544 444 444 544 320 544 C196 544 96 444 96 320 C96 196 196 96 320 96Z"/>
+            <path class="cases-orbit cases-orbit--inner" d="M320 174 C401 174 466 239 466 320 C466 401 401 466 320 466 C239 466 174 401 174 320 C174 239 239 174 320 174Z"/>
+
+            <g class="cases-beams" filter="url(#casesGlow)">
+              <path class="cases-beam cases-beam--one" d="M98 190 C196 182 234 242 284 294"/>
+              <path class="cases-beam cases-beam--two" d="M92 320 C178 320 230 320 292 320"/>
+              <path class="cases-beam cases-beam--three" d="M98 450 C196 458 234 398 284 346"/>
+              <path class="cases-beam cases-beam--four" d="M356 292 C410 235 464 184 542 188"/>
+              <path class="cases-beam cases-beam--five" d="M370 320 C432 320 488 320 550 320"/>
+              <path class="cases-beam cases-beam--six" d="M356 348 C410 405 464 456 542 452"/>
+            </g>
+
+            <g class="cases-core" filter="url(#casesGlow)">
+              <circle cx="320" cy="320" r="78" fill="url(#casesCore)"/>
+              <circle class="cases-core-ring" cx="320" cy="320" r="92"/>
+              <path class="cases-core-mark" d="M282 328 L310 356 L362 282"/>
+              <text class="cases-core-text" x="320" y="414" text-anchor="middle">AIMTECH</text>
+            </g>
+
+            <g class="cases-particles" filter="url(#casesGlow)">
+              <circle class="cases-particle p1" cx="144" cy="206" r="4"/>
+              <circle class="cases-particle p2" cx="176" cy="320" r="3.5"/>
+              <circle class="cases-particle p3" cx="142" cy="434" r="4"/>
+              <circle class="cases-particle p4" cx="466" cy="206" r="4"/>
+              <circle class="cases-particle p5" cx="484" cy="320" r="3.5"/>
+              <circle class="cases-particle p6" cx="466" cy="434" r="4"/>
+            </g>
           </svg>
-          <span class="ltag ltag--accent" style="top:12%; left:4%;">// casos</span>
-          <span class="ltag" style="bottom:14%; right:5%;">anti-humo</span>
+
+          <div class="cases-stack cases-stack--before">
+            <div class="cases-stack-label">ANTES</div>
+            <div class="cases-mini-card"><span>Excel roto</span><strong>versiones</strong></div>
+            <div class="cases-mini-card"><span>PDFs a mano</span><strong>copia-pega</strong></div>
+            <div class="cases-mini-card"><span>IA sin método</span><strong>riesgo</strong></div>
+          </div>
+
+          <div class="cases-stack cases-stack--after">
+            <div class="cases-stack-label cases-stack-label--accent">DESPUÉS</div>
+            <div class="cases-mini-card cases-mini-card--good"><span>Power BI</span><strong>decisión</strong></div>
+            <div class="cases-mini-card cases-mini-card--good"><span>Automatización</span><strong>trazabilidad</strong></div>
+            <div class="cases-mini-card cases-mini-card--good"><span>IA aplicada</span><strong>control</strong></div>
+          </div>
+
+          <div class="cases-impact-panel">
+            <span>// casos de éxito</span>
+            <strong>Problema → Sistema</strong>
+          </div>
         </div>
 
       </div>
