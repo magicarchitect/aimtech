@@ -107,6 +107,7 @@
 .cases-core {
   transform-origin: 50% 50%;
   animation: casesCoreFloat 4.8s ease-in-out infinite;
+  filter: none;
 }
 
 .cases-core-ring {
@@ -120,8 +121,8 @@
 
 .cases-core-mark {
   fill: none;
-  stroke: #eef8ff;
-  stroke-width: 10;
+  stroke: rgba(215, 239, 255, 0.82);
+  stroke-width: 7.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
