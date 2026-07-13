@@ -105,6 +105,33 @@
   opacity: 0.98;
 }
 
+/* Scanline vertical que barre el escenario */
+.cases-hero-stage::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -130px;
+  height: 130px;
+  z-index: -1;
+  background: linear-gradient(180deg, transparent, rgba(109,182,255,0.06) 42%, rgba(109,182,255,0.13) 50%, rgba(109,182,255,0.06) 58%, transparent);
+  animation: casesScanline 9s ease-in-out infinite;
+}
+
+.cases-star {
+  opacity: 0.14;
+  animation: casesTwinkle 4.2s ease-in-out infinite;
+}
+
+.cases-star:nth-child(2) { animation-delay: 0.7s; }
+.cases-star:nth-child(3) { animation-delay: 1.4s; }
+.cases-star:nth-child(4) { animation-delay: 2.1s; }
+.cases-star:nth-child(5) { animation-delay: 2.8s; }
+.cases-star:nth-child(6) { animation-delay: 3.5s; }
+.cases-star:nth-child(7) { animation-delay: 1.1s; }
+.cases-star:nth-child(8) { animation-delay: 2.5s; }
+.cases-star:nth-child(9) { animation-delay: 3.2s; }
+
 .cases-orbit {
   fill: none;
   stroke: rgba(109, 182, 255, 0.22);
@@ -119,17 +146,17 @@
 .cases-beam {
   fill: none;
   stroke: url(#casesBeam);
-  stroke-width: 3.8;
+  stroke-width: 3;
   stroke-linecap: round;
   stroke-dasharray: 70 260;
-  animation: casesBeam 3.8s linear infinite;
+  animation: casesBeam 4.8s linear infinite;
 }
 
-.cases-beam--two { animation-delay: 0.35s; }
-.cases-beam--three { animation-delay: 0.7s; }
-.cases-beam--four { animation-delay: 1.05s; }
-.cases-beam--five { animation-delay: 1.4s; }
-.cases-beam--six { animation-delay: 1.75s; }
+.cases-beam--two { animation-delay: 0.8s; }
+.cases-beam--three { animation-delay: 1.6s; }
+.cases-beam--four { animation-delay: 0.4s; }
+.cases-beam--five { animation-delay: 1.2s; }
+.cases-beam--six { animation-delay: 2s; }
 
 .cases-core {
   transform-origin: 50% 50%;
@@ -146,26 +173,40 @@
   animation: casesRotate 18s linear infinite;
 }
 
+/* Barrido de radar dentro del núcleo */
+.cases-sweep {
+  transform-origin: 50% 50%;
+  animation: casesRotate 5.6s linear infinite;
+}
+
+/* Onda de choque que emana del núcleo con cada emisión (2.9s) */
+.cases-wave {
+  transform-origin: 50% 50%;
+  animation: casesWave 2.9s ease-out infinite;
+}
+
+.cases-wave--late { animation-delay: -1.45s; }
+
+/* Bisel de ticks tipo instrumento, contrarrotación lenta */
+.cases-bezel {
+  transform-origin: 50% 50%;
+  animation: casesRotate 64s linear infinite reverse;
+}
+
+/* El check se dibuja, se mantiene y fluye hacia fuera en loop */
 .cases-core-mark {
   fill: none;
   stroke: rgba(188, 226, 255, 0.72);
   stroke-width: 6.25;
   stroke-linecap: round;
   stroke-linejoin: round;
+  stroke-dasharray: 100;
+  animation: casesCheckDraw 7s ease-in-out infinite;
 }
 
 .cases-core-text {
   display: none;
 }
-
-.cases-particle {
-  fill: #8ccaff;
-  opacity: 0.82;
-  animation: casesParticle 2.8s ease-in-out infinite;
-}
-
-.cases-particle.p2, .cases-particle.p5 { animation-delay: 0.45s; }
-.cases-particle.p3, .cases-particle.p6 { animation-delay: 0.9s; }
 
 .cases-stack {
   position: absolute;
@@ -210,6 +251,22 @@
 .cases-mini-card:nth-child(3)::after { animation-delay: 0.45s; }
 .cases-mini-card:nth-child(4)::after { animation-delay: 0.9s; }
 
+/* ANTES: micro-glitch, algo no va bien */
+.cases-stack--before .cases-mini-card {
+  animation: casesJitter 7s linear infinite;
+}
+
+.cases-stack--before .cases-mini-card:nth-child(3) { animation-delay: 2.3s; }
+.cases-stack--before .cases-mini-card:nth-child(4) { animation-delay: 4.1s; }
+
+/* DESPUÉS: respiración de glow al ritmo de las emisiones del núcleo (2.9s) */
+.cases-mini-card--good {
+  animation: casesGlowPulse 2.9s ease-in-out infinite;
+}
+
+.cases-stack--after .cases-mini-card--good:nth-child(3) { animation-delay: 0.95s; }
+.cases-stack--after .cases-mini-card--good:nth-child(4) { animation-delay: 1.9s; }
+
 .cases-mini-card span,
 .cases-impact-panel span {
   display: block;
@@ -249,6 +306,19 @@
   text-align: center;
   backdrop-filter: blur(14px);
   pointer-events: none;
+  overflow: hidden;
+}
+
+/* Destello que recorre el borde superior del panel, al ritmo de las emisiones */
+.cases-impact-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(140,202,255,0.9), transparent);
+  animation: casesStreak 2.9s linear infinite;
 }
 
 .cases-impact-panel strong {
@@ -277,14 +347,56 @@
   50% { transform: translateY(-8px) scale(1.035); }
 }
 
-@keyframes casesParticle {
-  0%, 100% { opacity: 0.42; transform: scale(0.85); }
-  50% { opacity: 1; transform: scale(1.35); }
-}
-
 @keyframes casesScan {
   0%, 42% { transform: translateX(-120%); }
   68%, 100% { transform: translateX(120%); }
+}
+
+@keyframes casesTwinkle {
+  0%, 100% { opacity: 0.14; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes casesScanline {
+  0% { transform: translateY(0); }
+  58%, 100% { transform: translateY(780px); }
+}
+
+@keyframes casesCheckDraw {
+  0% { stroke-dashoffset: 100; }
+  18% { stroke-dashoffset: 0; }
+  82% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -100; }
+}
+
+@keyframes casesWave {
+  0% { transform: scale(0.94); opacity: 0; }
+  14% { opacity: 0.55; }
+  100% { transform: scale(1.85); opacity: 0; }
+}
+
+@keyframes casesJitter {
+  0%, 91%, 100% { transform: translateX(0); }
+  92.5% { transform: translateX(-2px); }
+  94% { transform: translateX(1.6px); }
+  95.5% { transform: translateX(-1px); }
+  97% { transform: translateX(0.6px); }
+}
+
+@keyframes casesGlowPulse {
+  0%, 100% {
+    border-color: rgba(109, 182, 255, 0.26);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 22px 40px rgba(0,0,0,0.28);
+  }
+  50% {
+    border-color: rgba(140, 202, 255, 0.6);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 22px 40px rgba(0,0,0,0.28), 0 0 30px rgba(37,128,227,0.3);
+  }
+}
+
+@keyframes casesStreak {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(400%); }
 }
 
 @media (max-width: 959px) {
@@ -315,9 +427,29 @@
   .cases-beam,
   .cases-core,
   .cases-core-ring,
-  .cases-particle,
-  .cases-mini-card::after {
+  .cases-core-mark,
+  .cases-sweep,
+  .cases-bezel,
+  .cases-star,
+  .cases-mini-card,
+  .cases-mini-card::after,
+  .cases-impact-panel::before,
+  .cases-hero-stage::after {
     animation: none !important;
+  }
+
+  /* El check queda dibujado en estático */
+  .cases-core-mark {
+    stroke-dashoffset: 0;
+  }
+
+  /* SMIL no se detiene con animation:none — se ocultan los grupos en movimiento */
+  .cases-frags,
+  .cases-pulses,
+  .cases-sats,
+  .cases-sweep,
+  .cases-wave {
+    display: none;
   }
 }
 
