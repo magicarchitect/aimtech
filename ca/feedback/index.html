@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Enquesta de qualitat de la formació | Aimtech</title>
+<meta name="description" content="Valora en 1 minut la formació rebuda. Anònima si vols: el teu feedback ens ajuda a millorar la següent." />
+
+<link rel="canonical" href="https://www.aimtech.es/ca/feedback/" />
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/feedback/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/feedback/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/feedback/" />
+
+<link rel="icon" type="image/x-icon" href="../../assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="../../assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="../../assets/logo.png?v=2" />
+
+<!-- Eina interna per a alumnes: fora de cercadors i del sitemap -->
+<meta name="robots" content="noindex" />
+
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../css/tokens.css">
+<link rel="stylesheet" href="../../css/fonts.css">
+<link rel="stylesheet" href="../../css/base.css">
+<link rel="stylesheet" href="../../css/feedback.css">
+<script src="../../js/feedback-form.js" defer></script>
+</head>
+<body class="fb-body">
+
+<div class="grid-bg"></div>
+<div class="noise"></div>
+
+<div class="fb-progress" aria-hidden="true"><span id="fbBar"></span></div>
+
+<header class="fb-top">
+  <a href="/ca/" class="fb-logo" aria-label="Aimtech — inici">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" width="34" height="34" />
+    <span>Aimtech</span>
+  </a>
+  <div class="fb-top-right">
+    <span class="fb-count" id="fbCount" aria-live="polite"></span>
+    <div class="fb-lang">
+      <a href="/feedback/">ES</a>
+      <span class="sep">/</span>
+      <a href="/ca/feedback/" class="active" aria-current="page">CA</a>
+    </div>
+  </div>
+</header>
+
+<main class="fb-main">
+  <noscript><p style="padding:40px 28px;color:var(--ink-dim);font-family:var(--mono);font-size:14px;">Aquesta enquesta necessita JavaScript. Activa'l o escriu-nos a hola@aimtech.es.</p></noscript>
+
+  <form id="fbForm" class="fb-form" data-lang="ca" novalidate>
+
+    <!-- Honeypot: camp invisible per a humans, els bots tendeixen a omplir-lo -->
+    <div class="fb-hp" aria-hidden="true">
+      <label for="website">No omplis aquest camp</label>
+      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <!-- 0 · Portada -->
+    <section class="fb-step is-active" data-step="intro">
+      <div class="fb-inner">
+        <p class="fb-kicker">// enquesta de qualitat · 1 min</p>
+        <h1>Què tal ha anat la <em>formació</em>?</h1>
+        <p class="fb-sub">La teva valoració ens ajuda a millorar la següent. Són 6 preguntes ràpides i, si vols, totalment anònimes.</p>
+        <div class="fb-actions">
+          <button type="button" class="fb-btn" data-next>Començar
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
+          <span class="fb-enter-hint">prem Enter ↵</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1 · Tipus de formació -->
+    <section class="fb-step" data-step="formacion" data-progress>
+      <div class="fb-inner">
+        <span class="fb-qnum">01 →</span>
+        <h2>Quina formació has rebut?</h2>
+        <div class="fb-options" role="radiogroup" aria-label="Tipus de formació rebuda">
+          <label class="fb-option">
+            <input type="radio" name="formacion" value="powerbi-basico">
+            <span class="fb-key" aria-hidden="true">A</span>
+            <span>Power BI: de bàsic a intermedi</span>
+          </label>
+          <label class="fb-option">
+            <input type="radio" name="formacion" value="powerbi-avanzado">
+            <span class="fb-key" aria-hidden="true">B</span>
+            <span>Power BI: nivell avançat</span>
+          </label>
+          <label class="fb-option">
+            <input type="radio" name="formacion" value="ia-aplicada">
+            <span class="fb-key" aria-hidden="true">C</span>
+            <span>Formació en IA aplicada</span>
+          </label>
+        </div>
+        <p class="fb-error">Selecciona una opció per continuar.</p>
+      </div>
+    </section>
+
+    <!-- 2 · Qualitat percebuda -->
+    <section class="fb-step" data-step="calidad" data-progress>
+      <div class="fb-inner">
+        <span class="fb-qnum">02 →</span>
+        <h2>Com valores la <em>qualitat</em> de la formació?</h2>
+        <p class="fb-sub">D'1 (molt millorable) a 5 (excel·lent).</p>
+        <div class="fb-stars" role="radiogroup" aria-label="Qualitat de la formació, d'1 a 5">
+          <label class="fb-star"><input type="radio" name="calidad" value="1" aria-label="1 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">1</span></label>
+          <label class="fb-star"><input type="radio" name="calidad" value="2" aria-label="2 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">2</span></label>
+          <label class="fb-star"><input type="radio" name="calidad" value="3" aria-label="3 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">3</span></label>
+          <label class="fb-star"><input type="radio" name="calidad" value="4" aria-label="4 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">4</span></label>
+          <label class="fb-star"><input type="radio" name="calidad" value="5" aria-label="5 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">5</span></label>
+        </div>
+        <p class="fb-error">Tria una puntuació d'1 a 5.</p>
+      </div>
+    </section>
+
+    <!-- 3 · Coneixement de l'instructor -->
+    <section class="fb-step" data-step="instructor" data-progress>
+      <div class="fb-inner">
+        <span class="fb-qnum">03 →</span>
+        <h2>I el <em>coneixement</em> de l'instructor?</h2>
+        <p class="fb-sub">Domini de la matèria, claredat en explicar i resolució de dubtes.</p>
+        <div class="fb-stars" role="radiogroup" aria-label="Coneixement de l'instructor, d'1 a 5">
+          <label class="fb-star"><input type="radio" name="instructor" value="1" aria-label="1 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">1</span></label>
+          <label class="fb-star"><input type="radio" name="instructor" value="2" aria-label="2 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">2</span></label>
+          <label class="fb-star"><input type="radio" name="instructor" value="3" aria-label="3 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">3</span></label>
+          <label class="fb-star"><input type="radio" name="instructor" value="4" aria-label="4 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">4</span></label>
+          <label class="fb-star"><input type="radio" name="instructor" value="5" aria-label="5 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">5</span></label>
+        </div>
+        <p class="fb-error">Tria una puntuació d'1 a 5.</p>
+      </div>
+    </section>
+
+    <!-- 4 · Qualitat dels materials -->
+    <section class="fb-step" data-step="materiales" data-progress>
+      <div class="fb-inner">
+        <span class="fb-qnum">04 →</span>
+        <h2>Com valores els <em>materials</em>?</h2>
+        <p class="fb-sub">Diapositives, exercicis, datasets i documentació de suport.</p>
+        <div class="fb-stars" role="radiogroup" aria-label="Qualitat dels materials, d'1 a 5">
+          <label class="fb-star"><input type="radio" name="materiales" value="1" aria-label="1 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">1</span></label>
+          <label class="fb-star"><input type="radio" name="materiales" value="2" aria-label="2 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">2</span></label>
+          <label class="fb-star"><input type="radio" name="materiales" value="3" aria-label="3 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">3</span></label>
+          <label class="fb-star"><input type="radio" name="materiales" value="4" aria-label="4 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">4</span></label>
+          <label class="fb-star"><input type="radio" name="materiales" value="5" aria-label="5 de 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.1l2.72 5.51 6.08.88-4.4 4.29 1.04 6.05L12 16.98l-5.44 2.86 1.04-6.05-4.4-4.29 6.08-.88L12 3.1z"/></svg><span class="fb-star-num">5</span></label>
+        </div>
+        <p class="fb-error">Tria una puntuació d'1 a 5.</p>
+      </div>
+    </section>
+
+    <!-- 5 · Què milloraries -->
+    <section class="fb-step" data-step="mejoras" data-progress>
+      <div class="fb-inner">
+        <span class="fb-qnum">05 →</span>
+        <h2>Què <em>milloraries</em> d'aquesta formació?</h2>
+        <p class="fb-sub">Resposta lliure i opcional: contingut, ritme, exemples, logística…</p>
+        <div class="fb-textarea-wrap fb-field">
+          <textarea id="mejoras" name="mejoras" rows="5" maxlength="2000"
+                    placeholder="M'hauria agradat més temps per a…" aria-label="Què milloraries d'aquesta formació"></textarea>
+        </div>
+        <div class="fb-actions">
+          <button type="button" class="fb-btn" data-next>Continuar</button>
+          <span class="fb-enter-hint">Enter ↵ per continuar · Shift + Enter per saltar de línia</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · Identitat (opcional → anònim) -->
+    <section class="fb-step" data-step="identidad" data-progress>
+      <div class="fb-inner">
+        <span class="fb-qnum">06 →</span>
+        <h2>Vols dir-nos <em>qui ets</em>?</h2>
+        <p class="fb-sub">Els dos camps són opcionals. Deixa'ls en blanc per enviar la teva valoració de manera anònima.</p>
+        <div class="fb-fields">
+          <div class="fb-field">
+            <label for="nombre">Nom <span class="opt">— opcional</span></label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Nom i cognoms" maxlength="100">
+          </div>
+          <div class="fb-field">
+            <label for="email">Correu electrònic <span class="opt">— opcional</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="tu@empresa.com" maxlength="120">
+          </div>
+        </div>
+        <p class="fb-micro">Si deixes les teves dades, s'usen només per gestionar aquest feedback, d'acord amb la <a href="/ca/politica-privacitat/">política de privacitat</a>.</p>
+        <p class="fb-error">Format de correu no vàlid.</p>
+        <div class="fb-actions">
+          <button type="button" class="fb-btn" data-next>Enviar respostes</button>
+          <span class="fb-enter-hint">prem Enter ↵</span>
+        </div>
+        <div class="fb-status" role="alert" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 7 · Testimoni (només amb nom) -->
+    <section class="fb-step" data-step="testimonio" data-progress>
+      <div class="fb-inner">
+        <span class="fb-qnum">07 →</span>
+        <h2>Ens deixes un <em>testimoni</em>?</h2>
+        <p class="fb-sub">Unes línies sobre la teva experiència que puguem publicar al nostre web o xarxes socials, signades amb el teu nom. Si ho prefereixes, envia sense escriure res.</p>
+        <div class="fb-textarea-wrap fb-field">
+          <textarea id="testimonio" name="testimonio" rows="5" maxlength="1500"
+                    placeholder="La formació m'ha servit per a…" aria-label="Testimoni per publicar"></textarea>
+        </div>
+        <label class="fb-consent">
+          <input type="checkbox" id="consentTestimonio" name="consentTestimonio">
+          <span>Autoritzo Aimtech a publicar aquest testimoni al seu web i xarxes socials, signat amb el meu nom.</span>
+        </label>
+        <p class="fb-error">Per publicar el testimoni necessitem la teva autorització. Marca-la, o esborra el text per enviar sense testimoni.</p>
+        <div class="fb-actions">
+          <button type="button" class="fb-btn" data-next>Enviar respostes</button>
+          <span class="fb-enter-hint">prem Enter ↵</span>
+        </div>
+        <div class="fb-status" role="alert" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Fi -->
+    <section class="fb-step" data-step="fin">
+      <div class="fb-inner">
+        <div class="fb-ok" aria-hidden="true"></div>
+        <h2>Enviat. <em>Gràcies</em> per ajudar-nos a millorar.</h2>
+        <p class="fb-sub">La teva valoració arriba directament a l'equip. Si has deixat un testimoni, el revisarem abans de publicar-lo.</p>
+        <a class="fb-back" href="/ca/">← Tornar a aimtech.es</a>
+      </div>
+    </section>
+
+  </form>
+</main>
+
+<footer class="fb-foot">
+  <span class="fb-hint">Enter ↵ per continuar</span>
+  <div class="fb-arrows">
+    <button type="button" class="fb-arrow" id="fbPrev" aria-label="Pregunta anterior">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 13V1M7 1L1 7M7 1L13 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" class="fb-arrow" id="fbNext" aria-label="Pregunta següent">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1V13M7 13L1 7M7 13L13 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</footer>
+
+</body>
+</html>
