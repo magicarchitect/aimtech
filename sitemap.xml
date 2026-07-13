@@ -205,6 +205,17 @@
   <url>
     <loc>https://www.aimtech.es/casos/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/casos/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/casos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/casos/"/>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/casos/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/casos/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/casos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/casos/"/>
     <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -214,6 +225,17 @@
   <url>
     <loc>https://www.aimtech.es/casos/excel-power-bi-equipo-administrativo/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/casos/excel-power-bi-equipo-administrativo/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/casos/excel-power-bi-equip-administratiu/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/casos/excel-power-bi-equipo-administrativo/"/>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/casos/excel-power-bi-equip-administratiu/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/casos/excel-power-bi-equipo-administrativo/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/casos/excel-power-bi-equip-administratiu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/casos/excel-power-bi-equipo-administrativo/"/>
     <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -223,6 +245,17 @@
   <url>
     <loc>https://www.aimtech.es/casos/formacion-ia-equipos-no-tecnicos/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/casos/formacion-ia-equipos-no-tecnicos/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/casos/formacio-ia-equips-no-tecnics/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/casos/formacion-ia-equipos-no-tecnicos/"/>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/casos/formacio-ia-equips-no-tecnics/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/casos/formacion-ia-equipos-no-tecnicos/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/casos/formacio-ia-equips-no-tecnics/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/casos/formacion-ia-equipos-no-tecnicos/"/>
     <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
