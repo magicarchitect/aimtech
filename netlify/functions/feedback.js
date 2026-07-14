@@ -201,9 +201,11 @@ exports.handler = async (event) => {
   const MAIL_FROM = process.env.MAIL_FROM || SMTP_USER;
   const smtpConfigured = Boolean(SMTP_USER && SMTP_PASS);
 
-  const GS_ID = process.env.GSHEETS_SPREADSHEET_ID;
-  const GS_EMAIL = process.env.GSHEETS_CLIENT_EMAIL;
-  const GS_KEY = (process.env.GSHEETS_PRIVATE_KEY || '').replace(/\\n/g, '\n');
+  // trim: un espacio o salto de línea colado al pegar el valor en
+  // Netlify acaba en la URL de la API y produce un 404 desconcertante
+  const GS_ID = (process.env.GSHEETS_SPREADSHEET_ID || '').trim();
+  const GS_EMAIL = (process.env.GSHEETS_CLIENT_EMAIL || '').trim();
+  const GS_KEY = (process.env.GSHEETS_PRIVATE_KEY || '').replace(/\\n/g, '\n').trim();
   const sheetsConfigured = Boolean(GS_ID && GS_EMAIL && GS_KEY);
 
   if (!smtpConfigured && !sheetsConfigured) {
@@ -243,7 +245,9 @@ exports.handler = async (event) => {
       });
       sheetOk = true;
     } catch (err) {
-      console.error('Sheets append failed:', err.message);
+      // longitud del ID como pista: un ID válido ronda los 44 caracteres;
+      // ~80+ delata que se pegó la URL completa en la variable
+      console.error(`Sheets append failed (spreadsheetId: ${GS_ID.length} chars):`, err.message);
     }
   }
 
