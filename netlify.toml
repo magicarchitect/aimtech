@@ -46,6 +46,24 @@
   [headers.values]
     Cache-Control = "no-store"
 
+# Endpoint de la encuesta de feedback: nunca cachear.
+[[headers]]
+  for = "/.netlify/functions/feedback"
+  [headers.values]
+    Cache-Control = "no-store"
+
+# Encuesta de feedback: herramienta interna para alumnos.
+# noindex también por cabecera (refuerza el meta robots).
+[[headers]]
+  for = "/feedback/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/ca/feedback/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
 # ── Cache: CSS y XML medio (1 hora) ──────────────────
 # CSS aún se itera; sitemap.xml puede actualizarse.
 
