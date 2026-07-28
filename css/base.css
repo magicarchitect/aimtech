@@ -63,6 +63,15 @@ body {
    «servicios relacionados» de IA agéntica. */
 [data-stagger].is-visible > *:nth-child(n+9) { opacity: 1; transform: translateY(0); }
 
+/* GSAP toma el control de los mismos estados sin competir con las
+   transiciones CSS. Si la librería no carga, estas reglas no se activan y
+   el fallback IntersectionObserver conserva el comportamiento anterior. */
+html.gsap-ready [data-reveal],
+html.gsap-ready [data-stagger] > * {
+  transition: none;
+  will-change: transform, opacity;
+}
+
 /* ── Keyframes ──────────────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
@@ -129,6 +138,11 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+  [data-reveal], [data-stagger] > * {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
   }
 }
 
