@@ -1,9 +1,10 @@
 // build.js — pipeline de build estático para Aimtech.
 //
 // Pasos:
-//   1) Genera el blog (posts e índices) desde /content/blog/{es,ca}/*.md
-//   2) Actualiza el bloque BLOG-AUTO en sitemap.xml con las URLs del blog
-//   3) Resuelve markers <!-- @region partials/X.html --> en todo *.html
+//   1) Copia los assets de GSAP desde node_modules a /js/vendor
+//   2) Genera el blog (posts e índices) desde /content/blog/{es,ca}/*.md
+//   3) Actualiza el bloque BLOG-AUTO en sitemap.xml con las URLs del blog
+//   4) Resuelve markers <!-- @region partials/X.html --> en todo *.html
 //
 // Uso: `node build.js` antes de cada commit/deploy. Idempotente.
 
@@ -17,6 +18,30 @@ const SITE_URL = 'https://www.aimtech.es';
 const SKIP_DIRS = new Set(['node_modules', 'partials', '.git', '.netlify', 'netlify', 'content']);
 
 const md = new MarkdownIt({ html: true, linkify: true, typographer: true });
+
+// ─────────────────────────────────────────────────────
+// 0) VENDOR ASSETS
+// ─────────────────────────────────────────────────────
+
+function copyGsapAssets() {
+  const vendorDir = path.join(ROOT, 'js', 'vendor');
+  const assets = [
+    ['gsap', 'dist', 'gsap.min.js'],
+    ['gsap', 'dist', 'ScrollTrigger.min.js'],
+  ];
+
+  fs.mkdirSync(vendorDir, { recursive: true });
+  console.log('\n→ Preparando GSAP...');
+  for (const parts of assets) {
+    const source = path.join(ROOT, 'node_modules', ...parts);
+    const destination = path.join(vendorDir, parts[parts.length - 1]);
+    if (!fs.existsSync(source)) {
+      throw new Error(`Asset GSAP no encontrado: ${path.relative(ROOT, source)}`);
+    }
+    fs.copyFileSync(source, destination);
+    console.log(`  ✓ ${path.relative(ROOT, destination)}`);
+  }
+}
 
 // ─────────────────────────────────────────────────────
 // 1) BLOG
@@ -403,6 +428,7 @@ function walk(dir) {
 
 console.log('build.js — pipeline de build');
 
+copyGsapAssets();
 const allPosts = buildBlog();
 updateSitemap(allPosts);
 

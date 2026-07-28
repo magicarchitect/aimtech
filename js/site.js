@@ -53,17 +53,40 @@
     });
   }
 
-  // ─── Scroll Reveal ──────────────────────────────────────────────
-  // Cualquier elemento [data-reveal] o [data-stagger] queda oculto
-  // hasta que entra en el viewport. Threshold: 0 con rootMargin
-  // negativo en el bottom para disparar cuando aparece el borde
-  // superior del elemento — funciona tanto si el elemento es
-  // pequeño como si es más alto que el viewport (caso móvil).
-  function startReveal() {
+  // ─── Motion engine: GSAP + fallback nativo ─────────────────────
+  // Los assets se sirven desde el propio dominio. GSAP mejora el ritmo y el
+  // escalonado; si falla, IntersectionObserver mantiene visible el contenido.
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const existing = document.querySelector(`script[src="${src}"]`);
+      if (existing) {
+        if (existing.dataset.loaded === 'true') resolve();
+        else {
+          existing.addEventListener('load', resolve, { once: true });
+          existing.addEventListener('error', reject, { once: true });
+        }
+        return;
+      }
+      const script = document.createElement('script');
+      script.src = src;
+      script.defer = true;
+      script.addEventListener('load', () => {
+        script.dataset.loaded = 'true';
+        resolve();
+      }, { once: true });
+      script.addEventListener('error', reject, { once: true });
+      document.head.appendChild(script);
+    });
+  }
+
+  function revealEverything() {
+    document.querySelectorAll('[data-reveal], [data-stagger]')
+      .forEach(el => el.classList.add('is-visible'));
+  }
+
+  function startNativeReveal() {
     if (!('IntersectionObserver' in window)) {
-      // Fallback: muestra todo de golpe en navegadores antiguos.
-      document.querySelectorAll('[data-reveal], [data-stagger]')
-        .forEach(el => el.classList.add('is-visible'));
+      revealEverything();
       return;
     }
     const observer = new IntersectionObserver((entries) => {
@@ -73,12 +96,123 @@
           observer.unobserve(entry.target);
         }
       });
-    }, {
-      threshold: 0,
-      rootMargin: '0px 0px -80px 0px'
-    });
+    }, { threshold: 0, rootMargin: '0px 0px -80px 0px' });
     document.querySelectorAll('[data-reveal], [data-stagger]')
       .forEach(el => observer.observe(el));
+  }
+
+  function startGsapReveal() {
+    const { gsap, ScrollTrigger } = window;
+    gsap.registerPlugin(ScrollTrigger);
+    document.documentElement.classList.add('gsap-ready');
+
+    const finish = elements => {
+      elements.forEach(el => el.classList.add('is-visible'));
+      gsap.set(elements, { clearProps: 'transform,opacity,willChange' });
+    };
+
+    const revealGroups = [
+      { selector: '[data-reveal="left"]', from: { x: -36, y: 0 } },
+      { selector: '[data-reveal="scale"]', from: { scale: 0.96, y: 0 } },
+      { selector: '[data-reveal]:not([data-reveal="left"]):not([data-reveal="scale"])', from: { y: 28 } },
+    ];
+
+    revealGroups.forEach(group => {
+      const targets = gsap.utils.toArray(group.selector);
+      if (!targets.length) return;
+      gsap.set(targets, { ...group.from, opacity: 0 });
+      ScrollTrigger.batch(targets, {
+        start: 'top 88%',
+        once: true,
+        interval: 0.08,
+        batchMax: 5,
+        onEnter: batch => gsap.to(batch, {
+          x: 0,
+          y: 0,
+          scale: 1,
+          opacity: 1,
+          duration: 0.78,
+          ease: 'power3.out',
+          stagger: 0.07,
+          overwrite: 'auto',
+          onComplete: () => finish(batch),
+        }),
+      });
+    });
+
+    document.querySelectorAll('[data-stagger]').forEach(container => {
+      const children = Array.from(container.children);
+      if (!children.length) {
+        container.classList.add('is-visible');
+        return;
+      }
+      gsap.set(children, { y: 22, opacity: 0 });
+      ScrollTrigger.create({
+        trigger: container,
+        start: 'top 88%',
+        once: true,
+        onEnter: self => {
+          gsap.to(children, {
+            y: 0,
+            opacity: 1,
+            duration: 0.68,
+            ease: 'power3.out',
+            stagger: { each: 0.085, from: 'start' },
+            overwrite: 'auto',
+            onComplete: () => {
+              container.classList.add('is-visible');
+              gsap.set(children, { clearProps: 'transform,opacity,willChange' });
+            },
+          });
+          self.kill();
+        },
+      });
+    });
+
+    // Paralaje muy leve del grid: una sola capa, solo en desktop y sin
+    // animación para usuarios que piden movimiento reducido.
+    const mm = gsap.matchMedia();
+    mm.add('(min-width: 960px) and (prefers-reduced-motion: no-preference)', () => {
+      const grid = document.querySelector('.grid-bg');
+      if (!grid) return;
+      gsap.fromTo(grid,
+        { y: -24, scale: 1.03 },
+        {
+          y: 48,
+          scale: 1.06,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: document.documentElement,
+            start: 'top top',
+            end: 'max',
+            scrub: 1.2,
+          },
+        }
+      );
+    });
+
+    window.addEventListener('load', () => ScrollTrigger.refresh(), { once: true });
+  }
+
+  // ─── Scroll Reveal ──────────────────────────────────────────────
+  // Cualquier elemento [data-reveal] o [data-stagger] queda oculto
+  // hasta que entra en el viewport. Threshold: 0 con rootMargin
+  // negativo en el bottom para disparar cuando aparece el borde
+  // superior del elemento — funciona tanto si el elemento es
+  // pequeño como si es más alto que el viewport (caso móvil).
+  function startReveal() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      revealEverything();
+      return;
+    }
+    Promise.resolve()
+      .then(() => window.gsap ? null : loadScript('/js/vendor/gsap.min.js'))
+      .then(() => window.ScrollTrigger ? null : loadScript('/js/vendor/ScrollTrigger.min.js'))
+      .then(startGsapReveal)
+      .catch(error => {
+        console.warn('GSAP no disponible; usando animación nativa.', error);
+        startNativeReveal();
+      });
   }
 
   // ─── Nav móvil (hamburguesa + drawer) ───────────────────────────
