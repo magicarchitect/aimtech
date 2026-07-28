@@ -151,7 +151,7 @@ Y añade estas preguntas:
 
 ## 10. Cómo lo planteamos en Aimtech
 
-En Aimtech diseñamos [cursos IA para empresas](/formacion-ia-empresas/) por niveles: uso seguro de ChatGPT y Copilot, casos por departamento, automatización, agentes IA y criterios de AI Act.
+En Aimtech diseñamos [formación en IA aplicada para empresas](/formacion-ia-empresas/) por niveles: uso seguro de ChatGPT y Copilot, casos por departamento, automatización, agentes IA y criterios de AI Act.
 
 La formación la imparte Mike Pérez y se orienta a equipos reales: administración, ventas, atención al cliente, operaciones, dirección o perfiles técnicos. Menos fuegos artificiales; más método, práctica y transferencia.
 
