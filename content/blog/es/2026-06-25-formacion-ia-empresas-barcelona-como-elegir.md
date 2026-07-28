@@ -160,7 +160,7 @@ No se trata de formar “usuarios de una herramienta”. Se trata de que la empr
 
 ## Cómo lo planteamos en Aimtech
 
-En Aimtech planteamos el [curso IA para empresas](/formacion-ia-empresas/) por niveles: desde uso seguro de ChatGPT y Copilot hasta automatizaciones y agentes IA aplicados a procesos reales. Podemos trabajar in-company/presencial en Barcelona u online en directo para grupos cerrados.
+En Aimtech planteamos la [formación en IA aplicada para empresas](/formacion-ia-empresas/) como un curso por niveles: desde uso seguro de ChatGPT y Copilot hasta automatizaciones y agentes IA aplicados a procesos reales. Podemos trabajar in-company/presencial en Barcelona u online en directo para grupos cerrados.
 
 La idea es práctica: menos espectáculo, más criterio. Que el equipo sepa qué pedirle a la IA, cómo revisar resultados, qué no debe introducir, qué tareas merecen automatizarse y dónde puede aparecer retorno real.
 
