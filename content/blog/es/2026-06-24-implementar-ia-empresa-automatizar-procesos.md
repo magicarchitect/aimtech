@@ -1,5 +1,5 @@
 ---
-title: "Cómo implementar IA en tu empresa: 7 pasos para automatizar procesos sin humo"
+title: "Implementar IA en una empresa: 7 pasos prácticos"
 description: "Guía práctica para implementar IA en tu empresa: detecta procesos repetitivos, prioriza casos de uso, forma al equipo y automatiza con control humano."
 date: 2026-06-24
 author: "Mike Pérez"
@@ -85,6 +85,8 @@ Si necesitas una visión externa, una [consultoría de IA para empresas](/consul
 - **Comercial:** redactar propuestas, hacer seguimiento de leads, resumir reuniones o personalizar emails.
 - **Dirección y operaciones:** generar informes recurrentes, detectar cuellos de botella y consultar KPIs.
 - **Conocimiento interno:** consultar manuales, políticas y documentación sin depender siempre de la misma persona.
+
+Para ver la diferencia entre una idea y un flujo controlado, revisa el [patrón práctico de automatización de facturas y PDFs con IA](/casos/automatizacion-facturas-pdfs-ia/): extracción, reglas, revisión de excepciones y registro trazable. Si el alcance combina varios procesos, la entrada general es la [implantación y automatización de procesos con IA](/automatizacion-procesos-ia/).
 
 ## Cuándo tiene sentido implementar IA en tu empresa
 

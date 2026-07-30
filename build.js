@@ -153,8 +153,13 @@ function renderPost(post, hreflangPair, config) {
   const tagsHtml = post.tags.map(t => `<span>${escapeHtml(t)}</span>`).join('');
   const tagsJson = JSON.stringify(post.tags);
 
-  const hrefEs = hreflangPair.es || `${SITE_URL}/blog/`;
-  const hrefCa = hreflangPair.ca || `${SITE_URL}/ca/blog/`;
+  // Solo declarar variantes que realmente existan. Una portada de blog no es
+  // una traducción equivalente de un artículo y rompería la reciprocidad.
+  const hreflangLinks = [
+    hreflangPair.es ? `<link rel="alternate" hreflang="es" href="${hreflangPair.es}" />` : '',
+    hreflangPair.ca ? `<link rel="alternate" hreflang="ca" href="${hreflangPair.ca}" />` : '',
+    `<link rel="alternate" hreflang="x-default" href="${hreflangPair.es || hreflangPair.ca || post.canonicalUrl}" />`,
+  ].filter(Boolean).join('\n');
 
   const replacements = {
     '{{TITLE}}': escapeHtml(post.title),
@@ -162,8 +167,7 @@ function renderPost(post, hreflangPair, config) {
     '{{DESCRIPTION}}': escapeHtml(post.description),
     '{{DESCRIPTION_JSON}}': jsonStr(post.description),
     '{{CANONICAL_URL}}': post.canonicalUrl,
-    '{{HREFLANG_ES}}': hrefEs,
-    '{{HREFLANG_CA}}': hrefCa,
+    '{{HREFLANG_LINKS}}': hreflangLinks,
     '{{OG_IMAGE}}': post.ogImage,
     '{{DATE_ISO}}': post.dateISO,
     '{{DATE_MODIFIED}}': post.modifiedISO,
@@ -276,12 +280,15 @@ const BLOG_MARKER_START = '<!-- BLOG-AUTO-START -->';
 const BLOG_MARKER_END = '<!-- BLOG-AUTO-END -->';
 
 function sitemapEntry({ loc, hrefEs, hrefCa, lastmod, changefreq, priority }) {
+  const alternates = [
+    hrefEs ? `    <xhtml:link rel="alternate" hreflang="es" href="${hrefEs}"/>` : '',
+    hrefCa ? `    <xhtml:link rel="alternate" hreflang="ca" href="${hrefCa}"/>` : '',
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${hrefEs || hrefCa || loc}"/>`,
+  ].filter(Boolean).join('\n');
   return `
   <url>
     <loc>${loc}</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="${hrefEs}"/>
-    <xhtml:link rel="alternate" hreflang="ca" href="${hrefCa}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${hrefEs}"/>
+${alternates}
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
@@ -328,8 +335,8 @@ function updateSitemap(allPosts) {
   }
   for (const key of Object.keys(pairs)) {
     const pair = pairs[key];
-    const esUrl = pair.es ? pair.es.canonicalUrl : `${SITE_URL}/blog/`;
-    const caUrl = pair.ca ? pair.ca.canonicalUrl : `${SITE_URL}/ca/blog/`;
+    const esUrl = pair.es ? pair.es.canonicalUrl : '';
+    const caUrl = pair.ca ? pair.ca.canonicalUrl : '';
     if (pair.es) {
       entries.push(sitemapEntry({
         loc: pair.es.canonicalUrl,

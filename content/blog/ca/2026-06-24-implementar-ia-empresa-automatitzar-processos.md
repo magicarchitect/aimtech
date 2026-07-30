@@ -1,5 +1,5 @@
 ---
-title: "Com implementar IA a la teva empresa: 7 passos per automatitzar processos sense fum"
+title: "Implementar IA a l'empresa: 7 passos pràctics"
 description: "Guia pràctica per implementar IA a la teva empresa: detecta processos repetitius, prioritza casos d’ús, forma l’equip i automatitza amb control humà."
 date: 2026-06-24
 author: "Mike Pérez"
@@ -85,6 +85,8 @@ Si necessites una visió externa, una [consultoria d’IA per a empreses](/ca/co
 - **Comercial:** redactar propostes, fer seguiment de leads, resumir reunions o personalitzar emails.
 - **Direcció i operacions:** generar informes recurrents, detectar colls d’ampolla i consultar KPIs.
 - **Coneixement intern:** consultar manuals, polítiques i documentació sense dependre sempre de la mateixa persona.
+
+Per veure la diferència entre una idea i un flux controlat, revisa el [patró pràctic d'automatització de factures i PDFs amb IA](/ca/casos/automatitzacio-factures-pdfs-ia/): extracció, regles, revisió d'excepcions i registre traçable. Si l'abast combina diversos processos, l'entrada general és la [implantació i automatització de processos amb IA](/ca/automatitzacio-processos-ia/).
 
 ## Quan té sentit implementar IA a una empresa
 

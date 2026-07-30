@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Automatització de factures i PDFs amb IA | Cas pràctic</title>
+<meta name="description" content="Patró pràctic per automatitzar factures i PDFs amb IA: extracció, validació, revisió humana, registre idempotent i traçabilitat." />
+<link rel="canonical" href="https://www.aimtech.es/ca/casos/automatitzacio-factures-pdfs-ia/" />
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/casos/automatitzacio-factures-pdfs-ia/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/" />
+<link rel="icon" type="image/x-icon" href="/assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="/assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="ca_ES" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Automatització de factures i PDFs amb IA | Cas pràctic" />
+<meta property="og:description" content="Patró verificable: d’un document rebut a un registre validat, amb revisió humana per a les excepcions." />
+<meta property="og:url" content="https://www.aimtech.es/ca/casos/automatitzacio-factures-pdfs-ia/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Automatització de factures i PDFs amb IA — Aimtech" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Automatització de factures i PDFs amb IA | Cas pràctic" />
+<meta name="twitter:description" content="Extracció, validació, revisió humana, registre idempotent i traçabilitat." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+<script type="application/ld+json">
+[
+  {"@context":"https://schema.org","@type":"Article","headline":"Automatització de factures i PDFs amb IA","description":"Patró pràctic per automatitzar la recepció, extracció, validació, revisió i registre de factures i PDFs sense atribuir mètriques a un client.","inLanguage":"ca","datePublished":"2026-07-29","dateModified":"2026-07-29","author":{"@type":"Person","name":"Mike Pérez","url":"https://www.aimtech.es/ca/sobre-mike/"},"publisher":{"@type":"Organization","name":"Aimtech Consulting SL","url":"https://www.aimtech.es/ca/","logo":{"@type":"ImageObject","url":"https://www.aimtech.es/assets/logo.png?v=2"}},"mainEntityOfPage":"https://www.aimtech.es/ca/casos/automatitzacio-factures-pdfs-ia/"},
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inici","item":"https://www.aimtech.es/ca/"},{"@type":"ListItem","position":2,"name":"Casos","item":"https://www.aimtech.es/ca/casos/"},{"@type":"ListItem","position":3,"name":"Automatització de factures i PDFs amb IA","item":"https://www.aimtech.es/ca/casos/automatitzacio-factures-pdfs-ia/"}]}
+]
+</script>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/ia-agentica.css">
+<link rel="stylesheet" href="/css/landing.css">
+<link rel="stylesheet" href="/css/casos.css?v=20260713g">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<script src="/js/cookie-consent.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="noise"></div>
+<!-- @region partials/nav-ca.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav data-nosnippet>
+  <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech Consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">Aimtech</text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">Consulting</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu nav-mega" id="nav-serveis-menu">
+        <div class="nav-mega-col">
+          <a class="nav-mega-head" href="/ca/power-bi/">Power BI</a>
+          <a href="/ca/curs-power-bi-empreses/">Curs Power BI empreses</a>
+          <a href="/ca/curs-power-bi-barcelona/">Curs Power BI Barcelona</a>
+        </div>
+        <div class="nav-mega-col">
+          <a class="nav-mega-head" href="/ca/ia-aplicada/">IA Aplicada</a>
+          <a href="/ca/curs-chatgpt-empreses/">Formació ChatGPT Barcelona</a>
+          <a href="/ca/formacio-ia-empreses/">Formació IA empreses Barcelona</a>
+        </div>
+        <div class="nav-mega-col nav-mega-col--wide">
+          <a class="nav-mega-head" href="/ca/automatitzacio-processos-ia/">Implantació IA</a>
+          <a href="/ca/consultoria-ia-empreses/">Consultoria IA</a>
+          <a href="/ca/automatitzacio-processos-ia/">Automatització de processos</a>
+          <a href="/ca/ia-agentica/">Sistemes multiagent</a>
+          <a href="/ca/agents-ia-empreses/">Agents d'IA</a>
+          <a href="/ca/bot-whatsapp-empreses/">Bot de WhatsApp</a>
+          <a href="/ca/chatbot-documents-empresa/">Chatbot de documents</a>
+          <a href="/ca/automatitzacio-correus-ia/">Automatització de correus</a>
+          <a href="/ca/automatitzacio-factures-pdf-ia/">Automatització de factures</a>
+        </div>
+        <div class="nav-mega-col">
+          <a class="nav-mega-head" href="/ca/desenvolupament/">Desenvolupament</a>
+          <span class="nav-mega-note">Apps, APIs i integracions a mida</span>
+        </div>
+      </div>
+    </div>
+    <a href="/ca/blog/">Blog</a>
+    <a href="/ca/casos/">Casos d'èxit</a>
+    <a href="/ca/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/casos/automatitzacio-factures-pdfs-ia/" class="active">CA</a>
+    </div>
+    <a href="/ca/contacte/" class="nav-cta">Parlem-ne →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+<main>
+  <section class="hero case-detail-hero"><div class="container"><div class="case-breadcrumb"><a href="/ca/">Inici</a> / <a href="/ca/casos/">Casos</a> / Automatització de factures i PDFs amb IA</div><div class="hero-content"><div class="case-kicker">Automatització · Factures i PDFs · Patró pràctic</div><h1><span class="reveal r1">Automatització de factures i PDFs <em class="italic">amb IA</em>.</span></h1><p class="hero-sub">Com passar de descarregar, llegir i teclejar documents a un flux amb extracció, regles, revisió humana i registre traçable.</p><div class="hero-cta"><a href="/ca/automatitzacio-processos-ia/" class="btn-primary">Veure implantació i automatització <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a href="/ca/casos/" class="btn-ghost">Tornar a casos</a></div></div></div></section>
+  <section><div class="container case-grid"><article class="case-body">
+    <h2>Problema</h2><p>Moltes àrees administratives reben factures i altres PDFs per correu, portals o carpetes compartides. Una persona descarrega l'arxiu, identifica proveïdor, data, número, bases, impostos i total; després reanomena, arxiva i torna a introduir aquestes dades en un altre sistema.</p><p>El problema no és només el temps. També apareixen duplicats, camps absents, impostos incoherents, noms d'arxiu diferents i documents que queden fora del circuit.</p>
+    <h2>Abast d'aquesta fitxa</h2><p>Aquesta pàgina descriu un patró tècnic reproduïble, no atribueix xifres ni resultats a una empresa concreta. La implantació real depèn del format d'entrada, les regles fiscals i de negoci, el sistema de destinació i els permisos disponibles.</p>
+    <h2>Procés afectat</h2><p>Recepció i registre administratiu de factures o documents estructurats i semiestructurats: entrada, classificació, extracció, validació, arxiu i alta a l'ERP, programari comptable, CRM o base de dades.</p>
+    <h2>Com ho abordaria Aimtech</h2><ol><li><strong>Definir l'entrada i el contracte de dades.</strong> Quins canals s'accepten, quins camps són obligatoris i quina és la font original que es conserva.</li><li><strong>Aplicar regles deterministes primer.</strong> Duplicats, sumes, moneda, proveïdor, formats de data i coherència entre base, impostos i total no necessiten creativitat.</li><li><strong>Usar OCR o IA només per extreure i classificar.</strong> El model ajuda amb documents variables; no decideix silenciosament si una dada dubtosa és correcta.</li><li><strong>Separar flux normal i excepcions.</strong> Un document complet continua. Un camp absent, duplicat o incoherent s'atura per a revisió humana.</li><li><strong>Registrar de manera idempotent i traçable.</strong> Reprocessar el mateix document no ha de crear un altre assentament. Cada pas deixa estat, font i motiu d'error.</li></ol>
+    <h2>Controls imprescindibles</h2><ul><li>Hash o identificador estable per detectar duplicats.</li><li>Conservació del PDF original i de la dada extreta.</li><li>Validació de camps crítics abans d'escriure.</li><li>Cua de revisió amb motiu llegible per a una persona.</li><li>Registre d'execucions, reintents i canvis d'estat.</li><li>Permisos mínims i secrets fora del codi.</li></ul>
+    <h2>Què es mesuraria abans i després</h2><p>Temps mitjà per document, percentatge d'excepcions, taxa de reintents, duplicats evitats, correccions manuals i temps des de la recepció fins al registre. Són mètriques de validació del pilot, no resultats afirmats en aquesta fitxa.</p>
+    <h2>Canvi operatiu esperat</h2><p>Els documents que compleixen les regles avancen sense copiar i enganxar. Les excepcions no desapareixen: arriben ordenades a una persona amb el motiu i la font. L'equip conserva control sobre l'alta i pot auditar què ha passat.</p>
+    <h2>Següent pas</h2><p>Per implantar aquest patró en un procés real, revisa el servei d'<a href="/ca/automatitzacio-factures-pdf-ia/">automatització de factures i PDFs</a> o la <a href="/ca/automatitzacio-processos-ia/">pillar d'implantació i automatització de processos amb IA</a>.</p>
+  </article><aside class="case-sidebar"><div class="card" data-mouse><div class="card-num"><span>// resum</span><span class="badge">Patró</span></div><h3>Document → dada validada.</h3><p>Entrada controlada, extracció, regles, revisió d'excepcions, registre idempotent i traçabilitat.</p></div><div class="case-note"><strong>Nota anti-fum:</strong> aquesta fitxa no publica estalvis ni resultats de client. Explica el mètode i les mètriques que cal validar en un pilot.</div><div class="case-list-mini"><a href="/ca/casos/">← Tornar a casos</a><a href="/ca/contacte/">Revisar el meu procés →</a></div></aside></div></section>
+  <section class="cta-final"><div class="container"><div data-reveal><h2>Vols convertir aquest patró en un <em>pilot mesurable</em><span class="cursor-blink"></span></h2><p>Explica'm d'on arriben els documents, quins camps necessites i on s'han de registrar. Revisem regles, excepcions i integració abans de prometre automatització.</p><a href="/ca/contacte/" class="btn-primary" style="font-size:15px;padding:18px 32px;">Parlar amb Aimtech</a></div></div></section>
+</main>
+<!-- @region partials/footer-ca.html -->
+<footer data-nosnippet>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/ca/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech Consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">Aimtech</text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">Consulting</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formació i implantació d'IA aplicada, Power BI i desenvolupament a mida. Operada per una SL catalana amb focus en pimes i administració pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Serveis</h3>
+        <a href="/ca/power-bi/">Power BI</a>
+        <a href="/ca/ia-aplicada/">IA Aplicada</a>
+        <a href="/ca/automatitzacio-processos-ia/">Implantació i automatització IA</a>
+        <a href="/ca/ia-agentica/">Sistemes multiagent</a>
+        <a href="/ca/desenvolupament/">Desenvolupament</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/ca/blog/">Blog</a>
+        <a href="/ca/casos/">Casos d'èxit</a>
+        <a href="/ca/sobre-mike/">Sobre Mike</a>
+        <a href="/ca/contacte/">Contacte</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/ca/avis-legal/">Avís legal</a>
+        <a href="/ca/politica-privacitat/">Privacitat</a>
+        <a href="/ca/politica-galetes/">Galetes</a>
+        <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+</body>
+</html>
