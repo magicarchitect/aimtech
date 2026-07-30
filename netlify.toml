@@ -52,6 +52,21 @@
   [headers.values]
     Cache-Control = "no-store"
 
+# Endpoint de captación de la Checklist IA: nunca cachear.
+[[headers]]
+  for = "/.netlify/functions/checklist-lead"
+  [headers.values]
+    Cache-Control = "no-store"
+
+# Recurso descargable: no indexar el PDF aislado. La URL que debe
+# posicionar es la landing /lm/checklist-ia/.
+[[headers]]
+  for = "/recursos/aimtech_checklist_ia.pdf"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, must-revalidate"
+    X-Robots-Tag = "noindex, noarchive"
+    Content-Disposition = "attachment; filename=aimtech_checklist_ia.pdf"
+
 # Encuesta de feedback: herramienta interna para alumnos.
 # noindex también por cabecera (refuerza el meta robots).
 [[headers]]

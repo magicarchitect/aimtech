@@ -483,13 +483,22 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://www.aimtech.es/lm/checklist-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/lm/checklist-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/lm/checklist-ia/"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- BLOG-AUTO-START -->
   <url>
     <loc>https://www.aimtech.es/blog/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/"/>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -498,7 +507,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/"/>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
