@@ -1,0 +1,217 @@
+/* Checklist IA lead form — wizard Typeform-style built on feedback.css.
+   This page keeps the shared Aimtech nav/footer and constrains the wizard
+   to a viewport-like stage between them. */
+
+.lf-body { overflow-x: hidden; }
+.lf-body .grid-bg,
+.lf-body .noise { position: fixed; }
+
+.lf-stage {
+  position: relative;
+  z-index: 2;
+  height: clamp(660px, calc(100dvh - 86px), 860px);
+  min-height: 660px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 82% 22%, rgba(37,128,227,.12), transparent 32%),
+    linear-gradient(180deg, rgba(10,14,20,.18), rgba(10,14,20,.04));
+}
+
+.lf-stage .fb-main { position: absolute; inset: 0; }
+.lf-stage .fb-step { padding-top: 72px; padding-bottom: 82px; }
+.lf-stage .fb-inner { max-width: 760px; }
+.lf-stage .fb-progress { position: absolute; }
+
+.lf-chrome {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.lf-chrome .fb-count { min-width: auto; }
+
+.lf-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 210px;
+  gap: 52px;
+  align-items: center;
+}
+
+.lf-cover {
+  position: relative;
+  aspect-ratio: 210 / 297;
+  padding: 22px 18px;
+  border: 1px solid var(--line-strong);
+  border-radius: 5px;
+  background: #f5f7fa;
+  color: #09111d;
+  box-shadow: 0 28px 70px rgba(0,0,0,.35), 14px 14px 0 rgba(37,128,227,.09);
+  transform: rotate(2deg);
+}
+
+.lf-cover::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(9,17,29,.12);
+  pointer-events: none;
+}
+
+.lf-cover-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.lf-cover-logo img { width: 24px; height: 24px; }
+.lf-cover h3 {
+  margin-top: 54px;
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: .98;
+  letter-spacing: -.03em;
+}
+.lf-cover p {
+  margin-top: 14px;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #465264;
+}
+.lf-cover-tag {
+  position: absolute;
+  left: 18px;
+  bottom: 22px;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: .08em;
+  color: #2580e3;
+}
+
+.lf-value-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+  max-width: 560px;
+}
+.lf-value-list span {
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--ink-dim);
+  background: rgba(255,255,255,.02);
+}
+
+.lf-stage .fb-options { max-width: 590px; }
+.lf-stage .fb-option { padding: 13px 16px; }
+.lf-stage .fb-textarea-wrap { max-width: 590px; }
+.lf-stage .fb-field input { font-size: clamp(19px, 3vw, 30px); padding: 14px 0; border-width: 0 0 1px; border-radius: 0; background: transparent; }
+.lf-stage .fb-field input:focus { box-shadow: none; background: transparent; }
+
+.lf-optional {
+  color: var(--ink-mute);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-style: normal;
+  letter-spacing: .04em;
+}
+
+.lf-privacy {
+  margin-top: 18px;
+  max-width: 620px;
+  color: var(--ink-mute);
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+.lf-privacy a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+.lf-skip {
+  color: var(--ink-dim);
+  border: 0;
+  border-bottom: 1px solid var(--line-strong);
+  background: transparent;
+  padding: 4px 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  cursor: pointer;
+}
+.lf-skip:hover { color: var(--accent); border-color: var(--accent); }
+
+.lf-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 15px 22px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #051018;
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 0 34px var(--accent-glow);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.lf-download:hover { transform: translateY(-2px); box-shadow: 0 0 50px var(--accent-glow); }
+.lf-final-actions { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+.lf-final-actions .fb-back { margin-top: 28px; }
+
+.lf-foot-nav {
+  position: absolute;
+  right: 28px;
+  bottom: 22px;
+  z-index: 12;
+  display: flex;
+  gap: 6px;
+}
+
+.lf-foot-nav .fb-arrow {
+  width: 36px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  color: var(--ink-dim);
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+.lf-foot-nav .fb-arrow:first-child { border-radius: 7px 0 0 7px; }
+.lf-foot-nav .fb-arrow:last-child { border-radius: 0 7px 7px 0; }
+.lf-foot-nav .fb-arrow:disabled { opacity: .3; cursor: not-allowed; }
+
+.lf-stage.is-done .lf-foot-nav { display: none; }
+
+@media (max-width: 760px) {
+  .lf-stage { height: calc(100dvh - 76px); min-height: 620px; }
+  .lf-stage .fb-step { padding: 64px 22px 76px; }
+  .lf-intro-grid { grid-template-columns: 1fr; gap: 20px; }
+  .lf-cover { display: none; }
+  .lf-chrome { top: 18px; right: 20px; }
+  .lf-foot-nav { right: 20px; bottom: 18px; }
+  .lf-stage .fb-option { font-size: 14px; }
+}
+
+@media (max-height: 700px) and (min-width: 761px) {
+  .lf-stage { min-height: 600px; height: 600px; }
+  .lf-stage .fb-step { padding-top: 58px; padding-bottom: 62px; }
+  .lf-cover { width: 155px; justify-self: end; }
+  .lf-intro-grid { grid-template-columns: 1fr 165px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lf-stage .fb-step { transition: none; }
+  .lf-cover { transform: none; }
+  .lf-download { transition: none; }
+}
