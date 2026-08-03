@@ -76,7 +76,7 @@ Una implantació d’IA ha de tenir mètriques: hores estalviades, temps mitjà 
 
 El camí recomanable és progressiu: diagnòstic, pilot, adopció, integració i escalat. Primer es valida el valor. Després s’amplia.
 
-Si necessites una visió externa, una [consultoria d’IA per a empreses](/ca/consultoria-ia-empreses/) pot ajudar-te a separar oportunitats reals d’automatitzacions boniques però inútils.
+Si necessites una visió externa, una [consultoria d’IA a Barcelona per a empreses](/ca/consultoria-ia-empreses/) pot ajudar-te a separar oportunitats reals d’automatitzacions boniques però inútils.
 
 ## Exemples de processos que pots automatitzar amb IA
 

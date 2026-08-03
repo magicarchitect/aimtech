@@ -76,7 +76,7 @@ Una implantación de IA debe tener métricas: horas ahorradas, tiempo medio de r
 
 El camino recomendable es progresivo: diagnóstico, piloto, adopción, integración y escalado. Primero se valida el valor. Después se amplía.
 
-Si necesitas una visión externa, una [consultoría de IA para empresas](/consultoria-ia-empresas/) puede ayudarte a separar oportunidades reales de automatizaciones bonitas pero inútiles.
+Si necesitas una visión externa, una [consultoría de IA en Barcelona para empresas](/consultoria-ia-empresas/) puede ayudarte a separar oportunidades reales de automatizaciones bonitas pero inútiles.
 
 ## Ejemplos de procesos que puedes automatizar con IA
 
