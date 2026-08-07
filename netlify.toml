@@ -104,6 +104,21 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# ── Alias de campañas activas ────────────────────────
+# La publicación de LinkedIn usa esta URL pública. Mantener el alias
+# estable y redirigir a la landing canónica; Netlify conserva los UTM.
+[[redirects]]
+  from = "/checklist-ia-empresas"
+  to = "/lm/checklist-ia/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/checklist-ia-empresas/"
+  to = "/lm/checklist-ia/"
+  status = 301
+  force = true
+
 # ── Redirect: aimtech.es → www.aimtech.es ────────────
 # Canónico = www.aimtech.es. Todas las URLs absolutas
 # (canonical, sitemap, JSON-LD, OG) apuntan al www.
