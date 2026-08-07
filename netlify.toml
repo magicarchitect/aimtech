@@ -104,6 +104,15 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# ── Alias de campañas activas ────────────────────────
+# La publicación de LinkedIn usa esta URL pública. Netlify normaliza el
+# slash final y conserva automáticamente los UTM en redirects 301.
+[[redirects]]
+  from = "/checklist-ia-empresas"
+  to = "https://www.aimtech.es/lm/checklist-ia/"
+  status = 301
+  force = true
+
 # ── Redirect: aimtech.es → www.aimtech.es ────────────
 # Canónico = www.aimtech.es. Todas las URLs absolutas
 # (canonical, sitemap, JSON-LD, OG) apuntan al www.
