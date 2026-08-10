@@ -292,6 +292,26 @@ function todayISO() {
   return new Date().toISOString().slice(0, 10);
 }
 
+function existingLastmod(sitemap, loc) {
+  const locTag = `<loc>${loc}</loc>`;
+  const locIndex = sitemap.indexOf(locTag);
+  if (locIndex === -1) return null;
+
+  const urlStart = sitemap.lastIndexOf('<url>', locIndex);
+  const urlEnd = sitemap.indexOf('</url>', locIndex);
+  if (urlStart === -1 || urlEnd === -1) return null;
+
+  const match = sitemap.slice(urlStart, urlEnd).match(/<lastmod>([^<]+)<\/lastmod>/);
+  return match ? match[1] : null;
+}
+
+function latestKnownLastmod(sitemap, loc, posts) {
+  const dates = [existingLastmod(sitemap, loc), ...posts.map(post => post.modifiedISO)]
+    .filter(Boolean)
+    .sort();
+  return dates.at(-1) || todayISO();
+}
+
 function updateSitemap(allPosts) {
   console.log('\n→ Actualizando sitemap.xml (bloque BLOG-AUTO)...');
 
@@ -305,7 +325,7 @@ function updateSitemap(allPosts) {
     loc: `${SITE_URL}/blog/`,
     hrefEs: `${SITE_URL}/blog/`,
     hrefCa: `${SITE_URL}/ca/blog/`,
-    lastmod: todayISO(),
+    lastmod: latestKnownLastmod(sitemap, `${SITE_URL}/blog/`, allPosts.es),
     changefreq: 'weekly',
     priority: '0.8',
   }));
@@ -313,7 +333,7 @@ function updateSitemap(allPosts) {
     loc: `${SITE_URL}/ca/blog/`,
     hrefEs: `${SITE_URL}/blog/`,
     hrefCa: `${SITE_URL}/ca/blog/`,
-    lastmod: todayISO(),
+    lastmod: latestKnownLastmod(sitemap, `${SITE_URL}/ca/blog/`, allPosts.ca),
     changefreq: 'weekly',
     priority: '0.8',
   }));
@@ -335,7 +355,7 @@ function updateSitemap(allPosts) {
         loc: pair.es.canonicalUrl,
         hrefEs: esUrl,
         hrefCa: caUrl,
-        lastmod: pair.es.modifiedISO,
+        lastmod: latestKnownLastmod(sitemap, pair.es.canonicalUrl, [pair.es]),
         changefreq: 'monthly',
         priority: '0.7',
       }));
@@ -345,7 +365,7 @@ function updateSitemap(allPosts) {
         loc: pair.ca.canonicalUrl,
         hrefEs: esUrl,
         hrefCa: caUrl,
-        lastmod: pair.ca.modifiedISO,
+        lastmod: latestKnownLastmod(sitemap, pair.ca.canonicalUrl, [pair.ca]),
         changefreq: 'monthly',
         priority: '0.7',
       }));
