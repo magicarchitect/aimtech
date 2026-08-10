@@ -633,6 +633,15 @@
   .cases-wave {
     display: none;
   }
+
+  .invoice-flow__route,
+  .invoice-flow__card {
+    animation: none !important;
+  }
+
+  .invoice-flow__packet {
+    display: none;
+  }
 }
 
 .case-body {
@@ -668,6 +677,164 @@
 
 .case-body strong {
   color: var(--text);
+}
+
+/* Enlaces editoriales: evita los colores nativos/visitados del navegador y
+   los alinea con el azul de los CTA sobre el fondo oscuro. */
+.case-body a,
+.case-body a:visited {
+  color: #6db6ff;
+  text-decoration-color: rgba(109, 182, 255, 0.58);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.case-body a:hover {
+  color: #9fd1ff;
+  text-decoration-color: currentColor;
+}
+
+.case-body a:focus-visible {
+  color: #b9dcff;
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+/* Flujo de automatización de facturas — SVG inline, sin JS. */
+.invoice-flow {
+  width: min(100%, 520px);
+  margin: 42px auto 48px;
+}
+
+.invoice-flow__frame {
+  position: relative;
+  padding: 16px;
+  border: 1px solid rgba(109, 182, 255, 0.24);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 50% 12%, rgba(37, 128, 227, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(15, 20, 28, 0.94), rgba(8, 13, 20, 0.98));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.invoice-flow__frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(109, 182, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(109, 182, 255, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+.invoice-flow svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.invoice-flow__route {
+  fill: none;
+  stroke: #2580e3;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 7 10;
+  animation: invoiceFlowDash 2.2s linear infinite;
+}
+
+.invoice-flow__card {
+  fill: #0f1824;
+  stroke: #2a3344;
+  stroke-width: 1.5;
+  animation: invoiceFlowCard 5s ease-in-out infinite;
+  animation-delay: var(--flow-delay, 0s);
+}
+
+.invoice-flow__node--review .invoice-flow__card {
+  fill: #101c22;
+  stroke: #358f91;
+}
+
+.invoice-flow__icon-bg {
+  fill: #152c46;
+  stroke: #2580e3;
+  stroke-width: 1.4;
+}
+
+.invoice-flow__node--review .invoice-flow__icon-bg {
+  fill: #102d30;
+  stroke: #45f0dd;
+}
+
+.invoice-flow__icon {
+  fill: none;
+  stroke: #8ec8ff;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.invoice-flow__node--review .invoice-flow__icon {
+  stroke: #86f7ea;
+}
+
+.invoice-flow__step {
+  fill: #6db6ff;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.invoice-flow__label {
+  fill: #e6ebf2;
+  font-family: var(--sans);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.invoice-flow__detail {
+  fill: #8893a5;
+  font-family: var(--sans);
+  font-size: 12px;
+}
+
+.invoice-flow__packet {
+  fill: #b9dcff;
+  stroke: #2580e3;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 7px rgba(109, 182, 255, 0.9));
+}
+
+.invoice-flow figcaption {
+  max-width: 460px;
+  margin: 14px auto 0;
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+@keyframes invoiceFlowDash {
+  to { stroke-dashoffset: -34; }
+}
+
+@keyframes invoiceFlowCard {
+  0%, 68%, 100% { stroke: #2a3344; }
+  10%, 24% { stroke: #6db6ff; }
+}
+
+@media (max-width: 520px) {
+  .invoice-flow { margin: 34px auto 40px; }
+  .invoice-flow__frame { padding: 8px; border-radius: 22px; }
 }
 
 .case-body ul,

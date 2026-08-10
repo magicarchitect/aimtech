@@ -78,7 +78,7 @@
 <link rel="stylesheet" href="/css/layout.css">
 <link rel="stylesheet" href="/css/ia-agentica.css">
 <link rel="stylesheet" href="/css/landing.css">
-<link rel="stylesheet" href="/css/casos.css?v=20260810a">
+<link rel="stylesheet" href="/css/casos.css?v=20260810b">
 <link rel="stylesheet" href="/css/cookie-consent.css">
 <script src="/js/cookie-consent.js" defer></script>
 <script src="/js/site.js" defer></script>
@@ -165,6 +165,72 @@
 
         <h2>Proceso afectado</h2>
         <p>Recepción y archivo de facturas de proveedor, preparación del cierre trimestral y alta de compras en FacturaScripts. El proceso conecta correo, documentos PDF, Google Drive, reglas operativas, revisión fiscal y el sistema de facturación.</p>
+
+        <figure class="invoice-flow" aria-labelledby="invoice-flow-caption-es">
+          <div class="invoice-flow__frame">
+            <svg viewBox="0 0 420 650" role="img" aria-labelledby="invoice-flow-title-es invoice-flow-desc-es" xmlns="http://www.w3.org/2000/svg">
+              <title id="invoice-flow-title-es">Flujo automatizado de facturas de Aimtech</title>
+              <desc id="invoice-flow-desc-es">Una factura llega desde Gmail o un portal, se lee y valida con IA, se archiva en Drive, se registra de forma controlada en FacturaScripts y las excepciones pasan a revisión humana.</desc>
+
+              <path class="invoice-flow__route" d="M210 108V150" />
+              <path class="invoice-flow__route" d="M210 238V280" />
+              <path class="invoice-flow__route" d="M210 368V410" />
+              <path class="invoice-flow__route" d="M210 498V540" />
+
+              <circle class="invoice-flow__packet" cx="210" cy="108" r="5" aria-hidden="true"><animate attributeName="cy" values="108;150" dur="1.4s" begin="0s" repeatCount="indefinite" /></circle>
+              <circle class="invoice-flow__packet" cx="210" cy="238" r="5" aria-hidden="true"><animate attributeName="cy" values="238;280" dur="1.4s" begin="0.35s" repeatCount="indefinite" /></circle>
+              <circle class="invoice-flow__packet" cx="210" cy="368" r="5" aria-hidden="true"><animate attributeName="cy" values="368;410" dur="1.4s" begin="0.7s" repeatCount="indefinite" /></circle>
+              <circle class="invoice-flow__packet" cx="210" cy="498" r="5" aria-hidden="true"><animate attributeName="cy" values="498;540" dur="1.4s" begin="1.05s" repeatCount="indefinite" /></circle>
+
+              <g class="invoice-flow__node" style="--flow-delay: 0s" transform="translate(35 20)">
+                <rect class="invoice-flow__card" width="350" height="88" rx="20" fill="#0f1824" stroke="#2a3344" stroke-width="1.5" />
+                <circle class="invoice-flow__icon-bg" cx="44" cy="44" r="26" fill="#152c46" stroke="#2580e3" stroke-width="1.4" />
+                <g class="invoice-flow__icon"><path d="M29 34h30v21H29z" /><path d="m29 36 15 11 15-11" /></g>
+                <text class="invoice-flow__step" x="82" y="25">ENTRADA</text>
+                <text class="invoice-flow__label" x="82" y="49">Gmail y portales</text>
+                <text class="invoice-flow__detail" x="82" y="69">Adjunto o descarga autorizada</text>
+              </g>
+
+              <g class="invoice-flow__node" style="--flow-delay: 0.6s" transform="translate(35 150)">
+                <rect class="invoice-flow__card" width="350" height="88" rx="20" fill="#0f1824" stroke="#2a3344" stroke-width="1.5" />
+                <circle class="invoice-flow__icon-bg" cx="44" cy="44" r="26" fill="#152c46" stroke="#2580e3" stroke-width="1.4" />
+                <g class="invoice-flow__icon"><path d="M31 27h20l8 8v27H31z" /><path d="M51 27v9h8M37 45h16M37 53h12" /></g>
+                <text class="invoice-flow__step" x="82" y="25">LECTURA IA</text>
+                <text class="invoice-flow__label" x="82" y="49">PDF + reglas</text>
+                <text class="invoice-flow__detail" x="82" y="69">Extrae, clasifica y valida</text>
+              </g>
+
+              <g class="invoice-flow__node" style="--flow-delay: 1.2s" transform="translate(35 280)">
+                <rect class="invoice-flow__card" width="350" height="88" rx="20" fill="#0f1824" stroke="#2a3344" stroke-width="1.5" />
+                <circle class="invoice-flow__icon-bg" cx="44" cy="44" r="26" fill="#152c46" stroke="#2580e3" stroke-width="1.4" />
+                <g class="invoice-flow__icon"><path d="M26 37h15l6 6h15v21H26z" /><path d="M26 43h36" /></g>
+                <text class="invoice-flow__step" x="82" y="25">ARCHIVO</text>
+                <text class="invoice-flow__label" x="82" y="49">Google Drive</text>
+                <text class="invoice-flow__detail" x="82" y="69">Nombra, ordena y deduplica</text>
+              </g>
+
+              <g class="invoice-flow__node" style="--flow-delay: 1.8s" transform="translate(35 410)">
+                <rect class="invoice-flow__card" width="350" height="88" rx="20" fill="#0f1824" stroke="#2a3344" stroke-width="1.5" />
+                <circle class="invoice-flow__icon-bg" cx="44" cy="44" r="26" fill="#152c46" stroke="#2580e3" stroke-width="1.4" />
+                <g class="invoice-flow__icon"><ellipse cx="44" cy="32" rx="16" ry="6" /><path d="M28 32v23c0 3 7 6 16 6s16-3 16-6V32M28 43c0 3 7 6 16 6s16-3 16-6" /></g>
+                <text class="invoice-flow__step" x="82" y="25">REGISTRO</text>
+                <text class="invoice-flow__label" x="82" y="49">FacturaScripts</text>
+                <text class="invoice-flow__detail" x="82" y="69">Simula y crea solo si cumple</text>
+              </g>
+
+              <g class="invoice-flow__node invoice-flow__node--review" style="--flow-delay: 2.4s" transform="translate(35 540)">
+                <rect class="invoice-flow__card" width="350" height="88" rx="20" fill="#101c22" stroke="#358f91" stroke-width="1.5" />
+                <circle class="invoice-flow__icon-bg" cx="44" cy="44" r="26" fill="#102d30" stroke="#45f0dd" stroke-width="1.4" />
+                <g class="invoice-flow__icon"><circle cx="37" cy="35" r="6" /><path d="M25 59c1-9 6-14 12-14s11 5 12 14M48 44l5 5 10-12" /></g>
+                <text class="invoice-flow__step" x="82" y="25">CONTROL</text>
+                <text class="invoice-flow__label" x="82" y="49">Revisión humana</text>
+                <text class="invoice-flow__detail" x="82" y="69">Excepciones, fiscalidad y 2FA</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption id="invoice-flow-caption-es">El camino feliz avanza solo; las ambigüedades y excepciones salen del flujo automático para ser revisadas.</figcaption>
+        </figure>
+
         <h3>Riesgos del flujo manual</h3>
         <ul>
           <li>Archivar por la fecha del correo en vez de por la fecha real de la factura.</li>
