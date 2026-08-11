@@ -197,7 +197,7 @@ main { position: relative; z-index: 2; }
 .hero h1 .r4 { animation-delay: 0.54s; }
 
 .hero-sub {
-  font-size: 18px; color: var(--ink-dim); line-height: 1.55;
+  font-size: var(--content-size); color: var(--ink-dim); line-height: 1.55;
   margin-bottom: 44px;
   opacity: 0; animation: fadeUp 0.6s ease 0.7s forwards;
 }
@@ -422,7 +422,7 @@ section { padding: 95px 0; position: relative; }
 }
 .section-title em { font-style: italic; color: var(--accent); }
 .section-intro {
-  color: var(--ink-dim); font-size: 18px; line-height: 1.55;
+  color: var(--ink-dim); font-size: var(--content-size); line-height: 1.55;
   margin-bottom: 80px;
 }
 
@@ -629,7 +629,7 @@ footer {
     gap: 48px;
   }
   .hero-meta { font-size: 11px; gap: 10px; margin-bottom: 28px; }
-  .hero-sub { font-size: 16px; margin-bottom: 32px; max-width: 100%; }
+  .hero-sub { font-size: var(--content-size); margin-bottom: 32px; max-width: 100%; }
   .hero-cta { gap: 10px; }
 
   /* Stage de los heroes: se centra y se reduce de forma fluida */
@@ -681,7 +681,7 @@ footer {
   }
   .hero-meta .sep { display: none; }
   .hero h1 { margin-bottom: 24px; }
-  .hero-sub { font-size: 15px; }
+  .hero-sub { font-size: var(--content-size); }
   .hero-cta { flex-direction: column; align-items: stretch; }
   .agents-stage { max-width: min(360px, 90vw); }
   .agent { width: 130px; }

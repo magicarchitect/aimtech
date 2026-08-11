@@ -29,7 +29,7 @@
   color: var(--accent);
 }
 .blog-index-lead {
-  font-size: clamp(18px, 1.7vw, 23px);
+  font-size: clamp(var(--content-size), 1.7vw, 23px);
   line-height: 1.6;
   color: var(--ink-dim);
   max-width: 1040px;
@@ -113,7 +113,7 @@
   color: var(--ink);
 }
 .post-card .post-card-excerpt {
-  font-size: clamp(16px, 1.3vw, 18px);
+  font-size: var(--content-size);
   line-height: 1.65;
   color: var(--ink-dim);
   margin-bottom: 18px;
