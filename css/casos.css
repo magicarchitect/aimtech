@@ -835,6 +835,11 @@
 @media (max-width: 520px) {
   .invoice-flow { margin: 34px auto 40px; }
   .invoice-flow__frame { padding: 8px; border-radius: 22px; }
+
+  .case-body p,
+  .case-body li {
+    font-size: 19px;
+  }
 }
 
 .case-body ul,
