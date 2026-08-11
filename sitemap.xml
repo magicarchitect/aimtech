@@ -207,7 +207,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/casos/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/casos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/casos/"/>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -217,7 +217,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/casos/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/casos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/casos/"/>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -258,6 +258,26 @@
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/casos/formacio-ia-equips-no-tecnics/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/casos/formacion-ia-equipos-no-tecnicos/"/>
     <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/casos/automatitzacio-factures-pdf-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/"/>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/casos/automatitzacio-factures-pdf-ia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/casos/automatitzacio-factures-pdf-ia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/"/>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -468,7 +488,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/automatizacion-facturas-pdfs-ia/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/automatitzacio-factures-pdf-ia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/automatizacion-facturas-pdfs-ia/"/>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -478,7 +498,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/automatizacion-facturas-pdfs-ia/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/automatitzacio-factures-pdf-ia/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/automatizacion-facturas-pdfs-ia/"/>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

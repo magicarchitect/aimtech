@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Automatización de Facturas con IA: De Gmail a Drive y FacturaScripts</title>
+<meta name="description" content="Caso real de Aimtech: detección de facturas en correo, lectura de PDFs, archivo normalizado en Drive y registro controlado en FacturaScripts." />
+<link rel="canonical" href="https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/" />
+<link rel="alternate" hreflang="es" href="https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/" />
+<link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/casos/automatitzacio-factures-pdf-ia/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/" />
+<link rel="icon" type="image/x-icon" href="/assets/logo.ico?v=2" />
+<link rel="icon" type="image/png" href="/assets/logo.png?v=2" />
+<link rel="apple-touch-icon" href="/assets/logo.png?v=2" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="ca_ES" />
+<meta property="og:site_name" content="Aimtech" />
+<meta property="og:title" content="Automatización de Facturas con IA: De Gmail a Drive y FacturaScripts" />
+<meta property="og:description" content="Un caso real de Aimtech: del PDF recibido por correo al archivo trazable en Drive y el registro contable controlado." />
+<meta property="og:url" content="https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/" />
+<meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Automatización real de facturas y PDFs en Aimtech" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Automatización de Facturas con IA: De Gmail a Drive y FacturaScripts" />
+<meta name="twitter:description" content="Correo, lectura documental, Drive, deduplicación y registro en FacturaScripts con revisión humana." />
+<meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "@id": "https://www.aimtech.es/#aimtech",
+    "name": "Aimtech",
+    "legalName": "Aimtech Consulting SL",
+    "url": "https://www.aimtech.es",
+    "logo": "https://www.aimtech.es/assets/logo.png?v=2",
+    "founder": {
+      "@type": "Person",
+      "name": "Miguel Pérez",
+      "alternateName": "Mike Pérez",
+      "url": "https://www.aimtech.es/sobre-mike/"
+    },
+    "areaServed": [{ "@type": "Country", "name": "España" }, { "@type": "AdministrativeArea", "name": "Cataluña" }]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.aimtech.es/" },
+      { "@type": "ListItem", "position": 2, "name": "Casos", "item": "https://www.aimtech.es/casos/" },
+      { "@type": "ListItem", "position": 3, "name": "Automatización real de facturas y PDFs", "item": "https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Automatización de Facturas con IA: De Gmail a Drive y FacturaScripts",
+    "description": "Caso real de Aimtech: detección de facturas en correo, lectura de PDFs, archivo normalizado en Drive y registro controlado en FacturaScripts.",
+    "image": "https://www.aimtech.es/assets/og/default.png",
+    "author": { "@type": "Person", "name": "Miguel Pérez", "alternateName": "Mike Pérez", "url": "https://www.aimtech.es/sobre-mike/" },
+    "publisher": { "@id": "https://www.aimtech.es/#aimtech" },
+    "mainEntityOfPage": "https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/",
+    "datePublished": "2026-08-10",
+    "dateModified": "2026-08-10",
+    "inLanguage": "es"
+  }
+]
+</script>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-serif-400-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/ia-agentica.css">
+<link rel="stylesheet" href="/css/landing.css">
+<link rel="stylesheet" href="/css/casos.css?v=20260810b">
+<link rel="stylesheet" href="/css/cookie-consent.css">
+<script src="/js/cookie-consent.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="noise"></div>
+<!-- @region partials/nav-es.html -->
+<noscript><style>[data-reveal],[data-stagger],[data-stagger] > *{opacity:1!important;transform:none!important}</style></noscript>
+<nav data-nosnippet>
+  <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+    <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+    <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech Consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">Aimtech</text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">Consulting</text>
+      </g>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <div class="nav-dropdown">
+      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-servicios-menu">Servicios <span class="nav-chevron" aria-hidden="true">▾</span></button>
+      <div class="nav-dropdown-menu nav-mega" id="nav-servicios-menu">
+        <div class="nav-mega-col">
+          <a class="nav-mega-head" href="/power-bi/">Power BI</a>
+          <a href="/curso-power-bi-empresas/">Formación Power BI empresas</a>
+          <a href="/curso-power-bi-barcelona/">Formación Power BI Barcelona</a>
+        </div>
+        <div class="nav-mega-col">
+          <a class="nav-mega-head" href="/ia-aplicada/">IA Aplicada</a>
+          <a href="/curso-chatgpt-empresas/">Curso ChatGPT Barcelona</a>
+          <a href="/formacion-ia-empresas/">Curso IA empresas Barcelona</a>
+        </div>
+        <div class="nav-mega-col nav-mega-col--wide">
+          <a class="nav-mega-head" href="/ia-agentica/">IA Agéntica</a>
+          <a href="/consultoria-ia-empresas/">Consultoría IA</a>
+          <a href="/automatizacion-procesos-ia/">Automatización de procesos</a>
+          <a href="/agentes-ia-empresas/">Agentes de IA</a>
+          <a href="/bot-whatsapp-empresas/">Bot de WhatsApp</a>
+          <a href="/chatbot-documentos-empresa/">Chatbot de documentos</a>
+          <a href="/automatizacion-emails-ia/">Automatización de emails</a>
+          <a href="/automatizacion-facturas-pdfs-ia/">Automatización de facturas</a>
+        </div>
+        <div class="nav-mega-col">
+          <a class="nav-mega-head" href="/desarrollo/">Desarrollo</a>
+          <span class="nav-mega-note">Apps, APIs e integraciones a medida</span>
+        </div>
+      </div>
+    </div>
+    <a href="/blog/">Blog</a>
+    <a href="/casos/">Casos de éxito</a>
+    <a href="/sobre-mike/">Sobre Mike</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switch">
+      <a href="https://www.aimtech.es/casos/automatizacion-facturas-pdfs-ia/" class="active">ES</a>
+      <span class="sep">/</span>
+      <a href="https://www.aimtech.es/ca/casos/automatitzacio-factures-pdf-ia/">CA</a>
+    </div>
+    <a href="/contacto/" class="nav-cta">Hablemos →</a>
+  </div>
+</nav>
+<!-- @endregion -->
+<main>
+  <section class="hero case-detail-hero">
+    <div class="container">
+      <div class="case-breadcrumb"><a href="/">Inicio</a> / <a href="/casos/">Casos</a> / Automatización real de facturas</div>
+      <div class="hero-content">
+        <div class="case-kicker">Caso real · Automatización administrativa</div>
+        <h1><span class="reveal r1">Automatización de Facturas con IA: <em class="italic">De Gmail a Drive y FacturaScripts</em>.</span></h1>
+        <p class="hero-sub">Cómo Aimtech automatiza su propio circuito de facturas de proveedor: detectar el documento, leerlo, validarlo, archivarlo con una nomenclatura estable y registrar solo los documentos que cumplen las reglas operativas predefinidas para el alta automática.</p>
+        <div class="hero-cta"><a href="/automatizacion-facturas-pdfs-ia/" class="btn-primary">Ver automatización de facturas <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a href="/casos/" class="btn-ghost">Volver a casos</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container case-grid">
+      <article class="case-body">
+        <h2>Problema</h2>
+        <p>Las facturas de proveedor no llegan por un único canal ni con un formato uniforme. Algunas aparecen como PDF adjunto en Gmail; otras requieren entrar en el portal del proveedor. El nombre del archivo puede ser útil, genérico o directamente engañoso. Después hay que comprobar la fecha real, evitar duplicados, renombrar, archivar y, cuando corresponde, registrar la compra en contabilidad.</p>
+        <p>El cuello de botella no era “leer un PDF”. Era mantener un circuito completo y trazable sin convertir cada cierre trimestral en una búsqueda manual por correos, portales y carpetas.</p>
+
+        <h2>Proceso afectado</h2>
+        <p>Recepción y archivo de facturas de proveedor, preparación del cierre trimestral y alta de compras en FacturaScripts. El proceso conecta correo, documentos PDF, Google Drive, reglas operativas, revisión fiscal y el sistema de facturación.</p>
+
+        <figure class="invoice-flow" aria-labelledby="invoice-flow-caption-es">
+          <div class="invoice-flow__frame">
+            <svg viewBox="0 0 420 650" role="img" aria-labelledby="invoice-flow-title-es invoice-flow-desc-es" xmlns="http://www.w3.org/2000/svg">
+              <title id="invoice-flow-title-es">Flujo automatizado de facturas de Aimtech</title>
+              <desc id="invoice-flow-desc-es">Una factura llega desde Gmail o un portal, se lee y valida con IA, se archiva en Drive, se registra de forma controlada en FacturaScripts y las excepciones pasan a revisión humana.</desc>
+
+              <path class="invoice-flow__route" d="M210 108V150" />
+              <path class="invoice-flow__route" d="M210 238V280" />
+              <path class="invoice-flow__route" d="M210 368V410" />
+              <path class="invoice-flow__route" d="M210 498V540" />
+
+              <circle class="invoice-flow__packet" cx="210" cy="108" r="5" aria-hidden="true"><animate attributeName="cy" values="108;150" dur="1.4s" begin="0s" repeatCount="indefinite" /></circle>
+              <circle class="invoice-flow__packet" cx="210" cy="238" r="5" aria-hidden="true"><animate attributeName="cy" values="238;280" dur="1.4s" begin="0.35s" repeatCount="indefinite" /></circle>
+              <circle class="invoice-flow__packet" cx="210" cy="368" r="5" aria-hidden="true"><animate attributeName="cy" values="368;410" dur="1.4s" begin="0.7s" repeatCount="indefinite" /></circle>
+              <circle class="invoice-flow__packet" cx="210" cy="498" r="5" aria-hidden="true"><animate attributeName="cy" values="498;540" dur="1.4s" begin="1.05s" repeatCount="indefinite" /></circle>
+
+              <g class="invoice-flow__node" style="--flow-delay: 0s" transform="translate(35 20)">
+                <rect class="invoice-flow__card" width="350" height="88" rx="20" fill="#0f1824" stroke="#2a3344" stroke-width="1.5" />
+                <circle class="invoice-flow__icon-bg" cx="44" cy="44" r="26" fill="#152c46" stroke="#2580e3" stroke-width="1.4" />
+                <g class="invoice-flow__icon"><path d="M29 34h30v21H29z" /><path d="m29 36 15 11 15-11" /></g>
+                <text class="invoice-flow__step" x="82" y="25">ENTRADA</text>
+                <text class="invoice-flow__label" x="82" y="49">Gmail y portales</text>
+                <text class="invoice-flow__detail" x="82" y="69">Adjunto o descarga autorizada</text>
+              </g>
+
+              <g class="invoice-flow__node" style="--flow-delay: 0.6s" transform="translate(35 150)">
+                <rect class="invoice-flow__card" width="350" height="88" rx="20" fill="#0f1824" stroke="#2a3344" stroke-width="1.5" />
+                <circle class="invoice-flow__icon-bg" cx="44" cy="44" r="26" fill="#152c46" stroke="#2580e3" stroke-width="1.4" />
+                <g class="invoice-flow__icon"><path d="M31 27h20l8 8v27H31z" /><path d="M51 27v9h8M37 45h16M37 53h12" /></g>
+                <text class="invoice-flow__step" x="82" y="25">LECTURA IA</text>
+                <text class="invoice-flow__label" x="82" y="49">PDF + reglas</text>
+                <text class="invoice-flow__detail" x="82" y="69">Extrae, clasifica y valida</text>
+              </g>
+
+              <g class="invoice-flow__node" style="--flow-delay: 1.2s" transform="translate(35 280)">
+                <rect class="invoice-flow__card" width="350" height="88" rx="20" fill="#0f1824" stroke="#2a3344" stroke-width="1.5" />
+                <circle class="invoice-flow__icon-bg" cx="44" cy="44" r="26" fill="#152c46" stroke="#2580e3" stroke-width="1.4" />
+                <g class="invoice-flow__icon"><path d="M26 37h15l6 6h15v21H26z" /><path d="M26 43h36" /></g>
+                <text class="invoice-flow__step" x="82" y="25">ARCHIVO</text>
+                <text class="invoice-flow__label" x="82" y="49">Google Drive</text>
+                <text class="invoice-flow__detail" x="82" y="69">Nombra, ordena y deduplica</text>
+              </g>
+
+              <g class="invoice-flow__node" style="--flow-delay: 1.8s" transform="translate(35 410)">
+                <rect class="invoice-flow__card" width="350" height="88" rx="20" fill="#0f1824" stroke="#2a3344" stroke-width="1.5" />
+                <circle class="invoice-flow__icon-bg" cx="44" cy="44" r="26" fill="#152c46" stroke="#2580e3" stroke-width="1.4" />
+                <g class="invoice-flow__icon"><ellipse cx="44" cy="32" rx="16" ry="6" /><path d="M28 32v23c0 3 7 6 16 6s16-3 16-6V32M28 43c0 3 7 6 16 6s16-3 16-6" /></g>
+                <text class="invoice-flow__step" x="82" y="25">REGISTRO</text>
+                <text class="invoice-flow__label" x="82" y="49">FacturaScripts</text>
+                <text class="invoice-flow__detail" x="82" y="69">Simula y crea solo si cumple</text>
+              </g>
+
+              <g class="invoice-flow__node invoice-flow__node--review" style="--flow-delay: 2.4s" transform="translate(35 540)">
+                <rect class="invoice-flow__card" width="350" height="88" rx="20" fill="#101c22" stroke="#358f91" stroke-width="1.5" />
+                <circle class="invoice-flow__icon-bg" cx="44" cy="44" r="26" fill="#102d30" stroke="#45f0dd" stroke-width="1.4" />
+                <g class="invoice-flow__icon"><circle cx="37" cy="35" r="6" /><path d="M25 59c1-9 6-14 12-14s11 5 12 14M48 44l5 5 10-12" /></g>
+                <text class="invoice-flow__step" x="82" y="25">CONTROL</text>
+                <text class="invoice-flow__label" x="82" y="49">Revisión humana</text>
+                <text class="invoice-flow__detail" x="82" y="69">Excepciones, fiscalidad y 2FA</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption id="invoice-flow-caption-es">El camino feliz avanza solo; las ambigüedades y excepciones salen del flujo automático para ser revisadas.</figcaption>
+        </figure>
+
+        <h3>Riesgos del flujo manual</h3>
+        <ul>
+          <li>Archivar por la fecha del correo en vez de por la fecha real de la factura.</li>
+          <li>Guardar dos veces la misma factura porque llegó en mensajes distintos.</li>
+          <li>Confundir una factura con un recibo, justificante de pago o documento de pedido.</li>
+          <li>Perder trazabilidad entre el registro contable y su PDF original.</li>
+          <li>Registrar automáticamente documentos que requieren criterio fiscal o revisión humana.</li>
+        </ul>
+
+        <h2>Solución aplicada</h2>
+        <h3>1. Descubrimiento desde Gmail y portales</h3>
+        <p>El flujo busca candidatos por remitente, asunto y adjuntos, y agrupa los resultados por proveedor. Cuando el documento solo está disponible en un portal, la automatización llega hasta donde permiten la sesión y los controles de acceso. CAPTCHA y 2FA se mantienen como puntos de intervención humana, no como obstáculos que haya que esquivar.</p>
+
+        <h3>2. Lectura y clasificación del documento</h3>
+        <p>El PDF se inspecciona para identificar tipo de documento, proveedor, número de factura y fecha. Para la clasificación documental, la fecha del documento prevalece sobre la fecha del email o el periodo de servicio. El periodo de registro contable o deducción fiscal se determina por separado y queda sujeto a revisión contable según la recepción, la contabilización y las demás circunstancias aplicables. Si falta información o el documento es ambiguo, queda en revisión.</p>
+
+        <h3>3. Archivo normalizado en Google Drive</h3>
+        <p>Las facturas válidas se guardan en el archivo documental por año y trimestre de la fecha del documento, con una nomenclatura estable: <code>YYYYMMDD_PROVEEDOR_identificador.pdf</code>. Esto permite ordenar, buscar y revisar el archivo sin depender del nombre original que decidió cada proveedor; no fija por sí solo el periodo contable o fiscal.</p>
+
+        <h3>4. Detección de duplicados</h3>
+        <p>No basta con comparar nombres de archivo. El control usa señales como proveedor, fecha, importe e identificador de factura. Si existe una coincidencia clara, no se vuelve a cargar; si la coincidencia es parcial, el documento se aparta para revisión.</p>
+
+        <h3>5. Registro controlado en FacturaScripts</h3>
+        <p>Solo pasan al alta automática las facturas de compra de Aimtech que cumplen las reglas operativas predefinidas: proveedor español, NIF válido, IVA español y metadatos de alta confianza. Estas reglas no sustituyen el criterio fiscal. Antes de escribir se ejecuta una simulación y se comprueba si ya existe. El PDF queda enlazado al registro, la factura se deja en estado <strong>Recibida</strong> y no pagada, porque la conciliación del pago se realiza después.</p>
+
+        <h3>6. Revisión humana donde aporta valor</h3>
+        <p>La automatización no decide a ciegas sobre fiscalidad, documentos dudosos, facturas extranjeras, inversión del sujeto pasivo o discrepancias de importes. En esos casos prepara la evidencia y solicita revisión. El objetivo es eliminar trabajo mecánico sin borrar el criterio administrativo.</p>
+
+        <h2>Herramientas utilizadas</h2>
+        <ul>
+          <li>Gmail y Google Drive mediante APIs autorizadas.</li>
+          <li>Lectura y extracción de texto de PDFs.</li>
+          <li>Reglas de clasificación, nomenclatura y deduplicación.</li>
+          <li>FacturaScripts mediante API y un script de registro repetible.</li>
+          <li>Hermes/Hércules como capa de orquestación y revisión asistida.</li>
+        </ul>
+
+        <h2>Resultados verificados</h2>
+        <p>El resultado respaldado son <strong>23 nuevas facturas de alta confianza archivadas en Drive durante el cierre del 2T de 2026</strong>, entre la primera pasada y una revisión posterior de documentos recibidos con retraso. El flujo también detectó facturas ya archivadas, copias repetidas y documentos que no debían tratarse como facturas de proveedor.</p>
+        <h3>Cómo se definió la alta confianza</h3>
+        <p>El recuento incluye documentos únicos archivados en Drive cuyo tipo, proveedor, número, fecha e importes se extrajeron sin ambigüedad, superaron las comprobaciones operativas y no activaron señales de duplicado o excepción. Excluye duplicados, justificantes, documentos ambiguos y casos enviados a revisión. No equivale a 23 altas automáticas en FacturaScripts.</p>
+        <p>El registro en FacturaScripts también es una etapa real del circuito para las facturas elegibles: se ejecuta tras la simulación, la comprobación de duplicados y las reglas operativas predefinidas. No publicamos un recuento de esas altas; la cifra de 23 se refiere exclusivamente a documentos archivados en Drive.</p>
+        <p>El resultado no se presenta como un porcentaje de ahorro inventado. Lo que sí está verificado es un archivo consistente, documentos clasificados por la fecha del documento, controles de duplicados y un proceso trazable desde Drive hasta el registro controlado en FacturaScripts para las facturas elegibles.</p>
+
+        <h2>Aprendizajes</h2>
+        <ul>
+          <li><strong>La fecha del documento guía el archivo, no decide por sí sola el periodo contable o fiscal.</strong> El trimestre documental y el periodo de registro o deducción se revisan por separado.</li>
+          <li><strong>El nombre del fichero no identifica siempre la factura.</strong> La deduplicación necesita claves de negocio.</li>
+          <li><strong>Factura y recibo no son sinónimos.</strong> Automatizar sin clasificar ensucia el archivo y la contabilidad.</li>
+          <li><strong>Registrar y conciliar son procesos distintos.</strong> El alta puede automatizarse y el pago mantenerse bajo control posterior.</li>
+          <li><strong>La intervención humana forma parte del diseño.</strong> 2FA, CAPTCHA y excepciones fiscales deben tener un punto de escalado claro.</li>
+        </ul>
+
+        <h2>Siguiente paso recomendado</h2>
+        <p>Para otra empresa no copiaríamos este circuito sin más. Empezaríamos con un diagnóstico breve: de dónde llegan los documentos, qué campos importan, qué reglas fiscales existen, dónde deben archivarse, qué sistema recibe los datos y qué excepciones necesitan revisión. Después se automatiza primero el proveedor o tipo documental más repetitivo y medible.</p>
+        <p><a href="/automatizacion-facturas-pdfs-ia/">Consulta cómo plantea Aimtech la automatización de facturas y PDFs con IA</a> o <a href="/contacto/">cuéntanos cómo funciona hoy tu proceso</a>.</p>
+        <p><strong>Documentado por <a href="/sobre-mike/">Mike Pérez</a></strong>, Ingeniero de Soluciones de IA, a partir del flujo operativo interno de Aimtech.</p>
+      </article>
+
+      <aside class="case-sidebar">
+        <div class="card" data-mouse>
+          <div class="card-num"><span>// contexto</span><span class="badge">Caso real</span></div>
+          <h3>Operación interna de Aimtech.</h3>
+          <p>Este caso documenta un proceso utilizado por Aimtech Consulting SL. Se omiten proveedores, importes, números de factura y cualquier dato confidencial.</p>
+        </div>
+        <div class="card" data-mouse>
+          <div class="card-num"><span>// resultado</span><span class="badge">2T 2026</span></div>
+          <h3>23 facturas nuevas archivadas.</h3>
+          <p>Documentos únicos de alta confianza incorporados a Drive durante el cierre del 2T de 2026, sin contar duplicados, justificantes ni casos enviados a revisión.</p>
+        </div>
+        <div class="case-note"><strong>Nota anti-humo:</strong> no afirmamos un ahorro porcentual que no se haya medido. Publicamos el volumen verificado y los controles que realmente están operativos.</div>
+        <div class="case-list-mini"><a href="/casos/">← Volver a casos</a><a href="/automatizacion-facturas-pdfs-ia/">Ver el servicio →</a><a href="/contacto/">Revisar mi proceso →</a></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="cta-final"><div class="container"><div data-reveal><h2>Del PDF a tu sistema, con <em>control humano</em><span class="cursor-blink"></span></h2><p>Si vuestro equipo sigue buscando adjuntos, renombrando documentos y copiando datos al ERP, podemos acotar un piloto sobre un proveedor o tipo documental. Sin prometer magia y sin automatizar excepciones a ciegas.</p><a href="/contacto/" class="btn-primary" style="font-size: 15px; padding: 18px 32px;">Revisar mi proceso</a></div></div></section>
+</main>
+<!-- @region partials/footer-es.html -->
+<footer data-nosnippet>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="text-decoration:none;color:inherit;">
+          <img src="/assets/logo.png?v=2" alt="Aimtech" width="96" height="96" />
+          <svg class="brand-svg" viewBox="135 45 330 130" xmlns="http://www.w3.org/2000/svg" aria-label="Aimtech Consulting">
+      <g transform="translate(300, 110)" text-anchor="middle">
+        <text class="brand-name" y="0">Aimtech</text>
+        <circle class="brand-dot" cx="152" cy="-15" r="5"/>
+        <text class="brand-sub" y="55" x="4">Consulting</text>
+      </g>
+    </svg>
+        </a>
+        <p>Formación e implantación de IA aplicada, Power BI y desarrollo a medida. Operado por una SL catalana con foco en pymes y administración pública.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Servicios</h3>
+        <a href="/power-bi/">Power BI</a>
+        <a href="/ia-aplicada/">IA Aplicada</a>
+        <a href="/ia-agentica/">IA Agéntica</a>
+        <a href="/desarrollo/">Desarrollo</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Recursos</h3>
+        <a href="/blog/">Blog</a>
+        <a href="/casos/">Casos de éxito</a>
+        <a href="/sobre-mike/">Sobre Mike</a>
+        <a href="/contacto/">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/politica-privacidad/">Privacidad</a>
+        <a href="/politica-cookies/">Cookies</a>
+        <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Aimtech Consulting SL · Cataluña</span>
+      <span>Built with intention.</span>
+    </div>
+  </div>
+</footer>
+<!-- @endregion -->
+</body>
+</html>

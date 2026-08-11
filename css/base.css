@@ -10,6 +10,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Texto de lectura por defecto. `hyphens: auto` aprovecha el atributo lang
+   de cada página ES/CA para evitar ríos de espacio en párrafos justificados. */
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 640px) {
+  body { font-size: 18px; }
+}
+
 /* ── Background ─────────────────────────────────── */
 .grid-bg {
   position: fixed; inset: 0; z-index: 0;

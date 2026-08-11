@@ -12,6 +12,6 @@
   --accent-purple: #b794f6;
   --accent-glow: rgba(37, 128, 227, 0.3);
   --serif: 'Instrument Serif', 'Times New Roman', serif;
-  --sans: 'Geist', -apple-system, system-ui, sans-serif;
+  --sans: 'Nunito', 'Geist', -apple-system, system-ui, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, monospace;
 }
