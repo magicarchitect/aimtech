@@ -11,6 +11,10 @@
   --accent-warm: #ffb86b;
   --accent-purple: #b794f6;
   --accent-glow: rgba(37, 128, 227, 0.3);
+  --content-size: 19px;
+  --content-link: #6db6ff;
+  --content-link-hover: #9fd1ff;
+  --content-link-focus: #b9dcff;
   --serif: 'Instrument Serif', 'Times New Roman', serif;
   --sans: 'Nunito', 'Geist', -apple-system, system-ui, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, monospace;

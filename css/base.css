@@ -23,6 +23,134 @@ p {
   body { font-size: 18px; }
 }
 
+/* Contrato editorial global. La lista positiva limita el mínimo de lectura a
+   regiones de contenido reales; navegación, botones, formularios, métricas,
+   labels y bloques técnicos quedan fuera por construcción. */
+main :is(
+  .hero-sub,
+  .section-intro,
+  .cta-final p,
+  .case-proof-cta p,
+  .contact-aside .lead,
+  .card p,
+  .bio-content p,
+  .value-card p,
+  .teach-list li,
+  .teach-headline > div > p:not(.teach-figure),
+  .side-content > p,
+  .build-card p,
+  .step-dev p,
+  .fit-col li,
+  .wf-content p,
+  .pre-item p,
+  .roi-card p,
+  .post-body .post-key
+),
+main :is(.prose, .post-body, .case-body) :is(p, li, dd) {
+  font-family: var(--sans);
+  font-size: max(var(--content-size), 1em);
+}
+
+/* Enlaces editoriales: se gobiernan por su región semántica, no por la
+   ausencia de clase. Los enlaces-componentes quedan fuera de esta lista. */
+main :is(
+  .hero-sub,
+  .section-intro,
+  .cta-final p,
+  .case-proof-cta p,
+  .contact-aside .lead,
+  .card p,
+  .bio-content p,
+  .value-card p,
+  .teach-list li,
+  .teach-headline > div > p:not(.teach-figure),
+  .side-content > p,
+  .build-card p,
+  .step-dev p,
+  .fit-col li,
+  .wf-content p,
+  .pre-item p,
+  .roi-card p,
+  .post-body .post-key
+) a:link,
+main :is(
+  .hero-sub,
+  .section-intro,
+  .cta-final p,
+  .case-proof-cta p,
+  .contact-aside .lead,
+  .card p,
+  .bio-content p,
+  .value-card p,
+  .teach-list li,
+  .teach-headline > div > p:not(.teach-figure),
+  .side-content > p,
+  .build-card p,
+  .step-dev p,
+  .fit-col li,
+  .wf-content p,
+  .pre-item p,
+  .roi-card p,
+  .post-body .post-key
+) a:visited,
+main :is(.prose, .post-body, .case-body) :is(p, li, dd, blockquote, figcaption) a:link,
+main :is(.prose, .post-body, .case-body) :is(p, li, dd, blockquote, figcaption) a:visited {
+  color: var(--content-link);
+  text-decoration-color: rgba(109, 182, 255, 0.58);
+  text-decoration-color: color-mix(in srgb, var(--content-link) 58%, transparent);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+main :is(
+  .hero-sub,
+  .section-intro,
+  .cta-final p,
+  .case-proof-cta p,
+  .contact-aside .lead,
+  .card p,
+  .bio-content p,
+  .value-card p,
+  .teach-list li,
+  .teach-headline > div > p:not(.teach-figure),
+  .side-content > p,
+  .build-card p,
+  .step-dev p,
+  .fit-col li,
+  .wf-content p,
+  .pre-item p,
+  .roi-card p,
+  .post-body .post-key
+) a:hover,
+main :is(.prose, .post-body, .case-body) :is(p, li, dd, blockquote, figcaption) a:hover {
+  color: var(--content-link-hover);
+  text-decoration-color: currentColor;
+}
+
+main :is(
+  .hero-sub,
+  .section-intro,
+  .cta-final p,
+  .case-proof-cta p,
+  .contact-aside .lead,
+  .card p,
+  .bio-content p,
+  .value-card p,
+  .teach-list li,
+  .teach-headline > div > p:not(.teach-figure),
+  .side-content > p,
+  .build-card p,
+  .step-dev p,
+  .fit-col li,
+  .wf-content p,
+  .pre-item p,
+  .roi-card p,
+  .post-body .post-key
+) a:focus-visible,
+main :is(.prose, .post-body, .case-body) :is(p, li, dd, blockquote, figcaption) a:focus-visible {
+  color: var(--content-link-focus);
+}
+
 /* ── Background ─────────────────────────────────── */
 .grid-bg {
   position: fixed; inset: 0; z-index: 0;
