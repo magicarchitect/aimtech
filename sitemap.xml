@@ -368,7 +368,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/formacion-ia-empresas/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/formacio-ia-empreses/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/formacion-ia-empresas/"/>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -378,7 +378,27 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/formacion-ia-empresas/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/formacio-ia-empreses/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/formacion-ia-empresas/"/>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/formacion-claude-empresas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/formacion-claude-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/formacio-claude-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/formacion-claude-empresas/"/>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aimtech.es/ca/formacio-claude-empreses/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/formacion-claude-empresas/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/formacio-claude-empreses/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/formacion-claude-empresas/"/>
+    <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
