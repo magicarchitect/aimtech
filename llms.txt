@@ -19,7 +19,7 @@ Datos reales de actividad: +20 años de experiencia, 3.360 alumnos formados,
 - [Formación en Power BI](https://www.aimtech.es/power-bi/): cursos in-company para empresas, entidades y AAPP. Dos itinerarios de 20h (Cero a Intermedio y Avanzado), online o presencial, grupos de hasta 20 personas. Power Query, modelado dimensional, DAX, RLS y gobierno del servicio. Precio: desde 4.400€ por edición para hasta 15 personas (+290€ por persona adicional hasta un máximo de 20), IVA aparte.
 - [Formación en IA Aplicada](https://www.aimtech.es/ia-aplicada/): formación práctica para equipos en IA generativa, prompting y agentes IA aplicados a procesos empresariales. Precio: desde 3.500€ por grupo de hasta 5 personas (+700€ por persona adicional, 35€/h por alumno), IVA aparte.
 - [Implantación de IA Agéntica](https://www.aimtech.es/ia-agentica/): diseño e implantación de sistemas de agentes IA orquestados con ROI medible. Stack: Claude API, n8n, RAG y bases vectoriales. Incluye análisis de procesos, precondiciones y diseño del workflow agéntico.
-- [Desarrollo a medida](https://www.aimtech.es/desarrollo/): apps web y móvil, CMS, APIs e integraciones de software para empresas.
+- [Desarrollo de software a medida en Barcelona](https://www.aimtech.es/desarrollo/): aplicaciones web y móvil, herramientas internas, APIs e integraciones mantenibles para empresas de Barcelona, Cataluña y España.
 
 ### Páginas de servicio específicas
 
