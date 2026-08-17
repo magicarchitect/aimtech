@@ -295,9 +295,10 @@
 }
 .build-card h3 {
   font-family: var(--serif);
-  font-size: 24px;
+  font-size: 48px;
+  line-height: 1.1;
   font-weight: 400;
-  margin: 0 0 8px;
+  margin: 0 0 16px;
   letter-spacing: -0.01em;
 }
 .build-card h3 em { font-style: italic; color: var(--accent); }
@@ -346,9 +347,10 @@
 }
 .step-dev h4 {
   font-family: var(--serif);
-  font-size: 22px;
+  font-size: 48px;
+  line-height: 1.1;
   font-weight: 400;
-  margin: 0 0 8px;
+  margin: 0 0 16px;
   letter-spacing: -0.01em;
 }
 .step-dev h4 em { font-style: italic; color: var(--accent); }
@@ -452,6 +454,9 @@
 }
 
 /* ── Responsive ───────────────────────────────────── */
+@media (max-width: 1200px) {
+  .build-card h3, .step-dev h4 { font-size: 38px; }
+}
 @media (max-width: 960px) {
   .dev-stage { max-width: min(400px, 88vw); margin: 0 auto; }
   .dev-chip { font-size: 9px; padding: 3px 8px; }
@@ -460,11 +465,13 @@
   .build-card { padding: 22px 20px; }
   .step-dev { padding: 20px; }
   .step-dev-num { font-size: 30px; }
+  .build-card h3, .step-dev h4 { font-size: clamp(28px, 7vw, 36px); }
 }
 @media (max-width: 640px) {
   .dev-stage { max-width: min(320px, 90vw); }
   .dev-chip { font-size: 8.5px; padding: 2px 6px; }
-  .build-card h3, .step-dev h4, .fit-col h4 { font-size: 20px; }
+  .build-card h3, .step-dev h4 { font-size: clamp(26px, 7.5vw, 32px); }
+  .fit-col h4 { font-size: 20px; }
   .build-card p, .step-dev p { font-size: 13.5px; }
   .fit-col { padding: 20px; }
   .fit-col li { font-size: 13px; }
