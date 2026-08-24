@@ -128,6 +128,7 @@
 <link rel="stylesheet" href="../../css/layout.css">
 <link rel="stylesheet" href="../../css/ia-agentica.css">
 <link rel="stylesheet" href="../../css/landing.css">
+<link rel="stylesheet" href="../../css/agentes-ia-visuals.css?v=2">
 <link rel="stylesheet" href="../../css/cookie-consent.css">
 <script src="../../js/cookie-consent.js" defer></script>
 <script src="../../js/site.js" defer></script>
@@ -401,6 +402,88 @@
     </div>
   </section>
 
+  <section class="agent-visual-break" aria-labelledby="agent-cycle-title-ca">
+    <div class="container">
+      <figure class="agent-visual" data-reveal="scale">
+        <div class="agent-visual__copy">
+          <span class="agent-visual__kicker">Circuit operatiu · Human-in-the-loop</span>
+          <h2 id="agent-cycle-title-ca">El que és rutinari flueix. / El que és sensible <em>espera</em>.</h2>
+          <p>L'agent rep un senyal, consulta el context i prepara una acció. Les decisions sensibles s'aturen per a aprovació humana; els passos definits queden registrats.</p>
+        </div>
+
+        <svg class="agent-visual__svg" viewBox="0 0 760 720" role="img" aria-labelledby="agent-cycle-svg-title-ca agent-cycle-svg-desc-ca" xmlns="http://www.w3.org/2000/svg">
+          <title id="agent-cycle-svg-title-ca">Cicle operatiu d'un agent d'IA amb control humà</title>
+          <desc id="agent-cycle-svg-desc-ca">Un senyal i el context alimenten l'agent. Les tasques rutinàries passen a l'acció; les sensibles passen primer per aprovació humana. Els passos definits queden registrats.</desc>
+
+          <rect class="av-frame" x="20" y="20" width="720" height="680" rx="28" fill="#080e17" stroke="#314055" stroke-width="1.4"/>
+
+          <path class="av-line" d="M190 180 C190 245 285 255 330 300" fill="none" stroke="#53657a" stroke-width="2"/>
+          <path class="av-line av-line--motion av-line--accent" pathLength="1" d="M190 180 C190 245 285 255 330 300" fill="none" stroke="#2580e3" stroke-width="3"/>
+          <path class="av-line" d="M570 180 C570 245 475 255 430 300" fill="none" stroke="#53657a" stroke-width="2"/>
+          <path class="av-line av-line--motion av-line--accent av-delay-1" pathLength="1" d="M570 180 C570 245 475 255 430 300" fill="none" stroke="#2580e3" stroke-width="3"/>
+          <path class="av-line" d="M380 425 L370 520" fill="none" stroke="#53657a" stroke-width="2"/>
+          <path class="av-line av-line--motion av-line--accent av-delay-2" pathLength="1" d="M380 425 L370 520" fill="none" stroke="#2580e3" stroke-width="3"/>
+          <path class="av-line" d="M500 375 C585 405 600 465 590 520" fill="none" stroke="#53657a" stroke-width="2"/>
+          <path class="av-line av-line--motion av-line--warm av-delay-1" pathLength="1" d="M500 375 C585 405 600 465 590 520" fill="none" stroke="#ffb86b" stroke-width="3"/>
+          <path class="av-line" d="M480 585 L470 585" fill="none" stroke="#53657a" stroke-width="2"/>
+          <path class="av-line av-line--motion av-line--human av-delay-3" pathLength="1" d="M480 585 L470 585" fill="none" stroke="#5eead4" stroke-width="3"/>
+          <path class="av-line" d="M270 585 L260 585" fill="none" stroke="#53657a" stroke-width="2"/>
+          <path class="av-line av-line--motion av-line--accent av-delay-1" pathLength="1" d="M270 585 L260 585" fill="none" stroke="#2580e3" stroke-width="3"/>
+
+          <g>
+            <rect class="av-node" x="60" y="70" width="260" height="110" rx="18" fill="#121d2d" stroke="#53657a" stroke-width="1.5"/>
+            <circle class="av-pulse" cx="92" cy="104" r="8" fill="#2580e3"/>
+            <text class="av-kicker" x="112" y="111" fill="#7f93aa">ENTRADA</text>
+            <text class="av-title" x="86" y="142" fill="#f4f7fb">Senyal</text>
+            <text class="av-meta av-meta--small" x="86" y="169" fill="#a9b6c6">correu · document · event</text>
+          </g>
+
+          <g>
+            <rect class="av-node" x="440" y="70" width="260" height="110" rx="18" fill="#121d2d" stroke="#53657a" stroke-width="1.5"/>
+            <circle class="av-pulse av-delay-1" cx="472" cy="104" r="8" fill="#2580e3"/>
+            <text class="av-kicker" x="492" y="111" fill="#7f93aa">CONTEXT</text>
+            <text class="av-title" x="466" y="142" fill="#f4f7fb">Dades</text>
+            <text class="av-meta av-meta--small" x="466" y="169" fill="#a9b6c6">CRM · ERP · RAG</text>
+          </g>
+
+          <g>
+            <circle class="av-core-ring" cx="380" cy="355" r="126"/>
+            <rect class="av-node av-node--accent" x="230" y="285" width="300" height="140" rx="28" fill="#102542" stroke="#2580e3" stroke-width="1.8"/>
+            <text class="av-kicker" x="380" y="326" text-anchor="middle" fill="#6db6ff">AGENT</text>
+            <text class="av-title" x="380" y="365" text-anchor="middle" fill="#f4f7fb">Avalua i decideix</text>
+            <text class="av-meta" x="380" y="397" text-anchor="middle" fill="#a9b6c6">dins dels teus límits</text>
+          </g>
+
+          <g>
+            <rect class="av-node av-node--warm" x="270" y="520" width="200" height="130" rx="18" fill="#251b12" stroke="#ffb86b" stroke-width="1.5"/>
+            <circle class="av-pulse av-delay-2" cx="302" cy="554" r="8" fill="#ffb86b"/>
+            <text class="av-kicker" x="322" y="561" fill="#c8a47d">ACCIÓ</text>
+            <text class="av-title av-title--small" x="296" y="600" fill="#f4f7fb">Prepara</text>
+            <text class="av-meta av-meta--small" x="296" y="628" fill="#a9b6c6">o executa</text>
+          </g>
+
+          <g>
+            <rect class="av-node av-node--human" x="480" y="520" width="220" height="130" rx="18" fill="#10231f" stroke="#5eead4" stroke-width="1.5"/>
+            <circle class="av-pulse av-delay-1" cx="512" cy="554" r="8" fill="#5eead4"/>
+            <text class="av-kicker" x="532" y="561" fill="#78cdbc">CONTROL</text>
+            <text class="av-title av-title--small av-title--compact" x="506" y="600" fill="#f4f7fb">Aprovació</text>
+            <text class="av-meta av-meta--small" x="506" y="628" fill="#a9b6c6">abans d'executar</text>
+          </g>
+
+          <g>
+            <rect class="av-node" x="60" y="520" width="200" height="130" rx="18" fill="#121d2d" stroke="#53657a" stroke-width="1.5"/>
+            <circle class="av-pulse av-delay-2" cx="92" cy="554" r="8" fill="#6db6ff"/>
+            <text class="av-kicker" x="112" y="561" fill="#7f93aa">TRAÇA</text>
+            <text class="av-title av-title--small" x="86" y="600" fill="#f4f7fb">Registre</text>
+            <text class="av-meta av-meta--small" x="86" y="628" fill="#a9b6c6">auditable</text>
+          </g>
+        </svg>
+
+        <figcaption><strong>Dues rutes, un mateix control:</strong> el que és rutinari es pot executar; el que és sensible espera una decisió humana. Els passos rellevants deixen una traça auditable.</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section style="padding: 0;">
     <div class="container" style="padding: 0;">
       <div class="stats" data-stagger>
@@ -503,6 +586,84 @@
         </article>
 
       </div>
+    </div>
+  </section>
+
+  <section class="agent-visual-break" aria-labelledby="agent-choice-title-ca">
+    <div class="container">
+      <figure class="agent-visual" data-reveal="scale">
+        <div class="agent-visual__copy">
+          <span class="agent-visual__kicker">Decisió tècnica · Mínima complexitat</span>
+          <h2 id="agent-choice-title-ca">No tot necessita / <em>un agent</em>.</h2>
+          <p>Primer mirem el procés, les excepcions i el risc. Després triem el mecanisme més simple que el pugui resoldre i demostrar valor.</p>
+        </div>
+
+        <svg class="agent-visual__svg agent-visual__svg--choice" viewBox="0 0 760 700" role="img" aria-labelledby="agent-choice-svg-title-ca agent-choice-svg-desc-ca" xmlns="http://www.w3.org/2000/svg">
+          <title id="agent-choice-svg-title-ca">Selector entre automatització, agent d'IA i IA agèntica</title>
+          <desc id="agent-choice-svg-desc-ca">Un procés s'avalua per regles, decisions, eines i coordinació. La sortida pot ser automatització, un agent o una arquitectura amb diversos agents.</desc>
+
+          <rect class="av-frame" x="20" y="20" width="720" height="660" rx="28" fill="#080e17" stroke="#314055" stroke-width="1.4"/>
+
+          <path class="av-line" d="M380 155 L380 215" fill="none" stroke="#53657a" stroke-width="2"/>
+          <path class="av-line av-line--motion av-line--accent" pathLength="1" d="M380 155 L380 215" fill="none" stroke="#2580e3" stroke-width="3"/>
+          <path class="av-line" d="M320 345 C245 390 145 400 140 455" fill="none" stroke="#53657a" stroke-width="2"/>
+          <path class="av-line av-line--motion av-line--human av-delay-1" pathLength="1" d="M320 345 C245 390 145 400 140 455" fill="none" stroke="#5eead4" stroke-width="3"/>
+          <path class="av-line" d="M380 380 L380 455" fill="none" stroke="#53657a" stroke-width="2"/>
+          <path class="av-line av-line--motion av-line--accent av-delay-2" pathLength="1" d="M380 380 L380 455" fill="none" stroke="#2580e3" stroke-width="3"/>
+          <path class="av-line" d="M440 345 C515 390 615 400 620 455" fill="none" stroke="#53657a" stroke-width="2"/>
+          <path class="av-line av-line--motion av-line--warm av-delay-3" pathLength="1" d="M440 345 C515 390 615 400 620 455" fill="none" stroke="#ffb86b" stroke-width="3"/>
+
+          <g>
+            <rect class="av-node av-node--accent" x="230" y="55" width="300" height="100" rx="20" fill="#102542" stroke="#2580e3" stroke-width="1.8"/>
+            <text class="av-kicker" x="380" y="91" text-anchor="middle" fill="#6db6ff">ENTRADA</text>
+            <text class="av-title" x="380" y="129" text-anchor="middle" fill="#f4f7fb">El teu procés</text>
+          </g>
+
+          <g>
+            <path class="av-node" d="M380 210 L485 295 L380 380 L275 295 Z" fill="#121d2d" stroke="#53657a" stroke-width="1.5"/>
+            <circle class="av-pulse" cx="380" cy="252" r="8" fill="#6db6ff"/>
+            <text class="av-kicker" x="380" y="282" text-anchor="middle" fill="#7f93aa">AVALUAR</text>
+            <text class="av-title av-title--small" x="380" y="319" text-anchor="middle" fill="#f4f7fb">Què exigeix?</text>
+            <text class="av-meta av-meta--small" x="380" y="346" text-anchor="middle" fill="#a9b6c6">regles · risc · coordinació</text>
+          </g>
+
+          <g class="av-choice">
+            <rect class="av-node av-node--human" x="35" y="455" width="210" height="165" rx="20" fill="#10231f" stroke="#5eead4" stroke-width="1.5"/>
+            <text class="av-kicker" x="140" y="493" text-anchor="middle" fill="#78cdbc">AUTOMATITZACIÓ</text>
+            <text class="av-title av-title--small" x="140" y="535" text-anchor="middle" fill="#f4f7fb">Regles + fluxos</text>
+            <text class="av-meta av-meta--small" x="140" y="570" text-anchor="middle" fill="#a9b6c6">poca autonomia</text>
+            <text class="av-meta av-meta--small" x="140" y="598" text-anchor="middle" fill="#a9b6c6">resultat previsible</text>
+          </g>
+
+          <g class="av-choice av-delay-1">
+            <rect class="av-node av-node--accent" x="275" y="455" width="210" height="165" rx="20" fill="#102542" stroke="#2580e3" stroke-width="1.8"/>
+            <text class="av-kicker" x="380" y="493" text-anchor="middle" fill="#6db6ff">AGENT</text>
+            <text class="av-title av-title--small" x="380" y="535" text-anchor="middle" fill="#f4f7fb">Decideix + actua</text>
+            <text class="av-meta av-meta--small" x="380" y="570" text-anchor="middle" fill="#a9b6c6">un procés</text>
+            <text class="av-meta av-meta--small" x="380" y="598" text-anchor="middle" fill="#a9b6c6">amb eines</text>
+          </g>
+
+          <g class="av-choice av-delay-2">
+            <rect class="av-node av-node--warm" x="515" y="455" width="210" height="165" rx="20" fill="#251b12" stroke="#ffb86b" stroke-width="1.5"/>
+            <text class="av-kicker" x="620" y="493" text-anchor="middle" fill="#c8a47d">IA AGÈNTICA</text>
+            <text class="av-title av-title--small" x="620" y="535" text-anchor="middle" fill="#f4f7fb">Orquestra</text>
+            <text class="av-meta av-meta--small" x="620" y="570" text-anchor="middle" fill="#a9b6c6">diversos agents</text>
+            <text class="av-meta av-meta--small" x="620" y="598" text-anchor="middle" fill="#a9b6c6">i aprovacions</text>
+          </g>
+
+          <text class="av-kicker" x="380" y="655" text-anchor="middle" fill="#7f93aa">LA MÍNIMA COMPLEXITAT QUE RESOL EL CAS</text>
+        </svg>
+
+        <div class="agent-choice-mobile" role="img" aria-label="El teu procés s'avalua per regles, risc i coordinació per triar entre automatització, un agent o IA agèntica.">
+          <div class="agent-choice-mobile__input"><span>Entrada</span><strong>El teu procés</strong></div>
+          <div class="agent-choice-mobile__question"><span>Avaluar</span><strong>Què exigeix?</strong><small>Regles · risc · coordinació</small></div>
+          <div class="agent-choice-mobile__result agent-choice-mobile__result--auto"><span>Automatització</span><strong>Regles + fluxos</strong><small>Poca autonomia · resultat previsible</small></div>
+          <div class="agent-choice-mobile__result agent-choice-mobile__result--agent"><span>Agent</span><strong>Decideix + actua</strong><small>Un procés · amb eines</small></div>
+          <div class="agent-choice-mobile__result agent-choice-mobile__result--agentic"><span>IA agèntica</span><strong>Orquestra</strong><small>Diversos agents · aprovacions</small></div>
+        </div>
+
+        <figcaption><strong>La tecnologia no decideix el projecte:</strong> el decideix el procés. Si unes regles basten, no afegim autonomia; si hi ha decisions i eines, avaluem un agent; si hi ha coordinació, dissenyem l'arquitectura.</figcaption>
+      </figure>
     </div>
   </section>
 
