@@ -12,6 +12,7 @@
   --accent-purple: #b794f6;
   --accent-glow: rgba(37, 128, 227, 0.3);
   --content-size: 19px;
+  --content-leading: 1.75;
   --content-link: #6db6ff;
   --content-link-hover: #9fd1ff;
   --content-link-focus: #b9dcff;
