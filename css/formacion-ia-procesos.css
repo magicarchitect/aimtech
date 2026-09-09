@@ -1,0 +1,372 @@
+/* ───────────────────────────────────────────────────────────
+   formacion-ia-procesos.css — Formación diseñada desde procesos
+   Scope propio: .fit-training / .lprocess / .session-anatomy
+   ─────────────────────────────────────────────────────────── */
+
+/* ── Hero: inputs reales → programa personalizado ─────────── */
+.lprocess .lp-shell {
+  fill: #0d121a;
+  stroke: #2a3344;
+  stroke-width: 1.4;
+}
+.lprocess .lp-rule {
+  fill: none;
+  stroke: #2a3344;
+  stroke-width: 1;
+}
+.lprocess .lp-input {
+  fill: #111925;
+  stroke: #364154;
+  stroke-width: 1.2;
+}
+.lprocess .lp-input--active {
+  fill: rgba(37, 128, 227, 0.10);
+  stroke: #2580e3;
+}
+.lprocess .lp-label {
+  fill: #f4f7fb;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+.lprocess .lp-meta {
+  fill: #8993a4;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.04em;
+}
+.lprocess .lp-arrow {
+  fill: none;
+  stroke: #2580e3;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-dasharray: 5 6;
+  animation: lp-flow 1.6s linear infinite;
+}
+.lprocess .lp-core-ring {
+  fill: rgba(37, 128, 227, 0.08);
+  stroke: #2580e3;
+  stroke-width: 1.4;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: lp-breathe 3.4s ease-in-out infinite;
+}
+.lprocess .lp-core-dot { fill: #2580e3; }
+.lprocess .lp-module {
+  fill: #111925;
+  stroke: #2a3344;
+  stroke-width: 1;
+  opacity: 0;
+  transform: translateX(10px);
+  animation: lp-module-in 0.55s ease forwards;
+}
+.lprocess .lp-module:nth-of-type(1) { animation-delay: .8s; }
+.lprocess .lp-module:nth-of-type(2) { animation-delay: 1.05s; }
+.lprocess .lp-module:nth-of-type(3) { animation-delay: 1.3s; }
+.lprocess .lp-check {
+  fill: none;
+  stroke: #2580e3;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.lprocess .lp-status {
+  fill: #2580e3;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.05em;
+}
+@keyframes lp-flow { to { stroke-dashoffset: -22; } }
+@keyframes lp-breathe {
+  0%, 100% { opacity: .65; transform: scale(.96); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+@keyframes lp-module-in { to { opacity: 1; transform: translateX(0); } }
+
+/* ── Bloque comercial: cómo personalizamos ────────────────── */
+.fit-training {
+  position: relative;
+  overflow: hidden;
+}
+.fit-training::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  top: 5%;
+  right: -180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 128, 227, .12), transparent 68%);
+  pointer-events: none;
+}
+.fit-training__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr);
+  gap: clamp(42px, 7vw, 96px);
+  align-items: center;
+}
+.fit-training__promise {
+  margin-top: 30px;
+  padding: 24px 26px;
+  border-left: 3px solid var(--accent);
+  background: rgba(37, 128, 227, .07);
+}
+.fit-training__promise strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.fit-training__promise p { margin: 0; color: var(--ink-dim); }
+
+.fit-training__board {
+  position: relative;
+  padding: 22px;
+  border: 1px solid var(--line-strong);
+  border-radius: 18px;
+  background: rgba(13, 18, 26, .88);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, .26);
+}
+.fit-training__board-label,
+.session-anatomy__label {
+  display: block;
+  margin: 0;
+  margin-bottom: 18px;
+  color: var(--ink-mute);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  line-height: 1.4;
+}
+.fit-training__steps {
+  display: grid;
+  gap: 12px;
+}
+.fit-training__step {
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  min-height: 76px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .025);
+}
+.fit-training__step-num {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(37, 128, 227, .55);
+  border-radius: 50%;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+.fit-training__step h3 {
+  margin: 0 0 4px;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.fit-training__step p {
+  margin: 0;
+  color: var(--ink-dim);
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: left;
+}
+.fit-training__step-state {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .06em;
+  white-space: nowrap;
+}
+.fit-training__connector {
+  width: 1px;
+  height: 14px;
+  margin: -12px 0 -12px 35px;
+  background: var(--accent);
+  opacity: .45;
+}
+
+/* ── Mapa de áreas: una formación, varios trabajos ────────── */
+.process-map {
+  margin-top: clamp(56px, 8vw, 104px);
+}
+.process-map__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 34px;
+}
+.process-map__card {
+  position: relative;
+  min-height: 220px;
+  padding: 26px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg-card);
+}
+.process-map__card::after {
+  content: attr(data-code);
+  position: absolute;
+  right: 18px;
+  bottom: 10px;
+  color: rgba(37, 128, 227, .14);
+  font-family: var(--mono);
+  font-size: 40px;
+  font-weight: 700;
+}
+.process-map__icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 24px;
+  place-items: center;
+  border: 1px solid rgba(37, 128, 227, .48);
+  border-radius: 10px;
+  color: var(--accent);
+}
+.process-map__icon svg { width: 22px; height: 22px; }
+.process-map__card h3 {
+  margin: 0 0 10px;
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.06;
+}
+.process-map__card p { margin: 0; color: var(--ink-dim); }
+
+/* ── Anatomía de una sesión aplicada ──────────────────────── */
+.session-anatomy {
+  display: grid;
+  grid-template-columns: minmax(290px, .78fr) minmax(0, 1.22fr);
+  gap: clamp(42px, 7vw, 90px);
+  align-items: center;
+}
+.session-anatomy__visual {
+  position: relative;
+  min-height: 560px;
+  padding: 32px 28px;
+  border: 1px solid var(--line-strong);
+  border-radius: 18px;
+  background: #0d121a;
+}
+.session-anatomy__rail {
+  position: absolute;
+  top: 88px;
+  bottom: 58px;
+  left: 55px;
+  width: 1px;
+  background: var(--line-strong);
+}
+.session-anatomy__rail::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 62%;
+  background: var(--accent);
+  animation: session-rail 2.2s ease .5s both;
+}
+.session-anatomy__items {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+.session-anatomy__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 16px;
+  align-items: center;
+  min-height: 74px;
+}
+.session-anatomy__dot {
+  z-index: 1;
+  display: grid;
+  width: 28px;
+  height: 28px;
+  margin-left: 13px;
+  place-items: center;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  background: #0d121a;
+  font-family: var(--mono);
+  font-size: 9px;
+}
+.session-anatomy__item div:last-child {
+  padding: 13px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .025);
+}
+.session-anatomy__item strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: 16px;
+}
+.session-anatomy__item div:last-child > span {
+  color: var(--ink-dim);
+  font-size: 14px;
+  line-height: 1.45;
+}
+@keyframes session-rail { from { height: 0; } }
+
+.fit-training__note {
+  margin-top: 26px;
+  color: var(--ink-mute);
+  font-size: 14px;
+}
+
+@media (max-width: 960px) {
+  .fit-training__intro,
+  .session-anatomy { grid-template-columns: 1fr; }
+  .process-map__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fit-training__board { max-width: 620px; }
+  .session-anatomy__visual { min-height: 520px; }
+}
+
+@media (max-width: 640px) {
+  .fit-training__promise { padding: 20px; }
+  .fit-training__board { padding: 16px; }
+  .fit-training__step {
+    grid-template-columns: 36px 1fr;
+    padding: 12px;
+  }
+  .fit-training__step-num { width: 36px; height: 36px; }
+  .fit-training__step-state { display: none; }
+  .fit-training__connector { margin-left: 29px; }
+  .process-map__grid { grid-template-columns: 1fr; }
+  .process-map__card { min-height: 0; }
+  .session-anatomy__visual { min-height: 540px; padding: 26px 16px; }
+  .session-anatomy__rail { left: 36px; }
+  .session-anatomy__item { grid-template-columns: 40px 1fr; gap: 10px; }
+  .session-anatomy__dot { margin-left: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lprocess,
+  .lprocess .ltag,
+  .lprocess .lp-arrow,
+  .lprocess .lp-core-ring,
+  .lprocess .lp-module,
+  .session-anatomy__rail::after {
+    animation: none !important;
+  }
+  .lprocess { opacity: 1; }
+  .lprocess .ltag { transform: none; }
+  .lprocess .lp-module { opacity: 1; transform: none; }
+}
