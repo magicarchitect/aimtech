@@ -77,7 +77,7 @@ rendimiento, diseño y posicionamiento.
   - Unificar en toda la web: la home dice solo "Mike". Usar "Mike Pérez" como
     cara visible y "Miguel Pérez" en el schema Person para casar con sus
     credenciales docentes públicas (UOC, UPC, UIC, Cibernàrium).
-- **Cobertura comercial**: consultoría, implantación, automatización, agentes y desarrollo para empresas de toda España; remoto por defecto y presencial cuando aporta valor. Barcelona se reserva como ubicación legal/corporativa y como modalidad presencial de formación, no como límite de los servicios tecnológicos.
+- **Cobertura comercial**: consultoría, implantación, automatización, agentes y desarrollo para empresas, sin calificadores geográficos de mercado; remoto por defecto y presencial cuando aporta valor. Barcelona se reserva como ubicación legal/corporativa y como modalidad presencial de formación, no como límite de los servicios tecnológicos.
 - **Web bilingüe**: ES (raíz `/`) + CA (`/ca/`). Hreflang ya implementado vía
   og:locale — verificar que existan también etiquetas <link rel="alternate"
   hreflang> reales en <head>, no solo en OG.
