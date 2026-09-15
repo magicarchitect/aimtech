@@ -150,8 +150,8 @@ universitaria acreditada + Power BI como puerta de entrada.
   "formación IA práctica para empresas"
 
 **/ia-agentica** (mayor margen, menor competencia — apostar fuerte)
-- Primaria: "implantación agentes IA empresas", "consultoría agentes IA España"
-- Secundarias: "automatización n8n empresas", "agencia n8n España", "agente IA
+- Primaria: "implantación agentes IA empresas", "consultoría agentes IA empresas"
+- Secundarias: "automatización n8n empresas", "servicios n8n empresas", "agente IA
   WhatsApp Business", "sistemas multi-agente empresas", "implantación IA RAG"
 
 **/desarrollo**
@@ -205,7 +205,7 @@ Referencia de lo que debe haber por página. ☑ = ya implementado.
 Convención editorial: Preferir “formación” sobre “curso” en Power BI/IA para empresas y pymes. “Curso” queda como variante secundaria SEO; el posicionamiento principal debe comunicar sesiones en directo con profesor, no vídeos grabados.
 
 Objetivo: ser citado por asistentes IA en consultas de formación Power BI /
-consultoría e implantación de IA para empresas en España. El contenido actual ya es muy "citable"
+consultoría e implantación de IA para empresas. El contenido actual ya es muy "citable"
 (definiciones claras, listas, datos). Acciones:
 - Crear `llms.txt` en raíz: qué es Aimtech, servicios, para quién, geo.
 - Mantener el estilo de respuestas directas y datos concretos (la investigación

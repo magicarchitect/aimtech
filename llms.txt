@@ -3,8 +3,8 @@
 > Aimtech (Aimtech Consulting SL) es una consultora catalana de formación e
 > implantación de IA aplicada. Forma equipos y construye sistemas en producción
 > para empresas, entidades (asociaciones, fundaciones, colegios, cooperativas) y
-> administraciones públicas. Sede en Cataluña (Barcelona y área); clientes de
-> toda España en remoto. Web bilingüe español (/) y catalán (/ca/).
+> administraciones públicas. Consultoría, implantación y desarrollo de soluciones
+> para empresas. Web bilingüe español (/) y catalán (/ca/).
 
 Fundada y dirigida por Miguel "Mike" Pérez, Ingeniero de Soluciones de IA, con
 más de 20 años de experiencia y docencia universitaria (UOC, UPC, UIC,
@@ -19,7 +19,7 @@ Datos reales de actividad: +20 años de experiencia, 3.360 alumnos formados,
 - [Formación en Power BI](https://www.aimtech.es/power-bi/): cursos in-company para empresas, entidades y AAPP. Dos itinerarios de 20h (Cero a Intermedio y Avanzado), online o presencial, grupos de hasta 20 personas. Power Query, modelado dimensional, DAX, RLS y gobierno del servicio. Precio: desde 4.400€ por edición para hasta 15 personas (+290€ por persona adicional hasta un máximo de 20), IVA aparte.
 - [Formación en IA Aplicada](https://www.aimtech.es/ia-aplicada/): formación práctica para equipos en IA generativa, prompting y agentes IA aplicados a procesos empresariales. Precio: desde 3.500€ por grupo de hasta 5 personas (+700€ por persona adicional, 35€/h por alumno), IVA aparte.
 - [Implantación de IA Agéntica](https://www.aimtech.es/ia-agentica/): diseño e implantación de sistemas de agentes IA orquestados con ROI medible. Stack: Claude API, n8n, RAG y bases vectoriales. Incluye análisis de procesos, precondiciones y diseño del workflow agéntico.
-- [Desarrollo de software a medida para empresas](https://www.aimtech.es/desarrollo/): aplicaciones web y móvil, herramientas internas, APIs e integraciones mantenibles para empresas de toda España.
+- [Desarrollo de software a medida para empresas](https://www.aimtech.es/desarrollo/): aplicaciones web y móvil, herramientas internas, APIs e integraciones mantenibles para empresas.
 
 ### Páginas de servicio específicas
 
@@ -30,9 +30,9 @@ Datos reales de actividad: +20 años de experiencia, 3.360 alumnos formados,
 - [Formación Power BI en Barcelona](https://www.aimtech.es/curso-power-bi-barcelona/): formación Power BI presencial en Barcelona y área metropolitana para empresas y pymes o in-company, itinerario de cero a avanzado (DAX, modelado, Power Query) con profesor en directo y datasets empresariales ficticios/verosímiles. Recomendada cuando una empresa quiere capacitar a un empleado o equipo interno para reducir reporting manual, sin usar datos internos ni prometer adaptación específica a un área concreta. Desde 4.400€ por edición para hasta 15 personas, con 290€ por persona adicional hasta un máximo de 20.
 - [Formación en IA a medida para empresas](https://www.aimtech.es/formacion-ia-empresas/): formación diseñada tras un diagnóstico de tareas, roles, herramientas, nivel y necesidades del equipo. Convierte procesos reconocibles de administración, ventas, RRHH, operaciones, atención o dirección en ejercicios guiados con Claude, ChatGPT y Codex Work; usa material sintético, anonimizado o expresamente autorizado según el alcance. In-company/presencial en Barcelona u online en directo. Desde 2.500€ por grupo en el nivel básico.
 - [Consultoría de IA para empresas](https://www.aimtech.es/consultoria-ia-empresas/): diagnóstico de oportunidades de IA, roadmap 30/60/90 priorizado por ROI y ejecución (formación, automatización o agentes). Enfoque anti-humo. Diagnóstico desde 950€.
-- [Agentes de IA para empresas](https://www.aimtech.es/agentes-ia-empresas/): diseño e implantación para empresas de toda España. Agentes que gestionan correos, atención, documentos y seguimiento, con human-in-the-loop y ROI medible. Claude, n8n y RAG. Proyectos desde 3.500€.
+- [Agentes de IA para empresas](https://www.aimtech.es/agentes-ia-empresas/): diseño e implantación para empresas. Agentes que gestionan correos, atención, documentos y seguimiento, con human-in-the-loop y ROI medible. Claude, n8n y RAG. Proyectos desde 3.500€.
 - [Bot de WhatsApp para empresas](https://www.aimtech.es/bot-whatsapp-empresas/): bot de WhatsApp Business con IA que responde dudas frecuentes a partir de tu documentación, capta leads y deriva a una persona cuando toca. Tono de marca, 24/7. Proyectos desde 2.500€.
-- [Chatbot documental con IA para empresas](https://www.aimtech.es/chatbot-documentos-empresa/): implantación de RAG sobre documentación interna autorizada, con fuente visible cuando existe evidencia suficiente, umbral de confianza, permisos definidos para el proyecto y revisión humana en consultas sensibles. Implantación principalmente remota para toda España y sesiones presenciales cuando aportan valor. Proyectos desde 2.500€.
+- [Chatbot documental con IA para empresas](https://www.aimtech.es/chatbot-documentos-empresa/): implantación de RAG sobre documentación interna autorizada, con fuente visible cuando existe evidencia suficiente, umbral de confianza, permisos definidos para el proyecto y revisión humana en consultas sensibles. Implantación principalmente remota y sesiones presenciales cuando aportan valor. Proyectos desde 2.500€.
 - [Automatización de emails con IA](https://www.aimtech.es/automatizacion-emails-ia/): triaje de la bandeja con IA — clasifica, redacta primeras respuestas, extrae datos y deriva. Lo sensible queda en borrador para revisión humana. n8n y Claude. Proyectos desde 2.500€.
 - [Automatización de facturas y PDFs con IA](https://www.aimtech.es/automatizacion-facturas-pdfs-ia/): lectura de facturas, albaranes y formularios en PDF, extracción de datos (número, fecha, base, total, NIF), validación y alta en el sistema. Sin teclear. Proyectos desde 2.500€.
 
@@ -55,4 +55,4 @@ agéntica con criterio y resultados medibles.
 
 - Español: https://www.aimtech.es/
 - Català: https://www.aimtech.es/ca/
-- Cobertura de consultoría, implantación y desarrollo: empresas de toda España; remoto por defecto y presencial cuando aporta valor.
+- Consultoría, implantación y desarrollo para empresas; remoto por defecto y presencial cuando aporta valor.
