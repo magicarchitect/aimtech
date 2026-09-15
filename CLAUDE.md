@@ -77,7 +77,7 @@ rendimiento, diseño y posicionamiento.
   - Unificar en toda la web: la home dice solo "Mike". Usar "Mike Pérez" como
     cara visible y "Miguel Pérez" en el schema Person para casar con sus
     credenciales docentes públicas (UOC, UPC, UIC, Cibernàrium).
-- **Geo-targeting**: Cataluña (Barcelona y área); clientes de toda España en remoto.
+- **Cobertura comercial**: consultoría, implantación, automatización, agentes y desarrollo para empresas de toda España; remoto por defecto y presencial cuando aporta valor. Barcelona se reserva como ubicación legal/corporativa y como modalidad presencial de formación, no como límite de los servicios tecnológicos.
 - **Web bilingüe**: ES (raíz `/`) + CA (`/ca/`). Hreflang ya implementado vía
   og:locale — verificar que existan también etiquetas <link rel="alternate"
   hreflang> reales en <head>, no solo en OG.
@@ -133,7 +133,7 @@ universitaria acreditada + Power BI como puerta de entrada.
 ### Keywords objetivo por página (sin FUNDAE, sin Kit Digital)
 
 **/ (home)**
-- Primaria: "consultoría IA Cataluña", "formación IA y Power BI empresas"
+- Primaria: "consultoría IA empresas", "formación IA y Power BI empresas"
 - Secundarias: "agentes IA para empresas", "implantación IA pymes"
 
 **/power-bi**
@@ -150,23 +150,23 @@ universitaria acreditada + Power BI como puerta de entrada.
   "formación IA práctica para empresas"
 
 **/ia-agentica** (mayor margen, menor competencia — apostar fuerte)
-- Primaria: "implantación agentes IA empresas", "consultoría agentes IA Cataluña"
+- Primaria: "implantación agentes IA empresas", "consultoría agentes IA España"
 - Secundarias: "automatización n8n empresas", "agencia n8n España", "agente IA
   WhatsApp Business", "sistemas multi-agente empresas", "implantación IA RAG"
 
 **/desarrollo**
-- Primaria: "desarrollo software a medida Cataluña", "desarrollo APIs empresas"
+- Primaria: "desarrollo software a medida empresas", "desarrollo APIs empresas"
 - Secundarias: "desarrollo apps a medida pymes", "integraciones software empresa"
 
 **/sobre-mike**
 - Primaria: "Mike Pérez IA", "Miguel Pérez ingeniero soluciones IA",
-  "consultor IA Cataluña"
+  "consultor IA empresas"
 - Refuerzo de marca personal y E-E-A-T, no de conversión directa.
 
 ### Schema.org / JSON-LD (estado: base implementada, mantener y ampliar)
 Referencia de lo que debe haber por página. ☑ = ya implementado.
 - **Todas las páginas**: `Organization` (Aimtech Consulting SL) con `founder`
-  (Miguel Pérez), `areaServed` (ES + Cataluña), `contactPoint`, `sameAs`
+  (Miguel Pérez), `areaServed` (España para servicios; la dirección legal puede conservar Cataluña), `contactPoint`, `sameAs`
   (LinkedIn, GitHub, adventuriq.com si procede).
 - **/ (home)**: ☑ `Organization`. Pendiente añadir `WebSite`.
 - **/power-bi**: ☑ `Course` (x2 itinerarios, 20h, hasCourseInstance,
@@ -205,7 +205,7 @@ Referencia de lo que debe haber por página. ☑ = ya implementado.
 Convención editorial: Preferir “formación” sobre “curso” en Power BI/IA para empresas y pymes. “Curso” queda como variante secundaria SEO; el posicionamiento principal debe comunicar sesiones en directo con profesor, no vídeos grabados.
 
 Objetivo: ser citado por asistentes IA en consultas de formación Power BI /
-consultoría IA en Cataluña-España. El contenido actual ya es muy "citable"
+consultoría e implantación de IA para empresas en España. El contenido actual ya es muy "citable"
 (definiciones claras, listas, datos). Acciones:
 - Crear `llms.txt` en raíz: qué es Aimtech, servicios, para quién, geo.
 - Mantener el estilo de respuestas directas y datos concretos (la investigación

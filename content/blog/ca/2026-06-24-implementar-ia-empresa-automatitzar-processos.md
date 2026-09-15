@@ -2,6 +2,7 @@
 title: "Com implementar IA a la teva empresa: 7 passos per automatitzar processos sense fum"
 description: "Guia pràctica per implementar IA a la teva empresa: detecta processos repetitius, prioritza casos d’ús, forma l’equip i automatitza amb control humà."
 date: 2026-06-24
+modified: 2026-09-15
 author: "Mike Pérez"
 tags: ["ia-aplicada", "automatitzacio", "implantacio"]
 icon: "agent"
@@ -76,7 +77,7 @@ Una implantació d’IA ha de tenir mètriques: hores estalviades, temps mitjà 
 
 El camí recomanable és progressiu: diagnòstic, pilot, adopció, integració i escalat. Primer es valida el valor. Després s’amplia.
 
-Si necessites una visió externa, una [consultoria d’IA a Barcelona per a empreses](/ca/consultoria-ia-empreses/) pot ajudar-te a separar oportunitats reals d’automatitzacions boniques però inútils.
+Si necessites una visió externa, una [consultoria d’IA per a empreses](/ca/consultoria-ia-empreses/) pot ajudar-te a separar oportunitats reals d’automatitzacions boniques però inútils.
 
 ## Exemples de processos que pots automatitzar amb IA
 
