@@ -2,6 +2,7 @@
 title: "Cómo implementar IA en tu empresa: 7 pasos para automatizar procesos sin humo"
 description: "Guía práctica para implementar IA en tu empresa: detecta procesos repetitivos, prioriza casos de uso, forma al equipo y automatiza con control humano."
 date: 2026-06-24
+modified: 2026-09-15
 author: "Mike Pérez"
 tags: ["ia-aplicada", "automatizacion", "implantacion"]
 icon: "agent"
@@ -76,7 +77,7 @@ Una implantación de IA debe tener métricas: horas ahorradas, tiempo medio de r
 
 El camino recomendable es progresivo: diagnóstico, piloto, adopción, integración y escalado. Primero se valida el valor. Después se amplía.
 
-Si necesitas una visión externa, una [consultoría de IA en Barcelona para empresas](/consultoria-ia-empresas/) puede ayudarte a separar oportunidades reales de automatizaciones bonitas pero inútiles.
+Si necesitas una visión externa, una [consultoría de IA para empresas](/consultoria-ia-empresas/) puede ayudarte a separar oportunidades reales de automatizaciones bonitas pero inútiles.
 
 ## Ejemplos de procesos que puedes automatizar con IA
 
