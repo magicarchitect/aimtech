@@ -153,8 +153,8 @@ function renderPost(post, hreflangPair, config) {
   const tagsHtml = post.tags.map(t => `<span>${escapeHtml(t)}</span>`).join('');
   const tagsJson = JSON.stringify(post.tags);
 
-  const hrefEs = hreflangPair.es || `${SITE_URL}/blog/`;
-  const hrefCa = hreflangPair.ca || `${SITE_URL}/ca/blog/`;
+  const hrefEs = hreflangPair.es || post.canonicalUrl;
+  const hrefCa = hreflangPair.ca || null;
 
   const replacements = {
     '{{TITLE}}': escapeHtml(post.title),
@@ -163,7 +163,8 @@ function renderPost(post, hreflangPair, config) {
     '{{DESCRIPTION_JSON}}': jsonStr(post.description),
     '{{CANONICAL_URL}}': post.canonicalUrl,
     '{{HREFLANG_ES}}': hrefEs,
-    '{{HREFLANG_CA}}': hrefCa,
+    // The language switch may lead to the index; it is not an SEO alternate.
+    '{{HREFLANG_CA}}': hrefCa || `${SITE_URL}/ca/blog/`,
     '{{OG_IMAGE}}': post.ogImage,
     '{{DATE_ISO}}': post.dateISO,
     '{{DATE_MODIFIED}}': post.modifiedISO,
@@ -180,6 +181,9 @@ function renderPost(post, hreflangPair, config) {
   for (const [k, v] of Object.entries(replacements)) {
     html = html.split(k).join(v);
   }
+  // An index is not an equivalent translation of an article.
+  if (!hrefCa) html = html.replace(/^.*<link rel="alternate" hreflang="ca"[^>]*>\r?\n/gm, '');
+  if (!hreflangPair.es) html = html.replace(/^.*<link rel="alternate" hreflang="es"[^>]*>\r?\n/gm, '');
   return html;
 }
 
@@ -278,10 +282,10 @@ const BLOG_MARKER_END = '<!-- BLOG-AUTO-END -->';
 function sitemapEntry({ loc, hrefEs, hrefCa, lastmod, changefreq, priority }) {
   return `
   <url>
-    <loc>${loc}</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="${hrefEs}"/>
-    <xhtml:link rel="alternate" hreflang="ca" href="${hrefCa}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${hrefEs}"/>
+    <loc>${loc}</loc>${hrefEs ? `
+    <xhtml:link rel="alternate" hreflang="es" href="${hrefEs}"/>` : ''}${hrefCa ? `
+    <xhtml:link rel="alternate" hreflang="ca" href="${hrefCa}"/>` : ''}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${hrefEs || hrefCa}"/>
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
@@ -348,8 +352,8 @@ function updateSitemap(allPosts) {
   }
   for (const key of Object.keys(pairs)) {
     const pair = pairs[key];
-    const esUrl = pair.es ? pair.es.canonicalUrl : `${SITE_URL}/blog/`;
-    const caUrl = pair.ca ? pair.ca.canonicalUrl : `${SITE_URL}/ca/blog/`;
+    const esUrl = pair.es ? pair.es.canonicalUrl : null;
+    const caUrl = pair.ca ? pair.ca.canonicalUrl : null;
     if (pair.es) {
       entries.push(sitemapEntry({
         loc: pair.es.canonicalUrl,
@@ -412,8 +416,11 @@ function processFile(filePath) {
     if (body.includes('{{LANG_ES_URL}}') || body.includes('{{LANG_CA_URL}}')) {
       const esMatch = original.match(/hreflang="es"\s+href="([^"]+)"/i);
       const caMatch = original.match(/hreflang="ca"\s+href="([^"]+)"/i);
-      const esUrl = esMatch ? esMatch[1] : '/';
-      const caUrl = caMatch ? caMatch[1] : '/ca/';
+      // Keep untranslated blog navigation on the other language's index,
+      // without misrepresenting that index as a hreflang equivalent.
+      const isBlog = path.relative(ROOT, filePath).split(path.sep).includes('blog');
+      const esUrl = esMatch ? esMatch[1] : (isBlog ? `${SITE_URL}/blog/` : '/');
+      const caUrl = caMatch ? caMatch[1] : (isBlog ? `${SITE_URL}/ca/blog/` : '/ca/');
       body = body.split('{{LANG_ES_URL}}').join(esUrl).split('{{LANG_CA_URL}}').join(caUrl);
     }
     return `${openTag}\n${body}\n${closeTag}`;
