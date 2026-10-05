@@ -1,0 +1,28 @@
+/* Scoped editorial overrides: no changes to other case pages. */
+.training-example .case-body p,
+.training-example .case-body li,
+.training-example .case-sidebar p {
+  font-family: var(--sans);
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+.training-example .case-body p,
+.training-example .case-sidebar p {
+  text-align: justify;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+.training-example .case-kicker {
+  display: block;
+  color: #6db6ff;
+}
+.training-example .case-sidebar p { margin-top: 16px; }
+.training-example .case-breadcrumb a,
+.training-example .case-breadcrumb a:visited { color: #6db6ff; }
+.training-example .case-breadcrumb a:hover { color: #9fd1ff; }
+.training-example .case-breadcrumb a:focus-visible {
+  color: #b9dcff;
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
