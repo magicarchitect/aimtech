@@ -20,6 +20,49 @@ Las respuestas ES y CA van a la misma pestaña (la columna Idioma las
 distingue). Los valores se insertan en modo RAW: el texto libre nunca se
 interpreta como fórmula.
 
+## Puntuaciones y medias (ES/CA)
+
+Las tres preguntas (calidad, instructor, materiales) permiten **1–5 en pasos
+ de 0,5**: 1; 1,5; 2; 2,5; 3; 3,5; 4; 4,5; 5. Se mantiene el mínimo 1.
+La interfaz muestra coma decimal y cinco estrellas con zonas de media
+estrella; los radios nativos permiten recorrer los nueve valores con las
+flechas del teclado. La selección ya no avanza sola: se confirma con
+Continuar o Enter para poder corregirla sin prisas.
+
+El frontend usa `Number` y envía números JSON (`3.5`, no `"3,5"`). La función
+valida finitud, rango y múltiplos de 0,5; rechaza cuartos, NaN, sufijos,
+comas y tipos no numéricos. Conserva compatibilidad con enteros anteriores
+y cadenas numéricas canónicas, convirtiéndolas en números completos, nunca
+con `parseInt`.
+
+Las columnas C–E se insertan como **números RAW sin redondear**. La columna F
+mantiene la media aritmética de las tres preguntas, con la precisión previa
+de dos decimales (3,5 + 4,5 + 5 → 4,33). El email muestra los valores con
+coma; `◐` identifica media estrella, junto a la puntuación numérica explícita.
+Los valores enteros históricos no necesitan migración.
+
+Para análisis posteriores, leer Sheets con `valueRenderOption=UNFORMATTED_VALUE`
+y calcular medias sobre números completos C–E (por ejemplo `AVERAGE(C2:C)`),
+sin `parseInt`, `floor`, ni redondeo previo de cada respuesta. La media de F
+ya tiene redondeo a dos decimales; usar C–E para un agregado de máxima precisión.
+No se recalculan testimonios, cifras públicas ni filas históricas en este cambio.
+El destino sigue siendo `GSHEETS_SPREADSHEET_ID` de feedback, nunca LEADS.
+
+## Pruebas sin efectos externos
+
+- `npm test`: validación, regresión de enteros, payload RAW y email con
+  proveedores sustituidos por dobles de prueba. No requiere credenciales.
+- `PLAYWRIGHT_MODULE=/ruta/a/playwright node tests/feedback-browser.cjs`:
+  servidor estático local en 8767 por defecto. `FEEDBACK_TEST_URL` permite
+  una preview; `FEEDBACK_TEST_REPORT` configura capturas y JSON de resultados.
+  Intercepta **todas** las peticiones a feedback y responde desde el doble;
+  no escribe en Sheets ni envía emails. ES/CA, escritorio/táctil, hover,
+  teclado, foco, serialización decimal y confirmación.
+
+La persistencia real en Google Sheets **no se prueba** sin autorización para
+crear y verificar una fila de prueba. Las pruebas verifican el cuerpo real
+que la función entrega a la API simulada, no afirman entrega a Google.
+
 ## Configuración (una sola vez, ~10 min)
 
 1. **Service account**

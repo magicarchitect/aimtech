@@ -75,7 +75,8 @@ function json(statusCode, body) {
 }
 
 function stars(n) {
-  return '★'.repeat(n) + '☆'.repeat(5 - n);
+  // The explicit numeric score is authoritative; ◐ denotes a half star in email.
+  return '★'.repeat(Math.floor(n)) + (n % 1 ? '◐' : '') + '☆'.repeat(5 - Math.ceil(n));
 }
 
 // ─── Google Sheets (REST + JWT de service account) ───
@@ -179,8 +180,10 @@ exports.handler = async (event) => {
 
   const ratings = {};
   for (const key of Object.keys(RATING_LABELS)) {
-    const v = Number(data[key]);
-    if (!Number.isInteger(v) || v < 1 || v > 5) errors.push(key);
+    const raw = data[key];
+    // Preserve legacy numeric strings, but never coerce booleans/arrays to ratings.
+    const v = typeof raw === 'number' || (typeof raw === 'string' && /^[1-5](?:\.5)?$/.test(raw)) ? Number(raw) : NaN;
+    if (!Number.isFinite(v) || !Number.isInteger(v * 2) || v < 1 || v > 5) errors.push(key);
     else ratings[key] = v;
   }
 
@@ -270,9 +273,9 @@ exports.handler = async (event) => {
       `Empresa:    ${empresa}`,
       `Alumno:     ${quien}${email ? ` <${email}>` : ''}`,
       ``,
-      `${RATING_LABELS.calidad}:      ${stars(ratings.calidad)} (${ratings.calidad}/5)`,
-      `${RATING_LABELS.instructor}:  ${stars(ratings.instructor)} (${ratings.instructor}/5)`,
-      `${RATING_LABELS.materiales}:    ${stars(ratings.materiales)} (${ratings.materiales}/5)`,
+      `${RATING_LABELS.calidad}:      ${stars(ratings.calidad)} (${String(ratings.calidad).replace('.', ',')}/5)`,
+      `${RATING_LABELS.instructor}:  ${stars(ratings.instructor)} (${String(ratings.instructor).replace('.', ',')}/5)`,
+      `${RATING_LABELS.materiales}:    ${stars(ratings.materiales)} (${String(ratings.materiales).replace('.', ',')}/5)`,
       `Media:                          ${mediaStr}/5`,
       ``,
       `Qué mejoraría:`,
@@ -290,7 +293,7 @@ exports.handler = async (event) => {
     const ratingRow = (label, v) => `
     <tr>
       <td style="padding:8px 0;color:#666;font-size:13px;">${escapeHtml(label)}</td>
-      <td style="padding:8px 0;font-size:15px;letter-spacing:2px;color:#2580e3;">${stars(v)} <span style="color:#888;font-size:12px;letter-spacing:0;">(${v}/5)</span></td>
+      <td style="padding:8px 0;font-size:15px;letter-spacing:2px;color:#2580e3;">${stars(v)} <span style="color:#888;font-size:12px;letter-spacing:0;">(${String(v).replace('.', ',')}/5)</span></td>
     </tr>`;
 
     const htmlBody = `

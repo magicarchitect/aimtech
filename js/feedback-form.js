@@ -1,7 +1,7 @@
 // ── Feedback form (encuesta de calidad) ──────────────────
 // Wizard tipo Typeform: un paso por pantalla, transición
-// vertical, auto-avance al seleccionar, atajos de teclado
-// (A-C, 1-5, Enter) y paso de testimonio condicionado a que
+// vertical, auto-avance solo en formación, ratings 1–5/0,5
+// con flechas nativas, atajos (A-D, 1-5, Enter) y testimonio si
 // el alumno haya dejado su nombre.
 // Envía el payload a /.netlify/functions/feedback.
 // Anti-spam: honeypot invisible + check de tiempo mínimo.
@@ -228,9 +228,32 @@
     return t.send;
   }
 
-  // ── Auto-avance al seleccionar opción o estrellas ──
+  // ── Ratings: paint half stars; native arrows never auto-advance ──
+  function paintRating(group, value) {
+    group.querySelectorAll('.fb-star-slot').forEach(slot => {
+      const fill = Math.max(0, Math.min(1, value - Number(slot.dataset.star) + 1));
+      slot.style.setProperty('--fill', (fill * 100) + '%');
+    });
+  }
+  form.querySelectorAll('.fb-stars').forEach(group => {
+    const selected = () => Number(group.querySelector('input:checked')?.value || 0);
+    group.addEventListener('change', () => {
+      paintRating(group, selected());
+      group.parentElement.querySelector('.fb-rating-value').textContent =
+        selected().toLocaleString(lang === 'ca' ? 'ca-ES' : 'es-ES') + ' / 5';
+      clearError(currentStep());
+    });
+    group.querySelectorAll('.fb-star').forEach(label => {
+      label.addEventListener('pointerenter', e => {
+        if (e.pointerType === 'mouse') paintRating(group, Number(label.querySelector('input').value));
+      });
+    });
+    group.addEventListener('pointerleave', () => paintRating(group, selected()));
+  });
+
+  // ── Auto-avance solo en selección de formación ──
   form.addEventListener('change', (e) => {
-    if (!e.target.matches('.fb-option input, .fb-star input')) return;
+    if (!e.target.matches('.fb-option input')) return;
     clearError(currentStep());
     if (advanceTimer) clearTimeout(advanceTimer);
     const stepAtSchedule = currentStep();
@@ -277,8 +300,8 @@
       const i = ['a', 'b', 'c', 'd'].indexOf(e.key.toLowerCase());
       if (i > -1) selectRadio(form.formacion, i);
     } else if (kind === 'calidad' || kind === 'instructor' || kind === 'materiales') {
-      const n = parseInt(e.key, 10);
-      if (n >= 1 && n <= 5) selectRadio(form[kind], n - 1);
+      const n = Number(e.key);
+      if (n >= 1 && n <= 5) selectRadio(form[kind], (n - 1) * 2);
     }
   });
 
@@ -286,6 +309,7 @@
     const radios = Array.from(group);
     if (!radios[index]) return;
     radios[index].checked = true;
+    radios[index].focus({ preventScroll: true });
     radios[index].dispatchEvent(new Event('change', { bubbles: true }));
   }
 
