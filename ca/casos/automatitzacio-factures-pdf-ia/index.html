@@ -151,7 +151,7 @@
       <div class="hero-content">
         <div class="case-kicker">Cas real · Automatització administrativa</div>
         <h1><span class="reveal r1">Automatització de Factures amb IA: <em class="italic">De Gmail a Drive i FacturaScripts</em>.</span></h1>
-        <p class="hero-sub">Com Aimtech automatitza el seu propi circuit de factures de proveïdor: detectar el document, llegir-lo, validar-lo, arxivar-lo amb una nomenclatura estable i registrar només els documents que compleixen les regles operatives predefinides per a l'alta automàtica.</p>
+        <p class="hero-sub">Com Aimtech automatitza la descàrrega i l'arxiu a Drive de les seves factures de proveïdor: detectar el document, llegir-lo, validar-lo i arxivar-lo amb una nomenclatura estable. L'abast actual no inclou l'alta automàtica de compres a FacturaScripts.</p>
         <div class="hero-cta"><a href="/ca/automatitzacio-factures-pdf-ia/" class="btn-primary">Veure automatització de factures <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><a href="/ca/casos/" class="btn-ghost">Tornar a casos</a></div>
       </div>
     </div>
@@ -165,13 +165,13 @@
         <p>El coll d'ampolla no era «llegir un PDF». Era mantenir un circuit complet i traçable sense convertir cada tancament trimestral en una cerca manual per correus, portals i carpetes.</p>
 
         <h2>Procés afectat</h2>
-        <p>Recepció i arxiu de factures de proveïdor, preparació del tancament trimestral i alta de compres a FacturaScripts. El procés connecta correu, documents PDF, Google Drive, regles operatives, revisió fiscal i el sistema de facturació.</p>
+        <p>Recepció i arxiu de factures de proveïdor i preparació del tancament trimestral. El procés connecta correu, documents PDF, Google Drive, regles operatives i revisió humana. La incorporació de factures en paper exigeix mantenir la seqüència cronològica: l'alta de compres a FacturaScripts queda fora d'aquesta automatització.</p>
 
         <figure class="invoice-flow" aria-labelledby="invoice-flow-caption-ca">
           <div class="invoice-flow__frame">
             <svg viewBox="0 0 420 650" role="img" aria-labelledby="invoice-flow-title-ca invoice-flow-desc-ca" xmlns="http://www.w3.org/2000/svg">
               <title id="invoice-flow-title-ca">Flux automatitzat de factures d'Aimtech</title>
-              <desc id="invoice-flow-desc-ca">Una factura arriba des de Gmail o un portal, es llegeix i valida amb IA, s'arxiva a Drive, es registra de manera controlada a FacturaScripts i les excepcions passen a revisió humana.</desc>
+              <desc id="invoice-flow-desc-ca">Una factura de proveïdor arriba des de Gmail o un portal, es llegeix i valida amb IA i s'arxiva a Drive. El registre comptable queda sota control humà, sense alta automàtica a FacturaScripts.</desc>
 
               <path class="invoice-flow__route" d="M210 108V150" />
               <path class="invoice-flow__route" d="M210 238V280" />
@@ -214,9 +214,9 @@
                 <rect class="invoice-flow__card" width="350" height="88" rx="20" fill="#0f1824" stroke="#2a3344" stroke-width="1.5" />
                 <circle class="invoice-flow__icon-bg" cx="44" cy="44" r="26" fill="#152c46" stroke="#2580e3" stroke-width="1.4" />
                 <g class="invoice-flow__icon"><ellipse cx="44" cy="32" rx="16" ry="6" /><path d="M28 32v23c0 3 7 6 16 6s16-3 16-6V32M28 43c0 3 7 6 16 6s16-3 16-6" /></g>
-                <text class="invoice-flow__step" x="82" y="25">REGISTRE</text>
-                <text class="invoice-flow__label" x="82" y="49">FacturaScripts</text>
-                <text class="invoice-flow__detail" x="82" y="69">Simula i crea només si compleix</text>
+                <text class="invoice-flow__step" x="82" y="25">LÍMIT</text>
+                <text class="invoice-flow__label" x="82" y="49">Control comptable</text>
+                <text class="invoice-flow__detail" x="82" y="69">Sense alta automàtica de compres</text>
               </g>
 
               <g class="invoice-flow__node invoice-flow__node--review" style="--flow-delay: 2.4s" transform="translate(35 540)">
@@ -229,7 +229,7 @@
               </g>
             </svg>
           </div>
-          <figcaption id="invoice-flow-caption-ca">El camí normal avança sol; les ambigüitats i excepcions surten del flux automàtic per ser revisades.</figcaption>
+          <figcaption id="invoice-flow-caption-ca">L'automatització de proveïdors arriba fins a Drive. El registre comptable i les excepcions continuen sota control humà.</figcaption>
         </figure>
 
         <h3>Riscos del flux manual</h3>
@@ -254,8 +254,8 @@
         <h3>4. Detecció de duplicats</h3>
         <p>No n'hi ha prou amb comparar noms d'arxiu. El control utilitza senyals com proveïdor, data, import i identificador de factura. Si hi ha una coincidència clara, no es torna a carregar; si la coincidència és parcial, el document s'aparta per revisar-lo.</p>
 
-        <h3>5. Registre controlat a FacturaScripts</h3>
-        <p>Només passen a l'alta automàtica les factures de compra d'Aimtech que compleixen les regles operatives predefinides: proveïdor espanyol, NIF vàlid, IVA espanyol i metadades d'alta confiança. Aquestes regles no substitueixen el criteri fiscal. Abans d'escriure s'executa una simulació i es comprova si ja existeix. El PDF queda enllaçat al registre, la factura es deixa en estat <strong>Rebuda</strong> i no pagada, perquè la conciliació del pagament es fa després.</p>
+        <h3>5. Límit del circuit de proveïdors</h3>
+        <p>L'abast actual és la descàrrega i l'arxiu a Drive, <strong>sense alta automàtica a FacturaScripts</strong>. La incorporació de factures en paper exigeix mantenir la seqüència cronològica i el control humà del registre comptable. El registre i la conciliació rutinaris a FacturaScripts corresponen a les factures de clients online d'AdventuriQ, un circuit diferent que no s'ha de confondre amb les compres de proveïdor.</p>
 
         <h3>6. Revisió humana on aporta valor</h3>
         <p>L'automatització no decideix a cegues sobre fiscalitat, documents dubtosos, factures estrangeres, inversió del subjecte passiu o discrepàncies d'imports. En aquests casos prepara l'evidència i demana revisió. L'objectiu és eliminar feina mecànica sense eliminar el criteri administratiu.</p>
@@ -265,7 +265,7 @@
           <li>Gmail i Google Drive mitjançant APIs autoritzades.</li>
           <li>Lectura i extracció de text de PDFs.</li>
           <li>Regles de classificació, nomenclatura i deduplicació.</li>
-          <li>FacturaScripts mitjançant API i un script de registre repetible.</li>
+          <li>FacturaScripts en el circuit separat de clients online d'AdventuriQ, no per a l'alta automàtica de proveïdors.</li>
           <li>Hermes/Hèrcules com a capa d'orquestració i revisió assistida.</li>
         </ul>
 
@@ -273,21 +273,22 @@
         <p>El resultat acreditat són <strong>23 factures noves d'alta confiança arxivades a Drive durant el tancament del 2T de 2026</strong>, entre la primera passada i una revisió posterior de documents rebuts amb retard. El flux també va detectar factures ja arxivades, còpies repetides i documents que no s'havien de tractar com a factures de proveïdor.</p>
         <h3>Com es va definir l'alta confiança</h3>
         <p>El recompte inclou documents únics arxivats a Drive el tipus, el proveïdor, el número, la data i els imports dels quals es van extreure sense ambigüitat, van superar les comprovacions operatives i no van activar senyals de duplicat o excepció. Exclou duplicats, justificants, documents ambigus i casos enviats a revisió. No equival a 23 altes automàtiques a FacturaScripts.</p>
-        <p>El registre a FacturaScripts també és una etapa real del circuit per a les factures elegibles: s'executa després de la simulació, la comprovació de duplicats i les regles operatives predefinides. No publiquem un recompte d'aquestes altes; la xifra de 23 es refereix exclusivament a documents arxivats a Drive.</p>
-        <p>El resultat no es presenta com un percentatge d'estalvi inventat. El que sí que està verificat és un arxiu consistent, documents classificats per la data del document, controls de duplicats i un procés traçable des de Drive fins al registre controlat a FacturaScripts per a les factures elegibles.</p>
+        <p>La xifra de 23 es refereix exclusivament a documents arxivats a Drive. No acredita altes automàtiques de compres a FacturaScripts: aquestes queden fora de l'abast actual.</p>
+        <p>El resultat no es presenta com un percentatge d'estalvi inventat. L'evidència descrita correspon a l'arxiu documental a Drive, la classificació per data del document i els controls de duplicats, no a un estalvi o ROI mesurat.</p>
 
         <h2>Aprenentatges</h2>
         <ul>
           <li><strong>La data del document guia l'arxiu, però no decideix per si sola el període comptable o fiscal.</strong> El trimestre documental i el període de registre o deducció es revisen per separat.</li>
           <li><strong>El nom del fitxer no identifica sempre la factura.</strong> La deduplicació necessita claus de negoci.</li>
           <li><strong>Factura i rebut no són sinònims.</strong> Automatitzar sense classificar embruta l'arxiu i la comptabilitat.</li>
-          <li><strong>Registrar i conciliar són processos diferents.</strong> L'alta es pot automatitzar i el pagament mantenir-se sota control posterior.</li>
+          <li><strong>Arxivar, registrar i conciliar són processos diferents.</strong> Automatitzar l'arxiu no autoritza l'alta comptable; proveïdors i clients online tenen circuits diferents.</li>
           <li><strong>La intervenció humana forma part del disseny.</strong> 2FA, CAPTCHA i excepcions fiscals han de tenir un punt de derivació clar.</li>
         </ul>
 
         <h2>Següent pas recomanat</h2>
         <p>Per a una altra empresa no copiaríem aquest circuit sense més. Començaríem amb un diagnòstic breu: d'on arriben els documents, quins camps importen, quines regles fiscals existeixen, on s'han d'arxivar, quin sistema rep les dades i quines excepcions necessiten revisió. Després s'automatitza primer el proveïdor o tipus documental més repetitiu i mesurable.</p>
         <p><a href="/ca/automatitzacio-factures-pdf-ia/">Consulta com planteja Aimtech l'automatització de factures i PDFs amb IA</a>, revisa el nostre servei d'<a href="/ca/automatitzacio-processos-ia/">automatització amb IA per a empreses</a> o <a href="/ca/contacte/">explica'ns com funciona avui el teu procés</a>.</p>
+        <p>Per aplicar aquest criteri a un altre procés, comença per la <a href="/ca/consultoria-ia-empreses/">consultoria d’IA per a empreses amb diagnòstic i execució</a> o revisa com plantegem la <a href="/ca/ia-agentica/">implantació d’IA agèntica amb control humà</a>.</p>
         <p><strong>Documentat per <a href="/ca/sobre-mike/">Mike Pérez</a></strong>, enginyer de solucions d'IA, a partir del flux operatiu intern d'Aimtech.</p>
       </article>
 
