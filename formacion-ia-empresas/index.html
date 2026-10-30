@@ -120,7 +120,7 @@
 <link rel="stylesheet" href="../css/layout.css?v=cta-spacing-3">
 <link rel="stylesheet" href="../css/ia-aplicada.css">
 <link rel="stylesheet" href="../css/landing.css">
-<link rel="stylesheet" href="../css/formacion-ia-procesos.css?v=20260909">
+<link rel="stylesheet" href="../css/formacion-ia-procesos.css?v=20261030-medicion">
 <link rel="stylesheet" href="../css/cookie-consent.css">
 <script src="../js/cookie-consent.js" defer></script>
 <script src="../js/site.js" defer></script>
@@ -517,9 +517,58 @@
     <div class="bento" data-stagger>
       <article class="card s-2"><h3>Diagnóstico <em>de ejemplo</em>.</h3><p>Proceso: preparar respuestas a solicitudes. Rol: administración, con validación del responsable. Nivel: uso inicial de IA. Herramientas: las autorizadas por la organización, con acceso validado antes de la sesión. Material: solicitudes ficticias y una política sintética; si se aporta material interno, debe estar anonimizado o expresamente autorizado según el alcance.</p></article>
       <article class="card s-2"><h3>Proceso → ejercicio → <em>entregable</em>.</h3><p>Clasificar una solicitud → detectar intención y datos que faltan → ficha de entrada revisable. Preparar una respuesta → redactar con contexto y restricciones → borrador contrastado con la política. Revisar antes de enviar → localizar omisiones y afirmaciones sin respaldo → checklist y plantilla reutilizable. El envío queda fuera del ejercicio.</p></article>
-      <article class="card s-2"><h3>Evaluación <em>antes y después</em>.</h3><p>Proponemos una tarea inicial y otra equivalente al cierre, con la misma rúbrica: tiempo de preparación y revisión, errores u omisiones, fidelidad a la fuente y detección de información sensible. Se registra también el retrabajo humano. La comparación permite valorar el aprendizaje; no acredita ahorro, ROI ni rendimiento en producción por sí sola.</p></article>
+      <article class="card s-2"><h3>Evaluación <em>antes y después</em>.</h3><p>La evaluación del ejercicio usa una rúbrica común, no una impresión de la demo. La <a href="#medicion-formacion">plantilla de medición antes y después</a> detalla qué registrar y cómo interpretar la comparación sin atribuir ahorro, ROI ni rendimiento en producción.</p></article>
     </div><p class="section-intro">El alcance, los ejercicios y los entregables se acuerdan en el diagnóstico. Un prototipo formativo no es una implantación: integraciones, permisos, evaluación operativa y despliegue requieren un proyecto separado. Puedes ver también el <a href="/casos/formacion-ia-equipos-no-tecnicos/">patrón de formación para equipos no técnicos</a>.</p>
   </div></section>
+
+  <section id="medicion-formacion" class="training-measure">
+    <div class="container">
+      <div class="section-label">Medición — Del ejercicio a la evidencia</div>
+      <h2 class="section-title">Cómo medir si la formación IA <em>mejora el trabajo del equipo</em>.</h2>
+      <p class="section-intro">El ejemplo anterior permite evaluar algo más que la satisfacción con la sesión. Elegid la misma tarea antes y después —o dos variantes de complejidad comparable—, con los mismos criterios de aceptación, herramientas autorizadas y condiciones de trabajo registradas. Usad material sintético, anonimizado o expresamente autorizado; no hace falta exponer información confidencial para evaluar el aprendizaje.</p>
+      <p>Por ejemplo, preparar un borrador de respuesta a una solicitud ficticia y contrastarlo con una política sintética. Acordad antes qué debe contener, qué no puede afirmar y quién valida el resultado. Registrad la herramienta y versión utilizadas, la fecha y las ayudas recibidas para interpretar la comparación.</p>
+      <div class="training-measure__scroll" tabindex="0" role="region" aria-labelledby="measurement-caption">
+        <table>
+          <caption id="measurement-caption">Plantilla orientativa sin resultados observados: completad antes y después de la práctica.</caption>
+          <thead><tr><th scope="col">Qué observar</th><th scope="col">Criterio común de revisión</th><th scope="col">Antes</th><th scope="col">Después</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Tiempo total</th><td>Registrar por separado preparación y revisión humana, incluido el retrabajo; no solo el tiempo de respuesta de la IA.</td><td>Por registrar</td><td>Por registrar</td></tr>
+            <tr><th scope="row">Calidad</th><td>Comprobar exactitud, fidelidad a la fuente y requisitos cumplidos con la misma rúbrica.</td><td>Por registrar</td><td>Por registrar</td></tr>
+            <tr><th scope="row">Correcciones</th><td>Anotar errores, omisiones y correcciones necesarias antes de aceptar el borrador.</td><td>Por registrar</td><td>Por registrar</td></tr>
+            <tr><th scope="row">Privacidad y control</th><td>Verificar permisos, ausencia de datos no autorizados y validación por la persona responsable antes de usar la salida.</td><td>Por registrar</td><td>Por registrar</td></tr>
+            <tr><th scope="row">Costes recurrentes</th><td>Si aplica, registrar licencias y consumo por tarea, además del trabajo humano; si no aplica, indicarlo.</td><td>Por registrar</td><td>Por registrar</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Comparad varias ejecuciones, no solo la mejor. Una salida más rápida no es una mejora si exige más correcciones o incumple privacidad. Esta plantilla no acredita ahorro, ROI ni rendimiento en producción: una mejora en el ejercicio no autoriza un despliegue ni sustituye una evaluación operativa.</p>
+    </div>
+  </section>
+
+  <section id="revision-30-dias" class="training-measure">
+    <div class="container">
+      <div class="section-label">Transferencia — Guía para el equipo</div>
+      <h2 class="section-title">Qué revisar <em>a los 30 días</em>.</h2>
+      <p class="section-intro">Usad esta guía de autoevaluación para comprobar qué se ha trasladado al trabajo. No es una sesión adicional. La formación no incluye seguimiento a 30 días de forma automática: solo se incluye si se contrata o acuerda expresamente en la propuesta.</p>
+      <div class="bento">
+        <article class="card s-2"><h3>Uso de <em>plantillas</em>.</h3><p>¿Cuáles se siguen usando, quién las mantiene y qué cambios han necesitado? Guardad la versión y un ejemplo seguro de uso, no conversaciones con datos confidenciales.</p></article>
+        <article class="card s-2"><h3>Aplicación a <em>tareas</em>.</h3><p>¿En qué tareas se han aplicado y cuáles se han descartado? Repetid la rúbrica de tiempo total y calidad en muestras comparables; anotad también las dificultades, no solo los aciertos.</p></article>
+        <article class="card s-2"><h3>Errores que <em>se repiten</em>.</h3><p>Revisad errores recurrentes, omisiones, dudas sobre privacidad y correcciones humanas. Elegid qué practicar de nuevo, qué instrucción mejorar y qué uso pausar hasta resolver el riesgo.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="formacion-o-automatizacion" class="training-measure">
+    <div class="container">
+      <div class="section-label">Siguiente paso — Aprender o implantar</div>
+      <h2 class="section-title">Cuándo seguir formando <em>y cuándo automatizar</em>.</h2>
+      <div class="bento">
+        <article class="card s-3"><h3>Más práctica si falta <em>criterio</em>.</h3><p>Si cambian mucho las tareas, cuesta dar contexto o el equipo no detecta errores, conviene reforzar práctica, revisión y límites de uso. Automatizar un mal criterio solo repite el problema más deprisa.</p></article>
+        <article class="card s-3"><h3>Evaluar automatización si hay <em>un proceso definido</em>.</h3><p>Un proceso estable, medible y autorizado puede ser candidato a <a href="/automatizacion-procesos-ia/">automatización de procesos con IA</a>. Antes hay que validar entradas, excepciones, permisos, costes recurrentes y criterios de aceptación, con trazabilidad y revisión humana en los puntos de riesgo.</p></article>
+      </div>
+      <p>La decisión no sale solo de una buena práctica en el aula. Integraciones, pruebas operativas, supervisión y puesta en producción requieren un alcance separado; no están incluidas por completar la formación.</p>
+      <a class="btn-primary" href="/contacto/">Cuéntanos qué tarea queréis mejorar y cuántas personas sois →</a>
+    </div>
+  </section>
 
   <section id="caso-practico-formacion-ia">
     <div class="container">
@@ -622,7 +671,7 @@
       <div data-reveal>
         <div class="section-label">05 — Profesor</div>
         <h2 class="section-title">Curso impartido por <em>Mike Pérez</em>, no por una academia anónima.</h2>
-        <p class="section-intro">Mike Pérez combina más de 20 años en tecnología, experiencia docente con más de 3.360 alumnos formados y trabajo real en automatización, Power BI e IA aplicada para empresas, entidades y administraciones públicas. La formación no se plantea como una colección de prompts: se diseña para que el equipo entienda qué puede hacer la IA, dónde aporta ROI y qué límites debe respetar.</p>
+        <p class="section-intro"><a href="/sobre-mike/">Mike Pérez</a> combina más de 20 años en tecnología, experiencia docente con más de 3.360 alumnos formados y trabajo real en automatización, Power BI e IA aplicada para empresas, entidades y administraciones públicas. La formación no se plantea como una colección de prompts: se diseña para que el equipo entienda qué puede hacer la IA, dónde aporta ROI y qué límites debe respetar.</p>
       </div>
     </div>
   </section>
@@ -713,7 +762,6 @@
         <a class="rel-link" href="/formacion-claude-empresas/"><span><span class="rel-link-t">Formación Claude para empresas</span><span class="rel-link-d">Claude, documentos, análisis y revisión humana; Claude Cowork sujeto a disponibilidad</span></span><span class="rel-arrow">→</span></a>
         <a class="rel-link" href="/curso-chatgpt-empresas/"><span><span class="rel-link-t">Formación ChatGPT para empresas</span><span class="rel-link-d">Primer nivel: uso seguro de ChatGPT, Copilot y Gemini</span></span><span class="rel-arrow">→</span></a>
         <a class="rel-link" href="/ia-aplicada/"><span><span class="rel-link-t">Formación en IA aplicada para empresas</span><span class="rel-link-d">Del concepto a casos prácticos de negocio</span></span><span class="rel-arrow">→</span></a>
-        <a class="rel-link" href="/automatizacion-procesos-ia/"><span><span class="rel-link-t">Automatización de procesos con IA</span><span class="rel-link-d">Convertir aprendizajes en procesos que ahorran horas</span></span><span class="rel-arrow">→</span></a>
         <a class="rel-link" href="/ia-agentica/"><span><span class="rel-link-t">Implantación de IA agéntica</span><span class="rel-link-d">Pasar de la formación a sistemas en producción</span></span><span class="rel-arrow">→</span></a>
         <a class="rel-link" href="/consultoria-ia-empresas/"><span><span class="rel-link-t">Consultoría IA para empresas</span><span class="rel-link-d">Diagnóstico, priorización y roadmap 30/60/90</span></span><span class="rel-arrow">→</span></a>
         <a class="rel-link" href="/blog/checklist-formacion-ia-empresas/"><span><span class="rel-link-t">Checklist para elegir curso IA</span><span class="rel-link-d">Guía práctica para comparar proveedores sin humo</span></span><span class="rel-arrow">→</span></a>

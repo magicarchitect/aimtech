@@ -357,6 +357,63 @@
   .session-anatomy__dot { margin-left: 6px; }
 }
 
+/* ── Medición: tabla comparativa sin métricas inventadas ───── */
+.training-measure { scroll-margin-top: 120px; }
+.training-measure p {
+  margin-bottom: 24px;
+  font-family: var(--body);
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.75;
+  text-align: justify;
+  hyphens: auto;
+}
+.training-measure a:not(.btn-primary),
+.training-measure a:not(.btn-primary):visited { color: #6db6ff; }
+.training-measure a:not(.btn-primary):hover,
+.training-measure a:not(.btn-primary):focus-visible { color: #a8d5ff; }
+.training-measure .btn-primary {
+  max-width: 100%;
+  white-space: normal;
+  text-align: left;
+}
+.training-measure__scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 32px 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+}
+.training-measure__scroll:focus-visible {
+  outline: 2px solid #6db6ff;
+  outline-offset: 4px;
+}
+.training-measure table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-family: var(--body);
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.75;
+  text-align: left;
+}
+.training-measure caption {
+  padding: 20px;
+  text-align: left;
+  color: var(--ink-dim);
+  background: var(--bg-card);
+}
+.training-measure th, .training-measure td {
+  padding: 18px;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+}
+.training-measure th { color: var(--ink); font-weight: 600; }
+.training-measure td { color: var(--ink-dim); }
+.training-measure th:first-child { width: 19%; }
+.training-measure th:nth-child(2) { width: 45%; }
+
 @media (prefers-reduced-motion: reduce) {
   .lprocess,
   .lprocess .ltag,
