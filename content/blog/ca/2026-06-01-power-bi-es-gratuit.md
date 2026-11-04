@@ -21,9 +21,9 @@ Sí, **Power BI Desktop és gratuït** per crear informes en local. Per comparti
 
 ## Aleshores, on és el pagament?
 
-El pagament apareix quan vols **compartir** aquest informe amb el teu equip i que **s'actualitzi sol** al núvol. Això és Power BI Service, la part online. Quan l'informe deixa de ser un arxiu al teu portàtil i passa a ser un actiu compartit —que altres consulten, sempre al dia—, entra en joc la llicència.
+Per **compartir** informes al núvol cal comprovar la llicència, la capacitat i els permisos; no tots els lectors necessiten una llicència de pagament. L’actualització programada té requisits propis segons l’origen, les credencials i, si cal, la passarel·la. Això és Power BI Service, la part online. Quan l'informe deixa de ser un arxiu al teu portàtil i passa a ser un actiu compartit —que altres consulten, sempre al dia—, entra en joc la llicència.
 
-Dit d'una altra manera: **es paga per col·laborar i distribuir, no per crear.**
+Dit d'una altra manera: **crear amb Desktop és gratuït; per col·laborar i distribuir cal revisar la configuració del servei.**
 
 ## Els nivells de llicència, sense marejar-te
 

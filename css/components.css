@@ -1391,3 +1391,7 @@ body.nav-open .nav-drawer .nav-dropdown-menu {
 .nav-buy-menu{width:min(420px,calc(100vw - 48px));left:auto;right:24px;grid-template-columns:1fr}
 @media(min-width:960px){nav .nav-links{gap:18px}nav .nav-buy-link{white-space:nowrap;font-size:12px}}
 .nav-drawer-links .nav-buy-group{display:block}.nav-drawer-links .nav-dropdown-toggle{display:none}
+
+/* Center fixed dropdowns safely; retain hover gap timer in site.js. */
+nav .nav-buy-menu{left:50%;right:auto}
+@media(min-width:960px) and (max-width:1200px){nav .brand-svg{display:none}nav .nav-links{gap:12px}}
