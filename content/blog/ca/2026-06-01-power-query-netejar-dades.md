@@ -1,5 +1,6 @@
 ---
 title: "Power Query: netejar dades pas a pas (sense codi i amb exemples)"
+heading: "Power Query: com netejar dades brutes pas a pas"
 description: "Aprèn a netejar dades amb Power Query: tipus, espais, duplicats i passos aplicats reutilitzables en cada actualització, sense escriure codi."
 date: 2026-06-01
 modified: 2026-11-04

@@ -1,5 +1,6 @@
 ---
 title: "Power Query: limpiar datos paso a paso (sin código y con ejemplos)"
+heading: "Power Query: cómo limpiar datos sucios paso a paso"
 description: "Aprende a limpiar datos con Power Query: tipos, espacios, duplicados y pasos aplicados que puedes reutilizar en cada actualización, sin escribir código."
 date: 2026-06-01
 modified: 2026-11-04

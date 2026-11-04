@@ -112,6 +112,7 @@ function readPostsForLang(lang) {
       url,
       canonicalUrl,
       title: data.title || '(sin título)',
+      heading: data.heading || data.title || '(sin título)',
       description: data.description || '',
       author: data.author || 'Mike Pérez',
       tags: Array.isArray(data.tags) ? data.tags : [],
@@ -158,7 +159,8 @@ function renderPost(post, hreflangPair, config) {
 
   const replacements = {
     '{{TITLE}}': escapeHtml(post.title),
-    '{{TITLE_JSON}}': jsonStr(post.title),
+    '{{HEADING}}': escapeHtml(post.heading),
+    '{{TITLE_JSON}}': jsonStr(post.heading),
     '{{DESCRIPTION}}': escapeHtml(post.description),
     '{{DESCRIPTION_JSON}}': jsonStr(post.description),
     '{{CANONICAL_URL}}': post.canonicalUrl,

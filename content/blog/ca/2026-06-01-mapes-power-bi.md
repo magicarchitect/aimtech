@@ -1,5 +1,6 @@
 ---
 title: "Mapa de Power BI en blanc o desactivat: la solució en 2 passos"
+heading: "Mapes a Power BI: per què no es veuen i com activar-los"
 description: "Mapa en blanc o desactivat a Power BI? Revisa la configuració de l’administrador i la categoria geogràfica de les dades amb aquests dos passos."
 date: 2026-06-01
 modified: 2026-11-04

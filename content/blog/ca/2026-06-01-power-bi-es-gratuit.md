@@ -1,5 +1,6 @@
 ---
 title: "Power BI és gratuït? Què inclou Desktop i quan pagar Pro (2026)"
+heading: "Power BI és gratuït? Desktop, Pro i el que de debò costa"
 description: "Power BI Desktop és gratuït. Per compartir, revisa llicències, capacitat Fabric i permisos. T’expliquem quan cal Pro i quines opcions tens."
 date: 2026-06-01
 modified: 2026-11-04
