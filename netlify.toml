@@ -131,6 +131,168 @@
   status = 301
   force = true
 
+# SEO-P0-07: exact legacy paths before older wildcard rules.
+[[redirects]]
+  from = "/home/"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/our-service/"
+  to = "/consultoria-ia-empresas/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/our-service"
+  to = "/consultoria-ia-empresas/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/services/"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/services"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/services-two/"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/services-two"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/services/architect-design/"
+  to = "/consultoria-ia-empresas/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/services/architect-design"
+  to = "/consultoria-ia-empresas/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/category/web-development/"
+  to = "/desarrollo/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/category/web-development"
+  to = "/desarrollo/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/politica-de-privacidad/"
+  to = "/politica-privacidad/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/politica-de-privacidad"
+  to = "/politica-privacidad/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/shop/"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/shop"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/shop-2/"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/shop-2"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/my-account-2/"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/my-account-2"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/product/v-neck-t-shirt/"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/product/v-neck-t-shirt"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/product-category/clothing/tshirts/"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/product-category/clothing/tshirts"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/tag/business/"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/tag/business"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/influencer-marketing-trends-2023-what-you-need-know/"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/influencer-marketing-trends-2023-what-you-need-know"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/get-the-most-out-og-the-creativity/"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/get-the-most-out-og-the-creativity"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/seo-which-digital-advertis-ing-strategy-is-right-for-you/"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+[[redirects]]
+  from = "/seo-which-digital-advertis-ing-strategy-is-right-for-you"
+  to = "/.netlify/functions/legacy-gone"
+  status = 200
+  force = true
+
 # ── Limpieza del WordPress/WooCommerce antiguo ───────
 # URLs heredadas de la web anterior que Google aún tiene
 # indexadas (devuelven 404 hoy). Un 301 a la página real
