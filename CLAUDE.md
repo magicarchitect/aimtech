@@ -61,12 +61,28 @@ rendimiento, diseño y posicionamiento.
 > que genere schema, meta y contenido a medida de Aimtech. Escrito tras auditar
 > el contenido REAL ya publicado en aimtech.es (no es un plan sobre web vacía).
 >
-> EXCLUSIONES FIRMES (no negociar, no "colar por ayudar"):
-> - NO FUNDAE: nada de formación bonificada, crédito de formación, bonificación.
-> - NO Kit Digital ni ninguna otra financiación/subvención pública.
-> No generar contenido, keywords, meta ni schema que mencionen ninguno de estos.
-> Son decisiones de negocio firmes (saturación + carga administrativa que no se
-> ofrece).
+> REGLAS COMERCIALES (actualizadas el 04/11/2026):
+> - Kit Digital sigue excluido de contenido, copy, schema y marketing.
+> - FUNDAE sí se menciona en formación (Power BI, IA, ChatGPT, Claude, Copilot,
+>   AI Act) y sus FAQs; nunca en consultoría, implantación ni desarrollo.
+> - Mensaje base: «Formación bonificable a través de FUNDAE. Gestionamos la
+>   bonificación por ti.» Se presenta como servicio de Aimtech; nunca se nombra
+>   al partner externo, tampoco en schema ni metadatos.
+> - No prometer «100 % gratis». Incluir como mínimo en la FAQ: «El importe
+>   bonificable depende del crédito formativo disponible de tu empresa y de los
+>   requisitos de FUNDAE. Te lo confirmamos antes de empezar.»
+>
+> Una página dueña por keyword transaccional: ninguna otra página puede usar
+> esa keyword en title/H1; las relacionadas enlazan a la dueña. Mapa vigente:
+> - formación Power BI empresas → /curso-power-bi-empresas/
+> - curso Power BI Barcelona → /curso-power-bi-barcelona/
+> - curso Power BI avanzado empresas → /curso-power-bi-avanzado/ (crear en P2)
+> - formación IA para empresas / curso IA empresas Barcelona → /formacion-ia-empresas/
+> - formación AI Act empresas → /formacion-ai-act-empresas/ (crear en P2)
+> - implantación de IA en empresas → /consultoria-ia-empresas/
+> - IA agéntica / sistemas multi-agente → /ia-agentica/
+> No enlazar rutas pendientes hasta que existan. FAQPage se permite cuando
+> reproduce FAQs visibles; no implica elegibilidad para rich results.
 
 ### Identidad y alcance
 - **Marca**: Aimtech Consulting SL (Cataluña).
@@ -130,7 +146,7 @@ Competidor de referencia para benchmarking: Javadex (Claude Code, n8n, formació
 "aprender construyendo"). Aimtech se diferencia por eje catalán + AAPP + docencia
 universitaria acreditada + Power BI como puerta de entrada.
 
-### Keywords objetivo por página (sin FUNDAE, sin Kit Digital)
+### Keywords objetivo por página (FUNDAE solo para formación; sin Kit Digital)
 
 **/ (home)**
 - Primaria: "consultoría IA empresas", "formación IA y Power BI empresas"
@@ -188,8 +204,8 @@ Referencia de lo que debe haber por página. ☑ = ya implementado.
   "Mike" (marca) en una sola entidad, en vez de dividirla.
 - **/blog/<post>**: `BlogPosting`/`Article` con `author` → Person (Miguel Pérez),
   `datePublished`, `inLanguage`.
-- **EVITAR**: `FAQ` (restringido a gov/health desde 2023) y `HowTo` (deprecado
-  sept 2023). No generarlos aunque parezcan útiles.
+- **FAQPage**: permitido si refleja preguntas y respuestas visibles. No prometer
+  rich results; no generar HowTo (deprecado).
 
 ### E-E-A-T — señales a reforzar
 - **Experience**: publicar la sección "Casos" (hoy enlaza a `#`). Proyectos
@@ -214,7 +230,7 @@ consultoría e implantación de IA para empresas. El contenido actual ya es muy 
 
 ### Backlog de contenido de blog (lo que traerá tráfico)
 El blog tiene 1 post. Necesita volumen y constancia. Temas alineados con el
-contenido y el tono ya existentes (sin FUNDAE, sin Kit Digital):
+contenido y el tono ya existentes (FUNDAE solo para formación; sin Kit Digital):
 - "Qué es un agente de IA y cuándo le conviene a una pyme"
 - "Power BI para administraciones públicas: por dónde empezar"
 - "n8n vs Make vs Zapier: cuál elegir para automatizar tu empresa"
