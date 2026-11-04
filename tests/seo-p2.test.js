@@ -13,7 +13,7 @@ for(const pair of selected)for(const route of pair)test(`P2 ${route}: bilingual 
  assert.ok(fs.readFileSync('sitemap.xml','utf8').includes(canonical));assert.match(s,/@region partials\/nav-/);assert.match(s,/@region partials\/footer-/);assert.match(s,/href="\/(?:ca\/)?contact[oe]\//);
  if(course){assert.match(s,/@region partials\/fundae-/);assert.ok(faq.mainEntity.some(q=>q.name.includes('FUNDAE')));}
  const image=s.match(/property="og:image" content="https:\/\/www.aimtech.es(.*?)"/)[1],buf=fs.readFileSync('.'+image);assert.equal(buf.readUInt32BE(16),1200);assert.equal(buf.readUInt32BE(20),630);
- if(route.includes('copilot')){assert.ok(!course.offers);assert.ok(!course.timeRequired);assert.match(s,/licenc/i);assert.match(s,/sint[eèé]ti/i);}
+ if(route.includes('copilot')){assert.ok(!course.offers);assert.ok(!course.timeRequired);assert.match(s,/lic[eè]nc/i);assert.match(s,/sint[eèé]ti/i);}
  if(route.includes('ai-act')){assert.ok(!course.offers);assert.match(s,/2025/);assert.match(s,/2026/);assert.match(s,/jur[ií]dic/);}
  if(route.includes('avanza')||route.includes('avancat')){assert.equal(course.timeRequired,'PT20H');assert.equal(course.offers.priceSpecification.minPrice,4400);assert.equal((s.match(/<blockquote/g)||[]).length,3);assert.match(s,/Windows/);const hours=[...s.matchAll(/data-module-hours="([\d.]+)"/g)].map(m=>+m[1]);assert.equal(hours.reduce((a,b)=>a+b,0),20);}
 });

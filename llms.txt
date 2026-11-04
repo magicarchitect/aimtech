@@ -36,6 +36,13 @@ Datos reales de actividad: +20 años de experiencia, 3.360 alumnos formados,
 - [Automatización de emails con IA](https://www.aimtech.es/automatizacion-emails-ia/): triaje de la bandeja con IA — clasifica, redacta primeras respuestas, extrae datos y deriva. Lo sensible queda en borrador para revisión humana. n8n y Claude. Proyectos desde 2.500€.
 - [Automatización de facturas y PDFs con IA](https://www.aimtech.es/automatizacion-facturas-pdfs-ia/): lectura de facturas, albaranes y formularios en PDF, extracción de datos (número, fecha, base, total, NIF), validación y alta en el sistema. Sin teclear. Proyectos desde 2.500€.
 
+### Nuevos programas especializados
+
+- [Formación AI Act para empresas](https://www.aimtech.es/formacion-ai-act-empresas/): alfabetización en IA en sesión de 2 a 4 h adaptada por perfiles. Registro de asistencia y contenidos, guía de buenas prácticas, borrador de política y checklist de datos. No es asesoramiento jurídico ni garantía de cumplimiento. [Català](https://www.aimtech.es/ca/formacio-ai-act-empreses/).
+- [Curso Power BI avanzado](https://www.aimtech.es/curso-power-bi-avanzado/): 20 h de DAX, modelado complejo, RLS, rendimiento y gobierno. Requiere base previa y Power BI Desktop en Windows. Datasets ficticios, desde 4.400 € por edición más IVA. [Català](https://www.aimtech.es/ca/curs-power-bi-avancat/).
+- [Formación Copilot para empresas](https://www.aimtech.es/formacion-copilot-empresas/): Copilot Chat y escenarios de Microsoft 365 según licencias, permisos y funciones habilitadas. Programa, duración y propuesta a medida; ejemplos sintéticos. [Català](https://www.aimtech.es/ca/formacio-copilot-empreses/).
+- [Cómo funciona la formación bonificada por FUNDAE](https://www.aimtech.es/blog/formacion-ia-bonificada-fundae/): crédito, requisitos, plazos y obligaciones de la empresa; importe condicionado y confirmado antes del inicio, sin prometer gratuidad. [Català](https://www.aimtech.es/ca/blog/formacio-ia-bonificada-fundae/).
+
 ## Sobre el fundador
 
 - [Sobre Mike Pérez](https://www.aimtech.es/sobre-mike/): Miguel "Mike" Pérez, Ingeniero de Soluciones de IA con +20 años de experiencia, docente universitario y fundador de Aimtech.
