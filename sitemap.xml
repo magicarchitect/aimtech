@@ -552,6 +552,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.aimtech.es/blog/formacion-ia-bonificada-fundae/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/formacion-ia-bonificada-fundae/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/formacio-ia-bonificada-fundae/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/formacion-ia-bonificada-fundae/"/>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.aimtech.es/ca/blog/formacio-ia-bonificada-fundae/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/formacion-ia-bonificada-fundae/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/formacio-ia-bonificada-fundae/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/blog/formacion-ia-bonificada-fundae/"/>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.aimtech.es/blog/curso-ia-empresas-temario-departamentos/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/blog/curso-ia-empresas-temario-departamentos/"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/blog/casos-us-ia-departaments/"/>
