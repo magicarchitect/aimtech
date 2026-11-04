@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Curs de Power BI a Barcelona — presencial per a empreses | Aimtech</title>
+<title>Curs Power BI a Barcelona presencial per a empreses | Aimtech</title>
 <meta name="description" content="Curs de Power BI presencial a Barcelona, per a empreses i equips. També online en directe. Grups reduïts i datasets ficticis de negoci. L'imparteix en Mike Pérez." />
 
 <link rel="canonical" href="https://www.aimtech.es/ca/curs-power-bi-barcelona/" />
@@ -23,7 +23,7 @@
 <meta property="og:locale" content="ca_ES" />
 <meta property="og:locale:alternate" content="es_ES" />
 <meta property="og:site_name" content="Aimtech" />
-<meta property="og:title" content="Curs de Power BI a Barcelona — presencial per a empreses | Aimtech" />
+<meta property="og:title" content="Curs Power BI a Barcelona presencial per a empreses | Aimtech" />
 <meta property="og:description" content="Power BI presencial a Barcelona (també online en directe). Grups reduïts, datasets ficticis de negoci. Impartit per Mike Pérez, docent del màster de Sports Analytics del FC Barcelona." />
 <meta property="og:url" content="https://www.aimtech.es/ca/curs-power-bi-barcelona/" />
 <meta property="og:image" content="https://www.aimtech.es/assets/og/power-bi.png" />
@@ -33,7 +33,7 @@
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Curs de Power BI a Barcelona — presencial per a empreses | Aimtech" />
+<meta name="twitter:title" content="Curs Power BI a Barcelona presencial per a empreses | Aimtech" />
 <meta name="twitter:description" content="Power BI presencial a Barcelona (també online). Grups reduïts, datasets ficticis. Impartit per Mike Pérez." />
 <meta name="twitter:image" content="https://www.aimtech.es/assets/og/power-bi.png" />
 
@@ -44,21 +44,31 @@
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "@id": "https://www.aimtech.es/#aimtech",
-    "name": "Aimtech",
-    "legalName": "Aimtech Consulting SL",
+    "name": "Aimtech Consulting S.L.",
+    "legalName": "Aimtech Consulting S.L.",
     "url": "https://www.aimtech.es",
     "logo": "https://www.aimtech.es/assets/logo.png?v=2",
     "founder": {
       "@type": "Person",
-      "name": "Miguel Pérez",
-      "alternateName": "Mike Pérez",
-      "url": "https://www.aimtech.es/sobre-mike/"
+      "name": "Mike Pérez",
+      "alternateName": [
+        "Miquel Pérez",
+        "Mike Pérez"
+      ],
+      "url": "https://www.aimtech.es/sobre-mike/",
+      "@id": "https://www.aimtech.es/#mike",
+      "sameAs": [
+        "https://www.linkedin.com/in/miguelperezperez/",
+        "https://cibernarium.barcelonactiva.cat/fitxa-instructor?instructorId=21672"
+      ],
+      "worksFor": {
+        "@id": "https://www.aimtech.es/#aimtech"
+      }
     },
-    "areaServed": [
-      { "@type": "Country", "name": "Espanya" },
-      { "@type": "AdministrativeArea", "name": "Catalunya" },
-      { "@type": "City", "name": "Barcelona" }
-    ],
+    "areaServed": {
+      "@type": "City",
+      "name": "Barcelona"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Barcelona",
@@ -70,13 +80,22 @@
       "email": "hola@aimtech.es",
       "contactType": "customer service",
       "areaServed": "ES",
-      "availableLanguage": ["ca", "es"]
-    }
+      "availableLanguage": [
+        "ca",
+        "es"
+      ],
+      "telephone": "+34661869181"
+    },
+    "telephone": "+34661869181",
+    "email": "hola@aimtech.es",
+    "sameAs": [
+      "https://www.linkedin.com/company/aimtechsl"
+    ]
   },
   {
     "@context": "https://schema.org",
     "@type": "Course",
-    "name": "Curs de Power BI a Barcelona (presencial)",
+    "name": "Curs Power BI presencial a Barcelona",
     "offers": {
       "@type": "Offer",
       "category": "In-company · per grup",
@@ -91,7 +110,9 @@
       "url": "https://www.aimtech.es/ca/curs-power-bi-barcelona/#preus"
     },
     "description": "Curs de Power BI presencial a Barcelona per a empreses, entitats i administracions públiques, amb datasets ficticis de negoci. També disponible online en directe. Dos itineraris de 20h (Zero a Intermedi i Avançat): Power Query, modelatge dimensional, DAX, visualització i govern del servei. Grups tancats de fins a 20 persones, aprenentatge learn-by-doing.",
-    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "provider": {
+      "@id": "https://www.aimtech.es/#aimtech"
+    },
     "url": "https://www.aimtech.es/ca/curs-power-bi-barcelona/",
     "inLanguage": "ca",
     "timeRequired": "PT20H",
@@ -110,17 +131,31 @@
             "addressCountry": "ES"
           }
         }
-      },
-      { "@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT20H" }
+      }
     ]
   },
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
-      { "@type": "ListItem", "position": 2, "name": "Cursos de Power BI", "item": "https://www.aimtech.es/ca/power-bi/" },
-      { "@type": "ListItem", "position": 3, "name": "Curs de Power BI a Barcelona", "item": "https://www.aimtech.es/ca/curs-power-bi-barcelona/" }
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inici",
+        "item": "https://www.aimtech.es/ca/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Cursos de Power BI",
+        "item": "https://www.aimtech.es/ca/power-bi/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Curs de Power BI a Barcelona",
+        "item": "https://www.aimtech.es/ca/curs-power-bi-barcelona/"
+      }
     ]
   }
 ]
@@ -139,6 +174,30 @@
 <link rel="stylesheet" href="../../css/cookie-consent.css">
 <script src="../../js/cookie-consent.js" defer></script>
 <script src="../../js/site.js" defer></script>
+
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Power BI per a pimes a Barcelona?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Formació pràctica per a equips de pimes, a les oficines del client o en aula acordada a Barcelona i àrea metropolitana."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "La formació és bonificable per FUNDAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Gestionem la bonificació per tu. L’import depèn del crèdit formatiu disponible de la teva empresa i dels requisits de FUNDAE, i t’ho confirmem abans de començar."
+      }
+    }
+  ]
+}</script>
 </head>
 <body>
 
@@ -159,38 +218,34 @@
     </svg>
   </a>
   <div class="nav-links">
-    <div class="nav-dropdown">
-      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
-      <div class="nav-dropdown-menu nav-mega" id="nav-serveis-menu">
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ca/power-bi/">Power BI</a>
-          <a href="/ca/curs-power-bi-empreses/">Curs Power BI empreses</a>
-          <a href="/ca/curs-power-bi-barcelona/">Curs Power BI Barcelona</a>
-        </div>
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ca/ia-aplicada/">IA Aplicada</a>
-          <a href="/ca/curs-chatgpt-empreses/">Formació ChatGPT Barcelona</a>
-          <a href="/ca/formacio-claude-empreses/">Formació Claude Barcelona</a>
-          <a href="/ca/formacio-ia-empreses/">Formació IA empreses Barcelona</a>
-        </div>
-        <div class="nav-mega-col nav-mega-col--wide">
-          <a class="nav-mega-head" href="/ca/ia-agentica/">IA Agèntica</a>
-          <a href="/ca/consultoria-ia-empreses/">Consultoria IA</a>
-          <a href="/ca/automatitzacio-processos-ia/">Automatització de processos</a>
-          <a href="/ca/agents-ia-empreses/">Agents d'IA</a>
-          <a href="/ca/bot-whatsapp-empreses/">Bot de WhatsApp</a>
-          <a href="/ca/chatbot-documents-empresa/">Chatbot de documents</a>
-          <a href="/ca/automatitzacio-correus-ia/">Automatització de correus</a>
-          <a href="/ca/automatitzacio-factures-pdf-ia/">Automatització de factures</a>
-        </div>
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ca/desenvolupament/">Desenvolupament</a>
-          <span class="nav-mega-note">Apps, APIs i integracions a mida</span>
-        </div>
-      </div>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/ca/curs-power-bi-empreses/">Formació Power BI</a><button type="button" class="nav-dropdown-toggle" aria-label="Formació Power BI: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-0">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-0"><div class="nav-mega-col">
+        <a href="/ca/curs-power-bi-barcelona/">Barcelona presencial</a>
+        <a href="/ca/curs-power-bi-avancat/">Avançat</a>
+        <a href="/ca/power-bi/">Programa complet</a>
+      </div></div>
     </div>
-    <a href="/ca/blog/">Blog</a>
-    <a href="/ca/casos/">Casos d'èxit</a>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/ca/formacio-ia-empreses/">Formació IA</a><button type="button" class="nav-dropdown-toggle" aria-label="Formació IA: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-1">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-1"><div class="nav-mega-col">
+        <a href="/ca/curs-chatgpt-empreses/">ChatGPT</a>
+        <a href="/ca/formacio-claude-empreses/">Claude</a>
+        <a href="/ca/formacio-copilot-empreses/">Copilot</a>
+        <a href="/ca/formacio-ai-act-empreses/">AI Act</a>
+        <a href="/ca/ia-aplicada/">IA aplicada avançada</a>
+      </div></div>
+    </div>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/ca/consultoria-ia-empreses/">Implantació IA</a><button type="button" class="nav-dropdown-toggle" aria-label="Implantació IA: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-2">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-2"><div class="nav-mega-col">
+        <a href="/ca/automatitzacio-processos-ia/">Automatització de processos</a>
+        <a href="/ca/agents-ia-empreses/">Agents IA</a>
+        <a href="/ca/bot-whatsapp-empreses/">Bot WhatsApp</a>
+        <a href="/ca/chatbot-documents-empresa/">Chatbot de documents</a>
+        <a href="/ca/automatitzacio-correus-ia/">Correus</a>
+        <a href="/ca/automatitzacio-factures-pdf-ia/">Factures</a>
+        <a href="/ca/ia-agentica/">IA agèntica</a>
+      </div></div>
+    </div>
+    <a href="/ca/casos/">Casos</a>
     <a href="/ca/sobre-mike/">Sobre Mike</a>
   </div>
   <div class="nav-right">
@@ -207,7 +262,7 @@
   <div class="top-conversion-cta__inner">
     <div>
       <p class="top-conversion-cta__eyebrow">Formació Power BI Barcelona</p>
-      <h2>Vols que el teu equip aprengui <em>Power BI de veritat</em>?</h2>
+      <p class="top-conversion-cta__heading">Vols que el teu equip aprengui <em>Power BI de veritat</em>?</p>
       <p class="top-conversion-cta__text">Cursos in-company a Barcelona amb dades de negoci fictícies però realistes: Power Query, model de dades, DAX, dashboards i decisions de direcció.</p>
     </div>
     <div class="top-conversion-cta__actions" aria-label="Opciones de contacto">
@@ -236,16 +291,9 @@
             <span id="clock">--:--:--</span>
           </div>
 
-          <h1>
-            <span class="reveal r1">Curs de Power BI</span>
-            <span class="reveal r2"><em class="italic">a Barcelona</em>.</span><br>
-            <span class="reveal r3">Presencial,</span>
-            <span class="reveal r4">amb pràctica guiada.</span>
-          </h1>
+          <h1><span class="reveal r1">Curs Power BI presencial a Barcelona.</span></h1>
 
-          <p class="hero-sub">
-            Formació en Power BI <strong>presencial a Barcelona</strong>, per a empreses i equips. També <strong>online en directe</strong> si ho prefereixes. Grups reduïts, sobre <strong>datasets ficticis de negoci</strong>, no dades de joguina. L'imparteix en Mike Pérez —docent a la UOC, la UPC i el màster en Sports Analytics del <strong>FC Barcelona</strong>—, no una marca anònima.
-          </p>
+          <p class="hero-sub" data-direct-answer="true">Formació Power BI presencial per a empreses i pimes a Barcelona i l’àrea metropolitana. Mike Pérez imparteix un itinerari de 20 h a les oficines del client o en aula, amb datasets ficticis de negoci. Des de 4.400 € per edició, més IVA; acordem calendari i logística abans de començar.</p>
 
           <div class="hero-cta">
             <a href="/ca/contacte/" class="btn-primary">
@@ -514,62 +562,13 @@
     </div>
   </section>
 
-  <section id="preus">
-    <div class="container">
-      <div data-reveal>
-        <div class="section-label">04 — Contractació</div>
-        <h2 class="section-title">Per a empreses, <em>entitats</em> i AAPP.</h2>
-        <p class="section-intro">La formació es contracta per grup tancat, presencial a Barcelona o online en directe. Escriu-me indicant perfil de l'equip, nombre de persones i format preferit, i et passo disponibilitat i proposta econòmica. La formació in-company parteix de <strong>4.400€ per edició per a fins a 15 persones</strong>, amb 290€ per persona addicional fins a un màxim de 20, IVA a part. <strong>Descompte en contractar dos o més cursos</strong> (pack itinerari). Sobre llicències i costos de l'eina, t'interessa <a href="/ca/blog/power-bi-es-gratuit/">si Power BI és gratuït i el que costa de veritat</a>.</p>
-      </div>
+  <section id="logistica-barcelona" class="section-pad"><div class="container"><h2 class="section-title">Power BI per a pimes a Barcelona</h2><p>BI per a empreses a Barcelona: formació a les vostres oficines o en aula acordada a Barcelona i àrea metropolitana: L’Hospitalet, Badalona, Sant Cugat, Sabadell, Terrassa, El Prat i Cornellà.</p><p>Cal una sala amb projector o pantalla, connexió a internet i un portàtil Windows per persona amb Power BI Desktop instal·lat. Revisem accessos i permisos abans de començar. Calendari orientatiu: 5 sessions de 4 h o 8 de 2,5 h, segons disponibilitat.</p></div></section>
 
-      <div class="bento" data-stagger>
+  <!-- @region partials/fundae-ca.html -->
+<section id="fundae" class="section-pad"><div class="container"><h2 class="section-title">Formació bonificable per FUNDAE.</h2><p>Gestionem la bonificació de la formació per tu. L’import bonificable depèn del crèdit formatiu de la teva empresa i dels requisits de FUNDAE; t’ho confirmem abans de començar. T’acompanyem en la gestió i t’indiquem la documentació i les obligacions que corresponen a l’empresa.</p></div></section>
+<!-- @endregion -->
+  <section id="preus" class="section-pad"><div class="container"><h2 class="section-title">Contractació</h2><p>Des de <strong>4.400 € per edició</strong>, IVA a part. <a href="/ca/curs-power-bi-empreses/#precios">Consulta les condicions i els preus complets per a empreses</a>. Formació bonificable per FUNDAE, segons crèdit i requisits.</p></div></section>
 
-        <article class="card s-2" data-mouse>
-          <div class="card-num">
-            <span>// segment_01</span>
-            <span class="badge">Empreses</span>
-          </div>
-          <h3>Per al teu <em>equip</em>.</h3>
-          <p>Formació pràctica amb datasets ficticis de negoci, no dades de joguina. Presencial a Barcelona o online, horaris segons disponibilitat del grup.</p>
-          <div class="price">
-            <div class="price-label">des de</div>
-            <div class="price-num">4.400€</div>
-            <div class="price-label">per edició · fins a 15 pers. · IVA a part</div>
-            <div class="price-label">+290€ / persona addicional · màx. 20 pers.</div>
-          </div>
-        </article>
-
-        <article class="card s-2" data-mouse>
-          <div class="card-num">
-            <span>// segment_02</span>
-            <span class="badge">Entitats</span>
-          </div>
-          <h3>Per a <em>entitats</em>.</h3>
-          <p>Associacions, fundacions, col·legis professionals, cooperatives o altres entitats catalanes. Presencial a Barcelona o online, adaptable al perfil del col·lectiu.</p>
-          <div class="price">
-            <div class="price-label">des de</div>
-            <div class="price-num">4.400€</div>
-            <div class="price-label">per edició · fins a 15 pers. · IVA a part</div>
-            <div class="price-label">+290€ / persona addicional · màx. 20 pers.</div>
-          </div>
-        </article>
-
-        <article class="card s-2" data-mouse>
-          <div class="card-num">
-            <span>// segment_03</span>
-            <span class="badge">AAPP</span>
-          </div>
-          <h3>Per a <em>administracions</em>.</h3>
-          <p>Contracte menor o negociat. Presencial o online. Documentació, certificació i memòria justificativa incloses.</p>
-          <div class="price">
-            <div class="price-num">Consultar</div>
-            <div class="price-label">per licitació</div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
 
   <section id="formador">
     <div class="container">
@@ -627,115 +626,10 @@
     </div>
   </section>
 
-  <!-- @region partials/testimonials-power-bi-ca.html -->
-<section id="testimonis-power-bi" class="testimonials-proof" aria-labelledby="testimonials-power-bi-title">
-  <div class="container">
-    <header class="testimonials-proof__header" data-reveal>
-      <div>
-        <div class="section-label">Veus reals · Power BI</div>
-        <h2 id="testimonials-power-bi-title" class="section-title">Ho diuen els qui ja han passat <em>per l'aula</em>.</h2>
-        <p class="section-intro">Valoracions i testimonis de participants en formacions de Power BI durant el 2026. Les cites es reprodueixen en el seu idioma original.</p>
-      </div>
-      <div class="testimonials-proof__score" role="group" aria-label="Valoració mitjana: 4,61 sobre 5, calculada a partir de 42 respostes de formacions Power BI">
-        <span class="testimonials-proof__score-label">Valoració mitjana</span>
-        <strong><span>4,61</span><small>/5</small></strong>
-        <span class="testimonial-stars testimonial-stars--summary" aria-hidden="true" data-rating-fill="92.2%"><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:61%">★</span></span></span>
-        <span class="testimonials-proof__score-meta">42 respostes rebudes · formacions Power BI</span>
-      </div>
-    </header>
 
-    <div class="testimonials-proof__metrics" role="group" data-stagger aria-label="Resultats agregats de formacions Power BI: 42 respostes per criteri">
-      <div><strong>4,71/5</strong><span>Coneixement del formador</span></div>
-      <div><strong>4,52/5</strong><span>Qualitat de la formació</span></div>
-      <div><strong>4,60/5</strong><span>Qualitat dels materials</span></div>
-    </div>
 
-    <div class="testimonials-proof__grid" data-stagger>
-      <figure class="testimonial-card testimonial-card--featured">
-        <span class="testimonial-card__quote" aria-hidden="true">“</span>
-        <div class="testimonial-card__rating">
-          <span class="testimonial-stars" aria-hidden="true" data-rating-fill="100%"><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span></span>
-          <span class="testimonial-card__rating-value"><span class="testimonials-visually-hidden">Valoració: </span>5/5</span>
-        </div>
-        <blockquote lang="ca">Ha estat un curs molt útil! M'ha donat una bona base per començar a aplicar Power BI a la feina i crear quadres de comandament i gràfics que ajudin a visualitzar millor les dades. A més, crec que també ens permetrà automatitzar alguns processos d'actualització i d'enviament d'informació. Ara només falta començar a posar-ho en pràctica!</blockquote>
-        <figcaption><strong>Lídia Barceló Soler</strong><span>Participant · Formació Power BI per a AMB</span></figcaption>
-      </figure>
+  <section id="faq" class="section-pad"><div class="container"><h2 class="section-title">Preguntes freqüents</h2><div class="bento"><article class="card s-2"><h3>Power BI per a pimes a Barcelona?</h3><p>Sí. Formació pràctica per a equips de pimes, a les oficines del client o en aula acordada a Barcelona i àrea metropolitana.</p></article><article class="card s-2"><h3>La formació és bonificable per FUNDAE?</h3><p>Sí. Gestionem la bonificació per tu. L’import depèn del crèdit formatiu disponible de la teva empresa i dels requisits de FUNDAE, i t’ho confirmem abans de començar.</p></article></div></div></section>
 
-      <figure class="testimonial-card">
-        <span class="testimonial-card__quote" aria-hidden="true">“</span>
-        <div class="testimonial-card__rating">
-          <span class="testimonial-stars" aria-hidden="true" data-rating-fill="100%"><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span></span>
-          <span class="testimonial-card__rating-value"><span class="testimonials-visually-hidden">Valoració: </span>5/5</span>
-        </div>
-        <blockquote lang="ca">Bon professor. Sessions molt ben estructurades i documentades. En Miquel molta voluntat i paciència per entendre els dubtes, necessitats i validar que havien estat ateses.</blockquote>
-        <figcaption><strong>Ferran Anglès</strong><span>Participant · Formació Power BI per a AMB</span></figcaption>
-      </figure>
-
-      <figure class="testimonial-card">
-        <span class="testimonial-card__quote" aria-hidden="true">“</span>
-        <div class="testimonial-card__rating">
-          <span class="testimonial-stars" aria-hidden="true" data-rating-fill="100%"><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span></span>
-          <span class="testimonial-card__rating-value"><span class="testimonials-visually-hidden">Valoració: </span>5/5</span>
-        </div>
-        <blockquote lang="ca">La formació no només és molt valuosa en l’àmbit de Power BI, sinó que també obre la porta a coneixements útils en molts altres entorns professionals. T’ajuda a entendre i optimitzar eines que fas servir cada dia. Una experiència absolutament recomanable i un gran encert per a qualsevol persona que vulgui fer un pas endavant.</blockquote>
-        <figcaption><strong>Victor</strong><span>Participant · Formació Power BI per a AMB</span></figcaption>
-      </figure>
-
-      <figure class="testimonial-card">
-        <span class="testimonial-card__quote" aria-hidden="true">“</span>
-        <div class="testimonial-card__rating">
-          <span class="testimonial-stars" aria-hidden="true" data-rating-fill="73.4%"><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:67%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:0%">★</span></span></span>
-          <span class="testimonial-card__rating-value"><span class="testimonials-visually-hidden">Valoració: </span>3,67/5</span>
-        </div>
-        <blockquote lang="ca">La formació és útil. Amb poc temps el programa i la formació et permet moure't amb gran soltura d'inici a final per projectes senzills.</blockquote>
-        <figcaption><strong>Laura Coma</strong><span>Participant · Formació Power BI per a AMB</span></figcaption>
-      </figure>
-
-      <figure class="testimonial-card">
-        <span class="testimonial-card__quote" aria-hidden="true">“</span>
-        <div class="testimonial-card__rating">
-          <span class="testimonial-stars" aria-hidden="true" data-rating-fill="100%"><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span></span>
-          <span class="testimonial-card__rating-value"><span class="testimonials-visually-hidden">Valoració: </span>5/5</span>
-        </div>
-        <blockquote lang="es">Una formación intensa pero práctica, para poder aplicar desde ya en mis proyectos. Todavía queda mucho para ser una "pro", pero Miquel ha sabido darnos buenos fundamentos para ir consolidando mi aprendizaje futuro. Totalmente recomendable ;)</blockquote>
-        <figcaption><strong>Àngels Rodes</strong><span>Participant · Cibernàrium (Barcelona Activa)</span></figcaption>
-      </figure>
-
-      <figure class="testimonial-card">
-        <span class="testimonial-card__quote" aria-hidden="true">“</span>
-        <div class="testimonial-card__rating">
-          <span class="testimonial-stars" aria-hidden="true" data-rating-fill="100%"><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span></span>
-          <span class="testimonial-card__rating-value"><span class="testimonials-visually-hidden">Valoració: </span>5/5</span>
-        </div>
-        <blockquote lang="es">El curso ha sido muy instructivo. El primer día ya comprendes la dinámica del programa y eres capaz de crear informes sencillos, pero eso anima mucho. En los siguientes días, amplias información y te quedas con ganas de más! Miquel Pérez lo explica muy bien y se nota que conoce a fondo la materia!</blockquote>
-        <figcaption><strong>RosMari Serrano</strong><span>Participant · LAGUPRES S.L.U. · Formació Power BI a Barcelona Activa</span></figcaption>
-      </figure>
-
-      <figure class="testimonial-card">
-        <span class="testimonial-card__quote" aria-hidden="true">“</span>
-        <div class="testimonial-card__rating">
-          <span class="testimonial-stars" aria-hidden="true" data-rating-fill="93.4%"><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:67%">★</span></span></span>
-          <span class="testimonial-card__rating-value">Mitjana individual: 4,67/5</span>
-        </div>
-        <blockquote lang="ca">Aquesta formació m’ha permès tenir una visió general del potencial de Power BI i de com utilitzar-lo per prendre decisions de negoci basades en dades i context. En la indústria farmacèutica, eines com aquesta són fonamentals per avaluar projectes, identificar oportunitats de millora i fer un seguiment de l’evolució dels resultats.</blockquote>
-        <figcaption><strong>Júlia Faura</strong><span>Participant en formació Power BI</span></figcaption>
-      </figure>
-
-      <figure class="testimonial-card">
-        <span class="testimonial-card__quote" aria-hidden="true">“</span>
-        <div class="testimonial-card__rating">
-          <span class="testimonial-stars" aria-hidden="true" data-rating-fill="100%"><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span><span style="position:relative;display:inline-block;width:1em;letter-spacing:0"><span class="testimonial-stars__base">★</span><span class="testimonial-stars__fill" style="width:100%">★</span></span></span>
-          <span class="testimonial-card__rating-value">Mitjana individual: 5/5</span>
-        </div>
-        <blockquote lang="es">Me ha gustado mucho el curso del Cibernàrium de BCN " Power BI Desktop: analitza i visualitza dades amb eficàcia". Miguel Pérez ha explicado cosas con perspectiva, cosa poco habitual en las formaciones tecnológicas, y creo que ha logrado un buen entendimiento de parte de las muchas herramientas disponibles. !Quedo muy satisfecho con este curso!</blockquote>
-        <figcaption><strong>Alfredo</strong><span>Participant en formació Power BI</span></figcaption>
-      </figure>
-    </div>
-
-    <p class="testimonials-proof__source">Opinions personals publicades amb autorització expressa. Valoració global: mitjana de les mitjanes individuals dels tres criteris. Global i cada criteri: 42 respostes rebudes en formacions Power BI. Les organitzacions identifiquen el context declarat i no impliquen un aval institucional.</p>
-  </div>
-</section>
-<!-- @endregion -->
 
   <section id="contacte" class="cta-final">
     <div class="container">
@@ -752,6 +646,12 @@
     </div>
   </section>
 
+<section class="section-pad seo-context" data-seo-task="SEO-P0-08"><div class="container prose"><h2>Recursos per preparar el pas següent</h2><p>Per connectar aprenentatge i reporting recurrent, consulta el <a href="/ca/casos/excel-power-bi-equip-administratiu/">cas de pas d’Excel a Power BI</a>.</p>
+<p>Per escollir el càlcul adequat, compara <a href="/ca/blog/dax-mesures-vs-columnes-calculades/">mesures DAX i columnes calculades</a>.</p>
+<p>Si la visualització geogràfica queda en blanc, revisa els <a href="/ca/blog/mapes-power-bi/">mapes de Power BI</a>.</p>
+<p>Per evitar informes fràgils, comença pel <a href="/ca/blog/modelatge-dades-power-bi-esquema-estrella/">modelatge en esquema d’estrella</a>.</p>
+<p>Abans de compartir informes, comprova <a href="/ca/blog/power-bi-es-gratuit/">què és gratuït a Power BI</a>.</p>
+<p>Per decidir quina eina encaixa amb el procés, compara <a href="/ca/blog/power-bi-vs-excel/">Power BI i Excel</a>.</p></div></section>
 </main>
 
 <!-- @region partials/footer-ca.html -->
@@ -783,6 +683,7 @@
       <div class="footer-col">
         <h3>Recursos</h3>
         <a href="/ca/blog/">Blog</a>
+        <a href="/ca/blog/formacio-ia-bonificada-fundae/">Guia FUNDAE</a>
         <a href="/ca/casos/">Casos d'èxit</a>
         <a href="/ca/sobre-mike/">Sobre Mike</a>
         <a href="/ca/contacte/">Contacte</a>
@@ -794,12 +695,13 @@
         <a href="/ca/politica-privacitat/">Privacitat</a>
         <a href="/ca/politica-galetes/">Galetes</a>
         <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="tel:+34661869181">+34 661 869 181</a>
         <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>© 2026 Aimtech Consulting S.L. · Catalunya</span>
       <span>Built with intention.</span>
     </div>
   </div>

@@ -310,3 +310,7 @@ html.gsap-ready [data-stagger] > * {
 }
 .skip-link:focus { transform: translateY(0); outline: none; }
 main:focus { outline: none; }
+
+main .seo-context :is(p,li){font-family:var(--sans);font-size:var(--content-size);font-weight:400;line-height:var(--content-leading)}
+main .seo-context a:link,main .seo-context a:visited,.solution-sub a:link,.solution-sub a:visited{color:var(--content-link)}
+main .seo-context a:hover{color:var(--content-link-hover)}

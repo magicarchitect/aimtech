@@ -1,8 +1,9 @@
 ---
-title: "Power BI gratis: qué incluye Desktop y cuándo pagar Pro"
-description: "Power BI Desktop es gratis, pero compartir informes y automatizar actualizaciones suele requerir Pro. Guía clara de licencias Power BI para empresas."
+title: "¿Power BI es gratis? Qué incluye Desktop y cuándo pagar Pro (2026)"
+heading: "Power BI gratis: qué incluye Desktop y cuándo pagar Pro"
+description: "Power BI Desktop es gratis. Para compartir, revisa licencias, capacidad Fabric y permisos. Te explicamos cuándo necesitas Pro y qué opciones hay."
 date: 2026-05-28
-modified: 2026-06-19
+modified: 2026-11-04
 author: "Mike Pérez"
 tags: ["power-bi", "licencias"]
 icon: "price"
@@ -11,7 +12,7 @@ slug: "es-gratis-power-bi"
 translationKey: "es-gratis-power-bi"
 ---
 
-"¿Es gratis Power BI?" es de las primeras preguntas que hace cualquiera antes de meterse. La respuesta honesta es **sí y no**, y la diferencia importa porque mucha gente paga licencias que no necesita —o se frena pensando que cuesta una fortuna cuando podría empezar gratis hoy mismo. Vamos a aclararlo sin letra pequeña.
+Sí, **Power BI Desktop es gratuito** para crear informes en local. Para compartir en el servicio, la licencia, la capacidad y los permisos determinan el acceso; los lectores pueden usar una licencia gratuita en capacidad Fabric F64 o superior (o Premium compatible). La actualización programada depende del entorno, el origen y sus credenciales, no solo de pagar Pro.
 
 ## La respuesta corta: Power BI Desktop es gratis
 
@@ -22,14 +23,14 @@ Es decir: para *aprender*, *practicar* y *crear* tus primeros cuadros de mando c
 Lo importante es separar dos preguntas que en Google suelen mezclarse:
 
 - **¿Power BI Desktop es gratis?** Sí: crear informes en local no tiene coste.
-- **¿Power BI para empresas es gratis?** Depende: cuando quieres publicar, compartir con usuarios, controlar permisos y refrescar datos automáticamente, normalmente aparece una licencia de pago.
+- **¿Power BI para empresas es gratis?** Depende de la licencia, capacidad, rol y permisos; actualizar datos tiene requisitos propios.
 - **¿Power BI Pro es obligatorio?** No para aprender ni construir el `.pbix`; sí suele ser necesario cuando el informe tiene que vivir en el servicio online y usarse en equipo.
 
 ## Entonces, ¿dónde está el pago?
 
-El pago aparece cuando quieres **compartir** ese informe con tu equipo y que **se actualice solo** en la nube. Eso es Power BI Service, la parte online. En cuanto el informe deja de ser un archivo en tu portátil y pasa a ser un activo compartido —que otros consultan, siempre al día—, entra en juego la licencia.
+Para **compartir** informes en la nube hay que comprobar licencia, capacidad y permisos; no todos los lectores necesitan una licencia de pago. La actualización programada tiene requisitos propios según el origen, las credenciales y, si hace falta, la puerta de enlace. Power BI Service es la parte online.
 
-Dicho de otro modo: **se paga por colaborar y distribuir, no por crear.**
+Dicho de otro modo: **crear con Desktop es gratuito; para colaborar y distribuir hay que revisar la configuración del servicio.**
 
 ## Los niveles de licencia, sin marearte
 
@@ -83,8 +84,8 @@ Microsoft revisa nombres y precios cada cierto tiempo, así que aquí va la *ló
 
 - **Power BI Desktop — gratis.** Crear informes en tu equipo. Sin coste.
 - **Power BI Pro — de pago, por usuario y mes.** El escalón habitual en una empresa: publicar en el Service, compartir con compañeros, colaborar en áreas de trabajo y programar la actualización automática. Suele ser lo que necesita un equipo que empieza a trabajar con cuadros de mando en serio.
-- **Premium Per User (PPU) — de pago, por usuario y mes.** Como Pro pero con capacidades avanzadas (más volumen, refrescos más frecuentes, funciones de gran empresa) sin saltar a una capacidad dedicada.
-- **Capacidad dedicada / Microsoft Fabric — de pago, por capacidad.** Para organizaciones grandes que distribuyen informes a mucha gente o necesitan potencia reservada. Se paga por capacidad, no por usuario.
+- **Premium Per User (PPU) — de pago, por usuario y mes.** Como Pro pero con capacidades avanzadas (más volumen, refrescos más frecuentes, funciones de gran empresa) sin saltar a una capacidad dedicada. Acceder a un workspace PPU exige PPU también a los consumidores; Pro no basta (salvo prueba elegible).
+- **Capacidad dedicada / Microsoft Fabric — de pago, por capacidad.** Para organizaciones grandes que distribuyen informes a mucha gente o necesitan potencia reservada. La capacidad se factura aparte: los autores necesitan Pro o PPU para publicar y colaborar. Los consumidores con licencia gratuita pueden consultar con rol Viewer si tanto el informe como el modelo semántico están en capacidad elegible (Fabric F64 o superior, o Premium P). Las F inferiores no permiten ese consumo gratuito.
 
 ## ¿Qué necesitas tú realmente?
 
@@ -92,7 +93,7 @@ Traduciendo los niveles a casos:
 
 - **Quieres aprender o montar informes para ti** → Desktop, gratis. Punto.
 - **Sois un equipo pequeño que necesita compartir y refrescar** → normalmente Pro por usuario.
-- **Necesitas funciones avanzadas o más volumen** → PPU.
+- **Necesitas funciones avanzadas o más volumen** → PPU; también para los consumidores del workspace.
 - **Eres una organización grande con muchos consumidores de informes** → capacidad / Fabric.
 
 La mayoría de las pymes que arrancan se mueven entre "gratis" y "Pro". No te compliques antes de tiempo.
@@ -137,7 +138,7 @@ Cuando el informe deja de ser personal y pasa a ser una herramienta de equipo: v
       "name": "¿Puedo compartir un informe de Power BI sin pagar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Puedes compartir el archivo .pbix como archivo, pero no es la forma recomendable para trabajar en equipo. Para compartir informes publicados en el servicio normalmente necesitarás licencias como Power BI Pro o una capacidad adecuada."
+        "text": "Puedes compartir el archivo .pbix como archivo, pero no es la forma recomendable para trabajar en equipo: no hay control fino de permisos, gobierno ni actualización automática centralizada. Para compartir informes publicados en el servicio normalmente necesitarás licencias como Power BI Pro o una capacidad adecuada."
       }
     },
     {
@@ -145,9 +146,15 @@ Cuando el informe deja de ser personal y pasa a ser una herramienta de equipo: v
       "name": "¿Cuándo merece la pena pagar Power BI Pro?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Power BI Pro suele merecer la pena cuando el informe deja de ser personal y pasa a ser una herramienta de equipo: varios usuarios lo consultan, hay datos que se refrescan solos y necesitas espacios de trabajo, permisos y trazabilidad."
+        "text": "Cuando el informe deja de ser personal y pasa a ser una herramienta de equipo: varios usuarios lo consultan, hay datos que se refrescan solos, necesitas espacios de trabajo, permisos y trazabilidad. Para una pyme que empieza, Pro suele ser el primer escalón razonable."
       }
     }
   ]
 }
 </script>
+
+
+Consulta las [opciones de licencia y capacidad de Microsoft](https://learn.microsoft.com/en-us/power-bi/fundamentals/service-features-license-type) y las [funciones disponibles para usuarios gratuitos](https://learn.microsoft.com/en-us/power-bi/fundamentals/end-user-features).
+
+
+¿Quieres que tu equipo domine esto? → [curso Power BI en Barcelona](/curso-power-bi-barcelona/)

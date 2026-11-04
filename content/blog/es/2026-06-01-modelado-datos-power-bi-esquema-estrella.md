@@ -1,4 +1,5 @@
 ---
+modified: 2026-11-04
 title: "Modelado de datos en Power BI: relaciones, jerarquías y esquema en estrella"
 description: "El esquema en estrella es la diferencia entre un Power BI que vuela y uno que da números raros. Te explicamos hechos, dimensiones y relaciones sin jerga."
 date: 2026-06-01
@@ -71,3 +72,6 @@ Las **jerarquías** agrupan niveles que se recorren de arriba abajo: Año → Tr
 Un modelo en estrella no es purismo técnico: es lo que hace que el informe sea **fiable y rápido**. Cuando el modelo está bien, las medidas DAX salen cortas y correctas, los filtros se propagan como esperas y el refresco no se eterniza. Cuando está mal, acabas parcheando con fórmulas imposibles para tapar un diseño que no aguanta.
 
 Por eso en la [formación en Power BI de Aimtech](/power-bi/) el modelado va **antes** que el DAX: relaciones, esquema en estrella y calendario en el itinerario de cero a intermedio, y modelado complejo en el Avanzado. Con el modelo claro, [la duda de medida vs columna calculada](/blog/dax-medidas-vs-columnas-calculadas/) casi se resuelve sola. Presencial en Barcelona, en remoto o in-company, para empresas, entidades y AAPP.
+
+
+¿Quieres profundizar en medidas, modelado y rendimiento? → [curso Power BI avanzado](/curso-power-bi-avanzado/).

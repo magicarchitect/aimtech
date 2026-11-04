@@ -1,5 +1,5 @@
 ---
-title: "Formació IA per a empreses a Barcelona: com triar proveïdor"
+title: "Com triar proveïdor de formació en IA: 9 criteris"
 description: "Criteris pràctics per triar formació IA per a empreses a Barcelona: format, professor, seguretat, casos de negoci, ChatGPT, Copilot, automatitzacions i ROI."
 date: 2026-06-25
 author: "Mike Pérez"
@@ -8,7 +8,10 @@ icon: "agent"
 draft: false
 slug: "formacio-ia-empreses-barcelona-com-triar"
 translationKey: "formacion-ia-empresas-barcelona-como-elegir"
+modified: 2026-11-04
 ---
+
+Per valorar una proposta de [curs IA per a empreses a Barcelona](/ca/formacio-ia-empreses/), aquesta guia t’ajuda a comparar criteris abans de contractar.
 
 Triar **formació IA per a empreses a Barcelona** no hauria de consistir a comparar temaris bonics o preguntar només quantes hores dura. La pregunta important és una altra: després de la formació, l’equip farà servir millor la IA en la seva feina real o només haurà vist una demo espectacular?
 
@@ -111,3 +114,11 @@ Depèn de l’entorn de treball. Si l’empresa fa servir Microsoft 365, Copilot
 ### Es poden fer servir dades reals de l’empresa?
 
 No és imprescindible en una primera formació. Sovint és millor començar amb casos versemblants i criteris de seguretat. Si es fan servir dades reals, cal fer-ho amb permisos, anonimització i regles clares.
+
+## Comparar propostes i lliurables
+
+A més dels nou criteris, compareu diagnòstic, adaptació, nombre d’assistents, preu, materials i seguiment. Demaneu guia de bones pràctiques, plantilles, checklist de seguretat i exercicis resolts.
+
+### Preguntes per enviar al proveïdor
+
+Què necessiteu abans de pressupostar? Què no faríeu en una primera formació? Qui la imparteix? Com eviteu una simple demo? Quins lliurables queden i què passa després?

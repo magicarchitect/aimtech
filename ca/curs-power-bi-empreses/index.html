@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Curs Power BI per a empreses: formació en directe — Aimtech</title>
+<title>Formació Power BI per a empreses in-company i online | Aimtech</title>
 <meta name="description" content="Curs Power BI per a empreses: formació en grup tancat amb professor. Presencial/in-company a Barcelona o online en directe. Des de 4.400 € per edició." />
 
 <link rel="canonical" href="https://www.aimtech.es/ca/curs-power-bi-empreses/" />
@@ -23,7 +23,7 @@
 <meta property="og:locale" content="ca_ES" />
 <meta property="og:locale:alternate" content="es_ES" />
 <meta property="og:site_name" content="Aimtech" />
-<meta property="og:title" content="Curs Power BI per a empreses: formació en directe — Aimtech" />
+<meta property="og:title" content="Formació Power BI per a empreses in-company i online | Aimtech" />
 <meta property="og:description" content="Curs Power BI per a empreses: formació en grup tancat amb professor. Presencial/in-company a Barcelona o online en directe. Des de 4.400 € per edició." />
 <meta property="og:url" content="https://www.aimtech.es/ca/curs-power-bi-empreses/" />
 <meta property="og:image" content="https://www.aimtech.es/assets/og/power-bi.png" />
@@ -33,7 +33,7 @@
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Curs Power BI per a empreses: formació en directe — Aimtech" />
+<meta name="twitter:title" content="Formació Power BI per a empreses in-company i online | Aimtech" />
 <meta name="twitter:description" content="Curs Power BI per a empreses: formació en grup tancat amb professor. Presencial/in-company a Barcelona o online en directe. Des de 4.400 € per edició." />
 <meta name="twitter:image" content="https://www.aimtech.es/assets/og/power-bi.png" />
 
@@ -44,19 +44,36 @@
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "@id": "https://www.aimtech.es/#aimtech",
-    "name": "Aimtech",
-    "legalName": "Aimtech Consulting SL",
+    "name": "Aimtech Consulting S.L.",
+    "legalName": "Aimtech Consulting S.L.",
     "url": "https://www.aimtech.es",
     "logo": "https://www.aimtech.es/assets/logo.png?v=2",
     "founder": {
       "@type": "Person",
-      "name": "Miguel Pérez",
-      "alternateName": "Mike Pérez",
-      "url": "https://www.aimtech.es/sobre-mike/"
+      "name": "Mike Pérez",
+      "alternateName": [
+        "Miquel Pérez",
+        "Mike Pérez"
+      ],
+      "url": "https://www.aimtech.es/sobre-mike/",
+      "@id": "https://www.aimtech.es/#mike",
+      "sameAs": [
+        "https://www.linkedin.com/in/miguelperezperez/",
+        "https://cibernarium.barcelonactiva.cat/fitxa-instructor?instructorId=21672"
+      ],
+      "worksFor": {
+        "@id": "https://www.aimtech.es/#aimtech"
+      }
     },
     "areaServed": [
-      { "@type": "Country", "name": "Espanya" },
-      { "@type": "AdministrativeArea", "name": "Catalunya" }
+      {
+        "@type": "Country",
+        "name": "Espanya"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Catalunya"
+      }
     ],
     "address": {
       "@type": "PostalAddress",
@@ -68,8 +85,17 @@
       "email": "hola@aimtech.es",
       "contactType": "customer service",
       "areaServed": "ES",
-      "availableLanguage": ["ca", "es"]
-    }
+      "availableLanguage": [
+        "ca",
+        "es"
+      ],
+      "telephone": "+34661869181"
+    },
+    "telephone": "+34661869181",
+    "email": "hola@aimtech.es",
+    "sameAs": [
+      "https://www.linkedin.com/company/aimtechsl"
+    ]
   },
   {
     "@context": "https://schema.org",
@@ -89,12 +115,18 @@
       "url": "https://www.aimtech.es/ca/curs-power-bi-empreses/#preus"
     },
     "description": "Formació in-company de Power BI per a empreses, entitats i administracions públiques, amb datasets ficticis de negoci. Dos itineraris de 20h (Zero a Intermedi i Avançat): Power Query, modelatge dimensional en esquema en estrella, DAX, visualització i govern del servei. Online en directe per a tota Espanya, presencial a Barcelona o in-company a les oficines del client a Barcelona. Grups tancats de fins a 20 persones, aprenentatge learn-by-doing amb reptes i projectes guiats.",
-    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "provider": {
+      "@id": "https://www.aimtech.es/#aimtech"
+    },
     "url": "https://www.aimtech.es/ca/curs-power-bi-empreses/",
     "inLanguage": "ca",
     "timeRequired": "PT20H",
     "hasCourseInstance": [
-      { "@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT20H" },
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "PT20H"
+      },
       {
         "@type": "CourseInstance",
         "courseMode": "Onsite",
@@ -116,9 +148,24 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
-      { "@type": "ListItem", "position": 2, "name": "Cursos de Power BI", "item": "https://www.aimtech.es/ca/power-bi/" },
-      { "@type": "ListItem", "position": 3, "name": "Curs de Power BI per a empreses", "item": "https://www.aimtech.es/ca/curs-power-bi-empreses/" }
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inici",
+        "item": "https://www.aimtech.es/ca/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Cursos de Power BI",
+        "item": "https://www.aimtech.es/ca/power-bi/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Curs de Power BI per a empreses",
+        "item": "https://www.aimtech.es/ca/curs-power-bi-empreses/"
+      }
     ]
   }
 ]
@@ -137,6 +184,21 @@
 <link rel="stylesheet" href="../../css/cookie-consent.css">
 <script src="../../js/cookie-consent.js" defer></script>
 <script src="../../js/site.js" defer></script>
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "La formació és bonificable per FUNDAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Gestionem la bonificació per tu. L’import depèn del crèdit formatiu disponible de la teva empresa i dels requisits de FUNDAE, i t’ho confirmem abans de començar."
+      }
+    }
+  ]
+}</script>
 </head>
 <body>
 
@@ -157,38 +219,34 @@
     </svg>
   </a>
   <div class="nav-links">
-    <div class="nav-dropdown">
-      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
-      <div class="nav-dropdown-menu nav-mega" id="nav-serveis-menu">
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ca/power-bi/">Power BI</a>
-          <a href="/ca/curs-power-bi-empreses/">Curs Power BI empreses</a>
-          <a href="/ca/curs-power-bi-barcelona/">Curs Power BI Barcelona</a>
-        </div>
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ca/ia-aplicada/">IA Aplicada</a>
-          <a href="/ca/curs-chatgpt-empreses/">Formació ChatGPT Barcelona</a>
-          <a href="/ca/formacio-claude-empreses/">Formació Claude Barcelona</a>
-          <a href="/ca/formacio-ia-empreses/">Formació IA empreses Barcelona</a>
-        </div>
-        <div class="nav-mega-col nav-mega-col--wide">
-          <a class="nav-mega-head" href="/ca/ia-agentica/">IA Agèntica</a>
-          <a href="/ca/consultoria-ia-empreses/">Consultoria IA</a>
-          <a href="/ca/automatitzacio-processos-ia/">Automatització de processos</a>
-          <a href="/ca/agents-ia-empreses/">Agents d'IA</a>
-          <a href="/ca/bot-whatsapp-empreses/">Bot de WhatsApp</a>
-          <a href="/ca/chatbot-documents-empresa/">Chatbot de documents</a>
-          <a href="/ca/automatitzacio-correus-ia/">Automatització de correus</a>
-          <a href="/ca/automatitzacio-factures-pdf-ia/">Automatització de factures</a>
-        </div>
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ca/desenvolupament/">Desenvolupament</a>
-          <span class="nav-mega-note">Apps, APIs i integracions a mida</span>
-        </div>
-      </div>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/ca/curs-power-bi-empreses/">Formació Power BI</a><button type="button" class="nav-dropdown-toggle" aria-label="Formació Power BI: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-0">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-0"><div class="nav-mega-col">
+        <a href="/ca/curs-power-bi-barcelona/">Barcelona presencial</a>
+        <a href="/ca/curs-power-bi-avancat/">Avançat</a>
+        <a href="/ca/power-bi/">Programa complet</a>
+      </div></div>
     </div>
-    <a href="/ca/blog/">Blog</a>
-    <a href="/ca/casos/">Casos d'èxit</a>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/ca/formacio-ia-empreses/">Formació IA</a><button type="button" class="nav-dropdown-toggle" aria-label="Formació IA: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-1">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-1"><div class="nav-mega-col">
+        <a href="/ca/curs-chatgpt-empreses/">ChatGPT</a>
+        <a href="/ca/formacio-claude-empreses/">Claude</a>
+        <a href="/ca/formacio-copilot-empreses/">Copilot</a>
+        <a href="/ca/formacio-ai-act-empreses/">AI Act</a>
+        <a href="/ca/ia-aplicada/">IA aplicada avançada</a>
+      </div></div>
+    </div>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/ca/consultoria-ia-empreses/">Implantació IA</a><button type="button" class="nav-dropdown-toggle" aria-label="Implantació IA: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-2">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-2"><div class="nav-mega-col">
+        <a href="/ca/automatitzacio-processos-ia/">Automatització de processos</a>
+        <a href="/ca/agents-ia-empreses/">Agents IA</a>
+        <a href="/ca/bot-whatsapp-empreses/">Bot WhatsApp</a>
+        <a href="/ca/chatbot-documents-empresa/">Chatbot de documents</a>
+        <a href="/ca/automatitzacio-correus-ia/">Correus</a>
+        <a href="/ca/automatitzacio-factures-pdf-ia/">Factures</a>
+        <a href="/ca/ia-agentica/">IA agèntica</a>
+      </div></div>
+    </div>
+    <a href="/ca/casos/">Casos</a>
     <a href="/ca/sobre-mike/">Sobre Mike</a>
   </div>
   <div class="nav-right">
@@ -218,15 +276,9 @@
             <span id="clock">--:--:--</span>
           </div>
 
-          <h1>
-            <span class="reveal r1">Curs Power BI</span>
-            <span class="reveal r2"><em class="italic">per a empreses</em>.</span><br>
-            <span class="reveal r3">Formació en directe.</span>
-          </h1>
+          <h1><span class="reveal r1">Formació Power BI per a empreses.</span></h1>
 
-          <p class="hero-sub">
-            Formació Power BI per a <strong>empreses i pimes</strong> en grup tancat, amb <strong>professor en directe</strong>. Presencial/in-company a Barcelona o online per a equips distribuïts. Casos preparats de vendes, finances i operacions amb <strong>datasets ficticis però realistes</strong>, no dades internes del client. Tria un dels dos itineraris de 20h segons el nivell de l’equip i demana proposta de calendari i modalitat. No és un curs gravat ni un projecte d’implantació a mida.
-          </p>
+          <p class="hero-sub" data-direct-answer="true">Formació en Power BI per a equips d’empreses que necessiten aplicar els aprenentatges a la feina. Mike Pérez imparteix les sessions en directe, presencials/in-company a Barcelona o online per a equips distribuïts. Durada: 20 h. Des de 4.400 € per edició, més IVA, amb calendari acordat.</p>
 
           <div class="hero-cta">
             <a href="/ca/contacte/" class="btn-primary">
@@ -478,6 +530,11 @@
     </div>
   </section>
 
+  <section id="roi-formacion" class="section-pad"><div class="container"><h2 class="section-title">Retorn de la formació</h2><p>El retorn es comprova en tasques: substituir còpies manuals entre fulls per consultes Power Query, reutilitzar mesures DAX i actualitzar informes periòdics amb un model coherent. Comparem el procediment abans i després amb l’equip; aprendre no equival a una implantació ni garanteix estalvis.</p><p>Online en directe per a equips de tot Espanya; in-company presencial a Barcelona i àrea metropolitana.</p></div></section>
+
+  <!-- @region partials/fundae-ca.html -->
+<section id="fundae" class="section-pad"><div class="container"><h2 class="section-title">Formació bonificable per FUNDAE.</h2><p>Gestionem la bonificació de la formació per tu. L’import bonificable depèn del crèdit formatiu de la teva empresa i dels requisits de FUNDAE; t’ho confirmem abans de començar. T’acompanyem en la gestió i t’indiquem la documentació i les obligacions que corresponen a l’empresa.</p></div></section>
+<!-- @endregion -->
   <section id="preus">
     <div class="container">
       <div data-reveal>
@@ -701,6 +758,9 @@
 </section>
 <!-- @endregion -->
 
+  <section id="faq" class="section-pad"><div class="container"><h2 class="section-title">Preguntes freqüents</h2><div class="bento"><article class="card s-2"><h3>La formació és bonificable per FUNDAE?</h3><p>Sí. Gestionem la bonificació per tu. L’import depèn del crèdit formatiu disponible de la teva empresa i dels requisits de FUNDAE, i t’ho confirmem abans de començar.</p></article></div></div></section>
+
+
   <section id="contacte" class="cta-final">
     <div class="container">
       <div data-reveal>
@@ -716,6 +776,14 @@
     </div>
   </section>
 
+<section class="section-pad seo-context" data-seo-task="SEO-P0-08"><div class="container prose"><h2>Recursos per preparar el pas següent</h2><p>Per connectar aprenentatge i reporting recurrent, consulta el <a href="/ca/casos/excel-power-bi-equip-administratiu/">cas de pas d’Excel a Power BI</a>.</p>
+<p>Per escollir el càlcul adequat, compara <a href="/ca/blog/dax-mesures-vs-columnes-calculades/">mesures DAX i columnes calculades</a>.</p>
+<p>Si la visualització geogràfica queda en blanc, revisa els <a href="/ca/blog/mapes-power-bi/">mapes de Power BI</a>.</p>
+<p>Per evitar informes fràgils, comença pel <a href="/ca/blog/modelatge-dades-power-bi-esquema-estrella/">modelatge en esquema d’estrella</a>.</p>
+<p>Abans de compartir informes, comprova <a href="/ca/blog/power-bi-es-gratuit/">què és gratuït a Power BI</a>.</p>
+<p>Per decidir quina eina encaixa amb el procés, compara <a href="/ca/blog/power-bi-vs-excel/">Power BI i Excel</a>.</p></div></section>
+<aside class="container p2-context-link"><p><a href="/ca/curs-power-bi-avancat/">curs Power BI avançat</a></p></aside>
+<aside class="container p2-context-link"><p><a href="/ca/blog/formacio-ia-bonificada-fundae/">Com funciona la bonificació FUNDAE</a></p></aside>
 </main>
 
 <!-- @region partials/footer-ca.html -->
@@ -747,6 +815,7 @@
       <div class="footer-col">
         <h3>Recursos</h3>
         <a href="/ca/blog/">Blog</a>
+        <a href="/ca/blog/formacio-ia-bonificada-fundae/">Guia FUNDAE</a>
         <a href="/ca/casos/">Casos d'èxit</a>
         <a href="/ca/sobre-mike/">Sobre Mike</a>
         <a href="/ca/contacte/">Contacte</a>
@@ -758,12 +827,13 @@
         <a href="/ca/politica-privacitat/">Privacitat</a>
         <a href="/ca/politica-galetes/">Galetes</a>
         <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="tel:+34661869181">+34 661 869 181</a>
         <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>© 2026 Aimtech Consulting S.L. · Catalunya</span>
       <span>Built with intention.</span>
     </div>
   </div>

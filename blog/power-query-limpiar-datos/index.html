@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Power Query: cómo limpiar datos sucios paso a paso | Blog Aimtech</title>
-<meta name="description" content="Antes de un gráfico bonito hay datos sucios que limpiar. Power Query lo hace una vez y se repite solo en cada refresco. Te explicamos cómo, sin código." />
+<title>Power Query: limpiar datos paso a paso (sin código y con ejemplos) | Blog Aimtech</title>
+<meta name="description" content="Aprende a limpiar datos con Power Query: tipos, espacios, duplicados y pasos aplicados que puedes reutilizar en cada actualización, sin escribir código." />
 
 <link rel="canonical" href="https://www.aimtech.es/blog/power-query-limpiar-datos/" />
 
@@ -23,20 +23,20 @@
 <meta property="og:locale" content="es_ES" />
 <meta property="og:locale:alternate" content="ca_ES" />
 <meta property="og:site_name" content="Aimtech" />
-<meta property="og:title" content="Power Query: cómo limpiar datos sucios paso a paso" />
-<meta property="og:description" content="Antes de un gráfico bonito hay datos sucios que limpiar. Power Query lo hace una vez y se repite solo en cada refresco. Te explicamos cómo, sin código." />
+<meta property="og:title" content="Power Query: limpiar datos paso a paso (sin código y con ejemplos)" />
+<meta property="og:description" content="Aprende a limpiar datos con Power Query: tipos, espacios, duplicados y pasos aplicados que puedes reutilizar en cada actualización, sin escribir código." />
 <meta property="og:url" content="https://www.aimtech.es/blog/power-query-limpiar-datos/" />
 <meta property="og:image" content="https://www.aimtech.es/assets/og/default.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Power Query: cómo limpiar datos sucios paso a paso" />
+<meta property="og:image:alt" content="Power Query: limpiar datos paso a paso (sin código y con ejemplos)" />
 <meta property="article:published_time" content="2026-06-01" />
 <meta property="article:author" content="Mike Pérez" />
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Power Query: cómo limpiar datos sucios paso a paso" />
-<meta name="twitter:description" content="Antes de un gráfico bonito hay datos sucios que limpiar. Power Query lo hace una vez y se repite solo en cada refresco. Te explicamos cómo, sin código." />
+<meta name="twitter:title" content="Power Query: limpiar datos paso a paso (sin código y con ejemplos)" />
+<meta name="twitter:description" content="Aprende a limpiar datos con Power Query: tipos, espacios, duplicados y pasos aplicados que puedes reutilizar en cada actualización, sin escribir código." />
 <meta name="twitter:image" content="https://www.aimtech.es/assets/og/default.png" />
 
 <!-- JSON-LD: BlogPosting + BreadcrumbList -->
@@ -46,9 +46,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Power Query: cómo limpiar datos sucios paso a paso",
-    "description": "Antes de un gráfico bonito hay datos sucios que limpiar. Power Query lo hace una vez y se repite solo en cada refresco. Te explicamos cómo, sin código.",
+    "description": "Aprende a limpiar datos con Power Query: tipos, espacios, duplicados y pasos aplicados que puedes reutilizar en cada actualización, sin escribir código.",
     "datePublished": "2026-06-01",
-    "dateModified": "2026-06-01",
+    "dateModified": "2026-11-04",
     "inLanguage": "es-ES",
     "keywords": ["power-bi","power-query"],
     "image": "https://www.aimtech.es/assets/og/default.png",
@@ -59,12 +59,19 @@
     },
     "author": {
       "@type": "Person",
+      "@id": "https://www.aimtech.es/#mike",
       "name": "Mike Pérez",
       "url": "https://www.aimtech.es/sobre-mike/"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Aimtech",
+      "@id": "https://www.aimtech.es/#aimtech",
+      "name": "Aimtech Consulting S.L.",
+      "legalName": "Aimtech Consulting S.L.",
+      "telephone": "+34661869181",
+      "email": "hola@aimtech.es",
+      "sameAs": ["https://www.linkedin.com/company/aimtechsl"],
+      "founder": {"@type": "Person", "@id": "https://www.aimtech.es/#mike", "name": "Mike Pérez", "sameAs": ["https://www.linkedin.com/in/miguelperezperez/", "https://cibernarium.barcelonactiva.cat/fitxa-instructor?instructorId=21672"], "worksFor": {"@id": "https://www.aimtech.es/#aimtech"}},
       "url": "https://www.aimtech.es",
       "logo": {
         "@type": "ImageObject",
@@ -117,38 +124,34 @@
     </svg>
   </a>
   <div class="nav-links">
-    <div class="nav-dropdown">
-      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-servicios-menu">Servicios <span class="nav-chevron" aria-hidden="true">▾</span></button>
-      <div class="nav-dropdown-menu nav-mega" id="nav-servicios-menu">
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/power-bi/">Power BI</a>
-          <a href="/curso-power-bi-empresas/">Formación Power BI empresas</a>
-          <a href="/curso-power-bi-barcelona/">Formación Power BI Barcelona</a>
-        </div>
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ia-aplicada/">IA Aplicada</a>
-          <a href="/curso-chatgpt-empresas/">Curso ChatGPT Barcelona</a>
-          <a href="/formacion-claude-empresas/">Formación Claude Barcelona</a>
-          <a href="/formacion-ia-empresas/">Curso IA empresas Barcelona</a>
-        </div>
-        <div class="nav-mega-col nav-mega-col--wide">
-          <a class="nav-mega-head" href="/ia-agentica/">IA Agéntica</a>
-          <a href="/consultoria-ia-empresas/">Consultoría IA</a>
-          <a href="/automatizacion-procesos-ia/">Automatización de procesos</a>
-          <a href="/agentes-ia-empresas/">Agentes de IA</a>
-          <a href="/bot-whatsapp-empresas/">Bot de WhatsApp</a>
-          <a href="/chatbot-documentos-empresa/">Chatbot de documentos</a>
-          <a href="/automatizacion-emails-ia/">Automatización de emails</a>
-          <a href="/automatizacion-facturas-pdfs-ia/">Automatización de facturas</a>
-        </div>
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/desarrollo/">Desarrollo</a>
-          <span class="nav-mega-note">Apps, APIs e integraciones a medida</span>
-        </div>
-      </div>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/curso-power-bi-empresas/">Formación Power BI</a><button type="button" class="nav-dropdown-toggle" aria-label="Formación Power BI: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-0">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-0"><div class="nav-mega-col">
+        <a href="/curso-power-bi-barcelona/">Barcelona presencial</a>
+        <a href="/curso-power-bi-avanzado/">Avanzado</a>
+        <a href="/power-bi/">Programa completo</a>
+      </div></div>
     </div>
-    <a href="/blog/">Blog</a>
-    <a href="/casos/">Casos de éxito</a>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/formacion-ia-empresas/">Formación IA</a><button type="button" class="nav-dropdown-toggle" aria-label="Formación IA: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-1">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-1"><div class="nav-mega-col">
+        <a href="/curso-chatgpt-empresas/">ChatGPT</a>
+        <a href="/formacion-claude-empresas/">Claude</a>
+        <a href="/formacion-copilot-empresas/">Copilot</a>
+        <a href="/formacion-ai-act-empresas/">AI Act</a>
+        <a href="/ia-aplicada/">IA aplicada avanzada</a>
+      </div></div>
+    </div>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/consultoria-ia-empresas/">Implantación IA</a><button type="button" class="nav-dropdown-toggle" aria-label="Implantación IA: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-2">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-2"><div class="nav-mega-col">
+        <a href="/automatizacion-procesos-ia/">Automatización de procesos</a>
+        <a href="/agentes-ia-empresas/">Agentes IA</a>
+        <a href="/bot-whatsapp-empresas/">Bot WhatsApp</a>
+        <a href="/chatbot-documentos-empresa/">Chatbot documentos</a>
+        <a href="/automatizacion-emails-ia/">Emails</a>
+        <a href="/automatizacion-facturas-pdfs-ia/">Facturas</a>
+        <a href="/ia-agentica/">IA agéntica</a>
+      </div></div>
+    </div>
+    <a href="/casos/">Casos</a>
     <a href="/sobre-mike/">Sobre Mike</a>
   </div>
   <div class="nav-right">
@@ -175,7 +178,7 @@
         <span>Mike Pérez</span>
       </div>
       <h1>Power Query: cómo limpiar datos sucios paso a paso</h1>
-      <p class="post-lead">Antes de un gráfico bonito hay datos sucios que limpiar. Power Query lo hace una vez y se repite solo en cada refresco. Te explicamos cómo, sin código.</p>
+      <p class="post-lead">Aprende a limpiar datos con Power Query: tipos, espacios, duplicados y pasos aplicados que puedes reutilizar en cada actualización, sin escribir código.</p>
       <div class="post-tags"><span>power-bi</span><span>power-query</span></div>
     </header>
 
@@ -236,6 +239,8 @@
 <h2>El cambio de mentalidad</h2>
 <p>Quien viene de Excel arregla los datos <em>a mano, cada vez</em>. Power Query te obliga a un cambio de chip: arreglas el <strong>proceso una vez</strong> y se ejecuta solo para siempre. Esa es la diferencia entre dedicar el lunes a “preparar el informe” y abrirlo ya hecho.</p>
 <p>Con los datos limpios entras al <a href="/blog/modelado-datos-power-bi-esquema-estrella/">modelado</a> con buen pie, y de ahí a las medidas. En la <a href="/power-bi/">formación en Power BI de Aimtech</a>, Power Query es de los primeros bloques del itinerario de cero a intermedio, con datos sucios de verdad —no de manual— para que practiques el problema real. Presencial en Barcelona, en remoto en directo o in-company, para empresas, entidades y AAPP.</p>
+<p>¿Quieres que tu equipo domine esto? → <a href="/curso-power-bi-barcelona/">curso Power BI en Barcelona</a></p>
+<p>¿Quieres profundizar en medidas, modelado y rendimiento? → <a href="/curso-power-bi-avanzado/">curso Power BI avanzado</a>.</p>
 
     </div>
 
@@ -292,6 +297,7 @@
       <div class="footer-col">
         <h3>Recursos</h3>
         <a href="/blog/">Blog</a>
+        <a href="/blog/formacion-ia-bonificada-fundae/">Guía FUNDAE</a>
         <a href="/casos/">Casos de éxito</a>
         <a href="/sobre-mike/">Sobre Mike</a>
         <a href="/contacto/">Contacto</a>
@@ -303,12 +309,13 @@
         <a href="/politica-privacidad/">Privacidad</a>
         <a href="/politica-cookies/">Cookies</a>
         <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="tel:+34661869181">+34 661 869 181</a>
         <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Aimtech Consulting SL · Cataluña</span>
+      <span>© 2026 Aimtech Consulting S.L. · Cataluña</span>
       <span>Built with intention.</span>
     </div>
   </div>

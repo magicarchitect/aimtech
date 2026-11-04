@@ -59,12 +59,19 @@
     },
     "author": {
       "@type": "Person",
+      "@id": "https://www.aimtech.es/#mike",
       "name": "{{AUTHOR_JSON}}",
       "url": "https://www.aimtech.es/ca/sobre-mike/"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Aimtech",
+      "@id": "https://www.aimtech.es/#aimtech",
+      "name": "Aimtech Consulting S.L.",
+      "legalName": "Aimtech Consulting S.L.",
+      "telephone": "+34661869181",
+      "email": "hola@aimtech.es",
+      "sameAs": ["https://www.linkedin.com/company/aimtechsl"],
+      "founder": {"@type": "Person", "@id": "https://www.aimtech.es/#mike", "name": "Mike Pérez", "sameAs": ["https://www.linkedin.com/in/miguelperezperez/", "https://cibernarium.barcelonactiva.cat/fitxa-instructor?instructorId=21672"], "worksFor": {"@id": "https://www.aimtech.es/#aimtech"}},
       "url": "https://www.aimtech.es",
       "logo": {
         "@type": "ImageObject",
@@ -118,7 +125,7 @@
         <span class="sep">·</span>
         <span>{{AUTHOR}}</span>
       </div>
-      <h1>{{TITLE}}</h1>
+      <h1>{{HEADING}}</h1>
       <p class="post-lead">{{DESCRIPTION}}</p>
       <div class="post-tags">{{TAGS_HTML}}</div>
     </header>

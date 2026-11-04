@@ -44,17 +44,31 @@
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "@id": "https://www.aimtech.es/#aimtech",
-    "name": "Aimtech",
-    "legalName": "Aimtech Consulting SL",
+    "name": "Aimtech Consulting S.L.",
+    "legalName": "Aimtech Consulting S.L.",
     "url": "https://www.aimtech.es",
     "logo": "https://www.aimtech.es/assets/logo.png?v=2",
     "founder": {
       "@type": "Person",
-      "name": "Miguel Pérez",
-      "alternateName": "Mike Pérez",
-      "url": "https://www.aimtech.es/ca/sobre-mike/"
+      "name": "Mike Pérez",
+      "alternateName": [
+        "Miquel Pérez",
+        "Mike Pérez"
+      ],
+      "url": "https://www.aimtech.es/ca/sobre-mike/",
+      "@id": "https://www.aimtech.es/#mike",
+      "sameAs": [
+        "https://www.linkedin.com/in/miguelperezperez/",
+        "https://cibernarium.barcelonactiva.cat/fitxa-instructor?instructorId=21672"
+      ],
+      "worksFor": {
+        "@id": "https://www.aimtech.es/#aimtech"
+      }
     },
-    "areaServed": { "@type": "Country", "name": "Espanya" },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Espanya"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "Catalunya",
@@ -65,8 +79,17 @@
       "email": "hola@aimtech.es",
       "contactType": "customer service",
       "areaServed": "ES",
-      "availableLanguage": ["ca", "es"]
-    }
+      "availableLanguage": [
+        "ca",
+        "es"
+      ],
+      "telephone": "+34661869181"
+    },
+    "telephone": "+34661869181",
+    "email": "hola@aimtech.es",
+    "sameAs": [
+      "https://www.linkedin.com/company/aimtechsl"
+    ]
   },
   {
     "@context": "https://schema.org",
@@ -74,9 +97,14 @@
     "@id": "https://www.aimtech.es/ca/agents-ia-empreses/#service",
     "name": "Agents d'IA per a empreses",
     "description": "Disseny i implantació d'agents d'IA per a empreses: assistents connectats a eines de negoci, amb revisió humana, traçabilitat i ROI mesurable.",
-    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "provider": {
+      "@id": "https://www.aimtech.es/#aimtech"
+    },
     "url": "https://www.aimtech.es/ca/agents-ia-empreses/",
-    "areaServed": { "@type": "Country", "name": "Espanya" },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Espanya"
+    },
     "serviceType": "Implantació d'agents d'IA per a empreses",
     "offers": {
       "@type": "Offer",
@@ -93,16 +121,30 @@
     "audience": {
       "@type": "BusinessAudience",
       "audienceType": "Empreses, entitats i administracions públiques"
-    },
-    "inLanguage": "ca-ES"
+    }
   },
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
-      { "@type": "ListItem", "position": 2, "name": "IA Agèntica", "item": "https://www.aimtech.es/ca/ia-agentica/" },
-      { "@type": "ListItem", "position": 3, "name": "Agents d'IA per a empreses", "item": "https://www.aimtech.es/ca/agents-ia-empreses/" }
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inici",
+        "item": "https://www.aimtech.es/ca/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "IA Agèntica",
+        "item": "https://www.aimtech.es/ca/ia-agentica/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Agents d'IA per a empreses",
+        "item": "https://www.aimtech.es/ca/agents-ia-empreses/"
+      }
     ]
   }
 ]
@@ -142,38 +184,34 @@
     </svg>
   </a>
   <div class="nav-links">
-    <div class="nav-dropdown">
-      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
-      <div class="nav-dropdown-menu nav-mega" id="nav-serveis-menu">
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ca/power-bi/">Power BI</a>
-          <a href="/ca/curs-power-bi-empreses/">Curs Power BI empreses</a>
-          <a href="/ca/curs-power-bi-barcelona/">Curs Power BI Barcelona</a>
-        </div>
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ca/ia-aplicada/">IA Aplicada</a>
-          <a href="/ca/curs-chatgpt-empreses/">Formació ChatGPT Barcelona</a>
-          <a href="/ca/formacio-claude-empreses/">Formació Claude Barcelona</a>
-          <a href="/ca/formacio-ia-empreses/">Formació IA empreses Barcelona</a>
-        </div>
-        <div class="nav-mega-col nav-mega-col--wide">
-          <a class="nav-mega-head" href="/ca/ia-agentica/">IA Agèntica</a>
-          <a href="/ca/consultoria-ia-empreses/">Consultoria IA</a>
-          <a href="/ca/automatitzacio-processos-ia/">Automatització de processos</a>
-          <a href="/ca/agents-ia-empreses/">Agents d'IA</a>
-          <a href="/ca/bot-whatsapp-empreses/">Bot de WhatsApp</a>
-          <a href="/ca/chatbot-documents-empresa/">Chatbot de documents</a>
-          <a href="/ca/automatitzacio-correus-ia/">Automatització de correus</a>
-          <a href="/ca/automatitzacio-factures-pdf-ia/">Automatització de factures</a>
-        </div>
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ca/desenvolupament/">Desenvolupament</a>
-          <span class="nav-mega-note">Apps, APIs i integracions a mida</span>
-        </div>
-      </div>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/ca/curs-power-bi-empreses/">Formació Power BI</a><button type="button" class="nav-dropdown-toggle" aria-label="Formació Power BI: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-0">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-0"><div class="nav-mega-col">
+        <a href="/ca/curs-power-bi-barcelona/">Barcelona presencial</a>
+        <a href="/ca/curs-power-bi-avancat/">Avançat</a>
+        <a href="/ca/power-bi/">Programa complet</a>
+      </div></div>
     </div>
-    <a href="/ca/blog/">Blog</a>
-    <a href="/ca/casos/">Casos d'èxit</a>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/ca/formacio-ia-empreses/">Formació IA</a><button type="button" class="nav-dropdown-toggle" aria-label="Formació IA: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-1">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-1"><div class="nav-mega-col">
+        <a href="/ca/curs-chatgpt-empreses/">ChatGPT</a>
+        <a href="/ca/formacio-claude-empreses/">Claude</a>
+        <a href="/ca/formacio-copilot-empreses/">Copilot</a>
+        <a href="/ca/formacio-ai-act-empreses/">AI Act</a>
+        <a href="/ca/ia-aplicada/">IA aplicada avançada</a>
+      </div></div>
+    </div>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/ca/consultoria-ia-empreses/">Implantació IA</a><button type="button" class="nav-dropdown-toggle" aria-label="Implantació IA: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-2">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-2"><div class="nav-mega-col">
+        <a href="/ca/automatitzacio-processos-ia/">Automatització de processos</a>
+        <a href="/ca/agents-ia-empreses/">Agents IA</a>
+        <a href="/ca/bot-whatsapp-empreses/">Bot WhatsApp</a>
+        <a href="/ca/chatbot-documents-empresa/">Chatbot de documents</a>
+        <a href="/ca/automatitzacio-correus-ia/">Correus</a>
+        <a href="/ca/automatitzacio-factures-pdf-ia/">Factures</a>
+        <a href="/ca/ia-agentica/">IA agèntica</a>
+      </div></div>
+    </div>
+    <a href="/ca/casos/">Casos</a>
     <a href="/ca/sobre-mike/">Sobre Mike</a>
   </div>
   <div class="nav-right">
@@ -210,9 +248,7 @@
             <span class="reveal r4">Amb control humà.</span>
           </h1>
 
-          <p class="hero-sub">
-            Un <strong>agent d'IA</strong> és un assistent que executa tasques per tu —triatge de correus, primera atenció, extracció de documents, seguiment— i escala a una persona quan toca. El dissenyem, el connectem a les teves eines i el posem en producció amb <strong>human-in-the-loop</strong> i ROI mesurable. Sense agents autònoms que decideixen sols el que no han de decidir.
-          </p>
+          <p class="hero-sub" data-direct-answer="true">Servei de agents d’IA per a empreses i equips que volen connectar les seves eines i reduir feina manual. Mike Pérez lidera el diagnòstic i la implantació, amb revisió humana i abast acordat. Treballem principalment en remot; durada, lliurables i preu es concreten en una proposta abans de començar.</p>
 
           <div class="hero-cta">
             <a href="/ca/contacte/" class="btn-primary">
@@ -690,6 +726,8 @@
     </div>
   </section>
 
+<section class="section-pad seo-context" data-seo-task="SEO-P0-08"><div class="container prose"><h2>Recursos per preparar el pas següent</h2><p>Per prioritzar una primera automatització amb supervisió, revisa el servei d’ <a href="/ca/automatitzacio-processos-ia/">automatització de processos amb IA</a>.</p>
+<p>Si el coll d’ampolla és a administració, consulta el procés d’ <a href="/ca/automatitzacio-factures-pdf-ia/">automatització de factures i PDF amb IA</a>.</p></div></section>
 </main>
 
 <!-- @region partials/footer-ca.html -->
@@ -721,6 +759,7 @@
       <div class="footer-col">
         <h3>Recursos</h3>
         <a href="/ca/blog/">Blog</a>
+        <a href="/ca/blog/formacio-ia-bonificada-fundae/">Guia FUNDAE</a>
         <a href="/ca/casos/">Casos d'èxit</a>
         <a href="/ca/sobre-mike/">Sobre Mike</a>
         <a href="/ca/contacte/">Contacte</a>
@@ -732,12 +771,13 @@
         <a href="/ca/politica-privacitat/">Privacitat</a>
         <a href="/ca/politica-galetes/">Galetes</a>
         <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="tel:+34661869181">+34 661 869 181</a>
         <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>© 2026 Aimtech Consulting S.L. · Catalunya</span>
       <span>Built with intention.</span>
     </div>
   </div>

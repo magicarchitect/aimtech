@@ -2,14 +2,16 @@
 title: "Cómo implementar IA en tu empresa: 7 pasos para automatizar procesos sin humo"
 description: "Guía práctica para implementar IA en tu empresa: detecta procesos repetitivos, prioriza casos de uso, forma al equipo y automatiza con control humano."
 date: 2026-06-24
-modified: 2026-09-15
 author: "Mike Pérez"
 tags: ["ia-aplicada", "automatizacion", "implantacion"]
 icon: "agent"
 draft: false
 slug: "implementar-ia-empresa-automatizar-procesos"
 translationKey: "implementar-ia-empresa-automatizar-procesos"
+modified: 2026-11-04
 ---
+
+Para valorar una propuesta de [implantación de IA en empresas](/consultoria-ia-empresas/), esta guía te ayuda a comparar criterios antes de contratar.
 
 Muchas empresas ya se han hecho la misma pregunta: **“quiero implementar IA en mi empresa, pero no sé por dónde empezar”**. La respuesta no debería ser comprar la herramienta de moda ni poner ChatGPT en todas partes. Eso suele generar entusiasmo durante dos semanas y después volver al Excel, al correo y al “ya lo haré yo”.
 

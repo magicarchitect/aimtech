@@ -39,22 +39,31 @@
 
 <!-- JSON-LD: EducationalOrganization + Course (×2) + BreadcrumbList -->
 <script type="application/ld+json">
-
-
 [
   {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "@id": "https://www.aimtech.es/#aimtech",
-    "name": "Aimtech",
-    "legalName": "Aimtech Consulting SL",
+    "name": "Aimtech Consulting S.L.",
+    "legalName": "Aimtech Consulting S.L.",
     "url": "https://www.aimtech.es",
     "logo": "https://www.aimtech.es/assets/logo.png?v=2",
     "founder": {
       "@type": "Person",
-      "name": "Miguel Pérez",
-      "alternateName": "Mike Pérez",
-      "url": "https://www.aimtech.es/sobre-mike/"
+      "name": "Mike Pérez",
+      "alternateName": [
+        "Miquel Pérez",
+        "Mike Pérez"
+      ],
+      "url": "https://www.aimtech.es/sobre-mike/",
+      "@id": "https://www.aimtech.es/#mike",
+      "sameAs": [
+        "https://www.linkedin.com/in/miguelperezperez/",
+        "https://cibernarium.barcelonactiva.cat/fitxa-instructor?instructorId=21672"
+      ],
+      "worksFor": {
+        "@id": "https://www.aimtech.es/#aimtech"
+      }
     },
     "areaServed": [
       {
@@ -79,8 +88,14 @@
       "availableLanguage": [
         "es",
         "ca"
-      ]
-    }
+      ],
+      "telephone": "+34661869181"
+    },
+    "telephone": "+34661869181",
+    "email": "hola@aimtech.es",
+    "sameAs": [
+      "https://www.linkedin.com/company/aimtechsl"
+    ]
   },
   {
     "@context": "https://schema.org",
@@ -178,28 +193,6 @@
   },
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Power BI para pymes requiere una formación diferente?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí. Power BI para pymes suele necesitar menos teoría y más foco en informes de ventas, margen, operaciones y dirección. Adaptamos el ritmo y las explicaciones al nivel del equipo, con datasets ficticios de negocio."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Dónde encaja el curso Power BI Barcelona?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Esta página actúa como hub de formación Power BI para empresas. Si buscáis curso Power BI Barcelona presencial, la landing local explica modalidad, formato y casos para equipos de empresa."
-        }
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
@@ -217,8 +210,6 @@
     ]
   }
 ]
-
-
 </script>
 
 <!-- Preload: fuente serif del hero (LCP) -->
@@ -233,6 +224,37 @@
 <link rel="stylesheet" href="../css/cookie-consent.css">
 <script src="../js/cookie-consent.js" defer></script>
 <script src="../js/site.js" defer></script>
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Power BI para pymes requiere una formación diferente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Power BI para pymes suele necesitar menos teoría y más foco en informes de ventas, margen, operaciones y dirección. Adaptamos el ritmo y las explicaciones al nivel del equipo, con datasets ficticios de negocio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde encaja el curso Power BI Barcelona?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Esta página actúa como hub de formación Power BI para empresas. Si buscáis curso Power BI Barcelona presencial, la landing local explica modalidad, formato y casos para equipos de empresa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La formación es bonificable por FUNDAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Gestionamos la bonificación por ti. El importe depende del crédito formativo disponible de tu empresa y de los requisitos de FUNDAE, y te lo confirmamos antes de empezar."
+      }
+    }
+  ]
+}</script>
 </head>
 <body>
 
@@ -253,38 +275,34 @@
     </svg>
   </a>
   <div class="nav-links">
-    <div class="nav-dropdown">
-      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-servicios-menu">Servicios <span class="nav-chevron" aria-hidden="true">▾</span></button>
-      <div class="nav-dropdown-menu nav-mega" id="nav-servicios-menu">
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/power-bi/">Power BI</a>
-          <a href="/curso-power-bi-empresas/">Formación Power BI empresas</a>
-          <a href="/curso-power-bi-barcelona/">Formación Power BI Barcelona</a>
-        </div>
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ia-aplicada/">IA Aplicada</a>
-          <a href="/curso-chatgpt-empresas/">Curso ChatGPT Barcelona</a>
-          <a href="/formacion-claude-empresas/">Formación Claude Barcelona</a>
-          <a href="/formacion-ia-empresas/">Curso IA empresas Barcelona</a>
-        </div>
-        <div class="nav-mega-col nav-mega-col--wide">
-          <a class="nav-mega-head" href="/ia-agentica/">IA Agéntica</a>
-          <a href="/consultoria-ia-empresas/">Consultoría IA</a>
-          <a href="/automatizacion-procesos-ia/">Automatización de procesos</a>
-          <a href="/agentes-ia-empresas/">Agentes de IA</a>
-          <a href="/bot-whatsapp-empresas/">Bot de WhatsApp</a>
-          <a href="/chatbot-documentos-empresa/">Chatbot de documentos</a>
-          <a href="/automatizacion-emails-ia/">Automatización de emails</a>
-          <a href="/automatizacion-facturas-pdfs-ia/">Automatización de facturas</a>
-        </div>
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/desarrollo/">Desarrollo</a>
-          <span class="nav-mega-note">Apps, APIs e integraciones a medida</span>
-        </div>
-      </div>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/curso-power-bi-empresas/">Formación Power BI</a><button type="button" class="nav-dropdown-toggle" aria-label="Formación Power BI: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-0">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-0"><div class="nav-mega-col">
+        <a href="/curso-power-bi-barcelona/">Barcelona presencial</a>
+        <a href="/curso-power-bi-avanzado/">Avanzado</a>
+        <a href="/power-bi/">Programa completo</a>
+      </div></div>
     </div>
-    <a href="/blog/">Blog</a>
-    <a href="/casos/">Casos de éxito</a>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/formacion-ia-empresas/">Formación IA</a><button type="button" class="nav-dropdown-toggle" aria-label="Formación IA: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-1">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-1"><div class="nav-mega-col">
+        <a href="/curso-chatgpt-empresas/">ChatGPT</a>
+        <a href="/formacion-claude-empresas/">Claude</a>
+        <a href="/formacion-copilot-empresas/">Copilot</a>
+        <a href="/formacion-ai-act-empresas/">AI Act</a>
+        <a href="/ia-aplicada/">IA aplicada avanzada</a>
+      </div></div>
+    </div>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/consultoria-ia-empresas/">Implantación IA</a><button type="button" class="nav-dropdown-toggle" aria-label="Implantación IA: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-2">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-2"><div class="nav-mega-col">
+        <a href="/automatizacion-procesos-ia/">Automatización de procesos</a>
+        <a href="/agentes-ia-empresas/">Agentes IA</a>
+        <a href="/bot-whatsapp-empresas/">Bot WhatsApp</a>
+        <a href="/chatbot-documentos-empresa/">Chatbot documentos</a>
+        <a href="/automatizacion-emails-ia/">Emails</a>
+        <a href="/automatizacion-facturas-pdfs-ia/">Facturas</a>
+        <a href="/ia-agentica/">IA agéntica</a>
+      </div></div>
+    </div>
+    <a href="/casos/">Casos</a>
     <a href="/sobre-mike/">Sobre Mike</a>
   </div>
   <div class="nav-right">
@@ -301,7 +319,7 @@
   <div class="top-conversion-cta__inner">
     <div>
       <p class="top-conversion-cta__eyebrow">Power BI para empresas</p>
-      <h2>¿Quieres convertir Excel disperso en <em>decisiones claras</em>?</h2>
+      <p class="top-conversion-cta__heading">¿Quieres convertir Excel disperso en <em>decisiones claras</em>?</p>
       <p class="top-conversion-cta__text">Formamos a tu equipo con datasets de negocio ficticios pero realistas: modelado, DAX, dashboards y reporting útil. Presencial/in-company en Barcelona u online en directo para equipos distribuidos.</p>
     </div>
     <div class="top-conversion-cta__actions" aria-label="Opciones de contacto">
@@ -335,9 +353,7 @@
             <span class="reveal r3">Power Query y DAX.</span>
           </h1>
 
-          <p class="hero-sub">
-            Programa de formación para <strong>empresas, pymes, entidades y administraciones públicas</strong>. Dos itinerarios de <strong>20h cada uno</strong>: de cero a intermedio con Power Query y modelado, o avanzado con DAX y gobierno del servicio. Práctica guiada con datasets ficticios de negocio, no datos internos del cliente. Profesor en directo: presencial/in-company en Barcelona u online para equipos distribuidos.
-          </p>
+          <p class="hero-sub" data-direct-answer="true">Formación en Power BI para equipos de empresas que necesitan aplicar lo aprendido a su trabajo. Mike Pérez imparte las sesiones en directo, presenciales/in-company en Barcelona u online para equipos distribuidos. Duración: 20 h. Desde 4.400 € por edición, más IVA, con calendario acordado.</p>
 
           <div class="hero-cta">
             <a href="/contacto/" class="btn-primary">
@@ -672,6 +688,9 @@
     </div>
   </section>
 
+  <!-- @region partials/fundae-es.html -->
+<section id="fundae" class="section-pad"><div class="container"><h2 class="section-title">Formación bonificable por FUNDAE.</h2><p>Gestionamos la bonificación de la formación por ti. El importe bonificable depende del crédito formativo de tu empresa y de los requisitos de FUNDAE; te lo confirmamos antes de empezar. Te acompañamos en la gestión y te indicamos la documentación y obligaciones que corresponden a la empresa.</p></div></section>
+<!-- @endregion -->
   <section id="precios">
     <div class="container">
       <div data-reveal>
@@ -785,18 +804,8 @@
     </div>
   </section>
 
-  <section id="faq">
-    <div class="container">
-      <div data-reveal>
-        <div class="section-label">07 — Preguntas frecuentes</div>
-        <h2 class="section-title">Dudas habituales sobre <em>Power BI para pymes</em> y empresas.</h2>
-      </div>
-      <div class="bento" data-stagger>
-        <article class="card s-2" data-mouse><h3>¿Power BI para pymes requiere una formación diferente?</h3><p>Sí. <strong>Power BI para pymes</strong> suele necesitar menos teoría y más foco en informes de ventas, margen, operaciones y dirección. Adaptamos el ritmo y las explicaciones al nivel del equipo, con datasets ficticios de negocio.</p></article>
-        <article class="card s-2" data-mouse><h3>¿Dónde encaja el curso Power BI Barcelona?</h3><p>Esta página actúa como hub de <strong>formación Power BI para empresas</strong>. Si buscáis <strong>curso Power BI Barcelona</strong> presencial, la landing local explica modalidad, formato y casos para equipos de empresa.</p></article>
-      </div>
-    </div>
-  </section>
+  <section id="faq" class="section-pad"><div class="container"><h2 class="section-title">Preguntas frecuentes</h2><div class="bento"><article class="card s-2"><h3>¿Power BI para pymes requiere una formación diferente?</h3><p>Sí. <strong>Power BI para pymes</strong> suele necesitar menos teoría y más foco en informes de ventas, margen, operaciones y dirección. Adaptamos el ritmo y las explicaciones al nivel del equipo, con datasets ficticios de negocio.</p></article><article class="card s-2"><h3>¿Dónde encaja el curso Power BI Barcelona?</h3><p>Esta página actúa como hub de <strong>formación Power BI para empresas</strong>. Si buscáis <strong>curso Power BI Barcelona</strong> presencial, la landing local explica modalidad, formato y casos para equipos de empresa.</p></article><article class="card s-2"><h3>¿La formación es bonificable por FUNDAE?</h3><p>Sí. Gestionamos la bonificación por ti. El importe depende del crédito formativo disponible de tu empresa y de los requisitos de FUNDAE, y te lo confirmamos antes de empezar.</p></article></div></div></section>
+
 
   <section id="relacionados">
     <div class="container">
@@ -831,6 +840,13 @@
     </div>
   </section>
 
+<section class="section-pad seo-context" data-seo-task="SEO-P0-08"><div class="container prose"><h2>Recursos para preparar el siguiente paso</h2><p>Para ver cómo conectar formación y trabajo recurrente, consulta el <a href="/casos/excel-power-bi-equipo-administrativo/">caso de Excel a Power BI para un equipo administrativo</a>.</p>
+<p>Para elegir el cálculo adecuado, compara <a href="/blog/dax-medidas-vs-columnas-calculadas/">medidas DAX y columnas calculadas</a>.</p>
+<p>Si la visualización geográfica queda en blanco, revisa los <a href="/blog/mapas-power-bi/">mapas de Power BI</a>.</p>
+<p>Para evitar informes frágiles, empieza por el <a href="/blog/modelado-datos-power-bi-esquema-estrella/">modelado en estrella</a>.</p>
+<p>Antes de compartir informes, comprueba <a href="/blog/es-gratis-power-bi/">qué es gratis en Power BI</a>.</p>
+<p>Para decidir qué herramienta encaja con el proceso, compara <a href="/blog/power-bi-vs-excel/">Power BI y Excel</a>.</p></div></section>
+<aside class="container p2-context-link"><p><a href="/curso-power-bi-avanzado/">curso Power BI avanzado</a></p></aside>
 </main>
 
 <!-- @region partials/footer-es.html -->
@@ -862,6 +878,7 @@
       <div class="footer-col">
         <h3>Recursos</h3>
         <a href="/blog/">Blog</a>
+        <a href="/blog/formacion-ia-bonificada-fundae/">Guía FUNDAE</a>
         <a href="/casos/">Casos de éxito</a>
         <a href="/sobre-mike/">Sobre Mike</a>
         <a href="/contacto/">Contacto</a>
@@ -873,12 +890,13 @@
         <a href="/politica-privacidad/">Privacidad</a>
         <a href="/politica-cookies/">Cookies</a>
         <a href="#" data-cookie-manage>Gestionar cookies</a>
+        <a href="tel:+34661869181">+34 661 869 181</a>
         <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Aimtech Consulting SL · Cataluña</span>
+      <span>© 2026 Aimtech Consulting S.L. · Cataluña</span>
       <span>Built with intention.</span>
     </div>
   </div>

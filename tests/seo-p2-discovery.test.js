@@ -1,0 +1,11 @@
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const routes=['/formacion-ai-act-empresas/','/ca/formacio-ai-act-empreses/','/curso-power-bi-avanzado/','/ca/curs-power-bi-avancat/','/formacion-copilot-empresas/','/ca/formacio-copilot-empreses/','/blog/formacion-ia-bonificada-fundae/','/ca/blog/formacio-ia-bonificada-fundae/'];
+function files(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>{if(e.name.startsWith('.')||['node_modules','content','partials','tests'].includes(e.name))return [];const p=path.join(dir,e.name);return e.isDirectory()?files(p):e.name.endsWith('.html')?[p]:[];});}
+test('P2 new pages have unique metadata, menu discovery and two contextual inlinks',()=>{
+ const pages=files('.').map(p=>[p,fs.readFileSync(p,'utf8')]),titles=new Map(),metas=new Map();for(const [p,s] of pages){const t=s.match(/<title>(.*?)<\/title>/s)?.[1];if(t)titles.set(t,[...(titles.get(t)||[]),p]);}
+ for(const r of routes){const s=fs.readFileSync(r.slice(1)+'index.html','utf8'),title=s.match(/<title>(.*?)<\/title>/s)[1],meta=s.match(/<meta name="description" content="([^"]+)"/)[1];assert.equal(titles.get(title).length,1);assert.ok(!metas.has(meta));metas.set(meta,r);assert.ok(meta.length<=155);const inlinks=pages.filter(([p,x])=>{const main=x.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1]||'';return '/'+p.replace(/index.html$/,'')!==r&&main.includes(`href="${r}"`)});assert.ok(inlinks.length>=2,r+' '+inlinks.map(x=>x[0]));assert.ok((s.match(/<nav\b[\s\S]*?<\/nav>/)[0]+s.match(/<footer data-nosnippet>[\s\S]*?<\/footer>/)[0]).includes(`href="${r}"`));}
+});
+test('P2 preserves authoritative 42-response proof and technical exact anchors',()=>{
+ for(const p of ['curso-power-bi-empresas','ca/curs-power-bi-empreses']){const s=fs.readFileSync(p+'/index.html','utf8');assert.match(s,/42 res/);assert.match(s,/4,61/);assert.match(s,/4,71/);assert.match(s,/4,52/);assert.match(s,/4,60/);}
+ for(const lang of ['es','ca'])for(const p of fs.readdirSync('content/blog/'+lang).filter(x=>/dax-|modelado-|modelatge-|power-query-/.test(x))){const s=fs.readFileSync('content/blog/'+lang+'/'+p,'utf8');assert.ok(s.includes(lang==='ca'?'[curs Power BI avançat](/ca/curs-power-bi-avancat/)':'[curso Power BI avanzado](/curso-power-bi-avanzado/)'));}
+});

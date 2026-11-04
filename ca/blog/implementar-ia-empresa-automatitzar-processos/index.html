@@ -48,7 +48,7 @@
     "headline": "Com implementar IA a la teva empresa: 7 passos per automatitzar processos sense fum",
     "description": "Guia pràctica per implementar IA a la teva empresa: detecta processos repetitius, prioritza casos d’ús, forma l’equip i automatitza amb control humà.",
     "datePublished": "2026-06-24",
-    "dateModified": "2026-09-15",
+    "dateModified": "2026-11-04",
     "inLanguage": "ca-ES",
     "keywords": ["ia-aplicada","automatitzacio","implantacio"],
     "image": "https://www.aimtech.es/assets/og/default.png",
@@ -59,12 +59,19 @@
     },
     "author": {
       "@type": "Person",
+      "@id": "https://www.aimtech.es/#mike",
       "name": "Mike Pérez",
       "url": "https://www.aimtech.es/ca/sobre-mike/"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Aimtech",
+      "@id": "https://www.aimtech.es/#aimtech",
+      "name": "Aimtech Consulting S.L.",
+      "legalName": "Aimtech Consulting S.L.",
+      "telephone": "+34661869181",
+      "email": "hola@aimtech.es",
+      "sameAs": ["https://www.linkedin.com/company/aimtechsl"],
+      "founder": {"@type": "Person", "@id": "https://www.aimtech.es/#mike", "name": "Mike Pérez", "sameAs": ["https://www.linkedin.com/in/miguelperezperez/", "https://cibernarium.barcelonactiva.cat/fitxa-instructor?instructorId=21672"], "worksFor": {"@id": "https://www.aimtech.es/#aimtech"}},
       "url": "https://www.aimtech.es",
       "logo": {
         "@type": "ImageObject",
@@ -117,38 +124,34 @@
     </svg>
   </a>
   <div class="nav-links">
-    <div class="nav-dropdown">
-      <button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-serveis-menu">Serveis <span class="nav-chevron" aria-hidden="true">▾</span></button>
-      <div class="nav-dropdown-menu nav-mega" id="nav-serveis-menu">
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ca/power-bi/">Power BI</a>
-          <a href="/ca/curs-power-bi-empreses/">Curs Power BI empreses</a>
-          <a href="/ca/curs-power-bi-barcelona/">Curs Power BI Barcelona</a>
-        </div>
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ca/ia-aplicada/">IA Aplicada</a>
-          <a href="/ca/curs-chatgpt-empreses/">Formació ChatGPT Barcelona</a>
-          <a href="/ca/formacio-claude-empreses/">Formació Claude Barcelona</a>
-          <a href="/ca/formacio-ia-empreses/">Formació IA empreses Barcelona</a>
-        </div>
-        <div class="nav-mega-col nav-mega-col--wide">
-          <a class="nav-mega-head" href="/ca/ia-agentica/">IA Agèntica</a>
-          <a href="/ca/consultoria-ia-empreses/">Consultoria IA</a>
-          <a href="/ca/automatitzacio-processos-ia/">Automatització de processos</a>
-          <a href="/ca/agents-ia-empreses/">Agents d'IA</a>
-          <a href="/ca/bot-whatsapp-empreses/">Bot de WhatsApp</a>
-          <a href="/ca/chatbot-documents-empresa/">Chatbot de documents</a>
-          <a href="/ca/automatitzacio-correus-ia/">Automatització de correus</a>
-          <a href="/ca/automatitzacio-factures-pdf-ia/">Automatització de factures</a>
-        </div>
-        <div class="nav-mega-col">
-          <a class="nav-mega-head" href="/ca/desenvolupament/">Desenvolupament</a>
-          <span class="nav-mega-note">Apps, APIs i integracions a mida</span>
-        </div>
-      </div>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/ca/curs-power-bi-empreses/">Formació Power BI</a><button type="button" class="nav-dropdown-toggle" aria-label="Formació Power BI: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-0">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-0"><div class="nav-mega-col">
+        <a href="/ca/curs-power-bi-barcelona/">Barcelona presencial</a>
+        <a href="/ca/curs-power-bi-avancat/">Avançat</a>
+        <a href="/ca/power-bi/">Programa complet</a>
+      </div></div>
     </div>
-    <a href="/ca/blog/">Blog</a>
-    <a href="/ca/casos/">Casos d'èxit</a>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/ca/formacio-ia-empreses/">Formació IA</a><button type="button" class="nav-dropdown-toggle" aria-label="Formació IA: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-1">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-1"><div class="nav-mega-col">
+        <a href="/ca/curs-chatgpt-empreses/">ChatGPT</a>
+        <a href="/ca/formacio-claude-empreses/">Claude</a>
+        <a href="/ca/formacio-copilot-empreses/">Copilot</a>
+        <a href="/ca/formacio-ai-act-empreses/">AI Act</a>
+        <a href="/ca/ia-aplicada/">IA aplicada avançada</a>
+      </div></div>
+    </div>
+    <div class="nav-dropdown nav-buy-group"><a class="nav-buy-link" href="/ca/consultoria-ia-empreses/">Implantació IA</a><button type="button" class="nav-dropdown-toggle" aria-label="Implantació IA: submenú" aria-haspopup="true" aria-expanded="false" aria-controls="nav-buy-2">▾</button>
+      <div class="nav-dropdown-menu nav-mega nav-buy-menu" id="nav-buy-2"><div class="nav-mega-col">
+        <a href="/ca/automatitzacio-processos-ia/">Automatització de processos</a>
+        <a href="/ca/agents-ia-empreses/">Agents IA</a>
+        <a href="/ca/bot-whatsapp-empreses/">Bot WhatsApp</a>
+        <a href="/ca/chatbot-documents-empresa/">Chatbot de documents</a>
+        <a href="/ca/automatitzacio-correus-ia/">Correus</a>
+        <a href="/ca/automatitzacio-factures-pdf-ia/">Factures</a>
+        <a href="/ca/ia-agentica/">IA agèntica</a>
+      </div></div>
+    </div>
+    <a href="/ca/casos/">Casos</a>
     <a href="/ca/sobre-mike/">Sobre Mike</a>
   </div>
   <div class="nav-right">
@@ -180,7 +183,8 @@
     </header>
 
     <div class="post-body container">
-      <p>Moltes empreses ja s’han fet la mateixa pregunta: <strong>“vull implementar IA a la meva empresa, però no sé per on començar”</strong>. La resposta no hauria de ser comprar l’eina de moda ni posar ChatGPT a tot arreu. Això acostuma a generar entusiasme dues setmanes i després tornar al correu, l’Excel i el “ja ho faré jo”.</p>
+      <p>Per valorar una proposta de <a href="/ca/consultoria-ia-empreses/">implantació d’IA a empreses</a>, aquesta guia t’ajuda a comparar criteris abans de contractar.</p>
+<p>Moltes empreses ja s’han fet la mateixa pregunta: <strong>“vull implementar IA a la meva empresa, però no sé per on començar”</strong>. La resposta no hauria de ser comprar l’eina de moda ni posar ChatGPT a tot arreu. Això acostuma a generar entusiasme dues setmanes i després tornar al correu, l’Excel i el “ja ho faré jo”.</p>
 <p>La IA aporta valor quan s’aplica a processos concrets: correus, documents, atenció al client, propostes, informes, consultes internes o tasques administratives que avui consumeixen hores de l’equip. Aquesta guia resumeix un mètode pràctic per <strong>automatitzar processos a la teva empresa amb IA</strong> sense caure en el fum.</p>
 <h2>1. Detecta on es perd temps de veritat</h2>
 <p>Abans de parlar de models, agents o automatitzacions, cal mirar el dia a dia. La pregunta no és “on podem posar IA?”, sinó <strong>“on estem pagant ineficiència cada setmana?”</strong>.</p>
@@ -302,6 +306,7 @@
       <div class="footer-col">
         <h3>Recursos</h3>
         <a href="/ca/blog/">Blog</a>
+        <a href="/ca/blog/formacio-ia-bonificada-fundae/">Guia FUNDAE</a>
         <a href="/ca/casos/">Casos d'èxit</a>
         <a href="/ca/sobre-mike/">Sobre Mike</a>
         <a href="/ca/contacte/">Contacte</a>
@@ -313,12 +318,13 @@
         <a href="/ca/politica-privacitat/">Privacitat</a>
         <a href="/ca/politica-galetes/">Galetes</a>
         <a href="#" data-cookie-manage>Gestionar galetes</a>
+        <a href="tel:+34661869181">+34 661 869 181</a>
         <a href="mailto:hola@aimtech.es">hola@aimtech.es</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 Aimtech Consulting SL · Catalunya</span>
+      <span>© 2026 Aimtech Consulting S.L. · Catalunya</span>
       <span>Built with intention.</span>
     </div>
   </div>

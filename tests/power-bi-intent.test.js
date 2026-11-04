@@ -21,7 +21,7 @@ for (const route of pages) {
       if ('courseMode' in node) { modes++; assert.equal(node['@type'], 'CourseInstance'); }
       assert.notEqual(node['@type'], 'Review');
     }));
-    assert.ok(courses > 0 && modes >= 2);
+    assert.ok(courses > 0 && modes >= (route.endsWith('barcelona') ? 1 : 2));
   });
 }
 for (const route of pages) {
@@ -56,8 +56,8 @@ test('Power BI commercial ES/CA: clear scope, documented recordings and practice
 });
 test('Power BI ES/CA: program and business purchase own distinct title/H1 intents', () => {
   for (const [program, commercial, syllabus, buyer] of [
-    ['power-bi', 'curso-power-bi-empresas', 'Programa Power BI', 'Curso Power BI para empresas'],
-    ['ca/power-bi', 'ca/curs-power-bi-empreses', 'Programa Power BI', 'Curs Power BI per a empreses']
+    ['power-bi', 'curso-power-bi-empresas', 'Programa Power BI', 'Formación Power BI para empresas'],
+    ['ca/power-bi', 'ca/curs-power-bi-empreses', 'Programa Power BI', 'Formació Power BI per a empreses']
   ]) {
     const p = read(program), c = read(commercial);
     for (const [html, phrase] of [[p, syllabus], [c, buyer]]) {

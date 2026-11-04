@@ -1,5 +1,5 @@
 ---
-title: "Cursos de Power BI a Barcelona: com triar (presencial, online o in-company)"
+title: "Com triar formació Power BI: presencial, in-company o online"
 description: "Hi ha molt curs de Power BI a Barcelona i no tots serveixen per al mateix. Et donem els criteris per triar bé segons el teu equip, sense caure en el més barat."
 date: 2026-06-01
 author: "Mike Pérez"
@@ -8,7 +8,10 @@ icon: "doc"
 draft: false
 slug: "curs-power-bi-barcelona-com-triar"
 translationKey: "curso-power-bi-barcelona-como-elegir"
+modified: 2026-11-04
 ---
+
+Per valorar una proposta de [curs Power BI a Barcelona](/ca/curs-power-bi-barcelona/), aquesta guia t’ajuda a comparar criteris abans de contractar.
 
 Cerca "curs de Power BI a Barcelona" i et sortiran desenes: cambres de comerç, acadèmies, plataformes online, escoles de negoci. Tots prometen el mateix i els preus ballen dels 200 € als 800 € i més. Com tries sense guiar-te només pel preu —que gairebé mai és bon conseller en formació—? Aquests són els criteris que de debò importen.
 

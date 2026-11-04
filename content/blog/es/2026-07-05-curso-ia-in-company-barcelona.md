@@ -1,5 +1,5 @@
 ---
-title: "Curso IA in-company en Barcelona: cuándo tiene sentido"
+title: "¿Cuándo compensa un curso de IA in-company? Guía para decidir"
 description: "Guía para decidir cuándo contratar un curso IA in-company en Barcelona: ventajas, preparación previa, confidencialidad, formato presencial y combinación con online."
 date: 2026-07-05
 author: "Mike Pérez"
@@ -8,7 +8,10 @@ icon: "agent"
 draft: false
 slug: "curso-ia-in-company-barcelona"
 translationKey: "curso-ia-in-company-barcelona"
+modified: 2026-11-04
 ---
+
+Para valorar una propuesta de [formación IA para empresas en Barcelona](/formacion-ia-empresas/), esta guía te ayuda a comparar criterios antes de contratar.
 
 Un **curso IA in-company en Barcelona** tiene sentido cuando la empresa no busca una clase genérica, sino una sesión práctica con su equipo, sus dudas, sus procesos y sus restricciones reales. No es lo mismo enseñar ChatGPT en abierto que trabajar con administración, ventas, operaciones o dirección alrededor de tareas que ocurren cada semana.
 

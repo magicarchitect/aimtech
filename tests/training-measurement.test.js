@@ -5,8 +5,8 @@ const path = require('node:path');
 const cp = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 const locales = [
-  {page:'formacion-ia-empresas', lang:'es', title:'Formación IA a medida para empresas | Aimtech', rules:[/misma tarea/, /complejidad comparable/, /mismos criterios de aceptación/, /sintético, anonimizado o expresamente autorizado/, /preparación y revisión/, /correcciones/, /privacidad/, /costes recurrentes/, /no acredita ahorro, ROI ni rendimiento en producción/], blank:'Por registrar'},
-  {page:'ca/formacio-ia-empreses', lang:'ca', title:'Formació IA a mida per a empreses | Aimtech', rules:[/mateixa tasca/, /complexitat comparable/, /mateixos criteris d’acceptació/, /sintètic, anonimitzat o expressament autoritzat/, /preparació i revisió/, /correccions/, /privacitat/, /costos recurrents/, /no acredita estalvi, ROI ni rendiment en producció/], blank:'Per registrar'},
+  {page:'formacion-ia-empresas', lang:'es', title:'Formación en IA para empresas a medida · Barcelona y online | Aimtech', rules:[/misma tarea/, /complejidad comparable/, /mismos criterios de aceptación/, /sintético, anonimizado o expresamente autorizado/, /preparación y revisión/, /correcciones/, /privacidad/, /costes recurrentes/, /no acredita ahorro, ROI ni rendimiento en producción/], blank:'Por registrar'},
+  {page:'ca/formacio-ia-empreses', lang:'ca', title:'Formació en IA per a empreses a mida · Barcelona i online | Aimtech', rules:[/mateixa tasca/, /complexitat comparable/, /mateixos criteris d’acceptació/, /sintètic, anonimitzat o expressament autoritzat/, /preparació i revisió/, /correccions/, /privacitat/, /costos recurrents/, /no acredita estalvi, ROI ni rendiment en producció/], blank:'Per registrar'},
 ];
 for(const l of locales) test(`${l.lang}: comparable measurement template without invented results`, () => {
   const html=fs.readFileSync(path.join(root,l.page,'index.html'),'utf8');
@@ -20,11 +20,11 @@ for(const l of locales) test(`${l.lang}: comparable measurement template without
   assert.doesNotMatch(block,/\d+\s*(%|minutos|minuts|€)/);
   assert.ok(html.includes(`<title>${l.title}</title>`));
   const before = cp.execFileSync('git', ['show', `b5e92c5773ca2956c04fcbae2fc759d71c9761e2:${l.page}/index.html`], {encoding:'utf8', cwd:root});
-  for (const pattern of [/<h1[\s\S]*?<\/h1>/g, /<link rel="canonical"[^>]*>/g, /<link rel="alternate"[^>]*>/g, /<script type="application\/ld\+json">[\s\S]*?<\/script>/g]) assert.deepEqual(html.match(pattern), before.match(pattern));
+  for (const pattern of [/<h1[\s\S]*?<\/h1>/g, /<link rel="canonical"[^>]*>/g, /<link rel="alternate"[^>]*>/g]) assert.deepEqual(html.match(pattern), before.match(pattern));
   for (const href of [...html.matchAll(/href="(\/[^"#?]*)(?:[?#][^"]*)?"/g)]) assert.ok(fs.existsSync(path.join(root, href[1], href[1].endsWith('/') ? 'index.html' : '')), `broken route ${href[1]}`);
   const schema=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1]));
   assert.ok(schema.some(n=>n['@type']==='Course'&&n.offers.priceSpecification.minPrice===2500));
-  assert.ok(!schema.some(n=>n['@type']==='FAQPage'));
+  assert.ok(schema.some(n=>n['@type']==='FAQPage' && n.mainEntity.some(q=>q.name.includes('FUNDAE'))));
 });
 for(const l of locales) test(`${l.lang}: training vs automation stays controlled with locale CTA`, () => {
   const html=fs.readFileSync(path.join(root,l.page,'index.html'),'utf8');

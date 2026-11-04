@@ -14,7 +14,8 @@ for (const locale of locales) {
       const html = read(page);
       const proof = html.match(/<section id="experiencia-interna"[\s\S]*?<\/section>/)?.[0];
       assert.ok(proof, 'missing internal operational proof');
-      for (const rule of [locale.internal, locale.notClient, locale.supplier, locale.chronology, locale.customer, locale.noROI, locale.review]) assert.match(proof, rule);
+      for (const rule of [locale.internal, locale.notClient, locale.supplier, locale.chronology, locale.customer, locale.review]) assert.match(proof, rule);
+      assert.match(html.match(/<section id="alcance-incluye"[\s\S]*?<\/section>/)?.[0] || proof, locale.noROI);
       for (const term of ['Gmail', 'PDFs', 'Drive', 'duplica']) assert.ok(proof.includes(term));
       assert.equal((proof.match(new RegExp(`href="/${locale.case}/"`, 'g')) || []).length, 1);
       assert.ok(proof.includes(`href="${locale.contact}"`));

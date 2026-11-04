@@ -1,5 +1,5 @@
 ---
-title: "Curso IA para empresas: temario por departamentos"
+title: "Casos de uso de IA por departamento: ejemplos para administración, ventas y RRHH"
 description: "Temario práctico de un curso IA para empresas organizado por departamentos: administración, ventas, marketing, atención al cliente, RRHH, dirección y operaciones."
 date: 2026-07-05
 author: "Mike Pérez"
@@ -8,7 +8,10 @@ icon: "agent"
 draft: false
 slug: "curso-ia-empresas-temario-departamentos"
 translationKey: "curso-ia-empresas-temario-departamentos"
+modified: 2026-11-04
 ---
+
+Para valorar una propuesta de [formación IA para empresas](/formacion-ia-empresas/), esta guía te ayuda a comparar criterios antes de contratar.
 
 Un **curso IA para empresas** funciona mejor cuando deja de hablar de “la IA” en abstracto y empieza a trabajar con las tareas reales de cada departamento. Administración no necesita los mismos ejemplos que ventas. RRHH no revisa los mismos documentos que atención al cliente. Dirección no mide el valor de la IA igual que operaciones.
 

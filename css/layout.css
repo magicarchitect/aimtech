@@ -197,7 +197,7 @@ main { position: relative; z-index: 2; }
 .hero h1 .r4 { animation-delay: 0.54s; }
 
 .hero-sub {
-  font-size: var(--content-size); color: var(--ink-dim); line-height: 1.55;
+  font-size: var(--content-size); color: var(--ink-dim); line-height: 1.75;
   margin-bottom: 44px;
   opacity: 0; animation: fadeUp 0.6s ease 0.7s forwards;
 }
