@@ -1,5 +1,6 @@
 ---
-title: "Tres preguntas antes de implantar IA agéntica en tu empresa"
+title: "Tres preguntas antes de automatizar un proceso con agentes"
+modified: 2026-11-04
 description: "Antes de invertir en agentes IA, conviene responder a tres preguntas que separan los proyectos que generan ROI de los que se quedan en demo bonita."
 date: 2026-05-13
 author: "Mike Pérez"
@@ -9,6 +10,8 @@ draft: false
 slug: "tres-preguntas-implantar-ia-agentica"
 translationKey: "2026-05-13-bienvenida"
 ---
+
+Antes de contratar [IA agéntica](/ia-agentica/), conviene responder estas tres preguntas sobre el proceso, los datos y la responsabilidad interna.
 
 La pregunta que nos llega cada semana es la misma: *"¿qué puede hacer un agente IA en mi empresa?"*. La respuesta honesta, antes de hablar de tecnología, pasa por mirarse al espejo y contestar tres cosas. Si la respuesta a alguna es vaga, el piloto está condenado a ser una demo bonita que nadie usa al mes siguiente.
 
