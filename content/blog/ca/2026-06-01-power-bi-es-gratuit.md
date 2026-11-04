@@ -72,8 +72,8 @@ Microsoft revisa noms i preus cada cert temps, així que aquí va la *lògica* �
 
 - **Power BI Desktop — gratuït.** Crear informes al teu equip. Sense cost.
 - **Power BI Pro — de pagament, per usuari i mes.** L'esglaó habitual en una empresa: publicar al Service, compartir amb companys, col·laborar en àrees de treball i programar l'actualització automàtica. Sol ser el que necessita un equip que comença a treballar amb quadres de comandament de debò.
-- **Premium Per User (PPU) — de pagament, per usuari i mes.** Com Pro però amb capacitats avançades (més volum, refrescos més freqüents, funcions de gran empresa) sense saltar a una capacitat dedicada.
-- **Capacitat dedicada / Microsoft Fabric — de pagament, per capacitat.** Per a organitzacions grans que distribueixen informes a molta gent o necessiten potència reservada. Es paga per capacitat, no per usuari.
+- **Premium Per User (PPU) — de pagament, per usuari i mes.** Com Pro però amb capacitats avançades (més volum, refrescos més freqüents, funcions de gran empresa) sense saltar a una capacitat dedicada. Accedir a un workspace PPU exigeix PPU també als consumidors; Pro no és suficient (excepte prova elegible).
+- **Capacitat dedicada / Microsoft Fabric — de pagament, per capacitat.** Per a organitzacions grans que distribueixen informes a molta gent o necessiten potència reservada. La capacitat es factura separadament: els autors necessiten Pro o PPU per publicar i col·laborar. Els consumidors amb llicència gratuïta poden consultar amb rol Viewer si tant l’informe com el model semàntic són en capacitat elegible (Fabric F64 o superior, o Premium P). Les F inferiors no permeten aquest consum gratuït.
 
 ## Què necessites tu realment?
 
@@ -81,7 +81,7 @@ Traduint els nivells a casos:
 
 - **Vols aprendre o muntar informes per a tu** → Desktop, gratuït. Punt.
 - **Sou un equip petit que necessita compartir i refrescar** → normalment Pro per usuari.
-- **Necessites funcions avançades o més volum** → PPU.
+- **Necessites funcions avançades o més volum** → PPU; també per als consumidors del workspace.
 - **Ets una organització gran amb molts consumidors d'informes** → capacitat / Fabric.
 
 La majoria de pimes que arrenquen es mouen entre "gratis" i "Pro". No et compliquis abans d'hora.
