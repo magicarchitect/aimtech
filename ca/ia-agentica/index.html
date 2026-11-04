@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Implantació d'IA agèntica — agents orquestrats amb ROI mesurable | Aimtech</title>
+<title>IA agèntica per a empreses: sistemes multiagent amb Claude i n8n | Aimtech</title>
 <meta name="description" content="Implantació d'IA agèntica per a empreses, entitats i AAPP. Anàlisi de processos, precondicions, disseny del workflow agèntic i ROI mesurable. Claude API, n8n, RAG i bases vectorials." />
 
 <link rel="canonical" href="https://www.aimtech.es/ca/ia-agentica/" />
@@ -23,7 +23,7 @@
 <meta property="og:locale" content="ca_ES" />
 <meta property="og:locale:alternate" content="es_ES" />
 <meta property="og:site_name" content="Aimtech" />
-<meta property="og:title" content="Implantació d'IA agèntica — agents orquestrats amb ROI mesurable | Aimtech" />
+<meta property="og:title" content="IA agèntica per a empreses: sistemes multiagent amb Claude i n8n | Aimtech" />
 <meta property="og:description" content="Dissenyem i implantem sistemes d'agents IA que s'integren amb els teus correus, CRM, XXSS i eines internes. Anàlisi, precondicions, workflow i ROI mesurable." />
 <meta property="og:url" content="https://www.aimtech.es/ca/ia-agentica/" />
 <meta property="og:image" content="https://www.aimtech.es/assets/og/ia-agentica-ca.png" />
@@ -33,13 +33,12 @@
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Implantació d'IA agèntica — agents orquestrats amb ROI mesurable | Aimtech" />
+<meta name="twitter:title" content="IA agèntica per a empreses: sistemes multiagent amb Claude i n8n | Aimtech" />
 <meta name="twitter:description" content="Anàlisi de processos, precondicions, workflow agèntic i ROI mesurable. Claude API, n8n, RAG, bases vectorials." />
 <meta name="twitter:image" content="https://www.aimtech.es/assets/og/ia-agentica-ca.png" />
 
 <!-- JSON-LD: Service + BreadcrumbList -->
-<script type="application/ld+json">
-[
+<script type="application/ld+json">[
   {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -51,7 +50,10 @@
       "url": "https://www.aimtech.es"
     },
     "url": "https://www.aimtech.es/ca/ia-agentica/",
-    "areaServed": { "@type": "Country", "name": "Espanya" },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Espanya"
+    },
     "serviceType": "Consultoria i implantació d'IA",
     "audience": {
       "@type": "BusinessAudience",
@@ -62,12 +64,21 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
-      { "@type": "ListItem", "position": 2, "name": "IA Agèntica", "item": "https://www.aimtech.es/ca/ia-agentica/" }
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inici",
+        "item": "https://www.aimtech.es/ca/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "IA Agèntica",
+        "item": "https://www.aimtech.es/ca/ia-agentica/"
+      }
     ]
   }
-]
-</script>
+]</script>
 
 <!-- Preload: fuente serif del hero (LCP) -->
 <link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -172,12 +183,7 @@
             <span id="clock">--:--:--</span>
           </div>
 
-          <h1>
-            <span class="reveal r1">Agents IA</span>
-            <span class="reveal r2"><em class="italic">orquestrats</em></span><br>
-            <span class="reveal r3">que entreguen</span>
-            <span class="reveal r4">ROI.</span>
-          </h1>
+          <h1><span class="reveal r1">IA agèntica: agents orquestrats orientats a ROI mesurable.</span></h1>
 
           <p class="hero-sub">
             Implantació de <strong>sistemes multi-agent</strong> per a empreses, entitats i AAPP. Diagnostiquem el procés, validem les precondicions, dissenyem el workflow agèntic i mesurem el retorn abans i després. <strong>Un orquestrador, diversos agents especialitzats</strong> connectats als teus correus, CRM, xarxes socials i eines internes. Sense demos boniques que es queden al calaix.
@@ -418,7 +424,7 @@
             <span class="badge">Repetitiu</span>
           </div>
           <h3>Hi ha un <em>patró clar</em>.</h3>
-          <p>El procés es repeteix N vegades al dia/setmana amb un input estructurat o semi-estructurat i un output esperat. Exemples: triatge de correus, primera resposta a leads, extracció de dades de PDFs.</p>
+          <p>El procés es repeteix N vegades al dia/setmana amb un input estructurat o semi-estructurat i un output esperat. </p>
         </article>
 
         <article class="card s-2" data-mouse>
@@ -427,7 +433,7 @@
             <span class="badge">Decisió acotada</span>
           </div>
           <h3>El <em>judici</em> és delimitable.</h3>
-          <p>Les decisions es poden descriure en llenguatge natural i caben en un grapat de regles i excepcions. Si la decisió exigeix experiència tàcita irreductible, l'agent ajuda però no decideix.</p>
+          <p>Les decisions es poden descriure en llenguatge natural i caben en un grapat de regles i excepcions. </p>
         </article>
 
         <article class="card s-2" data-mouse>
@@ -436,7 +442,7 @@
             <span class="badge">Cost mesurable</span>
           </div>
           <h3>Saps quant <em>costa avui</em>.</h3>
-          <p>Hores-persona, lead time, errors. Si no podem posar un número al cost actual del procés, tampoc podrem demostrar ROI després. El diagnòstic sempre inclou la línia base.</p>
+          <p>Hores-persona, lead time, errors.  </p>
         </article>
 
       </div>
@@ -448,7 +454,7 @@
       <div data-reveal>
         <div class="section-label">02 — Precondicions</div>
         <h2 class="section-title">El que ha d'estar <em>abans</em> / de posar-hi un agent.</h2>
-        <p class="section-intro">Un agent no arregla un procés trencat: l'amplifica. Abans d'implantar revisem aquests sis fronts amb tu. Si algun falla, ho deixem per escrit i decidim junts si es resol abans o si s'acota l'abast de l'agent.</p>
+        <p class="section-intro">Un agent no arregla un procés trencat: l'amplifica.  </p>
       </div>
 
       <div class="pre-list" data-stagger>
@@ -456,7 +462,7 @@
         <div class="pre-item">
           <span class="pre-check">// pre_01</span>
           <h4>Procés <em>documentat</em>.</h4>
-          <p>Sabem quins passos es fan avui, en quin ordre, amb quins inputs i quins outputs. Si el procés viu només al cap d'una persona, el primer és treure'l d'allà.</p>
+          <p>Sabem quins passos es fan avui, en quin ordre, amb quins inputs i quins outputs. </p>
         </div>
 
         <div class="pre-item">
@@ -468,7 +474,7 @@
         <div class="pre-item">
           <span class="pre-check">// pre_03</span>
           <h4>Regles <em>de negoci</em> clares.</h4>
-          <p>Què pot fer l'agent sol, què ha d'escalar a una persona i què mai ha de tocar. Llista curta, en llenguatge natural, validada amb el responsable del procés.</p>
+          <p>Què pot fer l'agent sol, què ha d'escalar a una persona i què mai ha de tocar. </p>
         </div>
 
         <div class="pre-item">
@@ -486,7 +492,7 @@
         <div class="pre-item">
           <span class="pre-check">// pre_06</span>
           <h4>Línia base <em>mesurada</em>.</h4>
-          <p>Sabem quantes hores, quin temps de resposta, quants errors té el procés avui. Sense línia base no hi ha ROI. Si no existeix, la primera fase del projecte és mesurar-la.</p>
+          <p>Sabem quantes hores, quin temps de resposta, quants errors té el procés avui.  </p>
         </div>
 
       </div>
@@ -498,7 +504,7 @@
       <div data-reveal>
         <div class="section-label">03 — Workflow agèntic</div>
         <h2 class="section-title">Un orquestrador, <em>diversos agents</em> / especialitzats.</h2>
-        <p class="section-intro">El patró que defensem: un agent <em style="color:var(--accent);font-style:italic">orquestrador</em> que entén el procés i delega a agents especialitzats connectats a cada eina. Cada agent fa una cosa i la fa bé. L'humà supervisa els punts crítics i aprova el que cal.</p>
+        <p class="section-intro">El patró que defensem: un agent <em style="color:var(--accent);font-style:italic">orquestrador</em> que entén el procés i delega a agents especialitzats connectats a cada eina.  L'humà supervisa els punts crítics i aprova el que cal.</p>
       </div>
 
       <div class="wf" data-stagger>
@@ -507,7 +513,7 @@
           <div class="wf-num"><em>01</em>Trigger</div>
           <div class="wf-content">
             <h4>Arriba <em>un esdeveniment</em>.</h4>
-            <p>Un correu nou, un missatge de WhatsApp, una fila en un full, un webhook, un cron. El sistema detecta que ha de passar alguna cosa.</p>
+            <p>Un correu nou, un missatge de WhatsApp, una fila en un full, un webhook, un cron. </p>
             <div class="wf-chips">
               <span class="chip">Gmail / Outlook</span>
               <span class="chip">WhatsApp Business</span>
@@ -535,7 +541,7 @@
           <div class="wf-num"><em>03</em>Acció</div>
           <div class="wf-content">
             <h4>L'agent especialitzat <em>executa</em>.</h4>
-            <p>Redacta una resposta, actualitza un registre al CRM, publica un esborrany, genera un document, crida una API interna. Cada acció queda registrada i és reversible quan té sentit.</p>
+            <p>Redacta una resposta, actualitza un registre al CRM, publica un esborrany, genera un document, crida una API interna. </p>
             <div class="wf-chips">
               <span class="chip">Tool use</span>
               <span class="chip">CRM</span>
@@ -549,7 +555,7 @@
           <div class="wf-num"><em>04</em>Revisió</div>
           <div class="wf-content">
             <h4>L'humà <em>aprova</em> el que és crític.</h4>
-            <p>Les accions sensibles (enviaments externs, decisions de cobrament, publicacions públiques) passen per una safata de revisió humana abans d'executar-se. Les rutinàries s'executen soles i s'auditen després.</p>
+            <p>Les accions sensibles (enviaments externs, decisions de cobrament, publicacions públiques) passen per una safata de revisió humana abans d'executar-se. </p>
             <div class="wf-chips">
               <span class="chip">Approval queue</span>
               <span class="chip">Human-in-the-loop</span>
@@ -562,7 +568,7 @@
           <div class="wf-num"><em>05</em>Telemetria</div>
           <div class="wf-content">
             <h4>Es <em>mesura</em> el que passa.</h4>
-            <p>Cada pas del flux genera traces: temps, costos, decisions, errors. Amb això comparem contra la línia base i sabem si l'agent està aportant o si cal ajustar.</p>
+            <p>Cada pas del flux genera traces: temps, costos, decisions, errors. </p>
             <div class="wf-chips">
               <span class="chip">Logs</span>
               <span class="chip">Mètriques</span>
@@ -581,7 +587,7 @@
       <div data-reveal>
         <div class="section-label">04 — Stack</div>
         <h2 class="section-title">El que <em>fem servir</em> / i per què.</h2>
-        <p class="section-intro">Stack pragmàtic. Res de nou per moda, res de tancat a un proveïdor que demà canvia els preus. Si la teva organització ja té infraestructura pròpia, la respectem.</p>
+        <p class="section-intro">Stack pragmàtic.  </p>
       </div>
 
       <div class="bento" data-stagger>
@@ -592,7 +598,7 @@
             <span class="badge">Models</span>
           </div>
           <h3>El motor <em>que millor encaixi</em>.</h3>
-          <p>Treballem amb tots els grans proveïdors comercials — <strong>Claude</strong> (Anthropic), <strong>GPT</strong> (OpenAI), <strong>Gemini</strong> (Google) — i models open source (Llama, Mistral, Qwen) quan el cas demana desplegament local o cost per token mínim. Per defecte recomanem Claude pel seu comportament robust en tool use i raonament llarg, però la decisió es pren per cas d'ús, no per afiliació.</p>
+          <p>Treballem amb tots els grans proveïdors comercials — <strong>Claude</strong> (Anthropic), <strong>GPT</strong> (OpenAI), <strong>Gemini</strong> (Google) — i models open source (Llama, Mistral, Qwen) quan el cas demana desplegament local o cost per token mínim. </p>
           <div class="card-meta">
             <span class="chip">Claude</span>
             <span class="chip">GPT</span>
@@ -608,7 +614,7 @@
             <span class="badge">Orquestració</span>
           </div>
           <h3>n8n + <em>Agent SDK</em>.</h3>
-          <p>n8n per als workflows visuals i connectar amb les APIs que la teva organització ja fa servir. Agent SDK per a la lògica de l'orquestrador i els agents que requereixen raonament més fi.</p>
+          <p>n8n per als workflows visuals i connectar amb les APIs que la teva organització ja fa servir. </p>
           <div class="card-meta">
             <span class="chip">n8n</span>
             <span class="chip">Agent SDK</span>
@@ -622,7 +628,7 @@
             <span class="badge">Memòria</span>
           </div>
           <h3>RAG amb <em>Qdrant</em>.</h3>
-          <p>Base vectorial open source amb llicència Apache 2.0 — <strong>sense cost de llicència</strong>, ni tan sols per a ús comercial. Desplegada al teu núvol o a infraestructura que controles: les teves dades no en surten. Perquè els agents consultin la teva documentació interna, normativa, manuals o històric en mil·lisegons.</p>
+          <p>Base vectorial open source amb llicència Apache 2.0 — <strong>sense cost de llicència</strong>, ni tan sols per a ús comercial.  </p>
           <div class="card-meta">
             <span class="chip">Qdrant</span>
             <span class="chip">Apache 2.0</span>
@@ -641,7 +647,7 @@
       <div data-reveal>
         <div class="section-label">05 — Resultats &amp; ROI</div>
         <h2 class="section-title">El que <em>esperar</em> / i com ho mesurem.</h2>
-        <p class="section-intro">El ROI no és un PDF al final del projecte: és un full viu amb la línia base, la corba d'adopció i els costos operatius del propi agent. Si els números no surten, ajustem l'abast — no maquillem l'informe.</p>
+        <p class="section-intro">El ROI no és un PDF al final del projecte: és un full viu amb la línia base, la corba d'adopció i els costos operatius del propi agent. </p>
       </div>
 
       <div class="bento" data-stagger>
@@ -652,7 +658,7 @@
             <span class="badge">Temps</span>
           </div>
           <h3>Hores <em>alliberades</em>.</h3>
-          <p>L'equip recupera temps de tasques amb patró repetitiu. Ho mesurem per procés i per persona, no en agregats de màrqueting.</p>
+          <p>L'equip recupera temps de tasques amb patró repetitiu. </p>
           <div class="card-meta">
             <span class="chip">Hores/setmana</span>
             <span class="chip">Lead time</span>
@@ -680,7 +686,7 @@
             <span class="badge">Capacitat</span>
           </div>
           <h3>Escala sense <em>contractar</em>.</h3>
-          <p>El mateix equip gestiona més volum sense rebentar-se en pics. Mètrica clau: throughput per persona-mes vs. cost mensual del sistema agèntic.</p>
+          <p>El mateix equip gestiona més volum sense rebentar-se en pics.  </p>
           <div class="card-meta">
             <span class="chip">Throughput</span>
             <span class="chip">Cost operatiu</span>
@@ -693,7 +699,7 @@
       <div class="roi-card" data-reveal>
         <div>
           <h4>El ROI es signa <em>abans</em>, no després.</h4>
-          <p>A la proposta acordem quin procés ataquem, quina línia base mesurem i quin llindar de millora justifica el projecte. Si a la revisió als 90 dies no hi arribem, ajustem l'abast o aturem. Sense lletra petita.</p>
+          <p>A la proposta acordem quin procés ataquem, quina línia base mesurem i quin llindar de millora justifica el projecte.  Sense lletra petita.</p>
         </div>
         <div class="roi-figure">
           90<span>dies de revisió</span>
@@ -707,7 +713,7 @@
       <div data-reveal>
         <div class="section-label">— Serveis relacionats</div>
         <h2 class="section-title">Entra directe pel teu <em>cas concret</em>.</h2>
-        <p class="section-intro">La IA agèntica és el mètode; aquests són els serveis i casos d'ús que en surten. Si ja saps què vols resoldre, entra per aquí.</p>
+        <p class="section-intro">La IA agèntica és el mètode; aquests són els serveis i casos d'ús que en surten. </p>
       </div>
       <div class="rel-grid" data-stagger>
         <a class="rel-link" href="/ca/consultoria-ia-empreses/"><span><span class="rel-link-t">Consultoria d'IA</span><span class="rel-link-d">Diagnòstic + full de ruta 30/60/90</span></span><span class="rel-arrow">→</span></a>
@@ -735,11 +741,15 @@
     </div>
   </section>
 
+  <section id="alcance-incluye" class="section-pad"><div class="container"><h2 class="section-title">Què inclou i què no</h2><p>Incloem diagnòstic, abast i controls acordats. La implantació es pressuposta separadament. L’experiència interna no és un cas de client ni acredita estalvis transferibles. Validem accessos, permisos, supervisió i costos abans de producció. No és assessorament jurídic ni garantia de ROI.</p></div></section>
+
+  <section id="faq" class="section-pad"><div class="container"><h2 class="section-title">FAQ</h2><div class="bento"></div></div></section>
+
   <section id="contacte" class="cta-final">
     <div class="container">
       <div data-reveal>
         <h2>Comencem pel <em>diagnòstic</em><span class="cursor-blink"></span></h2>
-        <p>Explica'm quin procés et treu més hores avui i responem en menys de 24h amb una proposta de diagnòstic acotat: una o dues setmanes, sense compromís d'implantació. Si després del diagnòstic no hi ha cas, ho diem. Només necessites automatitzar un procés concret, no un sistema multi-agent? Mira la <a href="/ca/automatitzacio-processos-ia/">automatització de processos amb IA</a>.</p>
+        <p>Explica'm quin procés et treu més hores avui i responem en menys de 24h amb una proposta de diagnòstic acotat: una o dues setmanes, sense compromís d'implantació.   Mira la <a href="/ca/automatitzacio-processos-ia/">automatització de processos amb IA</a>.</p>
         <a href="/ca/contacte/" class="btn-primary" style="font-size: 15px; padding: 18px 32px;">
           Demanar diagnòstic
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">

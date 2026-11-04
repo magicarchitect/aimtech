@@ -38,8 +38,7 @@
 <meta name="twitter:image" content="https://www.aimtech.es/assets/og/ia-aplicada.png" />
 
 <!-- JSON-LD: Course + BreadcrumbList -->
-<script type="application/ld+json">
-[
+<script type="application/ld+json">[
   {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
@@ -55,8 +54,14 @@
       "url": "https://www.aimtech.es/sobre-mike/"
     },
     "areaServed": [
-      { "@type": "Country", "name": "Espanya" },
-      { "@type": "AdministrativeArea", "name": "Catalunya" }
+      {
+        "@type": "Country",
+        "name": "Espanya"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Catalunya"
+      }
     ],
     "address": {
       "@type": "PostalAddress",
@@ -68,7 +73,10 @@
       "email": "hola@aimtech.es",
       "contactType": "customer service",
       "areaServed": "ES",
-      "availableLanguage": ["ca", "es"]
+      "availableLanguage": [
+        "ca",
+        "es"
+      ]
     }
   },
   {
@@ -89,24 +97,45 @@
       "url": "https://www.aimtech.es/ca/formacio-ia-empreses/#preus"
     },
     "description": "Formació en IA a mida per a empreses: diagnòstic previ de tasques, eines, nivell i necessitats de l'equip; sessions en directe amb Claude, ChatGPT i Codex Work; exercicis construïts al voltant de processos empresarials i criteris d'ús responsable. Presencial i in-company a Barcelona o online en directe.",
-    "provider": { "@id": "https://www.aimtech.es/#aimtech" },
+    "provider": {
+      "@id": "https://www.aimtech.es/#aimtech"
+    },
     "url": "https://www.aimtech.es/ca/formacio-ia-empreses/#nivells",
     "inLanguage": "ca",
     "hasCourseInstance": [
-      { "@type": "CourseInstance", "courseMode": "Online" },
-      { "@type": "CourseInstance", "courseMode": "Onsite", "location": { "@type": "Place", "name": "Barcelona" } }
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Online"
+      },
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Onsite",
+        "location": {
+          "@type": "Place",
+          "name": "Barcelona"
+        }
+      }
     ]
   },
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
-      { "@type": "ListItem", "position": 2, "name": "Formació en IA per a empreses", "item": "https://www.aimtech.es/ca/formacio-ia-empreses/" }
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inici",
+        "item": "https://www.aimtech.es/ca/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Formació en IA per a empreses",
+        "item": "https://www.aimtech.es/ca/formacio-ia-empreses/"
+      }
     ]
   }
-]
-</script>
+]</script>
 
 <!-- Preload: fuente serif del hero (LCP) -->
 <link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -325,7 +354,7 @@
         <div data-reveal="left">
           <div class="section-label">01 — Formació que encaixa</div>
           <h2 class="section-title">No compreu un temari. <em>Dissenyem el vostre</em>.</h2>
-          <p class="section-intro">Abans de proposar hores o eines, entenem com treballa l'equip: quines tasques es repeteixen, on es perd temps, quina documentació utilitza, quin nivell té i quins límits de seguretat necessita. Amb aquest mapa convertim la formació en una experiència recognoscible, pràctica i directament transferible a la feina.</p>
+          <p class="section-intro">Abans de proposar hores o eines, entenem com treballa l'equip: quines tasques es repeteixen, on es perd temps, quina documentació utilitza, quin nivell té i quins límits de seguretat necessita. </p>
           <div class="fit-training__promise">
             <strong>La diferència comercial</strong>
             <p>Un curs genèric ensenya funcions. Una formació a mida ensenya a decidir <em>quan</em> utilitzar IA, <em>com</em> aplicar-la al vostre context i <em>què</em> ha de continuar revisant una persona.</p>
@@ -368,7 +397,7 @@
       <div data-reveal>
         <div class="section-label">02 — Punt de partida</div>
         <h2 class="section-title">El nivell no es pressuposa. <em>Es diagnostica</em>.</h2>
-        <p class="section-intro">No tots els equips parteixen del mateix lloc ni necessiten arribar al mateix punt. Podem començar per alfabetització pràctica amb Claude, ChatGPT i Codex Work, avançar cap al treball amb documents i dades, o preparar l'equip per a automatitzacions. Els nivells són una guia: el programa final es construeix amb el diagnòstic previ. Per situar conceptes, ajuda <a href="/ca/blog/que-es-la-ia-aplicada/">què és la IA aplicada</a> i <a href="/ca/blog/formacio-ia-equips-no-tecnics/">com formar en IA equips no tècnics</a>.</p>
+        <p class="section-intro">No tots els equips parteixen del mateix lloc ni necessiten arribar al mateix punt.   Per situar conceptes, ajuda <a href="/ca/blog/que-es-la-ia-aplicada/">què és la IA aplicada</a> i <a href="/ca/blog/formacio-ia-equips-no-tecnics/">com formar en IA equips no tècnics</a>.</p>
       </div>
 
       <div class="bento" data-stagger>
@@ -379,7 +408,7 @@
             <span class="badge">Bàsic</span>
           </div>
           <h3>Fer servir la IA <em>amb criteri</em>.</h3>
-          <p>Claude, ChatGPT i Codex Work ben fets servir: context, prompting, casos per departament i ús segur (AI Act). Claude Cowork es pot incorporar subjecte a disponibilitat i validació prèvia de l’abast. El punt d'entrada per a equips que ja toquen IA però sense mètode. Es pot aprofundir amb la <a href="/ca/formacio-claude-empreses/">formació Claude per a empreses</a> o la <a href="/ca/curs-chatgpt-empreses/">formació ChatGPT per a empreses</a>.</p>
+          <p>Claude, ChatGPT i Codex Work ben fets servir: context, prompting, casos per departament i ús segur (AI Act). Claude Cowork es pot incorporar subjecte a disponibilitat i validació prèvia de l’abast.  Es pot aprofundir amb la <a href="/ca/formacio-claude-empreses/">formació Claude per a empreses</a> o la <a href="/ca/curs-chatgpt-empreses/">formació ChatGPT per a empreses</a>.</p>
         </article>
 
         <article class="card s-2" data-mouse>
@@ -388,7 +417,7 @@
             <span class="badge">Intermedi</span>
           </div>
           <h3>De l'eina <em>al procés</em>.</h3>
-          <p>Treballar amb documents i dades dins l'abast acordat, encadenar tasques i detectar oportunitats d'automatització. El pont entre fer servir l'eina a estones i aplicar-la amb mètode al dia a dia.</p>
+          <p>Treballar amb documents i dades dins l'abast acordat, encadenar tasques i detectar oportunitats d'automatització. </p>
         </article>
 
         <article class="card s-2" data-mouse>
@@ -410,7 +439,7 @@
         <div data-reveal="left">
           <div class="section-label">03 — Metodologia</div>
           <h2 class="section-title">Concepte, <em>repte</em>, resultat que es fa servir.</h2>
-          <p class="section-intro">Res de cinc hores de teoria. Cada bloc comença amb un concepte curt, continua amb un repte construït a partir de tasques de l'equip i acaba amb la solució comentada en directe. T'emportes plantilles i criteris llestos per aplicar l'endemà. I sempre amb ús segur: què introduir-hi, què no i per què.</p>
+          <p class="section-intro">Res de cinc hores de teoria.   I sempre amb ús segur: què introduir-hi, què no i per què.</p>
         </div>
 
         <div class="method-list" data-stagger>
@@ -472,7 +501,7 @@
     <p class="section-intro">Així es pot dissenyar una formació IA personalitzada per a un equip d’administració. És un exemple sintètic de mètode, no un cas de client ni resultats obtinguts. Busquem estalviar feina repetitiva i reduir errors, sense substituir la revisió humana.</p></div>
     <div class="bento" data-stagger>
       <article class="card s-2"><h3>Diagnòstic <em>d’exemple</em>.</h3><p>Procés: preparar respostes a sol·licituds. Rol: administració, amb validació del responsable. Nivell: ús inicial d’IA. Eines: les autoritzades per l’organització, amb accés validat abans de la sessió. Material: sol·licituds fictícies i una política sintètica; si s’aporta material intern, ha d’estar anonimitzat o expressament autoritzat segons l’abast.</p></article>
-      <article class="card s-2"><h3>Procés → exercici → <em>lliurable</em>.</h3><p>Classificar una sol·licitud → detectar intenció i dades que falten → fitxa d’entrada revisable. Preparar una resposta → redactar amb context i restriccions → esborrany contrastat amb la política. Revisar abans d’enviar → localitzar omissions i afirmacions sense suport → checklist i plantilla reutilitzable. L’enviament queda fora de l’exercici.</p></article>
+      <article class="card s-2"><h3>Procés → exercici → <em>lliurable</em>.</h3><p>Classificar una sol·licitud → detectar intenció i dades que falten → fitxa d’entrada revisable.   </p></article>
       <article class="card s-2"><h3>Avaluació <em>abans i després</em>.</h3><p>L’avaluació de l’exercici fa servir una rúbrica comuna, no una impressió de la demo. La <a href="#medicion-formacion">plantilla de mesura abans i després</a> detalla què registrar i com interpretar la comparació sense atribuir estalvi, ROI ni rendiment en producció.</p></article>
     </div><p class="section-intro">L’abast, els exercicis i els lliurables s’acorden al diagnòstic. Un prototip formatiu no és una implantació: integracions, permisos, avaluació operativa i desplegament requereixen un projecte separat. Pots veure també el <a href="/ca/casos/formacio-ia-equips-no-tecnics/">patró de formació per a equips no tècnics</a>.</p>
   </div></section>
@@ -482,7 +511,7 @@
       <div class="section-label">Mesura — De l’exercici a l’evidència</div>
       <h2 class="section-title">Com mesurar si la formació IA <em>millora la feina de l’equip</em>.</h2>
       <p class="section-intro">L’exemple anterior permet avaluar alguna cosa més que la satisfacció amb la sessió. Trieu la mateixa tasca abans i després —o dues variants de complexitat comparable—, amb els mateixos criteris d’acceptació, eines autoritzades i condicions de treball registrades. Feu servir material sintètic, anonimitzat o expressament autoritzat; no cal exposar informació confidencial per avaluar l’aprenentatge.</p>
-      <p>Per exemple, preparar un esborrany de resposta a una sol·licitud fictícia i contrastar-lo amb una política sintètica. Acordeu abans què ha de contenir, què no pot afirmar i qui valida el resultat. Registreu l’eina i versió utilitzades, la data i les ajudes rebudes per interpretar la comparació.</p>
+      <p>Per exemple, preparar un esborrany de resposta a una sol·licitud fictícia i contrastar-lo amb una política sintètica.  </p>
       <div class="training-measure__scroll" tabindex="0" role="region" aria-labelledby="measurement-caption">
         <table>
           <caption id="measurement-caption">Plantilla orientativa sense resultats observats: completeu-la abans i després de la pràctica.</caption>
@@ -507,7 +536,7 @@
       <p class="section-intro">Feu servir aquesta guia d’autoavaluació per comprovar què s’ha traslladat a la feina. No és una sessió addicional. La formació no inclou seguiment a 30 dies de manera automàtica: només s’inclou si es contracta o s’acorda expressament a la proposta.</p>
       <div class="bento">
         <article class="card s-2"><h3>Ús de <em>plantilles</em>.</h3><p>Quines es continuen fent servir, qui les manté i quins canvis han necessitat? Guardeu-ne la versió i un exemple segur d’ús, no converses amb dades confidencials.</p></article>
-        <article class="card s-2"><h3>Aplicació a <em>tasques</em>.</h3><p>En quines tasques s’han aplicat i quines s’han descartat? Repetiu la rúbrica de temps total i qualitat en mostres comparables; anoteu també les dificultats, no només els encerts.</p></article>
+        <article class="card s-2"><h3>Aplicació a <em>tasques</em>.</h3><p>En quines tasques s’han aplicat i quines s’han descartat? </p></article>
         <article class="card s-2"><h3>Errors que <em>es repeteixen</em>.</h3><p>Reviseu errors recurrents, omissions, dubtes sobre privacitat i correccions humanes. Trieu què practicar de nou, quina instrucció millorar i quin ús aturar fins a resoldre el risc.</p></article>
       </div>
     </div>
@@ -518,10 +547,10 @@
       <div class="section-label">Pas següent — Aprendre o implantar</div>
       <h2 class="section-title">Quan continuar formant <em>i quan automatitzar</em>.</h2>
       <div class="bento">
-        <article class="card s-3"><h3>Més pràctica si falta <em>criteri</em>.</h3><p>Si les tasques canvien molt, costa donar context o l’equip no detecta errors, convé reforçar pràctica, revisió i límits d’ús. Automatitzar un mal criteri només repeteix el problema més de pressa.</p></article>
+        <article class="card s-3"><h3>Més pràctica si falta <em>criteri</em>.</h3><p>Si les tasques canvien molt, costa donar context o l’equip no detecta errors, convé reforçar pràctica, revisió i límits d’ús. </p></article>
         <article class="card s-3"><h3>Avaluar automatització si hi ha <em>un procés definit</em>.</h3><p>Un procés estable, mesurable i autoritzat pot ser candidat a <a href="/ca/automatitzacio-processos-ia/">automatització de processos amb IA</a>. Abans cal validar entrades, excepcions, permisos, costos recurrents i criteris d’acceptació, amb traçabilitat i revisió humana als punts de risc.</p></article>
       </div>
-      <p>La decisió no surt només d’una bona pràctica a l’aula. Integracions, proves operatives, supervisió i posada en producció requereixen un abast separat; no estan incloses pel fet de completar la formació.</p>
+      <p>La decisió no surt només d’una bona pràctica a l’aula. </p>
       <a class="btn-primary" href="/ca/contacte/">Expliqueu-nos quina tasca voleu millorar i quantes persones sou →</a>
     </div>
   </section>
@@ -531,7 +560,7 @@
       <div data-reveal>
         <div class="section-label">02B — Prova pràctica</div>
         <h2 class="section-title">De fer servir ChatGPT per intuïció a treballar amb IA <em>amb un mètode comú</em>.</h2>
-        <p class="section-intro">Un equip no tècnic no necessita memoritzar cent prompts. Necessita reconèixer quines tasques es poden millorar, quines dades no ha de compartir, com revisar una resposta i quan l'automatització aporta més que una conversa aïllada.</p>
+        <p class="section-intro">Un equip no tècnic no necessita memoritzar cent prompts. </p>
       </div>
       <div class="bento" data-stagger>
         <article class="card s-2" data-mouse>
@@ -542,12 +571,12 @@
         <article class="card s-2" data-mouse>
           <div class="card-num"><span>// mètode_02</span><span class="badge">Formació</span></div>
           <h3>Casos per rol, seguretat i pràctica guiada.</h3>
-          <p>La formació parteix de tasques recognoscibles d'administració, vendes, operacions, RRHH o direcció. L'equip practica, compara resultats i s'emporta plantilles i una checklist de revisió.</p>
+          <p>La formació parteix de tasques recognoscibles d'administració, vendes, operacions, RRHH o direcció. </p>
         </article>
         <article class="card s-2" data-mouse>
           <div class="card-num"><span>// sortida_03</span><span class="badge">Després</span></div>
           <h3>Un punt de partida operatiu, no una demo.</h3>
-          <p>El patró anonimitzat explica què hauria de quedar després de la formació: criteris comuns, usos prioritzats, límits clars i candidats concrets a automatització. Sense atribuir clients ni resultats que no puguem demostrar.</p>
+          <p>El patró anonimitzat explica què hauria de quedar després de la formació: criteris comuns, usos prioritzats, límits clars i candidats concrets a automatització. </p>
         </article>
       </div>
       <div class="hero-cta" data-reveal>
@@ -645,11 +674,15 @@
     </div>
   </section>
 
+  <section id="alcance-incluye" class="section-pad"><div class="container"><h2 class="section-title">Què inclou i què no</h2><p>La formació inclou pràctica guiada, plantilles i revisió humana amb material sintètic, anonimitzat o autoritzat. No inclou desplegament, integracions ni seguiment a 30 dies llevat d’acord exprés. Els exemples no acrediten estalvis ni resultats en producció; les funcions de cada eina es validen abans de la sessió.</p></div></section>
+
+  <section id="faq" class="section-pad"><div class="container"><h2 class="section-title">FAQ</h2><div class="bento"></div></div></section>
+
   <section id="contacte" class="cta-final">
     <div class="container">
       <div data-reveal>
         <h2>Els vostres processos. <em>La vostra formació</em><span class="cursor-blink"></span></h2>
-        <p>Expliqueu-nos quantes persones sou, quines eines utilitzeu i quines tasques voleu millorar. Dissenyarem un format realista —nivell, durada, modalitat i exercicis— al voltant del que el vostre equip necessita aplicar de debò.</p>
+        <p>Expliqueu-nos quantes persones sou, quines eines utilitzeu i quines tasques voleu millorar. </p>
         <div class="rel-grid" data-stagger style="margin: 32px 0; text-align: left;">
           <a class="rel-link" href="/ca/formacio-claude-empreses/"><span><span class="rel-link-t">Formació Claude per a empreses</span><span class="rel-link-d">Claude, documents, anàlisi i revisió humana; Claude Cowork subjecte a disponibilitat</span></span><span class="rel-arrow">→</span></a>
           <a class="rel-link" href="/ca/curs-chatgpt-empreses/"><span><span class="rel-link-t">Formació ChatGPT per a empreses</span><span class="rel-link-d">Primer nivell: ús segur de ChatGPT, Copilot i Gemini</span></span><span class="rel-arrow">→</span></a>
