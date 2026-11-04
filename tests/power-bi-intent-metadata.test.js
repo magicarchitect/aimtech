@@ -16,7 +16,7 @@ for (const route of routes) test(`${route}: metadata fields and preserved proof`
   const alternates = /<link rel="alternate"[^>]*>/g;
   assert.deepEqual(html.match(canonical),old.match(canonical));
   assert.deepEqual(html.match(alternates),old.match(alternates));
-  for (const quote of old.match(/<blockquote[\s\S]*?<\/blockquote>/g)||[]) assert.ok(html.includes(quote));
+  if (!route.endsWith('barcelona')) { for (const quote of old.match(/<blockquote[\s\S]*?<\/blockquote>/g)||[]) assert.ok(html.includes(quote)); } else { assert.equal((html.match(/<blockquote/g)||[]).length, 0, 'No local modality evidence; never republish general testimonials as local proof'); }
   const marker = /<!-- @region partials\/power-bi-testimonials[^>]*-->[\s\S]*?<!-- @endregion -->/g;
   assert.deepEqual(html.match(marker),old.match(marker));
   assert.ok(!/"@type":\s*"(?:Review|AggregateRating)"/.test(html));
