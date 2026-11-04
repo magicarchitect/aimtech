@@ -77,3 +77,6 @@ Amb les dades netes entres al [modelatge](/ca/blog/modelatge-dades-power-bi-esqu
 
 
 Vols que el teu equip ho domini? → [curs Power BI a Barcelona](/ca/curs-power-bi-barcelona/)
+
+
+Vols aprofundir en mesures, modelatge i rendiment? → [curs Power BI avançat](/ca/curs-power-bi-avancat/).

@@ -1,4 +1,5 @@
 ---
+modified: 2026-11-04
 title: "DAX per a principiants: mesures vs columnes calculades"
 description: "El dubte que frena tothom que comença amb DAX: mesura o columna calculada? T'expliquem la diferència, quan fer servir cadascuna i l'error que es paga car."
 date: 2026-06-01
@@ -86,3 +87,6 @@ El context de filtre és el concepte que separa "sé escriure fórmules DAX" de 
 </aside>
 
 Això és just el que treballem a la [formació en Power BI d'Aimtech](/ca/power-bi/): l'itinerari Avançat entra a fons al DAX, contextos i mesures serioses, amb reptes que resols tu. Presencial a Barcelona, en remot en directe o in-company, per a empreses, entitats i AAPP.
+
+
+Vols aprofundir en mesures, modelatge i rendiment? → [curs Power BI avançat](/ca/curs-power-bi-avancat/).

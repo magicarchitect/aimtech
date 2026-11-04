@@ -991,4 +991,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.aimtech.es/curso-power-bi-avanzado/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/curso-power-bi-avanzado/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/curs-power-bi-avancat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/curso-power-bi-avanzado/"/>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.aimtech.es/ca/curs-power-bi-avancat/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.aimtech.es/curso-power-bi-avanzado/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.aimtech.es/ca/curs-power-bi-avancat/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.aimtech.es/curso-power-bi-avanzado/"/>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

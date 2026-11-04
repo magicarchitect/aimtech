@@ -77,3 +77,6 @@ Con los datos limpios entras al [modelado](/blog/modelado-datos-power-bi-esquema
 
 
 ¿Quieres que tu equipo domine esto? → [curso Power BI en Barcelona](/curso-power-bi-barcelona/)
+
+
+¿Quieres profundizar en medidas, modelado y rendimiento? → [curso Power BI avanzado](/curso-power-bi-avanzado/).
