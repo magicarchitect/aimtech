@@ -1,8 +1,8 @@
 ---
-title: "Power BI gratis: qué incluye Desktop y cuándo pagar Pro"
-description: "Power BI Desktop es gratis, pero compartir informes y automatizar actualizaciones suele requerir Pro. Guía clara de licencias Power BI para empresas."
+title: "¿Power BI es gratis? Qué incluye Desktop y cuándo pagar Pro (2026)"
+description: "Power BI Desktop es gratis. Para compartir, revisa licencias, capacidad Fabric y permisos. Te explicamos cuándo necesitas Pro y qué opciones hay."
 date: 2026-05-28
-modified: 2026-06-19
+modified: 2026-11-04
 author: "Mike Pérez"
 tags: ["power-bi", "licencias"]
 icon: "price"
@@ -11,7 +11,7 @@ slug: "es-gratis-power-bi"
 translationKey: "es-gratis-power-bi"
 ---
 
-"¿Es gratis Power BI?" es de las primeras preguntas que hace cualquiera antes de meterse. La respuesta honesta es **sí y no**, y la diferencia importa porque mucha gente paga licencias que no necesita —o se frena pensando que cuesta una fortuna cuando podría empezar gratis hoy mismo. Vamos a aclararlo sin letra pequeña.
+Sí, **Power BI Desktop es gratuito** para crear informes en local. Para compartir en el servicio, la licencia, la capacidad y los permisos determinan el acceso; los lectores pueden usar una licencia gratuita en capacidad Fabric F64 o superior (o Premium compatible). La actualización programada depende del entorno, el origen y sus credenciales, no solo de pagar Pro.
 
 ## La respuesta corta: Power BI Desktop es gratis
 
@@ -151,3 +151,9 @@ Cuando el informe deja de ser personal y pasa a ser una herramienta de equipo: v
   ]
 }
 </script>
+
+
+Consulta las [opciones de licencia y capacidad de Microsoft](https://learn.microsoft.com/en-us/power-bi/fundamentals/service-features-license-type) y las [funciones disponibles para usuarios gratuitos](https://learn.microsoft.com/en-us/power-bi/fundamentals/end-user-features).
+
+
+¿Quieres que tu equipo domine esto? → [curso Power BI en Barcelona](/curso-power-bi-barcelona/)

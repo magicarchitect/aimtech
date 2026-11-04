@@ -1,7 +1,8 @@
 ---
-title: "Mapes a Power BI: per què no es veuen i com activar-los"
-description: "El mapa de Power BI et surt en blanc o desactivat? Gairebé sempre és una de dues coses. T'expliquem per què passa i com arreglar-ho, pas a pas."
+title: "Mapa de Power BI en blanc o desactivat: la solució en 2 passos"
+description: "Mapa en blanc o desactivat a Power BI? Revisa la configuració de l’administrador i la categoria geogràfica de les dades amb aquests dos passos."
 date: 2026-06-01
+modified: 2026-11-04
 author: "Mike Pérez"
 tags: ["power-bi", "visualitzacio"]
 icon: "chart"
@@ -63,3 +64,6 @@ Aclarit el "per què no es veu", queda triar:
 Els mapes són l'exemple perfecte d'una cosa que a Power BI sembla un bug i és **configuració**: o un permís del tenant, o una categoria de dada sense assignar. Saber distingir "això és el meu model" de "això és administració" t'estalvia hores de barallar-te amb el lloc equivocat.
 
 A la [formació en Power BI d'Aimtech](/ca/power-bi/) els mapes són un bloc propi de l'itinerari de zero a intermedi —amb els dos problemes reals que acabem de veure—, dins d'una visualització que va més enllà del gràfic de barres. Presencial a Barcelona, en remot en directe o in-company, per a empreses, entitats i AAPP.
+
+
+Vols que el teu equip ho domini? → [curs Power BI a Barcelona](/ca/curs-power-bi-barcelona/)

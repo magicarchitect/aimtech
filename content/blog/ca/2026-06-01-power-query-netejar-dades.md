@@ -1,7 +1,8 @@
 ---
-title: "Power Query: com netejar dades brutes pas a pas"
-description: "Abans d'un gràfic bonic hi ha dades brutes per netejar. Power Query ho fa un cop i es repeteix sol a cada refresc. T'expliquem com, sense codi."
+title: "Power Query: netejar dades pas a pas (sense codi i amb exemples)"
+description: "Aprèn a netejar dades amb Power Query: tipus, espais, duplicats i passos aplicats reutilitzables en cada actualització, sense escriure codi."
 date: 2026-06-01
+modified: 2026-11-04
 author: "Mike Pérez"
 tags: ["power-bi", "power-query"]
 icon: "doc"
@@ -72,3 +73,6 @@ Power Query és l'editor on **transformes les dades abans que entrin al model**.
 Qui ve d'Excel arregla les dades *a mà, cada vegada*. Power Query t'obliga a un canvi de xip: arregles el **procés un cop** i s'executa sol per sempre. Aquesta és la diferència entre dedicar el dilluns a "preparar l'informe" i obrir-lo ja fet.
 
 Amb les dades netes entres al [modelatge](/ca/blog/modelatge-dades-power-bi-esquema-estrella/) amb bon peu, i d'aquí a les mesures. A la [formació en Power BI d'Aimtech](/ca/power-bi/), Power Query és dels primers blocs de l'itinerari de zero a intermedi, amb dades brutes de debò —no de manual— perquè practiquis el problema real. Presencial a Barcelona, en remot en directe o in-company, per a empreses, entitats i AAPP.
+
+
+Vols que el teu equip ho domini? → [curs Power BI a Barcelona](/ca/curs-power-bi-barcelona/)

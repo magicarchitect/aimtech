@@ -1,7 +1,8 @@
 ---
-title: "Power BI és gratuït? Desktop, Pro i el que de debò costa"
-description: "Power BI és gratuït? Sí i no. T'expliquem què és gratuït, què es paga i quina llicència necessites segons el teu cas, sense marejar-te amb la lletra petita."
+title: "Power BI és gratuït? Què inclou Desktop i quan pagar Pro (2026)"
+description: "Power BI Desktop és gratuït. Per compartir, revisa llicències, capacitat Fabric i permisos. T’expliquem quan cal Pro i quines opcions tens."
 date: 2026-06-01
+modified: 2026-11-04
 author: "Mike Pérez"
 tags: ["power-bi", "llicencies"]
 icon: "price"
@@ -10,7 +11,7 @@ slug: "power-bi-es-gratuit"
 translationKey: "es-gratis-power-bi"
 ---
 
-"Power BI és gratuït?" és de les primeres preguntes que fa qualsevol abans de ficar-s'hi. La resposta honesta és **sí i no**, i la diferència importa perquè molta gent paga llicències que no necessita —o es frena pensant que costa una fortuna quan podria començar gratis avui mateix—. Aclarim-ho sense lletra petita.
+Sí, **Power BI Desktop és gratuït** per crear informes en local. Per compartir al servei, la llicència, la capacitat i els permisos determinen l’accés; els lectors poden fer servir una llicència gratuïta en capacitat Fabric F64 o superior (o Premium compatible). L’actualització programada depèn de l’entorn, l’origen i les credencials, no només de pagar Pro.
 
 ## La resposta curta: Power BI Desktop és gratuït
 
@@ -89,3 +90,9 @@ La majoria de pimes que arrenquen es mouen entre "gratis" i "Pro". No et compliq
 Aquí hi ha la part anti-fum: **la llicència sol ser el més barat d'un projecte de Power BI.** El cost de debò és el temps de fer-ho bé —netejar dades brutes, dissenyar un model que aguanti, escriure les mesures correctes— i la corba d'aprenentatge de l'equip. Un informe mal modelat dona números que no quadren, i això costa molt més que qualsevol subscripció.
 
 Per això la inversió que més rendeix no és la llicència, sinó aprendre a fer servir l'eina de manera que el resultat sigui fiable. Si vols que el teu equip arrenqui bé des del principi, a Aimtech fem [formació en Power BI a mida per a empreses, entitats i AAPP](/ca/power-bi/) —presencial a Barcelona, en remot en directe o in-company—, de zero o pujant de nivell. Començar a practicar, en tot cas, no et costa res: descarrega Desktop i obre el teu primer dataset.
+
+
+Consulta les [opciones de licencia y capacidad de Microsoft](https://learn.microsoft.com/en-us/power-bi/fundamentals/service-features-license-type) i les [funciones disponibles para usuarios gratuitos](https://learn.microsoft.com/en-us/power-bi/fundamentals/end-user-features).
+
+
+Vols que el teu equip ho domini? → [curs Power BI a Barcelona](/ca/curs-power-bi-barcelona/)

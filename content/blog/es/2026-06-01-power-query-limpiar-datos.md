@@ -1,7 +1,8 @@
 ---
-title: "Power Query: cómo limpiar datos sucios paso a paso"
-description: "Antes de un gráfico bonito hay datos sucios que limpiar. Power Query lo hace una vez y se repite solo en cada refresco. Te explicamos cómo, sin código."
+title: "Power Query: limpiar datos paso a paso (sin código y con ejemplos)"
+description: "Aprende a limpiar datos con Power Query: tipos, espacios, duplicados y pasos aplicados que puedes reutilizar en cada actualización, sin escribir código."
 date: 2026-06-01
+modified: 2026-11-04
 author: "Mike Pérez"
 tags: ["power-bi", "power-query"]
 icon: "doc"
@@ -72,3 +73,6 @@ Power Query es el editor donde **transformas los datos antes de que entren al mo
 Quien viene de Excel arregla los datos *a mano, cada vez*. Power Query te obliga a un cambio de chip: arreglas el **proceso una vez** y se ejecuta solo para siempre. Esa es la diferencia entre dedicar el lunes a "preparar el informe" y abrirlo ya hecho.
 
 Con los datos limpios entras al [modelado](/blog/modelado-datos-power-bi-esquema-estrella/) con buen pie, y de ahí a las medidas. En la [formación en Power BI de Aimtech](/power-bi/), Power Query es de los primeros bloques del itinerario de cero a intermedio, con datos sucios de verdad —no de manual— para que practiques el problema real. Presencial en Barcelona, en remoto en directo o in-company, para empresas, entidades y AAPP.
+
+
+¿Quieres que tu equipo domine esto? → [curso Power BI en Barcelona](/curso-power-bi-barcelona/)
