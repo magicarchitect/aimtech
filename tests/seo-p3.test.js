@@ -15,7 +15,17 @@ test('P3-01 organization identity/contact and bilingual footer stay aligned with
 });
 test('P3-02 verified sameAs only; P3-03 one person identity and no unverified academic credentials',()=>{
  for(const r of ['sobre-mike','ca/sobre-mike']){const s=fs.readFileSync(r+'/index.html','utf8');const p=schemas(s).find(n=>n['@type']==='Person');assert.equal(p['@id'],MIKE);assert.equal(p.name,'Mike Pérez');assert.deepEqual(p.alternateName,['Miquel Pérez','Mike Pérez']);assert.equal(p.worksFor['@id'],ORG);assert.equal(p.alumniOf,undefined);assert.equal(p.affiliation.length,1);assert.match(p.affiliation[0].url,/instructorId=21672/);assert.equal(p.jobTitle,r.startsWith('ca/')?'Enginyer de Solucions d’IA':'Ingeniero de Soluciones de IA');}
- for(const r of ['index.html','ca/index.html']){const org=schemas(fs.readFileSync(r,'utf8')).flatMap(nodes).find(n=>n['@id']===ORG&&n.name);assert.ok(org.sameAs.includes('https://www.linkedin.com/company/aimtechsl'));assert.ok(org.sameAs.includes('https://www.linkedin.com/in/miguelperezperez/'));assert.ok(org.sameAs.includes('https://cibernarium.barcelonactiva.cat/fitxa-instructor?instructorId=21672'));assert.doesNotMatch(JSON.stringify(org.sameAs),/maps|PENDIENTE/);}
+ for(const file of [...files,'partials/post-layout-es.html','partials/post-layout-ca.html']){
+  const all=schemas(fs.readFileSync(file,'utf8').replace(/\{\{[A-Z_]+\}\}/g,'0')).flatMap(nodes);
+  for(const org of all.filter(n=>n['@id']===ORG&&n.name)){
+   assert.deepEqual(org.sameAs,['https://www.linkedin.com/company/aimtechsl'],file);
+   assert.equal(org.founder['@id'],MIKE,file);
+   const person=all.find(n=>n['@type']==='Person'&&n['@id']===MIKE&&n.sameAs);
+   assert.ok(person,`${file}: linked Person`);assert.equal(person.worksFor['@id'],ORG,file);
+   assert.ok(person.sameAs.includes('https://www.linkedin.com/in/miguelperezperez/'),file);
+   assert.ok(person.sameAs.includes('https://cibernarium.barcelonactiva.cat/fitxa-instructor?instructorId=21672'),file);
+  }
+ }
 });
 test('P3-04 all 38 ES/CA service pages start with a 40–60-word direct answer',()=>{
  const services=files.filter(f=>!/(?:^|\/)(?:blog|casos|lm)\//.test(f)&&schemas(fs.readFileSync(f,'utf8')).some(n=>['Course','Service'].includes(n['@type'])));assert.equal(services.length,38);
