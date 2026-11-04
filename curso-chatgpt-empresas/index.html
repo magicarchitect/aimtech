@@ -123,52 +123,6 @@
   },
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Sirve si el equipo ya usa ChatGPT?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí. Precisamente está pensada para equipos que ya lo usan a su aire y necesitan método, criterios de seguridad y casos por departamento."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Incluye Copilot o Gemini?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí. El foco es el método de trabajo con IA generativa: ChatGPT, Copilot o Gemini, según las herramientas que use la empresa."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Se adapta a pymes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí. La formación se adapta a pymes y equipos pequeños: administración, ventas, atención al cliente, dirección y operaciones."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Es un curso ChatGPT empresas o formación in-company?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Puede plantearse como curso ChatGPT empresas para arrancar rápido o como formación in-company más amplia, incorporando Copilot, seguridad de datos, prompts por departamento y casos internos."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué incluye la formación ChatGPT empresarial?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "La formación de ChatGPT para empresas trabaja prompting, revisión de respuestas, casos de negocio y uso seguro, con práctica adaptada al nivel del grupo. Concretamos el programa y las herramientas antes de empezar."
-        }
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
@@ -206,6 +160,52 @@
 <link rel="stylesheet" href="../css/cookie-consent.css">
 <script src="../js/cookie-consent.js" defer></script>
 <script src="../js/site.js" defer></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Sirve si el equipo ya usa ChatGPT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Precisamente está pensada para equipos que ya lo usan a su aire y necesitan método, criterios de seguridad y casos por departamento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Incluye Copilot o Gemini?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El foco es el método de trabajo con IA generativa: ChatGPT, Copilot o Gemini, según las herramientas que use la empresa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se adapta a pymes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La formación se adapta a pymes y equipos pequeños: administración, ventas, atención al cliente, dirección y operaciones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es un curso ChatGPT empresas o formación in-company?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puede plantearse como curso ChatGPT empresas para arrancar rápido o como formación in-company más amplia, incorporando Copilot, seguridad de datos, prompts por departamento y casos internos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La formación es bonificable por FUNDAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Gestionamos la bonificación por ti. El importe depende del crédito formativo disponible de tu empresa y de los requisitos de FUNDAE, y te lo confirmamos antes de empezar."
+      }
+    }
+  ]
+}</script>
 </head>
 <body>
 
@@ -512,6 +512,9 @@
     </div>
   </section>
 
+  <!-- @region partials/fundae-es.html -->
+<section id="fundae" class="section-pad"><div class="container"><h2 class="section-title">Formación bonificable por FUNDAE.</h2><p>Gestionamos la bonificación de la formación por ti. El importe bonificable depende del crédito formativo de tu empresa y de los requisitos de FUNDAE; te lo confirmamos antes de empezar. Te acompañamos en la gestión y te indicamos la documentación y obligaciones que corresponden a la empresa.</p></div></section>
+<!-- @endregion -->
   <section id="precios">
     <div class="container">
       <div data-reveal>
@@ -580,7 +583,7 @@
         <article class="card s-2" data-mouse><h3>¿Incluye Copilot o Gemini?</h3><p>Sí. El foco es el método de trabajo con IA generativa: ChatGPT, Copilot o Gemini, según las herramientas que use la empresa.</p></article>
         <article class="card s-2" data-mouse><h3>¿Se adapta a pymes?</h3><p>Sí. La formación se adapta a pymes y equipos pequeños: administración, ventas, atención al cliente, dirección y operaciones.</p></article>
         <article class="card s-2" data-mouse><h3>¿Es un curso ChatGPT empresas o formación in-company?</h3><p>Puede plantearse como <strong>curso ChatGPT empresas</strong> para arrancar rápido o como formación in-company más amplia, incorporando Copilot, seguridad de datos, prompts por departamento y casos internos.</p></article>
-      </div>
+      <article class="card s-2"><h3>¿La formación es bonificable por FUNDAE?</h3><p>Sí. Gestionamos la bonificación por ti. El importe depende del crédito formativo disponible de tu empresa y de los requisitos de FUNDAE, y te lo confirmamos antes de empezar.</p></article></div>
     </div>
   </section>
 

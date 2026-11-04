@@ -38,8 +38,7 @@
 <meta name="twitter:image" content="https://www.aimtech.es/assets/og/ia-aplicada.png" />
 
 <!-- JSON-LD: Course + BreadcrumbList -->
-<script type="application/ld+json">
-[
+<script type="application/ld+json">[
   {
     "@context": "https://schema.org",
     "@type": "Course",
@@ -67,20 +66,41 @@
     "url": "https://www.aimtech.es/ca/ia-aplicada/#programa",
     "inLanguage": "ca",
     "hasCourseInstance": [
-      { "@type": "CourseInstance", "courseMode": "Online", "courseWorkload": "PT20H" },
-      { "@type": "CourseInstance", "courseMode": "Onsite", "location": { "@type": "Place", "name": "Barcelona" }, "courseWorkload": "PT20H" }
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "PT20H"
+      },
+      {
+        "@type": "CourseInstance",
+        "courseMode": "Onsite",
+        "location": {
+          "@type": "Place",
+          "name": "Barcelona"
+        },
+        "courseWorkload": "PT20H"
+      }
     ]
   },
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Inici", "item": "https://www.aimtech.es/ca/" },
-      { "@type": "ListItem", "position": 2, "name": "Curs d'IA Aplicada", "item": "https://www.aimtech.es/ca/ia-aplicada/" }
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inici",
+        "item": "https://www.aimtech.es/ca/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Curs d'IA Aplicada",
+        "item": "https://www.aimtech.es/ca/ia-aplicada/"
+      }
     ]
   }
-]
-</script>
+]</script>
 
 <!-- Preload: fuente serif del hero (LCP) -->
 <link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -94,6 +114,28 @@
 <link rel="stylesheet" href="../../css/cookie-consent.css">
 <script src="../../js/cookie-consent.js" defer></script>
 <script src="../../js/site.js" defer></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Treballem amb casos de l’empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adaptem processos, rols, eines i nivell de l’equip. Els exercicis fan servir material sintètic, anonimitzat o expressament autoritzat segons l’abast acordat, amb revisió humana i sense compartir informació confidencial en eines no autoritzades. La formació no inclou desplegament ni operació en producció."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "És formació o implantació?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "És formació en directe. Si també voleu posar agents en producció, cal acordar un projecte separat amb el servei d’implantació d’IA agèntica."
+      }
+    }
+  ]
+}</script>
 </head>
 <body>
 
@@ -506,6 +548,9 @@
     </div>
   </section>
 
+  <!-- @region partials/fundae-ca.html -->
+<section id="fundae" class="section-pad"><div class="container"><h2 class="section-title">Formació bonificable per FUNDAE.</h2><p>Gestionem la bonificació de la formació per tu. L’import bonificable depèn del crèdit formatiu de la teva empresa i dels requisits de FUNDAE; t’ho confirmem abans de començar. T’acompanyem en la gestió i t’indiquem la documentació i les obligacions que corresponen a l’empresa.</p></div></section>
+<!-- @endregion -->
   <section id="preus">
     <div class="container">
       <div data-reveal>

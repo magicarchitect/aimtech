@@ -38,10 +38,7 @@
 <meta name="twitter:image" content="https://www.aimtech.es/assets/og/power-bi.png" />
 
 <!-- JSON-LD: EducationalOrganization + Course (×2) + BreadcrumbList -->
-<script type="application/ld+json">
-
-
-[
+<script type="application/ld+json">[
   {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
@@ -178,28 +175,6 @@
   },
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Power BI para pymes requiere una formación diferente?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí. Power BI para pymes suele necesitar menos teoría y más foco en informes de ventas, margen, operaciones y dirección. Adaptamos el ritmo y las explicaciones al nivel del equipo, con datasets ficticios de negocio."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Dónde encaja el curso Power BI Barcelona?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Esta página actúa como hub de formación Power BI para empresas. Si buscáis curso Power BI Barcelona presencial, la landing local explica modalidad, formato y casos para equipos de empresa."
-        }
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
@@ -216,10 +191,7 @@
       }
     ]
   }
-]
-
-
-</script>
+]</script>
 
 <!-- Preload: fuente serif del hero (LCP) -->
 <link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -233,6 +205,36 @@
 <link rel="stylesheet" href="../css/cookie-consent.css">
 <script src="../js/cookie-consent.js" defer></script>
 <script src="../js/site.js" defer></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Power BI para pymes requiere una formación diferente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Power BI para pymes suele necesitar menos teoría y más foco en informes de ventas, margen, operaciones y dirección. Adaptamos el ritmo y las explicaciones al nivel del equipo, con datasets ficticios de negocio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde encaja el curso Power BI Barcelona?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Esta página actúa como hub de formación Power BI para empresas. Si buscáis curso Power BI Barcelona presencial, la landing local explica modalidad, formato y casos para equipos de empresa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La formación es bonificable por FUNDAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Gestionamos la bonificación por ti. El importe depende del crédito formativo disponible de tu empresa y de los requisitos de FUNDAE, y te lo confirmamos antes de empezar."
+      }
+    }
+  ]
+}</script>
 </head>
 <body>
 
@@ -665,6 +667,9 @@
     </div>
   </section>
 
+  <!-- @region partials/fundae-es.html -->
+<section id="fundae" class="section-pad"><div class="container"><h2 class="section-title">Formación bonificable por FUNDAE.</h2><p>Gestionamos la bonificación de la formación por ti. El importe bonificable depende del crédito formativo de tu empresa y de los requisitos de FUNDAE; te lo confirmamos antes de empezar. Te acompañamos en la gestión y te indicamos la documentación y obligaciones que corresponden a la empresa.</p></div></section>
+<!-- @endregion -->
   <section id="precios">
     <div class="container">
       <div data-reveal>
@@ -787,7 +792,7 @@
       <div class="bento" data-stagger>
         <article class="card s-2" data-mouse><h3>¿Power BI para pymes requiere una formación diferente?</h3><p>Sí. <strong>Power BI para pymes</strong> suele necesitar menos teoría y más foco en informes de ventas, margen, operaciones y dirección. Adaptamos el ritmo y las explicaciones al nivel del equipo, con datasets ficticios de negocio.</p></article>
         <article class="card s-2" data-mouse><h3>¿Dónde encaja el curso Power BI Barcelona?</h3><p>Esta página actúa como hub de <strong>formación Power BI para empresas</strong>. Si buscáis <strong>curso Power BI Barcelona</strong> presencial, la landing local explica modalidad, formato y casos para equipos de empresa.</p></article>
-      </div>
+      <article class="card s-2"><h3>¿La formación es bonificable por FUNDAE?</h3><p>Sí. Gestionamos la bonificación por ti. El importe depende del crédito formativo disponible de tu empresa y de los requisitos de FUNDAE, y te lo confirmamos antes de empezar.</p></article></div>
     </div>
   </section>
 

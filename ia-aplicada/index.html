@@ -38,9 +38,7 @@
 <meta name="twitter:image" content="https://www.aimtech.es/assets/og/ia-aplicada.png" />
 
 <!-- JSON-LD: Course + BreadcrumbList -->
-<script type="application/ld+json">
-
-[
+<script type="application/ld+json">[
   {
     "@context": "https://schema.org",
     "@type": "Course",
@@ -75,46 +73,12 @@
       },
       {
         "@type": "CourseInstance",
-        "courseMode": "Onsite", "location": { "@type": "Place", "name": "Barcelona" },
+        "courseMode": "Onsite",
+        "location": {
+          "@type": "Place",
+          "name": "Barcelona"
+        },
         "courseWorkload": "PT20H"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Hace falta saber programar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. La formación se orienta a equipos de negocio y perfiles funcionales. Enseñamos criterios, patrones y herramientas para llevar IA a procesos reales."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Trabajamos con casos de la empresa?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Adaptamos procesos, roles, herramientas y nivel del equipo. Los ejercicios usan material sintético, anonimizado o expresamente autorizado según el alcance acordado, con revisión humana y sin compartir información confidencial en herramientas no autorizadas. La formación no incluye despliegue ni operación en producción."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Es formación o implantación?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Es formación en directo. Si además queréis poner agentes en producción, lo conectamos con el servicio de implantación de IA agéntica."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Es IA aplicada a empresas o un curso de herramientas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Es IA aplicada a empresas: partimos de procesos de administración, ventas, atención al cliente, operaciones o dirección. Si buscáis un curso IA aplicada, lo convertimos en ejercicios sobre tareas reales del equipo."
-        }
       }
     ]
   },
@@ -136,9 +100,7 @@
       }
     ]
   }
-]
-
-</script>
+]</script>
 
 <!-- Preload: fuente serif del hero (LCP) -->
 <link rel="preload" href="/assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -152,6 +114,52 @@
 <link rel="stylesheet" href="../css/cookie-consent.css">
 <script src="../js/cookie-consent.js" defer></script>
 <script src="../js/site.js" defer></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Hace falta saber programar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. La formación se orienta a equipos de negocio y perfiles funcionales. Enseñamos criterios, patrones y herramientas para llevar IA a procesos reales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajamos con casos de la empresa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adaptamos procesos, roles, herramientas y nivel del equipo. Los ejercicios usan material sintético, anonimizado o expresamente autorizado según el alcance acordado, con revisión humana y sin compartir información confidencial en herramientas no autorizadas. La formación no incluye despliegue ni operación en producción."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es formación o implantación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es formación en directo. Si además queréis poner agentes en producción, lo conectamos con el servicio de implantación de IA agéntica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es IA aplicada a empresas o un curso de herramientas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es IA aplicada a empresas: partimos de procesos de administración, ventas, atención al cliente, operaciones o dirección. Si buscáis un curso IA aplicada, lo convertimos en ejercicios sobre tareas reales del equipo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La formación es bonificable por FUNDAE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Gestionamos la bonificación por ti. El importe depende del crédito formativo disponible de tu empresa y de los requisitos de FUNDAE, y te lo confirmamos antes de empezar."
+      }
+    }
+  ]
+}</script>
 </head>
 <body>
 
@@ -604,6 +612,9 @@
     </div>
   </section>
 
+  <!-- @region partials/fundae-es.html -->
+<section id="fundae" class="section-pad"><div class="container"><h2 class="section-title">Formación bonificable por FUNDAE.</h2><p>Gestionamos la bonificación de la formación por ti. El importe bonificable depende del crédito formativo de tu empresa y de los requisitos de FUNDAE; te lo confirmamos antes de empezar. Te acompañamos en la gestión y te indicamos la documentación y obligaciones que corresponden a la empresa.</p></div></section>
+<!-- @endregion -->
   <section id="precios">
     <div class="container">
       <div data-reveal>
@@ -688,7 +699,7 @@
         <article class="card s-2" data-mouse><h3>¿Trabajamos con casos de la empresa?</h3><p>Adaptamos procesos, roles, herramientas y nivel del equipo. Los ejercicios usan material sintético, anonimizado o expresamente autorizado según el alcance acordado, con revisión humana y sin compartir información confidencial en herramientas no autorizadas. La formación no incluye despliegue ni operación en producción.</p></article>
         <article class="card s-2" data-mouse><h3>¿Es formación o implantación?</h3><p>Es formación en directo. Si además queréis poner agentes en producción, lo conectamos con el servicio de implantación de IA agéntica.</p></article>
         <article class="card s-2" data-mouse><h3>¿Es IA aplicada a empresas o un curso de herramientas?</h3><p>Es <strong>IA aplicada a empresas</strong>: partimos de procesos de administración, ventas, atención al cliente, operaciones o dirección. Si buscáis un <strong>curso IA aplicada</strong>, lo convertimos en ejercicios sobre tareas reales del equipo.</p></article>
-      </div>
+      <article class="card s-2"><h3>¿La formación es bonificable por FUNDAE?</h3><p>Sí. Gestionamos la bonificación por ti. El importe depende del crédito formativo disponible de tu empresa y de los requisitos de FUNDAE, y te lo confirmamos antes de empezar.</p></article></div>
     </div>
   </section>
 
