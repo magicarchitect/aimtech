@@ -1384,3 +1384,10 @@ body.nav-open .nav-drawer .nav-dropdown-menu {
   .testimonial-card { transition: none; }
   .testimonial-card:hover { transform: none; }
 }
+
+/* Buyer navigation: five entries, independent accessible submenus. */
+.nav-buy-group{display:flex;align-items:center;gap:4px}
+.nav-buy-group .nav-dropdown-toggle{padding-inline:4px}
+.nav-buy-menu{width:min(420px,calc(100vw - 48px));left:auto;right:24px;grid-template-columns:1fr}
+@media(min-width:960px){nav .nav-links{gap:18px}nav .nav-buy-link{white-space:nowrap;font-size:12px}}
+.nav-drawer-links .nav-buy-group{display:block}.nav-drawer-links .nav-dropdown-toggle{display:none}

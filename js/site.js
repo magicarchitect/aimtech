@@ -256,10 +256,9 @@
       // aria-controls colgando: en el drawer «Servicios» va siempre desplegado
       // (sin toggle), así que limpiamos ids y atributos de disclosure del clon.
       linksClone.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
-      const clonedToggle = linksClone.querySelector('.nav-dropdown-toggle');
-      if (clonedToggle) {
+      linksClone.querySelectorAll('.nav-dropdown-toggle').forEach(clonedToggle => {
         ['aria-controls', 'aria-haspopup', 'aria-expanded'].forEach(a => clonedToggle.removeAttribute(a));
-      }
+      });
       inner.appendChild(linksClone);
     }
 
