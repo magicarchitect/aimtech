@@ -1,5 +1,5 @@
 ---
-title: "Curso IA para empresas: qué debería incluir"
+title: "Qué debe incluir un curso de inteligencia artificial para empresas (temario)"
 description: "Temario práctico para elegir un curso IA para empresas: ChatGPT, Copilot, seguridad, casos por departamento, automatización y resultados medibles."
 date: 2026-07-05
 author: "Mike Pérez"
@@ -8,7 +8,10 @@ icon: "agent"
 draft: false
 slug: "curso-inteligencia-artificial-empresas-que-incluir"
 translationKey: "curso-inteligencia-artificial-empresas-que-incluir"
+modified: 2026-11-04
 ---
+
+Para valorar una propuesta de [formación IA para empresas](/formacion-ia-empresas/), esta guía te ayuda a comparar criterios antes de contratar.
 
 Buscar un **curso de inteligencia artificial para empresas** no es lo mismo que apuntarse a una formación genérica de IA. En una empresa hay procesos, datos, clientes, riesgos, herramientas internas y equipos con niveles muy distintos. Si el curso no aterriza todo eso, puede ser entretenido, pero difícilmente cambiará cómo trabaja el equipo.
 

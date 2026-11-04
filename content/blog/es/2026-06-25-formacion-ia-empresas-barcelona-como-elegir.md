@@ -1,5 +1,5 @@
 ---
-title: "Curso IA para empresas en Barcelona: cómo elegir proveedor"
+title: "Cómo elegir proveedor de formación en IA: 9 criterios"
 description: "Criterios prácticos para elegir un curso IA para empresas en Barcelona: formato, profesor, seguridad, casos reales, ChatGPT, Copilot, automatizaciones y ROI."
 date: 2026-06-25
 author: "Mike Pérez"
@@ -8,7 +8,10 @@ icon: "agent"
 draft: false
 slug: "formacion-ia-empresas-barcelona-como-elegir"
 translationKey: "formacion-ia-empresas-barcelona-como-elegir"
+modified: 2026-11-04
 ---
+
+Para valorar una propuesta de [curso IA para empresas en Barcelona](/formacion-ia-empresas/), esta guía te ayuda a comparar criterios antes de contratar.
 
 Elegir un **curso IA para empresas en Barcelona** no debería consistir en comparar temarios bonitos o preguntar “¿cuántas horas dura?”. La pregunta importante es otra: después de la formación, ¿tu equipo usará mejor la IA en su trabajo real o solo habrá visto una demo espectacular?
 
@@ -141,23 +144,6 @@ Señales de humo:
 
 La madurez se nota cuando el proveedor sabe frenar.
 
-## 10. Qué debería incluir un buen curso IA para empresas en Barcelona
-
-Como resumen, una buena propuesta debería incluir:
-
-- diagnóstico del nivel del equipo;
-- formación en directo con profesor;
-- opción in-company/presencial en Barcelona u online en directo;
-- ejemplos de negocio verosímiles;
-- ChatGPT, Copilot y herramientas de IA generativa;
-- seguridad, privacidad y AI Act;
-- ejercicios prácticos;
-- criterios para detectar automatizaciones;
-- material reutilizable;
-- cierre con próximos pasos.
-
-No se trata de formar “usuarios de una herramienta”. Se trata de que la empresa aprenda a trabajar mejor con IA.
-
 ## Cómo lo planteamos en Aimtech
 
 En Aimtech planteamos la [formación en IA aplicada para empresas](/formacion-ia-empresas/) como un curso por niveles: desde uso seguro de ChatGPT y Copilot hasta automatizaciones y agentes IA aplicados a procesos reales. Podemos trabajar in-company/presencial en Barcelona u online en directo para grupos cerrados.
@@ -187,3 +173,11 @@ Puede ir desde un taller inicial hasta un itinerario por niveles. Lo importante 
 ### ¿Qué pasa después de la formación?
 
 Lo ideal es identificar casos candidatos a automatización, definir normas internas de uso y acompañar al equipo en los primeros procesos donde la IA puede ahorrar horas o reducir errores.
+
+## Comparar propuestas y entregables
+
+Además de las nueve señales, compara diagnóstico, adaptación, número de asistentes, precio, materiales y seguimiento. Pide guía de buenas prácticas, plantillas, checklist de seguridad y ejercicios resueltos.
+
+### Preguntas para enviar al proveedor
+
+¿Qué necesitáis antes de presupuestar? ¿Qué no haríais en una primera formación? ¿Quién la imparte? ¿Cómo evitáis una simple demo? ¿Qué entregables quedan y qué pasa después?

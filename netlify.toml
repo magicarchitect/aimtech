@@ -368,3 +368,15 @@
   from = "/wp-login.php"
   to = "/"
   status = 301
+
+[[redirects]]
+  from = "/blog/proveedor-formacion-ia-empresas-como-elegir/"
+  to = "/blog/formacion-ia-empresas-barcelona-como-elegir/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ca/blog/proveidor-formacio-ia-empreses-com-triar/"
+  to = "/ca/blog/formacio-ia-empreses-barcelona-com-triar/"
+  status = 301
+  force = true
