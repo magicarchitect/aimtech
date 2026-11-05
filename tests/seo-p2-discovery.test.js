@@ -5,7 +5,8 @@ test('P2 new pages have unique metadata, menu discovery and two contextual inlin
  const pages=files('.').map(p=>[p,fs.readFileSync(p,'utf8')]),titles=new Map(),metas=new Map();for(const [p,s] of pages){const t=s.match(/<title>(.*?)<\/title>/s)?.[1];if(t)titles.set(t,[...(titles.get(t)||[]),p]);}
  for(const r of routes){const s=fs.readFileSync(r.slice(1)+'index.html','utf8'),title=s.match(/<title>(.*?)<\/title>/s)[1],meta=s.match(/<meta name="description" content="([^"]+)"/)[1];assert.equal(titles.get(title).length,1);assert.ok(!metas.has(meta));metas.set(meta,r);assert.ok(meta.length<=155);const inlinks=pages.filter(([p,x])=>{const main=x.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1]||'';return '/'+p.replace(/index.html$/,'')!==r&&main.includes(`href="${r}"`)});assert.ok(inlinks.length>=2,r+' '+inlinks.map(x=>x[0]));assert.ok((s.match(/<nav\b[\s\S]*?<\/nav>/)[0]+s.match(/<footer data-nosnippet>[\s\S]*?<\/footer>/)[0]).includes(`href="${r}"`));}
 });
-test('P2 preserves authoritative 42-response proof and technical exact anchors',()=>{
- for(const p of ['curso-power-bi-empresas','ca/curs-power-bi-empreses']){const s=fs.readFileSync(p+'/index.html','utf8');assert.match(s,/42 res/);assert.match(s,/4,61/);assert.match(s,/4,71/);assert.match(s,/4,52/);assert.match(s,/4,60/);}
+test('P2 preserves validated historical-response proof and technical exact anchors',()=>{
+ const proof=require('./fixtures/power-bi-feedback-summary.json');
+ for(const p of ['curso-power-bi-empresas','ca/curs-power-bi-empreses']){const s=fs.readFileSync(p+'/index.html','utf8');assert.ok(s.includes(`${proof.responses} res`));for(const m of Object.values(proof.metrics))assert.ok(s.includes(m.display));}
  for(const lang of ['es','ca'])for(const p of fs.readdirSync('content/blog/'+lang).filter(x=>/dax-|modelado-|modelatge-|power-query-/.test(x))){const s=fs.readFileSync('content/blog/'+lang+'/'+p,'utf8');assert.ok(s.includes(lang==='ca'?'[curs Power BI avançat](/ca/curs-power-bi-avancat/)':'[curso Power BI avanzado](/curso-power-bi-avanzado/)'));}
 });

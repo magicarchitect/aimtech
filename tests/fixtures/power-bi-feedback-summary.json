@@ -1,0 +1,14 @@
+{
+  "validatedAt": "2026-11-05",
+  "scope": "Historical responses in Power BI basic-intermediate training; not the latest Barcelona Activa edition alone",
+  "baselineResponses": 42,
+  "newResponses": 22,
+  "responses": 64,
+  "rounding": "ROUND_HALF_UP, 2 decimals, mean of stored individual means for global",
+  "metrics": {
+    "global": { "sumHundredths": 29917, "n": 64, "display": "4,67" },
+    "instructor": { "sumHundredths": 30650, "n": 64, "display": "4,79" },
+    "training": { "sumHundredths": 29400, "n": 64, "display": "4,59" },
+    "materials": { "sumHundredths": 29700, "n": 64, "display": "4,64" }
+  }
+}

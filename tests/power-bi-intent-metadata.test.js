@@ -16,7 +16,15 @@ for (const route of routes) test(`${route}: metadata fields and preserved proof`
   const alternates = /<link rel="alternate"[^>]*>/g;
   assert.deepEqual(html.match(canonical),old.match(canonical));
   assert.deepEqual(html.match(alternates),old.match(alternates));
-  if (!route.endsWith('barcelona')) { for (const quote of old.match(/<blockquote[\s\S]*?<\/blockquote>/g)||[]) assert.ok(html.includes(quote)); } else { assert.equal((html.match(/<blockquote/g)||[]).length, 0, 'No local modality evidence; never republish general testimonials as local proof'); }
+  // November curation replaces exactly two general-company quotes; no blanket snapshot bypass.
+  const replaced = [
+    '<blockquote lang="ca">Bon professor. Sessions molt ben estructurades i documentades. En Miquel molta voluntat i paciència per entendre els dubtes, necessitats i validar que havien estat ateses.</blockquote>',
+    '<blockquote lang="ca">La formació no només és molt valuosa en l’àmbit de Power BI, sinó que també obre la porta a coneixements útils en molts altres entorns professionals. T’ajuda a entendre i optimitzar eines que fas servir cada dia. Una experiència absolutament recomanable i un gran encert per a qualsevol persona que vulgui fer un pas endavant.</blockquote>'
+  ];
+  if (!route.endsWith('barcelona')) { for (const quote of old.match(/<blockquote[\s\S]*?<\/blockquote>/g)||[]) {
+    if (route.includes('empres') && replaced.includes(quote)) continue;
+    assert.ok(html.includes(quote));
+  } } else { assert.equal((html.match(/<blockquote/g)||[]).length, 0, 'No local modality evidence; never republish general testimonials as local proof'); }
   const marker = /<!-- @region partials\/power-bi-testimonials[^>]*-->[\s\S]*?<!-- @endregion -->/g;
   assert.deepEqual(html.match(marker),old.match(marker));
   assert.ok(!/"@type":\s*"(?:Review|AggregateRating)"/.test(html));
