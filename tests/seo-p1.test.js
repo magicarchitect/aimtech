@@ -12,7 +12,7 @@ for(const r of training)test(`P1 FUNDAE ${r}: reusable block before pricing and 
 });
 test('P1-01: Barcelona onsite scope and full company proof stay separate',()=>{
  for(const r of ['curso-power-bi-barcelona','ca/curs-power-bi-barcelona']){const s=read(r);assert.match(s,/Sant Cugat/);assert.match(s,/Cornellà/);assert.match(s,/4\.400 €/);assert.equal((s.match(/<blockquote/g)||[]).length,0);assert.ok(schemas(s).some(n=>n['@type']==='EducationalOrganization'&&n.areaServed.name==='Barcelona'));}
- for(const r of ['curso-power-bi-empresas','ca/curs-power-bi-empreses']){const s=read(r);assert.match(s,/42 res/);assert.match(s,/4,61/);assert.match(s,/id="roi-formacion"/);}
+ for(const r of ['curso-power-bi-empresas','ca/curs-power-bi-empreses']){const s=read(r);const proof=require('./fixtures/power-bi-feedback-summary.json');assert.ok(s.includes(`${proof.responses} res`));assert.ok(s.includes(proof.metrics.global.display));assert.match(s,/id="roi-formacion"/);}
 });
 test('P1-02: advanced course intent is not the umbrella',()=>{for(const r of ['ia-aplicada','ca/ia-aplicada']){const s=read(r),t=text(s.match(/<title>(.*?)<\/title>/s)[1]),h=text(s.match(/<h1[^>]*>(.*?)<\/h1>/s)[1]);assert.match(t,/20 h/);assert.doesNotMatch(t+' '+h,/Barcelona|formación IA para empresas/i);assert.match(s,/href="\/(?:ca\/formacio-ia-empreses|formacion-ia-empresas)\//);}});
 test('P1-03: merged supplier source and output removed, direct 301s to extant owners',()=>{
